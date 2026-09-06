@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+<title>Sheet 4 BACK — The Zone (A4 landscape)</title>
+<desc>Glues to the reverse of board-4-FRONT, same size, same orientation: flip about the long
+edge. Unlike boards 1-3, the Zone never turns over during play - it is shared and visible from
+week 1, so this face is never meant to be read at the table. It exists only so the board can be
+glued to cardboard like the others, and so it can carry the same table-placement guide as every
+other board's reverse.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .h { fill:none; stroke:#000000; stroke-width:.8; }
+  .q { fill:#3A3A3A; }
+</style>
+
+<rect width="297" height="210" fill="#FFFFFF"/>
+
+<text x="18" y="24" class="m q" font-size="5.4" letter-spacing="2">THIS SIDE NEVER SHOWS DURING PLAY</text>
+<line x1="18" y1="30" x2="279" y2="30" class="h"/>
+
+<text x="18" y="66" class="m" font-size="20" letter-spacing="4">THE ZONE</text>
+<text x="18" y="90" class="s" font-size="10" font-style="italic">Shared, and visible from week 1. It never turns over.</text>
+
+<line x1="18" y1="106" x2="279" y2="106" class="h" stroke-width=".5"/>
+
+<text x="18" y="124" class="m q" font-size="5" letter-spacing="1.6">WHY THIS FACE EXISTS</text>
+<text x="18" y="140" class="s" font-size="7">Boards 1-3 flip weekly to reveal a rule. The Zone has nothing to reveal -</text>
+<text x="18" y="150" class="s" font-size="7">it is live from turn one, so there is no week this side would ever show.</text>
+<text x="18" y="160" class="s" font-size="7">It is printed only so this board glues to cardboard the same way the</text>
+<text x="18" y="170" class="s" font-size="7">others do, and so the table-placement guide can sit on every board's</text>
+<text x="18" y="180" class="s" font-size="7">reverse, front and back alike.</text>
+
+<text x="18" y="198" class="s q" font-size="6" font-style="italic">If you are reading this at the table, the Zone is face down.</text>
+
+<!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
+<line x1="291" y1="6" x2="291" y2="204" stroke="#1B7A5C" stroke-width="1"/>
+<line x1="6" y1="207" x2="291" y2="207" stroke="#2C6E8E" stroke-width="1"/>
+</svg>

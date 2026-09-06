@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="332mm" viewBox="0 0 297 469.5">
+<title>Board 2 BACK - Week 2, Reality (A4 portrait, extended)</title>
+<desc>Glues to the reverse of board-2-FRONT, extended to match at 332mm. Flip about the long
+edge. Authored at A3 units and output at A4, so the type scales down with the page - the
+viewBox height grew from 420 to 469.5 (keeping the same scale) to add the same 35mm.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .h { fill:none; stroke:#000000; stroke-width:.8; }
+  .q { fill:#3A3A3A; }
+</style>
+
+<rect width="297" height="469.5" fill="#FFFFFF"/>
+
+<text x="24" y="30" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AT THE START OF WEEK 2</text>
+<line x1="24" y1="36" x2="273" y2="36" class="h"/>
+
+<text x="24" y="76" class="m" font-size="26" letter-spacing="6">WEEK 2</text>
+<text x="24" y="124" class="s" font-size="42">Reality</text>
+<line x1="24" y1="138" x2="273" y2="138" class="h" stroke-width="1.2"/>
+
+<text x="24" y="160" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
+<text x="24" y="188" class="s" font-size="20">Your plan was made</text>
+<text x="24" y="212" class="s" font-size="20">in ignorance.</text>
+
+<line x1="24" y1="230" x2="273" y2="230" class="h" stroke-width=".5"/>
+
+<text x="24" y="250" class="m q" font-size="6" letter-spacing="2.5">WHAT OPENS</text>
+<text x="24" y="266" class="s" font-size="8"><tspan font-weight="bold">Shit Happens.</tspan> Draw two Events, face up,</text>
+<text x="24" y="277" class="s" font-size="8">and do not resolve them yet.</text>
+<text x="24" y="291" class="s" font-size="8"><tspan font-weight="bold">Adapt.</tspan> 1 Adaptability this week. Spend it to</text>
+<text x="24" y="305" class="s" font-size="8">replace a card, or pay an Event's ADAPT</text>
+<text x="24" y="316" class="s" font-size="8">number to cancel it outright.</text>
+<text x="24" y="333" class="s" font-size="8">Then resolve whatever you did not cancel.</text>
+
+<text x="24" y="356" class="m q" font-size="6" letter-spacing="2.5">CARDS ADDED</text>
+<text x="24" y="370" class="m" font-size="10">NOTHING NEW</text>
+
+<line x1="24" y1="384" x2="273" y2="384" class="h" stroke-width=".5"/>
+<text x="24" y="400" class="s" font-size="9" font-style="italic">Nothing changed except when you find out.</text>
+
+<!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
+<line x1="8.49" y1="8.49" x2="288.5" y2="8.49" stroke="#C1662F" stroke-width="1.4"/>
+<line x1="8.49" y1="8.49" x2="8.49" y2="460.99" stroke="#7A3B6D" stroke-width="1.4"/>
+</svg>

@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Sheet 5b - Activity cards, the second sheet (63 x 88 mm)</title>
+<desc>Sheet 5 holds nine cards, which is all an A4 will take at 63 x 88 - this sheet is a second
+full 3 x 3 sheet, not an afterthought. Two more Work (five total with sheet 5), two Teach, and
+one each of Plan, Demo, Reflect, Meet and Learn. One print each, no reprinting. Cut on the
+outer line. Print at 100%.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .c { fill:none; stroke:#000000; stroke-width:.5; }
+  .h { stroke:#000000; stroke-width:.4; fill:none; }
+  .q { fill:#3A3A3A; }
+  .trust, .adapt { fill:#000000; }
+</style>
+
+<defs>
+  <!-- 63 x 88 card. Text column is x=5..58 (53 mm); baselines stop at y=84. -->
+
+  <g id="work">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORK</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <rect x="4" y="22" width="50" height="10" rx="1.2" fill="#EFE4D3"/>
+    <text x="5" y="30" class="s" font-size="7">+1 to one feature</text>
+    <text x="5" y="42" class="s" font-size="4.4">Plus Capability, Skill,</text>
+    <text x="5" y="48" class="s" font-size="4.4">Knowledge, Head. Min 0.</text>
+    <line x1="5" y1="55" x2="58" y2="55" class="h"/>
+    <text x="5" y="62" class="m q" font-size="3.1">MAX 2 PER FEATURE PER WEEK</text>
+    <text x="5" y="67" class="m q" font-size="3.1">WEEK CAP: WORK CARDS +2,</text>
+    <text x="5" y="71" class="m q" font-size="3.1">PLUS 1 PER HABIT EARNED</text>
+    <text x="5" y="78" class="s" font-size="4.2" font-style="italic">The only card that moves</text>
+    <text x="5" y="83" class="s" font-size="4.2" font-style="italic">the project. Hence the trap.</text>
+  </g>
+
+  <g id="teach">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">TEACH</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="27" class="s" font-size="5.4">Let someone cover a</text>
+    <text x="5" y="33" class="s" font-size="5.4">square you cover</text>
+    <line x1="5" y1="38" x2="58" y2="38" class="h"/>
+    <text x="5" y="45" class="s" font-size="4.2">It must touch a square</text>
+    <text x="5" y="50" class="s" font-size="4.2">they cover - <tspan font-weight="bold">any row</tspan>.</text>
+    <text x="5" y="55" class="s" font-size="4.2">They keep it for good.</text>
+    <text x="5" y="62" class="m trust" font-size="3.2">DEAD IF TRUST ≤ 1</text>
+    <text x="5" y="66.5" class="m q" font-size="2.9">COSTS THE DAY, NOTHING ELSE</text>
+    <rect x="34.18" y="68.74" width="12.98" height="3.04" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+    <text x="5" y="71" class="m q" font-size="2.9">TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
+    <text x="5" y="76.5" class="s" font-size="4" font-style="italic">Scaffolding: give it away</text>
+    <text x="5" y="80.5" class="s" font-size="4" font-style="italic">and it becomes standing.</text>
+  </g>
+
+  <g id="plan">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">PLAN</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="27" class="s" font-size="5.4"><tspan font-style="italic">Every</tspan> Work card on</text>
+    <text x="5" y="34" class="s" font-size="5.4">that feature this week</text>
+    <rect x="4" y="40" width="50" height="8" rx="1.2" fill="#EFE4D3"/>
+    <text x="5" y="46" class="m" font-size="5">+1 EXTRA WORK</text>
+    <text x="5" y="50.5" class="m q" font-size="2.6">HIGH COMPLEXITY: ALSO NEXT WEEK</text>
+    <line x1="5" y1="52" x2="58" y2="52" class="h"/>
+    <text x="5" y="60" class="s" font-size="4.4">Makes work more efficient</text>
+    <text x="5" y="68" class="m" font-size="3.1" fill="#B03A2E">NOT ON AN UNCLEAR FEATURE</text>
+    <text x="5" y="80" class="s" font-size="4.2" font-style="italic">Planning pays on hard</text>
+    <text x="5" y="85" class="s" font-size="4.2" font-style="italic">problems. Only on those.</text>
+  </g>
+
+  <g id="demo">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">DEMO</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="24" class="m" font-size="3.1" fill="#B03A2E">CAPITAL ≥ TABLE AVERAGE</text>
+    <text x="5" y="34" class="s" font-size="5.8">Reveal a feature's</text>
+    <text x="5" y="41" class="s" font-size="5.8">Quality</text>
+    <line x1="5" y1="47" x2="58" y2="47" class="h"/>
+    <rect x="33.64" y="51.57" width="14.35" height="4.62" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+    <text x="5" y="55" class="s" font-size="4.4"><tspan font-weight="bold">Med / High:</tspan> +1 <tspan>Capital</tspan>,</text>
+    <text x="5" y="61" class="s" font-size="4.4">shrugs off one bad review.</text>
+    <rect x="39.80" y="64.88" width="13.12" height="4.20" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+    <text x="5" y="68" class="s" font-size="4"><tspan font-weight="bold">Low:</tspan> lose 1 Work, 1 <tspan>Capital</tspan>.</text>
+    <text x="5" y="76" class="m q" font-size="3.1">EITHER WAY, CLEARS UNCLEAR</text>
+    <text x="5" y="84" class="s" font-size="4" font-style="italic">The field decides who speaks.</text>
+  </g>
+
+  <g id="reflect">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">REFLECT</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <rect x="4" y="25" width="50" height="9" rx="1.2" fill="#DCE7F2"/>
+    <text x="5" y="32" class="s adapt" font-size="7.4">+1 Adaptability</text>
+    <line x1="5" y1="40" x2="58" y2="40" class="h"/>
+    <text x="5" y="47" class="s" font-size="4.4">Banked a feature, or an</text>
+    <text x="5" y="53" class="s" font-size="4.4">Event resolved, since your</text>
+    <text x="5" y="59" class="s" font-size="4.4">last Reflect? Also</text>
+    <rect x="4" y="60" width="50" height="6" rx="1" fill="#FAECBE"/>
+    <text x="5" y="65" class="s" font-size="4.4"><tspan font-weight="bold">+1 Shared Practice</tspan>.</text>
+    <text x="5" y="72" class="m q" font-size="3.1">AN AFTER-ACTION REVIEW</text>
+    <text x="5" y="79" class="s" font-size="4.2" font-style="italic">Ask what's not working -</text>
+    <text x="5" y="84" class="s" font-size="4.2" font-style="italic">you can only reflect on it.</text>
+  </g>
+
+  <g id="meet">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">MEET</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="25" class="m" font-size="4.2">WORKING MEETING</text>
+    <rect x="4" y="27" width="50" height="6" rx="1" fill="#F9E3E0"/>
+    <text x="5" y="32" class="s trust" font-size="4.4">+1 Trust</text>
+    <rect x="4" y="33" width="50" height="6" rx="1" fill="#DCE7F2"/>
+    <text x="5" y="38" class="s adapt" font-size="4.4">+1 Adaptability</text>
+    <text x="5" y="44" class="s" font-size="4.4">and clear one Unclear.</text>
+    <line x1="5" y1="50" x2="58" y2="50" class="h"/>
+    <text x="5" y="58" class="m" font-size="4.2" fill="#B03A2E">RECORD MEETING</text>
+    <text x="5" y="66" class="s" font-size="4.4">Nothing. But it satisfies</text>
+    <text x="5" y="72" class="s" font-size="4.4">Events that demand one.</text>
+    <text x="5" y="79" class="s" font-size="4.2" font-style="italic">One of these is a meeting.</text>
+    <text x="5" y="84" class="s" font-size="4.2" font-style="italic">The other is a ritual.</text>
+  </g>
+
+  <g id="learn">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">LEARN</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="27" class="s" font-size="5.4">Cover a free square</text>
+    <text x="5" y="33" class="s" font-size="5.4">in your own row</text>
+    <line x1="5" y1="38" x2="58" y2="38" class="h"/>
+    <text x="5" y="45" class="s" font-size="4.2">It must touch a square</text>
+    <text x="5" y="50" class="s" font-size="4.2">you already cover.</text>
+    <text x="5" y="55" class="s" font-size="4.2"><tspan font-weight="bold">No teacher needed.</tspan></text>
+    <text x="5" y="63" class="m q" font-size="2.9">COSTS THE DAY, NOTHING ELSE</text>
+    <text x="5" y="67.5" class="m" font-size="2.9" fill="#B03A2E">ALONG YOUR ROW ONLY</text>
+    <rect x="9.82" y="69.74" width="12.98" height="3.04" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+    <text x="5" y="72" class="m q" font-size="2.9">NO <tspan>CAPITAL</tspan> FOR THIS ONE</text>
+    <text x="5" y="80" class="s" font-size="4" font-style="italic">Nobody taught you.</text>
+    <text x="5" y="84" class="s" font-size="4" font-style="italic">It shows, and it holds.</text>
+  </g>
+</defs>
+
+<rect width="210" height="297" fill="#FFFFFF"/>
+<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">SHEET 5b · ACTIVITY CARDS · PRINT AT 100% · PRINT ONCE</text>
+
+<use href="#work" x="10" y="12"/>
+<use href="#work" x="76" y="12"/>
+<use href="#teach" x="142" y="12"/>
+
+<use href="#teach" x="10" y="104"/>
+<use href="#plan" x="76" y="104"/>
+<use href="#demo" x="142" y="104"/>
+
+<use href="#reflect" x="10" y="196"/>
+<use href="#meet" x="76" y="196"/>
+<use href="#learn" x="142" y="196"/>
+
+<text x="10" y="289" class="s" font-size="3.6" font-style="italic">LEARN alone; TEACH needs someone who already covers it.</text>
+</svg>

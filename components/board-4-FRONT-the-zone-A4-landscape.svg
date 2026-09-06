@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+<title>Sheet 4 FRONT — The Zone: the shared skill grid (A4 landscape)</title>
+<desc>One board for the whole table. Rows are education, columns are the tool you work through;
+a square is the practice that training makes with that instrument. Both axes are Bourdieu's
+transmissible forms of capital - institutionalised and objectified - so everything on this board
+can be passed on. Upbringing, values and instinct are not here: they cannot. Squares are 20 mm,
+one player tile. Same page frame as sheet 3. Print at 100%. This sheet is week-1 content only -
+How Learn/Teach works and what the Ledger reads off this grid live on sheet 4b instead, added
+to the table at week 3 alongside the Ledger.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .r { stroke:#000000; stroke-width:.5; fill:none; }
+  .cell { fill:none; stroke:#000000; stroke-width:.4; }
+  .q { fill:#3A3A3A; }
+</style>
+
+<rect width="297" height="210" fill="#FFFFFF"/>
+
+<text x="12" y="16" class="m" font-size="7" letter-spacing="2.5">THE ZONE</text>
+<text x="78" y="16" class="s" font-size="4.4" font-style="italic">what you can reach from what you already have</text>
+<text x="285" y="16" class="m q" font-size="3.8" text-anchor="end">SHEET 4 · SHARED · FROM WEEK 1 · SEE SHEET 4b FROM WEEK 3</text>
+<line x1="12" y1="20" x2="285" y2="20" class="r"/>
+
+<text x="12" y="27" class="s" font-size="3.8" font-style="italic">Rows are what you were trained in. Columns are what you work through. A square is the practice <tspan font-style="normal">that</tspan> training makes with <tspan font-style="normal">that</tspan> instrument.</text>
+<text x="12" y="31.5" class="s" font-size="3.8" font-style="italic">Everyone covers squares on this one board, so the whole table can see who can do what.</text>
+
+<g transform="translate(-16,0)">
+<g class="m q" font-size="2.1" text-anchor="middle">
+  <text x="72" y="39.5">MACHINE</text><text x="92" y="39.5">ROOM</text><text x="112" y="39.5">DOCUMENT</text>
+  <text x="132" y="39.5">NUMBERS</text><text x="152" y="39.5">SCHEDULE</text>
+</g>
+<text x="112" y="36.5" class="m q" font-size="2.8" letter-spacing="1" text-anchor="middle">TOOL</text>
+
+<g transform="translate(30,101) rotate(-90)"><text x="0" y="0" class="m q" font-size="2.8" letter-spacing=".8">EDUCATION</text></g>
+<g class="s" font-size="3.4" text-anchor="end">
+  <text x="58" y="49.5">Technical</text>
+  <text x="58" y="69.5">Social</text>
+  <text x="58" y="89.5">Commercial</text>
+  <text x="58" y="109.5">Analytical</text>
+  <text x="58" y="129.5">Organisational</text>
+</g>
+<g class="s q" font-size="2.5" font-style="italic" text-anchor="end">
+  <text x="58" y="53.5">how the thing works</text>
+  <text x="58" y="73.5">how people work</text>
+  <text x="58" y="93.5">what it is worth</text>
+  <text x="58" y="113.5">what the numbers say</text>
+  <text x="58" y="133.5">how it gets done</text>
+</g>
+
+<g class="cell">
+  <rect x="62" y="40" width="20" height="20"/><rect x="82" y="40" width="20" height="20"/><rect x="102" y="40" width="20" height="20"/><rect x="122" y="40" width="20" height="20"/><rect x="142" y="40" width="20" height="20"/>
+  <rect x="62" y="60" width="20" height="20"/><rect x="82" y="60" width="20" height="20"/><rect x="102" y="60" width="20" height="20"/><rect x="122" y="60" width="20" height="20"/><rect x="142" y="60" width="20" height="20"/>
+  <rect x="62" y="80" width="20" height="20"/><rect x="82" y="80" width="20" height="20"/><rect x="102" y="80" width="20" height="20"/><rect x="122" y="80" width="20" height="20"/><rect x="142" y="80" width="20" height="20"/>
+  <rect x="62" y="100" width="20" height="20"/><rect x="82" y="100" width="20" height="20"/><rect x="102" y="100" width="20" height="20"/><rect x="122" y="100" width="20" height="20"/><rect x="142" y="100" width="20" height="20"/>
+  <rect x="62" y="120" width="20" height="20"/><rect x="82" y="120" width="20" height="20"/><rect x="102" y="120" width="20" height="20"/><rect x="122" y="120" width="20" height="20"/><rect x="142" y="120" width="20" height="20"/>
+</g>
+<rect x="62" y="40" width="100" height="100" class="r" stroke-width=".8"/>
+
+<g class="s" font-size="3" text-anchor="middle">
+  <text x="72" y="51">Build</text>
+  <text x="92" y="51">Toolbox talk</text>
+  <text x="112" y="51">Spec</text>
+  <text x="132" y="51">Benchmark</text>
+  <text x="152" y="49">Critical</text><text x="152" y="53">path</text>
+
+  <text x="72" y="71">Pair work</text>
+  <text x="92" y="71">Facilitation</text>
+  <text x="112" y="71">Write-up</text>
+  <text x="132" y="71">Survey</text>
+  <text x="152" y="71">Rota</text>
+
+  <text x="72" y="91">Demo rig</text>
+  <text x="92" y="91">Pitch</text>
+  <text x="112" y="91">Contract</text>
+  <text x="132" y="91">Forecast</text>
+  <text x="152" y="91">Roadmap</text>
+
+  <text x="72" y="111">Prototype</text>
+  <text x="92" y="111">Review</text>
+  <text x="112" y="111">Report</text>
+  <text x="132" y="111">Model</text>
+  <text x="152" y="111">Estimate</text>
+
+  <text x="72" y="131">Pipeline</text>
+  <text x="92" y="131">Stand-up</text>
+  <text x="112" y="131">Process</text>
+  <text x="132" y="131">Audit</text>
+  <text x="152" y="131">Plan</text>
+</g>
+
+<g class="m q" font-size="2" text-anchor="middle">
+  <text x="72" y="145">WORK</text><text x="92" y="145">COORDINATE</text><text x="112" y="145">ALIGN</text><text x="132" y="145">LEARN</text><text x="152" y="145">PLAN</text>
+</g>
+<text x="112" y="150" class="s q" font-size="3" text-anchor="middle" font-style="italic">a column you cover is a card you are better at</text>
+</g>
+
+<text x="166" y="55" class="s q" font-size="3.4" font-style="italic">How you cover a square, and what the Ledger reads off this grid, are on sheet 4b</text>
+<text x="166" y="59.5" class="s q" font-size="3.4" font-style="italic">from week 3 - they need Learn/Teach and the Ledger, and neither exists yet.</text>
+
+<line x1="12" y1="158" x2="285" y2="158" class="r"/>
+<text x="12" y="166" class="m" font-size="4.4" letter-spacing="1.2">WHAT YOU CAN DO</text>
+<text x="88" y="166" class="s" font-size="3.8">Every square you <tspan font-weight="bold">cover</tspan> gives <tspan font-weight="bold">+1</tspan> to the card named under its column. You keep everything you cover.</text>
+<text x="12" y="172" class="s" font-size="3.8" font-style="italic">Two squares in one column is two ways of working, not twice the output: +1 per column, however many you cover in it.</text>
+<text x="12" y="178" class="s" font-size="3.8">Tiles are 20 mm, the size of a square. When a second person covers a square, offset the tile so the colour underneath still shows.</text>
+<text x="12" y="184" class="s" font-size="3.8">At setup you cover <tspan font-weight="bold">one</tspan> square: where your Legs row meets your Item column. Everything after that is learned or taught.</text>
+
+<text x="12" y="197" class="s" font-size="3.4" font-style="italic">Upbringing, values and instinct are not on this board. Bourdieu's embodied capital cannot be handed over - only a training and an instrument can,</text>
+<text x="12" y="202" class="s" font-size="3.4" font-style="italic">and those are the two axes here.</text>
+
+<!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
+<line x1="291" y1="6" x2="291" y2="204" stroke="#1B7A5C" stroke-width="1"/>
+<line x1="6" y1="207" x2="291" y2="207" stroke="#2C6E8E" stroke-width="1"/>
+</svg>

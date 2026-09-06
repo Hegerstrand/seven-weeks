@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280mm" height="90mm" viewBox="0 0 280 90">
+<title>Overview illustration - the weekly loop, Level 0</title>
+<desc>One diagram: build your habitus once, then run the same five-step week seven times, then
+the deadline. Line art only, matching the rest of the game's component style.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .r { fill:none; stroke:#000000; stroke-width:.6; }
+  .q { fill:#3A3A3A; }
+  .accent { fill:none; stroke:#B03A2E; stroke-width:.6; }
+</style>
+
+<rect width="280" height="90" fill="#FFFFFF"/>
+
+<!-- Setup, once -->
+<rect x="6" y="30" width="38" height="24" rx="2" class="r"/>
+<text x="25" y="40" class="m" font-size="4" text-anchor="middle">BUILD YOUR</text>
+<text x="25" y="45" class="m" font-size="4" text-anchor="middle">HABITUS</text>
+<text x="25" y="51" class="s q" font-size="3" text-anchor="middle" font-style="italic">once, before any rule</text>
+
+<path d="M44,42 L58,42" class="r" marker-end="url(#arrow)"/>
+
+<!-- The five-step week, repeated -->
+<g id="week-loop">
+  <rect x="58" y="24" width="176" height="42" rx="2" class="accent"/>
+  <text x="146" y="20" class="m" font-size="4.2" text-anchor="middle" letter-spacing="1">THE WEEK - RUN SEVEN TIMES</text>
+
+  <rect x="64" y="34" width="30" height="22" rx="1.5" class="r"/>
+  <text x="79" y="43" class="m" font-size="3.4" text-anchor="middle">PLAN</text>
+  <text x="79" y="48" class="s q" font-size="2.6" text-anchor="middle" font-style="italic">lay five cards</text>
+
+  <path d="M94,45 L104,45" class="r" marker-end="url(#arrow)"/>
+
+  <rect x="104" y="34" width="30" height="22" rx="1.5" class="r"/>
+  <text x="119" y="43" class="m" font-size="3.4" text-anchor="middle">EVENTS</text>
+  <text x="119" y="48" class="s q" font-size="2.6" text-anchor="middle" font-style="italic">reality lands</text>
+
+  <path d="M134,45 L144,45" class="r" marker-end="url(#arrow)"/>
+
+  <rect x="144" y="34" width="30" height="22" rx="1.5" class="r"/>
+  <text x="159" y="43" class="m" font-size="3.4" text-anchor="middle">ADAPT</text>
+  <text x="159" y="48" class="s q" font-size="2.6" text-anchor="middle" font-style="italic">if you can afford it</text>
+
+  <path d="M174,45 L184,45" class="r" marker-end="url(#arrow)"/>
+
+  <rect x="184" y="34" width="30" height="22" rx="1.5" class="r"/>
+  <text x="199" y="43" class="m" font-size="3.4" text-anchor="middle">RESOLVE</text>
+  <text x="199" y="48" class="s q" font-size="2.6" text-anchor="middle" font-style="italic">the week runs</text>
+
+  <path d="M214,45 L221,45" class="r" marker-end="url(#arrow)"/>
+  <text x="228" y="47" class="m" font-size="4" text-anchor="middle">×7</text>
+
+  <path d="M199,56 L199,62 L79,62 L79,56" class="r" stroke-dasharray="2 1.5" marker-end="url(#arrow)"/>
+  <text x="139" y="70" class="s q" font-size="2.8" text-anchor="middle" font-style="italic">close the week, then lay the next one</text>
+</g>
+
+<path d="M234,45 L246,45" class="r" marker-end="url(#arrow)"/>
+
+<!-- Deadline -->
+<rect x="246" y="30" width="28" height="24" rx="2" class="r" stroke="#B03A2E"/>
+<text x="260" y="41" class="m" font-size="3.6" text-anchor="middle" fill="#B03A2E">WEEK 7</text>
+<text x="260" y="47" class="m" font-size="3.6" text-anchor="middle" fill="#B03A2E">DEADLINE</text>
+
+<text x="140" y="84" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">If you only had 35 working days, how would you spend them?</text>
+
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#000000"/>
+  </marker>
+</defs>
+</svg>

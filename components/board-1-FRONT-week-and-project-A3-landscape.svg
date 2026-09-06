@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="332mm" viewBox="0 0 420 332">
+<title>Sheet 1 - The Week and The Project (A3 landscape, extended)</title>
+<desc>Week 1. Card slots are 65 x 90 mm to hold a standard 63 x 88 playing card.
+White ground, line art only - cheap on an office printer. The week ladder moved to a strip
+along the bottom (adding 39mm of page height) to make room for a sixth slot, OVERTIME, which
+sits to the right of Friday - Monday through Friday are shifted one slot left to fill the gap.
+Your ITEM sets what that sixth card can be - see cards-habitus-parts.</desc>
+
+<style>
+  .s  { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m  { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .r  { stroke:#000000; stroke-width:.5; fill:none; }
+  .w  { fill:none; stroke:#000000; stroke-width:.5; }
+  .slot { fill:none; stroke:#000000; stroke-width:.6; stroke-dasharray:4 2.5; }
+  .q  { fill:#3A3A3A; }
+</style>
+
+<rect width="420" height="332" fill="#FFFFFF"/>
+
+<text x="12" y="14" class="m" font-size="7" letter-spacing="2.5">THE PROJECT</text>
+<text x="408" y="14" class="m q" font-size="3.8" text-anchor="end">SHEET 1 · WEEK 1</text>
+<line x1="12" y1="18" x2="408" y2="18" class="r"/>
+
+<!-- THE CLOCK - leftmost column, counts down to the deadline. Ladder now spans the full
+     height of the swapped Plinth+Project column below, top-to-top and bottom-to-bottom. -->
+<text x="12" y="58" class="m" font-size="6" letter-spacing="1.6">THE CLOCK</text>
+<text x="12" y="64" class="s" font-size="3.4" font-style="italic">Counts down to the deadline -</text>
+<text x="12" y="69" class="s" font-size="3.4" font-style="italic">whatever isn't banked doesn't count.</text>
+<g class="m" font-size="3.4" text-anchor="middle">
+  <rect x="14" y="73" width="52" height="9" rx="1.2" class="w"/><text x="40" y="79.5">7 WEEKS LEFT</text>
+  <rect x="14" y="84.6" width="52" height="9" rx="1.2" class="w"/><text x="40" y="91.1">6 WEEKS LEFT</text>
+  <rect x="14" y="96.2" width="52" height="9" rx="1.2" class="w"/><text x="40" y="102.7">5 WEEKS LEFT</text>
+  <rect x="14" y="107.8" width="52" height="9" rx="1.2" class="w"/><text x="40" y="114.3">4 WEEKS LEFT</text>
+  <rect x="14" y="119.4" width="52" height="9" rx="1.2" class="w"/><text x="40" y="125.9">3 WEEKS LEFT</text>
+  <rect x="14" y="131" width="52" height="9" rx="1.2" class="w"/><text x="40" y="137.5">2 WEEKS LEFT</text>
+  <rect x="14" y="142.6" width="52" height="9" rx="1.2" class="w"/><text x="40" y="149.1">1 WEEK LEFT</text>
+  <rect x="14" y="154.2" width="52" height="9" rx="1.2" class="w" stroke="#B03A2E" stroke-width=".8"/><text x="40" y="160.7" fill="#B03A2E">DEADLINE</text>
+</g>
+
+<!-- tower plinth - swapped to the top slot -->
+<polygon points="144.5,47 131.5,70 104.5,70 91.5,47 104.5,24 131.5,24" class="w" stroke-width=".6"/>
+<text x="118" y="45" class="m q" font-size="4.4" text-anchor="middle">PLINTH</text>
+<text x="118" y="52" class="s" font-size="3.8" text-anchor="middle" font-style="italic">stack banked</text>
+<text x="118" y="57" class="s" font-size="3.8" text-anchor="middle" font-style="italic">features here</text>
+
+<!-- project card seat - swapped to the bottom slot. Wider than the standard 65x90 slot on
+     purpose: this card is read once and left in place all game, never shuffled with the
+     other decks, so it doesn't need to match their size - see cards-project's own note. -->
+<rect x="73" y="73" width="90" height="90" rx="2" class="slot"/>
+<text x="118" y="111" class="m q" font-size="5" text-anchor="middle">PROJECT</text>
+<text x="118" y="118" class="m q" font-size="5" text-anchor="middle">CARD</text>
+<text x="118" y="128" class="s" font-size="4" text-anchor="middle" font-style="italic">names the six</text>
+<text x="118" y="133" class="s" font-size="4" text-anchor="middle" font-style="italic">features</text>
+
+<!-- ═══ SIX FEATURES ═══ -->
+<text x="172" y="30" class="m" font-size="4" letter-spacing="1.2">FEATURES</text>
+<text x="213" y="30" class="m" font-size="3.6" letter-spacing="1">COMPLEXITY</text>
+
+<g id="feature-A">
+  <rect x="172" y="34" width="236" height="19" rx="1" class="r"/>
+  <text x="180" y="47" class="m" font-size="9">A</text>
+  <polygon points="194,39 198.5,43.5 194,48 189.5,43.5" class="w" stroke-dasharray="1.5 1"/>
+  <text x="213" y="42" class="m q" font-size="3.8">LOW</text>
+  <text x="213" y="48" class="s" font-size="3.8" font-style="italic">Plan is wasted here</text>
+  <g><circle cx="278" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/><circle cx="292" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/></g>
+  <circle cx="312" cy="43.5" r="7.5" style="fill:#5C4830;stroke:#000000;stroke-width:.8"/><text x="312" y="46" class="m" font-size="5.5" text-anchor="middle" fill="#F2EDE0">3</text>
+  <circle cx="386" cy="43.5" r="4.5" class="w" stroke-dasharray="1.5 1"/>
+</g>
+
+<g id="feature-B">
+  <rect x="172" y="55" width="236" height="19" rx="1" class="r"/>
+  <text x="180" y="68" class="m" font-size="9">B</text>
+  <polygon points="194,60 198.5,64.5 194,69 189.5,64.5" class="w" stroke-dasharray="1.5 1"/>
+  <text x="213" y="63" class="m q" font-size="3.8">MEDIUM</text>
+  <text x="213" y="69" class="s" font-size="3.8" font-style="italic">Plan → Work here worth +1 more</text>
+  <g><circle cx="278" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/><circle cx="292" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/><circle cx="306" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/></g>
+  <circle cx="326" cy="64.5" r="7.5" style="fill:#5C4830;stroke:#000000;stroke-width:.8"/><text x="326" y="67" class="m" font-size="5.5" text-anchor="middle" fill="#F2EDE0">4</text>
+  <text x="344" y="67" class="m" font-size="5" fill="#B03A2E">UNLOCKS D</text>
+  <circle cx="386" cy="64.5" r="4.5" class="w" stroke-dasharray="1.5 1"/>
+</g>
+
+<g id="feature-C">
+  <rect x="172" y="76" width="236" height="19" rx="1" class="r"/>
+  <text x="180" y="89" class="m" font-size="9">C</text>
+  <polygon points="194,81 198.5,85.5 194,90 189.5,85.5" class="w" stroke-dasharray="1.5 1"/>
+  <text x="213" y="84" class="m q" font-size="3.8">MEDIUM</text>
+  <text x="213" y="90" class="s" font-size="3.8" font-style="italic">Plan → Work here worth +1 more</text>
+  <g><circle cx="278" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/><circle cx="292" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/><circle cx="306" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/></g>
+  <circle cx="326" cy="85.5" r="7.5" style="fill:#5C4830;stroke:#000000;stroke-width:.8"/><text x="326" y="88" class="m" font-size="5.5" text-anchor="middle" fill="#F2EDE0">4</text>
+  <text x="344" y="88" class="m" font-size="5" fill="#B03A2E">UNLOCKS F</text>
+  <circle cx="386" cy="85.5" r="4.5" class="w" stroke-dasharray="1.5 1"/>
+</g>
+
+<g id="feature-D">
+  <rect x="172" y="97" width="236" height="19" rx="1" class="r" stroke="#B03A2E" stroke-width=".8"/>
+  <text x="180" y="110" class="m" font-size="9">D</text>
+  <polygon points="194,102 198.5,106.5 194,111 189.5,106.5" class="w" stroke-dasharray="1.5 1"/>
+  <text x="213" y="105" class="m" font-size="3.8" fill="#B03A2E">HIGH · LOCKED UNTIL B</text>
+  <text x="213" y="111" class="s" font-size="3.8" font-style="italic">Plan → Work worth +1 for 2 weeks</text>
+  <g><circle cx="278" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/><circle cx="292" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/></g>
+  <circle cx="312" cy="106.5" r="7.5" style="fill:#5C4830;stroke:#000000;stroke-width:.8"/><text x="312" y="109" class="m" font-size="5.5" text-anchor="middle" fill="#F2EDE0">3</text>
+  <rect x="270" y="99" width="52" height="15" rx="1" class="r" fill="#FFFFFF" stroke="#B03A2E" stroke-width=".6"/>
+  <text x="326" y="109" class="m" font-size="5" fill="#B03A2E">LOCK TILE</text>
+  <circle cx="386" cy="106.5" r="4.5" class="w" stroke-dasharray="1.5 1"/>
+</g>
+
+<g id="feature-E">
+  <rect x="172" y="118" width="236" height="19" rx="1" class="r"/>
+  <text x="180" y="131" class="m" font-size="9">E</text>
+  <polygon points="194,123 198.5,127.5 194,132 189.5,127.5" class="w" stroke-dasharray="1.5 1"/>
+  <text x="213" y="126" class="m q" font-size="3.8">LOW</text>
+  <text x="213" y="132" class="s" font-size="3.8" font-style="italic">nobody wants to do it</text>
+  <g><circle cx="278" cy="127.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/></g>
+  <circle cx="298" cy="127.5" r="7.5" style="fill:#5C4830;stroke:#000000;stroke-width:.8"/><text x="298" y="130" class="m" font-size="5.5" text-anchor="middle" fill="#F2EDE0">2</text>
+  <circle cx="386" cy="127.5" r="4.5" class="w" stroke-dasharray="1.5 1"/>
+</g>
+
+<g id="feature-F">
+  <rect x="172" y="139" width="236" height="19" rx="1" class="r" stroke="#B03A2E" stroke-width=".8"/>
+  <text x="180" y="152" class="m" font-size="9">F</text>
+  <polygon points="194,144 198.5,148.5 194,153 189.5,148.5" class="w" stroke-dasharray="1.5 1"/>
+  <text x="213" y="147" class="m" font-size="3.8" fill="#B03A2E">HIGH · LOCKED UNTIL C</text>
+  <text x="213" y="153" class="s" font-size="3.8" font-style="italic">Plan → Work worth +1 for 2 weeks</text>
+  <g><circle cx="278" cy="148.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#000000;stroke-width:.5"/></g>
+  <circle cx="298" cy="148.5" r="7.5" style="fill:#5C4830;stroke:#000000;stroke-width:.8"/><text x="298" y="151" class="m" font-size="5.5" text-anchor="middle" fill="#F2EDE0">2</text>
+  <rect x="270" y="141" width="38" height="15" rx="1" class="r" fill="#FFFFFF" stroke="#B03A2E" stroke-width=".6"/>
+  <text x="312" y="151" class="m" font-size="5" fill="#B03A2E">LOCK TILE</text>
+  <circle cx="386" cy="148.5" r="4.5" class="w" stroke-dasharray="1.5 1"/>
+</g>
+
+<polygon points="182,158.7 184.8,161.5 182,164.3 179.2,161.5" class="w" stroke-dasharray="1.5 1"/>
+<text x="188" y="163" class="s" font-size="3.2" font-style="italic">= Unclear flag seat, just right of the letter (§10)</text>
+<circle cx="386" cy="161.5" r="2.5" class="w" stroke-dasharray="1.5 1"/>
+<text x="381" y="163" class="s" font-size="3.2" text-anchor="end" font-style="italic">Quality chip seat, face-down until Demo (§10) =</text>
+
+<!-- ═══ THE WEEK ═══ -->
+<line x1="12" y1="166" x2="408" y2="166" class="r"/>
+<text x="12" y="176" class="m" font-size="7" letter-spacing="2.5">THE WEEK</text>
+
+<!-- six card slots, 65 x 90 for a 63 x 88 card - OVERTIME is the extra sixth, to the right of Friday -->
+<g class="m" font-size="4.4" text-anchor="middle">
+  <text x="44.5" y="186">MONDAY</text><text x="110" y="186">TUESDAY</text><text x="176" y="186">WEDNESDAY</text>
+  <text x="242" y="186">THURSDAY</text><text x="308" y="186">FRIDAY</text>
+  <text x="374" y="186" fill="#B03A2E">OVERTIME</text>
+</g>
+<line x1="346.5" y1="190" x2="346.5" y2="280" class="r" stroke-dasharray="2 2"/>
+<g class="slot">
+  <rect x="12" y="190" width="65" height="90" rx="2"/>
+  <rect x="78" y="190" width="65" height="90" rx="2"/>
+  <rect x="144" y="190" width="65" height="90" rx="2"/>
+  <rect x="210" y="190" width="65" height="90" rx="2"/>
+  <rect x="276" y="190" width="65" height="90" rx="2"/>
+  <rect x="342" y="190" width="65" height="90" rx="2" stroke="#B03A2E"/>
+</g>
+<text x="210" y="289" class="m q" font-size="5.5" text-anchor="middle" letter-spacing="1.5">ORDER DOES NOT MATTER</text>
+<text x="374" y="200" class="m q" font-size="3" text-anchor="middle">ONLY ONE 6TH CARD</text>
+<text x="374" y="205" class="m q" font-size="3" text-anchor="middle">PER WEEK, ONE PERSON</text>
+<polygon points="374,214 377.9,218 374,222 370.1,218" class="w"/>
+<text x="374" y="230" class="m" font-size="2.8" text-anchor="middle" fill="#B03A2E">MUST MATCH</text>
+<text x="374" y="235" class="m" font-size="2.8" text-anchor="middle" fill="#B03A2E">YOUR ITEM</text>
+<text x="374" y="244" class="s q" font-size="3" text-anchor="middle" font-style="italic">the diamond above is</text>
+<text x="374" y="249" class="s q" font-size="3" text-anchor="middle" font-style="italic">the Item habitus shape</text>
+<text x="374" y="260" class="m" font-size="2.8" text-anchor="middle" fill="#B03A2E">COSTS 1 MOTIVATION</text>
+<text x="374" y="265" class="m" font-size="2.8" text-anchor="middle" fill="#B03A2E">+ A FLEX MARKER</text>
+
+<!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
+<line x1="6" y1="6" x2="291" y2="6" stroke="#2C6E8E" stroke-width="1"/>
+<line x1="303" y1="6" x2="414" y2="6" stroke="#B8860B" stroke-width="1"/>
+<line x1="414" y1="6" x2="414" y2="326" stroke="#7A3B6D" stroke-width="1"/>
+</svg>
+

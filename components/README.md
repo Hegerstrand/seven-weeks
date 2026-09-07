@@ -107,13 +107,13 @@ week 2 when
 Events start. Cover the small dashed box when it is spent. It requires **3 Motivation or more** - a threshold, not a cost - which is what makes Celebrate strategic rather than merely a way to
 stop people quitting.
 
-**Three ways out of an Event.** Every card prints the same **TO CANCEL** block. **ADAPT n**
-spends the team's re-planning budget. **HERO** names one habitus part and is free, once per
-game, for +2 Capital and +1 Motivation to somebody else - this was built around **sixteen**
-Base / Legs / Head / Item parts (four per row) naming exactly one Event each, and **four**
-Torso parts on every card as the suffers/ignores reaction. **HABIT** names the acquired Ledger
-Habit for that card's category; holding it takes **1 off the ADAPT cost**, so an ADAPT-1 card
-stops happening at all.
+**Three ways out of an Event.** Every card prints the same **HOW TO ADAPT** block. The first
+line spends the team's re-planning budget, joined by an "or" to **HERO**, which names one
+habitus part and is free, once per game, for +2 Capital and +1 Motivation to somebody else -
+this was built around **sixteen** Base / Legs / Head / Item parts (four per row) naming
+exactly one Event each, and **four** Torso parts on every card as the suffers/ignores
+reaction. **HABIT** names the acquired Ledger Habit for that card's category; holding it takes
+**1 off the Adaptability cost**, so an ADAPT-1 card stops happening at all.
 
 **Now stale:** Base, Legs, Head, Item and Torso are all five-per-row (twenty-five parts total)
 - the printed Event cards still only name the original sixteen/four, so the five newest parts

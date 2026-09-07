@@ -6,10 +6,10 @@ Black and white line art for cheap office printing; styling comes later.</desc>
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .hand { font-family:"Caveat","Segoe Script",cursive; fill:#3A3A3A; }
-  .box { fill:none; stroke:#000000; stroke-width:.5; }
-  .step { fill:none; stroke:#000000; stroke-width:.4; }
-  .q { fill:#3A3A3A; }
+  .hand { font-family:"Caveat","Segoe Script",cursive; fill:#000000; }
+  .box { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .step { fill:none; stroke:#2A2620; stroke-width:.4; }
+  .q { fill:#000000; }
   .b { font-size:3.2px; }
   .n { font-size:2.8px; }
 </style>
@@ -19,7 +19,7 @@ Black and white line art for cheap office printing; styling comes later.</desc>
 <text x="12" y="16" class="m" font-size="6" letter-spacing="2">HOW TO PLAY</text>
 <text x="12" y="23" class="s" font-size="3.6" font-style="italic">Seven weeks. Five days a week, for the whole team. Six features. One deadline that does not move.</text>
 <text x="198" y="18" class="m q" font-size="2.8" text-anchor="end">ONE NEW IDEA A WEEK - THE BOARDS UNCOVER THEMSELVES</text>
-<line x1="12" y1="27" x2="198" y2="27" stroke="#000000" stroke-width=".5"/>
+<line x1="12" y1="27" x2="198" y2="27" stroke="#2A2620" stroke-width=".5"/>
 
 <!-- SETUP -->
 <rect x="12" y="32" width="186" height="72" rx="2" class="box"/>
@@ -47,7 +47,7 @@ Black and white line art for cheap office printing; styling comes later.</desc>
 <rect x="16" y="124" width="178" height="22" rx="1.5" class="step"/>
 <text x="20" y="131" class="m" font-size="3.6">1 · PLAN THE WEEK</text>
 <text x="20" y="136.5" class="s b">Lay <tspan font-weight="bold">five Activity cards</tspan> across Monday to Friday. Put a character disc on each - that person's Skill,</text>
-<rect x="39.31" y="138.50" width="10.66" height="3.36" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+<rect x="39.31" y="138.50" width="10.66" height="3.36" rx=".4" fill="#D9D3C4"/>
 <text x="20" y="141" class="s b">Knowledge and <tspan>Capital</tspan> apply to that day. One person may take several days, or none. A slot may instead</text>
 <text x="20" y="145" class="s b">take a <tspan font-weight="bold">Flex marker</tspan>, giving back a day someone worked as Overtime. <tspan font-style="italic">Then stop. Nothing has resolved.</tspan></text>
 
@@ -67,11 +67,11 @@ Black and white line art for cheap office printing; styling comes later.</desc>
 
 <rect x="16" y="206" width="178" height="18" rx="1.5" class="step"/>
 <text x="20" y="213" class="m" font-size="3.6">5 · CLOSE THE WEEK</text>
-<rect x="81.55" y="216.00" width="10.66" height="3.36" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+<rect x="81.55" y="216.00" width="10.66" height="3.36" rx=".4" fill="#D9D3C4"/>
 <text x="20" y="218.5" class="s b"><tspan font-weight="bold">Bank</tspan> completed features (lift any lock, pay <tspan>Capital</tspan>) → <tspan font-weight="bold">walk the Ledger</tspan> coins, at most one step each, and</text>
 <text x="20" y="222.5" class="s b">flip any that reached its ring → <tspan font-weight="bold">Motivation as one net number</tspan>: lose 1 to the grind, +1 if the Need was met.</text>
 
-<rect x="61.80" y="230.57" width="13.74" height="4.62" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+<rect x="61.80" y="230.57" width="13.74" height="4.62" rx=".4" fill="#D9D3C4"/>
 <text x="16" y="234" class="hand" font-size="4.4">bank first - it pays the <tspan>capital</tspan> the ledger needs.</text>
 <text x="108" y="234" class="hand" font-size="4.4">apply motivation as one number, then check for zero.</text>
 

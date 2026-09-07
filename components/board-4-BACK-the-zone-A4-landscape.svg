@@ -9,8 +9,8 @@ other board's reverse.</desc>
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .h { fill:none; stroke:#000000; stroke-width:.8; }
-  .q { fill:#3A3A3A; }
+  .h { fill:none; stroke:#2A2620; stroke-width:.8; }
+  .q { fill:#000000; }
 </style>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
@@ -33,6 +33,6 @@ other board's reverse.</desc>
 <text x="18" y="198" class="s q" font-size="6" font-style="italic">If you are reading this at the table, the Zone is face down.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
-<line x1="291" y1="6" x2="291" y2="204" stroke="#1B7A5C" stroke-width="1"/>
-<line x1="6" y1="207" x2="291" y2="207" stroke="#2C6E8E" stroke-width="1"/>
+<line x1="291" y1="6" x2="291" y2="204" stroke="#6E7A54" stroke-width="1"/>
+<line x1="6" y1="207" x2="291" y2="207" stroke="#3F5B66" stroke-width="1"/>
 </svg>

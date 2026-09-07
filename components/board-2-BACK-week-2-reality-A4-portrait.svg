@@ -7,8 +7,8 @@ viewBox height grew from 420 to 469.5 (keeping the same scale) to add the same 3
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .h { fill:none; stroke:#000000; stroke-width:.8; }
-  .q { fill:#3A3A3A; }
+  .h { fill:none; stroke:#2A2620; stroke-width:.8; }
+  .q { fill:#000000; }
 </style>
 
 <rect width="297" height="469.5" fill="#FFFFFF"/>
@@ -41,6 +41,6 @@ viewBox height grew from 420 to 469.5 (keeping the same scale) to add the same 3
 <text x="24" y="400" class="s" font-size="9" font-style="italic">Nothing changed except when you find out.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
-<line x1="8.49" y1="8.49" x2="288.5" y2="8.49" stroke="#C1662F" stroke-width="1.4"/>
-<line x1="8.49" y1="8.49" x2="8.49" y2="460.99" stroke="#7A3B6D" stroke-width="1.4"/>
+<line x1="8.49" y1="8.49" x2="288.5" y2="8.49" stroke="#905151" stroke-width="1.4"/>
+<line x1="8.49" y1="8.49" x2="8.49" y2="460.99" stroke="#6E6249" stroke-width="1.4"/>
 </svg>

@@ -9,10 +9,10 @@ one sheet.</desc>
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .r { stroke:#000000; stroke-width:.5; fill:none; }
-  .w { fill:none; stroke:#000000; stroke-width:.55; }
-  .q { fill:#3A3A3A; }
-  .cut { fill:none; stroke:#3A3A3A; stroke-width:.35; stroke-dasharray:3 2; }
+  .r { stroke:#2A2620; stroke-width:.5; fill:none; }
+  .w { fill:none; stroke:#2A2620; stroke-width:.55; }
+  .q { fill:#000000; }
+  .cut { fill:none; stroke:#4A5259; stroke-width:.35; stroke-dasharray:3 2; }
 </style>
 
 <rect width="333" height="210" fill="#FFFFFF"/>
@@ -35,9 +35,9 @@ one sheet.</desc>
     <circle cx="96" cy="100" r="8"/><circle cx="116" cy="100" r="8"/><circle cx="136" cy="100" r="8"/>
     <circle cx="156" cy="100" r="8"/><circle cx="176" cy="100" r="8"/><circle cx="196" cy="100" r="8"/>
   </g>
-  <circle cx="196" cy="100" r="10.5" class="w" stroke="#B03A2E" stroke-width=".8"/>
+  <circle cx="196" cy="100" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M88,110 L88,113 L204,113 L204,110" class="w" stroke-width=".5"/>
-  <rect x="158.20" y="114.82" width="12.56" height="2.94" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+  <rect x="158.20" y="114.82" width="12.56" height="2.94" rx=".4" fill="#D9D3C4"/>
   <text x="146" y="117" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST <tspan>CAPITAL</tspan> AT THE TABLE</text>
   <text x="248" y="99" class="s" font-size="5">Authorized Voice</text>
   <text x="248" y="104" class="s" font-size="3.4" font-style="italic">Once a week: cancel an Event, or</text>
@@ -54,9 +54,9 @@ one sheet.</desc>
   <rect x="8" y="88" width="317" height="34" rx="2" class="r"/>
   <text x="14" y="96" class="m q" font-size="3.6" letter-spacing="1.2">TURN ME OVER · START OF WEEK 4</text>
   <text x="14" y="107" class="s" font-size="9">Standing joins the Ledger.</text>
-  <rect x="82.2" y="110.91" width="12" height="4.83" rx=".4" fill="#6B4C9A" fill-opacity=".32"/>
+  <rect x="82.2" y="110.91" width="12" height="4.83" rx=".4" fill="#D9D3C4"/>
   <text x="14" y="114.5" class="s" font-size="4.6">It is not grown. It mirrors the highest <tspan>Capital</tspan> at the table - your place in the room is on loan.</text>
-  <text x="14" y="120" class="m" font-size="3.2" fill="#B03A2E">ALSO NOW: A FACE-DOWN QUALITY CHIP GOES ON EACH FEATURE</text>
+  <text x="14" y="120" class="m" font-size="3.2">ALSO NOW: A FACE-DOWN QUALITY CHIP GOES ON EACH FEATURE</text>
 </g>
 
 <line x1="10" y1="172" x2="323" y2="172" class="cut"/>

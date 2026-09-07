@@ -6,20 +6,23 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .c { fill:none; stroke:#000000; stroke-width:.5; }
-  .h { stroke:#000000; stroke-width:.4; fill:none; }
-  .w { fill:none; stroke:#000000; stroke-width:.7; }
-  .q { fill:#3A3A3A; }
-  .lb { font-family:"IBM Plex Mono","Courier New",monospace; font-size:2.9px; fill:#3A3A3A; }
+  .c { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .h { stroke:#2A2620; stroke-width:.4; fill:none; }
+  .w { fill:none; stroke:#2A2620; stroke-width:.7; }
+  .q { fill:#000000; }
+  .lb { font-family:"IBM Plex Mono","Courier New",monospace; font-size:2.9px; fill:#000000; }
   .vl { font-family:"IBM Plex Mono","Courier New",monospace; font-size:2.9px; fill:#000000; }
-  .ic { fill:#E8D4B8; stroke:#000000; stroke-width:.35; }
-  .pip { fill:#000000; stroke:none; }
-  .trust, .capab, .shpra, .adapt { fill:#000000; }
+  .ic { fill:#E8D4B8; stroke:#2A2620; stroke-width:.35; }
+  .pip { fill:#2A2620; stroke:none; }
+  .trust { fill:#000000; }
+  .capab { fill:#000000; }
+  .shpra { fill:#000000; }
+  .adapt { fill:#000000; }
   /* header tint = the Ledger row that answers this category */
-  .cat-ppl  { fill:#F9E3E0; }
-  .cat-env  { fill:#DFF0DB; }
-  .cat-mgmt { fill:#FAECBE; }
-  .cat-cust { fill:#DCE7F2; }
+  .cat-ppl  { fill:#D3CEDF; }
+  .cat-env  { fill:#C7CFB5; }
+  .cat-mgmt { fill:#F7D7A1; }
+  .cat-cust { fill:#B5C7CF; }
 </style>
 
 <defs>
@@ -31,195 +34,205 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
   <g id="q1"><circle cx="0" cy="0" r=".45" class="pip"/></g>
   <g id="q2"><circle cx="-.95" cy="0" r=".45" class="pip"/><circle cx=".95" cy="0" r=".45" class="pip"/></g>
   <g id="q3"><circle cx="0" cy="-.95" r=".45" class="pip"/><circle cx="-.95" cy=".8" r=".45" class="pip"/><circle cx=".95" cy=".8" r=".45" class="pip"/></g>
-  <g id="q4"><circle cx="-.95" cy="-.95" r=".45" class="pip"/><circle cx=".95" cy="-.95" r=".45" class="pip"/><circle cx="-.95" cy=".95" r=".45" class="pip"/><circle cx=".95" cy=".95" r=".45" class="pip"/></g>
+  <g id="q4"><circle cx="-.7" cy="-.7" r=".4" class="pip"/><circle cx=".7" cy="-.7" r=".4" class="pip"/><circle cx="-.7" cy=".7" r=".4" class="pip"/><circle cx=".7" cy=".7" r=".4" class="pip"/></g>
   <g id="reinforcements">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-ppl"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">PEOPLE</text>
-    <text x="5" y="19" class="m" font-size="5.6" letter-spacing=".8">MORE HANDS</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">PEOPLE</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">MORE HANDS</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
     <text x="5" y="28" class="s" font-size="4.4">The feature with the most</text>
     <text x="5" y="33" class="s" font-size="4.4">Work played on it this week:</text>
     <text x="5" y="38" class="s" font-size="4.4">halve that Work <tspan font-weight="bold">(round down)</tspan>.</text>
-    <rect x="5" y="41" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="45" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="49.5" class="lb">ADAPT</text><text x="20" y="49.5" class="m" font-size="4">2</text>
-    <rect x="5.4" y="55.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="54" class="lb">HERO</text><g transform="translate(18.5,52.9)"><use href="#i-legs"/><g transform="translate(0,0.4)"><use href="#q4"/></g></g><text x="23" y="54" class="vl">ANALYTICAL</text>
-    <text x="8" y="58.5" class="lb">HABIT</text><text x="20" y="58.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="62" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
-    <text x="5" y="79" class="s" font-size="3.2" font-style="italic">More hands didn't mean more progress -</text>
-    <text x="5" y="83.5" class="s" font-size="3.2" font-style="italic">just more explaining. BROOKS 1975</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-legs"/><g transform="translate(0,0.4)"><use href="#q4"/></g></g><text x="23" y="67" class="vl">ANALYTICAL</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">More hands, more talk. BROOKS 1975</text>
   </g>
 
   <g id="legacy">
-    <rect x=".6" y=".6" width="61.8" height="28.4" rx="1.4" class="cat-env"/>
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">ENVIRONMENT</text>
-    <text x="5" y="18" class="m" font-size="5.6" letter-spacing=".8">OLD</text>
-    <text x="5" y="25" class="m" font-size="5.6" letter-spacing=".8">FOUNDATIONS</text>
-    <line x1="5" y1="29" x2="58" y2="29" class="h" stroke-width=".7"/>
-    <text x="5" y="33" class="s" font-size="4.4">The feature with the most</text>
-    <text x="5" y="38" class="s" font-size="4.4">Work already banked into</text>
-    <text x="5" y="43" class="s" font-size="4.4">it gains <tspan font-weight="bold">+2 Work Cost</tspan>.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">3</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="59" class="lb">HERO</text><g transform="translate(18.5,57.9)"><use href="#i-base"/><use href="#q1"/></g><text x="23" y="59" class="vl">ACADEMIC</text>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl capab">WHO KNOWS WHAT</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">HIERARCHY: LOSE 1 MOTIVATION</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">Somebody built this years ago, and never wrote down why.</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">OLD</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">FOUNDATIONS</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">The feature with the most</text>
+    <text x="5" y="33" class="s" font-size="4.4">Work already banked into</text>
+    <text x="5" y="38" class="s" font-size="4.4">it gains <tspan font-weight="bold">+2 Work Cost</tspan>.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-base"/><use href="#q1"/></g><text x="23" y="67" class="vl">ACADEMIC</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Built years ago. Nobody wrote down why.</text>
   </g>
 
   <g id="build">
-    <rect x=".6" y=".6" width="61.8" height="28.4" rx="1.4" class="cat-env"/>
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">ENVIRONMENT</text>
-    <text x="5" y="18" class="m" font-size="5.6" letter-spacing=".8">FALSE</text>
-    <text x="5" y="25" class="m" font-size="5.6" letter-spacing=".8">START</text>
-    <line x1="5" y1="29" x2="58" y2="29" class="h" stroke-width=".7"/>
-    <text x="5" y="33" class="s" font-size="4.4">The first Work card this</text>
-    <text x="5" y="38" class="s" font-size="4.4">week produces <tspan font-weight="bold">nothing</tspan>.</text>
-    <text x="5" y="43" class="s" font-size="4.4">The day starts over instead.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">1</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="59" class="lb">HERO</text><g transform="translate(18.5,57.9)"><use href="#i-base"/><use href="#q2"/></g><text x="23" y="59" class="vl">TRADE</text>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl capab">WHO KNOWS WHAT</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT NEVER HAPPENS</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">HIERARCHY: LOSE 1 MOTIVATION</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">It worked yesterday.</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">FALSE</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">START</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">The first Work card this</text>
+    <text x="5" y="33" class="s" font-size="4.4">week produces <tspan font-weight="bold">nothing</tspan>.</text>
+    <text x="5" y="38" class="s" font-size="4.4">The day starts over instead.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-base"/><use href="#q2"/></g><text x="23" y="67" class="vl">TRADE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT NEVER HAPPENS</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">It worked yesterday.</text>
   </g>
 
   <g id="split">
-    <rect x=".6" y=".6" width="61.8" height="28.4" rx="1.4" class="cat-ppl"/>
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-ppl"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">PEOPLE</text>
-    <text x="5" y="18" class="m" font-size="5.6" letter-spacing=".8">THE TEAM</text>
-    <text x="5" y="25" class="m" font-size="5.6" letter-spacing=".8">SPLITS</text>
-    <line x1="5" y1="29" x2="58" y2="29" class="h" stroke-width=".7"/>
-    <text x="5" y="33" class="s" font-size="4.4">Two characters may not</text>
-    <text x="5" y="38" class="s" font-size="4.4">take the same feature this</text>
-    <text x="5" y="43" class="s" font-size="4.4">week. <tspan font-weight="bold" class="trust">Lose 1 Trust</tspan>.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">2</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="59" class="lb">HERO</text><g transform="translate(18.5,57.9)"><use href="#i-legs"/><g transform="translate(0,0.4)"><use href="#q2"/></g></g><text x="23" y="59" class="vl">SOCIAL</text>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q3"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">COMMUNITY: LOSE 1 MOTIVATION</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">Nobody said anything out loud.</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">PEOPLE</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">THE TEAM</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">SPLITS</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">Two characters may not</text>
+    <text x="5" y="33" class="s" font-size="4.4">take the same feature this</text>
+    <rect x="4" y="33" width="50" height="6" rx="1" fill="#D3CEDF"/>
+    <text x="5" y="38" class="s" font-size="4.4">week. <tspan font-weight="bold" class="trust">Lose 1 Trust</tspan>.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q3"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">COMMUNITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-legs"/><g transform="translate(0,0.4)"><use href="#q2"/></g></g><text x="23" y="67" class="vl">SOCIAL</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Nobody said anything out loud.</text>
   </g>
 
   <g id="reorg">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="19" class="m" font-size="5.6" letter-spacing=".8">REORGANISED</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">REORGANISED</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <rect x="4" y="23" width="50" height="6" rx="1" fill="#D3B1B1"/>
     <text x="5" y="28" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
-    <text x="5" y="33" class="s" font-size="4.4">Standing is re-read now,</text>
-    <text x="5" y="38" class="s" font-size="4.4">and <tspan font-weight="bold" class="shpra">lose 1 Shared Practice</tspan>.</text>
-    <rect x="5" y="41" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="45" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="49.5" class="lb">ADAPT</text><text x="20" y="49.5" class="m" font-size="4">3</text>
-    <rect x="5.4" y="55.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="54" class="lb">HERO</text><g transform="translate(18.5,52.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="54" class="vl">WITHDRAW</text>
-    <text x="8" y="58.5" class="lb">HABIT</text><text x="20" y="58.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="62" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <g transform="translate(7,66.9)"><use href="#i-torso"/><use href="#q1"/></g><text x="11" y="68" class="m" font-size="2.7" fill="#B03A2E">AUTONOMY: LOSE 1 MOTIVATION</text>
-    <g transform="translate(7,71.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="72.5" class="m q" font-size="2.7">HIERARCHY: NO LOSS</text>
-    <text x="5" y="79" class="s" font-size="3.2" font-style="italic">The work did not change.</text>
-    <text x="5" y="83.5" class="s" font-size="3.2" font-style="italic">Only the chart did.</text>
+    <rect x="4" y="28" width="50" height="6" rx="1" fill="#F7D7A1"/>
+    <text x="5" y="33" class="s" font-size="4.4"><tspan font-weight="bold" class="shpra">Lose 1 Shared Practice</tspan>.</text>
+    <g transform="translate(7,36.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="35.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="38" class="m" font-size="2.7">AUTONOMY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,41.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="42.5" class="m q" font-size="2.7">HIERARCHY: NO LOSS</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Only the chart changed, not the work.</text>
   </g>
 
   <g id="crunch">
-    <rect x=".6" y=".6" width="61.8" height="28.4" rx="1.4" class="cat-env"/>
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">ENVIRONMENT</text>
-    <text x="5" y="18" class="m" font-size="5.6" letter-spacing=".8">EVERYTHING</text>
-    <text x="5" y="25" class="m" font-size="5.6" letter-spacing=".8">AT ONCE</text>
-    <line x1="5" y1="29" x2="58" y2="29" class="h" stroke-width=".7"/>
-    <text x="5" y="33" class="s" font-size="4.4">No feature may take more</text>
-    <text x="5" y="38" class="s" font-size="4.4">than <tspan font-weight="bold">1 Work</tspan> this week.</text>
-    <text x="5" y="43" class="s" font-size="4.4">Spread thin, on purpose.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">2</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="59" class="lb">HERO</text><g transform="translate(18.5,57.9)"><use href="#i-item"/><use href="#q1"/></g><text x="23" y="59" class="vl">LAPTOP</text>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl capab">WHO KNOWS WHAT</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">HIERARCHY: LOSE 1 MOTIVATION</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">All of it is the top priority.</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">EVERYTHING</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">AT ONCE</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">No feature may take more</text>
+    <text x="5" y="33" class="s" font-size="4.4">than <tspan font-weight="bold">1 Work</tspan> this week.</text>
+    <text x="5" y="38" class="s" font-size="4.4">Spread thin, on purpose.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-item"/><use href="#q1"/></g><text x="23" y="67" class="vl">LAPTOP</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">All of it is the top priority.</text>
   </g>
 
   <g id="morale">
-    <rect x=".6" y=".6" width="61.8" height="28.4" rx="1.4" class="cat-ppl"/>
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-ppl"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">PEOPLE</text>
-    <text x="5" y="18" class="m" font-size="5.6" letter-spacing=".8">A FLAT</text>
-    <text x="5" y="25" class="m" font-size="5.6" letter-spacing=".8">WEEK</text>
-    <line x1="5" y1="29" x2="58" y2="29" class="h" stroke-width=".7"/>
-    <text x="5" y="33" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
-    <text x="5" y="38" class="s" font-size="4.4">A <tspan font-weight="bold">Celebrate</tspan> this week</text>
-    <text x="5" y="43" class="s" font-size="4.4">gives no bonus, only +2.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">1</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="59" class="lb">HERO</text><g transform="translate(18.5,57.9)"><use href="#i-item"/><use href="#q3"/></g><text x="23" y="59" class="vl">COFFEE CUP</text>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT NEVER HAPPENS</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q3"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">COMMUNITY: LOSE 1 MOTIVATION</text>
-    <g transform="translate(7,76.4)"><use href="#i-torso"/><use href="#q4"/></g><text x="11" y="77.5" class="m q" font-size="2.7">QUALITY: NO LOSS</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">Nothing happened. That is it.</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">PEOPLE</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">A FLAT</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">WEEK</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <rect x="4" y="23" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="28" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
+    <text x="5" y="33" class="s" font-size="4.4">A <tspan font-weight="bold">Celebrate</tspan> this week gives</text>
+    <rect x="4" y="33" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="38" class="s" font-size="4.4">only +2 Motivation, no bonus.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q3"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">COMMUNITY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,46.4)"><use href="#i-torso"/><use href="#q4"/></g><text x="11" y="47.5" class="m q" font-size="2.7">QUALITY: NO LOSS</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-item"/><use href="#q3"/></g><text x="23" y="67" class="vl">COFFEE CUP</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT NEVER HAPPENS</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Nothing happened. That is it.</text>
   </g>
 
   <g id="audit">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="19" class="m" font-size="5.6" letter-spacing=".8">THE AUDIT</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE AUDIT</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
     <text x="5" y="28" class="s" font-size="4.4">One card this week must</text>
     <text x="5" y="33" class="s" font-size="4.4">be a <tspan font-weight="bold">Record Meeting</tspan>. If</text>
     <text x="5" y="38" class="s" font-size="4.4">none is, lose a card and</text>
+    <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3CEDF"/>
     <text x="5" y="43" class="s" font-size="4.4">lose <tspan font-weight="bold" class="trust">1 Trust</tspan>.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">2</text>
-    <text x="8" y="59" class="lb">HERO</text><text x="23" y="59" class="vl" fill="#B03A2E">NOBODY</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q1"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">AUTONOMY: LOSE 1 MOTIVATION</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">No one person can be the answer.</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">AUTONOMY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">No hero can save this.</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">No one person can be the answer.</text>
   </g>
 
   <g id="deadline">
-    <rect x=".6" y=".6" width="61.8" height="28.4" rx="1.4" class="cat-cust"/>
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
-    <text x="5" y="9" class="m q" font-size="3.4" letter-spacing="1">CUSTOMER</text>
-    <text x="5" y="18" class="m" font-size="5.6" letter-spacing=".8">THE DATE</text>
-    <text x="5" y="25" class="m" font-size="5.6" letter-spacing=".8">MOVES UP</text>
-    <line x1="5" y1="29" x2="58" y2="29" class="h" stroke-width=".7"/>
-    <text x="5" y="33" class="s" font-size="4.4">Every unbanked feature</text>
-    <text x="5" y="38" class="s" font-size="4.4">becomes <tspan font-weight="bold">Unclear</tspan>. Work on it</text>
-    <text x="5" y="43" class="s" font-size="4.4">gives 1 less until cleared.</text>
-    <rect x="5" y="46" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="50" class="m q" font-size="2.8" letter-spacing="1">WAYS OUT</text>
-    <text x="8" y="54.5" class="lb">ADAPT</text><text x="20" y="54.5" class="m" font-size="4">3</text>
-    <text x="8" y="59" class="lb">HERO</text><text x="23" y="59" class="vl" fill="#B03A2E">NOBODY</text>
-    <rect x="5.4" y="60.6" width="52.2" height="7.2" class="cat-cust"/>
-    <text x="8" y="63.5" class="lb">HABIT</text><text x="20" y="63.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="67" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <g transform="translate(7,71.9)"><use href="#i-torso"/><use href="#q4"/></g><text x="11" y="73" class="m" font-size="2.7" fill="#B03A2E">QUALITY: LOSE 1 MOTIVATION</text>
-    <text x="5" y="84" class="s" font-size="3.2" font-style="italic">This one is not about any of you.</text>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">THE DATE</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">MOVES UP</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">Every unbanked feature</text>
+    <text x="5" y="33" class="s" font-size="4.4">becomes <tspan font-weight="bold">Unclear</tspan>. Work on it</text>
+    <text x="5" y="38" class="s" font-size="4.4">gives 1 less until cleared.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">No hero can save this.</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">This one is not about any of you.</text>
   </g>
 </defs>
 
@@ -237,7 +250,4 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
 <use href="#morale" x="10" y="196"/>
 <use href="#audit" x="76" y="196"/>
 <use href="#deadline" x="142" y="196"/>
-
-<text x="10" y="286" class="s" font-size="3.8" font-style="italic">Sixteen of the eighteen cards name a habitus part, so every character has exactly four events only they can answer.</text>
-<text x="10" y="291" class="s" font-size="3.8" font-style="italic">These last two name NOBODY. Every card still has a Habit route - the team can always become the answer.</text>
 </svg>

@@ -7,8 +7,8 @@ viewBox width grew from 420 to 471 (keeping the same 1/√2 scale) to add the sa
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .h { fill:none; stroke:#000000; stroke-width:.8; }
-  .q { fill:#3A3A3A; }
+  .h { fill:none; stroke:#2A2620; stroke-width:.8; }
+  .q { fill:#000000; }
 </style>
 
 <rect width="471" height="297" fill="#FFFFFF"/>
@@ -36,7 +36,7 @@ viewBox width grew from 420 to 471 (keeping the same 1/√2 scale) to add the sa
 
 <line x1="263" y1="196" x2="263" y2="268" class="h" stroke-width=".4"/>
 
-<text x="279" y="206" class="m" font-size="6" letter-spacing="2.5" fill="#B03A2E">CATCH UP BEFORE YOU PLAY</text>
+<text x="279" y="206" class="m" font-size="6" letter-spacing="2.5">CATCH UP BEFORE YOU PLAY</text>
 <text x="279" y="222" class="s" font-size="8">Move Trust up <tspan font-weight="bold">1 for every two Coordinate</tspan></text>
 <text x="279" y="233" class="s" font-size="8"><tspan font-weight="bold">cards</tspan> the team has already played.</text>
 <text x="279" y="250" class="s" font-size="8">Everything else starts where it always was,</text>
@@ -45,7 +45,7 @@ viewBox width grew from 420 to 471 (keeping the same 1/√2 scale) to add the sa
 <text x="300" y="286" class="s" font-size="9" font-style="italic">It was counting all along.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
-<line x1="8.48" y1="8.49" x2="8.48" y2="288.5" stroke="#1B7A5C" stroke-width="1.4"/>
-<line x1="8.48" y1="292.76" x2="165.5" y2="292.76" stroke="#B8860B" stroke-width="1.4"/>
-<line x1="182.4" y1="292.76" x2="462.4" y2="292.76" stroke="#C1662F" stroke-width="1.4"/>
+<line x1="8.48" y1="8.49" x2="8.48" y2="288.5" stroke="#6E7A54" stroke-width="1.4"/>
+<line x1="8.48" y1="292.76" x2="165.5" y2="292.76" stroke="#9C7A32" stroke-width="1.4"/>
+<line x1="182.4" y1="292.76" x2="462.4" y2="292.76" stroke="#905151" stroke-width="1.4"/>
 </svg>

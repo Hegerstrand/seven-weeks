@@ -44,8 +44,8 @@ micromanaging boss in the room.
 - **Head - Pressure Response (pick one):** Take Charge / Analyze / Support / Challenge /
   Execute / Withdraw - sculpted as its own expression or pose.
 - **Item - Værktøjer & færdigheder (skills, 2-3):** e.g. technical, planning, facilitation,
-  communication, leadership, analysis, customer, quality, domain expertise - shown as a small
-  held prop (laptop, phone, clipboard, coffee cup, wrench, etc.).
+  communication, leadership, analysis, customer, quality - shown as a small held prop (laptop,
+  phone, clipboard, coffee cup, wrench, etc.).
 
 ## Other character traits (not physical parts, tracked on the character card)
 - **Need** is not a separate deal - **it is your Torso**, read a second way from week 4 on

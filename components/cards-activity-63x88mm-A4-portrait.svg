@@ -8,10 +8,13 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .c { fill:none; stroke:#000000; stroke-width:.5; }
-  .h { stroke:#000000; stroke-width:.4; fill:none; }
-  .q { fill:#3A3A3A; }
-  .trust, .capab, .shpra, .adapt { fill:#000000; }
+  .c { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .h { stroke:#2A2620; stroke-width:.4; fill:none; }
+  .q { fill:#000000; }
+  .trust { fill:#000000; }
+  .capab { fill:#000000; }
+  .shpra { fill:#000000; }
+  .adapt { fill:#000000; }
 </style>
 
 <defs>
@@ -23,12 +26,9 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <rect x="4" y="22" width="50" height="10" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="30" class="s" font-size="7">+1 to one feature</text>
-    <text x="5" y="42" class="s" font-size="4.4">Plus <tspan class="capab">Capability</tspan>, Skill,</text>
-    <text x="5" y="48" class="s" font-size="4.4">Knowledge, Head. Min 0.</text>
+    <text x="5" y="42" class="s" font-size="4.4">Adjust total Work for</text>
+    <text x="5" y="48" class="s" font-size="4.4">Capability and Shared Practice.</text>
     <line x1="5" y1="55" x2="58" y2="55" class="h"/>
-    <text x="5" y="62" class="m q" font-size="3.1">MAX 2 PER FEATURE PER WEEK</text>
-    <text x="5" y="67" class="m q" font-size="3.1">WEEK CAP: WORK CARDS +2,</text>
-    <text x="5" y="71" class="m q" font-size="3.1">PLUS 1 PER HABIT EARNED</text>
     <text x="5" y="78" class="s" font-size="4.2" font-style="italic">The only card that moves</text>
     <text x="5" y="83" class="s" font-size="4.2" font-style="italic">the project. Hence the trap.</text>
   </g>
@@ -37,7 +37,7 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">COORDINATE</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
-    <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#F9E3E0"/>
+    <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#D3CEDF"/>
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
     <text x="5" y="49" class="s" font-size="4.4"><tspan class="trust">Trust ≤ 1</tspan>: Learn is dead.</text>
@@ -56,7 +56,7 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <text x="5" y="34" class="s" font-size="5.8">one feature</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
     <text x="5" y="49" class="s" font-size="5">Nothing Unclear?</text>
-    <rect x="4" y="50.5" width="50" height="6.5" rx="1" fill="#DCE7F2"/>
+    <rect x="4" y="50.5" width="50" height="6.5" rx="1" fill="#B5C7CF"/>
     <text x="5" y="56" class="s" font-size="4.8"><tspan font-weight="bold" class="adapt">+1 Adaptability</tspan> instead.</text>
     <text x="5" y="64" class="m q" font-size="3.1">ADAPTABILITY = CARDS YOU</text>
     <text x="5" y="69" class="m q" font-size="3.1">MAY RE-LAY AFTER EVENTS</text>
@@ -68,13 +68,15 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">CELEBRATE</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <rect x="4" y="23.39" width="50" height="8" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="29" class="s" font-size="6.6">+2 Motivation</text>
     <text x="5" y="36" class="s" font-size="6.6">to everyone</text>
     <line x1="5" y1="42" x2="58" y2="42" class="h"/>
     <text x="5" y="51" class="s" font-size="5.4"><tspan font-weight="bold">+3</tspan> if a feature was</text>
     <text x="5" y="58" class="s" font-size="5.4">banked this week.</text>
-    <text x="5" y="66" class="m" font-size="2.8" fill="#B03A2E">NO CELEBRATE: LOSE 1 MOTIVATION</text>
-    <text x="5" y="71" class="m" font-size="3.1" fill="#B03A2E">AT 0, A CHARACTER LEAVES</text>
+    <rect x="36.98" y="63.48" width="20.83" height="3.22" rx=".45" fill="#D3B1B1"/>
+    <text x="5" y="66" class="m" font-size="2.8">NO CELEBRATE: LOSE 1 MOTIVATION</text>
+    <text x="5" y="71" class="m" font-size="3.1">AT 0, A CHARACTER LEAVES</text>
     <text x="5" y="79" class="s" font-size="4.2" font-style="italic">Nobody rests at work. You</text>
     <text x="5" y="84" class="s" font-size="4.2" font-style="italic">ship something and say so.</text>
   </g>
@@ -95,7 +97,4 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
 <use href="#celebrate" x="10" y="196"/>
 <use href="#celebrate" x="76" y="196"/>
 <use href="#work" x="142" y="196"/>
-
-<text x="10" y="286" class="s" font-style="italic" font-size="3.8">Five of these are a week. Work, Coordinate and Celebrate arrive in week 1;</text>
-<text x="10" y="291" class="s" font-style="italic" font-size="3.8">Teach, Align, Plan and Demo in week 3/4. Learn, Reflect and Meet are on sheet 5b.</text>
 </svg>

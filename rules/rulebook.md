@@ -554,6 +554,14 @@ what makes standing exist at all.
 > standing, so the hoarder stays permanently **needed** and never becomes **respected**. That
 > trade-off is the whole event, and it only exists once teaching pays Capital.
 
+#### Standing doesn't update itself
+**Standing** (the Ledger row that joins at week 4, §3.0) is not its own resource - it just
+names whichever character currently holds the highest Capital, and it is **not live**: nobody
+re-checks it every time a Capital box changes. It gets re-read at two points only - the week 4
+reveal (its first reading), and whenever an Event explicitly says to (REORGANISED is the only
+one that does, so far). Outside those two moments, the marker stays where it last landed even
+if Capital has since moved past it - Standing is a snapshot of a moment, not a live mirror.
+
 #### The habitus trigger pattern
 Every habitus effect reads as: **when [X] happens, if a character's habitus is [Y], then [Z].**
 Habitus shows up in four places, and between them they cover everything a character does:
@@ -750,17 +758,19 @@ free, keeping both Adaptability - and take +2 Capital for it.
 **Then resolve whatever survived.** Events you did not cancel happen now, before the week runs.
 
 #### Two ways out of an Event, and a Habit that changes the price
-Every Event card prints the same **WAYS OUT** block. Two of its lines remove the Event:
+Every Event card prints the same **HOW TO ADAPT** block, Torso reaction (if any) printed just
+above it. Two of its lines remove the Event, joined by an "or" - it prints a bare number and
+unit (no repeated "ADAPT" label, since the box header already says it):
 
 | Route | Costs | Limit |
 |---|---|---|
-| **ADAPT n** | n of the team's Adaptability budget, that week | Whatever the track allows |
+| **n ADAPTABILITY** | n Adaptability, that week's re-lay budget | Whatever the track allows |
 | **HERO** | Nothing. One named habitus part (§5.1) | Once per game, per character |
 
 **The third line, HABIT, changes the price - and the card tells you what to.** Each Event
 names the Habit matching its category. If the team has acquired it (§18), the card's own HABIT
 line states the result: an ADAPT 3 card reads *so it costs 2 instead*, while the four ADAPT-1
-cards - BUDGET CUT, PRIORITY CHANGES, THE BUILD IS BROKEN and A FLAT WEEK - read *so it never
+cards - BUDGET CUT, PRIORITY CHANGES, FALSE START and A FLAT WEEK - read *so it never
 happens*. Sometimes a Habit only makes an Event cheaper; sometimes it removes it outright. No
 one has to work out which, and neither board carries the rule: it is printed on the card in
 front of you.
@@ -915,7 +925,6 @@ No match, no bonus - the Activity just resolves at its normal effect.
 | Analysis | Plan, Reflect |
 | Customer | Demo, Align |
 | Quality | Reflect, and refusing to place a Low-Quality feature (§10) |
-| Domain expertise | Work (on a feature matching that character's background) |
 
 Every non-Work activity above maps to a specific Wenger or Vygotsky mechanism, not generic
 "team building" - see [../docs/team-learning-model.md](../docs/team-learning-model.md) for
@@ -1461,11 +1470,11 @@ swappable and unbalanceable. But it does three things that matter:
    a sentence a team reasons with. *"D depends on B"* is a table you check.
 2. **Events land as stories.** UNCLEAR REQUIREMENT on *the reporting module* is a moment.
    UNCLEAR REQUIREMENT on *Feature C* is admin.
-3. **It gives Knowledge and Domain expertise something to be about.** §7's Domain expertise
-   skill and \u00a78's individual Knowledge are currently abstract - *"Anna knows customer
-   requirement pattern A."* With a project on the table it becomes *"Anna has worked with this
-   payment provider before,"* which the team can actually reason about when deciding whether
-   to spend one of five precious days teaching it to someone else.
+3. **It gives Knowledge something to be about.** §8's individual Knowledge is currently
+   abstract - *"Anna knows customer requirement pattern A."* With a project on the table it
+   becomes *"Anna has worked with this payment provider before,"* which the team can actually
+   reason about when deciding whether to spend one of five precious days teaching it to
+   someone else.
 
 Write the chosen project's feature names straight onto the six feature cards. Everything else
 in the rules keeps referring to A - F.

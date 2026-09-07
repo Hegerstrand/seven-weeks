@@ -9,9 +9,9 @@ one sheet.</desc>
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .r { stroke:#000000; stroke-width:.5; fill:none; }
-  .q { fill:#3A3A3A; }
-  .cut { fill:none; stroke:#3A3A3A; stroke-width:.35; stroke-dasharray:3 2; }
+  .r { stroke:#2A2620; stroke-width:.5; fill:none; }
+  .q { fill:#000000; }
+  .cut { fill:none; stroke:#4A5259; stroke-width:.35; stroke-dasharray:3 2; }
 </style>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
@@ -38,7 +38,7 @@ one sheet.</desc>
 <!-- ═══ WHAT THE LEDGER READS HERE ═══ -->
 <rect x="10" y="73" width="127" height="47" rx="2" class="r"/>
 <text x="20" y="82" class="m" font-size="4.6" letter-spacing="1.2">THE LEDGER READS THIS</text>
-<rect x="20" y="85" width="112" height="9" rx="1.5" fill="#DFF0DB"/>
+<rect x="20" y="85" width="112" height="9" rx="1.5" fill="#C7CFB5"/>
 <text x="23" y="89" class="m" font-size="3.4" letter-spacing=".3">CAPABILITY · A FULL LINE</text>
 <text x="23" y="93" class="s" font-size="3.2">fill any whole row or whole column</text>
 <rect x="20" y="96" width="112" height="9" rx="1.5" fill="#FAECBE"/>
@@ -59,7 +59,7 @@ one sheet.</desc>
   <text x="20" y="49" class="s" font-size="4.6">The Zone has more to it than the grid.</text>
   <text x="20" y="55" class="s" font-size="3.4">Covering a square is only half of it - what you do with a</text>
   <text x="20" y="59.5" class="s" font-size="3.4">square you already cover comes next.</text>
-  <text x="20" y="66" class="m" font-size="3.2" fill="#B03A2E">ALSO NOW: THE LEDGER FLIPS TO ITS FRONT</text>
+  <text x="20" y="66" class="m" font-size="3.2">ALSO NOW: THE LEDGER FLIPS TO ITS FRONT</text>
 </g>
 
 <line x1="10" y1="196" x2="285" y2="196" class="cut"/>

@@ -1,6 +1,11 @@
 # Design Guide - High-Performance Team
 
-Status: **v1.0 - art direction locked, execution not started.**
+Status: **v2.0 - art direction locked, execution not started.**
+
+> **What changed from v1.0:** the iconography (§6) and the habitus-figure sculpting direction
+> (§5) move from hand-inked woodcut engraving to **low-poly, faceted geometry** - flat-shaded
+> planes with hard edges, no smoothing, no gradients. The earthy palette (§4) and the Field
+> Study/academic framing (§1-2) are unchanged and still govern everything below.
 
 This governs how the game *looks, feels and speaks*. For what the components physically are,
 see [../components/README.md](../components/README.md); for print specs, see
@@ -50,6 +55,15 @@ also wrong.** The friction between the two *is* the aesthetic.
 This is the most important system in the guide. The game has three speakers, and they never
 share a typeface.
 
+> **v3 override: all text is pure black (`#000`).** The Oak Gall Ink convention below described
+> a warm brown-black for body text; the client has since directed **black text only, everywhere,
+> with no exceptions** - no Oak Gall, no Slate, no track-coloured keywords (Trust/Capability/
+> Shared Practice/Adaptability), no Redline alert text. Colour now lives **only** in backgrounds,
+> washes, and outline strokes (see §4) - never in a text fill. The one accepted exception is
+> light text set directly on a dark shape fill for contrast (e.g. the Bone numerals on the
+> Feature Tower's Timber work-counter dots), which is a legibility requirement, not a stylistic
+> choice.
+
 | Voice | Typeface | Used for |
 |---|---|---|
 | **The scholar** | **EB Garamond** (serif, old-style) | Rules text, explanation, theory, anything the game says in its own voice. Warm, considered, unhurried. |
@@ -93,11 +107,13 @@ Everything the team owns and controls.
 | Name | Hex | Use |
 |---|---|---|
 | Field Paper | `#E8DCC4` | Primary card and board stock tone |
-| Bone | `#F2EDE0` | Highlights, the habitus figures |
+| Ivory | `#F2EDE0` | Highlights, the habitus figures |
 | Oak Gall Ink | `#2A2620` | All body text - a brown-black, never pure black |
 | Herbarium Green | `#5A6650` | Capability, growth, learning |
-| Oxblood | `#7B3F35` | Trust, the box cloth, binding accents |
-| Ochre | `#C08A3E` | Motivation, warmth, the human element |
+| Smoky Rose | `#905151` | Trust, binding/registration guide lines, **and** Redline (rework, defects, locked/red borders) - one color now covers both; see the note below. |
+| ~~Oxblood~~ | ~~`#7B3F35`~~ | Retired - merged into Smoky Rose above. |
+| Motivation | `#D3B1B1` | Dusty rose - the Motivation box, every "Lose 1 Motivation" highlight on cards. Supersedes "Ochre" below, which was never actually built - this is the color the whole project converged on instead. |
+| ~~Ochre~~ | ~~`#C08A3E`~~ | Retired - documented for Motivation but never used anywhere; see Motivation above. |
 | Slate | `#4A5259` | Shared Practice, structure, rules furniture |
 | Timber | `#8B6F47` / `#5C4830` (finished) / `#EFE4D3` (card tint) | Work - the feature Work-counter pips (darker shade = reached Work Cost) and the highlight box on the Work Activity card |
 
@@ -108,13 +124,48 @@ deadlines. Never for the team's own tracks, characters, or Habits.
 | Name | Hex | Use |
 |---|---|---|
 | Highlighter | `#E8C547` | Management-category Events. The colour of someone else's priority. |
-| Redline | `#B03A2E` | Rework, defects, corrections, "as per my last email" |
+| ~~Redline~~ | ~~`#B03A2E`~~ | Retired - merged into Smoky Rose (team's world palette, above). |
 | Ledger Blue | `#3B5B7A` | Customer-category Events, external dependencies |
 
 > **The colour rule:** earthy = the team. Accent = the world acting on the team. A player
 > should be able to feel, without being told, that the yellow things are not on their side.
+> **Smoky Rose is the one deliberate exception** - Trust/binding (team) and Redline (intrusion)
+> now share a single color, collapsing that split for this pair only. Highlighter and Ledger
+> Blue still hold the line for everything else.
+
+### The palette gaps - filled
+
+Four concepts had no colour at all and were borrowing someone else's (Capital sat on an
+unrelated purple; the Adaptability track and the Event categories People/Environment were
+quietly reusing Trust/Capability's earthy tints or Customer's accent blue). Trust's own
+sentence-level highlights had the same problem the other way round - reusing its pale *tint*
+as if it were a wash. Filled with a **dusty, muted fourth family** - lighter and greyer than
+the earthy tier, distinct from the saturated corporate accents - each with a wash (area fills,
+bands, highlights) and, where it's read as text, a darker ink:
+
+| Concept | Wash (fills, bands) | Ink (text, icons, strokes) | Use |
+|---|---|---|---|
+| Trust | `#D3CEDF` Lavender | *(no separate ink - text is pure black per §3)* | The Ledger's Trust band, the "+1/Lose 1 Trust" highlights on cards - seam-32 keeps the Oxblood ink until re-derived from Lavender |
+| Capital | `#D9D3C4` Bone | `#6E6249` Bone Ink | Personal standing/recognition - the "+2 Capital" highlight, the Capital box on the person board; the seam-12 placement line |
+| People | `#F5CE89` Apricot Cream | `#9C7A32` Apricot Cream Ink | Event category header (`cat-ppl`); also board 3's Standing slot (shared colour, different concept); the seam-31 placement line |
+| Environment | `#B8C1A1` Dry Sage | `#6E7A54` Dry Sage Ink | Event category header (`cat-env`); the seam-43 placement line |
+| Adaptability | `#B5C7CF` Pale Sky | `#3F5B66` Pale Sky Ink | The team's re-lay track - the Ledger's 4th band, the "+1 Adaptability" highlight/keyword; the seam-41 placement line |
+
+The five **inks** above also double as the **board-to-board seam placement guide** (see
+`_check-table-layout.svg` and the matching edge lines on each printed board) - one seam per
+colour, so the same five names cover every stroke on the table, not just the cards.
 
 No pure black (`#000`), no pure white (`#FFF`), no gradients, no drop shadows, no gloss.
+
+> **Print-reality rule for the POC:** these prototypes come off cheap home/office
+> inkjet/laser printers with no colour profiling - a full-saturation palette hex used as a
+> **field behind text** will run dark and murky and take the Oak Gall contrast with it. Every
+> named colour above is for **outlines, icons, small fills, and text itself only.** Any
+> background sitting behind text must be a **pale tint of that hue at roughly 90%+ lightness**
+> - the existing card/board tints (`#D3CEDF` Lavender/Trust, `#DFF0DB` Capability, `#DDE1E2`
+> Shared Practice, `#FAECBE` Highlighter, `#DCE7F2` Ledger Blue, `#EFE4D3` Timber, `#E8D4B8`
+> habitus) are the calibrated examples; derive new ones the same way rather than lightening
+> by eye.
 
 ---
 
@@ -134,27 +185,39 @@ No pure black (`#000`), no pure white (`#FFF`), no gradients, no drop shadows, n
 ### The habitus figures
 **Printed in a single bone-coloured material. No painting, no colour-coding.**
 
-They should read as **plaster study models or natural-history specimens**, not as toys or
-wargaming miniatures. Differentiation between characters comes entirely from *shape* - never
-from colour. Shape includes **pose and sculpted clothing/props**, not just outline - a Base
-can plant its feet differently, a Torso can wear a different collar or fold its sculpted arms
-differently, an Item can be held at a different angle. **Not a Lego look** - avoid interchangeable
-blocky proportions, peg hands, or the iconic minifig silhouette - but it can be **just as
-simple**: plain surfaces, minimal detail, no fine ornamentation.
+**Sculpted low-poly - flat, faceted planes with hard edges, no smoothing, no organic
+curvature.** They should read as **faceted plaster casts or geological specimen models**, not
+as toys, wargaming miniatures, or smooth-shaded renders. Differentiation between characters
+comes entirely from *shape* - never from colour. Shape includes **pose and sculpted
+clothing/props**, not just outline - a Base can plant its feet differently, a Torso can wear a
+different collar or fold its sculpted arms differently, an Item can be held at a different
+angle. **Not a Lego look** - avoid interchangeable blocky proportions, peg hands, or the
+iconic minifig silhouette - but it can be **just as simple**: flat facets, minimal detail, no
+fine ornamentation.
 
-This is thematically exact: habitus is structure, not decoration. It's also dramatically
-cheaper and removes the "my mini isn't painted" problem entirely. Print specs stay with the
-`board-game-3d-printing` skill; this guide only fixes the look.
+This is thematically exact: habitus is structure, not decoration, and low-poly facets *are*
+visible structure. It's also practically useful for FDM printing - faceted planes need far
+fewer supports than organic curves - and removes the "my mini isn't painted" problem
+entirely. Print specs stay with the `board-game-3d-printing` skill; this guide only fixes the
+look.
 
 ---
 
 ## 6. Iconography
 
-**Woodcut and scientific-plate line art.** Think 19th-century engraving, hand-inked, slightly
-irregular. Never flat vector, never rounded-corner app icons, never isometric.
+**Low-poly, faceted geometric illustration.** Every icon, diagrammatic figure, and printed
+motif is built from flat-shaded polygonal facets with visible hard edges - never smooth
+curves, never gradients, never rounded blends. This is a direct extension of the "no
+gradients, no gloss" material rule in §5: low-poly facets are *definitionally* flat-shaded, so
+the two rules reinforce each other rather than compete.
 
-Reference points: botanical plates, anatomical diagrams, patent drawings, ordnance survey
-symbols, herbarium labels.
+Each facet fills from the earthy palette (§4) only - **never** the corporate accent colours,
+which stay reserved for card fields and rules furniture, not iconography. A hard, 1pt Oak Gall
+outline traces every facet edge, so the line work still reads as field-notes material -
+surveyed and drafted by hand - rather than a rendered video-game asset.
+
+Reference points: faceted mineral/crystal specimens, low-poly terrain and contour surveys,
+geodesic-dome diagrams, herbarium presses redrawn as flat triangulated planes.
 
 > **Every icon is paired with a word. No exceptions.**
 >
@@ -224,15 +287,17 @@ and full of nouns. The margin is a fragment.
 ## 9. Anti-patterns - the fastest ways to ruin this
 
 1. **Gloss or UV coating.** Instant death.
-2. **Startup aesthetics** - gradients, rounded sans-serif, pastel, isometric people, "playful"
-   illustration. This is the opposite of the target.
+2. **Startup aesthetics** - gradients, rounded sans-serif, pastel, cartoon SaaS-marketing
+   mascots, "playful" illustration. This is the opposite of the target.
 3. **Corporate satire** - ties, briefcases, angry-boss caricatures, Dilbert energy. The game
    is a study, not a joke.
 4. **Painted miniatures.** Undermines the specimen framing and adds cost for nothing.
-5. **Icon-only rules.** See §6.
-6. **Pure black text.** Always Oak Gall.
-7. **Naming a theorist on any component.** The theory stays under the hood.
-8. **A fifth typeface.** Three voices, no more.
+5. **Smoothed or subdivided low-poly.** If the facets get smoothed into curves or hidden with
+   a subdivision pass, the whole point evaporates. Edges stay hard and visible, always.
+6. **Icon-only rules.** See §6.
+7. **Pure black text.** Always Oak Gall.
+8. **Naming a theorist on any component.** The theory stays under the hood.
+9. **A fifth typeface.** Three voices, no more.
 
 ---
 

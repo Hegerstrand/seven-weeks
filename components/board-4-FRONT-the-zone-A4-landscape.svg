@@ -11,9 +11,9 @@ to the table at week 3 alongside the Ledger.</desc>
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .r { stroke:#000000; stroke-width:.5; fill:none; }
-  .cell { fill:none; stroke:#000000; stroke-width:.4; }
-  .q { fill:#3A3A3A; }
+  .r { stroke:#2A2620; stroke-width:.5; fill:none; }
+  .cell { fill:none; stroke:#2A2620; stroke-width:.4; }
+  .q { fill:#4A5259; }
 </style>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
@@ -110,6 +110,6 @@ to the table at week 3 alongside the Ledger.</desc>
 <text x="12" y="202" class="s" font-size="3.4" font-style="italic">and those are the two axes here.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
-<line x1="291" y1="6" x2="291" y2="204" stroke="#1B7A5C" stroke-width="1"/>
-<line x1="6" y1="207" x2="291" y2="207" stroke="#2C6E8E" stroke-width="1"/>
+<line x1="291" y1="6" x2="291" y2="204" stroke="#6E7A54" stroke-width="1"/>
+<line x1="6" y1="207" x2="291" y2="207" stroke="#3F5B66" stroke-width="1"/>
 </svg>

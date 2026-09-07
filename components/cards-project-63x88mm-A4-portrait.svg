@@ -12,9 +12,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
-  .c { fill:none; stroke:#000000; stroke-width:.5; }
-  .h { stroke:#000000; stroke-width:.4; fill:none; }
-  .q { fill:#3A3A3A; }
+  .c { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .h { stroke:#2A2620; stroke-width:.4; fill:none; }
+  .q { fill:#000000; }
 </style>
 
 <defs>
@@ -56,9 +56,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
   <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
 
-  <text x="5" y="61" class="m" font-size="4.2" fill="#B03A2E">D</text>
+  <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Referral network SSO</text>
-  <text x="52" y="61" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS B</text>
+  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
   <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
@@ -66,9 +66,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
   <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="77" class="m" font-size="4.2" fill="#B03A2E">F</text>
+  <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Billing history</text>
-  <text x="52" y="77" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS C</text>
+  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
   <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No identity, no chart to open.</text>
@@ -97,9 +97,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
   <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
 
-  <text x="5" y="61" class="m" font-size="4.2" fill="#B03A2E">D</text>
+  <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Real-time balance sync</text>
-  <text x="52" y="61" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS B</text>
+  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
   <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
@@ -107,9 +107,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
   <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="77" class="m" font-size="4.2" fill="#B03A2E">F</text>
+  <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Credit scoring</text>
-  <text x="52" y="77" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS C</text>
+  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
   <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No ledger, nothing to reconcile.</text>
@@ -138,9 +138,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
   <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
 
-  <text x="5" y="61" class="m" font-size="4.2" fill="#B03A2E">D</text>
+  <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">The "fixes it" button</text>
-  <text x="52" y="61" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS B</text>
+  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
   <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
@@ -148,9 +148,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
   <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="77" class="m" font-size="4.2" fill="#B03A2E">F</text>
+  <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Reconcile the finals</text>
-  <text x="52" y="77" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS C</text>
+  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
   <text x="5" y="86" class="s" font-size="3.4" font-style="italic">Not even the customer can explain the macro.</text>
@@ -179,9 +179,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
   <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
 
-  <text x="5" y="61" class="m" font-size="4.2" fill="#B03A2E">D</text>
+  <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Sync conflict resolution</text>
-  <text x="52" y="61" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS B</text>
+  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
   <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
@@ -189,9 +189,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
   <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="77" class="m" font-size="4.2" fill="#B03A2E">F</text>
+  <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Rich notification actions</text>
-  <text x="52" y="77" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS C</text>
+  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
   <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No sync engine, nothing to send notifications about.</text>
@@ -220,9 +220,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
   <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
 
-  <text x="5" y="61" class="m" font-size="4.2" fill="#B03A2E">D</text>
+  <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Drywall and interior finishing</text>
-  <text x="52" y="61" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS B</text>
+  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
   <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
@@ -230,9 +230,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
   <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="77" class="m" font-size="4.2" fill="#B03A2E">F</text>
+  <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Fixture installation</text>
-  <text x="52" y="77" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS C</text>
+  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
   <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No frame, nothing to finish.</text>
@@ -261,9 +261,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
   <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
 
-  <text x="5" y="61" class="m" font-size="4.2" fill="#B03A2E">D</text>
+  <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Seating chart and table layout</text>
-  <text x="52" y="61" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS B</text>
+  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
   <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
@@ -271,9 +271,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
   <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="77" class="m" font-size="4.2" fill="#B03A2E">F</text>
+  <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Final headcount and catering order</text>
-  <text x="52" y="77" class="m" font-size="2.6" fill="#B03A2E">HIGH · NEEDS C</text>
+  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
   <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No venue booked, nowhere to seat anyone.</text>

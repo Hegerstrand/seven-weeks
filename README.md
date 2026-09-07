@@ -1,11 +1,5 @@
 # Game
 
-A brand-new project, kept completely separate from everything else in this workspace.
-We're designing a physical board game from scratch: mechanics, components, and physical
-production, including 3D-printed pieces.
-
-Nothing here touches Azure DevOps, Synapse, or MitHOFOR. No cloud, no ADO, no wiki.
-
 ## Folder structure
 
 - `docs/` - design docs: concept, habitus model, playability assessment, design guide.

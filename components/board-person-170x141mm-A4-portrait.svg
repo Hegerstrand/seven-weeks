@@ -1,8 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
-<title>Person board, 170 x 114 mm (A4, one up)</title>
-<desc>One per player - print once each. Tightened again: the AT WEEK 4 box is gone - that content
-lives in the rulebook (§3.0) now, not on the board. The figure, the tokens and the coins are
-the whole record; nothing here is ever written on.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+<title>Person board, 244 x 142 mm (A4 landscape)</title>
+<desc>One per player - print once each. Widened to A4 landscape so the five habitus seats can
+be true 44 x 36 mm - the same size as the printed part-cards (cards-habitus-parts), which used
+to be noticeably bigger than the seats meant to hold them. Below the habitus row: Zone Start,
+Flex, Need and Hero each sit directly under their matching habitus column (Base, Legs, Head,
+Item - all 44 x 36 mm, same size as the seats above them), and Capital/Motivation form their
+own row underneath, each spanning 2.5 habitus-column widths.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -20,97 +23,110 @@ the whole record; nothing here is ever written on.</desc>
   <g id="sh-base"><rect x="-2.4" y="-2.4" width="4.8" height="4.8" rx=".4" class="ic"/></g>
   <g id="sh-legs"><polygon points="0,-2.9 2.6,1.7 -2.6,1.7" class="ic"/></g>
   <g id="sh-torso"><polygon points="0,-2.6 2.47,-.8 1.53,2.1 -1.53,2.1 -2.47,-.8" class="ic"/></g>
+  <g id="sh-torso-red"><polygon points="0,-2.6 2.47,-.8 1.53,2.1 -1.53,2.1 -2.47,-.8" fill="#905151" stroke="#2A2620" stroke-width=".4"/></g>
   <g id="sh-head"><polygon points="2.6,0 1.3,2.25 -1.3,2.25 -2.6,0 -1.3,-2.25 1.3,-2.25" class="ic"/></g>
+  <g id="sh-head-red"><polygon points="2.6,0 1.3,2.25 -1.3,2.25 -2.6,0 -1.3,-2.25 1.3,-2.25" fill="#905151" stroke="#2A2620" stroke-width=".4"/></g>
   <g id="sh-item"><polygon points="0,-3.9 3.9,0 0,3.9 -3.9,0" class="ic"/></g>
 </defs>
 
-<rect width="210" height="297" fill="#FFFFFF"/>
-<g transform="translate(10,14)">
-<rect width="170" height="114" rx="2" class="r"/>
+<rect width="297" height="210" fill="#FFFFFF"/>
+<g transform="translate(26,14)">
+<rect width="244" height="142" rx="2" class="r"/>
 
 <text x="6" y="10" class="m" font-size="5.4" letter-spacing="2">SPECIMEN</text>
-<text x="164" y="9" class="s" font-size="3.2" text-anchor="end" font-style="italic">the figure is the record - nothing here is written</text>
-<line x1="6" y1="13" x2="164" y2="13" class="h"/>
+<text x="238" y="9" class="s" font-size="3.2" text-anchor="end" font-style="italic">the figure is the record - nothing here is written</text>
+<line x1="6" y1="13" x2="238" y2="13" class="h"/>
 
 <text x="6" y="21" class="m q" font-size="3" letter-spacing="1.1">HABITUS</text>
-<text x="163" y="21" class="m q" font-size="2.6" text-anchor="end">· slot the five part-cards</text>
+<text x="238" y="21" class="m q" font-size="2.6" text-anchor="end">· slot the five part-cards (44 x 36 mm - true size)</text>
 <g class="hab">
-  <rect x="6" y="24" width="29" height="22" rx="1"/><rect x="38" y="24" width="29" height="22" rx="1"/>
-  <rect x="70" y="24" width="29" height="22" rx="1"/><rect x="102" y="24" width="29" height="22" rx="1"/>
-  <rect x="134" y="24" width="29" height="22" rx="1"/>
+  <rect x="6" y="24" width="44" height="36" rx="1.5"/><rect x="53" y="24" width="44" height="36" rx="1.5"/>
+  <rect x="100" y="24" width="44" height="36" rx="1.5"/><rect x="147" y="24" width="44" height="36" rx="1.5"/>
+  <rect x="194" y="24" width="44" height="36" rx="1.5"/>
 </g>
-<g class="m" font-size="2.7" text-anchor="middle">
-  <text x="20.5" y="33">BASE</text><text x="52.5" y="33">LEGS</text><text x="84.5" y="33">TORSO</text>
-  <text x="116.5" y="33">HEAD</text><text x="148.5" y="33">ITEM</text>
+<g class="m" font-size="3.2" text-anchor="middle">
+  <text x="28" y="38.5">BASE</text><text x="75" y="38.5">LEGS</text><text x="122" y="38.5">TORSO</text>
+  <text x="169" y="38.5">HEAD</text><text x="216" y="38.5">ITEM</text>
 </g>
-<use href="#sh-base" x="20.5" y="28"/><use href="#sh-legs" x="52.5" y="28"/>
-<use href="#sh-torso" x="84.5" y="28"/><use href="#sh-head" x="116.5" y="28"/>
-<use href="#sh-item" x="148.5" y="28"/>
-<g class="s q" font-size="2.4" text-anchor="middle" font-style="italic">
-  <text x="20.5" y="38">upbringing</text><text x="52.5" y="38">education</text><text x="84.5" y="38">values</text>
-  <text x="116.5" y="38">instinct</text><text x="148.5" y="38">tool</text>
+<use href="#sh-base" x="28" y="31"/><use href="#sh-legs" x="75" y="31"/>
+<use href="#sh-torso" x="122" y="31"/><use href="#sh-head" x="169" y="31"/>
+<use href="#sh-item" x="216" y="31"/>
+<g class="s q" font-size="2.8" text-anchor="middle" font-style="italic">
+  <text x="28" y="47">upbringing</text><text x="75" y="47">education</text><text x="122" y="47">values</text>
+  <text x="169" y="47">instinct</text><text x="216" y="47">tool</text>
 </g>
-<g class="s q" font-size="2.3" text-anchor="middle">
-  <text x="20.5" y="43">→ Motivation</text><text x="52.5" y="43">→ Skill / row</text><text x="84.5" y="43">→ Events</text>
-  <text x="116.5" y="43">→ pressure</text><text x="148.5" y="43">→ Overtime</text>
+<g class="s q" font-size="2.7" text-anchor="middle">
+  <text x="28" y="55">→ Motivation</text><text x="75" y="55">→ Skill / row</text><text x="122" y="55">→ Events</text>
+  <text x="169" y="55">→ pressure</text><text x="216" y="55">→ Overtime</text>
 </g>
-<text x="84.5" y="49.5" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">the shape on each seat tells you which part-card belongs there</text>
+<text x="122" y="65" class="s q" font-size="2.8" text-anchor="middle" font-style="italic">the shape on each seat tells you which part-card belongs there</text>
 
-<rect x="6" y="54" width="29" height="28" rx="1.5" class="w"/>
-<text x="20.5" y="60" class="m q" font-size="2.2" text-anchor="middle">ZONE START</text>
-<text x="20.5" y="66" class="s q" font-size="1.8" text-anchor="middle" font-style="italic">cover Legs'</text>
-<text x="20.5" y="70" class="s q" font-size="1.8" text-anchor="middle" font-style="italic">row x Item's</text>
-<text x="20.5" y="74" class="s q" font-size="1.8" text-anchor="middle" font-style="italic">column on the</text>
-<text x="20.5" y="78" class="s q" font-size="1.8" text-anchor="middle" font-style="italic">Zone at setup.</text>
+<g transform="translate(0,0)">
+<!-- Row A: Zone Start (under Base), Flex (under Legs), Need (under Torso), Hero (under Head), spare (under Item) - all 44 x 36 -->
+<rect x="6" y="70" width="44" height="36" rx="1.5" class="w"/>
+<text x="28" y="78" class="m q" font-size="2.6" text-anchor="middle">ZONE START</text>
+<text x="28" y="87" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">Cover Legs' row x</text>
+<text x="28" y="92.5" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">Item's column on</text>
+<text x="28" y="98" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">the Zone at setup.</text>
 
-<rect x="39" y="54" width="60" height="28" rx="1.5" class="w" style="fill:#D9D3C4;stroke:#6E6249"/>
-<text x="43" y="60" class="m" font-size="2.8" letter-spacing=".8">CAPITAL</text>
-<text x="95" y="60" class="m q" font-size="1.8" text-anchor="end">WK4</text>
-<g class="w" style="stroke:#6E6249">
-  <circle cx="47" cy="67" r="3.2"/><circle cx="56" cy="67" r="3.2"/><circle cx="65" cy="67" r="3.2"/>
-  <circle cx="74" cy="67" r="3.2"/><circle cx="83" cy="67" r="3.2"/><circle cx="92" cy="67" r="3.2"/>
+<rect x="53" y="70" width="44" height="36" rx="1.5" class="w"/>
+<text x="75" y="78" class="m" font-size="2.6" letter-spacing=".6" text-anchor="middle">FLEX</text>
+<text x="93" y="77" class="m q" font-size="1.9" text-anchor="end">WEEK 3</text>
+<circle cx="75" cy="93" r="12" class="w" stroke-dasharray="2 1.3"/>
+<text x="75" y="90" class="s" font-size="2.1" text-anchor="middle">A sixth card costs</text>
+<rect x="70.6" y="92.03" width="9" height="2.2" rx=".3" fill="#D3B1B1"/>
+<text x="70" y="94" class="s" font-size="2.1"><tspan font-weight="bold" textLength="9" lengthAdjust="spacingAndGlyphs">1 Motivation</tspan><tspan textLength="1.1" lengthAdjust="spacingAndGlyphs">,</tspan></text>
+<text x="75" y="98" class="s" font-size="2.1" text-anchor="middle">a day you owe back.</text>
+
+<rect x="100" y="70" width="44" height="36" rx="1.5" class="seat" style="fill:#E8D4B8"/>
+<use href="#sh-torso-red" x="122" y="82"/>
+<text x="122" y="92" class="m" font-size="2.6" text-anchor="middle">NEED</text>
+<text x="122" y="96" class="s" font-size="1.9" text-anchor="middle">From week 3: if your</text>
+<text x="122" y="99.2" class="s" font-size="1.9" text-anchor="middle">Torso's condition is</text>
+<text x="122" y="102.4" class="s" font-size="1.9" text-anchor="middle">met this week,</text>
+<text x="122" y="105.6" class="s" font-size="1.9" text-anchor="middle"><tspan font-weight="bold">+1 Motivation</tspan> (cap 5).</text>
+
+<rect x="147" y="70" width="44" height="36" rx="1.5" class="seat" style="fill:#E8D4B8"/>
+<text x="187" y="77" class="m q" font-size="1.9" text-anchor="end">WEEK 3</text>
+<use href="#sh-head-red" x="169" y="82"/>
+<text x="169" y="92" class="m" font-size="2.6" letter-spacing=".6" text-anchor="middle">HERO</text>
+<text x="169" y="96" class="s" font-size="1.9" text-anchor="middle">Once/game: cancel a named Event.</text>
+<text x="169" y="99.2" class="s" font-size="1.9" text-anchor="middle"><tspan font-weight="bold">+2 Capital</tspan> to you,</text>
+<text x="169" y="102.4" class="s" font-size="1.9" text-anchor="middle"><tspan font-weight="bold">+1 Motivation</tspan> to another.</text>
+<text x="169" y="105.6" class="s" font-size="1.9" text-anchor="middle">Requires 3 Motivation or more.</text>
+
+<rect x="194" y="70" width="44" height="36" rx="1.5" class="w"/>
+<text x="216" y="78" class="m q" font-size="2.6" text-anchor="middle">ITEM SPACE</text>
+<text x="216" y="88" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">Reserved for a second</text>
+<text x="216" y="93.5" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">tool. Currently</text>
+<text x="216" y="99" class="s q" font-size="2.5" text-anchor="middle" font-style="italic">unoccupied.</text>
+
+<!-- Row B: Capital and Motivation, 2.5 habitus-columns wide each -->
+<rect x="6" y="110" width="114" height="28" rx="1.5" class="w" style="fill:#D9D3C4;stroke:#6E6249"/>
+<text x="10" y="118" class="m" font-size="2.8" letter-spacing=".8">CAPITAL</text>
+<text x="116" y="118" class="m q" font-size="2" text-anchor="end">WEEK 3</text>
+<g style="stroke:#6E6249" stroke-width=".55" fill="none">
+  <circle cx="20" cy="127" r="4.2"/><circle cx="37" cy="127" r="4.2"/><circle cx="55" cy="127" r="4.2"/>
+  <circle cx="72" cy="127" r="4.2"/><circle cx="89" cy="127" r="4.2"/><circle cx="106" cy="127" r="4.2"/>
 </g>
-<g class="m q" font-size="1.9" text-anchor="middle">
-  <text x="47" y="72.5">0</text><text x="56" y="72.5">1</text><text x="65" y="72.5">2</text>
-  <text x="74" y="72.5">3</text><text x="83" y="72.5">4</text><text x="92" y="72.5">5</text>
+<g class="m q" font-size="2.7" text-anchor="middle">
+  <text x="20" y="128.3">0</text><text x="37" y="128.3">1</text><text x="55" y="128.3">2</text>
+  <text x="72" y="128.3">3</text><text x="89" y="128.3">4</text><text x="106" y="128.3">5</text>
 </g>
-<text x="43" y="78.5" class="s q" font-size="1.8" font-style="italic">starts 2 - only grows if witnessed</text>
+<text x="10" y="136" class="s q" font-size="2.1" font-style="italic">starts 2 - only grows if witnessed</text>
 
-<rect x="103" y="54" width="61" height="28" rx="1.5" class="w" style="fill:#D3B1B1"/>
-<text x="107" y="60" class="m" font-size="2.8" letter-spacing=".8">MOTIVATION</text>
-<g class="w">
-  <circle cx="112" cy="67" r="3.2"/><circle cx="123" cy="67" r="3.2"/><circle cx="134" cy="67" r="3.2"/>
-  <circle cx="145" cy="67" r="3.2"/><circle cx="156" cy="67" r="3.2"/>
+<rect x="124" y="110" width="114" height="28" rx="1.5" class="w" style="fill:#D3B1B1"/>
+<text x="128" y="118" class="m" font-size="2.8" letter-spacing=".8">MOTIVATION</text>
+<g stroke="#2A2620" stroke-width=".55" fill="none">
+  <circle cx="138" cy="127" r="4.2"/><circle cx="160" cy="127" r="4.2"/><circle cx="181" cy="127" r="4.2"/>
+  <circle cx="203" cy="127" r="4.2"/><circle cx="224" cy="127" r="4.2"/>
 </g>
-<g class="m q" font-size="1.9" text-anchor="middle">
-  <text x="112" y="72.5">1</text><text x="123" y="72.5">2</text><text x="134" y="72.5">3</text>
-  <text x="145" y="72.5">4</text><text x="156" y="72.5">5</text>
+<g class="m q" font-size="2.7" text-anchor="middle">
+  <text x="138" y="128.3">1</text><text x="160" y="128.3">2</text><text x="181" y="128.3">3</text>
+  <text x="203" y="128.3">4</text><text x="224" y="128.3">5</text>
 </g>
-<text x="107" y="78.5" class="s q" font-size="1.8" font-style="italic">starts 3, -1 per week - <tspan font-style="normal">0=QUITS</tspan></text>
-
-<rect x="6" y="86" width="29" height="22" rx="1" class="hab"/>
-<use href="#sh-torso" x="20.5" y="95.4"/>
-<text x="20.5" y="101.2" class="m" font-size="2.4" text-anchor="middle">NEED</text>
-
-<rect x="39" y="86" width="60" height="22" rx="1.5" class="w" style="fill:#E8D4B8"/>
-<text x="43" y="92" class="m" font-size="2.6" letter-spacing=".6">HERO</text>
-<g transform="translate(54.9,90.8) scale(.55)"><use href="#sh-item"/></g>
-<text x="95" y="91" class="m q" font-size="1.7" text-anchor="end">WK4</text>
-<circle cx="94" cy="100" r="2.8" class="w" stroke-dasharray="2 1.3"/>
-<text x="43" y="95" class="s" font-size="1.7">Once/game: cancel a named Event.</text>
-<rect x="45.1" y="96.97" width="5.76" height="1.78" rx=".3" fill="#D9D3C4"/>
-<rect x="59.63" y="96.77" width="8.05" height="1.96" rx=".3" fill="#D3B1B1"/>
-<text x="43" y="98.3" class="s" font-size="1.7"><tspan textLength="2.295" lengthAdjust="spacingAndGlyphs">+2 </tspan><tspan textLength="5.355" lengthAdjust="spacingAndGlyphs">Capital</tspan><tspan textLength="9.18" lengthAdjust="spacingAndGlyphs"> to you, +1 </tspan><tspan textLength="7.65" lengthAdjust="spacingAndGlyphs">Motivation</tspan></text>
-<rect x="56.57" y="100.07" width="10.35" height="1.96" rx=".3" fill="#D3B1B1"/>
-<text x="43" y="101.6" class="s" font-size="1.7"><tspan textLength="13.77" lengthAdjust="spacingAndGlyphs">to another. Needs </tspan><tspan textLength="9.95" lengthAdjust="spacingAndGlyphs">3+ Motivation</tspan>.</text>
-
-<rect x="103" y="86" width="61" height="22" rx="1.5" class="w"/>
-<text x="107" y="92" class="m" font-size="2.6" letter-spacing=".6">FLEX</text>
-<text x="160" y="91" class="m q" font-size="1.7" text-anchor="end">WK4</text>
-<circle cx="157" cy="100" r="2.8" class="w" stroke-dasharray="2 1.3"/>
-<rect x="123.05" y="96.29" width="10.66" height="2.19" rx=".35" fill="#D3B1B1"/>
-<text x="107" y="98" class="s q" font-size="1.9" font-style="italic"><tspan textLength="16.245" lengthAdjust="spacingAndGlyphs">A sixth card costs </tspan><tspan textLength="10.26" lengthAdjust="spacingAndGlyphs">1 Motivation</tspan></text>
-<text x="107" y="101.7" class="s q" font-size="1.9" font-style="italic">and a day you owe back.</text>
+<text x="128" y="136" class="s q" font-size="2.1" font-style="italic">starts 3, -1 per week - reaching 0 means they quit.</text>
+</g>
 
 </g>
 </svg>

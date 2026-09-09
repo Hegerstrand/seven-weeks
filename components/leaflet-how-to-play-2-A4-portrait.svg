@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>How to play, page 2 of 2 - weeks after that, and how it ends (A4 portrait)</title>
+<desc>A4 quick reference, page 2 of 2. The full weekly pulse from week 2 on (once Shit Happens,
+Adapt and the Ledger have turned face up, and the Specimen panel on each person board has
+started being read, each in their own week), and how
+the project ends. Page 1 (leaflet-how-to-play-A4-portrait) covers setup and Week 1.
+Black and white line art for cheap office printing; styling comes later.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .hand { font-family:"Caveat","Segoe Script",cursive; fill:#000000; }
+  .box { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .step { fill:none; stroke:#2A2620; stroke-width:.4; }
+  .q { fill:#000000; }
+  .b { font-size:3.2px; }
+  .n { font-size:2.8px; }
+</style>
+
+<rect width="210" height="297" fill="#FFFFFF"/>
+
+<text x="12" y="16" class="m" font-size="6" letter-spacing="2">HOW TO PLAY</text>
+<text x="12" y="23" class="s" font-size="3.6" font-style="italic">The same five days, but the table has more to say about them with every week that passes.</text>
+<text x="198" y="15" class="m q" font-size="2.8" text-anchor="end">PAGE 2 OF 2 · WEEKS AFTER THAT, AND HOW IT ENDS</text>
+<text x="198" y="19" class="m q" font-size="2.6" text-anchor="end" letter-spacing=".4">YOU'RE ON THE BACK · FLIP BACK FOR SETUP AND WEEK 1</text>
+<line x1="12" y1="27" x2="198" y2="27" stroke="#2A2620" stroke-width=".5"/>
+
+<!-- THE PULSE -->
+<rect x="12" y="32" width="186" height="130" rx="2" class="box"/>
+<text x="16" y="41" class="m" font-size="4.4" letter-spacing="1.4">THE PULSE, FROM WEEK 2 ON</text>
+<text x="194" y="41" class="s n" text-anchor="end" font-style="italic">the same five steps, every week until week 7 closes</text>
+
+<rect x="16" y="46" width="178" height="17" rx="1.5" class="step"/>
+<text x="20" y="53" class="m" font-size="3.6">1 · PLAN THE WEEK</text>
+<text x="20" y="58.5" class="s b">Lay <tspan font-weight="bold">five Activity cards</tspan> across Monday to Friday, one character disc each. <tspan font-style="italic">Then stop. Nothing has resolved.</tspan></text>
+
+<rect x="16" y="65" width="178" height="17" rx="1.5" class="step" stroke-width=".8"/>
+<text x="20" y="72" class="m" font-size="3.6">2 · SHIT HAPPENS</text>
+<text x="20" y="77.5" class="s b">Draw <tspan font-weight="bold">two Event cards, face up</tspan> - and <tspan font-weight="bold">do not resolve them yet</tspan>. They are threats, aimed at the week</text>
+<text x="20" y="81.5" class="s b">you already committed. <tspan font-style="italic">A day spent on the wrong thing is simply lost.</tspan></text>
+
+<rect x="16" y="85" width="178" height="14" rx="1.5" class="step" stroke-width=".8"/>
+<text x="20" y="92" class="m" font-size="3.6">3 · ADAPT</text>
+<text x="20" y="97.5" class="s b">Spend <tspan font-weight="bold">[Adaptability]</tspan>: each 1 replaces one card, or pays an Event's ADAPT number to cancel it outright.</text>
+
+<rect x="16" y="102" width="178" height="17" rx="1.5" class="step"/>
+<text x="20" y="109" class="m" font-size="3.6">4 · THE WEEK RUNS</text>
+<text x="20" y="114.5" class="s b">Resolve whatever survived Adapt, then all five cards. <tspan font-weight="bold">Order does not matter</tspan> - the week happened at once.</text>
+
+<rect x="16" y="122" width="178" height="18" rx="1.5" class="step"/>
+<text x="20" y="129" class="m" font-size="3.6">5 · CLOSE THE WEEK</text>
+<rect x="81.55" y="132.00" width="10.66" height="3.36" rx=".4" fill="#D9D3C4"/>
+<text x="20" y="134.5" class="s b"><tspan font-weight="bold">Bank</tspan> completed features (lift any lock, pay <tspan>Capital</tspan>) → <tspan font-weight="bold">walk the Ledger</tspan> coins, at most one step each, and</text>
+<text x="20" y="138.5" class="s b">flip any that reached its ring → <tspan font-weight="bold">Motivation as one net number</tspan>: −1 for the grind - every week, +1 if the Need was met.</text>
+
+<rect x="61.80" y="145.00" width="13.74" height="4.62" rx=".4" fill="#D9D3C4"/>
+<text x="16" y="148.5" class="hand" font-size="4.4">bank first - it pays the <tspan>capital</tspan> the ledger needs.</text>
+<text x="16" y="152.5" class="hand" font-size="4.4">apply motivation as one number, then check for zero.</text>
+
+<text x="16" y="156.5" class="m q" font-size="2.7" letter-spacing=".3">WEEK 2: THE LEDGER + SHIT HAPPENS/ADAPT, TOGETHER</text>
+<text x="16" y="160" class="m q" font-size="2.7" letter-spacing=".3">WEEK 3: BOARD 4b + SPECIMEN PANEL - CAPITAL, NEED, OVERTIME, FLEX   ·   WEEK 4: STANDING</text>
+
+<!-- THE END -->
+<rect x="12" y="168" width="186" height="46" rx="2" class="box"/>
+<text x="16" y="177" class="m" font-size="4.4" letter-spacing="1.4">HOW IT ENDS</text>
+<text x="194" y="177" class="s n" text-anchor="end" font-style="italic">the project ends when Week 7 closes</text>
+
+<text x="16" y="185" class="m q" font-size="2.8">TEAM SCORE = (features × 10) + (4 tracks, max 20) + (Motivation) − (10 × quits) − (2 × unrepaid Flex)</text>
+
+<rect x="16" y="189" width="58" height="21" rx="1.5" class="step" stroke-width=".8"/>
+<text x="45" y="196" class="m" font-size="3.4" text-anchor="middle">FAILURE</text>
+<text x="45" y="202" class="s n" text-anchor="middle">Not everything delivered.</text>
+<text x="45" y="206.5" class="s n" text-anchor="middle" font-style="italic">The score doesn't matter.</text>
+
+<rect x="78" y="189" width="58" height="21" rx="1.5" class="step" stroke-width=".8"/>
+<text x="107" y="196" class="m" font-size="3.4" text-anchor="middle">HEROIC SUCCESS</text>
+<text x="107" y="202" class="s n" text-anchor="middle">All six banked, score under 80.</text>
+<text x="107" y="206.5" class="s n" text-anchor="middle" font-style="italic">The project made it. The team didn't.</text>
+
+<rect x="140" y="189" width="54" height="21" rx="1.5" class="step" stroke-width="1.1"/>
+<text x="167" y="196" class="m" font-size="3.4" text-anchor="middle">HIGH PERFORMANCE</text>
+<text x="167" y="202" class="s n" text-anchor="middle">All six banked, score 80+.</text>
+<text x="167" y="206.5" class="s n" text-anchor="middle" font-style="italic">You built a team as well.</text>
+
+<text x="12" y="292" class="s" font-size="3.2" font-style="italic">If you only had thirty-five working days, how would you spend them?</text>
+</svg>

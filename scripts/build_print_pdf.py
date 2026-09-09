@@ -45,6 +45,7 @@ SHEETS = [
     "cards-project-63x88mm-A4-portrait.svg",
     "cards-habitus-parts-44x36mm-A4-portrait.svg",
     "leaflet-how-to-play-A4-portrait.svg",
+    "leaflet-how-to-play-2-A4-portrait.svg",
 ]
 
 EDGE_CANDIDATES = [

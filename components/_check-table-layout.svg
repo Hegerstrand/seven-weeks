@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1100mm" height="1215mm" viewBox="0 0 1100 1215">
 <title>Table layout check (dev, not a print component)</title>
-<desc>Every board at its true footprint (viewBox verified against its known mm size). Board 3
-is now really widened to 333mm (was 297) and 3b Standing to 317mm (was 281), so the top row
-(board 4 + board 3) packs edge to edge with the bottom row at 630mm wide, zero gap. Board 1 is
-also really 332mm tall now (was 297) after the week-1/clock strip moved to a bottom band -
-board 2 has not grown to match yet, so the bottom row is flagged the way board 3 used to be.
+<desc>PROPOSED re-layout, not yet applied to the real board files. Constraint: Zone and Team are
+both true A4 landscape (297 x 210, no widening). Week is true A3 landscape (420 x 297, no
+extension). Reality is sized to fill whatever's left: 594 - 420 = 174 mm wide, matched to
+Week's 297mm height. The Event deck is explicitly excluded from the shared rectangle - it can
+sit anywhere on the table, no registration needed. This reverts board 3's +36mm widen and
+board 1/2's +35mm height extension from the previous check - see the follow-up note at the
+bottom for what that costs each real file.
 One example player board sits on each side. True 1:1 mm scale throughout. Not glued, not
 printed - open it in a browser.
 The placement-line layer prototypes the printed table-placement guide: only the seams that
@@ -40,43 +42,50 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <rect x="40" y="45" width="1002" height="914" rx="12" class="table"/>
 
 <!-- ═══ ONE SHARED RECTANGLE: boards 1-4, edge to edge ═══ -->
-<text x="541" y="222" class="m" font-size="7" text-anchor="middle" letter-spacing=".6">ONE SHARED RECTANGLE - 630 x 542 mm, NO GAP - ALL 4 BOARDS REAL</text>
-<rect x="226" y="231" width="630" height="542" class="rectangle"/>
+<text x="541" y="222" class="m" font-size="7" text-anchor="middle" letter-spacing=".6">ONE SHARED RECTANGLE - 594 x 507 mm, NO GAP - PROPOSED</text>
+<rect x="226" y="231" width="594" height="507" class="rectangle"/>
 
 <!-- Board 4 - the Zone -->
 <rect x="226" y="231" width="297" height="210" class="board"/>
 <text x="374.5" y="328" class="m" font-size="8" text-anchor="middle">BOARD 4 - THE ZONE</text>
 <text x="374.5" y="340" class="s q" font-size="5" text-anchor="middle" font-style="italic">A4 landscape, 297 x 210 mm</text>
 
-<!-- Board 3 - the Ledger, really widened now -->
-<rect x="523" y="231" width="333" height="210" class="board"/>
-<text x="689.5" y="323" class="m" font-size="8" text-anchor="middle">BOARD 3 - THE LEDGER</text>
-<text x="689.5" y="335" class="s q" font-size="5" text-anchor="middle" font-style="italic">widened 297 to 333 x 210 mm - real now</text>
-<text x="689.5" y="344" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">3b Standing widened to match, 281 to 317mm - also real</text>
+<!-- Board 3 - the Ledger, back to true A4 -->
+<rect x="523" y="231" width="297" height="210" class="board"/>
+<text x="671.5" y="323" class="m" font-size="8" text-anchor="middle">BOARD 3 - THE LEDGER</text>
+<text x="671.5" y="335" class="s q" font-size="5" text-anchor="middle" font-style="italic">A4 landscape, 297 x 210 mm - widen reverted</text>
+<text x="671.5" y="344" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">3b Standing's slot width needs reconsidering to match (was tied to the 333mm version)</text>
 
 <!-- Board 3b - Standing, a separate glued strip that drops into board 3's own dashed slot -->
-<rect x="531" y="397" width="317" height="34" rx="2" class="spare"/>
-<text x="689.5" y="411" class="m" font-size="5.5" text-anchor="middle" fill="#905151">BOARD 3b - STANDING</text>
-<text x="689.5" y="418" class="s q" font-size="4" text-anchor="middle" font-style="italic">separate 317 x 34 mm strip, glued to its own greyboard</text>
-<text x="689.5" y="424" class="s q" font-size="4" text-anchor="middle" font-style="italic">drops into board 3's dashed slot at the foot of the Ledger</text>
+<rect x="531" y="397" width="281" height="34" rx="2" class="spare"/>
+<text x="671.5" y="411" class="m" font-size="5.5" text-anchor="middle" fill="#905151">BOARD 3b - STANDING</text>
+<text x="671.5" y="418" class="s q" font-size="4" text-anchor="middle" font-style="italic">shown back at its original 281 x 34 mm - needs re-verifying against board 3's real slot</text>
+<text x="671.5" y="424" class="s q" font-size="4" text-anchor="middle" font-style="italic">drops into board 3's dashed slot at the foot of the Ledger</text>
 
 <!-- top row - 4-3 -->
-<rect x="226" y="231" width="630" height="210" class="pair"/>
+<rect x="226" y="231" width="594" height="210" class="pair"/>
 
-<!-- Board 1 - the Project, really 332mm tall now (week-clock strip relocated to a bottom band) -->
-<rect x="226" y="441" width="420" height="332" class="board"/>
-<text x="436" y="602" class="m" font-size="9" text-anchor="middle">BOARD 1</text>
-<text x="436" y="614" class="m" font-size="9" text-anchor="middle">THE PROJECT</text>
-<text x="436" y="625" class="s q" font-size="5" text-anchor="middle" font-style="italic">A3 landscape, extended to 420 x 332 mm</text>
+<!-- Board 1 - the Project, back to true A3 -->
+<rect x="226" y="441" width="420" height="297" class="board"/>
+<text x="436" y="587" class="m" font-size="9" text-anchor="middle">BOARD 1</text>
+<text x="436" y="599" class="m" font-size="9" text-anchor="middle">THE PROJECT</text>
+<text x="436" y="610" class="s q" font-size="5" text-anchor="middle" font-style="italic">A3 landscape, true 420 x 297 mm - extension reverted</text>
 
-<!-- Board 2 - Reality, really 332mm tall now too -->
-<rect x="646" y="441" width="210" height="332" class="board"/>
-<text x="751" y="602" class="m" font-size="8" text-anchor="middle">BOARD 2</text>
-<text x="751" y="612" class="m" font-size="8" text-anchor="middle">REALITY</text>
-<text x="751" y="624" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">A4 portrait, extended to 210 x 332 mm</text>
+<!-- Board 2 - Reality, sized to fill what's left -->
+<rect x="646" y="441" width="174" height="297" class="board"/>
+<text x="733" y="587" class="m" font-size="8" text-anchor="middle">BOARD 2</text>
+<text x="733" y="597" class="m" font-size="8" text-anchor="middle">REALITY</text>
+<text x="733" y="609" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">174 x 297 mm - sized to fill the rest,</text>
+<text x="733" y="617" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">no longer A4 portrait - real content re-fit needed</text>
+
+<!-- Event deck sits outside the shared rectangle, no registration needed -->
+<rect x="872" y="441" width="90" height="126" rx="3" class="spare"/>
+<text x="917" y="500" class="m" font-size="6" text-anchor="middle">EVENT DECK</text>
+<text x="917" y="509" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">outside the rectangle -</text>
+<text x="917" y="516" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">no seam, no alignment needed</text>
 
 <!-- bottom row (1-2) matches the top row's width -->
-<text x="541" y="787" class="m" font-size="4.6" text-anchor="middle" fill="#D08A1E">BOTTOM ROW: 420 + 210 = 630mm, MATCHES THE TOP ROW (297 + 333) - BOTH ROWS NOW 542mm TALL TOO</text>
+<text x="541" y="761" class="m" font-size="4.6" text-anchor="middle" fill="#D08A1E">BOTTOM ROW: 420 + 174 = 594mm, MATCHES THE TOP ROW (297 + 297) - BOTH ROWS 297mm TALL TOO</text>
 
 <!-- ═══ PLACEMENT-LINE GUIDE: one colour per seam, a 6mm-inset line on each side of it - no outer perimeter ═══ -->
 <!-- seam board4|board3 (vertical) -->
@@ -89,36 +98,36 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <line x1="529" y1="435" x2="640" y2="435" class="seam-31"/>
 <line x1="529" y1="447" x2="640" y2="447" class="seam-31"/>
 <!-- seam board3|board2 (horizontal, right third) -->
-<line x1="652" y1="435" x2="850" y2="435" class="seam-32"/>
-<line x1="652" y1="447" x2="850" y2="447" class="seam-32"/>
+<line x1="652" y1="435" x2="814" y2="435" class="seam-32"/>
+<line x1="652" y1="447" x2="814" y2="447" class="seam-32"/>
 <!-- seam board1|board2 (vertical) -->
-<line x1="640" y1="447" x2="640" y2="767" class="seam-12"/>
-<line x1="652" y1="447" x2="652" y2="767" class="seam-12"/>
+<line x1="640" y1="447" x2="640" y2="732" class="seam-12"/>
+<line x1="652" y1="447" x2="652" y2="732" class="seam-12"/>
 <text x="856" y="228" class="m" font-size="4" text-anchor="end">PLACEMENT-LINE GUIDE - one colour per seam, inset 6mm, only where boards actually cross</text>
 
 <!-- ═══ PLAYER BOARDS - example 4-player seating, one per side ═══ -->
 <!-- north -->
-<rect x="446" y="75" width="190" height="116" class="player"/>
-<text x="541" y="130" class="m" font-size="6.5" text-anchor="middle">PLAYER (N)</text>
-<text x="541" y="140" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
+<rect x="428" y="75" width="190" height="116" class="player"/>
+<text x="523" y="130" class="m" font-size="6.5" text-anchor="middle">PLAYER (N)</text>
+<text x="523" y="140" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
 
 <!-- south -->
-<rect x="446" y="813" width="190" height="116" class="player"/>
-<text x="541" y="868" class="m" font-size="6.5" text-anchor="middle">PLAYER (S)</text>
-<text x="541" y="878" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
+<rect x="428" y="778" width="190" height="116" class="player"/>
+<text x="523" y="868" class="m" font-size="6.5" text-anchor="middle">PLAYER (S)</text>
+<text x="523" y="878" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
 
 <!-- west - rotated to face its own player -->
-<g transform="rotate(-90 128 502)">
-  <rect x="33" y="444" width="190" height="116" class="player"/>
-  <text x="128" y="497" class="m" font-size="6.5" text-anchor="middle">PLAYER (W)</text>
-  <text x="128" y="507" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
+<g transform="rotate(-90 128 484.5)">
+  <rect x="33" y="426.5" width="190" height="116" class="player"/>
+  <text x="128" y="479.5" class="m" font-size="6.5" text-anchor="middle">PLAYER (W)</text>
+  <text x="128" y="489.5" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
 </g>
 
 <!-- east - rotated to face its own player -->
-<g transform="rotate(90 954 502)">
-  <rect x="859" y="444" width="190" height="116" class="player"/>
-  <text x="954" y="497" class="m" font-size="6.5" text-anchor="middle">PLAYER (E)</text>
-  <text x="954" y="507" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
+<g transform="rotate(90 918 484.5)">
+  <rect x="823" y="426.5" width="190" height="116" class="player"/>
+  <text x="918" y="479.5" class="m" font-size="6.5" text-anchor="middle">PLAYER (E)</text>
+  <text x="918" y="489.5" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">190 x 116 mm</text>
 </g>
 
 <!-- ═══ SCALE BAR ═══ -->
@@ -134,7 +143,7 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <text x="10" y="1035" class="m" font-size="8" letter-spacing="1">WHAT THIS CHECKS</text>
 
 <rect x="10" y="1043" width="16" height="10" class="rectangle"/>
-<text x="32" y="1051" class="s" font-size="5">Boards 1-4 pack edge to edge into one 630 x 542 mm rectangle with zero gap - all four are now really these sizes (board 3 to 333mm wide, boards 1 and 2 to 332mm tall).</text>
+<text x="32" y="1051" class="s" font-size="5">Boards 1-4 pack edge to edge into one 594 x 507 mm rectangle with zero gap - Zone and Team both true A4 (297 x 210), Week true A3 (420 x 297), Reality resized to fill the rest (174 x 297). Follow-up needed on the real files: board 1 loses its +35mm OVERTIME-slot extension, board 3 loses its +36mm widen (and 3b Standing's slot width needs re-checking), and board 2 shrinks on both dimensions - all three need their content re-fit before this is real, not just planned.</text>
 
 <rect x="10" y="1057" width="16" height="10" class="player"/>
 <text x="32" y="1065" class="s" font-size="5">Per-player board - one of these per seat. Shown here for an example 4-player game, one per side; rotate to face however players actually sit.</text>
@@ -146,8 +155,8 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <rect x="82" y="1085" width="16" height="10" fill="none" stroke="#6E6249" stroke-width="1.6"/>
 <text x="102" y="1093" class="s" font-size="5">Placement-line guide - 5 seams (4|3, 4|1, 3|1, 3|2, 1|2), each its own colour, a 6mm-inset line drawn by each of the two boards that share it. No outer-perimeter line: only crossings are marked. Matching colour + aligned lines confirms correct placement; either one being off exposes a wrong board, wrong slot, or wrong rotation.</text>
 
-<text x="10" y="1101" class="s q" font-size="5" font-style="italic">The shared rectangle alone is 63.0 x 54.2 cm. With one player board on all four sides, the whole</text>
-<text x="10" y="1109" class="s q" font-size="5" font-style="italic">layout needs about 94 x 87 cm - comfortably inside a standard dining table's width (~120 cm) and</text>
+<text x="10" y="1101" class="s q" font-size="5" font-style="italic">The shared rectangle alone is 59.4 x 50.7 cm. With one player board on all four sides plus the event deck sitting outside it, the whole</text>
+<text x="10" y="1109" class="s q" font-size="5" font-style="italic">layout needs about 90 x 80 cm - comfortably inside a standard dining table's width (~120 cm) and</text>
 <text x="10" y="1117" class="s q" font-size="5" font-style="italic">close to its depth (most run 75-90 cm).</text>
 
 <text x="10" y="1131" class="s q" font-size="4.6" font-style="italic">Re-open this file whenever a board's page size changes, or whenever seating/player count assumptions change.</text>

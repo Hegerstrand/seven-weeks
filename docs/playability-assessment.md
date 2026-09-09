@@ -718,27 +718,28 @@ makes §3.1 worth having.
 > instinct under pressure. Being *handed* a person and having to play them is Bourdieu's actual
 > claim. Drafting returns as an explicit variant for players who know the game.
 
-**2. The board uncovers itself.** Two cover panels sit over the Ledger and come off at the
-start of weeks 3 and 4; Events don't start until week 2. **Week 1 is only "plan a week"** - lay five cards, resolve left to right, close it. Three card types.
+**2. The board uncovers itself.** A cover panel sits over the Ledger and comes off at the
+start of week 2, together with Reality/Shit Happens/Adapt - both at once. **Week 1 is only "plan a week"** - lay five cards, resolve left to right, close it. Three card types.
 
 | From | Opens - **one idea a week** | Cards added |
 |---|---|---|
 | Week 1 | **The week.** Week strip, Project bays, your figure, Knowledge, Motivation | Work · Coordinate · Celebrate |
-| Week 2 | **Reality.** Shit Happens and Adapt (fixed at 1) | - |
-| Week 3 | **The team.** The whole Ledger, plus Habits. Adapt becomes [Adaptability] | Learn · Align · Reflect · Meet |
-| Week 4 | **The person.** The Specimen card - Capital, Team Need, Overtime/Flex. Standing and Quality | Plan · Demo |
+| Week 2 | **The team, and reality.** The whole Ledger, plus Habits - and Shit Happens and Adapt, together. Adapt equals [Adaptability] immediately | - |
+| Week 3 | **Board 4b, then the person.** HOW YOU COVER/THE LEDGER READS THIS lift, and the Specimen card - Capital, Team Need, Overtime/Flex. Quality | Learn · Align · Reflect · Meet · Plan · Demo |
+| Week 4 | **Standing.** The Ledger's fifth track - whoever holds the most Capital | - |
 
-Each week's lesson is one sentence: *a week is five days and you choose them · your plan was
-made in ignorance · it was never only the project · and it was never only the team.*
+Each week's lesson is one sentence: *a week is five days and you choose them · it was never
+only the project - it was landing on the team, and your plan was made in ignorance, both at
+once · and it was never only the team - it was landing on you.*
 
-**Weeks 3 and 4 are staged as reveals.** For two weeks the table watches only the features
+**Weeks 2, 3 and 4 are staged as reveals.** For a week the table watches only the features
 move. To make the consequence *shown* rather than announced, the discard pile stays face up and
-each panel runs a one-line catch-up on reveal: **week 3, Trust +1 per two Coordinates played;
-week 4, each character takes 1 Capital per two cards they played, max 2.** No hidden
-bookkeeping - but it's the difference between being told these things matter and seeing that
-they were counting all along.
+each panel runs a one-line catch-up on reveal: **week 2, Trust +1 per two Coordinates played;
+week 3, each character takes 1 Capital per two cards they played, max 2; week 4, no catch-up -
+just compare who holds the most Capital.** No hidden bookkeeping - but it's the difference
+between being told these things matter and seeing that they were counting all along.
 
-Everything sat at its starting value whether visible or not. Week 3 doesn't *start* Trust, it
+Everything sat at its starting value whether visible or not. Week 2 doesn't *start* Trust, it
 starts you paying attention to it. Nothing is lost, and the table meets each rule at the moment it matters
 instead of in a twenty-minute briefing.
 

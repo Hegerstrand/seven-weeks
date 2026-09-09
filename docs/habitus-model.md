@@ -16,7 +16,7 @@ is capability, and it's kept separate on purpose:
 | **Base** | Upbringing / family background | Social conditions, incorporated history | Starting assumptions, social capital, what feels familiar |
 | **Legs** | Education & inclination | Cultural capital, dispositions | What kinds of problems the character is naturally good at |
 | **Torso** | Values | Durable preferences | What feels *right* to do, and what causes tension |
-| **Head** | Perception & how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Execute / Withdraw) becomes something physical instead of a line on a card. |
+| **Head** | Perception & how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Withdraw) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with that Head can cancel it. |
 | **Item** | Skills & tools (held) | Capability, not habitus | What the character can actually *do* |
 
 Arms are sculpted into the Torso, not a separate swappable piece. A loose arm is fragile to
@@ -40,15 +40,16 @@ micromanaging boss in the room.
   practical, creative, commercial, social, analytical, organisational.
 - **Torso - Værdier (values, pick one):** Autonomy, Hierarchy, Community, Quality, Recognition -
   exactly five, because Torso is also **Need** (see below): whichever value you're dealt
-  is both how Events land on you and what you need from the team from week 4 on.
+  is both how Events land on you and what you need from the team from week 3 on.
 - **Head - Pressure Response (pick one):** Take Charge / Analyze / Support / Challenge /
-  Execute / Withdraw - sculpted as its own expression or pose.
+  Withdraw - sculpted as its own expression or pose. Also what Event cards name for the
+  **Hero** move (rulebook §5.1) - exactly one of these five, once per game, cancels an Event.
 - **Item - Værktøjer & færdigheder (skills, 2-3):** e.g. technical, planning, facilitation,
   communication, leadership, analysis, customer, quality - shown as a small held prop (laptop,
   phone, clipboard, coffee cup, wrench, etc.).
 
 ## Other character traits (not physical parts, tracked on the character card)
-- **Need** is not a separate deal - **it is your Torso**, read a second way from week 4 on
+- **Need** is not a separate deal - **it is your Torso**, read a second way from week 3 on
   (see [../rules/rulebook.md](../rules/rulebook.md) §5.1). Nothing extra to print, deal or write
   down: the five Torso values (Autonomy, Hierarchy, Community, Quality, Recognition) double as
   the five Need conditions. It was never a *team* need - it's personal, same as Motivation.
@@ -59,8 +60,9 @@ micromanaging boss in the room.
 
 ## Design rule: habitus is a trade-off, never a flat bonus
 Never write a habitus effect as "+1 to X." Always pair a **strength** (habitus pays off) with
-a **tendency** (habitus taken too far costs something). The player is rewarded for staying in
-character, but has to learn when that behaviour stops working.
+a **tendency** (habitus taken too far costs something) - **on the same currency, opposite
+condition**, mirroring Base's Learn/Teach pattern. One card, one mechanic, viewed from two
+sides - never two unrelated mechanics bolted together, and never two different currencies.
 
 > **Base used to be the one exception** - Bookish/Hands-On/Competitive were printed as flat
 > "+1 Work on two features," which is exactly the mistake this rule warns against: with
@@ -70,12 +72,14 @@ character, but has to learn when that behaviour stops working.
 > working in parallel. **Fixed by moving Base off Work entirely**, in
 > [../rules/rulebook.md](../rules/rulebook.md) §5.2: every Base option now pairs a strength and
 > tendency on the character's own **Motivation** (Learn, Teach, Overtime, Hero) - personal, so
-> there's nothing left to route around.
+> there's nothing left to route around. **This single-currency pattern is now the rule for
+> every row, not just Base's exception** - Head, Torso and any future row pair strength and
+> tendency on one currency, opposite condition, same as Learn/Teach.
 
-> **Elite Athlete - Strength:** when the team is under real pressure, you may take charge and
-> get +1 immediate Work output.
-> **Elite Athlete - Tendency:** if you take charge without checking with whoever holds the
-> relevant Knowledge, **−1 Trust**.
+> **Elite Athlete - Strength:** when the team is under real pressure and **Trust ≥ 4**, you
+> take charge and it lands: **+1 Motivation**.
+> **Elite Athlete - Tendency:** take the same charge with **Trust ≤ 1**, and it reads
+> as overreach instead: **−1 Motivation**.
 
 This pairs with the Head/Pressure Response choice - "Elite Athlete" naturally reads as Take
 Charge, so match the strength/tendency to whichever Head the player picked.

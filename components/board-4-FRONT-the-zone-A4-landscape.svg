@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Sheet 4 FRONT — The Zone: the shared skill grid (A4 landscape)</title>
+<title>Board 4 FRONT — The Zone: the shared skill grid (A4 landscape)</title>
 <desc>One board for the whole table. Rows are education, columns are the tool you work through;
 a square is the practice that training makes with that instrument. Both axes are Bourdieu's
 transmissible forms of capital - institutionalised and objectified - so everything on this board
 can be passed on. Upbringing, values and instinct are not here: they cannot. Squares are 20 mm,
 one player tile. Same page frame as sheet 3. Print at 100%. This sheet is week-1 content only -
-How Learn/Teach works and what the Ledger reads off this grid live on sheet 4b instead, added
-to the table at week 3 alongside the Ledger.</desc>
+How Learn/Teach works and what the Ledger reads off this grid live on board 4b instead, added
+to the table at week 3 - the same week the Specimen panel on each person board starts being read.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -14,39 +14,58 @@ to the table at week 3 alongside the Ledger.</desc>
   .r { stroke:#2A2620; stroke-width:.5; fill:none; }
   .cell { fill:none; stroke:#2A2620; stroke-width:.4; }
   .q { fill:#4A5259; }
+  .ic { fill:#F2EDE0; stroke:#2A2620; stroke-width:.4; }
+  .pip { fill:#2A2620; }
 </style>
+
+<defs>
+  <g id="sh-legs"><polygon points="0,-3.48 3.12,2.04 -3.12,2.04" class="ic"/></g>
+  <g id="sh-item"><polygon points="0,-3.9 3.9,0 0,3.9 -3.9,0" class="ic"/></g>
+  <g id="p1"><circle cx="0" cy="0" r=".5" class="pip"/></g>
+  <g id="p2"><circle cx="-1" cy="0" r=".5" class="pip"/><circle cx="1" cy="0" r=".5" class="pip"/></g>
+  <g id="p3"><circle cx="0" cy="-1" r=".5" class="pip"/><circle cx="-1" cy=".85" r=".5" class="pip"/><circle cx="1" cy=".85" r=".5" class="pip"/></g>
+  <g id="p4"><circle cx="-.8" cy="-.8" r=".45" class="pip"/><circle cx=".8" cy="-.8" r=".45" class="pip"/><circle cx="-.8" cy=".8" r=".45" class="pip"/><circle cx=".8" cy=".8" r=".45" class="pip"/></g>
+  <g id="p5"><circle cx="-.8" cy="-.8" r=".4" class="pip"/><circle cx=".8" cy="-.8" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.8" cy=".8" r=".4" class="pip"/><circle cx=".8" cy=".8" r=".4" class="pip"/></g>
+</defs>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
 
 <text x="12" y="16" class="m" font-size="7" letter-spacing="2.5">THE ZONE</text>
 <text x="78" y="16" class="s" font-size="4.4" font-style="italic">what you can reach from what you already have</text>
-<text x="285" y="16" class="m q" font-size="3.8" text-anchor="end">SHEET 4 · SHARED · FROM WEEK 1 · SEE SHEET 4b FROM WEEK 3</text>
+<text x="285" y="16" class="m q" font-size="3.8" text-anchor="end">BOARD 4 · SHARED · FROM WEEK 1 · SEE BOARD 4b FROM WEEK 3</text>
 <line x1="12" y1="20" x2="285" y2="20" class="r"/>
-
-<text x="12" y="27" class="s" font-size="3.8" font-style="italic">Rows are what you were trained in. Columns are what you work through. A square is the practice <tspan font-style="normal">that</tspan> training makes with <tspan font-style="normal">that</tspan> instrument.</text>
-<text x="12" y="31.5" class="s" font-size="3.8" font-style="italic">Everyone covers squares on this one board, so the whole table can see who can do what.</text>
 
 <g transform="translate(-16,0)">
 <g class="m q" font-size="2.1" text-anchor="middle">
-  <text x="72" y="39.5">MACHINE</text><text x="92" y="39.5">ROOM</text><text x="112" y="39.5">DOCUMENT</text>
-  <text x="132" y="39.5">NUMBERS</text><text x="152" y="39.5">SCHEDULE</text>
+  <text x="72" y="36.5">LAPTOP</text><text x="92" y="36.5">COFFEE CUP</text><text x="112" y="36.5">CLIPBOARD</text>
+  <text x="132" y="36.5">WRENCH</text><text x="152" y="36.5">CALENDAR</text>
 </g>
-<text x="112" y="36.5" class="m q" font-size="2.8" letter-spacing="1" text-anchor="middle">TOOL</text>
+<text x="112" y="27" class="m q" font-size="2.8" letter-spacing="1" text-anchor="middle">TOOL</text>
+<g transform="translate(72,31) scale(.6)"><use href="#sh-item"/><use href="#p1"/></g>
+<g transform="translate(92,31) scale(.6)"><use href="#sh-item"/><use href="#p2"/></g>
+<g transform="translate(112,31) scale(.6)"><use href="#sh-item"/><use href="#p3"/></g>
+<g transform="translate(132,31) scale(.6)"><use href="#sh-item"/><use href="#p4"/></g>
+<g transform="translate(152,31) scale(.6)"><use href="#sh-item"/><use href="#p5"/></g>
 
 <g transform="translate(30,101) rotate(-90)"><text x="0" y="0" class="m q" font-size="2.8" letter-spacing=".8">EDUCATION</text></g>
+<g transform="translate(58.5,49.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p1"/></g></g>
+<g transform="translate(58.5,69.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p2"/></g></g>
+<g transform="translate(58.5,89.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p3"/></g></g>
+<g transform="translate(58.5,109.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p4"/></g></g>
+<g transform="translate(58.5,129.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p5"/></g></g>
 <g class="s" font-size="3.4" text-anchor="end">
-  <text x="58" y="49.5">Technical</text>
-  <text x="58" y="69.5">Social</text>
-  <text x="58" y="89.5">Commercial</text>
-  <text x="58" y="109.5">Analytical</text>
-  <text x="58" y="129.5">Organisational</text>
+  <text x="55" y="49.5">Technical</text>
+  <text x="55" y="69.5">Social</text>
+  <text x="55" y="89.5">Commercial</text>
+  <text x="55" y="109.5">Analytical</text>
+  <text x="55" y="129.5">Organisational</text>
 </g>
 <g class="s q" font-size="2.5" font-style="italic" text-anchor="end">
-  <text x="58" y="53.5">how the thing works</text>
-  <text x="58" y="73.5">how people work</text>
-  <text x="58" y="93.5">what it is worth</text>
-  <text x="58" y="113.5">what the numbers say</text>
-  <text x="58" y="133.5">how it gets done</text>
+  <text x="55" y="53.5">how the thing works</text>
+  <text x="55" y="73.5">how people work</text>
+  <text x="55" y="93.5">what it is worth</text>
+  <text x="55" y="113.5">what the numbers say</text>
+  <text x="55" y="133.5">how it gets done</text>
 </g>
 
 <g class="cell">
@@ -93,23 +112,24 @@ to the table at week 3 alongside the Ledger.</desc>
 <g class="m q" font-size="2" text-anchor="middle">
   <text x="72" y="145">WORK</text><text x="92" y="145">COORDINATE</text><text x="112" y="145">ALIGN</text><text x="132" y="145">LEARN</text><text x="152" y="145">PLAN</text>
 </g>
-<text x="112" y="150" class="s q" font-size="3" text-anchor="middle" font-style="italic">a column you cover is a card you are better at</text>
+<text x="112" y="150" class="s q" font-size="3" text-anchor="middle" font-style="italic">a fully covered column is a card the whole team is better at</text>
 </g>
 
-<text x="166" y="55" class="s q" font-size="3.4" font-style="italic">How you cover a square, and what the Ledger reads off this grid, are on sheet 4b</text>
-<text x="166" y="59.5" class="s q" font-size="3.4" font-style="italic">from week 3 - they need Learn/Teach and the Ledger, and neither exists yet.</text>
+<rect x="166" y="36" width="119" height="104" rx="2" class="r" stroke-dasharray="3 2"/>
+<text x="225.5" y="44" class="m q" font-size="3.2" letter-spacing="1" text-anchor="middle">BOARD 4b GOES HERE · FROM WEEK 3</text>
+<text x="225.5" y="86" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">How you cover a square, and what the Ledger reads off this grid, are on board 4b</text>
+<text x="225.5" y="90.5" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">from week 3 - they need Learn/Teach, and that doesn't exist yet.</text>
 
 <line x1="12" y1="158" x2="285" y2="158" class="r"/>
 <text x="12" y="166" class="m" font-size="4.4" letter-spacing="1.2">WHAT YOU CAN DO</text>
-<text x="88" y="166" class="s" font-size="3.8">Every square you <tspan font-weight="bold">cover</tspan> gives <tspan font-weight="bold">+1</tspan> to the card named under its column. You keep everything you cover.</text>
-<text x="12" y="172" class="s" font-size="3.8" font-style="italic">Two squares in one column is two ways of working, not twice the output: +1 per column, however many you cover in it.</text>
-<text x="12" y="178" class="s" font-size="3.8">Tiles are 20 mm, the size of a square. When a second person covers a square, offset the tile so the colour underneath still shows.</text>
-<text x="12" y="184" class="s" font-size="3.8">At setup you cover <tspan font-weight="bold">one</tspan> square: where your Legs row meets your Item column. Everything after that is learned or taught.</text>
+<text x="12" y="170.5" class="s" font-size="3.8" font-style="italic">Rows are what you were trained in, columns are what you work through - a square is the practice <tspan font-style="normal">that</tspan> training makes with <tspan font-style="normal">that</tspan> instrument,</text>
+<text x="12" y="175" class="s" font-size="3.8" font-style="italic">and everyone covers squares on the same board, so the whole table can see who can do what.</text>
+<text x="12" y="180.5" class="s" font-size="3.8">Once every row <tspan font-style="italic">in play</tspan> in a column is covered, that column's Activity card produces <tspan font-weight="bold">+1</tspan> more than its printed value - nothing yet if it's only half covered.</text>
+<text x="12" y="186" class="s" font-size="3.4" font-style="italic">4 players: exactly one Legs row starts empty and stays out of the count all game - nobody can ever Learn or Teach into a row nobody started on.</text>
 
-<text x="12" y="197" class="s" font-size="3.4" font-style="italic">Upbringing, values and instinct are not on this board. Bourdieu's embodied capital cannot be handed over - only a training and an instrument can,</text>
-<text x="12" y="202" class="s" font-size="3.4" font-style="italic">and those are the two axes here.</text>
+<text x="12" y="202" class="s" font-size="3" font-style="italic">Upbringing, values and instinct are not on this board. Bourdieu's embodied capital cannot be handed over - only a training and an instrument can, and those are the two axes here.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="291" y1="6" x2="291" y2="204" stroke="#6E7A54" stroke-width="1"/>
-<line x1="6" y1="207" x2="291" y2="207" stroke="#3F5B66" stroke-width="1"/>
+<line x1="6" y1="204" x2="291" y2="204" stroke="#3F5B66" stroke-width="1"/>
 </svg>

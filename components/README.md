@@ -74,10 +74,10 @@ both sides are down, not before: paper creeps a millimetre when it is wet with g
 
 | Print | Paper | What it is |
 |---|---|---|
-| `board-person-170x141mm-A4-portrait` | A4 | **The person board.** One per sheet, one per player - Capital+Motivation+Zone Start share a row, Need+Hero+Flex share the row below |
+| `board-person-170x141mm-A4-portrait` | A4 **landscape** (filename now stale - was 170x114mm portrait, now 244x128mm landscape so the habitus seats could be true 44x36mm, matching the printed part-cards) | **The person board.** One per sheet, one per player - Capital+Motivation+Zone Start share a row, Need+Hero+Flex share the row below |
 
-**Week 4 has no shared board, and shouldn't.** Its reveal is the bottom panel of your own
-person board - always physically there, but only worth reading from week 4 on. A light dashed
+**Week 3 has no shared board, and shouldn't.** Its reveal is the bottom panel of your own
+person board - always physically there, but only worth reading from week 3 on. A light dashed
 rule marks where it starts, so nobody is asked to care about it before the week that needs it.
 
 ## Cards and leaflets - A4, print at 100%
@@ -89,8 +89,10 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | `cards-event-01-09-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 1-9 |
 | `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18. Shuffle both into one deck |
 | `cards-project-63x88mm-A4-portrait` | A4 | Setup | Six projects. Choose one; it drops into the seat on board 1 |
-| `cards-habitus-parts-44x36mm-A4-portrait` | A4 | Setup | 25 part-cards, dealt at random |
-| `leaflet-how-to-play-A4-portrait` | A4 | - | The one-page procedure |
+| `cards-habitus-parts-44x36mm-A4-portrait` | Custom 272 x 297 mm (filename stale - no longer A4, widened so the 5-per-row cards can be true 44 x 36 mm, matching the person board's seats) | Setup | 25 part-cards, dealt at random |
+| `cards-need-hero-44x36mm-A4-portrait` | Custom 272 x 140 mm (filename stale - not A4) | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Head, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
+| `leaflet-how-to-play-A4-portrait` | A4 | - | Page 1 of 2 - setup and Week 1 |
+| `leaflet-how-to-play-2-A4-portrait` | A4 | - | Page 2 of 2 - the weekly pulse from week 2 on, and how it ends |
 
 **Everything that goes in a weekday slot is 63 × 88 mm** - Activity and Event cards alike - so
 the two decks handle identically and either fits any 65 × 90 seat. **The Project card is the
@@ -99,7 +101,7 @@ place all game - it never needs to shuffle with the other two decks. **Never sca
 sheet**: the boards' slots are cut to these exact millimetres.
 
 **The Specimen panel** lives on the bottom of the merged person board now: Capital, Need and
-Flex. It's live from week 4 (§3.0) - the week the game admits the project has been landing on
+Flex. It's live from week 3 (§3.0) - the week the game admits the project has been landing on
 people, not just on the team.
 
 **The Hero box** sits *above the week-4 panel* on the player board, because Hero is live from
@@ -124,8 +126,10 @@ before this paragraph is true again.
 **The cover plates.** Three pieces of cardboard hide the parts of the board that aren't in play
 yet (§3.0). Each one carries its reveal card on the *underside*, so the rule arrives in the same
 gesture that uncovers the board - nobody is read a subsystem before the week they need it.
-Plate 2 covers sheet 2, plate 3 covers the Ledger, plate 4 covers the Standing row and the
-Specimen strip along the bottom of each player board. Sheet 4b isn't a cover plate - it's a
+Plate 2 covers sheet 2, plate 3 covers the Ledger, plate 4 covers the Standing row. The
+Specimen panel along the bottom of each player board isn't a cover plate either - it's printed
+there from setup and simply isn't read until week 3 (a light dashed rule marks where it
+starts). Sheet 4b isn't a cover plate - it's a
 separate two-faced insert (see the boards table, above) that turns over on its own at week 3.
 
 ### Two rules the sheets obey
@@ -137,8 +141,8 @@ Project card breaks this on purpose** (88 × 88 mm, its own 90 × 90 seat) - see
 `cards-project-63x88mm-A4-portrait.svg`'s own note for why; the filename is stale, the card
 isn't 63 × 88 any more.
 
-**The board is added to, never covered.** Sheet 1 is the whole of week 1. Sheet 2 goes down at
-week 2, sheet 3 at week 3, the week-4 panel at the bottom of every player board at week 4. That
+**The board is added to, never covered.** Sheet 1 is the whole of week 1. Sheets 2 and 3 go
+down together at week 2, the week-3 panel at the bottom of every player board at week 3. That
 is cheaper than printing cover
 panels, it means nothing is wasted, and the table visibly grows as the game does.
 
@@ -216,7 +220,7 @@ without a single pencil mark.
 | Character name | Nothing - **the assembled figure is the character**. Player boards are printed with a specimen numeral. |
 | Base / Legs / Torso / Head / Item | Five **part-card seats** under the figure socket |
 | What a character knows | **Squares covered on the shared Zone board** (board 4) - no private card |
-| Need | **The Torso card itself**, read a second way from week 4 - no separate card |
+| Need | **The Torso card itself**, read a second way from week 3 - no separate card |
 | Feature names | The **Project card** on its plinth names all six (§20) |
 | Work progress | A **cube walks the track** in each feature's track to a green target disc |
 | Quality | A **face-down chip**, turned over by a Demo |

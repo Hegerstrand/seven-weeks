@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
 <title>Sheet 7 - Event cards 10-18, 63 x 88 mm (A4)</title>
-<desc>The second half of the Event deck. Cards 10-16 carry the seven habitus parts sheet 6
-does not cover; cards 17 and 18 have no HERO route at all.</desc>
+<desc>The second half of the Event deck. HERO now keys off the 5 Head/Pressure-Response
+options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per option across the
+18-card deck; FALSE START, and cards 17-18, have no HERO route at all.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -35,7 +36,8 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
   <g id="q2"><circle cx="-.95" cy="0" r=".45" class="pip"/><circle cx=".95" cy="0" r=".45" class="pip"/></g>
   <g id="q3"><circle cx="0" cy="-.95" r=".45" class="pip"/><circle cx="-.95" cy=".8" r=".45" class="pip"/><circle cx=".95" cy=".8" r=".45" class="pip"/></g>
   <g id="q4"><circle cx="-.7" cy="-.7" r=".4" class="pip"/><circle cx=".7" cy="-.7" r=".4" class="pip"/><circle cx="-.7" cy=".7" r=".4" class="pip"/><circle cx=".7" cy=".7" r=".4" class="pip"/></g>
-  <g id="reinforcements">
+  <g id="q5"><circle cx="-.85" cy="-.85" r=".4" class="pip"/><circle cx=".85" cy="-.85" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.85" cy=".85" r=".4" class="pip"/><circle cx=".85" cy=".85" r=".4" class="pip"/></g>
+  <g id="reinforcements" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-ppl"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">PEOPLE</text>
@@ -46,16 +48,16 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <text x="5" y="38" class="s" font-size="4.4">halve that Work <tspan font-weight="bold">(round down)</tspan>.</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-legs"/><g transform="translate(0,0.4)"><use href="#q4"/></g></g><text x="23" y="67" class="vl">ANALYTICAL</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">More hands, more talk. BROOKS 1975</text>
   </g>
 
-  <g id="legacy">
+  <g id="legacy" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
@@ -71,13 +73,13 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-base"/><use href="#q1"/></g><text x="23" y="67" class="vl">ACADEMIC</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">Built years ago. Nobody wrote down why.</text>
   </g>
 
-  <g id="build">
+  <g id="build" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
@@ -90,16 +92,16 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-base"/><use href="#q2"/></g><text x="23" y="67" class="vl">TRADE</text>
-    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT NEVER HAPPENS</text>
+    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">No hero can save this.</text>
+    <text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">It worked yesterday.</text>
   </g>
 
-  <g id="split">
+  <g id="split" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-ppl"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">PEOPLE</text>
@@ -110,19 +112,21 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <text x="5" y="33" class="s" font-size="4.4">take the same feature this</text>
     <rect x="4" y="33" width="50" height="6" rx="1" fill="#D3CEDF"/>
     <text x="5" y="38" class="s" font-size="4.4">week. <tspan font-weight="bold" class="trust">Lose 1 Trust</tspan>.</text>
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q3"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">COMMUNITY: LOSE 1 MOTIVATION</text>
+    <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="43" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q3"/></g><rect x="37.78" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">COMMUNITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-legs"/><g transform="translate(0,0.4)"><use href="#q2"/></g></g><text x="23" y="67" class="vl">SOCIAL</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">Nobody said anything out loud.</text>
   </g>
 
-  <g id="reorg">
+  <g id="reorg" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
@@ -145,7 +149,7 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">Only the chart changed, not the work.</text>
   </g>
 
-  <g id="crunch">
+  <g id="crunch" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
@@ -154,20 +158,21 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
     <text x="5" y="28" class="s" font-size="4.4">No feature may take more</text>
     <text x="5" y="33" class="s" font-size="4.4">than <tspan font-weight="bold">1 Work</tspan> this week.</text>
-    <text x="5" y="38" class="s" font-size="4.4">Spread thin, on purpose.</text>
+    <rect x="4" y="33" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="38" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-item"/><use href="#q1"/></g><text x="23" y="67" class="vl">LAPTOP</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">All of it is the top priority.</text>
   </g>
 
-  <g id="morale">
+  <g id="morale" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-ppl"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">PEOPLE</text>
@@ -183,16 +188,16 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <g transform="translate(7,46.4)"><use href="#i-torso"/><use href="#q4"/></g><text x="11" y="47.5" class="m q" font-size="2.7">QUALITY: NO LOSS</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-item"/><use href="#q3"/></g><text x="23" y="67" class="vl">COFFEE CUP</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT NEVER HAPPENS</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">Nothing happened. That is it.</text>
   </g>
 
-  <g id="audit">
+  <g id="audit" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
@@ -202,19 +207,19 @@ does not cover; cards 17 and 18 have no HERO route at all.</desc>
     <text x="5" y="33" class="s" font-size="4.4">be a <tspan font-weight="bold">Record Meeting</tspan>. If</text>
     <text x="5" y="38" class="s" font-size="4.4">none is, lose a card and</text>
     <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3CEDF"/>
-    <text x="5" y="43" class="s" font-size="4.4">lose <tspan font-weight="bold" class="trust">1 Trust</tspan>.</text>
+    <text x="5" y="43" class="s" font-size="4.4">lose <tspan font-weight="bold" class="trust">1 Trust</tspan>, <tspan font-weight="bold">1 Motivation</tspan>.</text>
     <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">AUTONOMY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">No hero can save this.</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <text x="5" y="84" class="s" font-size="3" font-style="italic">No one person can be the answer.</text>
   </g>
 
-  <g id="deadline">
+  <g id="deadline" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>

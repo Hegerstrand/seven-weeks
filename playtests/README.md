@@ -2,6 +2,23 @@
 
 One entry per playtest session, newest first.
 
+## 2026-09-09 - session 1 debrief (partial - full write-up pending)
+- **Players:** not yet recorded.
+- **What we tested:** not yet recorded.
+- **What worked:** not yet recorded.
+- **What broke / was confusing:** first finding - **the game is too complicated.** Named
+  specifically: the Project feature system's **Unclear** flag and hidden **Quality**
+  (Low/Medium/High) attribute (§10). Acting on this now, ahead of the full write-up, per the
+  designer's request - see `game/extensions/feature-quality-uncertainty/` for what was pulled
+  out and why.
+- **Rule changes made as a result:** Unclear and feature Quality extracted from the base game
+  into the `feature-quality-uncertainty` extension pack (rulebook.md \u00a710 stripped; Align, Demo
+  and the Quality-Torso habitus pair redesigned/flagged for the base game - see that pack's
+  README for the open design questions this raised).
+- **Next thing to test:** does the base game (without Unclear/Quality) still feel like enough
+  of a game on its own? Full debrief (player count, experience level, what actually broke) to
+  follow.
+
 ## Session 1 plan (first playtest) - play **Lite**, not v0.1
 The [playability assessment](../docs/playability-assessment.md) found v0.1 unplayable as
 written (no numbers on most Activities, ambiguous action currency, a work budget using under

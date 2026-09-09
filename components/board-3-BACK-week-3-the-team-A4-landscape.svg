@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="333mm" height="210mm" viewBox="0 0 471 297">
-<title>Board 3 BACK - Week 3, The Team (A4 landscape, widened)</title>
-<desc>Glues to the reverse of board-3-FRONT, widened to match at 333mm. Flip about the long
-edge. Authored at A3 units and output at A4, so the type scales down with the page - the
-viewBox width grew from 420 to 471 (keeping the same 1/√2 scale) to add the same 36mm.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+<title>Board 3 BACK - Week 3, The Team (A4 landscape)</title>
+<desc>Glues to the reverse of board-3-FRONT, true A4 landscape at 297mm (board 2 is narrowed
+instead to keep the table's two rows matching - see _check-table-layout.svg). Flip about the
+long edge. Content below is still authored at 471 x 297 (root-2 scale-up) and wrapped in the
+same compensating scale as before, just repacked into a narrower horizontal span.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -11,19 +12,22 @@ viewBox width grew from 420 to 471 (keeping the same 1/√2 scale) to add the sa
   .q { fill:#000000; }
 </style>
 
+<g transform="scale(0.70700636943)">
 <rect width="471" height="297" fill="#FFFFFF"/>
 
 <text x="24" y="26" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AT THE START OF WEEK 3</text>
-<line x1="24" y1="32" x2="447" y2="32" class="h"/>
+<line x1="24" y1="32" x2="401.16" y2="32" class="h"/>
 
 <text x="24" y="66" class="m" font-size="26" letter-spacing="6">WEEK 3</text>
 <text x="24" y="112" class="s" font-size="42">The team</text>
-<line x1="24" y1="126" x2="447" y2="126" class="h" stroke-width="1.2"/>
+<line x1="24" y1="126" x2="401.16" y2="126" class="h" stroke-width="1.2"/>
 
 <text x="24" y="146" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
 <text x="24" y="172" class="s" font-size="20">It was never only the project.</text>
+<text x="24" y="182" class="m q" font-size="6" letter-spacing="2.5">CARDS ADDED</text>
+<text x="109.6" y="182" class="m" font-size="9">LEARN · ALIGN · REFLECT · MEET</text>
 
-<line x1="24" y1="188" x2="447" y2="188" class="h" stroke-width=".5"/>
+<line x1="24" y1="188" x2="401.16" y2="188" class="h" stroke-width=".5"/>
 
 <text x="24" y="206" class="m q" font-size="6" letter-spacing="2.5">WHAT OPENS</text>
 <text x="24" y="221" class="s" font-size="8"><tspan font-weight="bold">The Ledger:</tspan> Trust, Capability, Shared Practice,</text>
@@ -31,21 +35,19 @@ viewBox width grew from 420 to 471 (keeping the same 1/√2 scale) to add the sa
 <text x="24" y="243" class="s" font-size="8">ring it turns over and becomes a <tspan font-weight="bold">Habit</tspan>, for good.</text>
 <text x="24" y="260" class="s" font-size="8">Adapt is now your full Adaptability, not 1.</text>
 
-<text x="24" y="282" class="m q" font-size="6" letter-spacing="2.5">CARDS ADDED</text>
-<text x="120" y="282" class="m" font-size="9">LEARN · ALIGN · REFLECT · MEET</text>
+<line x1="237.1" y1="196" x2="237.1" y2="268" class="h" stroke-width=".4"/>
 
-<line x1="263" y1="196" x2="263" y2="268" class="h" stroke-width=".4"/>
+<text x="251.4" y="206" class="m" font-size="6" letter-spacing="2.5">CATCH UP BEFORE YOU PLAY</text>
+<text x="251.4" y="222" class="s" font-size="8">Move Trust up <tspan font-weight="bold">1 for every two Coordinate</tspan></text>
+<text x="251.4" y="233" class="s" font-size="8"><tspan font-weight="bold">cards</tspan> the team has already played.</text>
+<text x="251.4" y="250" class="s" font-size="8">Everything else starts where it always was,</text>
+<text x="251.4" y="261" class="s" font-size="8">at 2. Nothing has been lost by starting small.</text>
 
-<text x="279" y="206" class="m" font-size="6" letter-spacing="2.5">CATCH UP BEFORE YOU PLAY</text>
-<text x="279" y="222" class="s" font-size="8">Move Trust up <tspan font-weight="bold">1 for every two Coordinate</tspan></text>
-<text x="279" y="233" class="s" font-size="8"><tspan font-weight="bold">cards</tspan> the team has already played.</text>
-<text x="279" y="250" class="s" font-size="8">Everything else starts where it always was,</text>
-<text x="279" y="261" class="s" font-size="8">at 2. Nothing has been lost by starting small.</text>
-
-<text x="300" y="286" class="s" font-size="9" font-style="italic">It was counting all along.</text>
+<text x="270.1" y="286" class="s" font-size="9" font-style="italic">It was counting all along.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
-<line x1="8.48" y1="8.49" x2="8.48" y2="288.5" stroke="#6E7A54" stroke-width="1.4"/>
-<line x1="8.48" y1="292.76" x2="165.5" y2="292.76" stroke="#9C7A32" stroke-width="1.4"/>
-<line x1="182.4" y1="292.76" x2="462.4" y2="292.76" stroke="#905151" stroke-width="1.4"/>
+<line x1="10.17" y1="8.49" x2="10.17" y2="276" stroke="#6E7A54" stroke-width="1.4"/>
+<line x1="10.17" y1="276" x2="150.05" y2="276" stroke="#9C7A32" stroke-width="1.4"/>
+<line x1="165.15" y1="276" x2="414.86" y2="276" stroke="#905151" stroke-width="1.4"/>
+</g>
 </svg>

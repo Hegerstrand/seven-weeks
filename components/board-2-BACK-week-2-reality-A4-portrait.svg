@@ -1,8 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="332mm" viewBox="0 0 297 469.5">
-<title>Board 2 BACK - Week 2, Reality (A4 portrait, extended)</title>
-<desc>Glues to the reverse of board-2-FRONT, extended to match at 332mm. Flip about the long
-edge. Authored at A3 units and output at A4, so the type scales down with the page - the
-viewBox height grew from 420 to 469.5 (keeping the same scale) to add the same 35mm.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="174mm" height="297mm" viewBox="0 0 174 297">
+<title>Board 2 BACK - Week 2, Reality (narrowed to 174mm)</title>
+<desc>Glues to the reverse of board-2-FRONT, narrowed to match at 174mm (see board-2-FRONT and
+_check-table-layout.svg). Flip about the long edge. Content below is still authored at 297 x 420
+(root-2 scale-up) and wrapped in the same compensating scale as before, just repacked into a
+narrower horizontal span.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -11,20 +12,21 @@ viewBox height grew from 420 to 469.5 (keeping the same scale) to add the same 3
   .q { fill:#000000; }
 </style>
 
-<rect width="297" height="469.5" fill="#FFFFFF"/>
+<g transform="scale(0.70707070707)">
+<rect width="297" height="420" fill="#FFFFFF"/>
 
 <text x="24" y="30" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AT THE START OF WEEK 2</text>
-<line x1="24" y1="36" x2="273" y2="36" class="h"/>
+<line x1="24" y1="36" x2="230.36" y2="36" class="h"/>
 
 <text x="24" y="76" class="m" font-size="26" letter-spacing="6">WEEK 2</text>
 <text x="24" y="124" class="s" font-size="42">Reality</text>
-<line x1="24" y1="138" x2="273" y2="138" class="h" stroke-width="1.2"/>
+<line x1="24" y1="138" x2="230.36" y2="138" class="h" stroke-width="1.2"/>
 
 <text x="24" y="160" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
 <text x="24" y="188" class="s" font-size="20">Your plan was made</text>
 <text x="24" y="212" class="s" font-size="20">in ignorance.</text>
 
-<line x1="24" y1="230" x2="273" y2="230" class="h" stroke-width=".5"/>
+<line x1="24" y1="230" x2="230.36" y2="230" class="h" stroke-width=".5"/>
 
 <text x="24" y="250" class="m q" font-size="6" letter-spacing="2.5">WHAT OPENS</text>
 <text x="24" y="266" class="s" font-size="8"><tspan font-weight="bold">Shit Happens.</tspan> Draw two Events, face up,</text>
@@ -37,10 +39,11 @@ viewBox height grew from 420 to 469.5 (keeping the same scale) to add the same 3
 <text x="24" y="356" class="m q" font-size="6" letter-spacing="2.5">CARDS ADDED</text>
 <text x="24" y="370" class="m" font-size="10">NOTHING NEW</text>
 
-<line x1="24" y1="384" x2="273" y2="384" class="h" stroke-width=".5"/>
+<line x1="24" y1="384" x2="230.36" y2="384" class="h" stroke-width=".5"/>
 <text x="24" y="400" class="s" font-size="9" font-style="italic">Nothing changed except when you find out.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
-<line x1="8.49" y1="8.49" x2="288.5" y2="8.49" stroke="#905151" stroke-width="1.4"/>
-<line x1="8.49" y1="8.49" x2="8.49" y2="460.99" stroke="#6E6249" stroke-width="1.4"/>
+<line x1="11.15" y1="8.49" x2="243.16" y2="8.49" stroke="#905151" stroke-width="1.4"/>
+<line x1="11.15" y1="8.49" x2="11.15" y2="411.5" stroke="#6E6249" stroke-width="1.4"/>
+</g>
 </svg>

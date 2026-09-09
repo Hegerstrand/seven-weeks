@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Sheet 4 BACK — The Zone (A4 landscape)</title>
+<title>Board 4 BACK — The Zone (A4 landscape)</title>
 <desc>Glues to the reverse of board-4-FRONT, same size, same orientation: flip about the long
 edge. Unlike boards 1-3, the Zone never turns over during play - it is shared and visible from
 week 1, so this face is never meant to be read at the table. It exists only so the board can be
@@ -34,5 +34,5 @@ other board's reverse.</desc>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="291" y1="6" x2="291" y2="204" stroke="#6E7A54" stroke-width="1"/>
-<line x1="6" y1="207" x2="291" y2="207" stroke="#3F5B66" stroke-width="1"/>
+<line x1="6" y1="204" x2="291" y2="204" stroke="#3F5B66" stroke-width="1"/>
 </svg>

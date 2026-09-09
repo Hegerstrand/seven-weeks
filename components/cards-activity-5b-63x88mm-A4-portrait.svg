@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
-<title>Sheet 5b - Activity cards, the second sheet (63 x 88 mm)</title>
+<title>Sheet 5b - Activity cards, the second sheet (60 x 88 mm)</title>
 <desc>Sheet 5 holds nine cards, which is all an A4 will take at 63 x 88 - this sheet is a second
 full 3 x 3 sheet, not an afterthought. Two more Work (five total with sheet 5), two Teach, and
 one each of Plan, Demo, Reflect, Meet and Learn. One print each, no reprinting. Cut on the
@@ -18,7 +18,7 @@ outer line. Print at 100%.</desc>
 <defs>
   <!-- 63 x 88 card. Text column is x=5..58 (53 mm); baselines stop at y=84. -->
 
-  <g id="work">
+  <g id="work" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORK</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
@@ -31,25 +31,25 @@ outer line. Print at 100%.</desc>
     <text x="5" y="83" class="s" font-size="4.2" font-style="italic">the project. Hence the trap.</text>
   </g>
 
-  <g id="teach">
+  <g id="teach" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">TEACH</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
-    <text x="5" y="27" class="s" font-size="5.4">Let someone cover a</text>
-    <text x="5" y="33" class="s" font-size="5.4">square you cover</text>
+    <text x="5" y="27" class="s" font-size="5.4">Up to 2 characters may</text>
+    <text x="5" y="33" class="s" font-size="5.4">each teach 1 partner</text>
     <line x1="5" y1="38" x2="58" y2="38" class="h"/>
-    <text x="5" y="45" class="s" font-size="4.2">It must touch a square</text>
-    <text x="5" y="50" class="s" font-size="4.2">they cover - <tspan font-weight="bold">any row</tspan>.</text>
-    <text x="5" y="55" class="s" font-size="4.2">They keep it for good.</text>
+    <text x="5" y="45" class="s" font-size="4.2">Each square must touch</text>
+    <text x="5" y="50" class="s" font-size="4.2">one the partner covers -</text>
+    <text x="5" y="55" class="s" font-size="4.2"><tspan font-weight="bold">any row</tspan>. Kept for good.</text>
     <text x="5" y="62" class="m trust" font-size="3.2">DEAD IF TRUST ≤ 1</text>
-    <text x="5" y="66.5" class="m q" font-size="2.9">COSTS THE DAY, NOTHING ELSE</text>
-    <rect x="34.18" y="68.74" width="12.98" height="3.04" rx=".4" fill="#D9D3C4"/>
-    <text x="5" y="71" class="m q" font-size="2.9">TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
+    <text x="5" y="66.5" class="m q" font-size="2.9">ONE CARD, ONE DAY - UP TO 2 PAIRS</text>
+    <rect x="27.7" y="68.74" width="26.3" height="3.04" rx=".4" fill="#D9D3C4"/>
+    <text x="5" y="71" class="m q" font-size="2.9">EACH TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
     <text x="5" y="76.5" class="s" font-size="4" font-style="italic">Scaffolding: give it away</text>
     <text x="5" y="80.5" class="s" font-size="4" font-style="italic">and it becomes standing.</text>
   </g>
 
-  <g id="plan">
+  <g id="plan" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">PLAN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
@@ -65,7 +65,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="85" class="s" font-size="4.2" font-style="italic">problems. Only on those.</text>
   </g>
 
-  <g id="demo">
+  <g id="demo" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">DEMO</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
@@ -82,7 +82,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="84" class="s" font-size="4" font-style="italic">The field decides who speaks.</text>
   </g>
 
-  <g id="reflect">
+  <g id="reflect" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">REFLECT</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
@@ -99,7 +99,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="84" class="s" font-size="4.2" font-style="italic">you can only reflect on it.</text>
   </g>
 
-  <g id="meet">
+  <g id="meet" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">MEET</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
@@ -117,7 +117,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="84" class="s" font-size="4.2" font-style="italic">The other is a ritual.</text>
   </g>
 
-  <g id="learn">
+  <g id="learn" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">LEARN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>

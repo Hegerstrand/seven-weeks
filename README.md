@@ -7,18 +7,22 @@
   `rulebook-lite.md` used for the first playtest.
 - `components/` - physical component specs: cards, boards, tokens, box.
 - `components/3d-models/` - 3D-printable files (STL/3MF/STEP) and print notes (material, supports, orientation).
+- `extensions/` - optional add-on modules, one subfolder per pack, cut out of the core game
+  after a playtest finding of "too complicated" (see `board-game-extension-packs` skill).
 - `playtests/` - dated playtest logs: what we tested, what worked, what changed.
 
 ## Working agent & skills
 
 Use the **Board Game Designer** agent (`.github/agents/board-game-designer.agent.md`) for
-this project. It draws on four skills:
+this project. It draws on five skills:
 
 - **board-game-mechanics** - concept, mechanics, rulebook, meaningful-choice design.
 - **board-game-3d-printing** - how to design and spec 3D-printed components.
 - **board-game-playtesting** - learning theory (situated learning, zone of proximal
   development, Bourdieu's habitus and field) applied to onboarding and playtests.
 - **board-game-team-dynamics** - running the design team itself well (Tuckman's stages).
+- **board-game-extension-packs** - moving complexity out of the core game into optional
+  add-on modules.
 
 ## Status
 
@@ -30,7 +34,9 @@ and [docs/habitus-model.md](./docs/habitus-model.md) for how characters get buil
 **Rulebook is at v0.2: the turn is the week.** Each character allocates 5 person-days at once,
 *before* that week's Events are drawn - 7 turns, not 35, and ~85 minutes. **All five blocking
 defects** in the [playability assessment](./docs/playability-assessment.md) are now closed;
-the open items are S3 (Base and Legs are still mechanically inert) and S4 (no defence against
+Base is no longer inert (§5.2's Motivation strengths/tendencies); Legs is intentionally
+flavor-only (Zone row + teamwork text, no bonus - the mechanic lives in Item's Overtime match
+and the Zone board itself). The remaining open item is S4 (no defence against
 the alpha-player problem).
 
 The design targets an explicit skill curve - **~5% random, ~50% competent, ~95% perfect**

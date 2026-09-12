@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="333mm" height="210mm" viewBox="0 0 333 210">
-<title>Sheet 3b — Standing: front and back on one page (317 x 34 mm strip)</title>
-<desc>The Standing row is a separate strip, not part of board 3. Widened 281 to 317mm to match
-board 3's widened Standing slot. Cut both panels out, glue them to opposite faces of one piece
-of 2 mm greyboard, and drop the strip into the dashed slot at the foot of board 3 with the
+<title>STANDING - front and back on one page (317 x 34 mm strip)</title>
+<desc>The Standing row is a separate strip, not part of THE TEAM. Widened 281 to 317mm to match
+THE TEAM's widened Standing slot. Cut both panels out, glue them to opposite faces of one piece
+of 2 mm greyboard, and drop the strip into the dashed slot at the foot of THE TEAM with the
 week-4 face showing. Turn it over in place at the start of week 4. Print at 100% on one side of
 one sheet.</desc>
 
@@ -16,7 +16,7 @@ one sheet.</desc>
 </style>
 
 <rect width="333" height="210" fill="#FFFFFF"/>
-<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">BOARD 3b · STANDING · BOTH FACES ON THIS PAGE · PRINT AT 100%</text>
+<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">STANDING · BOTH FACES ON THIS PAGE · PRINT AT 100%</text>
 <line x1="10" y1="12" x2="323" y2="12" class="r"/>
 
 <!-- ───────────── FRONT: the row itself, revealed in week 4 ───────────── -->

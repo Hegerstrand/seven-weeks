@@ -6,11 +6,9 @@ Pandemic, and most Stonemaier/Days of Wonder games ship a "Learn to Play" bookle
 the full rules) - it teaches you enough to make your first real decision in five minutes,
 nothing more.
 
-**The illustrated version of this page is the physical leaflet, now two pages:**
-[`leaflet-how-to-play-A4-portrait.svg`](../components/leaflet-how-to-play-A4-portrait.svg) -
-page 1, setup and Week 1 - and
-[`leaflet-how-to-play-2-A4-portrait.svg`](../components/leaflet-how-to-play-2-A4-portrait.svg) -
-page 2, the weekly pulse from week 2 on, and how the project ends.
+**The printable version of this page is the physical leaflet:**
+[`leaflet-how-to-play.md`](../components/specs/leaflet-how-to-play.md) - setup and Week 1, then the
+weekly pulse from week 2 on, and how the project ends.
 
 ## Setup, in order
 

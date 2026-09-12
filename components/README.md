@@ -8,6 +8,14 @@ When graphic design does start, it follows [../docs/design-guide.md](../docs/des
 ("The Field Study" - corporate objects in scholarly materials, three typographic voices, earthy
 palette for the team and accent colours for what happens *to* them).
 
+## Editing a print sheet: specs drive the SVG
+
+Every `*.svg` in this folder has a matching Markdown spec in [specs/](./specs/README.md) -
+grouping, background colours, text, and the illustration, one file per SVG. **Edit the spec,
+then ask for the SVG to be updated to match, then push** - see the
+[board-game-component-specs skill](../../.github/skills/board-game-component-specs/SKILL.md)
+for the full workflow and template.
+
 | Component | Quantity | Material / method | Status |
 |---|---|---|---|
 | Character/player board | 1 per player | Printed board with figure socket + 5 Motivation wells | To design |
@@ -87,12 +95,12 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | `cards-activity-63x88mm-A4-portrait` | A4 | Week 1 | Nine Activity cards - Work x3, Coordinate x2, Align x2, Celebrate x2. **Print once** |
 | `cards-activity-5b-63x88mm-A4-portrait` | A4 | Week 1/3 | The other nine - Work x2 (five total), Teach x2, Plan, Demo, Reflect, Meet, Learn. **Print once** |
 | `cards-event-01-09-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 1-9 |
-| `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18. Shuffle both into one deck |
+| `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18 |
+| `cards-event-19-21-63x88mm-A4-portrait` | A4, one row used | Week 2 | Event cards 19-21 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD). Shuffle all three sheets into one 21-card deck |
 | `cards-project-63x88mm-A4-portrait` | A4 | Setup | Six projects. Choose one; it drops into the seat on board 1 |
 | `cards-habitus-parts-44x36mm-A4-portrait` | Custom 272 x 297 mm (filename stale - no longer A4, widened so the 5-per-row cards can be true 44 x 36 mm, matching the person board's seats) | Setup | 25 part-cards, dealt at random |
 | `cards-need-hero-44x36mm-A4-portrait` | Custom 272 x 140 mm (filename stale - not A4) | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Head, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
-| `leaflet-how-to-play-A4-portrait` | A4 | - | Page 1 of 2 - setup and Week 1 |
-| `leaflet-how-to-play-2-A4-portrait` | A4 | - | Page 2 of 2 - the weekly pulse from week 2 on, and how it ends |
+| `specs/leaflet-how-to-play.md` | A4 | - | Setup, Week 1, the weekly pulse from week 2 on, and how it ends - plain printable Markdown, not an SVG. Paginated into `game-print-all.pdf` by `scripts/build_print_pdf.py`, or print the Markdown directly |
 
 **Everything that goes in a weekday slot is 63 × 88 mm** - Activity and Event cards alike - so
 the two decks handle identically and either fits any 65 × 90 seat. **The Project card is the

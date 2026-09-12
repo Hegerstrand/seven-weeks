@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Board 4 BACK — The Zone (A4 landscape)</title>
-<desc>Glues to the reverse of board-4-FRONT, same size, same orientation: flip about the long
-edge. Unlike boards 1-3, the Zone never turns over during play - it is shared and visible from
+<title>THE ZONE BACK (A4 landscape)</title>
+<desc>Glues to the reverse of the-zone-FRONT, same size, same orientation: flip about the long
+edge. Unlike THE PROJECT, SHIT HAPPENS and THE TEAM, the Zone never turns over during play - it is shared and visible from
 week 1, so this face is never meant to be read at the table. It exists only so the board can be
 glued to cardboard like the others, and so it can carry the same table-placement guide as every
 other board's reverse.</desc>
@@ -24,11 +24,12 @@ other board's reverse.</desc>
 <line x1="18" y1="106" x2="279" y2="106" class="h" stroke-width=".5"/>
 
 <text x="18" y="124" class="m q" font-size="5" letter-spacing="1.6">WHY THIS FACE EXISTS</text>
-<text x="18" y="140" class="s" font-size="7">Boards 1-3 flip weekly to reveal a rule. The Zone has nothing to reveal -</text>
-<text x="18" y="150" class="s" font-size="7">it is live from turn one, so there is no week this side would ever show.</text>
-<text x="18" y="160" class="s" font-size="7">It is printed only so this board glues to cardboard the same way the</text>
-<text x="18" y="170" class="s" font-size="7">others do, and so the table-placement guide can sit on every board's</text>
-<text x="18" y="180" class="s" font-size="7">reverse, front and back alike.</text>
+<text x="18" y="140" class="s" font-size="7">THE PROJECT, SHIT HAPPENS and THE TEAM flip weekly to reveal a rule.</text>
+<text x="18" y="150" class="s" font-size="7">THE ZONE has nothing to reveal -</text>
+<text x="18" y="160" class="s" font-size="7">it is live from turn one, so there is no week this side would ever show.</text>
+<text x="18" y="170" class="s" font-size="7">It is printed only so this board glues to cardboard the same way the</text>
+<text x="18" y="180" class="s" font-size="7">others do, and so the table-placement guide can sit on every board's</text>
+<text x="18" y="190" class="s" font-size="7">reverse, front and back alike.</text>
 
 <text x="18" y="198" class="s q" font-size="6" font-style="italic">If you are reading this at the table, the Zone is face down.</text>
 

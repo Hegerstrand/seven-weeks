@@ -6,6 +6,8 @@
 - `rules/` - the rulebook as it grows (draft → playtested → polished), plus the cut-down
   `rulebook-lite.md` used for the first playtest.
 - `components/` - physical component specs: cards, boards, tokens, box.
+- `components/specs/` - one Markdown spec per SVG (grouping, colours, text, illustration) -
+  edit these to drive SVG changes; see `board-game-component-specs` skill.
 - `components/3d-models/` - 3D-printable files (STL/3MF/STEP) and print notes (material, supports, orientation).
 - `extensions/` - optional add-on modules, one subfolder per pack, cut out of the core game
   after a playtest finding of "too complicated" (see `board-game-extension-packs` skill).
@@ -14,7 +16,7 @@
 ## Working agent & skills
 
 Use the **Board Game Designer** agent (`.github/agents/board-game-designer.agent.md`) for
-this project. It draws on five skills:
+this project. It draws on six skills:
 
 - **board-game-mechanics** - concept, mechanics, rulebook, meaningful-choice design.
 - **board-game-3d-printing** - how to design and spec 3D-printed components.
@@ -23,6 +25,8 @@ this project. It draws on five skills:
 - **board-game-team-dynamics** - running the design team itself well (Tuckman's stages).
 - **board-game-extension-packs** - moving complexity out of the core game into optional
   add-on modules.
+- **board-game-component-specs** - the Markdown-first workflow for `components/*.svg`: edit
+  a spec in `components/specs/`, then have the SVG updated to match.
 
 ## Status
 

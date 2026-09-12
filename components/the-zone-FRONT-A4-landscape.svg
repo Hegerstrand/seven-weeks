@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Board 4 FRONT — The Zone: the shared skill grid (A4 landscape)</title>
-<desc>One board for the whole table. Rows are education, columns are the tool you work through;
+<title>THE ZONE FRONT - the shared skill grid (A4 landscape)</title>
+<desc>One board for the whole table. Rows are education, columns are the skill you work through;
 a square is the practice that training makes with that instrument. Both axes are Bourdieu's
 transmissible forms of capital - institutionalised and objectified - so everything on this board
 can be passed on. Upbringing, values and instinct are not here: they cannot. Squares are 20 mm,
-one player tile. Same page frame as sheet 3. Print at 100%. This sheet is week-1 content only -
-How Learn/Teach works and what the Ledger reads off this grid live on board 4b instead, added
+one player tile. Same page frame as THE TEAM. Print at 100%. This sheet is week-1 content only -
+How Learn/Teach works and what the Ledger reads off this grid live on THE DEVELOPMENT instead, added
 to the table at week 3 - the same week the Specimen panel on each person board starts being read.</desc>
 
 <style>
@@ -32,7 +32,7 @@ to the table at week 3 - the same week the Specimen panel on each person board s
 
 <text x="12" y="16" class="m" font-size="7" letter-spacing="2.5">THE ZONE</text>
 <text x="78" y="16" class="s" font-size="4.4" font-style="italic">what you can reach from what you already have</text>
-<text x="285" y="16" class="m q" font-size="3.8" text-anchor="end">BOARD 4 · SHARED · FROM WEEK 1 · SEE BOARD 4b FROM WEEK 3</text>
+<text x="285" y="16" class="m q" font-size="3.8" text-anchor="end">THE ZONE · FROM WEEK 1</text>
 <line x1="12" y1="20" x2="285" y2="20" class="r"/>
 
 <g transform="translate(-16,0)">
@@ -40,7 +40,7 @@ to the table at week 3 - the same week the Specimen panel on each person board s
   <text x="72" y="36.5">LAPTOP</text><text x="92" y="36.5">COFFEE CUP</text><text x="112" y="36.5">CLIPBOARD</text>
   <text x="132" y="36.5">WRENCH</text><text x="152" y="36.5">CALENDAR</text>
 </g>
-<text x="112" y="27" class="m q" font-size="2.8" letter-spacing="1" text-anchor="middle">TOOL</text>
+<text x="112" y="27" class="m q" font-size="2.8" letter-spacing="1" text-anchor="middle">SKILL</text>
 <g transform="translate(72,31) scale(.6)"><use href="#sh-item"/><use href="#p1"/></g>
 <g transform="translate(92,31) scale(.6)"><use href="#sh-item"/><use href="#p2"/></g>
 <g transform="translate(112,31) scale(.6)"><use href="#sh-item"/><use href="#p3"/></g>
@@ -59,13 +59,6 @@ to the table at week 3 - the same week the Specimen panel on each person board s
   <text x="55" y="89.5">Commercial</text>
   <text x="55" y="109.5">Analytical</text>
   <text x="55" y="129.5">Organisational</text>
-</g>
-<g class="s q" font-size="2.5" font-style="italic" text-anchor="end">
-  <text x="55" y="53.5">how the thing works</text>
-  <text x="55" y="73.5">how people work</text>
-  <text x="55" y="93.5">what it is worth</text>
-  <text x="55" y="113.5">what the numbers say</text>
-  <text x="55" y="133.5">how it gets done</text>
 </g>
 
 <g class="cell">
@@ -109,16 +102,19 @@ to the table at week 3 - the same week the Specimen panel on each person board s
   <text x="152" y="131">Plan</text>
 </g>
 
-<g class="m q" font-size="2" text-anchor="middle">
-  <text x="72" y="145">WORK</text><text x="92" y="145">COORDINATE</text><text x="112" y="145">ALIGN</text><text x="132" y="145">LEARN</text><text x="152" y="145">PLAN</text>
+<g class="m q" font-size="3.4" text-anchor="middle">
+  <text x="72" y="145">DEMO</text><text x="92" y="145">COORDINATE</text><text x="112" y="145">ALIGN</text><text x="132" y="145">LEARN</text><text x="152" y="145">PLAN</text>
 </g>
-<text x="112" y="150" class="s q" font-size="3" text-anchor="middle" font-style="italic">a fully covered column is a card the whole team is better at</text>
+<text x="112" y="150" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">A fully covered column is an ACTION the whole team is better at.</text>
+<text x="112" y="155" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">Give one team member one extra Motivation if the ACTION card is played (maximum 1).</text>
 </g>
 
 <rect x="166" y="36" width="119" height="104" rx="2" class="r" stroke-dasharray="3 2"/>
-<text x="225.5" y="44" class="m q" font-size="3.2" letter-spacing="1" text-anchor="middle">BOARD 4b GOES HERE · FROM WEEK 3</text>
-<text x="225.5" y="86" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">How you cover a square, and what the Ledger reads off this grid, are on board 4b</text>
+<text x="225.5" y="44" class="m q" font-size="3.2" letter-spacing="1" text-anchor="middle">THE DEVELOPMENT GOES HERE · FROM WEEK 3</text>
+<text x="225.5" y="86" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">How you cover a square, and what the Ledger reads off this grid, are on THE DEVELOPMENT</text>
 <text x="225.5" y="90.5" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">from week 3 - they need Learn/Teach, and that doesn't exist yet.</text>
+<text x="225.5" y="105" class="s q" font-size="3" text-anchor="middle" font-style="italic">A fully covered row and column both contributes to <tspan font-weight="bold">SHARED PRACTICE</tspan> on THE TEAM.</text>
+<text x="225.5" y="109" class="s q" font-size="3" text-anchor="middle" font-style="italic">If you are 4 team mates, pretend the empty row doesn't exist.</text>
 
 <line x1="12" y1="158" x2="285" y2="158" class="r"/>
 <text x="12" y="166" class="m" font-size="4.4" letter-spacing="1.2">WHAT YOU CAN DO</text>

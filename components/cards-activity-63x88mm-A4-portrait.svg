@@ -40,10 +40,8 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#D3CEDF"/>
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
-    <text x="5" y="49" class="s" font-size="4.4"><tspan class="trust">Trust ≤ 1</tspan>: Learn is dead.</text>
-    <text x="5" y="55" class="s" font-size="4.4"><tspan class="trust">Trust ≥ 4</tspan>: cancel one</text>
-    <text x="5" y="61" class="s" font-size="4.4">Event a week.</text>
-    <text x="5" y="69" class="m q" font-size="3.1">TRACKS RISE 1 A WEEK, MAX</text>
+    <text x="5" y="49" class="s" font-size="4.4"><tspan class="trust">Trust ≤ 1</tspan>: Teach is dead.</text>
+    <text x="5" y="58" class="m q" font-size="3.1">TRACKS RISE 1 A WEEK, MAX</text>
     <text x="5" y="77" class="s" font-size="4.2" font-style="italic">Safety is not declared.</text>
     <text x="5" y="82" class="s" font-size="4.2" font-style="italic">It is built, dully.</text>
   </g>

@@ -13,11 +13,12 @@ mechanic to fix, not a footnote to add (see [design-guide.md](./design-guide.md)
 is for the designers, and for any player curious enough to ask "wait, why does Onboarding work
 like *that*?" after the fact.
 
-## The eight thinkers, and what each one is actually doing here
+## The twelve thinkers, and what each one is actually doing here
 
-The game draws on eight thinkers, not one grand theory. Three carry most of the weight, two are
-borrowed as single named findings, and four were added later to pressure-test the design from
-outside the original three.
+The game draws on twelve thinkers, not one grand theory. Three carry most of the weight, two are
+borrowed as single named findings, and seven were added later to pressure-test the design from
+outside the original three. Two more ideas worth naming - **dogfooding** and **Cunningham's
+Law** - aren't thinkers at all; see the notes after the roster below.
 
 **The three the game is built on:**
 - **Pierre Bourdieu** - habitus, capital, field. Why the figure is built before a single project
@@ -39,15 +40,15 @@ outside the original three.
   whichever feature got the most piled onto it that week. Detailed in
   [team-learning-model.md](./team-learning-model.md).
 
-**Four added later, to check the design from outside the original three:**
+**Seven added later, to check the design from outside the original three:**
 - **Michael A. West** - what actually makes a group of people a *team* (shared objectives, task
   interdependence, stable membership), and *team reflexivity* - a team pausing to examine and
   adjust its own way of working. The closest thing this list has to "already fully implemented
   before we knew the name" - see the full research for why no new mechanic was needed.
 - **Michel Foucault** - power that works through visibility rather than force. The Ledger,
   face-up on the table all game, is a small version of exactly this; **Collective Bargaining**
-  (the second use of Authorized Voice, §18) is close to a named act of collective resistance to
-  individualized discipline.
+  (the second use of Authorized Voice, `game/extensions/performance-review/` - not in the base
+  game) is close to a named act of collective resistance to individualized discipline.
 - **Norbert Elias** - no individual exists outside the web of relationships around them; a
   long-tenured group holds informal status over newcomers regardless of the newcomers' actual
   ability. Why Onboarding penalises position, not skill, and why sponsorship can shorten it.
@@ -56,11 +57,40 @@ outside the original three.
   cooperative than a factory floor, so Marx mostly reveals what this game *doesn't* do to a
   team, more than what it does. **Cross-Trained** (§5.1) is the one place his critique of
   fragmented labour turns into an actual reward.
+- **Charles Goodhart** - a measure stops being a good measure once it becomes the target. The
+  **§16 Team Score / Heroic Success split** already is this mechanic - the rulebook was worried
+  about a team gaming its own score before anyone reached for Goodhart's name for it. Now also
+  has a dedicated card: **THE DASHBOARD** (Event 21, sheet 8).
+- **Melvin Conway** - organizations ship a copy of their own communication structure. The
+  **Zone board (§8) is that structure**, and the **Feature Tower is the system it produces**;
+  Learn/Teach are the team's **Reverse Conway Maneuver** lever, if they choose to plan ahead
+  with it rather than discover the gap afterward.
+- **Derek de Solla Price** - productivity concentrates among a few contributors (roughly
+  √n produce half the output), it doesn't spread evenly. **Knowledge Hoarding** (§5.1, §11) and
+  **Skill match** (§7) both already assume this shape rather than an even one - see the full
+  research for the honest tension this creates with the game's collectivist scoring.
+
+**One that started an honest miss, and no longer is:**
+- **C. Northcote Parkinson** - the law of triviality ("bikeshedding"): trivial, visible decisions
+  eat disproportionate time precisely because everyone can have an opinion, while hard,
+  consequential ones get rubber-stamped. Now has a dedicated card: **THE BIKESHED** (Event 19,
+  sheet 8) - the easiest unbanked feature gets +1 Work free, the hardest gets nothing that week.
+
+**Not a thinker, so not on the roster - dogfooding and Cunningham's Law.** "Eat your own dog
+  food" and "the best way to get the right answer is to post the wrong one" are practitioner
+  aphorisms, not named theorists' findings, so both are kept separate rather than dressed up as
+  a seventh and eighth thinker. Both turned out to already be encoded rather than needing a new
+  mechanic: dogfooding in the **Autonomy/Hierarchy Torso split** (Autonomy takes the
+  Management-Event hit directly because it owns its own calls; Hierarchy is immune to
+  Management but takes the Environment hit instead, insulated from the decisions it deferred
+  to) - now also its own card, **LEADS FROM BEHIND** (Event 20, sheet 8); Cunningham's Law in
+  **Demo** (§7) - committing a feature's quality publicly to the field's judgment produces the
+  answer, rather than asking for it.
 
 **Full research, citations, and the honest tensions** (including which readings are a stretch
 and which aren't): [theoretical-sources.md](./theoretical-sources.md).
 
-## Three known gaps, and one honest tension
+## Three known gaps, and two honest tensions
 
 Left visible on purpose, not smoothed over:
 - Bourdieu's **hysteresis** has no mechanic.
@@ -69,6 +99,9 @@ Left visible on purpose, not smoothed over:
 - Foucault's suspicion of "the team gets better" as a story sits in real tension with the whole
   design's optimism about growth. Nothing resolves this on purpose - see
   [theoretical-sources.md](./theoretical-sources.md) for the full argument.
+- Price's Law predicts output concentrates among a few contributors - which the mechanics
+  already assume (Knowledge Hoarding, Skill match) - while the win condition insists Team Score
+  belongs to the whole table, nobody's name on any block (§10). Also left open on purpose.
 
 ## Where a citation actually lives on a physical component
 

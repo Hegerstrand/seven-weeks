@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="174mm" height="297mm" viewBox="0 0 174 297">
-<title>Board 2 BACK - Week 2, Reality (narrowed to 174mm)</title>
-<desc>Glues to the reverse of board-2-FRONT, narrowed to match at 174mm (see board-2-FRONT and
+<title>SHIT HAPPENS BACK - Week 2, Reality (narrowed to 174mm)</title>
+<desc>Glues to the reverse of shit-happens-FRONT, narrowed to match at 174mm (see shit-happens-FRONT and
 _check-table-layout.svg). Flip about the long edge. Content below is still authored at 297 x 420
 (root-2 scale-up) and wrapped in the same compensating scale as before, just repacked into a
 narrower horizontal span.</desc>
@@ -22,22 +22,17 @@ narrower horizontal span.</desc>
 <text x="24" y="124" class="s" font-size="42">Reality</text>
 <line x1="24" y1="138" x2="230.36" y2="138" class="h" stroke-width="1.2"/>
 
-<text x="24" y="160" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
-<text x="24" y="188" class="s" font-size="20">Your plan was made</text>
-<text x="24" y="212" class="s" font-size="20">in ignorance.</text>
+<text x="24" y="152" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
+<text x="24" y="176" class="s" font-size="20">Your plan was made</text>
+<text x="24" y="200" class="s" font-size="20">in ignorance.</text>
 
-<line x1="24" y1="230" x2="230.36" y2="230" class="h" stroke-width=".5"/>
+<line x1="24" y1="212" x2="230.36" y2="212" class="h" stroke-width=".5"/>
 
-<text x="24" y="250" class="m q" font-size="6" letter-spacing="2.5">WHAT OPENS</text>
-<text x="24" y="266" class="s" font-size="8"><tspan font-weight="bold">Shit Happens.</tspan> Draw two Events, face up,</text>
-<text x="24" y="277" class="s" font-size="8">and do not resolve them yet.</text>
-<text x="24" y="291" class="s" font-size="8"><tspan font-weight="bold">Adapt.</tspan> 1 Adaptability this week. Spend it to</text>
-<text x="24" y="305" class="s" font-size="8">replace a card, or pay an Event's ADAPT</text>
-<text x="24" y="316" class="s" font-size="8">number to cancel it outright.</text>
-<text x="24" y="333" class="s" font-size="8">Then resolve whatever you did not cancel.</text>
-
-<text x="24" y="356" class="m q" font-size="6" letter-spacing="2.5">CARDS ADDED</text>
-<text x="24" y="370" class="m" font-size="10">NOTHING NEW</text>
+<text x="24" y="232" class="m q" font-size="6" letter-spacing="2.5">SET OUT THIS STACK</text>
+<rect x="81" y="244" width="92" height="127" rx="2" class="h" stroke-width=".5" stroke-dasharray="3 2"/>
+<text x="127" y="264" class="m q" font-size="7" text-anchor="middle">EVENT CARDS</text>
+<text x="127" y="349" class="s q" font-size="5.1" text-anchor="middle" font-style="italic">draw two here every week,</text>
+<text x="127" y="357" class="s q" font-size="5.1" text-anchor="middle" font-style="italic">reshuffle when it runs out</text>
 
 <line x1="24" y1="384" x2="230.36" y2="384" class="h" stroke-width=".5"/>
 <text x="24" y="400" class="s" font-size="9" font-style="italic">Nothing changed except when you find out.</text>

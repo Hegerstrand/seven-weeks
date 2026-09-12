@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Board 4b — The Zone, week 3: front and back on one page (127 x 104 mm)</title>
-<desc>Split off board 4 on purpose. The grid on board 4 is live from week 1, but Learn/Teach and
+<title>THE DEVELOPMENT - week 3: front and back on one page (127 x 104 mm)</title>
+<desc>Split off THE ZONE on purpose. The grid on THE ZONE is live from week 1, but Learn/Teach and
 the Ledger's Capability/Shared Practice payoff don't exist before week 3 - so this panel sits
-face-down beside board 4 until week 3, then turns over - the same week the Specimen panel on
+face-down beside THE ZONE until week 3, then turns over - the same week the Specimen panel on
 each person board starts being read. Cut both panels
 out, glue them to opposite faces of one piece of 2 mm greyboard. Print at 100% on one side of
 one sheet.</desc>
@@ -16,19 +16,19 @@ one sheet.</desc>
 </style>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
-<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">BOARD 4b · THE ZONE, CONTINUED · BOTH FACES ON THIS PAGE · PRINT AT 100%</text>
+<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">THE DEVELOPMENT · BOTH FACES ON THIS PAGE · PRINT AT 100%</text>
 <line x1="10" y1="12" x2="147" y2="12" class="r"/>
 
 <!-- ───────────── FRONT: the payoff, revealed in week 3 ───────────── -->
 <text x="10" y="20" class="m" font-size="3.2" letter-spacing=".9">FRONT · THE PAYOFF</text>
 <text x="70" y="20" class="s" font-size="3.4" font-style="italic">turn this up at the start of week 3</text>
 
-<g id="board-4b-front" transform="translate(0,4)">
+<g id="the-development-front" transform="translate(0,4)">
 <!-- ═══ HOW YOU COVER ═══ -->
 <rect x="10" y="20" width="127" height="47" rx="2" class="r"/>
 <text x="20" y="29" class="m" font-size="5" letter-spacing="1.4">HOW YOU COVER</text>
 <text x="20" y="38" class="m" font-size="3.4" letter-spacing=".4">LEARN</text>
-<text x="45" y="38" class="s" font-size="3.4">pick up a new tool, <tspan font-weight="bold">left or right</tspan></text>
+<text x="45" y="38" class="s" font-size="3.4">pick up a new skill, <tspan font-weight="bold">left or right</tspan></text>
 <text x="45" y="42.5" class="s" font-size="3.4">of one you cover, in your own row. No teacher needed.</text>
 <text x="20" y="51" class="m" font-size="3.4" letter-spacing=".4">TEACH</text>
 <text x="45" y="51" class="s" font-size="3.4">let someone cover a square you hold - <tspan font-weight="bold">up, down,</tspan></text>
@@ -50,9 +50,9 @@ one sheet.</desc>
 
 <!-- ───────────── BACK: what shows while it waits ───────────── -->
 <text x="10" y="140" class="m" font-size="3.2" letter-spacing=".9">BACK · UNTIL WEEK 3</text>
-<text x="70" y="140" class="s" font-size="3.4" font-style="italic">this is the side showing while it sits beside board 4</text>
+<text x="70" y="140" class="s" font-size="3.4" font-style="italic">this is the side showing while it sits beside THE ZONE</text>
 
-<g id="board-4b-back" transform="translate(0,124)">
+<g id="the-development-back" transform="translate(0,124)">
   <rect x="10" y="20" width="127" height="47" rx="2" class="r"/>
   <text x="20" y="32" class="m q" font-size="4.2" letter-spacing="1.2">TURN ME OVER</text>
   <text x="20" y="38" class="m q" font-size="3.4" letter-spacing="1">START OF WEEK 3</text>
@@ -63,6 +63,6 @@ one sheet.</desc>
 
 <line x1="10" y1="196" x2="285" y2="196" class="cut"/>
 <text x="10" y="199" class="s" font-size="4">Cut both panels out, glue them to opposite faces of one piece of 2 mm greyboard -</text>
-<text x="10" y="203" class="s" font-size="4"><tspan font-weight="bold">Front and back on the same board.</tspan> Stand it beside board 4 with the back showing,</text>
+<text x="10" y="203" class="s" font-size="4"><tspan font-weight="bold">Front and back on the same board.</tspan> Stand it beside THE ZONE with the back showing,</text>
 <text x="10" y="207" class="s" font-size="4">and turn it over in place at the start of week 3.</text>
 </svg>

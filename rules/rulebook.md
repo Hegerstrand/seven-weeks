@@ -1,7 +1,47 @@
-# Rulebook - High-Performance Team (v0.22 draft)
+# Rulebook - High-Performance Team (v0.27 draft)
 
 Status: prototype draft, not yet playtested. Bump this version header whenever a playtest
 changes a rule, and log the change in [../playtests/README.md](../playtests/README.md).
+
+> **v0.27 - Capability and Adaptability can now fall.** Audit found Trust (`split`, `audit`,
+> `CONFLICT`) and Shared Practice (`reorg`) each had at least one Event that moved their Ledger
+> coin down, but Capability and Adaptability had none - two of four tracks only ever rose. Added
+> two new Event cards (21\u219223 total): **SHAKY GROUND** (Environment, −1 Capability) and
+> **ALWAYS REACTING** (Customer, −1 Adaptability). Both name the track directly in the effect
+> line, distinct from the Torso reaction's personal Motivation loss underneath - per §18, this
+> is the coin moving down, permanent until re-earned, never a one-week effect. Each card's HABIT
+> is deliberately the one that track itself unlocks (Who Knows What / Team Reflexivity).
+
+> **v0.26 - Item's axis renamed TOOL → SKILL.** Cosmetic, no rule change: every printed and
+> written reference to the Item/Zone-column axis ("TOOL") now reads "SKILL" - the Zone board's
+> column header, the Item habitus cards, the person board's caption, and this rulebook's own
+> build-order and Zone (§8) text. Unrelated uses of the word "tool" (Vygotsky's "mediation by
+> tools", the Internal Tools product parody, TOOLING OUTAGE) are untouched - they aren't this
+> axis.
+
+> **v0.25 - Take One For The Team.** A player asked for a Base habitus card that traded
+> Motivation for Trust - refused as a habitus card (§5.2 confines Base to the character's own
+> Motivation, never a shared track; see [../docs/habitus-model.md](../docs/habitus-model.md)'s
+> "never two currencies" rule), but the underlying want was real: a way to nudge Trust in a week
+> the team couldn't spare a Coordinate or Meet. Added as a new **standing action** (§7, alongside
+> Overtime, not a card): any character may pay 1 Motivation for the week's +1 Trust, if Trust
+> hasn't already risen that week. Shares Trust's existing "rises 1 a week, max" ceiling - it's an
+> alternate route to that same point, spending Motivation instead of a card slot, never a stack.
+
+> **v0.24 - Strict renamed to By The Book; habitus card wording cleanup.** The Strict card's
+> two mechanic lines didn't hang together on the printed card ("the other" had no visible
+> antecedent once "IGNORE 1 EVENT LOSS/WEEK" was trimmed to fit) and its flavour text read as
+> generic. Renamed to **By The Book** (same rule, unchanged) and rewrote its card copy from
+> scratch; Competitive's "-1 EXTRA" line now spells out what the extra is (Motivation), and
+> every habitus part-card abbreviation (`MOTIV.`, `CAPAB.`, `SH.PRAC`, `ADAPT.`) was reverted to
+> the full word, wrapped onto an extra line where it didn't fit - card-copy only, no rule change.
+
+> **v0.23 - Performance Review cleanup.** v0.22 said Performance Review and Authorized Voice's
+> Collective Bargaining use were extracted to `game/extensions/performance-review/`, but left
+> the old dual-use wording sitting in §5.1's Losing Capital list and in the Habit discount
+> table - both still described Authorized Voice shielding a Performance Review, contradicting
+> "Authorized Voice now only cancels an Event." Removed; the extension's own README already
+> carries the full restored mechanic.
 
 > **v0.22 - Balance pass on the Event/Adapt escape valves.** Performance Review and
 > Authorized Voice's Collective Bargaining use are extracted to `game/extensions/performance-review/`
@@ -278,7 +318,7 @@ about ninety seconds.
 2. **Legs** - education & inclination, attached to the Base.
 3. **Torso** - values, attached to the Legs. (Arms are sculpted in, not swappable.)
 4. **Head** - pressure response, attached to the Torso.
-5. **Item** - the tool you hold, into the Torso's hand.
+5. **Item** - the skill you hold, into the Torso's hand.
 
 Slot the five part-cards into your player board as you go. Nothing is written down. Then take
 the matching [NEED and HERO tiles](../components/cards-need-hero-44x36mm-A4-portrait.svg) -
@@ -288,7 +328,7 @@ with the Specimen panel - §3.0. Weeks 1-2 are about who you are and what you kn
 *need* from the team is the week-3 idea, and the tile that answers it has been on your board
 the whole time.)
 
-The build order - upbringing → education → values → instinct → tool - is on purpose: it mirrors
+The build order - upbringing → education → values → instinct → skill - is on purpose: it mirrors
 how a habitus actually forms, oldest layer first.
 
 > **Variant, for players who know the game:** deal each player seven parts and let them keep
@@ -563,19 +603,17 @@ into once the team recognises them.
 | You led a **Demo**. | A public success → standing. |
 | A **habitus strength** of yours visibly worked in front of the team - a Take Charge call that landed, calling out Knowledge Hoarding. | Disposition → standing. |
 | **Cross-Trained** - you just covered your **3rd row** on the Zone board (§8), once per character, whenever it first happens. | Breadth → standing. Not the team's Capability, *yours* - the moment you stop being fixed to one fragment of the work. |
+| You paid the Motivation for **Take One For The Team** (§6.1) this week. | Personal sacrifice → standing. You spent your own Motivation so the team's Trust could rise; the team saw it cost you something. |
 
-All five require the team to **witness** it. Private competence earns nothing - recognition is
+All six require the team to **witness** it. Private competence earns nothing - recognition is
 what makes standing exist at all.
 
 **Losing Capital.** No weekly cap:
-- You're the subject of a **Performance Review**: **−1**. *If Trust ≥ 4, the team may spend a
-  Coordinate to take this as* **−1 Trust** *instead, shared, rather than −1 Capital for the
-  named character alone* - solidarity converting an individualized hit into a collective one.
-  **Authorized Voice** (§18), if the team has it, does the same for free, once a week, with no
-  Trust threshold to clear.
-  *(Extension: `game/extensions/performance-review/` - cut from the base game, see that pack's
-  README for why.)*
 - A habitus **tendency** of yours fired publicly against the team's wishes: **−1**.
+
+*(Extension: `game/extensions/performance-review/` restores a second, individualized Capital-loss
+trigger - being the subject of a Performance Review - plus a way for the team to convert it into
+a shared −1 Trust instead. Cut from the base game, see that pack's README for why.)*
 
 > **This is what finally gives KNOWLEDGE HOARDING teeth (§11).** Hoarding protects your
 > scarcity - you stay the only one who can do the thing. But teaching is the main route to
@@ -703,7 +741,7 @@ character's own Motivation for them.
 | **Bookish** | **+1 Motivation** when you play Learn | **−1 Motivation** when you play Teach |
 | **Hands-On** | **+1 Motivation** when you play Teach | **−1 Motivation** when you play Learn |
 | **Sheltered** | The weekly grind (§5) doesn't affect your Motivation | **You never rise above 3 Motivation** - insulated from the highs as much as the lows |
-| **Strict** | Ignore **one** Event's Motivation loss, each week (your choice which, of the two drawn) | **The other** costs you an *extra* **−1 Motivation** |
+| **Strict** (now **By The Book**) | Ignore **one** Event's Motivation loss, each week (your choice which, of the two drawn) | **The other** costs you an *extra* **−1 Motivation** |
 | **Competitive** | May spend **Hero** even below the usual 3-Motivation threshold | **Spending your own Hero costs an extra −1 Motivation** - it never comes free for you |
 
 Each **Head/Pressure Response** pairs the same way, keyed to whichever Team State track (§4)
@@ -738,8 +776,9 @@ The team spends exactly two things, and nothing else.
 
 **Days - the team's time.** A week is **five days**, and that is the *whole team's* week - not
 five days each. Three players or six, the week is still five days. Each day is **one Activity
-card** (§7), played by one named character, whose Skill, Knowledge, Habitus and Capital apply
-to it. A character may take several of the week's days, or none at all.
+card** (§7); the team names which character executes it **when the card resolves**, not when
+it's laid out - that character's Skill, Knowledge, Habitus and Capital apply to it. A character
+may take several of the week's days, or none at all.
 
 > The project's budget is **7 weeks × 5 days = 35 days.** That is the number Work Costs get
 > compared against, and it does not move.
@@ -761,8 +800,9 @@ a week past five days - see Overtime (§7).
 The game is **7 turns, one per week**. Each week runs in four phases:
 
 **1 - Plan the week.** Lay out **five Activity cards**, one on each weekday slot Monday to
-Friday, each assigned to a character. A slot may instead take a **Flex marker**, giving back a
-day someone worked as Overtime (§7). Then stop. Nothing has resolved.
+Friday. Nobody is assigned to a card yet - that's decided when it resolves (Phase 4), not now.
+A slot may instead take a **Flex marker**, giving back a day someone worked as Overtime (§7).
+Then stop. Nothing has resolved.
 
 **2 - Shit happens.** Draw **2 Event cards** and turn them face up beside the week. Read them
 out. **Do not resolve them yet** - they are threats, not yet facts. They are aimed at the week
@@ -822,7 +862,7 @@ front of you.
 | **Environment** | Who Knows What | Capability |
 | **Management** | Shared Repertoire | Shared Practice |
 | **Customer** | Team Reflexivity | Adaptability |
-| *Any* | **Authorized Voice** - cancel one Event a week outright, or shield a teammate's Performance Review instead | Standing |
+| *Any* | **Authorized Voice** - cancel one Event a week outright | Standing |
 
 This is the difference between a team that copes and a team that has changed. Adapt is
 scrambling: it costs you the same every single time. A Habit costs nothing forever, because it
@@ -857,8 +897,11 @@ read it as **one of the week's five cards**, unless the card says otherwise.
 ## 7. Activities - one card, one of the week's five days
 
 Every Activity has an exact effect. Nothing here is "may" or "improves" - if a number isn't
-listed, nothing happens. Each card is played by **one named character**, whose Skill,
-Knowledge, Habitus and Capital apply.
+listed, nothing happens. **The team names which character executes each card when it
+resolves** - there is no assignment step during Planning (§6.1) - and that character's Skill,
+Knowledge, Habitus and Capital apply. Where a card's Capital gain has no single teacher or
+presenter named on it (a collective effort, not a paired one), the team nominates **one**
+character to receive it.
 
 | Activity | Exact effect |
 |---|---|
@@ -868,7 +911,7 @@ Knowledge, Habitus and Capital apply.
 | **Align** | +1 Adaptability, unconditionally. |
 | **Learn** | Cover a free square **in your own row** of the Zone (§8), immediately **left or right** of one you already cover. No teacher, no Capital - an instrument can be got hold of alone. |
 | **Teach** | Let **up to two different characters**, each already covering a square, each let another character cover it, **any row**, immediately **up, down, left or right** of one they already cover. **Both teachers +1 Capital.** **Does nothing while Trust ≤ 1.** |
-| **Demo** | Needs **Capital ≥ the team average** (§5.1). Presenter **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
+| **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
 | **Reflect** | **+1 Adaptability.** If a feature was banked *or* an Event resolved since the team's last Reflect, also **+1 Shared Practice**. |
 | **Meet** | Resolve as §9. **Working Meeting:** +1 Trust, +1 Adaptability. **Record Meeting:** no effect at all, but it satisfies Events that demand one. |
 | **Celebrate** | **+2 Motivation to every character** (cap 5) - **+3 instead if a feature was banked this week.** |
@@ -911,9 +954,22 @@ at the exact moment real teams make it.
 > **The week runs 4 to 6 days, and both ends cost you.** Under-fill and the project slips.
 > Over-fill and you're borrowing from a week that hasn't happened yet.
 
+### Take one for the team
+> **Any character may pay 1 Motivation for the team's +1 Trust this week** - a standing action,
+> not a card, usable even in a week with no free slot for Coordinate or a Working Meeting.
+> Once per week: if Trust already rose this week (Coordinate, Meet, or this action, by anyone),
+> nobody may do it again - see the shared ceiling below.
+
+It's the personal-cost mirror of Overtime: Overtime borrows against the *project's* clock
+(a day now, a Flex marker owed later); this borrows against a *character's* Motivation instead,
+for a track the team couldn't otherwise afford to move that week. Same shape as every other
+habitus/Base pairing - one resource, spent - just not printed on a card, because it belongs to
+any character, not one build option.
+
 **Two limits that apply to everything above:**
 - Work output is never below **0**.
-- Each Team State track rises by at most **1 per week**, however many cards push at it.
+- Each Team State track rises by at most **1 per week**, however many cards - or standing
+  actions, like Take One For The Team - push at it.
 
 ### There is no weekly output ceiling any more
 > **Removed on purpose.** Work used to cap out at *(Work cards played) + 2 + (1 per Habit)*.
@@ -979,7 +1035,7 @@ character reaches for that Activity in the first place.
 
 ## 8. Knowledge & Learning - the Zone (board 4)
 What a character knows isn't a private card any more - it's a square on the shared **Zone**
-board (board 4), a 5x5 grid of **Education** (row: your Legs) by **Tool** (column: your Item).
+board (board 4), a 5x5 grid of **Education** (row: your Legs) by **Skill** (column: your Item).
 Covering a square means you can do that row's work with that column's instrument; once every **row in play** in a column is covered - by anyone, not necessarily the same character - the card
 named under that column gets **+1**, no matter how many people hold it. A column that is only
 partly covered gives nothing yet; there is no partial credit for a square here or there.
@@ -1002,7 +1058,7 @@ square, each let one other character cover it, **up, down, left or right** of on
 already cover - in any row, since a teacher can hand someone a square they'd
 never have reached alone. **Both teachers gain +1 Capital.** One card, one day, two pairs - a
 second teacher doesn't cost a second day; a training has to be conferred
-by somebody who holds it, a tool can be picked up alone - that difference is the whole reason
+by somebody who holds it, a skill can be picked up alone - that difference is the whole reason
 the two are separate cards.
 
 The Ledger reads the same board two ways: **fill any whole row or column** and Capability
@@ -1238,6 +1294,10 @@ Categories:
 > **CUSTOMER CHAMPION LEAVES** - the team's best point of contact is gone. Align actions
 > cost +1 day until the team spends a Reflect to rebuild the relationship.
 
+> **ALWAYS REACTING** - the team stops planning ahead and only reacts; deadlines slip
+> sideways: the team **loses 1 Adaptability** (the Ledger coin, permanently). Quality: also
+> lose 1 Motivation. *(Closes the gap where Adaptability had no way down at all.)*
+
 **Team**
 > **CONFLICT** - name two characters with clashing Values (Torso): −1 Trust each, unless the
 > team spends a Coordinate day this week.
@@ -1267,6 +1327,10 @@ Categories:
 
 > **INDUSTRY CRISIS** - if Adaptability < 3: lose progress equal to 1 day's Work (the team's
 > distracted). If Adaptability ≥ 3: no effect.
+
+> **SHAKY GROUND** - a demo crashed in front of the customer: the team **loses 1 Capability**
+> (move the Ledger coin down one, permanent, not a one-week penalty). Hierarchy: also lose 1
+> Motivation. *(Closes the gap where Capability had no way down at all.)*
 
 Still short of 30 cards - add more per category during playtesting, once specific rules are
 tuned. Prioritize Team and Customer cards, since those interact most directly with Habitus

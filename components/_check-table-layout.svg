@@ -4,8 +4,8 @@
 both true A4 landscape (297 x 210, no widening). Week is true A3 landscape (420 x 297, no
 extension). Reality is sized to fill whatever's left: 594 - 420 = 174 mm wide, matched to
 Week's 297mm height. The Event deck is explicitly excluded from the shared rectangle - it can
-sit anywhere on the table, no registration needed. This reverts board 3's +36mm widen and
-board 1/2's +35mm height extension from the previous check - see the follow-up note at the
+sit anywhere on the table, no registration needed. This reverts THE TEAM's +36mm widen and
+THE PROJECT/SHIT HAPPENS's +35mm height extension from the previous check - see the follow-up note at the
 bottom for what that costs each real file.
 One example player board sits on each side. True 1:1 mm scale throughout. Not glued, not
 printed - open it in a browser.
@@ -45,36 +45,34 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <text x="541" y="222" class="m" font-size="7" text-anchor="middle" letter-spacing=".6">ONE SHARED RECTANGLE - 594 x 507 mm, NO GAP - PROPOSED</text>
 <rect x="226" y="231" width="594" height="507" class="rectangle"/>
 
-<!-- Board 4 - the Zone -->
+<!-- THE ZONE -->
 <rect x="226" y="231" width="297" height="210" class="board"/>
-<text x="374.5" y="328" class="m" font-size="8" text-anchor="middle">BOARD 4 - THE ZONE</text>
+<text x="374.5" y="328" class="m" font-size="8" text-anchor="middle">THE ZONE</text>
 <text x="374.5" y="340" class="s q" font-size="5" text-anchor="middle" font-style="italic">A4 landscape, 297 x 210 mm</text>
 
-<!-- Board 3 - the Ledger, back to true A4 -->
+<!-- THE TEAM, back to true A4 -->
 <rect x="523" y="231" width="297" height="210" class="board"/>
-<text x="671.5" y="323" class="m" font-size="8" text-anchor="middle">BOARD 3 - THE LEDGER</text>
+<text x="671.5" y="323" class="m" font-size="8" text-anchor="middle">THE TEAM</text>
 <text x="671.5" y="335" class="s q" font-size="5" text-anchor="middle" font-style="italic">A4 landscape, 297 x 210 mm - widen reverted</text>
-<text x="671.5" y="344" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">3b Standing's slot width needs reconsidering to match (was tied to the 333mm version)</text>
+<text x="671.5" y="344" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">STANDING's slot width needs reconsidering to match (was tied to the 333mm version)</text>
 
-<!-- Board 3b - Standing, a separate glued strip that drops into board 3's own dashed slot -->
+<!-- STANDING, a separate glued strip that drops into THE TEAM's own dashed slot -->
 <rect x="531" y="397" width="281" height="34" rx="2" class="spare"/>
-<text x="671.5" y="411" class="m" font-size="5.5" text-anchor="middle" fill="#905151">BOARD 3b - STANDING</text>
-<text x="671.5" y="418" class="s q" font-size="4" text-anchor="middle" font-style="italic">shown back at its original 281 x 34 mm - needs re-verifying against board 3's real slot</text>
-<text x="671.5" y="424" class="s q" font-size="4" text-anchor="middle" font-style="italic">drops into board 3's dashed slot at the foot of the Ledger</text>
+<text x="671.5" y="411" class="m" font-size="5.5" text-anchor="middle" fill="#905151">STANDING</text>
+<text x="671.5" y="418" class="s q" font-size="4" text-anchor="middle" font-style="italic">shown back at its original 281 x 34 mm - needs re-verifying against THE TEAM's real slot</text>
+<text x="671.5" y="424" class="s q" font-size="4" text-anchor="middle" font-style="italic">drops into THE TEAM's dashed slot at the foot of the Ledger</text>
 
 <!-- top row - 4-3 -->
 <rect x="226" y="231" width="594" height="210" class="pair"/>
 
-<!-- Board 1 - the Project, back to true A3 -->
+<!-- THE PROJECT, back to true A3 -->
 <rect x="226" y="441" width="420" height="297" class="board"/>
-<text x="436" y="587" class="m" font-size="9" text-anchor="middle">BOARD 1</text>
-<text x="436" y="599" class="m" font-size="9" text-anchor="middle">THE PROJECT</text>
+<text x="436" y="593" class="m" font-size="9" text-anchor="middle">THE PROJECT</text>
 <text x="436" y="610" class="s q" font-size="5" text-anchor="middle" font-style="italic">A3 landscape, true 420 x 297 mm - extension reverted</text>
 
-<!-- Board 2 - Reality, sized to fill what's left -->
+<!-- SHIT HAPPENS, sized to fill what's left -->
 <rect x="646" y="441" width="174" height="297" class="board"/>
-<text x="733" y="587" class="m" font-size="8" text-anchor="middle">BOARD 2</text>
-<text x="733" y="597" class="m" font-size="8" text-anchor="middle">REALITY</text>
+<text x="733" y="592" class="m" font-size="8" text-anchor="middle">SHIT HAPPENS</text>
 <text x="733" y="609" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">174 x 297 mm - sized to fill the rest,</text>
 <text x="733" y="617" class="s q" font-size="4.6" text-anchor="middle" font-style="italic">no longer A4 portrait - real content re-fit needed</text>
 
@@ -143,7 +141,7 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <text x="10" y="1035" class="m" font-size="8" letter-spacing="1">WHAT THIS CHECKS</text>
 
 <rect x="10" y="1043" width="16" height="10" class="rectangle"/>
-<text x="32" y="1051" class="s" font-size="5">Boards 1-4 pack edge to edge into one 594 x 507 mm rectangle with zero gap - Zone and Team both true A4 (297 x 210), Week true A3 (420 x 297), Reality resized to fill the rest (174 x 297). Follow-up needed on the real files: board 1 loses its +35mm OVERTIME-slot extension, board 3 loses its +36mm widen (and 3b Standing's slot width needs re-checking), and board 2 shrinks on both dimensions - all three need their content re-fit before this is real, not just planned.</text>
+<text x="32" y="1051" class="s" font-size="5">THE PROJECT, SHIT HAPPENS, THE TEAM and THE ZONE pack edge to edge into one 594 x 507 mm rectangle with zero gap - THE ZONE and THE TEAM both true A4 (297 x 210), THE PROJECT true A3 (420 x 297), SHIT HAPPENS resized to fill the rest (174 x 297). Follow-up needed on the real files: THE PROJECT loses its +35mm OVERTIME-slot extension, THE TEAM loses its +36mm widen (and STANDING's slot width needs re-checking), and SHIT HAPPENS shrinks on both dimensions - all three need their content re-fit before this is real, not just planned.</text>
 
 <rect x="10" y="1057" width="16" height="10" class="player"/>
 <text x="32" y="1065" class="s" font-size="5">Per-player board - one of these per seat. Shown here for an example 4-player game, one per side; rotate to face however players actually sit.</text>

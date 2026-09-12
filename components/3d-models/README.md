@@ -19,7 +19,7 @@ parts, matching the habitus model in
 | Legs | Education & inclination | Socket into torso |
 | Torso (arms sculpted in) | Values | Socket for head; molded hand slot for item |
 | Head | Perception / Pressure Response | Swappable head, its own expression or pose per response |
-| Item | Skill/tool (capability) | Small prop that pegs into the torso's molded hand |
+| Item | Skill (capability) | Small prop that pegs into the torso's molded hand |
 
 Goal: you should be able to glance at another player's miniature and read their
 Base/Legs/Torso/Head/Item straight away - not have to check a card.

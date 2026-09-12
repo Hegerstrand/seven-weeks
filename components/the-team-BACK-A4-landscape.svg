@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Board 3 BACK - Week 3, The Team (A4 landscape)</title>
-<desc>Glues to the reverse of board-3-FRONT, true A4 landscape at 297mm (board 2 is narrowed
+<title>THE TEAM BACK - End of Week 1 (A4 landscape)</title>
+<desc>Glues to the reverse of the-team-FRONT, true A4 landscape at 297mm (SHIT HAPPENS is narrowed
 instead to keep the table's two rows matching - see _check-table-layout.svg). Flip about the
 long edge. Content below is still authored at 471 x 297 (root-2 scale-up) and wrapped in the
 same compensating scale as before, just repacked into a narrower horizontal span.</desc>
@@ -15,10 +15,10 @@ same compensating scale as before, just repacked into a narrower horizontal span
 <g transform="scale(0.70700636943)">
 <rect width="471" height="297" fill="#FFFFFF"/>
 
-<text x="24" y="26" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AT THE START OF WEEK 3</text>
+<text x="24" y="26" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AT THE END OF WEEK 1</text>
 <line x1="24" y1="32" x2="401.16" y2="32" class="h"/>
 
-<text x="24" y="66" class="m" font-size="26" letter-spacing="6">WEEK 3</text>
+<text x="24" y="66" class="m" font-size="26" letter-spacing="6">END OF WEEK 1</text>
 <text x="24" y="112" class="s" font-size="42">The team</text>
 <line x1="24" y1="126" x2="401.16" y2="126" class="h" stroke-width="1.2"/>
 
@@ -32,7 +32,7 @@ same compensating scale as before, just repacked into a narrower horizontal span
 <text x="24" y="206" class="m q" font-size="6" letter-spacing="2.5">WHAT OPENS</text>
 <text x="24" y="221" class="s" font-size="8"><tspan font-weight="bold">The Ledger:</tspan> Trust, Capability, Shared Practice,</text>
 <text x="24" y="232" class="s" font-size="8">Adaptability. One coin walks each row; at the</text>
-<text x="24" y="243" class="s" font-size="8">ring it turns over and becomes a <tspan font-weight="bold">Habit</tspan>, for good.</text>
+<text x="24" y="243" class="s" font-size="8">ring it turns over and becomes a <tspan font-weight="bold">HABIT</tspan>, for good.</text>
 <text x="24" y="260" class="s" font-size="8">Adapt is now your full Adaptability, not 1.</text>
 
 <line x1="237.1" y1="196" x2="237.1" y2="268" class="h" stroke-width=".4"/>

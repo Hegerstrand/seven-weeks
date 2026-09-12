@@ -17,7 +17,7 @@ is capability, and it's kept separate on purpose:
 | **Legs** | Education & inclination | Cultural capital, dispositions | What kinds of problems the character is naturally good at |
 | **Torso** | Values | Durable preferences | What feels *right* to do, and what causes tension |
 | **Head** | Perception & how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Withdraw) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with that Head can cancel it. |
-| **Item** | Skills & tools (held) | Capability, not habitus | What the character can actually *do* |
+| **Item** | Skills (held) | Capability, not habitus | What the character can actually *do* |
 
 Arms are sculpted into the Torso, not a separate swappable piece. A loose arm is fragile to
 print and to peg reliably. A small held Item does the same job - showing capability - without
@@ -32,7 +32,7 @@ skill itself - is where habitus turns into a game mechanic. For example, when an
 micromanaging boss in the room.
 
 ## Build options (character creation)
-- **Base - Opvækst (upbringing):** Bookish, Hands-On, Sheltered, Strict, Competitive - exactly
+- **Base - Opvækst (upbringing):** Bookish, Hands-On, Sheltered, By The Book, Competitive - exactly
   five, and every one names a condition of the home you grew up in (what was normal there, how
   it ran, what it valued), never a parent's job. That's deliberate: Bourdieu's incorporated
   history is about the practices and conditions a childhood installs, not an occupation label.

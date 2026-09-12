@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Board 3 FRONT - The Team: the Ledger (A4 landscape)</title>
-<desc>True A4 landscape (297 x 210) - board 2 is narrowed instead to keep the table's two rows
+<title>THE TEAM FRONT - the Ledger (A4 landscape)</title>
+<desc>True A4 landscape (297 x 210) - SHIT HAPPENS is narrowed instead to keep the table's two rows
 matching widths (see _check-table-layout.svg). One coin per row; walk it, turn it over at
 the ring. The Standing row is dashed because it stays covered until week 4. Glue to cardboard;
-board-3-BACK matches and goes on the reverse.</desc>
+the-team-BACK matches and goes on the reverse.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -18,13 +18,14 @@ board-3-BACK matches and goes on the reverse.</desc>
 
 <text x="12" y="16" class="m" font-size="7" letter-spacing="2.5">THE TEAM</text>
 <text x="78" y="16" class="s" font-size="4.4" font-style="italic">It was never only the project.</text>
-<text x="285.4" y="16" class="m q" font-size="3.8" text-anchor="end">BOARD 3 · FROM WEEK 2</text>
+<text x="285.4" y="16" class="m q" font-size="3.8" text-anchor="end">THE TEAM · FROM END OF WEEK 1</text>
 <line x1="11.5" y1="20" x2="285.4" y2="20" class="r"/>
 
 <rect x="8" y="22" width="281" height="10.5" rx="1.5" class="r"/>
-<text x="12" y="26" class="s" font-size="3.8" font-style="italic">One coin per row. Walk it as the track moves. At the ring, turn it over - that is a <tspan font-weight="bold">Habit</tspan>, and it is permanent.</text>
+<text x="12" y="26" class="s" font-size="3.8" font-style="italic">One coin per row. Walk it as the track moves. At the ring, turn it over - that is a <tspan font-weight="bold">HABIT</tspan>, and it is permanent.</text>
 <text x="12" y="30" class="s" font-size="3.8" font-style="italic">The coin can walk back down afterwards. It never turns back over. The left column is what the team <tspan font-style="normal">does</tspan>; the right is what it has <tspan font-style="normal">become</tspan>, and who named it.</text>
 
+<text x="103.7" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
 <text x="156.9" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
 <text x="220.7" y="36" class="m" font-size="3" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
 
@@ -37,11 +38,13 @@ board-3-BACK matches and goes on the reverse.</desc>
     <circle cx="86" cy="54" r="8"/><circle cx="103.7" cy="54" r="8"/><circle cx="121.5" cy="54" r="8"/>
     <circle cx="139.2" cy="54" r="8"/><circle cx="156.9" cy="54" r="8"/><circle cx="174.7" cy="54" r="8"/>
   </g>
+  <g class="m q" font-size="4.2" text-anchor="middle">
+    <text x="86" y="55.4">0</text><text x="103.7" y="55.4">1</text><text x="121.5" y="55.4">2</text>
+    <text x="139.2" y="55.4">3</text><text x="156.9" y="55.4">4</text><text x="174.7" y="55.4">5</text>
+  </g>
   <circle cx="156.9" cy="54" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M78.9,64 L78.9,67 L110.8,67 L110.8,64" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="71" class="m" font-size="2.8" text-anchor="middle">LEARN DOES NOTHING</text>
-  <path d="M149.8,64 L149.8,67 L181.7,67 L181.7,64" class="w" stroke-width=".5"/>
-  <text x="165.8" y="71" class="m" font-size="2.6" text-anchor="middle">CANCEL 1 EVENT A WEEK</text>
+  <text x="94.9" y="71" class="m" font-size="2.8" text-anchor="middle">TEACH DOES NOTHING</text>
   <text x="220.7" y="52" class="s" font-size="5">Psychological Safety</text>
   <text x="220.7" y="58.5" class="m q" font-size="2.6">EDMONDSON 1999</text>
 </g>
@@ -56,11 +59,13 @@ board-3-BACK matches and goes on the reverse.</desc>
     <circle cx="86" cy="84" r="8"/><circle cx="103.7" cy="84" r="8"/><circle cx="121.5" cy="84" r="8"/>
     <circle cx="139.2" cy="84" r="8"/><circle cx="156.9" cy="84" r="8"/><circle cx="174.7" cy="84" r="8"/>
   </g>
+  <g class="m q" font-size="4.2" text-anchor="middle">
+    <text x="86" y="85.4">0</text><text x="103.7" y="85.4">1</text><text x="121.5" y="85.4">2</text>
+    <text x="139.2" y="85.4">3</text><text x="156.9" y="85.4">4</text><text x="174.7" y="85.4">5</text>
+  </g>
   <circle cx="156.9" cy="84" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M78.9,94 L78.9,97 L110.8,97 L110.8,94" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="101" class="m" font-size="2.8" text-anchor="middle">ALL WORK: 1 LESS</text>
-  <path d="M149.8,94 L149.8,97 L181.7,97 L181.7,94" class="w" stroke-width=".5"/>
-  <text x="165.8" y="101" class="m" font-size="2.8" text-anchor="middle">ALL WORK: +1</text>
+  <text x="94.9" y="101" class="m" font-size="2.8" text-anchor="middle">FIRST WORK DOES NOTHING</text>
   <text x="220.7" y="82" class="s" font-size="5">Who Knows What</text>
   <text x="220.7" y="88.5" class="m q" font-size="2.6">WEGNER 1986 · TRANSACTIVE MEMORY</text>
 </g>
@@ -75,11 +80,13 @@ board-3-BACK matches and goes on the reverse.</desc>
     <circle cx="86" cy="114" r="8"/><circle cx="103.7" cy="114" r="8"/><circle cx="121.5" cy="114" r="8"/>
     <circle cx="139.2" cy="114" r="8"/><circle cx="156.9" cy="114" r="8"/><circle cx="174.7" cy="114" r="8"/>
   </g>
+  <g class="m q" font-size="4.2" text-anchor="middle">
+    <text x="86" y="115.4">0</text><text x="103.7" y="115.4">1</text><text x="121.5" y="115.4">2</text>
+    <text x="139.2" y="115.4">3</text><text x="156.9" y="115.4">4</text><text x="174.7" y="115.4">5</text>
+  </g>
   <circle cx="156.9" cy="114" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M78.9,124 L78.9,127 L110.8,127 L110.8,124" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="131" class="m" font-size="2.6" text-anchor="middle">2ND+ WORK: 1 LESS EACH</text>
-  <path d="M149.8,124 L149.8,127 L181.7,127 L181.7,124" class="w" stroke-width=".5"/>
-  <text x="165.8" y="131" class="m" font-size="2.6" text-anchor="middle">2ND+ WORK: +1 EACH</text>
+  <text x="94.9" y="131" class="m" font-size="2.6" text-anchor="middle">PLAN DOES NOTHING</text>
   <text x="220.7" y="112" class="s" font-size="5">Shared Repertoire</text>
   <text x="220.7" y="118.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
 </g>
@@ -94,6 +101,10 @@ board-3-BACK matches and goes on the reverse.</desc>
     <circle cx="86" cy="144" r="8"/><circle cx="103.7" cy="144" r="8"/><circle cx="121.5" cy="144" r="8"/>
     <circle cx="139.2" cy="144" r="8"/><circle cx="156.9" cy="144" r="8"/><circle cx="174.7" cy="144" r="8"/>
   </g>
+  <g class="m q" font-size="4.2" text-anchor="middle">
+    <text x="86" y="145.4">0</text><text x="103.7" y="145.4">1</text><text x="121.5" y="145.4">2</text>
+    <text x="139.2" y="145.4">3</text><text x="156.9" y="145.4">4</text><text x="174.7" y="145.4">5</text>
+  </g>
   <circle cx="156.9" cy="144" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M78.9,154 L78.9,157 L181.7,157 L181.7,154" class="w" stroke-width=".5"/>
   <text x="130.3" y="161" class="m" font-size="2.6" text-anchor="middle">SPEND THIS MUCH ADAPTABILITY EACH WEEK · WHAT IS LEFT IS LOST</text>
@@ -106,7 +117,7 @@ board-3-BACK matches and goes on the reverse.</desc>
   <rect x="8" y="166" width="281" height="34" rx="2" fill="#F5CE89" class="r" stroke-dasharray="4 2.5"/>
   <text x="12" y="177" class="s" font-size="6">Standing</text>
   <text x="12" y="184" class="s" font-size="3.4" font-style="italic">the fifth row, on its own strip</text>
-  <text x="148.5" y="180" class="m" font-size="4.4" text-anchor="middle" letter-spacing="1.2">BOARD 3b GOES HERE, FACE DOWN</text>
+  <text x="148.5" y="180" class="m" font-size="4.4" text-anchor="middle" letter-spacing="1.2">STANDING GOES HERE, FACE DOWN</text>
   <text x="148.5" y="187" class="m q" font-size="3.2" text-anchor="middle">TURN IT OVER IN PLACE AT THE START OF WEEK 4</text>
 </g>
 

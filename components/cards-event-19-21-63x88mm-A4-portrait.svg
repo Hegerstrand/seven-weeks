@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Sheet 8 - Event cards 19-23, 63 x 88 mm (A4)</title>
+<desc>A third, smaller Event sheet - five cards added after the deck, extending it from 18 to
+23. Each names an organisational-behaviour pattern without ever printing the name on the card
+(see ../docs/theoretical-sources.md): THE BIKESHED (Parkinson's law of triviality), LEADS FROM
+BEHIND (dogfooding's failure mode - a decision-maker exempt from their own decision), and THE
+DASHBOARD (Goodhart's Law - a proxy metric replacing the real one). SHAKY GROUND and ALWAYS
+REACTING close a gap: every other Team State track had a card that could move its Ledger coin
+down, but Capability and Adaptability didn't have one each until these two. Same card size and
+deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is intentionally blank.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .c { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .h { stroke:#2A2620; stroke-width:.4; fill:none; }
+  .w { fill:none; stroke:#2A2620; stroke-width:.7; }
+  .q { fill:#000000; }
+  .lb { font-family:"IBM Plex Mono","Courier New",monospace; font-size:2.9px; fill:#000000; }
+  .vl { font-family:"IBM Plex Mono","Courier New",monospace; font-size:2.9px; fill:#000000; }
+  .ic { fill:#E8D4B8; stroke:#2A2620; stroke-width:.35; }
+  .pip { fill:#2A2620; stroke:none; }
+  .trust { fill:#000000; }
+  .capab { fill:#000000; }
+  .shpra { fill:#000000; }
+  .adapt { fill:#000000; }
+  /* header tint = the Ledger row that answers this category */
+  .cat-ppl  { fill:#D3CEDF; }
+  .cat-env  { fill:#C7CFB5; }
+  .cat-mgmt { fill:#F7D7A1; }
+  .cat-cust { fill:#B5C7CF; }
+</style>
+
+<defs>
+  <g id="i-base"><rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx=".3" class="ic"/></g>
+  <g id="i-legs"><polygon points="0,-2.5 2.2,1.4 -2.2,1.4" class="ic"/></g>
+  <g id="i-head"><polygon points="2.3,0 1.15,2 -1.15,2 -2.3,0 -1.15,-2 1.15,-2" class="ic"/></g>
+  <g id="i-item"><polygon points="0,-2.6 2.6,0 0,2.6 -2.6,0" class="ic"/></g>
+  <g id="i-torso"><polygon points="0,-2 1.9,-.62 1.18,1.62 -1.18,1.62 -1.9,-.62" class="ic"/></g>
+  <g id="q1"><circle cx="0" cy="0" r=".45" class="pip"/></g>
+  <g id="q2"><circle cx="-.95" cy="0" r=".45" class="pip"/><circle cx=".95" cy="0" r=".45" class="pip"/></g>
+  <g id="q3"><circle cx="0" cy="-.95" r=".45" class="pip"/><circle cx="-.95" cy=".8" r=".45" class="pip"/><circle cx=".95" cy=".8" r=".45" class="pip"/></g>
+  <g id="q4"><circle cx="-.7" cy="-.7" r=".4" class="pip"/><circle cx=".7" cy="-.7" r=".4" class="pip"/><circle cx="-.7" cy=".7" r=".4" class="pip"/><circle cx=".7" cy=".7" r=".4" class="pip"/></g>
+  <g id="q5"><circle cx="-.85" cy="-.85" r=".4" class="pip"/><circle cx=".85" cy="-.85" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.85" cy=".85" r=".4" class="pip"/><circle cx=".85" cy=".85" r=".4" class="pip"/></g>
+
+  <g id="bikeshed" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE BIKESHED</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">The easiest feature left</text>
+    <text x="5" y="33" class="s" font-size="4.4">gets <tspan font-weight="bold">+1 Work</tspan>. The hardest</text>
+    <text x="5" y="38" class="s" font-size="4.4">gets nothing this week.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Somebody had a strong opinion about the paint.</text>
+  </g>
+
+  <g id="leadsbehind" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">LEADS FROM</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">BEHIND</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <rect x="4" y="23" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="28" class="s" font-size="4.4">Everyone <tspan font-weight="bold">loses 1</tspan></text>
+    <text x="5" y="33" class="s" font-size="4.4"><tspan font-weight="bold">Motivation</tspan>, except whoever</text>
+    <text x="5" y="38" class="s" font-size="4.4">has the highest Capital.</text>
+    <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="43" class="s" font-size="4.4">They wrote it. Exempt.</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Everyone felt it. Almost everyone.</text>
+  </g>
+
+  <g id="dashboard" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE DASHBOARD</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">Work only counts this week</text>
+    <text x="5" y="33" class="s" font-size="4.4">if it's on a Low feature.</text>
+    <text x="5" y="38" class="s" font-size="4.4">Medium/High Work happens</text>
+    <text x="5" y="43" class="s" font-size="4.4">but changes nothing.</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">The number went up. Nothing else did.</text>
+  </g>
+
+  <g id="confidence" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">SHAKY GROUND</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">A demo crashed in front</text>
+    <text x="5" y="33" class="s" font-size="4.4">of the customer. The team</text>
+    <text x="5" y="38" class="s" font-size="4.4"><tspan font-weight="bold">loses 1 Capability</tspan>.</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="43.64" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">Confidence is earned in public - and lost there too.</text>
+  </g>
+
+  <g id="reacting" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">ALWAYS REACTING</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.4">The team stops planning</text>
+    <text x="5" y="33" class="s" font-size="4.4">ahead and only reacts.</text>
+    <text x="5" y="38" class="s" font-size="4.4">Deadlines slip sideways.</text>
+    <text x="5" y="43" class="s" font-size="4.4">Team <tspan font-weight="bold">loses 1 Adaptability</tspan>.</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
+    <text x="5" y="84" class="s" font-size="3" font-style="italic">There was a plan. Nobody remembers it now.</text>
+  </g>
+</defs>
+
+<rect width="210" height="297" fill="#FFFFFF"/>
+<text x="10" y="8" class="m" font-size="3.6" letter-spacing="1.2">SHEET 8 · EVENT CARDS 19-23 · PRINT AT 100%</text>
+
+<use href="#bikeshed" x="10" y="12"/>
+<use href="#leadsbehind" x="76" y="12"/>
+<use href="#dashboard" x="142" y="12"/>
+<use href="#confidence" x="10" y="104"/>
+<use href="#reacting" x="76" y="104"/>
+</svg>

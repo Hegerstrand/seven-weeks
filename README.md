@@ -6,8 +6,9 @@
 - `rules/` - the rulebook as it grows (draft → playtested → polished), plus the cut-down
   `rulebook-lite.md` used for the first playtest.
 - `components/` - physical component specs: cards, boards, tokens, box.
-- `components/specs/` - one Markdown spec per SVG (grouping, colours, text, illustration) -
-  edit these to drive SVG changes; see `board-game-component-specs` skill.
+- `components/specs/` - three consolidated Markdown specs (`cards.md`, `boards.md`,
+  `leaflet-how-to-play.md`) covering every print sheet (grouping, colours, text,
+  illustration) - edit these to drive SVG changes; see `board-game-component-specs` skill.
 - `components/3d-models/` - 3D-printable files (STL/3MF/STEP) and print notes (material, supports, orientation).
 - `extensions/` - optional add-on modules, one subfolder per pack, cut out of the core game
   after a playtest finding of "too complicated" (see `board-game-extension-packs` skill).

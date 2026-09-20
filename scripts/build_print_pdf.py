@@ -50,7 +50,8 @@ SHEETS = [
     "cards-event-10-18-63x88mm-A4-portrait.svg",
     "cards-event-19-21-63x88mm-A4-portrait.svg",
     "cards-project-63x88mm-A4-portrait.svg",
-    "cards-habitus-parts-44x36mm-A4-portrait.svg",
+    "cards-habitus-parts-01-15-44x36mm-A4-landscape.svg",
+    "cards-habitus-parts-16-25-44x36mm-A4-landscape.svg",
     "leaflet-how-to-play.md",
 ]
 

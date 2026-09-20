@@ -202,7 +202,7 @@ People carry on doing the thing that used to work.
 | **Illusio** | ✅ Motivation, incl. quitting at 0 - now named |
 | **Doxa** | ✅ Events cannot be refused - now named |
 | **Symbolic violence / misrecognition** | ✅ The relative Capital gate - now named |
-| **Hysteresis** | ❌ **The one real gap.** Proposal above. |
+| **Hysteresis** | ✅ The Withdraw Head card - strength stops working from week 4, tendency doesn't |
 
 
 This turns the trigger pattern into three parts, not two: **when [Event X] happens, if a

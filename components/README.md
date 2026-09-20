@@ -98,8 +98,8 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18 |
 | `cards-event-19-21-63x88mm-A4-portrait` | A4, one row used | Week 2 | Event cards 19-21 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD). Shuffle all three sheets into one 21-card deck |
 | `cards-project-63x88mm-A4-portrait` | A4 | Setup | Six projects. Choose one; it drops into the seat on board 1 |
-| `cards-habitus-parts-44x36mm-A4-portrait` | Custom 272 x 297 mm (filename stale - no longer A4, widened so the 5-per-row cards can be true 44 x 36 mm, matching the person board's seats) | Setup | 25 part-cards, dealt at random |
-| `cards-need-hero-44x36mm-A4-portrait` | Custom 272 x 140 mm (filename stale - not A4) | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Head, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
+| `cards-habitus-parts-01-15-44x36mm-A4-landscape` + `cards-habitus-parts-16-25-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm), split across two sheets so the 5-per-row cards print at true 44 x 36 mm, matching the person board's seats exactly - the board is master | Setup | 25 part-cards (15 + 10), dealt at random |
+| `cards-need-hero-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm) - the board is master, same fix as the habitus part-cards | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Head, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
 | `specs/leaflet-how-to-play.md` | A4 | - | Setup, Week 1, the weekly pulse from week 2 on, and how it ends - plain printable Markdown, not an SVG. Paginated into `game-print-all.pdf` by `scripts/build_print_pdf.py`, or print the Markdown directly |
 
 **Everything that goes in a weekday slot is 63 × 88 mm** - Activity and Event cards alike - so

@@ -195,7 +195,7 @@ changes a rule, and log the change in [../playtests/README.md](../playtests/READ
 > not assumed - log it in [../playtests/README.md](../playtests/README.md).
 
 > **v0.4 - Base pays for itself.** Bookish, Hands-On and Competitive (§5.2, and the printed
-> [habitus part-cards](../components/cards-habitus-parts-44x36mm-A4-portrait.svg)) were flat
+> [habitus part-cards](../components/cards-habitus-parts-01-15-44x36mm-A4-landscape.svg)) were flat
 > "+1 Work on two features" bonuses with no cost - a naked exception to the game's own design
 > rule (never a flat bonus; see [habitus-model.md](../docs/habitus-model.md)) and, in practice,
 > pointless: with no restriction on who works which feature, the team would simply always route
@@ -300,7 +300,8 @@ visible or not. Week 2 doesn't *start* Trust; it starts you paying attention to 
 
 ### 3.1 Build your habitus - this is how the game starts
 Each player is **dealt five parts at random**, one from each row of
-[the habitus deck](../components/cards-habitus-parts-44x36mm-A4-portrait.svg) - Base, Legs,
+[the habitus deck](../components/cards-habitus-parts-01-15-44x36mm-A4-landscape.svg) (sheet 1 of 2;
+Head and Item are on [sheet 2](../components/cards-habitus-parts-16-25-44x36mm-A4-landscape.svg)) - Base, Legs,
 Torso, Head, Item - and physically assembles them into their figure, bottom to top, before a
 single project rule is explained.
 
@@ -321,7 +322,7 @@ about ninety seconds.
 5. **Item** - the skill you hold, into the Torso's hand.
 
 Slot the five part-cards into your player board as you go. Nothing is written down. Then take
-the matching [NEED and HERO tiles](../components/cards-need-hero-44x36mm-A4-portrait.svg) -
+the matching [NEED and HERO tiles](../components/cards-need-hero-44x36mm-A4-landscape.svg) -
 the one that names your Torso value, and the one that names your Head - and slot those too.
 (Your **Need** is your **Torso**, read a second way - it just isn't *asked about* until week 3,
 with the Specimen panel - §3.0. Weeks 1-2 are about who you are and what you know; what you
@@ -605,8 +606,12 @@ into once the team recognises them.
 | **Cross-Trained** - you just covered your **3rd row** on the Zone board (§8), once per character, whenever it first happens. | Breadth → standing. Not the team's Capability, *yours* - the moment you stop being fixed to one fragment of the work. |
 | You paid the Motivation for **Take One For The Team** (§6.1) this week. | Personal sacrifice → standing. You spent your own Motivation so the team's Trust could rise; the team saw it cost you something. |
 
-All six require the team to **witness** it. Private competence earns nothing - recognition is
-what makes standing exist at all.
+All six require the team to **witness** it - no exceptions. Private competence earns nothing -
+recognition is what makes standing exist at all. **Recognition (the Torso) leans into this
+instead of opting out of it**: whenever one of their own six triggers fires, witnessed as
+normal, they **name the teammate who witnessed it** - that teammate gains **+1 Motivation**.
+Being seen is relational: crediting the person who saw it back is the one thing none of the
+other five triggers ask for, and Recognition is the one habitus built to do it anyway.
 
 **Losing Capital.** No weekly cap:
 - A habitus **tendency** of yours fired publicly against the team's wishes: **−1**.

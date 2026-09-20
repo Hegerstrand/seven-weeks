@@ -1,11 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="272mm" height="140mm" viewBox="0 0 272 140">
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
 <title>NEED and HERO tiles, true 44 x 36 mm - print &amp; cut</title>
-<desc>Custom page, same card size and column spacing as cards-habitus-parts, so all physical
-tiles pack the same. NEED (5 tiles, one per Torso value) slots into the person board's NEED
-seat; HERO (5 tiles, one per Head/Pressure-Response option) slots into the HERO seat. The
-HERO tiles use the same shape (hexagon) and pip-count-per-option as the HOW TO ADAPT box on
-Event cards (cards-event-01-09/10-18), so a tile and a matching Event card show the same code:
-1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 = Withdraw, 5 = Challenge.</desc>
+<desc>True A4 landscape page (297x210mm), so it prints at 100% on real paper with no forced
+"fit to page" scaling - same fix as cards-habitus-parts, and same reason: the old 272x140mm
+custom page fit neither A4 orientation, so print drivers auto-scaled it and the tiles no
+longer matched the person board's true 44x36mm seats. Same card size and column spacing as
+cards-habitus-parts, so all physical tiles pack the same. NEED (5 tiles, one per Torso value)
+slots into the person board's NEED seat; HERO (5 tiles, one per Head/Pressure-Response option)
+slots into the HERO seat. The HERO tiles use the same shape (hexagon) and pip-count-per-option
+as the HOW TO ADAPT box on Event cards (cards-event-01-09/10-18), so a tile and a matching
+Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 = Withdraw,
+5 = Challenge.</desc>
 
 <style>
   .serif { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -30,7 +34,7 @@ Event cards (cards-event-01-09/10-18), so a tile and a matching Event card show 
   <g id="p5"><circle cx="-1.1" cy="-1.1" r=".5" class="pip"/><circle cx="1.1" cy="-1.1" r=".5" class="pip"/><circle cx="0" cy="0" r=".5" class="pip"/><circle cx="-1.1" cy="1.1" r=".5" class="pip"/><circle cx="1.1" cy="1.1" r=".5" class="pip"/></g>
 </defs>
 
-<rect width="272" height="140" fill="#FFFFFF"/>
+<rect width="297" height="210" fill="#FFFFFF"/>
 
 <text x="12" y="16" class="mono" font-size="6" letter-spacing="2">2 · NEED &amp; HERO</text>
 <text x="12" y="23" class="serif" font-size="3.6" font-style="italic">NEED is your Torso, read again from week 2. HERO is your Head - once per game, cancel the Event it names.</text>

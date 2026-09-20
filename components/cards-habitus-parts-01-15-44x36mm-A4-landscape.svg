@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="272mm" height="297mm" viewBox="0 0 272 297">
-<title>Habitus part-cards, true 44 x 36 mm - print &amp; cut</title>
-<desc>Custom page, sized to hold true 44 x 36 mm cards (5 per row) - the same size as the
-person board's habitus seats. Twenty-five part-cards, five per row. Cut along the gaps and
-slot them into the person board's five seats. The figure you build is the character sheet -
-nothing is written down. Every card carries the habitus tint #E8D4B8, which marks habitus
-everywhere it appears.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
+<title>Habitus part-cards 1 of 2 (Base, Legs, Torso) - true 44 x 36 mm - print &amp; cut</title>
+<desc>True A4 landscape page (297x210mm), so it prints at 100% on real paper with no forced
+"fit to page" scaling - unlike the old single 272x297mm custom-page sheet, which was wider
+than any standard paper size and got shrunk by print drivers, so the cards no longer matched
+the person board's true 44x36mm habitus seats. The board (297x210mm, already real A4
+landscape) was always correct - see board-person-170x141mm-A4-portrait.svg. Fifteen
+part-cards (Base, Legs, Torso rows), five per row. Cut along the gaps and slot them into the
+person board's seats. Sheet 2 of 2 (cards-habitus-parts-16-25-44x36mm-A4-landscape.svg) holds
+Head and Item. The figure you build is the character sheet - nothing is written down. Every
+card carries the habitus tint #E8D4B8, which marks habitus everywhere it appears.</desc>
 
 <style>
   .serif { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -23,8 +27,6 @@ everywhere it appears.</desc>
   <g id="sh-base"><rect x="-3" y="-3" width="6" height="6" rx=".5" class="ic"/></g>
   <g id="sh-legs"><polygon points="0,-4.32 3.84,2.52 -3.84,2.52" class="ic"/></g>
   <g id="sh-torso"><polygon points="0,-3.3 3.14,-1.02 1.94,2.67 -1.94,2.67 -3.14,-1.02" class="ic"/></g>
-  <g id="sh-head"><polygon points="3.3,0 1.65,2.86 -1.65,2.86 -3.3,0 -1.65,-2.86 1.65,-2.86" class="ic"/></g>
-  <g id="sh-item"><polygon points="0,-3.9 3.9,0 0,3.9 -3.9,0" class="ic"/></g>
 
   <g id="p1"><circle cx="0" cy="0" r=".5" class="pip"/></g>
   <g id="p2"><circle cx="-1.1" cy="0" r=".5" class="pip"/><circle cx="1.1" cy="0" r=".5" class="pip"/></g>
@@ -33,9 +35,9 @@ everywhere it appears.</desc>
   <g id="p5"><circle cx="-1.1" cy="-1.1" r=".5" class="pip"/><circle cx="1.1" cy="-1.1" r=".5" class="pip"/><circle cx="0" cy="0" r=".5" class="pip"/><circle cx="-1.1" cy="1.1" r=".5" class="pip"/><circle cx="1.1" cy="1.1" r=".5" class="pip"/></g>
 </defs>
 
-<rect width="272" height="297" fill="#FFFFFF"/>
+<rect width="297" height="210" fill="#FFFFFF"/>
 
-<text x="12" y="16" class="mono" font-size="6" letter-spacing="2">1 · HABITUS</text>
+<text x="12" y="16" class="mono" font-size="6" letter-spacing="2">1 · HABITUS (1 of 2)</text>
 <text x="12" y="23" class="serif" font-size="3.6" font-style="italic">Deal one card from each row, at random, and build the figure bottom to top. Nobody picks their upbringing.</text>
 <text x="258" y="16" class="mono" font-size="3" text-anchor="end">CUT ALONG THE GAPS · DEAL, DON'T CHOOSE</text>
 <line x1="12" y1="27" x2="258" y2="27" stroke="#2A2620" stroke-width=".4"/>
@@ -201,134 +203,13 @@ everywhere it appears.</desc>
   <rect x="160" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="163" y="147" class="serif" font-size="3.5">Recognition</text>
   <line x1="163" y1="150" x2="201" y2="150" class="hair"/>
-  <text x="163" y="156" class="mono" font-size="2.6">NO EVENT CATEGORY</text>
-  <text x="163" y="167" class="mono" font-size="2.6">IMMUNE TO NOTHING</text>
+  <text x="163" y="156" class="mono" font-size="2.6">CAPITAL GAINS:</text>
+  <text x="163" y="160" class="mono" font-size="2.6">NAME A TEAMMATE</text>
+  <rect x="162.6" y="165.3" width="21.1" height="2.6" rx=".3" fill="#D3B1B1"/>
+  <text x="163" y="167" class="mono" font-size="2.6">+1 MOTIVATION TO THEM</text>
   </g>
 </g>
 
-<!-- ═══ HEAD ═══ -->
-<text x="12" y="186" class="mono rl">HEAD · PRESSURE RESPONSE → STRENGTH, COST</text>
-<text x="258" y="186" class="serif" font-size="2.8" text-anchor="end" font-style="italic">every part is a Hero trigger somewhere</text>
-<g>
-  <rect x="14" y="190" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="17" y="197" class="serif" font-size="3.5">Take Charge</text>
-  <line x1="17" y1="200" x2="55" y2="200" class="hair"/>
-  <rect x="16.6" y="202.3" width="8.5" height="2.6" rx=".3" fill="#D3CEDF"/>
-  <text x="17" y="205" class="mono" font-size="2.6">TRUST ≥ 4:</text>
-  <rect x="16.6" y="207.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="17" y="209" class="mono" font-size="2.6">+1 MOTIVATION</text>
-  <rect x="16.6" y="213.3" width="8.5" height="2.6" rx=".3" fill="#D3CEDF"/>
-  <text x="17" y="216" class="mono" font-size="2.6">TRUST ≤ 1:</text>
-  <rect x="16.6" y="218.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="17" y="220" class="mono" font-size="2.6">-1 MOTIVATION</text>
-
-  <g transform="translate(13.5,0)">
-  <rect x="50.5" y="190" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="53.5" y="197" class="serif" font-size="3.5">Analyze</text>
-  <line x1="53.5" y1="200" x2="91.5" y2="200" class="hair"/>
-  <rect x="53.1" y="202.3" width="16" height="2.6" rx=".3" fill="#C7CFB5"/>
-  <text x="53.5" y="205" class="mono" font-size="2.6">CAPABILITY ≥ 4:</text>
-  <rect x="53.1" y="207.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="53.5" y="209" class="mono" font-size="2.6">+1 MOTIVATION</text>
-  <rect x="53.1" y="213.3" width="16" height="2.6" rx=".3" fill="#C7CFB5"/>
-  <text x="53.5" y="216" class="mono" font-size="2.6">CAPABILITY ≤ 1:</text>
-  <rect x="53.1" y="218.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="53.5" y="220" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  </g>
-
-  <g transform="translate(27,0)">
-  <rect x="87" y="190" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="90" y="197" class="serif" font-size="3.5">Support</text>
-  <line x1="90" y1="200" x2="128" y2="200" class="hair"/>
-  <rect x="89.6" y="202.3" width="23.5" height="2.6" rx=".3" fill="#F7D7A1"/>
-  <text x="90" y="205" class="mono" font-size="2.6">SHARED PRACTICE ≥ 4:</text>
-  <rect x="89.6" y="207.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="90" y="209" class="mono" font-size="2.6">+1 MOTIVATION</text>
-  <rect x="89.6" y="213.3" width="23.5" height="2.6" rx=".3" fill="#F7D7A1"/>
-  <text x="90" y="216" class="mono" font-size="2.6">SHARED PRACTICE ≤ 1:</text>
-  <rect x="89.6" y="218.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="90" y="220" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  </g>
-
-  <g transform="translate(40.5,0)">
-  <rect x="123.5" y="190" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="126.5" y="197" class="serif" font-size="3.5">Challenge</text>
-  <line x1="126.5" y1="200" x2="164.5" y2="200" class="hair"/>
-  <rect x="126.1" y="202.3" width="19" height="2.6" rx=".3" fill="#B5C7CF"/>
-  <text x="126.5" y="205" class="mono" font-size="2.6">ADAPTABILITY ≥ 4:</text>
-  <rect x="126.1" y="207.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="126.5" y="209" class="mono" font-size="2.6">+1 MOTIVATION</text>
-  <rect x="126.1" y="213.3" width="19" height="2.6" rx=".3" fill="#B5C7CF"/>
-  <text x="126.5" y="216" class="mono" font-size="2.6">ADAPTABILITY ≤ 1:</text>
-  <rect x="126.1" y="218.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="126.5" y="220" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  </g>
-
-  <g transform="translate(54,0)">
-  <rect x="160" y="190" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="163" y="197" class="serif" font-size="3.5">Withdraw</text>
-  <line x1="163" y1="200" x2="201" y2="200" class="hair"/>
-  </g>
-</g>
-
-<!-- ═══ ITEM ═══ -->
-<text x="12" y="236" class="mono rl">ITEM · THE SKILL YOU HOLD → TEAM'S OVERTIME SLOT</text>
-<text x="258" y="236" class="serif" font-size="2.8" text-anchor="end" font-style="italic">also the column you begin in on the Zone</text>
-<g>
-  <rect x="14" y="240" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="17" y="247" class="serif" font-size="3.5">Laptop</text>
-  <line x1="17" y1="250" x2="55" y2="250" class="hair"/>
-  <text x="17" y="256" class="serif" font-size="2.6">Your column on the Zone</text>
-  <text x="17" y="260" class="serif" font-size="2.6">is built with this skill.</text>
-  <text x="17" y="266" class="serif" font-size="2.6">Teach someone to hold it,</text>
-  <text x="17" y="270" class="serif" font-size="2.6">and the column grows.</text>
-
-  <g transform="translate(13.5,0)">
-  <rect x="50.5" y="240" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="53.5" y="247" class="serif" font-size="3.5">Coffee cup</text>
-  <line x1="53.5" y1="250" x2="91.5" y2="250" class="hair"/>
-  <text x="53.5" y="256" class="serif" font-size="2.6">Your column on the Zone</text>
-  <text x="53.5" y="260" class="serif" font-size="2.6">runs on this skill.</text>
-  <text x="53.5" y="266" class="serif" font-size="2.6">Teach someone to hold it,</text>
-  <text x="53.5" y="270" class="serif" font-size="2.6">and the column grows.</text>
-  </g>
-
-  <g transform="translate(27,0)">
-  <rect x="87" y="240" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="90" y="247" class="serif" font-size="3.5">Clipboard</text>
-  <line x1="90" y1="250" x2="128" y2="250" class="hair"/>
-  <text x="90" y="256" class="serif" font-size="2.6">Your column on the Zone</text>
-  <text x="90" y="260" class="serif" font-size="2.6">is checked with this skill.</text>
-  <text x="90" y="266" class="serif" font-size="2.6">Teach someone to hold it,</text>
-  <text x="90" y="270" class="serif" font-size="2.6">and the column grows.</text>
-  </g>
-
-  <g transform="translate(40.5,0)">
-  <rect x="123.5" y="240" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="126.5" y="247" class="serif" font-size="3.5">Wrench</text>
-  <line x1="126.5" y1="250" x2="164.5" y2="250" class="hair"/>
-  <text x="126.5" y="256" class="serif" font-size="2.6">Your column on the Zone</text>
-  <text x="126.5" y="260" class="serif" font-size="2.6">is fixed with this skill.</text>
-  <text x="126.5" y="266" class="serif" font-size="2.6">Teach someone to hold it,</text>
-  <text x="126.5" y="270" class="serif" font-size="2.6">and the column grows.</text>
-  </g>
-
-  <g transform="translate(54,0)">
-  <rect x="160" y="240" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="163" y="247" class="serif" font-size="3.5">Calendar</text>
-  <line x1="163" y1="250" x2="201" y2="250" class="hair"/>
-  <text x="163" y="256" class="serif" font-size="2.6">Your column on the Zone</text>
-  <text x="163" y="260" class="serif" font-size="2.6">is scheduled with this skill.</text>
-  <text x="163" y="266" class="serif" font-size="2.6">Teach someone to hold it,</text>
-  <text x="163" y="270" class="serif" font-size="2.6">and the column grows.</text>
-  </g>
-</g>
-
-<line x1="12" y1="282" x2="258" y2="282" class="hair"/>
-<text x="12" y="288" class="serif" font-size="3.2" font-style="italic">Same skill, different person: two characters can both hold the clipboard. One defers to the boss without thinking; one doesn't.</text>
-<text x="12" y="291" class="serif" font-size="3.2" font-style="italic">That difference is the whole point - it is what the Torso and Head are for.</text>
-
-<!-- ═══ ICONS: one per part-card, top-right. Shape names the row, pips name the element. ═══ -->
 <g id="icons">
   <g transform="translate(53,46)"><use href="#sh-base"/><use href="#p1"/></g>
   <g transform="translate(103,46)"><use href="#sh-base"/><use href="#p2"/></g>
@@ -347,17 +228,5 @@ everywhere it appears.</desc>
   <g transform="translate(153,146)"><use href="#sh-torso"/><use href="#p3"/></g>
   <g transform="translate(203,146)"><use href="#sh-torso"/><use href="#p4"/></g>
   <g transform="translate(253,146)"><use href="#sh-torso"/><use href="#p5"/></g>
-
-  <g transform="translate(53,196)"><use href="#sh-head"/><use href="#p1"/></g>
-  <g transform="translate(103,196)"><use href="#sh-head"/><use href="#p2"/></g>
-  <g transform="translate(153,196)"><use href="#sh-head"/><use href="#p3"/></g>
-  <g transform="translate(203,196)"><use href="#sh-head"/><use href="#p4"/></g>
-  <g transform="translate(253,196)"><use href="#sh-head"/><use href="#p5"/></g>
-
-  <g transform="translate(53,246)"><use href="#sh-item"/><use href="#p1"/></g>
-  <g transform="translate(103,246)"><use href="#sh-item"/><use href="#p2"/></g>
-  <g transform="translate(153,246)"><use href="#sh-item"/><use href="#p3"/></g>
-  <g transform="translate(203,246)"><use href="#sh-item"/><use href="#p4"/></g>
-  <g transform="translate(253,246)"><use href="#sh-item"/><use href="#p5"/></g>
 </g>
 </svg>

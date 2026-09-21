@@ -266,7 +266,7 @@ it was meant to only observe, from two different centuries and two different dis
   once players learn precisely where it sits, and the rulebook is right to flag it as unproven
   rather than load-bearing.
 - **THE AUDIT (§11)** is a small, self-contained Goodhart's Law event: it demands proof of a
-  *proxy activity* - one card played as a Record Meeting - rather than measuring whether
+  *proxy activity* - one card played as a **Workshop** - rather than measuring whether
   coordination actually improved, and its own footer already says the quiet part out loud:
   "No one person can be the answer." Measuring *that a meeting happened* is not the same as
   measuring *that anything got better*, and the card's whole bite is that the team can satisfy

@@ -98,7 +98,8 @@ matter** - the week happened at once.
 
 **5 · Close the week** - **Bank** completed features (lift any lock, pay Capital) → **walk the
 Ledger** coins, at most one step each, and flip any that reached its ring → **Motivation as one
-net number**: −1 for the grind - every week, +1 if the Need was met.
+net number**: −1 for the grind - every week, ±1 per matching Event category per Torso (check
+who was hit and who was immune), +1 if the Need was met.
 
 > bank first - it pays the capital the ledger needs.
 > apply motivation as one number, then check for zero.
@@ -106,6 +107,8 @@ net number**: −1 for the grind - every week, +1 if the Need was met.
 **Week 2:** the Ledger + Shit Happens/Adapt, together.
 **Week 3:** the Development + Specimen panel - Capital, Need, Overtime, Flex.
 **Week 4:** Standing.
+**Week 5:** Combos - two named triggers in the same week now pay a small bonus on top of what
+they already did alone (rulebook §18.1).
 
 ### How it ends
 

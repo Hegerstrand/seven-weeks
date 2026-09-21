@@ -1,7 +1,34 @@
-# Rulebook - High-Performance Team (v0.27 draft)
+# Rulebook - High-Performance Team (v0.30 draft)
 
 Status: prototype draft, not yet playtested. Bump this version header whenever a playtest
 changes a rule, and log the change in [../playtests/README.md](../playtests/README.md).
+
+> **v0.30 - Reflect gated; Align/Coordinate card-text fixes.** Reflect now needs **Trust ≥ 3**
+> to give its +1 Adaptability (previously unconditional) - a genuine after-action review needs
+> enough psychological safety in the room to say what didn't work; earlier than that, it's just
+> a meeting. Its Shared Practice bonus trigger changed from "a bank or an Event resolved since
+> the last Reflect" to "a bank or the team adapted to 2 Events this week" - ties the bonus to
+> *this* week's evidence instead of an open-ended lookback. Also fixed two stale printed cards
+> that predated v0.21: Align's card still described the removed Unclear-clearing mechanic
+> (now plain unconditional +1 Adaptability, matching the rulebook); Coordinate's card had a typo
+> ("TRACKS RISE" → "TRUST RISE").
+
+> **v0.29 - Combos, a fifth reveal at week 5.** "Weeks 5-7 are nothing new" is no longer quite
+> true: week 5 now opens **Combos** (§18.1) - two named triggers (an Activity pair, or an
+> Activity paired with Hero/Adapt/Need) landing in the same week pay a small, flat, always-the-
+> same bonus. Maximum one Combo per team per week. Seven combos to start: Work+Plan,
+> Teach+Learn, Demo+Celebrate, Coordinate+Workshop, Hero+Celebrate, Adapt-cancel+Workshop, and
+> Need-met+Celebrate. Deliberately excludes a Habit-flip combo - Vindication (§5) already pays
+> that trigger once, and a Combo on top would double-pay it.
+
+> **v0.28 - Meet retired, replaced by Workshop; FALSE START no longer resets the day.** Meet's
+> two-mode split (Working Meeting: +1 Trust, +1 Adaptability; Record Meeting: a no-op that only
+> satisfied Event demands) is gone. The Activity is now **Workshop**: +1 Adaptability,
+> unconditionally, nothing else - Meet's Trust bump goes with it, so **Coordinate and Take One
+> For The Team (§7) are now the only two ways to raise Trust.** THE AUDIT and NEW REPORTING
+> REQUIREMENT now name Workshop directly instead of demanding a Record Meeting. FALSE START
+> (Event deck) is simplified: the first Work card this week still produces nothing, but the day
+> no longer resets - it's just a wasted card, not a wasted day.
 
 > **v0.27 - Capability and Adaptability can now fall.** Audit found Trust (`split`, `audit`,
 > `CONFLICT`) and Shared Practice (`reorg`) each had at least one Event that moved their Ledger
@@ -259,15 +286,17 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 |---|---|---|
 | **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation. | Work · Coordinate · Celebrate |
 | **Week 2** | **The team, and reality.** The Ledger - Trust, Capability, Shared Practice, Adaptability, and the Habits - and Shit Happens and Adapt, together. Adapt equals **[Adaptability]** from the first day it exists - no separate training-wheels stage. | + nothing new |
-| **Week 3** | **Board 4b, then the person.** HOW YOU COVER / THE LEDGER READS THIS lift (plate 3b) - the Zone's grid was already live, this is just where it starts paying off - and the Specimen card: Capital, Need, Overtime and Flex. | + Learn · Align · Reflect · Meet · Plan · Demo |
+| **Week 3** | **Board 4b, then the person.** HOW YOU COVER / THE LEDGER READS THIS lift (plate 3b) - the Zone's grid was already live, this is just where it starts paying off - and the Specimen card: Capital, Need, Overtime and Flex. | + Learn · Align · Reflect · Workshop · Plan · Demo |
 | **Week 4** | **Standing.** The fifth Ledger track (plate 3b) - whoever holds the most Capital becomes the team's Standing. | + nothing new |
+| **Week 5** | **Combos** (§18.1). Two named triggers landing in the same week now pay a small bonus on top of what they already did alone. | + nothing new |
 
-Weeks 5-7 are the whole game with nothing new opening, and by then the table has met
+Weeks 6-7 are the whole game with nothing new opening, and by then the table has met
 every rule *at the moment it mattered* rather than in a twenty-minute briefing.
 
 **One idea per week, and each one is a sentence.** Week 1: a week is five days and you choose
 them. Week 2: it was never only the project - it was landing on the team, and your plan was
-made in ignorance, both at once. Week 3: and on you personally.
+made in ignorance, both at once. Week 3: and on you personally. Week 5: the things you already
+do start paying twice when you do them together.
 
 **Week 1 is deliberately almost trivial:** lay five cards, resolve them, close the
 week. That's the entire lesson. A first-timer makes a real decision inside five minutes of
@@ -445,9 +474,9 @@ resolved at week close (§6.1):
 
 | Play | Gives |
 |---|---|
-| **Reflect** | +1 Adaptability, unconditionally |
+| **Reflect** | +1 Adaptability, if Trust ≥ 3 |
 | **Align** | +1 Adaptability, unconditionally |
-| **Meet**, as a Working Meeting | +1 Adaptability (and +1 Trust) |
+| **Workshop** | +1 Adaptability, unconditionally |
 
 **You cannot spike it.** Three Reflects in one week still move the coin one step. It starts at
 **2**, so reaching 5 takes three clean weeks of deliberate investment - which is why a team
@@ -494,7 +523,9 @@ marking what the team got done. Starting at 3, a team that never celebrates lose
 character early in week 3.
 
 > **Resolve the week's Motivation as one number.** Total each character's change - **−1** for
-> the grind, **+1** if their Need was met (**from week 3**, §5.1) - apply it, and *then*
+> the grind, **±1 per matching Event category this week, per their Torso** (§5, "Motivation
+> depends on habitus" - check who was hit and who was immune before you total anything),
+> **+1** if their Need was met (**from week 3**, §5.1) - apply it, and *then*
 > check for zero. Don't run the grind as a separate step first: a character on 1 Motivation
 > whose Need was satisfied has had a week that balanced out, and shouldn't quit on a
 > sequencing technicality.
@@ -885,8 +916,10 @@ days of a team's time. They are not a sequencing puzzle.
 1. **Bank** any feature whose Work counter reached its Work Cost (§10) - lift the lock tile off
    anything it unlocks, and pay Capital to whoever worked on it.
 2. **Walk the Ledger** coins, at most one step each, and flip any that reached its ring (§18).
-3. **Motivation - as a single net number per character:** −1 grind, +1 if their Need was
-   met (§5). Apply it, then any character at 0 leaves.
+3. **Motivation - as a single net number per character:** −1 grind, ±1 per matching Event
+   category this week per their Torso (§5, "Motivation depends on habitus" - check who was hit
+   and who was immune before totaling), +1 if their Need was met (§5). Apply the net number,
+   then any character at 0 leaves.
 4. **Advance the week.**
 
 Banking comes first because it pays the Capital that feeds the Ledger's Standing row. **The
@@ -896,7 +929,7 @@ project ends when Week 7 closes.**
 > get made in ignorance and reality lands on them - which is both the honest version of
 > project work and the reason Adaptability is worth paying for.
 
-Wherever an Event or rule says *"the team spends a Coordinate/Align/Plan/Reflect/Meet day,"*
+Wherever an Event or rule says *"the team spends a Coordinate/Align/Plan/Reflect/Workshop day,"*
 read it as **one of the week's five cards**, unless the card says otherwise.
 
 ## 7. Activities - one card, one of the week's five days
@@ -917,8 +950,8 @@ character to receive it.
 | **Learn** | Cover a free square **in your own row** of the Zone (§8), immediately **left or right** of one you already cover. No teacher, no Capital - an instrument can be got hold of alone. |
 | **Teach** | Let **up to two different characters**, each already covering a square, each let another character cover it, **any row**, immediately **up, down, left or right** of one they already cover. **Both teachers +1 Capital.** **Does nothing while Trust ≤ 1.** |
 | **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
-| **Reflect** | **+1 Adaptability.** If a feature was banked *or* an Event resolved since the team's last Reflect, also **+1 Shared Practice**. |
-| **Meet** | Resolve as §9. **Working Meeting:** +1 Trust, +1 Adaptability. **Record Meeting:** no effect at all, but it satisfies Events that demand one. |
+| **Reflect** | Needs **Trust ≥ 3**. **+1 Adaptability.** If a feature was banked *or* the team adapted to 2 Events this week, also **+1 Shared Practice**. |
+| **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
 | **Celebrate** | **+2 Motivation to every character** (cap 5) - **+3 instead if a feature was banked this week.** |
 
 There are **ten** Activities, and none of them is "rest" - resting isn't something a team does
@@ -961,8 +994,8 @@ at the exact moment real teams make it.
 
 ### Take one for the team
 > **Any character may pay 1 Motivation for the team's +1 Trust this week** - a standing action,
-> not a card, usable even in a week with no free slot for Coordinate or a Working Meeting.
-> Once per week: if Trust already rose this week (Coordinate, Meet, or this action, by anyone),
+> not a card, usable even in a week with no free slot for Coordinate.
+> Once per week: if Trust already rose this week (Coordinate, or this action, by anyone),
 > nobody may do it again - see the shared ceiling below.
 
 It's the personal-cost mirror of Overtime: Overtime borrows against the *project's* clock
@@ -1023,7 +1056,7 @@ No match, no bonus - the Activity just resolves at its normal effect.
 | Planning | Plan |
 | Facilitation | Align, Coordinate |
 | Communication | Coordinate, Demo |
-| Leadership | Meet, and Take Charge (Head) calls |
+| Leadership | Workshop, and Take Charge (Head) calls |
 | Analysis | Plan, Reflect |
 | Customer | Demo, Align |
 | Quality | Reflect |
@@ -1114,19 +1147,15 @@ teacher reaching two learners, instead of two teachers reaching one each).
 > know as private property, withheld rather than made social, is exactly the alienation this
 > mechanic punishes - which is why only teaching, never hoarding, ever converts to Capital.
 
-## 9. Meetings
-Meetings aren't automatically bad - the game separates **useful coordination** from
-**organisational overhead**.
-
-- **Working Meeting** - one of the week's five days; builds shared understanding, may raise
-  Trust.
-- **Record Meeting** - one of the week's five days; produces a record of the week for whoever
-  needs one, but **no real feature progress.**
+## 9. Meetings (retired, v0.28)
+Meet used to split into **Working Meeting** (builds shared understanding, may raise Trust) and
+**Record Meeting** (a no-op that only satisfied Event demands for one). That split is gone -
+the Activity is now **Workshop** (§7): +1 Adaptability, unconditionally, no second mode.
 
 > **Event: ANOTHER STATUS MEETING** - *"Just a quick 30-minute check-in."* Actually costs the
 > team **one of its five days** this week. Effect: **−1 Motivation** (everyone). (The
 > corporate name is deliberate here - this is an Event, the world imposing itself on the team;
-> §9's own Record Meeting is the same shape without the jargon, because the team chose it.)
+> Workshop is the team choosing to spend a day on purpose instead.)
 
 ## 10. Feature System
 Each feature has a Work Cost, Complexity, Dependencies, and a running
@@ -1247,8 +1276,8 @@ Categories:
 > re-onboarding (§12) - they haven't left, but they're now working under a different
 > structure.
 
-> **NEW REPORTING REQUIREMENT** - the team must spend a Meet this week producing a status
-> report, or take −1 Motivation (everyone) at the end of the week.
+> **NEW REPORTING REQUIREMENT** - the team must spend a Workshop this week, or take −1
+> Motivation (everyone) at the end of the week.
 
 > **EXECUTIVE VISIT** - a Demo is expected within 2 days. If it doesn't happen: −1
 > Motivation (everyone).
@@ -1477,6 +1506,33 @@ person making it, not its content - which is why the Demo gate is relative to th
 
 v0.1 ships 5. Add more once these are playtested and clearly working - record which ones got
 acquired, and when, in the session's [playtest log entry](../playtests/README.md).
+
+## 18.1 Combos (from week 5)
+By week 5 the team has met every subsystem - Habits, Hero, Need, Standing - and the rest of the
+game is playing what it has learned. **Combos** are the last thing that opens: pairs that were
+always available individually, now worth more together.
+
+**A Combo is two named triggers landing in the same week.** Check for Combos at close-the-week,
+alongside Motivation (§6.1 step 3). **Maximum one Combo per team per week** - if more than one
+pair is satisfied, the team names which one counts. No stacking, no hidden bookkeeping.
+
+| Combo | Trigger (same week) | Reward |
+|---|---|---|
+| **Work + Plan** | Both played on the same feature. (Plan's own +1 Extra Work bonus, §7, already applies regardless of week - this is a second, separate reward layered on top from week 5 on.) | +1 Capital to whoever played the Work |
+| **Teach + Learn** | Both played on the same skill column, by different characters | +1 Shared Practice, on top of the normal Zone payoff (§8) |
+| **Demo + Celebrate** | Both played | +1 Trust |
+| **Coordinate + Workshop** | Both played | +1 Capital to one named character |
+| **Hero + Celebrate** | A character spends their once-per-game Hero to cancel an Event, and the team plays Celebrate | +1 Motivation to everyone |
+| **Cancel an Event with Adaptability + Workshop** | Both happen | +1 Adaptability |
+| **Need met + Celebrate** | A character's Need is satisfied (§5, from week 3) and the team plays Celebrate | +1 Motivation to that character, on top of the normal Need bonus |
+
+**Why not a Habit-flip combo too.** The moment a Habit is acquired already pays +1 Capital via
+Vindication (§ "Motivation depends on habitus") - a Combo reward on the same trigger would pay
+the same event twice. Combos reward *pairing* two things that are each already worthwhile; they
+don't duplicate a payout that already exists.
+
+Nothing here needs a new component - check the pairs at close-the-week the same way you already
+check Motivation and the Ledger.
 
 ## 19. Prototype scope (v0.1)
 3-6 players · 6 features · 18 total Work · 7 weeks × 5 team-days = **35 days** · 4 Team State

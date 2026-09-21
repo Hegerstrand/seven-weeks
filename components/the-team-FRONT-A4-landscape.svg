@@ -33,7 +33,7 @@ the-team-BACK matches and goes on the reverse.</desc>
 <g id="trust" transform="translate(0,-4)">
   <rect x="8" y="45" width="281" height="28" rx="2" class="band" fill="#D3CEDF"/>
   <text x="12" y="52" class="s" font-size="6">Trust</text>
-  <text x="12" y="59" class="s" font-size="3.4" font-style="italic">grown by Coordinate, and by Meet</text>
+  <text x="12" y="59" class="s" font-size="3.4" font-style="italic">grown by Coordinate</text>
   <g class="w">
     <circle cx="86" cy="54" r="8"/><circle cx="103.7" cy="54" r="8"/><circle cx="121.5" cy="54" r="8"/>
     <circle cx="139.2" cy="54" r="8"/><circle cx="156.9" cy="54" r="8"/><circle cx="174.7" cy="54" r="8"/>
@@ -95,8 +95,8 @@ the-team-BACK matches and goes on the reverse.</desc>
 <g id="adaptability" transform="translate(0,-1)">
   <rect x="8" y="135" width="281" height="28" rx="2" class="band" fill="#B5C7CF"/>
   <text x="12" y="142" class="s" font-size="6">Adaptability</text>
-  <text x="12" y="149" class="s" font-size="3.4" font-style="italic">grown by Reflect, by Align with</text>
-  <text x="12" y="153.5" class="s" font-size="3.4" font-style="italic">nothing Unclear, and by Meet</text>
+  <text x="12" y="149" class="s" font-size="3.4" font-style="italic">grown by Reflect, Align, and</text>
+  <text x="12" y="153.5" class="s" font-size="3.4" font-style="italic">Workshop, all unconditionally</text>
   <g class="w">
     <circle cx="86" cy="144" r="8"/><circle cx="103.7" cy="144" r="8"/><circle cx="121.5" cy="144" r="8"/>
     <circle cx="139.2" cy="144" r="8"/><circle cx="156.9" cy="144" r="8"/><circle cx="174.7" cy="144" r="8"/>

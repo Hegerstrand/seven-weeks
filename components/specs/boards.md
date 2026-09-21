@@ -495,7 +495,7 @@ landscape.
 | "THE ONE IDEA" | `.m.q` mono | 6 | `#000000` | - |
 | "It was never only the project." | `.s` serif | 20 | `#000000` | - |
 | "CARDS ADDED" | `.m.q` mono | 6 | `#000000` | - |
-| "LEARN · ALIGN · REFLECT · MEET" | `.m` mono | 9 | `#000000` | - |
+| "LEARN · ALIGN · REFLECT · WORKSHOP" | `.m` mono | 9 | `#000000` | - |
 | "WHAT OPENS" | `.m.q` mono | 6 | `#000000` | - |
 | "The Ledger: Trust, Capability, Shared Practice, Adaptability..." (3 lines) | `.s` serif | 8 | `#000000` | - |
 | "Adapt is now your full Adaptability, not 1." | `.s` serif | 8 | `#000000` | - |
@@ -755,8 +755,11 @@ then a cost-chip rect, then the gain lines each with their own small tinted back
 
 **CLOSE THE WEEK steps:** each step number sits in a small outline circle (`r=5`) to its left;
 step headlines that reference a resource get a coloured background chip drawn first. Step 3's
-"empty means they leave" line is followed by a small red pentagon-ish glyph and a mono caption
-for the week-3 rule addition.
+body line now reads "Check Torso vs Events, then add up - empty means they leave." - folded the
+habitus/Event-category check (rulebook \u00a76.1/"Resolve the week's Motivation as one number")
+into the existing line rather than adding a fourth line, since the box already sits 1mm off the
+page's bottom safe margin with no room to grow. Followed by a small red pentagon-ish glyph and
+a mono caption for the week-3 rule addition.
 
 ### Layout diagram
 

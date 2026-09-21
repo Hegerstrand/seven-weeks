@@ -25,7 +25,7 @@ Record the answer to each in the [playtest log](../playtests/README.md). If Q2 c
 worth tuning.
 
 ### Deliberately deferred (cut, not deleted)
-Capital · Demo · Plan · Reflect · Meet · hidden Quality · Shared Practice · Adaptability ·
+Capital · Demo · Plan · Reflect · Workshop · hidden Quality · Shared Practice · Adaptability ·
 Team Need · Onboarding · Achievements · Team Score · the ~30-card Event deck · 3D-printed
 miniatures. All of these stay in the full [rulebook.md](./rulebook.md) and come back one at a
 time from Stage 9 of the assessment.

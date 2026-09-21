@@ -88,7 +88,6 @@ options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per optio
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
     <text x="5" y="28" class="s" font-size="4.4">The first Work card this</text>
     <text x="5" y="33" class="s" font-size="4.4">week produces <tspan font-weight="bold">nothing</tspan>.</text>
-    <text x="5" y="38" class="s" font-size="4.4">The day starts over instead.</text>
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
@@ -204,7 +203,7 @@ options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per optio
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE AUDIT</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
     <text x="5" y="28" class="s" font-size="4.4">One card this week must</text>
-    <text x="5" y="33" class="s" font-size="4.4">be a <tspan font-weight="bold">Record Meeting</tspan>. If</text>
+    <text x="5" y="33" class="s" font-size="4.4">be a <tspan font-weight="bold">Workshop</tspan>. If</text>
     <text x="5" y="38" class="s" font-size="4.4">none is, lose a card and</text>
     <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3CEDF"/>
     <text x="5" y="43" class="s" font-size="4.4">lose <tspan font-weight="bold" class="trust">1 Trust</tspan>, <tspan font-weight="bold">1 Motivation</tspan>.</text>

@@ -2,7 +2,7 @@
 <title>Sheet 5 - Activity cards, 60 x 88 mm (A4)</title>
 <desc>Nine cards, 3 x 3 on A4, one print - no reprinting needed. Work (the card you'll want
 most) gets three slots here and two more on sheet 5b, five total. Coordinate, Align and
-Celebrate - the week 1/3 core loop - get two each. Teach, Plan, Demo, Reflect, Meet and Learn
+Celebrate - the week 1/3 core loop - get two each. Teach, Plan, Demo, Reflect, Workshop and Learn
 moved to sheet 5b, which had the room. They drop straight into the week slots on Sheet 1.</desc>
 
 <style>
@@ -41,7 +41,7 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
     <text x="5" y="49" class="s" font-size="4.4"><tspan class="trust">Trust ≤ 1</tspan>: Teach is dead.</text>
-    <text x="5" y="58" class="m q" font-size="3.1">TRACKS RISE 1 A WEEK, MAX</text>
+    <text x="5" y="58" class="m q" font-size="3.1">TRUST RISE 1 A WEEK, MAX</text>
     <text x="5" y="77" class="s" font-size="4.2" font-style="italic">Safety is not declared.</text>
     <text x="5" y="82" class="s" font-size="4.2" font-style="italic">It is built, dully.</text>
   </g>
@@ -50,16 +50,13 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">ALIGN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
-    <text x="5" y="27" class="s" font-size="5.8">Clear <tspan font-weight="bold">Unclear</tspan> from</text>
-    <text x="5" y="34" class="s" font-size="5.8">one feature</text>
+    <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#B5C7CF"/>
+    <text x="5" y="32" class="s adapt" font-size="9">+1 Adaptability</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
-    <text x="5" y="49" class="s" font-size="5">Nothing Unclear?</text>
-    <rect x="4" y="50.5" width="50" height="6.5" rx="1" fill="#B5C7CF"/>
-    <text x="5" y="56" class="s" font-size="4.8"><tspan font-weight="bold" class="adapt">+1 Adaptability</tspan> instead.</text>
-    <text x="5" y="64" class="m q" font-size="3.1">ADAPTABILITY = CARDS YOU</text>
-    <text x="5" y="69" class="m q" font-size="3.1">MAY RE-LAY AFTER EVENTS</text>
-    <text x="5" y="77" class="s" font-size="4.2" font-style="italic">Clear it the same week and</text>
-    <text x="5" y="82" class="s" font-size="4.2" font-style="italic">the Work still counts.</text>
+    <text x="5" y="49" class="m q" font-size="3.1">RE-LAY CARDS AFTER EVENTS.</text>
+    <text x="5" y="55" class="m q" font-size="3.1">SAME COUNT AS YOUR ADAPTABILITY</text>
+    <text x="5" y="77" class="s" font-size="4.2" font-style="italic">The team agreed on this.</text>
+    <text x="5" y="82" class="s" font-size="4.2" font-style="italic">That agreement is worth something.</text>
   </g>
 
   <g id="celebrate" transform="scale(.95238095,1)">

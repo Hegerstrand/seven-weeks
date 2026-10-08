@@ -24,56 +24,62 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORK</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="23.5" class="s" font-size="4.2">The only card that moves</text>
+    <text x="5" y="28.3" class="s" font-size="4.2">the project. Hence the trap.</text>
+    <g transform="translate(0,11)">
     <rect x="4" y="22" width="50" height="10" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="30" class="s" font-size="7">+1 to one feature</text>
     <text x="5" y="42" class="s" font-size="4.4">Adjust total Work for</text>
     <text x="5" y="48" class="s" font-size="4.4">Capability and Shared Practice.</text>
-    <line x1="5" y1="55" x2="58" y2="55" class="h"/>
-    <text x="5" y="78" class="s" font-size="4.2" font-style="italic">The only card that moves</text>
-    <text x="5" y="83" class="s" font-size="4.2" font-style="italic">the project. Hence the trap.</text>
+    </g>
   </g>
 
   <g id="coordinate" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">COORDINATE</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="23.5" class="s" font-size="4.2">Safety is not declared.</text>
+    <text x="5" y="28.3" class="s" font-size="4.2">It is built, dully.</text>
+    <g transform="translate(0,11)">
     <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#D3CEDF"/>
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
     <text x="5" y="49" class="s" font-size="4.4"><tspan class="trust">Trust ≤ 1</tspan>: Teach is dead.</text>
     <text x="5" y="58" class="m q" font-size="3.1">TRUST RISE 1 A WEEK, MAX</text>
-    <text x="5" y="77" class="s" font-size="4.2" font-style="italic">Safety is not declared.</text>
-    <text x="5" y="82" class="s" font-size="4.2" font-style="italic">It is built, dully.</text>
+    </g>
   </g>
 
   <g id="align" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">ALIGN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="23.5" class="s" font-size="4.2">The team agreed on this.</text>
+    <text x="5" y="28.3" class="s" font-size="4.2">That agreement is worth</text>
+    <text x="5" y="33.1" class="s" font-size="4.2">something.</text>
+    <g transform="translate(0,15.5)">
     <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#B5C7CF"/>
     <text x="5" y="32" class="s adapt" font-size="9">+1 Adaptability</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
-    <text x="5" y="49" class="m q" font-size="3.1">RE-LAY CARDS AFTER EVENTS.</text>
-    <text x="5" y="55" class="m q" font-size="3.1">SAME COUNT AS YOUR ADAPTABILITY</text>
-    <text x="5" y="77" class="s" font-size="4.2" font-style="italic">The team agreed on this.</text>
-    <text x="5" y="82" class="s" font-size="4.2" font-style="italic">That agreement is worth something.</text>
+    <text x="5" y="49" class="m q" font-size="3.1">ADDS 1 ADAPT TOKEN.</text>
+    <text x="5" y="55" class="m q" font-size="3.1">SPENT IN THE ADAPT STEP.</text>
+    </g>
   </g>
 
   <g id="celebrate" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">CELEBRATE</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="23.5" class="s" font-size="4.2">Nobody rests at work. You</text>
+    <text x="5" y="28.3" class="s" font-size="4.2">ship something and say so.</text>
+    <g transform="translate(0,11)">
     <rect x="4" y="23.39" width="50" height="8" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="29" class="s" font-size="6.6">+2 Motivation</text>
     <text x="5" y="36" class="s" font-size="6.6">to everyone</text>
     <line x1="5" y1="42" x2="58" y2="42" class="h"/>
     <text x="5" y="51" class="s" font-size="5.4"><tspan font-weight="bold">+3</tspan> if a feature was</text>
     <text x="5" y="58" class="s" font-size="5.4">banked this week.</text>
-    <rect x="36.98" y="63.48" width="20.83" height="3.22" rx=".45" fill="#D3B1B1"/>
-    <text x="5" y="66" class="m" font-size="2.8">NO CELEBRATE: LOSE 1 MOTIVATION</text>
-    <text x="5" y="71" class="m" font-size="3.1">AT 0, A CHARACTER LEAVES</text>
-    <text x="5" y="79" class="s" font-size="4.2" font-style="italic">Nobody rests at work. You</text>
-    <text x="5" y="84" class="s" font-size="4.2" font-style="italic">ship something and say so.</text>
+    <text x="5" y="68" class="m" font-size="3.1">MOTIVATION CAPS AT 5</text>
+    </g>
   </g>
 
 </defs>

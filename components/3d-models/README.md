@@ -16,9 +16,9 @@ parts, matching the habitus model in
 | Part | Represents | Interchange point |
 |---|---|---|
 | Base | Upbringing/background | Peg/socket into legs |
-| Legs | Education & inclination | Socket into torso |
+| Legs | Instinct / Pressure Response | Socket into torso; its own stance or pose per response |
 | Torso (arms sculpted in) | Values | Socket for head; molded hand slot for item |
-| Head | Perception / Pressure Response | Swappable head, its own expression or pose per response |
+| Head | Education & inclination | Swappable head, its own expression per education |
 | Item | Skill (capability) | Small prop that pegs into the torso's molded hand |
 
 Goal: you should be able to glance at another player's miniature and read their
@@ -33,9 +33,9 @@ handled. Which 2 ship first is an arbitrary placeholder below - swap freely.
 | Part | Phase 1 (now) | Phase 2 (later) |
 |---|---|---|
 | Base | Academic · Trade | Entrepreneurial · Public sector |
-| Legs | Technical · Social | Commercial · Analytical |
+| Legs | Take Charge · Analyze | Support · Withdraw |
 | Torso | Autonomy · Hierarchy | Community · Quality |
-| Head | Take Charge · Analyze | Support · Withdraw |
+| Head | Technical · Social | Commercial · Analytical |
 | Item | Laptop · Clipboard | Coffee cup · Wrench |
 
 With up to 20 variants at full scope, silhouette alone won't stay readable across the table - **every part must have its own name engraved (recessed) into the sculpt**, same convention as
@@ -194,8 +194,7 @@ No unique geometry or engraving on any of these - buy a generic part instead of 
 | Component | Off-the-shelf option |
 |---|---|
 | Motivation tokens | 14 mm gem/token, ochre or clear-ochre |
-| Flex markers | Small disc or cube in a 6th colour, distinct from the character discs |
-| Character discs | Small coloured disc/pawn, 1 per player |
+| Flex markers | Small disc or cube in a 6th colour |
 | Feature Work cubes | Plain 10-12 mm wooden or acrylic cube, 1 per feature |
 
 The fallback spec below (Motivation tokens) is kept in case the right size/finish can't be

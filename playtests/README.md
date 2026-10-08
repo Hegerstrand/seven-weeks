@@ -2,6 +2,86 @@
 
 One entry per playtest session, newest first.
 
+## 2026-09-25 - session 2, first full 7-week playthrough
+Raw notes: `playtests/2026-09-25.md` on the remote (`Hegerstrand/seven-weeks`) - pull it. This
+entry is the design response.
+
+- **Players:** 5-6, hobbyist/casual.
+- **What we tested:** full playthrough, v0.30. The facilitator's staging drifted from rulebook
+  §3.0: week 1 offered Learn, Celebrate and Work (rulebook: Work, Coordinate, Celebrate), Teach
+  was in play early, and Reflect was revealed in week 2 then pulled until week 3.
+- **What worked:** relatable - lots of joking about the Events; Event handling "started to
+  function well" by week 5; weeks 3-7 ran fast once the mechanics were understood; full points
+  and a happy table at the end; nobody used Overtime.
+- **What broke / was confusing:**
+  - Too much to learn at once: weeks 1-2 were spent on mechanics; habitus text meant nothing
+    in week 1; the Celebrate card mentioned "the grind" before anyone knew it; card text too
+    small; too complex for non-board-gamers.
+  - No order of play to follow, so habitus bonuses/penalties and the grind-vs-Events order
+    were missed. Players asked for a per-week checklist.
+  - **Exploit:** the habit penalty zones became the whole game. Weeks 1-3 were all Learn,
+    Teach, Celebrate and Coordinate with zero Work; then Work-only weeks; most features landed
+    at the end. Nothing punished a week with no Work.
+  - One player's Hero was used more than once. That is the Competitive Base's reusable Hero,
+    which the designer likes and wants kept; the "have 3 Motivation" requirement being a
+    threshold, not a cost, was also noted as strong.
+  - Adaptability was unclear: first really used in week 4; unclear what it is.
+  - Tracking learned skills on the Zone "is close to impossible" at the table.
+  - Wording: leave/quit, and "at the end of the week" for a quit.
+  - Track symbols should differ (1-5 Motivation tokens vs one Capital marker).
+- **Rule changes made as a result (rulebook v0.31):**
+  1. Adaptability is a shared **currency** (adapt tokens, cap 6, starts 2, no refresh), not a Ledger track.
+     Team Reflexivity flips when the pool holds 4+ at close of week. Adapt tokens left at the end
+     count in the Team Score.
+  2. The whole Ledger incl. **Standing and Capital opens in week 2**, and **Needs are read from
+     week 2** (was week 3), so the Quality no-Work penalty bites a week earlier. Week 3 keeps
+     the Zone lift and Flex/Overtime. Week 4 opens nothing.
+  3. **Hero:** unchanged for everyone (once per game, needs 3 Motivation). Only **Competitive**
+     (Base) has a reusable Hero, and every reuse still needs 3 Motivation. Rulebook now matches
+     the printed Competitive card (tendency: another character's Hero costs you 1 Motivation).
+  4. **Quality** (Need) loses 3 Motivation at close of any week with no Work card played (+1 if
+     one was). The only Need that can cost you. A character the Learn/Celebrate exploit
+     actually hurts.
+  5. Quits are checked once per week, at close step 3. The weekly turn is now a checklist
+     (rulebook §6.1, printed on every person board).
+  6. **"Replace a card" removed** from the Adapt step: tokens only cancel Events. Autonomy's Need
+     is now "you executed at least one card this week" (it used to depend on Replace).
+  7. **Quality's Need counts Work delivered**, not a Work card played: +1 if Work was added to a
+     feature this week, -3 if none was (a Work card that produced 0 does not count).
+  8. **Vocabulary fixed** (rulebook §6.1): Shit Happens = the step and the board, Event = the
+     card, Adapt = the next step, Cancel = what you do to an Event, "Adaptability cost" = the
+     price printed on it. Board 2 no longer says an uncancelled Event "stays and the SHIT stacks".
+  9. **Text size** raised on the person board, all habitus cards and the NEED and HERO tiles.
+  10. **Legs and Head swapped flavour, not rules** (2026-10-07): Legs is now instinct (Pressure
+      Response, Hero), Head is education (Zone row, Skill). The Hero tile moved under Legs on the
+      person board and Flex under Head; Hero glyphs are now triangles, education rows hexagons.
+  11. **Activity cards belong to the team** (2026-10-07): nobody plays or executes a card, so
+      there are no character discs and **Skill match is removed**. Needs rewritten to match:
+      Autonomy = no Event landed on the team (or Shared Repertoire), Hierarchy = the team played
+      a Teach, Recognition = a feature was banked or you spent your Hero; Overtime is a sixth
+      card the team plays. Every Need except Recognition also counts as met while the team has
+      its vindicating Habit. The week-2 Capital catch-up is dropped: Capital starts at 0 and is earned
+      only through play, since it assumed characters played cards.
+  12. **Balance pass** (2026-10-07, expected values, not playtested): Event Adaptability cost now
+      follows size (8 cards at 1, 11 at 2, 4 at 3), Habit takes 1 off with a minimum of 1,
+      Sustainable threshold is 88, and the Work/Event figures in the rulebook were refreshed (12
+      Events drawn, neutral rate 1 Work per card, ~21 Work days needed).
+- **Open - not decided, do not treat as fixed:**
+  - **Zone skill tracking** is the biggest unsolved component problem. Needs a redesign.
+  - Should the habit tracks reward from 2+ instead of penalising 1 and below?
+  - Feature deadlines, and a cost to non-Work activity (to stop the all-Work/no-Work swing).
+  - Consequence for quitting (lose condition, cascade, score hit); coordinate twice per week?
+  - Stacking Events: does an unhandled Event repeat next week until dealt with?
+  - Whether the grind comes before or after Events: the rulebook has it at close of week
+    (after Events); the table found the order unclear. Rule unchanged, order now printed.
+  - Cards to retext: ALWAYS REACTING, the Celebrate card and the board 3 / board 2 Adaptability
+    changes are done; the Quality Need tile is done. Still to do: the two BACK sheets and the
+    Challenge Head cards (pool wording). Board 3's Standing slot and the 3b strip are done (the
+    strip is single-faced now and drops in at week 2). The
+    Competitive card and the Hero tiles match the rules.
+- **Next thing to test:** week 1-3 with the exploit closed. Does anyone still play three
+  Learn/Celebrate weeks, and does a shared Adaptability pool get spent or hoarded?
+
 ## 2026-09-09 - session 1 debrief (partial - full write-up pending)
 - **Players:** not yet recorded.
 - **What we tested:** not yet recorded.

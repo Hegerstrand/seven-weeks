@@ -27,8 +27,8 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
 
 <defs>
   <g id="i-base"><rect x="-2.1" y="-2.1" width="4.2" height="4.2" rx=".3" class="ic"/></g>
-  <g id="i-legs"><polygon points="0,-2.5 2.2,1.4 -2.2,1.4" class="ic"/></g>
-  <g id="i-head"><polygon points="2.3,0 1.15,2 -1.15,2 -2.3,0 -1.15,-2 1.15,-2" class="ic"/></g>
+  <!-- i-head is the HERO glyph. Pressure Response now sits on Legs, so it draws the Legs triangle; the id is kept so the uses below stay as they are. -->
+  <g id="i-head"><polygon points="0,-2.5 2.2,1.4 -2.2,1.4" class="ic"/></g>
   <g id="i-item"><polygon points="0,-2.6 2.6,0 0,2.6 -2.6,0" class="ic"/></g>
   <g id="i-torso"><polygon points="0,-2 1.9,-.62 1.18,1.62 -1.18,1.62 -1.9,-.62" class="ic"/></g>
   <g id="q1"><circle cx="0" cy="0" r=".45" class="pip"/></g>
@@ -37,7 +37,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
   <g id="q4"><circle cx="-.7" cy="-.7" r=".4" class="pip"/><circle cx=".7" cy="-.7" r=".4" class="pip"/><circle cx="-.7" cy=".7" r=".4" class="pip"/><circle cx=".7" cy=".7" r=".4" class="pip"/></g>
   <g id="q5"><circle cx="-.85" cy="-.85" r=".4" class="pip"/><circle cx=".85" cy="-.85" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.85" cy=".85" r=".4" class="pip"/><circle cx=".85" cy=".85" r=".4" class="pip"/></g>
   <!-- The HOW TO ADAPT block: ADAPT-price and HERO cancel outright; HABIT only takes 1 off the ADAPT cost
-       ADAPT n = spend n Adaptability, the team's re-lay budget for that week - no "ADAPT" label, the box header says it
+       ADAPT n = spend n tokens from the team's shared Adaptability pool - no "ADAPT" label, the box header says it
        HERO    = one habitus part, once per game, free, +2 Capital
        HABIT   = if the team holds it, the ADAPT cost drops by 1; at 0 it never happens
        Torso reaction (if any) now sits right after the effect text, before HOW TO ADAPT -->
@@ -48,34 +48,15 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">STATUS MEETING</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.2">Not information -</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">it's about being seen.</text>
+    <g transform="translate(0,9.5)">
     <text x="5" y="28" class="s" font-size="4.4">Remove one card from this</text>
     <text x="5" y="33" class="s" font-size="4.4">week. It never happens.</text>
     <rect x="4" y="33" width="50" height="6" rx="1" fill="#D3B1B1"/>
     <text x="5" y="38" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">AUTONOMY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="40.57" width="11.72" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">AUTONOMY: LOSE 1 EXTRA</text>
     <g transform="translate(7,46.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="47.5" class="m q" font-size="2.7">HIERARCHY: NO LOSS</text>
-    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
-    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
-    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Not information - it's about being seen.</text>
-  </g>
-
-  <g id="budget" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
-    <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">BUDGET CUT</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="29" class="s" font-size="5.4">Everyone:</text>
-    <rect x="4" y="32" width="50" height="6" rx="1" fill="#D3B1B1"/>
-    <text x="5" y="37" class="s" font-size="5.4"><tspan font-weight="bold">Lose 1 Motivation</tspan></text>
-    <g transform="translate(7,40.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="39.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="42" class="m" font-size="2.7">AUTONOMY: LOSE 1 MOTIVATION</text>
-    <g transform="translate(7,45.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="46.5" class="m q" font-size="2.7">HIERARCHY: NO LOSS</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -84,7 +65,34 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Nobody explains the reasoning to you.</text>
+    <use href="#cost2"/>
+    </g>
+  </g>
+
+  <g id="budget" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">BUDGET CUT</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.2">Nobody explains the</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">reasoning to you.</text>
+    <g transform="translate(0,9.5)">
+    <text x="5" y="29" class="s" font-size="5.4">Everyone:</text>
+    <rect x="4" y="32" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="37" class="s" font-size="5.4"><tspan font-weight="bold">Lose 1 Motivation</tspan></text>
+    <g transform="translate(7,40.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="39.57" width="11.72" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="42" class="m" font-size="2.7">AUTONOMY: LOSE 1 EXTRA</text>
+    <g transform="translate(7,45.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="46.5" class="m q" font-size="2.7">HIERARCHY: NO LOSS</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT STILL COSTS 1</text>
+    <use href="#cost1"/>
+    </g>
   </g>
 
   <g id="unclear" transform="scale(.95238095,1)">
@@ -94,19 +102,23 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">UNCLEAR</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">REQUIREMENT</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.4">Flag the unbanked feature</text>
-    <text x="5" y="33" class="s" font-size="4.4">with most Work left: Work</text>
-    <text x="5" y="38" class="s" font-size="4.4">gives 1 less, Plan nothing.</text>
+    <text x="5" y="28" class="s" font-size="4.2">Flag the unbanked feature</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">with most Work left: Work</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">gives 1 less, Plan nothing,</text>
+    <text x="5" y="42.4" class="s" font-size="4.2">until an Align or a Demo</text>
+    <text x="5" y="47.2" class="s" font-size="4.2">clears it.</text>
+    <g transform="translate(0,9.5)">
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">An Align or a Demo also clears it.</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT STILL COSTS 1</text>
+    <use href="#cost1"/>
+    </g>
   </g>
 
   <g id="feedback" transform="scale(.95238095,1)">
@@ -116,52 +128,11 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">NEGATIVE</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">FEEDBACK</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.4">One banked feature loses</text>
-    <text x="5" y="33" class="s" font-size="4.4"><tspan font-weight="bold">2 Work</tspan> and comes off</text>
-    <text x="5" y="38" class="s" font-size="4.4">the tower.</text>
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
-    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
-    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
-    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">A feature that passed a Demo is safe.</text>
-  </g>
-
-  <g id="scope" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
-    <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">SCOPE CREEP</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.4">The unbanked feature</text>
-    <text x="5" y="33" class="s" font-size="4.4">closest to done gains</text>
-    <text x="5" y="38" class="s" font-size="4.4"><tspan font-weight="bold">+2 Work Cost</tspan>.</text>
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
-    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
-    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
-    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
-    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Everybody called it a small addition.</text>
-  </g>
-
-  <g id="priority" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
-    <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
-    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">PRIORITY</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">CHANGES</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.4">Remove one card from this</text>
-    <text x="5" y="33" class="s" font-size="4.4">week: the day goes on</text>
-    <text x="5" y="38" class="s" font-size="4.4">re-agreeing what matters.</text>
+    <text x="5" y="28" class="s" font-size="4.2">One banked feature loses</text>
+    <text x="5" y="32.8" class="s" font-size="4.2"><tspan font-weight="bold">2 Work</tspan> and comes off the</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">tower, unless it passed</text>
+    <text x="5" y="42.4" class="s" font-size="4.2">a Demo.</text>
+    <g transform="translate(0,9.5)">
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
@@ -171,7 +142,57 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Last week was the wrong thing.</text>
+    <use href="#cost2"/>
+    </g>
+  </g>
+
+  <g id="scope" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">SCOPE CREEP</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.2">Everybody called it a small</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">addition: the unbanked</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">feature closest to done</text>
+    <text x="5" y="42.4" class="s" font-size="4.2">gains <tspan font-weight="bold">+2 Work Cost</tspan>.</text>
+    <g transform="translate(0,9.5)">
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <use href="#cost2"/>
+    </g>
+  </g>
+
+  <g id="priority" transform="scale(.95238095,1)">
+    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">PRIORITY</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">CHANGES</text>
+    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.2">Last week was the wrong</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">thing: remove one card from</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">this week, the day goes on</text>
+    <text x="5" y="42.4" class="s" font-size="4.2">re-agreeing what matters.</text>
+    <g transform="translate(0,9.5)">
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
+    <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
+    <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
+    <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
+    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT STILL COSTS 1</text>
+    <use href="#cost1"/>
+    </g>
   </g>
 
   <g id="hoarding" transform="scale(.95238095,1)">
@@ -181,19 +202,23 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">KNOWLEDGE</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">HOARDING</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.4">Whoever holds the most</text>
-    <text x="5" y="33" class="s" font-size="4.4">Knowledge cannot teach or</text>
-    <text x="5" y="38" class="s" font-size="4.4">be taught until next week.</text>
+    <text x="5" y="28" class="s" font-size="4.2">Nobody wanted to be the one</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">to ask: whoever holds the</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">most Knowledge cannot teach</text>
+    <text x="5" y="42.4" class="s" font-size="4.2">or be taught until next</text>
+    <text x="5" y="47.2" class="s" font-size="4.2">week.</text>
+    <g transform="translate(0,9.5)">
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q3"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">COMMUNITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q3"/></g><text x="23" y="67" class="vl">SUPPORT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Nobody wanted to be the one to ask.</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <use href="#cost2"/>
+    </g>
   </g>
 
   <g id="burnout" transform="scale(.95238095,1)">
@@ -203,6 +228,8 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">BURNOUT</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">WARNING</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="30.4" class="s" font-size="4.2">Everyone saw it coming.</text>
+    <g transform="translate(0,9.5)">
     <rect x="4" y="23" width="50" height="6" rx="1" fill="#D3B1B1"/>
     <text x="5" y="28" class="s" font-size="4.4">Anyone on <tspan font-weight="bold">1 Motivation</tspan></text>
     <text x="5" y="33" class="s" font-size="4.4">leaves next week, unless</text>
@@ -210,13 +237,14 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q3"/></g><rect x="37.78" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">COMMUNITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q3"/></g><text x="23" y="67" class="vl">SUPPORT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl trust">PSYCHOLOGICAL SAFETY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Everyone saw it coming.</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <use href="#cost2"/>
+    </g>
   </g>
 
   <g id="outage" transform="scale(.95238095,1)">
@@ -226,21 +254,30 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">EQUIPMENT</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">OUTAGE</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="28" class="s" font-size="4.2">Nobody's fault, and it</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">costs a week.</text>
+    <g transform="translate(0,9.5)">
     <text x="5" y="28" class="s" font-size="4.8">Every Work card this</text>
     <text x="5" y="34" class="s" font-size="4.8">week produces <tspan font-weight="bold">1 less</tspan>.</text>
-    <g transform="translate(7,37.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="36.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="39" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,37.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="36.57" width="11.72" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="39" class="m" font-size="2.7">HIERARCHY: LOSE 1 EXTRA</text>
     <rect x="4" y="41" width="50" height="6" rx="1" fill="#D3B1B1"/>
     <text x="5" y="46" class="s" font-size="4">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
+    <g transform="translate(7,50.9)"><use href="#i-torso"/><use href="#q1"/></g><text x="11" y="52" class="m q" font-size="2.7">AUTONOMY: NO LOSS</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
+    <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q3"/></g><text x="23" y="67" class="vl">SUPPORT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <text x="5" y="84" class="s" font-size="3" font-style="italic">Nobody's fault, and it costs a week.</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <use href="#cost2"/>
+    </g>
   </g>
+  <!-- Adaptability cost: one rounded square per adapt token, same shape as the pool wells on board 2 -->
+  <g id="cost1" fill="none" stroke="#2A2620" stroke-width=".6"><rect x="34" y="59" width="4.8" height="4.8" rx=".8"/></g>
+  <g id="cost2" fill="none" stroke="#2A2620" stroke-width=".6"><rect x="34" y="59" width="4.8" height="4.8" rx=".8"/><rect x="40" y="59" width="4.8" height="4.8" rx=".8"/></g>
+  <g id="cost3" fill="none" stroke="#2A2620" stroke-width=".6"><rect x="34" y="59" width="4.8" height="4.8" rx=".8"/><rect x="40" y="59" width="4.8" height="4.8" rx=".8"/><rect x="46" y="59" width="4.8" height="4.8" rx=".8"/></g>
 </defs>
 
 <rect width="210" height="297" fill="#FFFFFF"/>

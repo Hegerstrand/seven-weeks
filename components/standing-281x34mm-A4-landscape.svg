@@ -1,10 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="333mm" height="210mm" viewBox="0 0 333 210">
-<title>STANDING - front and back on one page (317 x 34 mm strip)</title>
+<title>STANDING - the strip (317 x 34 mm)</title>
 <desc>The Standing row is a separate strip, not part of THE TEAM. Widened 281 to 317mm to match
-THE TEAM's widened Standing slot. Cut both panels out, glue them to opposite faces of one piece
-of 2 mm greyboard, and drop the strip into the dashed slot at the foot of THE TEAM with the
-week-4 face showing. Turn it over in place at the start of week 4. Print at 100% on one side of
-one sheet.</desc>
+THE TEAM's widened Standing slot. Cut the panel out, glue it to one piece of 2 mm greyboard, and
+drop it into the dashed slot at the foot of THE TEAM at the start of week 2. Single-faced: THE TEAM
+itself is face down until week 2 (2026-09-25 playtest: Standing moved from week 4 to week 2 so
+the whole Ledger opens at once), so the strip no longer needs a covered face. Print at 100% on one
+side of one sheet.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -16,12 +17,12 @@ one sheet.</desc>
 </style>
 
 <rect width="333" height="210" fill="#FFFFFF"/>
-<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">STANDING · BOTH FACES ON THIS PAGE · PRINT AT 100%</text>
+<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">STANDING · PRINT AT 100%</text>
 <line x1="10" y1="12" x2="323" y2="12" class="r"/>
 
 <!-- ───────────── FRONT: the row itself, revealed in week 4 ───────────── -->
-<text x="10" y="40" class="m" font-size="4.2" letter-spacing="1.2">FACE A · THE ROW</text>
-<text x="70" y="40" class="s" font-size="3.6" font-style="italic">this is the side you turn up at the start of week 4</text>
+<text x="10" y="40" class="m" font-size="4.2" letter-spacing="1.2">THE ROW</text>
+<text x="45" y="40" class="s" font-size="3.6" font-style="italic">this is the strip you drop into its slot at the start of week 2</text>
 
 <g id="face-a" transform="translate(0,-42)">
   <rect x="8" y="88" width="317" height="34" rx="2" style="fill:#D9D3C4;stroke:#2A2620;stroke-width:.5"/>
@@ -45,20 +46,7 @@ one sheet.</desc>
   <text x="248" y="117" class="m q" font-size="2.6">BOURDIEU 1991</text>
 </g>
 
-<!-- ───────────── BACK: what shows while it waits in the slot ───────────── -->
-<text x="10" y="116" class="m" font-size="4.2" letter-spacing="1.2">FACE B · UNTIL WEEK 4</text>
-<text x="92" y="116" class="s" font-size="3.6" font-style="italic">this is the side showing while the strip sits in its slot</text>
-
-<g id="face-b" transform="translate(0,34)">
-  <rect x="8" y="88" width="317" height="34" rx="2" class="r"/>
-  <text x="14" y="96" class="m q" font-size="3.6" letter-spacing="1.2">TURN ME OVER · START OF WEEK 4</text>
-  <text x="14" y="107" class="s" font-size="9">Standing joins the Ledger.</text>
-  <rect x="82.2" y="110.91" width="12" height="4.83" rx=".4" fill="#D9D3C4"/>
-  <text x="14" y="114.5" class="s" font-size="4.6">It is not grown. It mirrors the highest <tspan>Capital</tspan> at the table - your place in the room is on loan.</text>
-  <text x="14" y="120" class="m" font-size="3.2">ALSO NOW: A FACE-DOWN QUALITY CHIP GOES ON EACH FEATURE</text>
-</g>
-
-<line x1="10" y1="172" x2="323" y2="172" class="cut"/>
-<text x="10" y="180" class="s" font-size="4">Cut both panels out. Glue them to opposite faces of one piece of 2 mm greyboard - <tspan font-weight="bold">Face A and Face B on the same strip.</tspan></text>
-<text x="10" y="186" class="s" font-size="4">Drop it into the dashed slot at the foot of sheet 3 with <tspan font-weight="bold">Face B</tspan> showing, and turn it over in place when week 4 begins.</text>
+<line x1="10" y1="96" x2="323" y2="96" class="cut"/>
+<text x="10" y="104" class="s" font-size="4">Cut the panel out and glue it to one piece of 2 mm greyboard.</text>
+<text x="10" y="110" class="s" font-size="4">Drop it into the dashed slot at the foot of sheet 3 <tspan font-weight="bold">when week 2 begins</tspan>, and set the coin on whoever holds the most Capital.</text>
 </svg>

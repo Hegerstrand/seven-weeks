@@ -2,7 +2,8 @@
 <title>THE TEAM FRONT - the Ledger (A4 landscape)</title>
 <desc>True A4 landscape (297 x 210) - SHIT HAPPENS is narrowed instead to keep the table's two rows
 matching widths (see _check-table-layout.svg). One coin per row; walk it, turn it over at
-the ring. The Standing row is dashed because it stays covered until week 4. Glue to cardboard;
+the ring. The Standing row is dashed because it is a separate strip, dropped in at the start of
+week 2. Glue to cardboard;
 the-team-BACK matches and goes on the reverse.</desc>
 
 <style>
@@ -91,34 +92,27 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="220.7" y="118.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
 </g>
 
-<!-- ADAPTABILITY -->
+<!-- ADAPTABILITY - a shared pool of tokens on SHIT HAPPENS, not a track; this row only holds the Team Reflexivity coin -->
 <g id="adaptability" transform="translate(0,-1)">
   <rect x="8" y="135" width="281" height="28" rx="2" class="band" fill="#B5C7CF"/>
   <text x="12" y="142" class="s" font-size="6">Adaptability</text>
-  <text x="12" y="149" class="s" font-size="3.4" font-style="italic">grown by Reflect, Align, and</text>
-  <text x="12" y="153.5" class="s" font-size="3.4" font-style="italic">Workshop, all unconditionally</text>
-  <g class="w">
-    <circle cx="86" cy="144" r="8"/><circle cx="103.7" cy="144" r="8"/><circle cx="121.5" cy="144" r="8"/>
-    <circle cx="139.2" cy="144" r="8"/><circle cx="156.9" cy="144" r="8"/><circle cx="174.7" cy="144" r="8"/>
-  </g>
-  <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="145.4">0</text><text x="103.7" y="145.4">1</text><text x="121.5" y="145.4">2</text>
-    <text x="139.2" y="145.4">3</text><text x="156.9" y="145.4">4</text><text x="174.7" y="145.4">5</text>
-  </g>
+  <text x="12" y="149" class="s" font-size="3.4" font-style="italic">a shared pool of tokens, kept on</text>
+  <text x="12" y="153.5" class="s" font-style="italic" font-size="3.4">SHIT HAPPENS - not a track</text>
+  <circle cx="156.9" cy="144" r="8" class="w"/>
   <circle cx="156.9" cy="144" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M78.9,154 L78.9,157 L181.7,157 L181.7,154" class="w" stroke-width=".5"/>
-  <text x="130.3" y="161" class="m" font-size="2.6" text-anchor="middle">SPEND THIS MUCH ADAPTABILITY EACH WEEK · WHAT IS LEFT IS LOST</text>
+  <text x="130.3" y="161" class="m" font-size="2.6" text-anchor="middle">TURN IT OVER THE FIRST TIME THE POOL HOLDS 4 AT WEEK END</text>
   <text x="220.7" y="142" class="s" font-size="5">Team Reflexivity</text>
   <text x="220.7" y="148.5" class="m q" font-size="2.6">WEST 1996</text>
 </g>
 
-<!-- STANDING - week 4 -->
+<!-- STANDING - a separate strip, dropped in at the start of week 2 -->
 <g id="standing-slot">
   <rect x="8" y="166" width="281" height="34" rx="2" fill="#F5CE89" class="r" stroke-dasharray="4 2.5"/>
   <text x="12" y="177" class="s" font-size="6">Standing</text>
   <text x="12" y="184" class="s" font-size="3.4" font-style="italic">the fifth row, on its own strip</text>
-  <text x="148.5" y="180" class="m" font-size="4.4" text-anchor="middle" letter-spacing="1.2">STANDING GOES HERE, FACE DOWN</text>
-  <text x="148.5" y="187" class="m q" font-size="3.2" text-anchor="middle">TURN IT OVER IN PLACE AT THE START OF WEEK 4</text>
+  <text x="148.5" y="180" class="m" font-size="4.4" text-anchor="middle" letter-spacing="1.2">STANDING GOES HERE</text>
+  <text x="148.5" y="187" class="m q" font-size="3.2" text-anchor="middle">DROP IT IN AT THE START OF WEEK 2 - COIN ON THE HIGHEST CAPITAL</text>
 </g>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->

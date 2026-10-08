@@ -256,7 +256,7 @@ it was meant to only observe, from two different centuries and two different dis
   Team State tracks, remaining Motivation), and it is *always* possible to over-fit it - bank
   conservatively, avoid every risky Reflect or Celebrate, hoard Motivation instead of spending
   it on the team. That's exactly why **Heroic Success** (all features delivered, Team Score
-  under 80) exists as its own named outcome, distinct from **Sustainable High Performance**:
+  under 88) exists as its own named outcome, distinct from **Sustainable High Performance**:
   the rulebook was already worried about a team that optimizes the number instead of the thing
   the number was supposed to stand for, before anyone reached for Goodhart's name for it - "The
   project succeeded; the team didn't."

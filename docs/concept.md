@@ -146,5 +146,5 @@ spent it badly"* or *"we delivered everything, but that team is completely burne
   Two reasons: 35 turns could not fit a 90-minute session (**B3b** in the
   [playability assessment](./playability-assessment.md)), and committing before knowing is a
   far better expression of design goals 1, 2 and 5 than choosing one day at a time with full
-  information. Adaptability got a real job: the number of cards you may re-lay after the Events
-  land.
+  information. Adaptability got a real job: tokens the team spends after the Events land, to
+  cancel them.

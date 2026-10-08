@@ -24,7 +24,6 @@ for the full workflow and template.
 | Project cards | 6 | Printed cards - six themed projects over one identical slot structure, §20 | Written in rulebook §20 |
 | **Activity cards** | 16 per sheet (9 designs) | **The week's five slots are filled from these** - print sheet in `print-5-activities.svg` | Drawn |
 | **Flex markers** | 6 | Taken on Overtime; a day the project owes. Placed **into a weekday slot** to give the day back, or −5 Team Score each if never repaid (§7) | **Off-the-shelf token, not printed** |
-| Character discs | 1 per player | Small coloured disc placed on an Activity card to say who takes that day | **Off-the-shelf token, not printed** |
 | **Feature Tower blocks** | 6 | **3D print, wood-fill PLA - hex, height proportional to Work Cost. D and F have cone/wedge bottoms and can only stand on B and C** | Spec'd in `3d-models/` |
 | Feature Work cubes | 6 | One cube walking each feature's track on the Project Rack | **Off-the-shelf cube, not printed** |
 | **Quality chips** | 6 | **3D print - same blank body across all tiers, engraved reveal face** | Spec'd in `3d-models/` |
@@ -32,7 +31,7 @@ for the full workflow and template.
 | Lock tiles | 2 | Physically cover features D and F until B / C bank | To design |
 | **Habit coins** | 5 | **3D print, resin - double-sided 14 mm coins, one per Ledger row. Track marker on one face, the acquired Habit on the other (§18)** | Spec'd in `3d-models/` |
 | Week board | 1 | 5 weekday slots + the 1-7 ladder to the deadline | On the main board |
-| Event Deck | ~30 cards | Printed cards; 2 drawn per week | Drafted in rulebook §11 |
+| Event Deck | 23 cards | Printed cards; 2 drawn per week from week 2 | Drafted in rulebook §11 |
 | **Motivation tokens** | 25 (5 per character × 5 characters) | Domed discs seating into player-board wells | **Off-the-shelf token, not printed** - fallback print spec in `3d-models/` |
 | Knowledge cards | Per character | Cards, copied to whoever you teach | To design |
 | Team State tracks (Trust, Capability, Shared Practice, Adaptability, Standing) | 1 board | The Ledger, on the main board | To design |
@@ -99,7 +98,7 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | `cards-event-19-21-63x88mm-A4-portrait` | A4, one row used | Week 2 | Event cards 19-21 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD). Shuffle all three sheets into one 21-card deck |
 | `cards-project-63x88mm-A4-portrait` | A4 | Setup | Six projects. Choose one; it drops into the seat on board 1 |
 | `cards-habitus-parts-01-15-44x36mm-A4-landscape` + `cards-habitus-parts-16-25-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm), split across two sheets so the 5-per-row cards print at true 44 x 36 mm, matching the person board's seats exactly - the board is master | Setup | 25 part-cards (15 + 10), dealt at random |
-| `cards-need-hero-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm) - the board is master, same fix as the habitus part-cards | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Head, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
+| `cards-need-hero-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm) - the board is master, same fix as the habitus part-cards | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Legs, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
 | `specs/leaflet-how-to-play.md` | A4 | - | Setup, Week 1, the weekly pulse from week 2 on, and how it ends - plain printable Markdown, not an SVG. Paginated into `game-print-all.pdf` by `scripts/build_print_pdf.py`, or print the Markdown directly |
 
 **Everything that goes in a weekday slot is 63 × 88 mm** - Activity and Event cards alike - so
@@ -109,8 +108,8 @@ place all game - it never needs to shuffle with the other two decks. **Never sca
 sheet**: the boards' slots are cut to these exact millimetres.
 
 **The Specimen panel** lives on the bottom of the merged person board now: Capital, Need and
-Flex. It's live from week 3 (§3.0) - the week the game admits the project has been landing on
-people, not just on the team.
+Flex. Capital and Need are live from week 2 and Flex from week 3 (§3.0) - the weeks the game
+admits the project has been landing on people, not just on the team.
 
 **The Hero box** sits *above the week-4 panel* on the player board, because Hero is live from
 week 2 when
@@ -118,7 +117,7 @@ Events start. Cover the small dashed box when it is spent. It requires **3 Motiv
 stop people quitting.
 
 **Three ways out of an Event.** Every card prints the same **HOW TO ADAPT** block. The first
-line spends the team's re-planning budget, joined by an "or" to **HERO**, which names one
+line spends tokens from the team's Adaptability pool, joined by an "or" to **HERO**, which names one
 habitus part and is free, once per game, for +2 Capital and +1 Motivation to somebody else -
 this was built around **sixteen** Base / Legs / Head / Item parts (four per row) naming
 exactly one Event each, and **four** Torso parts on every card as the suffers/ignores
@@ -209,13 +208,12 @@ matches the tolerances in [3d-models/](./3d-models/README.md). Colours and type 
   region, because they're the same subject. The tower needs nothing but its 32 × 32 mm plinth;
   the stack itself is the component.
 - **The Working Week** (bottom) - reads **left to right as the turn**: the week ladder counting
-  down to **DEADLINE** → `1 · PLAN THE WEEK` (five shared day slots, Monday - Friday, each with a
-  disc socket for *who* takes it) → `2 · SHIT HAPPENS` (which holds the Event deck and discard - they belong to that moment) → `3 · ADAPT` → `CLOSE THE WEEK`. A new player can be taught
+  down to **DEADLINE** → `1 · PLAN THE WEEK` (five shared day slots, Monday - Friday) → `2 · SHIT HAPPENS` (which holds the Event deck and discard - they belong to that moment) → `3 · ADAPT` → `CLOSE THE WEEK`. A new player can be taught
   the whole turn by pointing along the strip.
 
 > **Five days, not five per player.** The week belongs to the team. Three players or six, it's
-> still five cards - so the board is the same at any player count. A character disc under each
-> card says who takes that day.
+> still five cards - so the board is the same at any player count. Nobody plays a card; they
+> are the team's.
 
 ### Nothing is ever written on
 Not on the board, not on the player boards, not anywhere. Every value is a **token in a well,
@@ -228,13 +226,12 @@ without a single pencil mark.
 | Character name | Nothing - **the assembled figure is the character**. Player boards are printed with a specimen numeral. |
 | Base / Legs / Torso / Head / Item | Five **part-card seats** under the figure socket |
 | What a character knows | **Squares covered on the shared Zone board** (board 4) - no private card |
-| Need | **The Torso card itself**, read a second way from week 3 - no separate card |
+| Need | **The Torso card itself**, read a second way from week 2 - no separate card |
 | Feature names | The **Project card** on its plinth names all six (§20) |
 | Work progress | A **cube walks the track** in each feature's track to a green target disc |
 | Quality | A **face-down chip**, turned over by a Demo |
 | Dependency | A **LOCK tile** across features D and F - lifted off when B / C bank. And the blocks themselves: D and F have no flat bottom, so they physically cannot be placed until their parent is on the tower. |
 | The week's plan | Five **Activity cards** - or a **Flex marker** - in the weekday slots |
-| Who takes a day | A **character disc** under the card |
 
 Four things are physical 3D objects, and each needs a **designed seat** - a recess, plinth or
 socket - not just a printed square to balance on. Loose objects slide, get knocked, and read as

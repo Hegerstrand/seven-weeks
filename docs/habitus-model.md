@@ -14,9 +14,9 @@ is capability, and it's kept separate on purpose:
 | Part | Represents | Bourdieu connection | Mechanical effect |
 |---|---|---|---|
 | **Base** | Upbringing / family background | Social conditions, incorporated history | Starting assumptions, social capital, what feels familiar |
-| **Legs** | Education & inclination | Cultural capital, dispositions | What kinds of problems the character is naturally good at |
+| **Head** | Education & inclination | Cultural capital, dispositions | What kinds of problems the character is naturally good at |
 | **Torso** | Values | Durable preferences | What feels *right* to do, and what causes tension |
-| **Head** | Perception & how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Withdraw) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with that Head can cancel it. |
+| **Legs** | Instinct - how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Withdraw) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with those Legs can cancel it. |
 | **Item** | Skills (held) | Capability, not habitus | What the character can actually *do* |
 
 Arms are sculpted into the Torso, not a separate swappable piece. A loose arm is fragile to
@@ -36,25 +36,25 @@ micromanaging boss in the room.
   five, and every one names a condition of the home you grew up in (what was normal there, how
   it ran, what it valued), never a parent's job. That's deliberate: Bourdieu's incorporated
   history is about the practices and conditions a childhood installs, not an occupation label.
-- **Legs - Uddannelse & tilbøjelighed (education & inclination):** e.g. technical, academic,
+- **Head - Uddannelse & tilbøjelighed (education & inclination):** e.g. technical, academic,
   practical, creative, commercial, social, analytical, organisational.
 - **Torso - Værdier (values, pick one):** Autonomy, Hierarchy, Community, Quality, Recognition -
   exactly five, because Torso is also **Need** (see below): whichever value you're dealt
-  is both how Events land on you and what you need from the team from week 3 on.
-- **Head - Pressure Response (pick one):** Take Charge / Analyze / Support / Challenge /
-  Withdraw - sculpted as its own expression or pose. Also what Event cards name for the
+  is both how Events land on you and what you need from the team from week 2 on.
+- **Legs - Instinct, Pressure Response (pick one):** Take Charge / Analyze / Support / Challenge /
+  Withdraw - sculpted as its own stance or pose. Also what Event cards name for the
   **Hero** move (rulebook §5.1) - exactly one of these five, once per game, cancels an Event.
 - **Item - Værktøjer & færdigheder (skills, 2-3):** e.g. technical, planning, facilitation,
   communication, leadership, analysis, customer, quality - shown as a small held prop (laptop,
   phone, clipboard, coffee cup, wrench, etc.).
 
 ## Other character traits (not physical parts, tracked on the character card)
-- **Need** is not a separate deal - **it is your Torso**, read a second way from week 3 on
+- **Need** is not a separate deal - **it is your Torso**, read a second way from week 2 on
   (see [../rules/rulebook.md](../rules/rulebook.md) §5.1). Nothing extra to print, deal or write
   down: the five Torso values (Autonomy, Hierarchy, Community, Quality, Recognition) double as
   the five Need conditions. It was never a *team* need - it's personal, same as Motivation.
 - **Individual Knowledge** doesn't exist any more - what a character knows is which squares
-  they cover on the shared **Zone** board (board 4), set by their **Legs** (row) and **Item**
+  they cover on the shared **Zone** board (board 4), set by their **Head** (row) and **Item**
   (column) at setup and grown by Learn/Teach from there. See
   [../rules/rulebook.md](../rules/rulebook.md) §8.
 
@@ -101,7 +101,7 @@ result.
 
 **Here, the field is the team itself.** It's small and temporary, but it still has its own
 sense of who's earned the right to take charge, be listened to, or be trusted with a
-judgment call. That standing is tracked as **Capital** (0-5, starting at 2 for everyone - nobody's proven anything yet). It's defined mechanically in
+judgment call. That standing is tracked as **Capital** (0-5, starting at 0 for everyone - nobody's proven anything yet). It's defined mechanically in
 [../rules/rulebook.md](../rules/rulebook.md) §5.1.
 
 ### Capital has forms, and they convert

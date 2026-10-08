@@ -149,7 +149,7 @@ bands, highlights) and, where it's read as text, a darker ink:
 | Capital | `#D9D3C4` Bone | `#6E6249` Bone Ink | Personal standing/recognition - the "+2 Capital" highlight, the Capital box on the person board; the seam-12 placement line |
 | People | `#F5CE89` Apricot Cream | `#9C7A32` Apricot Cream Ink | Event category header (`cat-ppl`); also board 3's Standing slot (shared colour, different concept); the seam-31 placement line |
 | Environment | `#B8C1A1` Dry Sage | `#6E7A54` Dry Sage Ink | Event category header (`cat-env`); the seam-43 placement line |
-| Adaptability | `#B5C7CF` Pale Sky | `#3F5B66` Pale Sky Ink | The team's re-lay track - the Ledger's 4th band, the "+1 Adaptability" highlight/keyword; the seam-41 placement line |
+| Adaptability | `#B5C7CF` Pale Sky | `#3F5B66` Pale Sky Ink | The team's shared token pool - the Ledger's 4th band, the "+1 Adaptability" highlight/keyword; the seam-41 placement line |
 
 The five **inks** above also double as the **board-to-board seam placement guide** (see
 `_check-table-layout.svg` and the matching edge lines on each printed board) - one seam per

@@ -4,6 +4,12 @@ Status: **assessment of the v0.1 paper design, before first playtest.**
 Assessed against [concept.md](./concept.md), [../rules/rulebook.md](../rules/rulebook.md),
 [habitus-model.md](./habitus-model.md), and [../components/README.md](../components/README.md).
 
+> **Historical (updated 2026-10-07).** The figures below are the v0.1 paper analysis and are
+> superseded by [rulebook.md](../rules/rulebook.md) §3.2 and §16: 12 Events are drawn (weeks
+> 2-7) from a 23-card deck, a neutral Work card makes 1 Work (not ~1.4), Activity cards belong to
+> the team (no executor, no Skill match), Event Adaptability costs run 1-3 by size, and the
+> Sustainable threshold is 88. Head is education and Legs is instinct.
+
 > **Headline verdict (original): v0.1 is not playable as written.** Not because the ideas are
 > bad - the premise and the opening build ritual are genuinely strong - but because four
 > specific defects stop a table from resolving a single day without house-ruling.
@@ -524,7 +530,7 @@ rules don't notice:
 
 | Bourdieu's form | Already in the game as | Currently converts to Capital? |
 |---|---|---|
-| Cultural capital | **Knowledge** and **Skills** - literally Base (upbringing) and Legs (education) | No |
+| Cultural capital | **Knowledge** and **Skills** - literally Base (upbringing) and Head (education) | No |
 | Social capital | **Trust**, and the team relationships built by Coordinate | No |
 | Symbolic capital | **Capital** (§5.1) | - |
 
@@ -600,7 +606,7 @@ something.
 | Base and Legs are inert (**S3**) | They supply the cultural capital that converts into standing |
 
 Note the last row: this proposal partly closes **S3** as a side effect. Base (upbringing) and
-Legs (education) are, in Bourdieu's terms, *precisely* where a person's inherited cultural
+Head (education) are, in Bourdieu's terms, *precisely* where a person's inherited cultural
 capital comes from - so wiring them to Capital isn't a patch, it's the theory finally being
 implemented.
 
@@ -669,7 +675,7 @@ now mechanically a team that is excellent at familiar work and cannot change cou
 into a runaway (cheap teaching → Capability → more Work → more of everything).
 
 ### S3. Two of the five habitus parts are mechanically inert
-**Base (upbringing)** and **Legs (education)** have zero rules effect anywhere in the
+**Base (upbringing)** and **Head (education)** have zero rules effect anywhere in the
 rulebook. They are the first two parts the player picks, in the ritual the whole design is
 anchored on. Torso and Head have exactly **two** worked examples between them.
 

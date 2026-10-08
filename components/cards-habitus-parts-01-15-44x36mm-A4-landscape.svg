@@ -1,19 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>Habitus part-cards 1 of 2 (Base, Legs, Torso) - true 44 x 36 mm - print &amp; cut</title>
+<title>Habitus part-cards 1 of 2 (Base, Head, Torso) - true 44 x 36 mm - print &amp; cut</title>
 <desc>True A4 landscape page (297x210mm), so it prints at 100% on real paper with no forced
 "fit to page" scaling - unlike the old single 272x297mm custom-page sheet, which was wider
 than any standard paper size and got shrunk by print drivers, so the cards no longer matched
 the person board's true 44x36mm habitus seats. The board (297x210mm, already real A4
 landscape) was always correct - see board-person-170x141mm-A4-portrait.svg. Fifteen
-part-cards (Base, Legs, Torso rows), five per row. Cut along the gaps and slot them into the
+part-cards (Base, Head, Torso rows), five per row. Cut along the gaps and slot them into the
 person board's seats. Sheet 2 of 2 (cards-habitus-parts-16-25-44x36mm-A4-landscape.svg) holds
-Head and Item. The figure you build is the character sheet - nothing is written down. Every
-card carries the habitus tint #E8D4B8, which marks habitus everywhere it appears.</desc>
+Legs and Item. The figure you build is the character sheet - nothing is written down. Every
+card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habitus everywhere it appears.</desc>
 
 <style>
   .serif { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
   .mono  { font-family:"IBM Plex Mono","Courier Prime",Courier,monospace; fill:#000000; }
-  .cut   { fill:#E8D4B8; stroke:#2A2620; stroke-width:.4; }
+  .cut   { fill:#F0E3D1; stroke:#2A2620; stroke-width:.4; }
   .hair  { stroke:#4A5259; stroke-width:.25; fill:none; opacity:.7; }
   .nm    { font-size:4.2px; }
   .ef    { font-size:2.5px; }
@@ -25,7 +25,7 @@ card carries the habitus tint #E8D4B8, which marks habitus everywhere it appears
 <defs>
   <!-- Row = outer shape. Element = pip count. Shape + pips is unique across all 20. -->
   <g id="sh-base"><rect x="-3" y="-3" width="6" height="6" rx=".5" class="ic"/></g>
-  <g id="sh-legs"><polygon points="0,-4.32 3.84,2.52 -3.84,2.52" class="ic"/></g>
+  <g id="sh-head"><polygon points="3.3,0 1.65,2.86 -1.65,2.86 -3.3,0 -1.65,-2.86 1.65,-2.86" class="ic"/></g>
   <g id="sh-torso"><polygon points="0,-3.3 3.14,-1.02 1.94,2.67 -1.94,2.67 -3.14,-1.02" class="ic"/></g>
 
   <g id="p1"><circle cx="0" cy="0" r=".5" class="pip"/></g>
@@ -49,164 +49,168 @@ card carries the habitus tint #E8D4B8, which marks habitus everywhere it appears
   <rect x="14" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <text x="17" y="47" class="serif" font-size="3.5">Bookish</text>
   <line x1="17" y1="50" x2="55" y2="50" class="hair"/>
-  <rect x="27.92" y="53.2" width="21.3" height="3" rx=".4" fill="#D3B1B1"/>
-  <text x="17" y="55" class="mono" font-size="2.6">LEARN: +1 MOTIVATION</text>
-  <text x="17" y="59.5" class="serif" font-size="2.6">Theory first, then</text>
-  <text x="17" y="64" class="serif" font-size="2.6">hands, eventually.</text>
-  <rect x="27.92" y="67.4" width="21.3" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="17" y="69" class="mono" font-size="2.6">TEACH: -1 MOTIVATION</text>
+  <rect x="29.2" y="52.4" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
+  <text x="17" y="55" class="mono" font-size="3">LEARN: +1 MOTIVATION</text>
+  <text x="17" y="60.2" class="serif" font-size="3.2">Theory first, then</text>
+  <text x="17" y="64.6" class="serif" font-size="3.2">hands, eventually.</text>
+  <rect x="29.2" y="68" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
+  <text x="17" y="70.6" class="mono" font-size="3">TEACH: -1 MOTIVATION</text>
 
   <g transform="translate(13.5,0)">
   <rect x="50.5" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <text x="53.5" y="47" class="serif" font-size="3.5">Hands-On</text>
   <line x1="53.5" y1="50" x2="91.5" y2="50" class="hair"/>
-  <rect x="64.42" y="53.2" width="21.3" height="3" rx=".4" fill="#D3B1B1"/>
-  <text x="53.5" y="55" class="mono" font-size="2.6">TEACH: +1 MOTIVATION</text>
-  <text x="53.5" y="59.5" class="serif" font-size="2.6">You fix it, then</text>
-  <text x="53.5" y="64" class="serif" font-size="2.6">explain it - maybe.</text>
-  <rect x="64.42" y="67.4" width="21.3" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="53.5" y="69" class="mono" font-size="2.6">LEARN: -1 MOTIVATION</text>
+  <rect x="65.7" y="52.4" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
+  <text x="53.5" y="55" class="mono" font-size="3">TEACH: +1 MOTIVATION</text>
+  <text x="53.5" y="60.2" class="serif" font-size="3.2">You fix it, then</text>
+  <text x="53.5" y="64.6" class="serif" font-size="3.2">explain it - maybe.</text>
+  <rect x="65.7" y="68" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
+  <text x="53.5" y="70.6" class="mono" font-size="3">LEARN: -1 MOTIVATION</text>
   </g>
 
   <g transform="translate(27,0)">
   <rect x="87" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <text x="90" y="47" class="serif" font-size="3.5">Sheltered</text>
   <line x1="90" y1="50" x2="128" y2="50" class="hair"/>
-  <text x="90" y="55" class="mono" font-size="2.6">GRIND DOESN'T TOUCH YOU</text>
-  <text x="90" y="59.5" class="serif" font-size="2.6">The highs and lows</text>
-  <text x="90" y="64" class="serif" font-size="2.6">never quite reached you.</text>
-  <rect x="89.6" y="67.4" width="16.5" height="2.4" rx=".3" fill="#D3B1B1"/>
-  <text x="90" y="69" class="mono" font-size="2.6">MOTIVATION NEVER OVER 3</text>
+  <text x="90" y="55" class="mono" font-size="3">THE GRIND SKIPS YOU</text>
+  <text x="90" y="60.2" class="serif" font-size="3.2">The highs and lows</text>
+  <text x="90" y="64.6" class="serif" font-size="3.2">never quite reached you.</text>
+  <rect x="89.6" y="66.4" width="18.8" height="3.4" rx=".3" fill="#D3B1B1"/>
+  <text x="90" y="69" class="mono" font-size="3">MOTIVATION</text>
+  <text x="90" y="73" class="mono" font-size="3">NEVER OVER 3</text>
   </g>
 
   <g transform="translate(40.5,0)">
   <rect x="123.5" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <text x="126.5" y="47" class="serif" font-size="3.5">Dependable</text>
   <line x1="126.5" y1="50" x2="164.5" y2="50" class="hair"/>
-  <text x="126.5" y="55" class="mono" font-size="2.6">TAKE ONE FOR THE TEAM</text>
-  <text x="126.5" y="59.5" class="serif" font-size="2.6">Somebody has to hold it together.</text>
-  <text x="126.5" y="64" class="serif" font-size="2.6">It might as well be you.</text>
-  <rect x="126.1" y="67.4" width="30.6" height="3" rx=".3" fill="#D3B1B1"/>
-  <text x="126.5" y="69" class="mono" font-size="2.6">SPEND 3 MOTIVATION</text>
-  <rect x="126.1" y="71.4" width="15" height="3" rx=".3" fill="#D3CEDF"/>
-  <rect x="142.7" y="71.4" width="16.5" height="3" rx=".3" fill="#D9D3C4"/>
-  <text x="126.5" y="73" class="mono" font-size="2.6">+1 TRUST +1 CAPITAL</text>
+  <text x="126.5" y="54.6" class="mono" font-size="3">TAKE ONE FOR THE TEAM</text>
+  <text x="126.5" y="59" class="serif" font-size="3.2">Somebody has to hold</text>
+  <text x="126.5" y="62.8" class="serif" font-size="3.2">it together.</text>
+  <rect x="126.1" y="64.9" width="33.2" height="3.4" rx=".3" fill="#D3B1B1"/>
+  <text x="126.5" y="67.5" class="mono" font-size="3">SPEND 3 MOTIVATION</text>
+  <rect x="126.1" y="69.6" width="15.2" height="3.4" rx=".3" fill="#D3CEDF"/>
+  <rect x="142.3" y="69.6" width="18.8" height="3.4" rx=".3" fill="#D9D3C4"/>
+  <text x="126.5" y="72.2" class="mono" font-size="3">+1 TRUST +1 CAPITAL</text>
   </g>
 
   <g transform="translate(54,0)">
   <rect x="160" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <text x="163" y="47" class="serif" font-size="3.5">Competitive</text>
   <line x1="163" y1="50" x2="201" y2="50" class="hair"/>
-  <text x="163" y="55" class="mono" font-size="2.6">HERO ALWAYS AVAILABLE</text>
-  <text x="163" y="59.5" class="serif" font-size="2.6">You needed this win</text>
-  <text x="163" y="64" class="serif" font-size="2.6">more than they did.</text>
-  <text x="163" y="69" class="mono" font-size="2.6">ANOTHER PLAYS HERO:</text>
-  <rect x="162.6" y="71.4" width="19.2" height="3" rx=".3" fill="#D3B1B1"/>
-  <text x="163" y="73" class="mono" font-size="2.6">-1 MOTIVATION</text>
+  <text x="163" y="54.6" class="mono" font-size="3">HERO IS REUSABLE</text>
+  <text x="163" y="59" class="serif" font-size="3.2">Still needs 3 Motivation.</text>
+  <text x="163" y="62.8" class="serif" font-size="3.2">You needed this win.</text>
+  <text x="163" y="67.8" class="mono" font-size="3">ANOTHER PLAYS HERO:</text>
+  <rect x="162.6" y="69.6" width="24.2" height="3.4" rx=".3" fill="#D3B1B1"/>
+  <text x="163" y="72.2" class="mono" font-size="3">-1 MOTIVATION</text>
   </g>
 </g>
 
-<!-- ═══ LEGS ═══ -->
-<text x="12" y="86" class="mono rl">LEGS · EDUCATION → WHERE YOU START</text>
+<!-- ═══ HEAD ═══ -->
+<text x="12" y="86" class="mono rl">HEAD · EDUCATION → WHERE YOU START</text>
 <text x="258" y="86" class="serif" font-size="2.8" text-anchor="end" font-style="italic">the row you begin in on the Zone</text>
 <g>
   <rect x="14" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <text x="17" y="97" class="serif" font-size="3.5">Technical</text>
   <line x1="17" y1="100" x2="55" y2="100" class="hair"/>
-  <text x="17" y="106" class="serif" font-size="2.6">Your row on the Zone is</text>
-  <text x="17" y="110" class="serif" font-size="2.6">where the work happens.</text>
+  <text x="17" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
+  <text x="17" y="110.6" class="serif" font-size="3.2">where the work happens.</text>
 
   <g transform="translate(13.5,0)">
   <rect x="50.5" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <text x="53.5" y="97" class="serif" font-size="3.5">Social</text>
   <line x1="53.5" y1="100" x2="91.5" y2="100" class="hair"/>
-  <text x="53.5" y="106" class="serif" font-size="2.6">Your row on the Zone is</text>
-  <text x="53.5" y="110" class="serif" font-size="2.6">where people talk while they work.</text>
+  <text x="53.5" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
+  <text x="53.5" y="110.6" class="serif" font-size="3.2">where people talk</text>
+  <text x="53.5" y="115.2" class="serif" font-size="3.2">while they work.</text>
   </g>
 
   <g transform="translate(27,0)">
   <rect x="87" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <text x="90" y="97" class="serif" font-size="3.5">Commercial</text>
   <line x1="90" y1="100" x2="128" y2="100" class="hair"/>
-  <text x="90" y="106" class="serif" font-size="2.6">Your row on the Zone faces</text>
-  <text x="90" y="110" class="serif" font-size="2.6">outward, toward the customer.</text>
+  <text x="90" y="106" class="serif" font-size="3.2">Your row on the Zone</text>
+  <text x="90" y="110.6" class="serif" font-size="3.2">faces outward, toward</text>
+  <text x="90" y="115.2" class="serif" font-size="3.2">the customer.</text>
   </g>
 
   <g transform="translate(40.5,0)">
   <rect x="123.5" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <text x="126.5" y="97" class="serif" font-size="3.5">Analytical</text>
   <line x1="126.5" y1="100" x2="164.5" y2="100" class="hair"/>
-  <text x="126.5" y="106" class="serif" font-size="2.6">Your row on the Zone is</text>
-  <text x="126.5" y="110" class="serif" font-size="2.6">where things get written down.</text>
+  <text x="126.5" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
+  <text x="126.5" y="110.6" class="serif" font-size="3.2">where things get</text>
+  <text x="126.5" y="115.2" class="serif" font-size="3.2">written down.</text>
   </g>
 
   <g transform="translate(54,0)">
   <rect x="160" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <text x="163" y="97" class="serif" font-size="3.5">Organisational</text>
   <line x1="163" y1="100" x2="201" y2="100" class="hair"/>
-  <text x="163" y="106" class="serif" font-size="2.6">Your row on the Zone is</text>
-  <text x="163" y="110" class="serif" font-size="2.6">where the schedule lives.</text>
+  <text x="163" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
+  <text x="163" y="110.6" class="serif" font-size="3.2">where the schedule lives.</text>
   </g>
 </g>
 
 <!-- ═══ TORSO ═══ -->
 <text x="12" y="136" class="mono rl">TORSO · VALUES → HOW EVENTS LAND</text>
-<text x="258" y="136" class="serif" font-size="2.8" text-anchor="end" font-style="italic">your Torso is also your Need, from week 3</text>
+<text x="258" y="136" class="serif" font-size="2.8" text-anchor="end" font-style="italic">your Torso is also your Need, from week 2</text>
 <g>
   <rect x="14" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="17" y="147" class="serif" font-size="3.5">Autonomy</text>
   <line x1="17" y1="150" x2="55" y2="150" class="hair"/>
-  <rect x="16.5" y="154.3" width="16.1" height="2.6" rx=".3" fill="#F7D7A1"/>
-  <text x="17" y="156" class="mono" font-size="2.6">MANAGEMENT:</text>
-  <rect x="16.6" y="158.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="17" y="160" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  <rect x="32.6" y="165.3" width="17.7" height="2.6" rx=".3" fill="#C7CFB5"/>
-  <text x="17" y="167" class="mono" font-size="2.6">IMMUNE TO ENVIRONMENT</text>
+  <rect x="16.6" y="153.4" width="18.8" height="3.4" rx=".3" fill="#F7D7A1"/>
+  <text x="17" y="156" class="mono" font-size="3">MANAGEMENT:</text>
+  <rect x="16.6" y="158" width="24.2" height="3.4" rx=".35" fill="#D3B1B1"/>
+  <text x="17" y="160.6" class="mono" font-size="3">-1 MOTIVATION</text>
+  <rect x="34.6" y="165.4" width="20.6" height="3.4" rx=".3" fill="#C7CFB5"/>
+  <text x="17" y="168" class="mono" font-size="3">IMMUNE TO ENVIRONMENT</text>
 
   <g transform="translate(13.5,0)">
   <rect x="50.5" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="53.5" y="147" class="serif" font-size="3.5">Hierarchy</text>
   <line x1="53.5" y1="150" x2="91.5" y2="150" class="hair"/>
-  <rect x="53" y="154.3" width="17.7" height="2.6" rx=".3" fill="#C7CFB5"/>
-  <text x="53.5" y="156" class="mono" font-size="2.6">ENVIRONMENT:</text>
-  <rect x="53.1" y="158.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="53.5" y="160" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  <rect x="69.1" y="165.3" width="16.1" height="2.6" rx=".3" fill="#F7D7A1"/>
-  <text x="53.5" y="167" class="mono" font-size="2.6">IMMUNE TO MANAGEMENT</text>
+  <rect x="53.1" y="153.4" width="20.6" height="3.4" rx=".3" fill="#C7CFB5"/>
+  <text x="53.5" y="156" class="mono" font-size="3">ENVIRONMENT:</text>
+  <rect x="53.1" y="158" width="24.2" height="3.4" rx=".35" fill="#D3B1B1"/>
+  <text x="53.5" y="160.6" class="mono" font-size="3">-1 MOTIVATION</text>
+  <rect x="71.1" y="165.4" width="18.8" height="3.4" rx=".3" fill="#F7D7A1"/>
+  <text x="53.5" y="168" class="mono" font-size="3">IMMUNE TO MANAGEMENT</text>
   </g>
 
   <g transform="translate(27,0)">
   <rect x="87" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="90" y="147" class="serif" font-size="3.5">Community</text>
   <line x1="90" y1="150" x2="128" y2="150" class="hair"/>
-  <rect x="89.5" y="154.3" width="9.9" height="2.6" rx=".3" fill="#D3CEDF"/>
-  <text x="90" y="156" class="mono" font-size="2.6">PEOPLE:</text>
-  <rect x="89.6" y="158.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="90" y="160" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  <rect x="105.6" y="165.3" width="13" height="2.6" rx=".3" fill="#B5C7CF"/>
-  <text x="90" y="167" class="mono" font-size="2.6">IMMUNE TO CUSTOMER</text>
+  <rect x="89.6" y="153.4" width="11.6" height="3.4" rx=".3" fill="#D3CEDF"/>
+  <text x="90" y="156" class="mono" font-size="3">PEOPLE:</text>
+  <rect x="89.6" y="158" width="24.2" height="3.4" rx=".35" fill="#D3B1B1"/>
+  <text x="90" y="160.6" class="mono" font-size="3">-1 MOTIVATION</text>
+  <rect x="107.6" y="165.4" width="15.2" height="3.4" rx=".3" fill="#B5C7CF"/>
+  <text x="90" y="168" class="mono" font-size="3">IMMUNE TO CUSTOMER</text>
   </g>
 
   <g transform="translate(40.5,0)">
   <rect x="123.5" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="126.5" y="147" class="serif" font-size="3.5">Quality</text>
   <line x1="126.5" y1="150" x2="164.5" y2="150" class="hair"/>
-  <rect x="126" y="154.3" width="13" height="2.6" rx=".3" fill="#B5C7CF"/>
-  <text x="126.5" y="156" class="mono" font-size="2.6">CUSTOMER:</text>
-  <rect x="126.1" y="158.3" width="21.1" height="2.6" rx=".35" fill="#D3B1B1"/>
-  <text x="126.5" y="160" class="mono" font-size="2.6">-1 MOTIVATION</text>
-  <rect x="142.1" y="165.3" width="9.9" height="2.6" rx=".3" fill="#D3CEDF"/>
-  <text x="126.5" y="167" class="mono" font-size="2.6">IMMUNE TO PEOPLE</text>
+  <rect x="126.1" y="153.4" width="15.2" height="3.4" rx=".3" fill="#B5C7CF"/>
+  <text x="126.5" y="156" class="mono" font-size="3">CUSTOMER:</text>
+  <rect x="126.1" y="158" width="24.2" height="3.4" rx=".35" fill="#D3B1B1"/>
+  <text x="126.5" y="160.6" class="mono" font-size="3">-1 MOTIVATION</text>
+  <rect x="144.1" y="165.4" width="11.6" height="3.4" rx=".3" fill="#D3CEDF"/>
+  <text x="126.5" y="168" class="mono" font-size="3">IMMUNE TO PEOPLE</text>
   </g>
 
   <g transform="translate(54,0)">
   <rect x="160" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="163" y="147" class="serif" font-size="3.5">Recognition</text>
   <line x1="163" y1="150" x2="201" y2="150" class="hair"/>
-  <text x="163" y="156" class="mono" font-size="2.6">CAPITAL GAINS:</text>
-  <text x="163" y="160" class="mono" font-size="2.6">NAME A TEAMMATE</text>
-  <rect x="162.6" y="165.3" width="21.1" height="2.6" rx=".3" fill="#D3B1B1"/>
-  <text x="163" y="167" class="mono" font-size="2.6">+1 MOTIVATION TO THEM</text>
+  <text x="163" y="156" class="mono" font-size="3">CAPITAL GAINS:</text>
+  <text x="163" y="160.6" class="mono" font-size="3">NAME A TEAMMATE</text>
+  <rect x="162.6" y="165.4" width="24.2" height="3.4" rx=".3" fill="#D3B1B1"/>
+  <text x="163" y="168" class="mono" font-size="3">+1 MOTIVATION TO THEM</text>
   </g>
 </g>
 
@@ -217,11 +221,11 @@ card carries the habitus tint #E8D4B8, which marks habitus everywhere it appears
   <g transform="translate(203,46)"><use href="#sh-base"/><use href="#p4"/></g>
   <g transform="translate(253,46)"><use href="#sh-base"/><use href="#p5"/></g>
 
-  <g transform="translate(53,96)"><use href="#sh-legs"/><g transform="translate(0,0.5)"><use href="#p1"/></g></g>
-  <g transform="translate(103,96)"><use href="#sh-legs"/><g transform="translate(0,0.5)"><use href="#p2"/></g></g>
-  <g transform="translate(153,96)"><use href="#sh-legs"/><g transform="translate(0,0.5)"><use href="#p3"/></g></g>
-  <g transform="translate(203,96)"><use href="#sh-legs"/><g transform="translate(0,0.5)"><use href="#p4"/></g></g>
-  <g transform="translate(253,96)"><use href="#sh-legs"/><g transform="translate(0,0.5)"><use href="#p5"/></g></g>
+  <g transform="translate(53,96)"><use href="#sh-head"/><use href="#p1"/></g>
+  <g transform="translate(103,96)"><use href="#sh-head"/><use href="#p2"/></g>
+  <g transform="translate(153,96)"><use href="#sh-head"/><use href="#p3"/></g>
+  <g transform="translate(203,96)"><use href="#sh-head"/><use href="#p4"/></g>
+  <g transform="translate(253,96)"><use href="#sh-head"/><use href="#p5"/></g>
 
   <g transform="translate(53,146)"><use href="#sh-torso"/><use href="#p1"/></g>
   <g transform="translate(103,146)"><use href="#sh-torso"/><use href="#p2"/></g>

@@ -26,7 +26,6 @@ team just like it. Choose one at setup and put the other five back in the box.</
     <text x="5" y="9" class="m q" font-size="3.2" letter-spacing="1.4">PROJECT</text>
     <circle cx="78" cy="7.5" r="5" class="c" stroke-width=".6"/>
     <line x1="5" y1="29" x2="83" y2="29" class="h" stroke-width=".7"/>
-    <line x1="5" y1="81" x2="83" y2="81" class="h"/>
   </g>
 </defs>
 
@@ -40,6 +39,8 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">PATIENT</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">PORTAL</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · HEALTH</text>
+  <text x="46" y="15.5" class="s" font-size="3.4">No identity,</text>
+  <text x="46" y="19.5" class="s" font-size="3.4">no chart to open.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Appointment reminders</text>
@@ -71,7 +72,6 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No identity, no chart to open.</text>
 </g>
 
 <!-- ══ II · LOAN PLATFORM (finance, straight) ══ -->
@@ -81,6 +81,8 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">LOAN</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">PLATFORM</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · FINANCE</text>
+  <text x="46" y="15.5" class="s" font-size="3.4">No ledger, nothing</text>
+  <text x="46" y="19.5" class="s" font-size="3.4">to reconcile.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Branch locator</text>
@@ -112,7 +114,6 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No ledger, nothing to reconcile.</text>
 </g>
 
 <!-- ══ III · THE EXCEL WORKFLOW (software, tongue-in-cheek - the customer can't explain their own spreadsheet) ══ -->
@@ -122,6 +123,8 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">EXCEL</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">WORKFLOW</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · SOFTWARE</text>
+  <text x="46" y="15.5" class="s" font-size="3.4">Not even the customer</text>
+  <text x="46" y="19.5" class="s" font-size="3.4">can explain the macro.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Screenshot → spec</text>
@@ -153,7 +156,6 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="86" class="s" font-size="3.4" font-style="italic">Not even the customer can explain the macro.</text>
 </g>
 
 <!-- ══ IV · THE MOBILE APP (retail) ══ -->
@@ -163,6 +165,9 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">MOBILE</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">APP</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · RETAIL</text>
+  <text x="46" y="14.5" class="s" font-size="3.4">No sync engine, nothing</text>
+  <text x="46" y="18.2" class="s" font-size="3.4">to send notifications</text>
+  <text x="46" y="21.9" class="s" font-size="3.4">about.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">App store listing</text>
@@ -194,7 +199,6 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No sync engine, nothing to send notifications about.</text>
 </g>
 
 <!-- ══ V · HOME RENOVATION (construction) ══ -->
@@ -204,6 +208,8 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">HOME</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">RENOVATION</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · CONSTRUCTION</text>
+  <text x="46" y="15.5" class="s" font-size="3.4">No frame,</text>
+  <text x="46" y="19.5" class="s" font-size="3.4">nothing to finish.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Permit application</text>
@@ -235,7 +241,6 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No frame, nothing to finish.</text>
 </g>
 
 <!-- ══ VI · THE WEDDING (events) ══ -->
@@ -245,6 +250,8 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">THE</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">WEDDING</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · EVENTS</text>
+  <text x="46" y="15.5" class="s" font-size="3.4">No venue booked,</text>
+  <text x="46" y="19.5" class="s" font-size="3.4">nowhere to seat anyone.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Guest list and invitations</text>
@@ -276,6 +283,5 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
   <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
-  <text x="5" y="86" class="s" font-size="3.4" font-style="italic">No venue booked, nowhere to seat anyone.</text>
 </g>
 </svg>

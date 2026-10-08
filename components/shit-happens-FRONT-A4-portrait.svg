@@ -31,33 +31,33 @@ on the reverse.</desc>
 <text x="53" y="81" class="m" font-size="5" text-anchor="middle" fill="#FFFFFF">EVENT 1</text>
 <rect x="92" y="39" width="58" height="80" rx="2" class="slot" style="stroke:#905151;fill:#905151"/>
 <text x="121" y="81" class="m" font-size="5" text-anchor="middle" fill="#FFFFFF">EVENT 2</text>
-<text x="14" y="123" class="s" font-size="4">If you adapt, the card is resolved and discarded.</text>
-<text x="14" y="127" class="s" font-size="4">If not, the card stays and the SHIT stacks.</text>
+<text x="14" y="123" class="s" font-size="4">Cancel an Event in Adapt and it is discarded.</text>
+<text x="14" y="127" class="s" font-size="4">Any Event you don't cancel happens before the week runs.</text>
 
 <!-- ═══ ADAPT ═══ -->
 <rect x="8" y="129" width="158" height="77" rx="2" class="r"/>
 <text x="14" y="138" class="m" font-size="7" letter-spacing="1.6">ADAPT</text>
-<text x="14" y="144.5" class="s" font-size="4.2">Deal with both Events now. <tspan font-weight="bold">Nothing resolves until this step is finished.</tspan></text>
+<text x="14" y="144.5" class="s" font-size="4.2">Cancel Events now. <tspan font-weight="bold">Nothing resolves until you are done.</tspan></text>
 
 <g id="pool">
   <text x="27" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">ADAPTABILITY</text>
   <rect x="24" y="153" width="58" height="49" rx="1.5" fill="#B5C7CF"/>
   <rect x="24" y="153" width="58" height="49" rx="1.5" class="w"/>
-  <circle cx="39" cy="168" r="5" class="w"/><circle cx="53" cy="168" r="5" class="w"/><circle cx="67" cy="168" r="5" class="w"/>
-  <circle cx="39" cy="184" r="5" class="w"/><circle cx="53" cy="184" r="5" class="w"/><circle cx="67" cy="184" r="5" class="w"/>
-  <text x="27" y="192" class="s" font-size="2.8">Spend maximum the number of Adapt points</text>
-  <text x="27" y="196" class="s" font-size="2.8">according to the placement of</text>
-  <text x="27" y="200" class="s" font-size="2.8">the Adaptability Coin on THE TEAM.</text>
+  <rect x="34" y="163" width="10" height="10" rx="1" class="w"/><rect x="48" y="163" width="10" height="10" rx="1" class="w"/><rect x="62" y="163" width="10" height="10" rx="1" class="w"/>
+  <rect x="34" y="179" width="10" height="10" rx="1" class="w"/><rect x="48" y="179" width="10" height="10" rx="1" class="w"/><rect x="62" y="179" width="10" height="10" rx="1" class="w"/>
+  <text x="27" y="192" class="s" font-size="2.8">The team's adapt tokens, up to 6.</text>
+  <text x="27" y="196" class="s" font-size="2.8">Cancel an Event: pay its number.</text>
+  <text x="27" y="200" class="s" font-size="2.8">Tokens stay until spent.</text>
 </g>
 
 <g id="lane-1">
   <text x="95" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">HERO · CANCELS IT</text>
-  <rect x="92" y="153" width="58" height="49" rx="1.5" fill="#E8D4B8"/>
+  <rect x="92" y="153" width="58" height="49" rx="1.5" fill="#F0E3D1"/>
   <rect x="92" y="153" width="58" height="49" rx="1.5" class="w"/>
   <rect x="121.46" y="156.48" width="16.38" height="3.22" rx=".45" fill="#D3B1B1"/>
-  <text x="95" y="159" class="s" font-size="2.8">Needs your Head, and <tspan font-weight="bold">3+ Motivation</tspan>.</text>
+  <text x="95" y="159" class="s" font-size="2.8">Needs your Legs, and <tspan font-weight="bold">3+ Motivation</tspan>.</text>
   <rect x="99" y="163" width="44" height="36" rx="1.5" class="w" stroke-dasharray="2 1.5"/>
-  <polygon points="3.3,0 1.65,2.86 -1.65,2.86 -3.3,0 -1.65,-2.86 1.65,-2.86" fill="#905151" stroke="#2A2620" stroke-width=".45" transform="translate(121,181)"/>
+  <polygon points="0,-4.32 3.84,2.52 -3.84,2.52" fill="#905151" stroke="#2A2620" stroke-width=".45" transform="translate(121,181)"/>
 </g>
 
 <!-- ═══ CLOSE THE WEEK ═══ -->
@@ -72,14 +72,14 @@ on the reverse.</desc>
 
 <circle cx="18" cy="251" r="5" class="w"/><text x="18" y="253" class="m" font-size="5.5" text-anchor="middle">2</text>
 <text x="26.3" y="250" class="s" font-size="5.4"><tspan font-weight="bold">Move the coins.</tspan> One step each, no more.</text>
-<text x="26.3" y="256" class="s" font-size="4.4">Any coin that reached its ring turns over - and stays turned.</text>
+<text x="26.3" y="256" class="s" font-size="4.4">Coins on their ring turn over for good. Add Adaptability tokens.</text>
 
 <circle cx="18" cy="267" r="5" class="w"/><text x="18" y="269" class="m" font-size="5.5" text-anchor="middle">3</text>
-<rect x="26.3" y="261.14" width="67.7" height="6.21" rx=".9" fill="#D3B1B1"/>
-<text x="26.3" y="266" class="s" font-size="5.4"><tspan font-weight="bold">Everyone loses 1 Motivation.</tspan></text>
+<rect x="26.3" y="261.14" width="94.3" height="6.21" rx=".9" fill="#D3B1B1"/>
+<text x="26.3" y="266" class="s" font-size="5.4"><tspan font-weight="bold">The grind: everyone loses 1 Motivation.</tspan></text>
 <text x="26.3" y="272" class="s" font-size="4.4">Check Torso vs Events, <tspan font-style="italic">then</tspan> add up - empty means they leave.</text>
 <polygon points="0,-1.32 1.256,-.408 0.776,1.068 -0.776,1.068 -1.256,-.408" fill="#905151" stroke="#2A2620" stroke-width=".2" transform="translate(28,275.3)"/>
-<text x="30.45" y="277" class="m q" font-size="3.4">FROM WEEK 3: +1 BACK IF THEIR NEED WAS MET</text>
+<text x="30.45" y="277" class="m q" font-size="3.4">FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET</text>
 
 <circle cx="18" cy="283" r="5" class="w"/><text x="18" y="285" class="m" font-size="5.5" text-anchor="middle">4</text>
 <text x="26.3" y="282" class="s" font-size="5.4"><tspan font-weight="bold">Move the week marker.</tspan> One week closer to the deadline.</text>

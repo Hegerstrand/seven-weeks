@@ -30,23 +30,32 @@ THE ZONE row widths) - not a playing card.
 # Person board (Specimen board)
 
 Source: `../board-person-170x141mm-A4-portrait.svg`
-Page: 297x210mm landscape · board itself is 244x142mm, centred via `<g
-transform="translate(26,14)">`
+Page: 297x210mm landscape · board itself is 244x142mm, placed left via `<g
+transform="translate(6,14)">`; a 37x142mm THE WEEK checklist panel sits on its right edge
+(page x 254-291, inside the print margin).
 
 One per player, print once each. Habitus row (5 seats, true 44x36mm matching the printed
-part-cards), then Zone Start/Flex/Need/Hero (44x36mm each, one under its matching habitus
-column), then Capital/Motivation as a full-width row underneath.
+part-cards), then Zone Start / Hero / Need / Flex (44x36mm each, under Base / Legs / Torso / Head;
+Hero sits under Legs because Legs is now the instinct (Pressure Response) part, Flex under Head),
+then Capital/Motivation as a full-width row underneath.
+
+**Text sizes were raised after the 2026-09-25 playtest ("still too small"):** seat captions 3.2,
+Zone Start / Flex / Need / Hero / Item space 3.0-3.2 (labels 3.2, `WEEK n` tags 2.6), Capital and
+Motivation labels 3.4 with scale numbers 3.2 and captions 2.9, THE WEEK panel body 2.6 with 3.0
+bold step names (panel now 37x150). The Size column in the tables below shows the older values -
+read them as minimums.
 
 ## Grouping
 
 | `<g id>` (in `<defs>`) | Contents | Background (hex) |
 |---|---|---|
 | `sh-base` / `sh-legs` / `sh-torso` / `sh-head` / `sh-item` | outline icon glyphs (square/triangle/pentagon/hexagon/diamond) | fill `#F2EDE0` (`.ic`) |
-| `sh-torso-red` / `sh-head-red` | filled variants of the same shapes, used where the seat is "live"/highlighted | fill `#905151` |
+| `sh-torso-red` / `sh-legs-red` | filled variants of the same shapes, used where the seat is "live"/highlighted (Hero = filled Legs triangle) | fill `#905151` |
 | board panel (ungrouped) | outer border rect, "SPECIMEN" title, italic aside, rule | - |
-| HABITUS row | 5 seats (Base/Legs/Torso/Head/Item), each with dashed tinted seat, icon+pips, label, italic "upbringing/education/..." caption, "→ outcome" caption | seats `.hab` fill `#E8D4B8`, dashed border |
-| Row A (Zone Start / Flex / Need / Hero / Item space) | 5 boxes, one per habitus column, each 44x36 | Zone Start & Item space: no fill (`.w` outline); Flex: no fill (`.w` outline) with dashed ring glyph; Need & Hero: `.seat` dashed, fill `#E8D4B8` |
-| Row B (Capital / Motivation) | 2 wide (114mm) boxes, each with a 6- or 5-circle scale + caption | Capital `#D9D3C4`; Motivation `#D3B1B1` |
+| HABITUS row | 5 seats (Base/Legs/Torso/Head/Item), each with dashed tinted seat, icon+pips, label, italic "upbringing/instinct/values/education/skill" caption, "→ outcome" caption (Legs reads "Pressure Response", Head reads "→ Zone row") | seats `.hab` fill `#F0E3D1`, dashed border |
+| Row A (Zone Start / Hero / Need / Flex / Item space) | 5 boxes, one per habitus column, each 44x36 | Zone Start & Item space: no fill (`.w` outline); Flex: no fill (`.w` outline) with dashed ring glyph; Hero & Need: `.seat` dashed, fill `#F0E3D1` |
+| Row B (Capital / Motivation) | 2 wide (114mm) boxes, each with a 6-circle (Capital) or 5-square (Motivation) scale + caption | Capital `#D9D3C4`; Motivation `#D3B1B1` |
+| THE WEEK panel (page space, outside the board group) | outer border rect, mono title, rule, six numbered steps (PLAN / SHIT HAPPENS / ADAPT / EVENTS HAPPEN / THE WEEK RUNS / CLOSE), each a bold step name over 2-4 lines of rule text, italic "tick it off aloud" footer. Text is rulebook 6.1 "The week at a glance" - change one, change both | - |
 
 ## Text
 
@@ -55,20 +64,19 @@ column), then Capital/Motivation as a full-width row underneath.
 | "SPECIMEN" | `.m` mono | 5.4 | `#000000` | - |
 | "the figure is the record - nothing here is written" | `.s` italic serif | 3.2 | `#000000` | - |
 | "HABITUS" | `.m.q` mono | 3 | `#000000` | - |
-| "· slot the five part-cards (44 x 36 mm - true size)" | `.m.q` mono | 2.6 | `#000000` | - |
 | Habitus labels (BASE/LEGS/TORSO/HEAD/ITEM) | `.m` mono | 3.2 | `#000000` | - |
-| Habitus italic captions (upbringing/education/values/instinct/skill) | `.s.q` italic serif | 2.8 | `#000000` | - |
-| Habitus outcome captions (→ Motivation, → Skill / row, ...) | `.s.q` serif | 2.7 | `#000000` | - |
+| Habitus italic captions (upbringing/instinct/values/education/skill) | `.s.q` italic serif | 2.8 | `#000000` | - |
+| Habitus outcome captions (→ Motivation, → Zone row, → Events, → pressure, → Zone column) | `.s.q` serif | 3.2 | `#000000` | - |
 | "the shape on each seat tells you which part-card belongs there" | `.s.q` italic serif | 2.8 | `#000000` | - |
 | "ZONE START" + 3-line italic note | `.m.q` mono / `.s.q` italic serif | 2.6 / 2.5 | `#000000` | - |
 | "FLEX" + "WEEK 3" + cost note | `.m` mono / `.m.q` mono / `.s` serif | 2.6 / 1.9 / 2.1 | `#000000` | `#D3B1B1` chip behind "1 Motivation" |
 | "NEED" + week-3 rule text | `.m` mono / `.s` serif | 2.6 / 1.9 | `#000000` | - |
 | "HERO" + "WEEK 3" + rule text | `.m` mono / `.m.q` mono / `.s` serif | 2.6 / 1.9 / 1.9 | `#000000` | - |
 | "ITEM SPACE" + "Reserved for a second skill..." | `.m.q` mono / `.s.q` italic serif | 2.6 / 2.5 | `#000000` | - |
-| "CAPITAL" + "WEEK 3" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
-| "starts 2 - only grows if witnessed" | `.s.q` italic serif | 2.1 | `#000000` | - |
+| "CAPITAL" + "WEEK 2" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
+| "one marker - slide it. Starts 0, only grows if witnessed." | `.s.q` italic serif | 2.1 | `#000000` | - |
 | "MOTIVATION" + scale numbers 1-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2.7 | `#000000` | panel `#D3B1B1` |
-| "starts 3, -1 per week - reaching 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
+| "tokens - one per circle. Starts 3, -1 per week; 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
 
 ## Illustration
 
@@ -79,8 +87,13 @@ any), then label, then captions - so the icon never gets obscured by later chips
 seat additionally carries a dashed ring (`stroke-dasharray "2 1.3"`) as a "marker goes here"
 glyph, separate from the seat's own dashed border. Capital and Motivation are the only two
 elements that span **2.5 habitus-column widths** each (114mm) rather than matching a single
-44mm column - their circles use a different stroke colour (`#6E6249`, matching the "grows
-slowly" tone) for Capital vs plain `#2A2620` for Motivation.
+44mm column - **their wells are different shapes on purpose** (2026-09-25 playtest: players
+couldn't tell a token track from a marker track; shapes swapped 2026-10-07 so tokens sit in
+squares like the physical cubes). Capital is **one marker that slides**, like the Ledger, so its
+six wells are circles (r 4.2mm) joined by a thin line, stroke `#6E6249`
+(matching the "grows slowly" tone). Motivation is **a stack of cubes**, so its five wells
+are rounded squares (8.4mm, `rx` 1), stroke `#2A2620`. The adapt-token wells on board 2 use the
+same square (10mm, `rx` 1).
 
 ## Layout diagram
 
@@ -88,38 +101,38 @@ slowly" tone) for Capital vs plain `#2A2620` for Motivation.
 graph TD
   A["page background #FFFFFF"] --> B["board panel: SPECIMEN header + rule"]
   B --> C["HABITUS row: 5 seats (Base, Legs, Torso, Head, Item)"]
-  C --> D["Row A: Zone Start / Flex / Need / Hero / Item space"]
+  C --> D["Row A: Zone Start / Hero / Need / Flex / Item space"]
   D --> E["Row B: Capital #D9D3C4 | Motivation #D3B1B1"]
 ```
 
 ---
 
-# Standing strip (both faces, one page)
+# Standing strip (single face)
 
 Source: `../standing-281x34mm-A4-landscape.svg`
 Page: 333x210mm landscape · strip itself is 317x34mm (widened from 281 to match THE TEAM's
 widened Standing slot)
 
-The Standing row lives on a separate physical strip, not on THE TEAM board itself: cut both
-panels, glue to opposite faces of one 2mm greyboard piece, seat it in THE TEAM board's dashed
-slot with Face B showing, and flip in place at the start of week 4.
+The Standing row lives on a separate physical strip, not on THE TEAM board itself: cut the
+panel, glue it to one 2mm greyboard piece, and drop it into THE TEAM board's dashed slot at the
+start of week 2. It used to be double-faced (covered until week 4); Standing now opens with the
+rest of the Ledger, and THE TEAM itself is face down until then, so the covered face went.
 
 ## Grouping
 
 | `<g id>` | Contents | Background (hex) |
 |---|---|---|
 | header (ungrouped) | sheet title banner + rule | - |
-| `face-a` | "FACE A · THE ROW": Standing band, 6-circle track + numbered scale, flip-ring, footnote, "Authorized Voice" + description + citation | `#D9D3C4` |
-| `face-b` | "FACE B · UNTIL WEEK 4": turn-over instruction, "Standing joins the Ledger" headline, description with tinted term chip, all-caps reminder line | none (plain `.r` outline) |
-| cut instructions (ungrouped) | dashed cut line + 2 lines of glue/assembly instructions | - |
+| `face-a` | "THE ROW": Standing band, 6-circle track + numbered scale, flip-ring, footnote, "Authorized Voice" + description + citation | `#D9D3C4` |
+| cut instructions (ungrouped) | dashed cut line + 2 lines of glue/assembly instructions (drop in at week 2, coin on the highest Capital) | - |
 
 ## Text
 
 | Text | Class / font | Size | Colour | Background chip (hex) |
 |---|---|---|---|---|
-| "STANDING · BOTH FACES ON THIS PAGE · PRINT AT 100%" | `.m` mono | 3.2 | `#000000` | - |
-| "FACE A · THE ROW" | `.m` mono | 4.2 | `#000000` | - |
-| "this is the side you turn up at the start of week 4" | `.s` italic serif | 3.6 | `#000000` | - |
+| "STANDING · PRINT AT 100%" | `.m` mono | 3.2 | `#000000` | - |
+| "THE ROW" | `.m` mono | 4.2 | `#000000` | - |
+| "this is the strip you drop into its slot at the start of week 2" | `.s` italic serif | 3.6 | `#000000` | - |
 | "Standing" | `.s` serif | 6 | `#000000` | - |
 | "grown by nobody" | `.s` italic serif | 3.4 | `#000000` | - |
 | scale labels 0-5 | `.m` mono | 3.8 | `#000000` | - |
@@ -127,12 +140,6 @@ slot with Face B showing, and flip in place at the start of week 4.
 | "Authorized Voice" | `.s` serif | 5 | `#000000` | - |
 | "Once a week: cancel an / Event outright." | `.s` italic serif | 3.4 | `#000000` | - |
 | "BOURDIEU 1991" | `.m.q` mono | 2.6 | `#000000` | - |
-| "FACE B · UNTIL WEEK 4" | `.m` mono | 4.2 | `#000000` | - |
-| "this is the side showing while the strip sits in its slot" | `.s` italic serif | 3.6 | `#000000` | - |
-| "TURN ME OVER · START OF WEEK 4" | `.m.q` mono | 3.6 | `#000000` | - |
-| "Standing joins the Ledger." | `.s` serif | 9 | `#000000` | - |
-| "It is not grown. It mirrors the highest Capital..." | `.s` serif | 4.6 | `#000000` | `#D9D3C4` chip behind "Capital" |
-| "ALSO NOW: A FACE-DOWN QUALITY CHIP GOES ON EACH FEATURE" | `.m` mono | 3.2 | `#000000` | - |
 | Cut/glue instructions (2 lines) | `.s` serif (bold spans) | 4 | `#000000` | - |
 
 ## Illustration
@@ -152,8 +159,7 @@ every other dashed use (`.slot`/`.seat`/`.hab`, all `#2A2620`).
 graph TD
   A["page background #FFFFFF"] --> B["sheet header + rule"]
   B --> C["FACE A: Standing band #D9D3C4 + track + flip-ring + Authorized Voice"]
-  C --> D["FACE B: plain outline panel, turn-over instructions"]
-  D --> E["dashed cut line"]
+  C --> E["dashed cut line"]
   E --> F["glue/assembly instructions"]
 ```
 
@@ -394,8 +400,8 @@ graph TD
 
 FRONT is the master colour source for the whole game - see the colour canon in
 `board-game-boards` and `board-game-cards`. One coin per row; walk it as the track moves; at
-the ring, turn it over - that's a permanent **HABIT**. The Standing row is dashed/covered until
-week 4. BACK is Week 1's reveal, glued to the reverse.
+the ring, turn it over - that's a permanent **HABIT**. The Standing row is a separate strip,
+dropped into the dashed slot at the start of week 2. BACK is Week 1's reveal, glued to the reverse.
 
 ## FRONT
 
@@ -407,8 +413,8 @@ week 4. BACK is Week 1's reveal, glued to the reverse.
 | `trust` | title, subtitle, 6-circle coin track numbered 0-5, red flip-ring at circle 4, 'TEACH DOES NOTHING' footnote under circles 0-1, "Psychological Safety" + citation | `#D3CEDF` |
 | `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#C7CFB5` |
 | `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circles 0-1, "Shared Repertoire" + citation | `#F7D7A1` |
-| `adaptability` | title, subtitle, 6-circle track, flip-ring, single wide footnote spanning both halves, "Team Reflexivity" + citation | `#B5C7CF` |
-| `standing-slot` | title, subtitle, "STANDING GOES HERE, FACE DOWN" + turn-over instruction | `#F5CE89`, dashed border |
+| `adaptability` | title, subtitle ("a shared pool of tokens, kept on SHIT HAPPENS - not a track"), **one** coin well at the flip position (circle 4's x) with its red flip-ring, footnote "TURN IT OVER THE FIRST TIME THE POOL HOLDS 4 AT WEEK END", "Team Reflexivity" + citation. The six-circle 0-5 track is gone: Adaptability is a pool (rulebook §4), the coin only carries the Habit | `#B5C7CF` |
+| `standing-slot` | title, subtitle, "STANDING GOES HERE" + "DROP IT IN AT THE START OF WEEK 2 - COIN ON THE HIGHEST CAPITAL" | `#F5CE89`, dashed border |
 
 Row tint follows the same People/Environment/Management/Customer categories the Event-card
 tints derive from: Trust = People, Capability = Environment, Shared Practice = Management,
@@ -433,8 +439,8 @@ Adaptability = Customer - see the colour canon in `board-game-boards`/`board-gam
 | Row citation (e.g. "EDMONDSON 1999") | `.m.q` mono | 2.6 | `#000000` | - |
 | "Standing" | `.s` serif | 6 | `#000000` | - |
 | "the fifth row, on its own strip" | `.s` italic serif | 3.4 | `#000000` | - |
-| "STANDING GOES HERE, FACE DOWN" | `.m` mono | 4.4 | `#000000` | - |
-| "TURN IT OVER IN PLACE AT THE START OF WEEK 4" | `.m.q` mono | 3.2 | `#000000` | - |
+| "STANDING GOES HERE" | `.m` mono | 4.4 | `#000000` | - |
+| "DROP IT IN AT THE START OF WEEK 2 - COIN ON THE HIGHEST CAPITAL" | `.m.q` mono | 3.2 | `#000000` | - |
 
 ### Illustration
 
@@ -451,7 +457,7 @@ removed, since a single footnote per row reads cleaner and Adaptability never ha
 
 **Row order top to bottom:** Trust (`#D3CEDF`) → Capability (`#C7CFB5`) → Shared Practice
 (`#F7D7A1`) → Adaptability (`#B5C7CF`) → Standing slot (`#F5CE89`, dashed,
-week-4 only). This top-to-bottom order **is** the colour canon other components derive from -
+filled by the strip at the start of week 2). This top-to-bottom order **is** the colour canon other components derive from -
 do not reorder rows without updating every card/board that reads it.
 
 ### Layout diagram
@@ -463,7 +469,7 @@ graph TD
   C --> D["capability band #C7CFB5"]
   D --> E["shared-practice band #F7D7A1"]
   E --> F["adaptability band #B5C7CF"]
-  F --> G["standing-slot band #F5CE89, dashed, week-4"]
+  F --> G["standing-slot band #F5CE89, dashed, strip dropped in week 2"]
   G --> H["table-placement guide"]
 ```
 
@@ -540,7 +546,7 @@ graph TD
 | FRONT | `../the-zone-FRONT-A4-landscape.svg` | 297x210mm landscape (true A4) |
 | BACK | `../the-zone-BACK-A4-landscape.svg` | 297x210mm landscape (true A4) |
 
-One shared board for the whole table: rows = education (Legs), columns = skill (Item), a square
+One shared board for the whole table: rows = education (Head), columns = skill (Item), a square
 = the practice that training makes with that instrument. 20mm squares, one player tile per
 square. FRONT is week-1 content only - Learn/Teach payoff lives on THE DEVELOPMENT from week 3.
 Unlike THE PROJECT, SHIT HAPPENS and THE TEAM, THE ZONE never flips during play - BACK exists
@@ -553,12 +559,12 @@ it is never meant to be read at the table.
 
 | `<g id>` (in `<defs>`) | Contents | Background (hex) |
 |---|---|---|
-| `sh-legs` | triangle icon glyph (Legs row shape) | fill `#F2EDE0` (`.ic`) |
+| `sh-head` | hexagon icon glyph (Head row shape) | fill `#F2EDE0` (`.ic`) |
 | `sh-item` | diamond icon glyph (Item column shape) | fill `#F2EDE0` (`.ic`) |
 | `p1`-`p5` | pip-count glyphs (1-5 dots), used inside the shape icons | fill `#2A2620` (`.pip`) |
 | header (ungrouped) | "THE ZONE" title, italic subtitle, "THE ZONE · SHARED..." note, rule | - |
 | column headers | skill names (LAPTOP...CALENDAR) + "SKILL" label + 5 Item-diamond icons with pip counts | - |
-| row headers | "EDUCATION" (rotated -90°), 5 Legs-triangle icons with pip counts, row names | - |
+| row headers | "EDUCATION" (rotated -90°), 5 Head-hexagon icons with pip counts, row names | - |
 | the 5x5 grid | 25 cells (`.cell` class), practice-name text per cell, thick outer border, DEMO/COORDINATE/ALIGN/LEARN/PLAN column-footer labels | cells: no fill, outline only |
 | THE DEVELOPMENT placeholder | dashed 119x104 box + "THE DEVELOPMENT GOES HERE · FROM WEEK 3" + 2-line note + Shared Practice / 4-player caption | none, dashed `.r` border |
 | footer | rule + "WHAT **LEARN** AND **TEACH** DO " label + 3 explanatory paragraphs + Bourdieu closing note | - |
@@ -595,9 +601,8 @@ id="pN">` if a new count is needed and reuse the existing shape defs. The whole 
 block sits inside `<g transform="translate(-16,0)">` to recentre it under the header; keep any
 new grid content inside that same wrapper. Paint order: 25 outline-only cells first, then one
 thick-stroke (`stroke-width .8`) 100x100 border rect drawn **on top** of the cell grid to give
-the whole 5x5 block a single strong outline without doubling every internal line. The Legs
-triangle icons get a small nudge (`transform="translate(0,0.4)"`) applied to their pip glyphs
-only, not the shape - this is a known correction, keep it if new icons are added to this row.
+the whole 5x5 block a single strong outline without doubling every internal line. The row
+header icons are Head hexagons and need no pip nudge (the old Legs triangles did).
 The THE DEVELOPMENT placeholder is a **dashed** outline rect (`stroke-dasharray "3 2"`),
 distinguishing "content lives elsewhere, arriving later" from the solid-outline grid it sits
 beside. The 2-line caption under the column-footer labels (y=150/155, 5mm apart) now has the
@@ -611,7 +616,7 @@ used to share that space moved down into THE DEVELOPMENT box's own generous free
 graph TD
   A["page background #FFFFFF"] --> B["header + rule"]
   B --> C["column headers: skill names + Item-diamond icons"]
-  B --> D["row headers: EDUCATION + Legs-triangle icons + names/descriptions"]
+  B --> D["row headers: EDUCATION + Head-hexagon icons + names/descriptions"]
   C --> E["5x5 grid: 25 outline cells"]
   D --> E
   E --> F["thick 100x100 outer border (drawn after cells)"]
@@ -694,8 +699,8 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | page background | full-page rect | `#FFFFFF` |
 | header | "SHIT HAPPENS" title + "SHIT HAPPENS · FROM WEEK 2" + rule | - |
 | SHIT HAPPENS box | red-bordered panel, instruction line, 2 landing-zone slots, resolved-vs-stacks note | box border `#905151`; slot fill `#905151` (card silhouette, white label text) |
-| `pool` | ADAPTABILITY label + 6-circle track panel + 3 caption lines | `#B5C7CF` |
-| `lane-1` | HERO lane: label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#E8D4B8` |
+| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 3 caption lines | `#B5C7CF` |
+| `lane-1` | HERO lane: label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
 | CLOSE THE WEEK box | title, "TOP TO BOTTOM" note, rule, 4 numbered steps | - |
 | table-placement guide | 2 coloured edge lines (`#905151`, `#6E6249`) | - |
 
@@ -712,13 +717,13 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | "ADAPT" | `.m` mono | 7 | `#000000` | - |
 | "Deal with both Events now..." | `.s` serif | 4.2 | `#000000` | - |
 | "ADAPTABILITY" | `.m.q` mono | 3.4 | `#000000` | panel `#B5C7CF` |
-| "Spend maximum the number of Adapt points..." (3 lines) | `.s` serif | 2.8 | `#000000` | - |
-| "HERO · CANCELS IT" | `.m.q` mono | 3.4 | `#000000` | panel `#E8D4B8` |
-| "Needs your Head, and 3+ Motivation." | `.s` serif | 2.8 | `#000000` | - |
+| "The team's adapt tokens, up to 6." / "Cancel an Event: pay its number." / "Tokens stay until spent." (3 lines) | `.s` serif | 2.8 | `#000000` | - |
+| "HERO · CANCELS IT" | `.m.q` mono | 3.4 | `#000000` | panel `#F0E3D1` |
+| "Needs your Legs, and 3+ Motivation." | `.s` serif | 2.8 | `#000000` | - |
 | "CLOSE THE WEEK" | `.m` mono | 7 | `#000000` | - |
 | "TOP TO BOTTOM" | `.m.q` mono | 3.6 | `#000000` | - |
 | Step 1-4 headline + detail lines | `.s` serif (bold lead-in) | 5.4 / 4.4 | `#000000` | step 3 headline sits on `#D3B1B1` chip |
-| "FROM WEEK 3: +1 BACK IF THEIR NEED WAS MET" | `.m.q` mono | 3.4 | `#000000` | - |
+| "FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET" | `.m.q` mono | 3.4 | `#000000` | - |
 
 ### Illustration
 
@@ -735,20 +740,22 @@ WEEK down (both already sit close to the page's bottom margin).
 than the physical HERO tile (44x36mm, `cards-need-hero-44x36mm-A4-landscape.svg`) that actually
 gets placed there during play. It's now a dashed **44x36mm** rounded rect, centred in the lane
 (x=99 y=163, matching the tile's own footprint plus no extra tolerance since it only needs to
-show placement, not a drop-in fit), with the small red hexagon glyph centred inside it. Fitting
+show placement, not a drop-in fit), with the small red triangle (Legs) glyph centred inside it. Fitting
 the true-size slot meant dropping the "Gives / +2 Capital to you / +1 Motivation to team mate /
 Maximum once per game" lines - **not just "Gives"** - because that whole payout, plus the
 Motivation threshold, is already printed verbatim on the physical HERO tile itself (see its own
 spec: "NEEDS 3 MOTIVATION OR HIGHER", "+2 CAPITAL TO YOU, +1 MOTIVATION TO A TEAM MATE"), and
 there wasn't room for both the correctly-sized slot and a second copy of the same text. The
-"Needs your Head, and 3+ Motivation." cost line stays, since it's useful **before** a tile is
+"Needs your Legs, and 3+ Motivation." cost line stays, since it's useful **before** a tile is
 placed (deciding whether Hero is even worth going for), unlike the payout line which only
 matters once you're already holding the tile and reading it directly.
 
 **`pool` group:** a solid `#B5C7CF` panel first, then its `.w`-outline border, then 6
-outline-only circles (2 rows of 3) for the Adaptability track, then the caption text.
+outline-only squares (3 on top, 3 below) for the shared adapt-token pile (cap 6), then
+the caption text. This is the one place the pool physically lives. CLOSE THE WEEK step 2 also
+reminds players to add Adaptability tokens.
 
-**`lane-1` group:** solid `#E8D4B8` panel + border, then a dashed ring (`stroke-dasharray "2
+**`lane-1` group:** solid `#F0E3D1` panel + border, then a dashed ring (`stroke-dasharray "2
 1.5"`) with a small red diamond glyph centred inside it (`transform="translate(121,174)"`),
 then a cost-chip rect, then the gain lines each with their own small tinted background chip
 (`#D9D3C4` for Capital, `#D3B1B1` for Motivation) drawn before the text.
@@ -767,7 +774,7 @@ a mono caption for the week-3 rule addition.
 graph TD
   A["page background #FFFFFF"] --> B["header + rule"]
   B --> C["SHIT HAPPENS box (red border) + 2 solid-red Event slots"]
-  C --> D["ADAPT box: pool panel #B5C7CF + lane-1 panel #E8D4B8"]
+  C --> D["ADAPT box: pool panel #B5C7CF + lane-1 panel #F0E3D1"]
   D --> E["CLOSE THE WEEK box: steps 1-4"]
   E --> F["table-placement guide"]
 ```

@@ -20,9 +20,8 @@ weekly pulse from week 2 on, and how the project ends.
 
 ## The pulse of a week
 
-**1 - Plan the week.** Lay five Activity cards across Monday-Friday. Put a character disc on
-each - that person's Skill, Knowledge and Habitus apply to that day. One person may take
-several days, or none.
+**1 - Plan the week.** Lay five Activity cards across Monday-Friday. They are the team's
+cards - nobody plays one.
 
 **2 - Shit happens.** Draw two Event cards, face up. Don't resolve them yet - they're threats,
 not facts.

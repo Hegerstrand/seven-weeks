@@ -56,8 +56,8 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" (`#EFE4D3`) | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
 | `coordinate` | COORDINATE | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust ≤ 1: Teach is dead." + "TRUST RISE 1 A WEEK, MAX" | "Safety is not declared. It is built, dully." |
-| `align` | ALIGN | "+1 Adaptability" (`#B5C7CF`) | "RE-LAY CARDS AFTER EVENTS. Same count as your Adaptability" | "Clear it the same week and the Work still counts." |
-| `celebrate` | CELEBRATE | "+2 Motivation to everyone" (`#D3B1B1`, 6.6pt) | "+3 if a feature was banked this week." + "NO CELEBRATE: LOSE 1 MOTIVATION" (chip `#D3B1B1`) / "AT 0, A CHARACTER LEAVES" | "Nobody rests at work. You ship something and say so." |
+| `align` | ALIGN | "+1 Adaptability" (`#B5C7CF`) | "ADDS 1 ADAPT TOKEN. SPENT IN THE ADAPT STEP." (mono, 2 lines) | "Clear it the same week and the Work still counts." |
+| `celebrate` | CELEBRATE | "+2 Motivation to everyone" (`#D3B1B1`, 6.6pt) | "+3 if a feature was banked this week." + "MOTIVATION CAPS AT 5" (mono). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Nobody rests at work. You ship something and say so." |
 
 Sheet placement (top-left corner of each `<use>`): Work at (10,12)/(76,12), Coordinate at
 (142,12)/(10,104), Align at (76,104)/(142,104), Celebrate at (10,196)/(76,196), Work again at
@@ -143,7 +143,7 @@ graph TD
 
 Twenty-three "shit happens" cards, same size as Activity cards, split across three A4 sheets.
 Draw two every week. See `board-game-cards` for the full WAYS OUT / HOW TO ADAPT anatomy and
-tint-derivation rule every sheet follows. Icon defs (`i-base/i-legs/i-head/i-item/i-torso`,
+tint-derivation rule every sheet follows. Icon defs (`i-base/i-head/i-item/i-torso`, `i-head` is the HERO glyph and now draws the Legs triangle,
 `q1`-`q5`) are shared shapes but each sheet defines its own copy - they don't share `<defs>`
 across files. Sheet 3 names an organisational-behaviour pattern from
 [../../docs/theoretical-sources.md](../../docs/theoretical-sources.md) on each card without
@@ -176,15 +176,15 @@ footer italic line.
 
 | Card | Title | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|---|
-| `status` | STATUS MEETING | remove one card, never happens; everyone loses 1 Motivation | Autonomy: lose 1 Motivation / Hierarchy: no loss | 3 | Take Charge (1 pip) | Shared Repertoire, costs 2 instead | "Not information - it's about being seen." |
-| `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 2 | Take Charge (1 pip) | Shared Repertoire, costs 1 instead | "Nobody explains the reasoning to you." |
-| `unclear` | UNCLEAR REQUIREMENT | Remove one WORK. PLAN does nothing | Quality: lose 1 Motivation | 3 | Take Charge (1 pip) | Team Reflexivity, costs 2 instead | "An Align or a Demo also clears it." |
-| `feedback` | NEGATIVE FEEDBACK | one banked feature loses 2 Work, comes off the tower | Quality: lose 1 Motivation | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "A feature that passed a Demo is safe." |
-| `scope` | SCOPE CREEP | unbanked feature closest to done gains +2 Work Cost | Quality: lose 1 Motiv. | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "Everybody called it a small addition." |
-| `priority` | PRIORITY CHANGES | remove one card this week | Quality: lose 1 Motivation | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "Last week was the wrong thing." |
-| `hoarding` | KNOWLEDGE HOARDING | Remove all TEACH cards | Community: lose 1 Motivation | 3 | Support (3 pips) | Psychological Safety, costs 2 instead | "Nobody wanted to be the one to ask." |
-| `burnout` | BURNOUT WARNING | anyone on 1 Motivation leaves next week unless a Celebrate is played | Community: lose 1 Motivation | 3 | Support (3 pips) | Psychological Safety, costs 2 instead | "Everyone saw it coming." |
-| `outage` | EQUIPMENT OUTAGE | Remove one WORK card; everyone loses 1 Motivation | Hierarchy: lose 1 Motivation | 3 | Support (3 pips) | Who Knows What, costs 2 instead | "Nobody's fault, and it costs a week." |
+| `status` | STATUS MEETING | remove one card, never happens; everyone loses 1 Motivation | Autonomy: lose 1 Motivation / Hierarchy: no loss | 2 | Take Charge (1 pip) | Shared Repertoire, costs 1 instead | "Not information - it's about being seen." |
+| `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 1 | Take Charge (1 pip) | Shared Repertoire, still costs 1 | "Nobody explains the reasoning to you." |
+| `unclear` | UNCLEAR REQUIREMENT | Remove one WORK. PLAN does nothing | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Team Reflexivity, still costs 1 | "An Align or a Demo also clears it." |
+| `feedback` | NEGATIVE FEEDBACK | one banked feature loses 2 Work, comes off the tower | Quality: lose 1 Motivation | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "A feature that passed a Demo is safe." |
+| `scope` | SCOPE CREEP | unbanked feature closest to done gains +2 Work Cost | Quality: lose 1 Motiv. | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "Everybody called it a small addition." |
+| `priority` | PRIORITY CHANGES | remove one card this week | Quality: lose 1 Motivation | 1 | Analyze (2 pips) | Team Reflexivity, still costs 1 | "Last week was the wrong thing." |
+| `hoarding` | KNOWLEDGE HOARDING | Remove all TEACH cards | Community: lose 1 Motivation | 2 | Support (3 pips) | Psychological Safety, costs 1 instead | "Nobody wanted to be the one to ask." |
+| `burnout` | BURNOUT WARNING | anyone on 1 Motivation leaves next week unless a Celebrate is played | Community: lose 1 Motivation | 2 | Support (3 pips) | Psychological Safety, costs 1 instead | "Everyone saw it coming." |
+| `outage` | EQUIPMENT OUTAGE | Remove one WORK card; everyone loses 1 Motivation | Hierarchy: lose 1 Motivation | 2 | Support (3 pips) | Who Knows What, costs 1 instead | "Nobody's fault, and it costs a week." |
 
 Sheet placement (assumed 3x3 top-left corners, verify against live SVG if reordering):
 `status`(10,12) `budget`(76,12) `unclear`(142,12) / `feedback`(10,104) `scope`(76,104)
@@ -197,9 +197,32 @@ version): category tint band (`.6,.6` inset, `61.8x22.4`, rx 1.4) drawn **before
 the border stays on top -> border rect -> category label + title -> rule (y=23) -> body text,
 each colour-coded chip drawn immediately before its own text -> optional Torso-reaction row
 (icon `<use>`, pip `<use>`, small chip, mono caption) -> WAYS OUT box (`.w` outline,
-`5,54,53,22`) with "HOW TO ADAPT" label, ADAPT number, "or", tint strip (`5.4,68.6,52.2,7.2`,
-same category colour) with HERO icon/text on top of it, HABIT label/name below, cost line ->
-footer italic. Cards with no HERO route (none on this sheet) would drop the icon and print "No
+`5,54,53,22`) with "HOW TO ADAPT" label, ADAPT number, **one empty rounded square per adapt
+token of the cost** (4.8 mm, `rx` .8, x 34/40/46, y 59 - the same shape as the pool wells on
+board 2, so tokens are placed on the card as they are paid; `#cost1` / `#cost2` / `#cost3` in each sheet's
+defs), "or", tint strip (`5.4,68.6,52.2,7.2`,
+same category colour) with HERO icon/text on top of it, HABIT label/name below, cost line.
+**Cost follows size (2026-10-07):** cost 1 = a nuisance, 2 = a real hit, 3 = lasting or
+whole-week damage (8 / 11 / 4 cards, average 1.8). Habit takes 1 off, minimum 1, so a cost-1
+card's cost line reads "SO IT STILL COSTS 1" in place of "SO IT COSTS n INSTEAD" (rulebook §6.1).
+**Flavour text leads the card (2026-10-07):** the old italic footer at y=84 is gone on every
+63x88 card, and the flavour now comes first. On Event cards it is plain serif 4.2 (lines 4.8 mm
+apart, 2 lines max) at y 28-32.8, and the rule text, Torso rows, WAYS OUT box and cost squares
+sit in a `translate(0,9.5)` group below it, so the box spans y 63.5-85.5. Where it reads as one
+sentence the flavour is folded into the rule text instead (unclear, feedback, scope, priority,
+hoarding, reinforcements, legacy, false start, deadline, bikeshed), 4.2 serif, same group shift.
+A citation goes at the bottom of the card (Reinforcements: `BROOKS 1975`, mono 2.6 at y 86.2, box
+shifted only 6). On Activity cards the flavour leads at y 23.5-28.3 (plain serif 4-4.2) and the rule
+content sits in a translate group (6-15.5 mm) below it; no divider. On Project cards it sits in
+the header, right of the title (x 46, serif 3.4); the footer rule is gone.
+
+**Torso loss on top of "Everyone loses 1" reads "LOSE 1 EXTRA"** (Status Meeting, Budget Cut,
+Equipment Outage, The Team Splits, Reorganised, Everything At Once, A Flat Week, The Audit): the
+chip sits behind "1 EXTRA" only. On cards with no all-character loss the row still reads
+"LOSE 1 MOTIVATION". Every one of those eight cards also prints the immune Torso ("X: NO LOSS",
+plain mono 2.7) under the extra-loss row; the pairs follow rulebook section 5 (Environment:
+Hierarchy loses, Autonomy immune; People: Community loses, Quality immune; Management: Autonomy
+loses, Hierarchy immune). Cards with no HERO route (none on this sheet) would drop the icon and print "No
 hero can save this." in its place - `status` through `outage` all have a HERO option here.
 
 ### Layout diagram
@@ -217,7 +240,7 @@ graph TD
 
 ## Sheet 2
 
-The second half of the Event deck. HERO now keys off all 5 Head/Pressure-Response options
+The second half of the Event deck. HERO now keys off all 5 Legs/Pressure-Response options
 (Take Charge/Analyze/Support/Withdraw/Challenge). `build` (False Start), `audit` (The Audit)
 and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save this."
 
@@ -239,14 +262,14 @@ and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save th
 
 | Card | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|
-| `reinforcements` (MORE HANDS) | feature with most Work this week: halve that Work (round down) | none | 3 | Withdraw (4 pips) | Shared Repertoire, costs 2 instead | "More hands, more talk. BROOKS 1975" |
-| `legacy` (OLD FOUNDATIONS) | feature with most Work already banked gains +2 Work Cost | Hierarchy: lose 1 Motiv. | 3 | Withdraw (4 pips) | Who Knows What, costs 2 instead | "Built years ago. Nobody wrote down why." |
-| `build` (FALSE START) | first Work card this week produces nothing | Hierarchy: lose 1 Motiv. | 2 | none - "No hero can save this." | Who Knows What, costs 1 instead | "It worked yesterday." |
-| `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 3 | Challenge (5 pips) | Psychological Safety, costs 2 instead | "Nobody said anything out loud." |
-| `reorg` (REORGANISED) | everyone loses 1 Motivation; lose 1 Shared Practice | Autonomy: lose 1 / Hierarchy: no loss | 3 | Withdraw (4 pips) | Shared Repertoire, costs 2 instead | "Only the chart changed, not the work." |
+| `reinforcements` (MORE HANDS) | feature with most Work this week: halve that Work (round down) | none | 2 | Withdraw (4 pips) | Shared Repertoire, costs 1 instead | "More hands, more talk. BROOKS 1975" |
+| `legacy` (OLD FOUNDATIONS) | feature with most Work already banked gains +2 Work Cost | Hierarchy: lose 1 Motiv. | 2 | Withdraw (4 pips) | Who Knows What, costs 1 instead | "Built years ago. Nobody wrote down why." |
+| `build` (FALSE START) | first Work card this week produces nothing | Hierarchy: lose 1 Motiv. | 1 | none - "No hero can save this." | Who Knows What, still costs 1 | "It worked yesterday." |
+| `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 2 | Challenge (5 pips) | Psychological Safety, costs 1 instead | "Nobody said anything out loud." |
+| `reorg` (REORGANISED) | everyone loses 1 Motivation; lose 1 Shared Practice | Autonomy: lose 1 / Hierarchy: no loss | 2 | Withdraw (4 pips) | Shared Repertoire, costs 1 instead | "Only the chart changed, not the work." |
 | `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Challenge (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
-| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +2, no bonus | Community: lose 1 / Quality: no loss | 2 | Challenge (5 pips) | Psychological Safety, costs 1 instead | "Nothing happened. That is it." |
-| `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 3 | none - "No hero can save this." | Shared Repertoire, costs 2 instead | "No one person can be the answer." |
+| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +2, no bonus | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, still costs 1 | "Nothing happened. That is it." |
+| `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No one person can be the answer." |
 | `deadline` (THE DATE MOVES UP) | every unbanked feature becomes Unclear; Work on it gives 1 less until cleared | Quality: lose 1 Motiv. | 3 | none - "No hero can save this." | Team Reflexivity, costs 2 instead | "This one is not about any of you." |
 
 Sheet placement: `reinforcements`(10,12) `legacy`(76,12) `build`(142,12) / `split`(10,104)
@@ -292,11 +315,11 @@ rest of the page is intentionally blank.
 
 | Card | Title | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|---|
-| `bikeshed` (THE BIKESHED) | one line | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week | Quality: lose 1 Motivation | 2 | Take Charge (1 pip) | Shared Repertoire, costs 1 instead | "Somebody had a strong opinion about the paint." |
-| `leadsbehind` (LEADS FROM BEHIND) | two lines | Everyone loses 1 Motivation, except whoever has the highest Capital - they wrote it, they're exempt | none (the Capital exemption *is* the card; no Torso layer added on top) | 3 | Challenge (5 pips) | Shared Repertoire, costs 2 instead | "Everyone felt it. Almost everyone." |
+| `bikeshed` (THE BIKESHED) | one line | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Shared Repertoire, still costs 1 | "Somebody had a strong opinion about the paint." |
+| `leadsbehind` (LEADS FROM BEHIND) | two lines | Everyone loses 1 Motivation, except whoever has the highest Capital - they wrote it, they're exempt | none (the Capital exemption *is* the card; no Torso layer added on top) | 1 | Challenge (5 pips) | Shared Repertoire, still costs 1 | "Everyone felt it. Almost everyone." |
 | `dashboard` (THE DASHBOARD) | one line | Work only counts this week if it's on a Low feature; Medium/High Work happens but changes nothing | Quality: lose 1 Motivation | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "The number went up. Nothing else did." |
 | `confidence` (SHAKY GROUND) | one line | A demo crashed in front of the customer - **the team loses 1 Capability** (move the Ledger coin down one, permanently, not a one-week penalty) | Hierarchy: lose 1 Motivation | 3 | Withdraw (4 pips) | Who Knows What, costs 2 instead | "Confidence is earned in public - and lost there too." |
-| `reacting` (ALWAYS REACTING) | one line | The team stops planning ahead and only reacts; deadlines slip sideways - **the team loses 1 Adaptability** (the Ledger coin, permanently) | Quality: lose 1 Motivation | 3 | Challenge (5 pips) | Team Reflexivity, costs 2 instead | "There was a plan. Nobody remembers it now." |
+| `reacting` (ALWAYS REACTING) | one line | The team stops planning ahead and only reacts; deadlines slip sideways - **the team's Adaptability pool loses 1 token** (shared pool, cap 6; rulebook §4) | Quality: lose 1 Motivation | 1 | Challenge (5 pips) | Team Reflexivity, still costs 1 | "There was a plan. Nobody remembers it now." |
 
 Sheet placement: `bikeshed`(10,12) `leadsbehind`(76,12) `dashboard`(142,12) / `confidence`(10,104)
 `reacting`(76,104) - two rows, third slot of row 2 left blank.
@@ -346,8 +369,8 @@ graph TD
 
 # Habitus part-cards (44x36mm, A4 landscape)
 
-Source: `../cards-habitus-parts-01-15-44x36mm-A4-landscape.svg` (sheet 1 of 2 - Base, Legs, Torso)
-and `../cards-habitus-parts-16-25-44x36mm-A4-landscape.svg` (sheet 2 of 2 - Head, Item)
+Source: `../cards-habitus-parts-01-15-44x36mm-A4-landscape.svg` (sheet 1 of 2 - Base, Head, Torso)
+and `../cards-habitus-parts-16-25-44x36mm-A4-landscape.svg` (sheet 2 of 2 - Legs, Item)
 Page: 297x210mm each - **true A4 landscape**, so both sheets print at 100% with no
 print-driver "fit to page" auto-scaling. Card size 44x36mm, 5-per-row, unchanged.
 
@@ -356,19 +379,19 @@ which fit neither A4 orientation. Print drivers silently auto-scaled it down to 
 paper, so the printed cards no longer matched the true 44x36mm seats on the person board (the
 board, already true A4 landscape at 297x210mm, always printed correctly - "the board is
 master"). Fixed by splitting the 25 cards across two true-A4-landscape files, one 15-card
-sheet (Base/Legs/Torso) and one 10-card sheet (Head/Item). The old single-file SVG
+sheet (Base/Head/Torso) and one 10-card sheet (Legs/Item). The old single-file SVG
 (`cards-habitus-parts-44x36mm-A4-portrait.svg`) is deprecated in place with a redirect notice
 and should be deleted from the folder. All card content, layout constants, and conventions
 documented below are unchanged and apply identically to both new sheets.
 
 Twenty-five part-cards (5 rows x 5 options: Base, Legs, Torso, Head, Item), dealt at random,
 one per row, and assembled bottom to top into the figure on the person board's HABITUS row.
-Every card carries the habitus tint `#E8D4B8`. **No hand-written (Caveat) aside on any card** -
+Every card carries the habitus card tint `#F0E3D1` (lightened 2026-10-07 from `#E8D4B8`; the person-board seats and the Shit Happens HERO panel were lightened to match). **No hand-written (Caveat) aside on any card** -
 removed for print readability; all body/mechanic text lives at `2.6px` or larger, one size up
 from the previous `2.0-2.1px` tier that was too small to read at true print scale.
 
 Each card is a plain positioned group (no `<defs>`/`<use>` reuse for the card body - all 25 are
-drawn inline, each `44x36`, `rx 1.5`, class `.cut` = fill `#E8D4B8`, stroke `#2A2620`). Every row
+drawn inline, each `44x36`, `rx 1.5`, class `.cut` = fill `#F0E3D1`, stroke `#2A2620`). Every row
 is laid out as one base card at a literal `x`, plus four more each wrapped in a cumulative
 `<g transform="translate(Nx13.5,0)">` (13.5, 27, 40.5, 54mm) - **when editing a single card in a
 row, edit inside its own transform group, don't recompute the absolute x.** A thin `.hair`
@@ -377,7 +400,7 @@ pip count = element, defined once in `<defs>` and placed via `<use>` at the end 
 unaffected by any of the text/font changes below.
 
 There are two per-row card templates:
-- **Mechanic template** (BASE, TORSO, HEAD): name, hairline, then two mono mechanic lines, each
+- **Mechanic template** (BASE, TORSO, LEGS): name, hairline, then two mono mechanic lines, each
   with a coloured background chip highlighting the changed number/keyword. BASE additionally
   has two short serif flavour lines between its two mechanic lines. **Never abbreviate a full
   word (Motivation, Capability, Shared Practice, Adaptability) - if it doesn't fit on one mono
@@ -387,9 +410,9 @@ There are two per-row card templates:
   BASE: mono line 1 `+15`, flavour line 1 `+19.5`, flavour line 2 `+24`, mono line 2 `+29`
   (plus a wrapped `+33` line on By The Book and Competitive, see below).
   TORSO: mono line 1 `+16` (chip line only), wrapped `+20` ("-1 MOTIVATION", own chip
-  `#D3B1B1`), mono line 2 `+27`. HEAD: mono line 1 `+16` (label only, no chip), wrapped `+20` (chip line),
+  `#D3B1B1`), mono line 2 `+27`. LEGS: mono line 1 `+16` (label only, no chip), wrapped `+20` (chip line),
   mono line 2 `+27` (label only), wrapped `+31` (chip line).
-- **Flavour template** (LEGS, ITEM): name, hairline, then four serif body lines in two
+- **Flavour template** (HEAD, ITEM): name, hairline, then four serif body lines in two
   sentence-pairs. Baselines: name `+7`, hairline `+10`, line 1 `+16`, line 2 `+20`, line 3 `+26`,
   line 4 `+30`.
 
@@ -401,7 +424,7 @@ There are two per-row card templates:
 | 2 | Hands-On | `TEACH: +1 MOTIVATION` (chip on "+1 MOTIVATION") | "You fix it, then" / "explain it - maybe." | `LEARN: -1 MOTIVATION` (chip on "-1 MOTIVATION") |
 | 3 | Sheltered | `GRIND DOESN'T TOUCH YOU` (no chip) | "The highs and lows" / "never quite reached you." | `MOTIVATION NEVER OVER 3` (chip on "MOTIVATION" only, `#D3B1B1`; "NEVER OVER 3" un-chipped) |
 | 4 | Dependable | `TAKE ONE FOR THE TEAM` (no chip) | "Somebody has to hold it together." / "It might as well be you." | `SPEND 3 MOTIVATION` (chip, `#D3B1B1`) + wrapped `+1 TRUST +1 CAPITAL` (two chips on the same line: `#D3CEDF` on "+1 TRUST", `#D9D3C4` on "+1 CAPITAL") |
-| 5 | Competitive | `HERO ALWAYS AVAILABLE` (no chip) | "You needed this win" / "more than they did." | `ANOTHER PLAYS HERO:` (no chip) + wrapped `-1 MOTIVATION` (chip) |
+| 5 | Competitive | `HERO IS REUSABLE` (no chip) | "Still needs 3 Motivation." / "You needed this win." | `ANOTHER PLAYS HERO:` (no chip) + wrapped `-1 MOTIVATION` (chip) |
 
 All chips fill `#D3B1B1` (the standing Motivation-cost tint), **except** Dependable's
 `+1 TRUST +1 CAPITAL` line, which carries two chips instead: the Trust category tint
@@ -420,7 +443,13 @@ Capital**, versus the generic standing action's 1-for-1 (also now worth +1 Capit
 Same shared-ceiling rule still applies (Trust rises at most once per week, however many sources
 push it).
 
-## LEGS row - "EDUCATION → WHERE YOU START" · aside: "the row you begin in on the Zone"
+## HEAD row - "EDUCATION → WHERE YOU START" · aside: "the row you begin in on the Zone"
+
+> **Swapped 2026-10-07 (no rule change):** this row was the LEGS row (triangle icon) and the old
+> HEAD row below is now LEGS (hexagon swapped for the triangle). Education is now the **Head**
+> (hexagon icon, sheet 1, middle row); instinct / Pressure Response is now the **Legs**
+> (triangle icon, sheet 2, first row). Card contents are unchanged; only the part name, the
+> icon and the row header moved.
 
 | Card | Name | Line 1 | Line 2 |
 |---|---|---|---|
@@ -432,7 +461,7 @@ push it).
 
 No mechanic lines or chips on this row - pure flavour.
 
-## TORSO row - "VALUES → HOW EVENTS LAND" · aside: "your Torso is also your Need, from week 3"
+## TORSO row - "VALUES → HOW EVENTS LAND" · aside: "your Torso is also your Need, from week 2"
 
 | Card | Name | Mono line 1 (chip, category tint) | Mono line 2 (chip, category tint) |
 |---|---|---|---|
@@ -466,7 +495,7 @@ only adds a payout on top of Recognition's own existing Capital gains; it change
 about anyone else's Capital, the team average, or the Need/Motivation swap (§ "Motivation
 depends on habitus") that already makes Recognition different in a separate, unrelated way.
 
-## HEAD row - "PRESSURE RESPONSE → STRENGTH, COST" · aside: "every part is a Hero trigger somewhere"
+## LEGS row - "INSTINCT · PRESSURE RESPONSE → STRENGTH, COST" · aside: "every part is a Hero trigger somewhere"
 
 | Card | Name | Mono line 1 (category chip + wrapped amount chip) | Mono line 2 (category chip + wrapped amount chip) |
 |---|---|---|---|
@@ -526,7 +555,7 @@ No mechanic lines or chips on this row - pure flavour.
 | Mechanic/mono line | `.mono`, 2.6 | bumped from 2.0-2.1 |
 | Flavour/serif body line | `.serif`, 2.6 | bumped from 2.1 |
 | Footer line 1: "Same skill, different person: two characters can both hold the clipboard. One defers to the boss without thinking; one doesn't." | `.serif` italic, 3.2 | bottom, under the hairline rule at y=282 |
-| Footer line 2: "That difference is the whole point - it is what the Torso and Head are for." | `.serif` italic, 3.2 | bottom |
+| Footer line 2: "That difference is the whole point - it is what the Torso and Legs are for." | `.serif` italic, 3.2 | bottom |
 
 ## Illustration
 
@@ -557,11 +586,11 @@ baselines are `top + the offsets listed in the per-template summary above`.
 ```mermaid
 graph TD
   A["page background #FFFFFF"] --> B["sheet header + rule"]
-  B --> C["BASE row (5 cards, mechanic+flavour template, #E8D4B8)"]
-  C --> D["LEGS row (5 cards, flavour-only template, #E8D4B8)"]
-  D --> E["TORSO row (5 cards, mechanic template, category-tint chips, #E8D4B8)"]
-  E --> F["HEAD row (5 cards, mechanic template, #E8D4B8)"]
-  F --> G["ITEM row (5 cards, flavour-only template, #E8D4B8)"]
+  B --> C["BASE row (5 cards, mechanic+flavour template, #F0E3D1)"]
+  C --> D["HEAD row (5 cards, flavour-only template, #F0E3D1)"]
+  D --> E["TORSO row (5 cards, mechanic template, category-tint chips, #F0E3D1)"]
+  E --> F["LEGS row (5 cards, mechanic template, #F0E3D1)"]
+  F --> G["ITEM row (5 cards, flavour-only template, #F0E3D1)"]
   G --> H["footer: 2-line closing note"]
   H --> I["icons layer: one shape+pip glyph per card, top-right"]
 ```
@@ -581,7 +610,7 @@ A4 landscape (no content needed to move; 10 tiles already fit well inside 297x21
 file (`cards-need-hero-44x36mm-A4-portrait.svg`) is deprecated in place with a redirect notice
 and should be deleted from the folder.
 
-Ten tiles: 5 NEED (mirrors Torso, one per value) + 5 HERO (mirrors Head/Pressure Response, one
+Ten tiles: 5 NEED (mirrors Torso, one per value) + 5 HERO (mirrors Legs/Pressure Response, one
 per option). HERO tiles use the same hexagon shape + pip-count code as the HOW TO ADAPT box on
 Event cards, so a tile and its matching card show the same glyph.
 
@@ -590,17 +619,17 @@ Event cards, so a tile and its matching card show the same glyph.
 | Row | 5 tiles | Shape used | Shared def |
 |---|---|---|---|
 | NEED | Autonomy(1 pip), Hierarchy(2), Community(3), Quality(4), Recognition(5) | `sh-torso-red` (filled red pentagon) | `p1`-`p5` pip glyphs |
-| HERO | Take Charge(1), Analyze(2), Support(3), Withdraw(4), Challenge(5) | `sh-head-red` (filled red hexagon) | `p1`-`p5` pip glyphs |
+| HERO | Take Charge(1), Analyze(2), Support(3), Withdraw(4), Challenge(5) | `sh-legs-red` (filled red triangle) | `p1`-`p5` pip glyphs |
 
 All ten tiles are drawn inline (no `<defs>`/`<use>` for the card body itself, only the shape
-and pip glyphs are shared defs). Each tile: `44x36`, `rx 1.5`, class `.cut` (`#E8D4B8` fill,
+and pip glyphs are shared defs). Each tile: `44x36`, `rx 1.5`, class `.cut` (`#F0E3D1` fill,
 `#2A2620` stroke).
 
 ## Text
 
 | Field | Class | Size | Colour | Background chip (hex) |
 |---|---|---|---|---|
-| Row header ("NEED · SAME 5 VALUES AS TORSO", "HERO · SAME 5 OPTIONS AS HEAD") | `.mono.rl` | 3.3 | `#000000` | - |
+| Row header ("NEED · SAME 5 VALUES AS TORSO", "HERO · SAME 5 OPTIONS AS LEGS") | `.mono.rl` | 3.3 | `#000000` | - |
 | Row-level italic hint | `.serif` | 2.8 | `#000000` | - |
 | Tile name (e.g. "Autonomy", "Take Charge") | `.serif` | 3.5 | `#000000` | - |
 | NEED condition (2-3 lines, centred) | `.serif` | 2.6 | `#000000` | - |
@@ -617,10 +646,38 @@ followed by "+1 Motivation." on its own line with a `#D3B1B1` background chip (t
 Motivation-reward tint used elsewhere on this sheet), and "FROM WEEK 2" moves out to a single
 row-level footnote under the NEED row instead of repeating on every tile.
 
-**Quality's condition drops its "or a feature cleared Unclear" clause** - Unclear was extracted
-to the `feature-quality-uncertainty` extension pack (rulebook v0.21), so the base-game NEED
-table (rulebook.md, "Need gives bonus Motivation") only lists "The team spent an Align." for
-Quality now; the tile follows suit: **"Team spent an Align: +1 Motivation."**
+**Autonomy's Need was rebuilt after the 2026-09-25 playtest, and again when Activity cards became
+the team's.** It used to read "Finished the week you planned, unreplaced", which only made sense
+while Adapt could swap a laid card (rulebook v0.30), then "You executed at least one card". With
+no executor the tile now reads **"No Event landed on the team, or it has Shared Repertoire: +1
+Motivation."** Every Need tile except Recognition now ends with its vindicating Habit as an
+alternative (Hierarchy: Who Knows What, Community: Psychological Safety, Quality: Team
+Reflexivity), replacing Community's old "Trust is 4+".
+(rulebook.md, "Need gives bonus Motivation"). Hierarchy reads "Team played a Teach, or team has
+Who Knows What" and Recognition "A feature was banked this week, or you spent Hero".
+**The condition text sits on a tint (2026-10-07)**, a rounded rect behind the condition lines
+(38 mm wide, `rx` .4) in the colour of the Event category that gets to that Torso (rulebook §5):
+Autonomy `#F7D7A1` (Management), Hierarchy `#C7CFB5` (Environment), Community `#D3CEDF` (People),
+Quality `#B5C7CF` (Customer; the "No Work added to feature:" line sits on the Work colour `#EFE4D3`), Recognition `#D9D3C4` (no category; the
+Capital chip tint). The "+1 Motivation" chip stays `#D3B1B1`.
+**Tile headlines (2026-10-07):** all ten tiles now carry the headline `NEED` or `HERO` (`.mono` 3.4,
+letter-spacing 1, x+3, y 47 / 97). The value name (Autonomy... / Take Charge...) stays as a small
+italic serif 3 caption, right-aligned at x+33, so a tile can still be matched to its Torso or Legs card.
+
+**Quality's Need was rebuilt after the 2026-09-25 playtest.** It first dropped its "or a feature
+cleared Unclear" clause (Unclear went to the `feature-quality-uncertainty` extension, rulebook
+v0.21), leaving "The team spent an Align." Players then spent weeks 1-3 on everything but Work,
+so the Need now reads **"Work added to a feature this week: +1 Motivation. No Work added to feature: -3
+Motivation."** (two lines each with a `#D3B1B1` chip; rulebook.md, "Need gives bonus
+Motivation"). It counts Work that really moved a feature's counter, not just a Work card laid
+down. It is the only Need that can cost you.
+
+**Text sizes were raised after the 2026-09-25 playtest ("still too small").** On the habitus
+sheets mono is now 3.0 and serif body 3.2 (was 2.6 for both); on the NEED and HERO tiles serif is
+3.2 and mono 3.0. Copy was re-wrapped and shortened to fit (Item and Legs cards lost a line,
+Dependable lost its second flavour line, HERO tiles read "NEEDS 3+ MOTIVATION" and "+1
+MOTIVATION TO A TEAMMATE" over two lines). Chip rectangles were re-measured at 1.8 mm per mono
+character. Any size in this file that still says 2.6 is the old value.
 
 **Recognition drops "successful" from its Demo clause** - Demo is now an unconditional success
 (no hidden Quality roll, same v0.21 change), so qualifying it as "successful" is redundant:
@@ -629,11 +686,15 @@ Quality now; the tile follows suit: **"Team spent an Align: +1 Motivation."**
 Every HERO tile has **identical mechanics** ("NEEDS 3 MOTIVATION OR HIGHER", "Once per game:
 cancel an Event card.", "+2 CAPITAL TO YOU, +1 MOTIVATION TO A TEAM MATE") - only the name and
 shape/pip-count differ. This is intentional: HERO's power is choosing *which* Event it can
-cancel (whichever names that part), not a mechanical difference between the five.
+cancel (whichever names that part), not a mechanical difference between the five. The one
+exception lives on a different card: a **Competitive** Base makes its owner's Hero reusable
+("HERO IS REUSABLE", Base row above), and every reuse still needs 3 Motivation. The sheet's
+subtitle states this ("once per game (a Competitive Base: every time)"); the tiles themselves
+stay generic.
 
 ## Illustration
 
-Each tile places its shape glyph (`sh-torso-red` or `sh-head-red`) with a matching pip glyph
+Each tile places its shape glyph (`sh-torso-red` or `sh-legs-red`) with a matching pip glyph
 (`<use href="#p1".."p5">`) at the tile's top-right corner (offset `x=39/89/139/189/239, y=6`
 relative to each tile's own origin) - **the pip count must always match the row position** (1st
 tile = 1 pip, 5th = 5 pips) since this is the code Event cards use to point at a HERO option.
@@ -646,7 +707,7 @@ same x positions at y=90 for HERO).
 graph TD
   A["page background #FFFFFF"] --> B["sheet header + rule"]
   B --> C["NEED row: 5 tiles (sh-torso-red + pips 1-5)"]
-  C --> D["HERO row: 5 tiles (sh-head-red + pips 1-5)"]
+  C --> D["HERO row: 5 tiles (sh-legs-red + pips 1-5)"]
   D --> E["closing note: deal both at random with habitus deck"]
 ```
 

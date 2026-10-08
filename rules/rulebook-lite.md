@@ -72,10 +72,10 @@ You alone hold this until you teach it (§6, Learn).
 | Entrepreneurial | *Customer Sense* | Your Align also banks +1 Work on the feature you cleared. |
 | Public sector | *Process* | Ignore the first Work loss from an Event each week. |
 
-### Legs - education → your **Skill**
+### Head - education → your **Skill**
 Take that Activity, get **+1** to its effect. That's it.
 
-| Legs | Skill | Bonus on |
+| Head | Skill | Bonus on |
 |---|---|---|
 | Technical | Technical | Work |
 | Social | Facilitation | Coordinate |
@@ -92,10 +92,10 @@ Event cards are tagged **MGMT**, **PEOPLE**, or **WORK** (§8).
 | Community | **PEOPLE** Events cost you 1 extra Motivation - but you gain +1 Motivation every time any character Coordinates. |
 | Quality | **WORK** Events cost you 1 extra Motivation - but once per game you may cancel one Work loss entirely. |
 
-### Head - pressure response → your **strength & tendency**
+### Legs - instinct, pressure response → your **strength & tendency**
 Never a flat bonus. Every one of these costs you something.
 
-| Head | Strength | Tendency |
+| Legs | Strength | Tendency |
 |---|---|---|
 | **Take Charge** | Your Work produces +1 while your Capital is the highest at the table. | Each time you use it, **−1 Trust** unless another character also Worked that same feature today. |
 | **Analyze** | Your Align clears an Unclear feature **and** gives +1 Trust. | Your Work on an **Unclear** feature produces **−1** (min 0). You can't stop questioning it. |

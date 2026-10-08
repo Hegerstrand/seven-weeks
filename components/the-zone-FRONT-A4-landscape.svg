@@ -19,7 +19,7 @@ to the table at week 3 - the same week the Specimen panel on each person board s
 </style>
 
 <defs>
-  <g id="sh-legs"><polygon points="0,-3.48 3.12,2.04 -3.12,2.04" class="ic"/></g>
+  <g id="sh-head"><polygon points="3.3,0 1.65,2.86 -1.65,2.86 -3.3,0 -1.65,-2.86 1.65,-2.86" class="ic"/></g>
   <g id="sh-item"><polygon points="0,-3.9 3.9,0 0,3.9 -3.9,0" class="ic"/></g>
   <g id="p1"><circle cx="0" cy="0" r=".5" class="pip"/></g>
   <g id="p2"><circle cx="-1" cy="0" r=".5" class="pip"/><circle cx="1" cy="0" r=".5" class="pip"/></g>
@@ -48,11 +48,11 @@ to the table at week 3 - the same week the Specimen panel on each person board s
 <g transform="translate(152,31) scale(.6)"><use href="#sh-item"/><use href="#p5"/></g>
 
 <g transform="translate(30,101) rotate(-90)"><text x="0" y="0" class="m q" font-size="2.8" letter-spacing=".8">EDUCATION</text></g>
-<g transform="translate(58.5,49.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p1"/></g></g>
-<g transform="translate(58.5,69.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p2"/></g></g>
-<g transform="translate(58.5,89.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p3"/></g></g>
-<g transform="translate(58.5,109.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p4"/></g></g>
-<g transform="translate(58.5,129.5) scale(.72)"><use href="#sh-legs"/><g transform="translate(0,0.45)"><use href="#p5"/></g></g>
+<g transform="translate(58.5,49.5) scale(.72)"><use href="#sh-head"/><use href="#p1"/></g>
+<g transform="translate(58.5,69.5) scale(.72)"><use href="#sh-head"/><use href="#p2"/></g>
+<g transform="translate(58.5,89.5) scale(.72)"><use href="#sh-head"/><use href="#p3"/></g>
+<g transform="translate(58.5,109.5) scale(.72)"><use href="#sh-head"/><use href="#p4"/></g>
+<g transform="translate(58.5,129.5) scale(.72)"><use href="#sh-head"/><use href="#p5"/></g>
 <g class="s" font-size="3.4" text-anchor="end">
   <text x="55" y="49.5">Technical</text>
   <text x="55" y="69.5">Social</text>

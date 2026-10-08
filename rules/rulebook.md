@@ -1,8 +1,28 @@
-# Rulebook - High-Performance Team (v0.31 draft)
+# Rulebook - High-Performance Team (v0.32 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
+
+> **v0.32 - the Zone is tracked twice** (§5.1, §7, §8, §18.1). Tracking squares as tiles
+> on one shared 5x5 grid, five people at once, was close to impossible at the table (playtest
+> 2026-09-25). **(1) Every character has their own 5x5 grid in the SKILLS box on their person
+> board** (the SPECIMEN; the box that used to be "Item space"), same rows and columns as the Zone
+> board: it is the record of what *I* cover. **(2) The Zone board is the team's picture: 25
+> two-sided tiles**, one-person face and stacked face (two or more cover the square). Whenever
+> someone Learns or is Taught, they **mark their SPECIMEN, then put down or flip a tile on the
+> Zone** - the tile is updated at that moment, never scanned for. **(3) Geometry unchanged:** one
+> start square (Head row x Item column), Learn left/right in your own row, Teach up/down/left/right
+> of the *teacher's* square into any row. The sideways card becomes a two-faced counter, and the
+> 4-player empty-row rule is gone. **(4) The team names the learner** (Learn had said "your own
+> row", which meant nothing once the cards became the team's). **(5) The Zone pays:** Capability
+> +1 when a whole row or column of the Zone is tiled; Shared Practice +1 when a tile flips to
+> stacked; Cross-Trained Capital on a 3rd row of your own SPECIMEN. **Removed:** the +1 on a fully
+> covered column's Activity card and the Teach+Learn combo (six combos now, §18.1).
+> **(6) Deleted** the stale "Skills modify Activities" table (Skill match went in v0.31 (7));
+> the Capital table's "Learn as the teacher" row now says Teach.
+> **(7) The week is seven steps:** Motivation (the grind, Torso, Need, quits) is now its own
+> step 7 after CLOSE instead of sitting inside it (§6.1, and the THE WEEK panel on the person board).
 
 > **v0.31 (7) - Activity cards belong to the team, not a person** (§6.0, §6.1, §7): nobody
 > plays or executes a card, and no character's Skill, Knowledge, Habitus or Capital is applied
@@ -324,7 +344,7 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 |---|---|---|
 | **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation. | Work · Coordinate · Celebrate |
 | **Week 2** | **The team, and reality.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing (plate 3b) and the Habits - with each character's Capital, the shared Adaptability pool, **each character's Need** (the tile already on your board) and Shit Happens and Adapt, together. The pool holds **2 tokens** from the first day it exists. | + nothing new |
-| **Week 3** | **Board 4b.** HOW YOU COVER / THE LEDGER READS THIS lift - the Zone's grid was already live, this is just where it starts paying off - and the Flex and Overtime part of the Specimen card. | + Learn · Align · Reflect · Workshop · Plan · Demo |
+| **Week 3** | **Board 4b.** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - and the Flex and Overtime part of the Specimen card. | + Learn · Align · Reflect · Workshop · Plan · Demo |
 | **Week 4** | **Nothing opens.** A deliberate breath - the first week the table just plays everything it has met. | + nothing new |
 | **Week 5** | **Combos** (§18.1). Two named triggers landing in the same week now pay a small bonus on top of what they already did alone. | + nothing new |
 
@@ -572,7 +592,7 @@ spend is therefore the Hero-Team path (§14) being offered to one player, one to
 | 4-5 | Highly engaged - no penalty. |
 | 2-3 | Normal. |
 | 1 | Reduced effectiveness. |
-| **0** | **The character quits** - see §13. Not "at risk": zero tokens *is* the quit trigger. Quitting is checked **once a week, at close-the-week step 3** (§6.1), after the net Motivation number is applied - that is the only meaning of "at the end of the week" for a quit. |
+| **0** | **The character quits** - see §13. Not "at risk": zero tokens *is* the quit trigger. Quitting is checked **once a week, at step 7 of the week (Motivation)** (§6.1), after the net Motivation number is applied - that is the only meaning of "at the end of the week" for a quit. |
 
 **The weekly grind.** When a week closes (§6.1), **every character loses 1 Motivation**. "The
 grind" and "-1 a week" are one and the same thing: it is the -1 printed on
@@ -705,11 +725,11 @@ into once the team recognises them.
 
 | Trigger | What converts |
 |---|---|
-| You played a **Learn** card this week as the **teacher**. | Knowledge → standing. You give the know-how away and get standing back. |
+| You taught on a **Teach** card this week. | Knowledge → standing. You give the know-how away and get standing back. |
 | A feature you played a **Work** card on was **banked** this week. | Delivered work → standing. |
 | You led a **Demo**. | A public success → standing. |
 | A **habitus strength** of yours visibly worked in front of the team - a Take Charge call that landed, calling out Knowledge Hoarding. | Disposition → standing. |
-| **Cross-Trained** - you just covered your **3rd row** on the Zone board (§8), once per character, whenever it first happens. | Breadth → standing. Not the team's Capability, *yours* - the moment you stop being fixed to one fragment of the work. |
+| **Cross-Trained** - you just covered a square in your **3rd row** of your SKILLS grid (§8), once per character, whenever it first happens. | Breadth → standing. Not the team's Capability, *yours* - the moment you stop being fixed to one fragment of the work. |
 | You paid the Motivation for **Take One For The Team** (§6.1) this week. | Personal sacrifice → standing. You spent your own Motivation so the team's Trust could rise; the team saw it cost you something. |
 
 All six require the team to **witness** it - no exceptions. Private competence earns nothing -
@@ -745,7 +765,7 @@ Habitus shows up in four places, and between them they cover everything a charac
 
 | Part | Reacts to |
 |---|---|
-| **Head** | **Zone** - your education is your row on the Zone board (§8) |
+| **Head** | **Zone** - your education is your row on your SKILLS grid (§8) |
 | **Torso** | **Events** (one category worse, one not at all) and **Habits** (+1 Capital when yours arrives) |
 | **Legs** | **Pressure** - a strength and the tendency that comes with it |
 | **Base** | **Motivation** - a strength and tendency on your own Learn/Teach/Overtime/Hero, never on Work (§5.2) |
@@ -1014,13 +1034,14 @@ days of a team's time. They are not a sequencing puzzle.
 2. **Walk the Ledger** coins, at most one step each, and flip any that reached its ring (§18).
    **Add this week's adapt tokens** to the pool (Align, Workshop, and Reflect if Trust
    ≥ 3 - cap 6), then flip **Team Reflexivity** if the pool now holds 4 or more.
-3. **Motivation - as a single net number per character:** −1 (the weekly grind), ±1 per matching Event
-   category this week per their Torso (§5, "Motivation depends on habitus" - check who was hit
-   and who was immune before totaling), +1 if their Need was met (§5; a **Quality** character
-   with no Work added to a feature this week takes −3 instead), −1 if they are **Competitive** and
-   somebody else played a Hero this week. Apply the net number, then any character at 0 quits -
-   this is the only moment a quit is checked.
-4. **Advance the week.**
+
+**Last, count Motivation (step 7, the grind).** It is its own step, after the Ledger, and it is
+done **as a single net number per character:** −1 (the weekly grind), ±1 per matching Event
+category this week per their Torso (§5, "Motivation depends on habitus" - check who was hit
+and who was immune before totaling), +1 if their Need was met (§5; a **Quality** character
+with no Work added to a feature this week takes −3 instead), −1 if they are **Competitive** and
+somebody else played a Hero this week. Apply the net number, then any character at 0 quits -
+this is the only moment a quit is checked. Then **advance the week.**
 
 Banking comes first because it pays the Capital that feeds the Ledger's Standing row. **The
 project ends when Week 7 closes.**
@@ -1043,8 +1064,9 @@ nobody has to ask. Tick it off aloud.
 4. **SURVIVING EVENTS HAPPEN** - resolve every Event nobody cancelled.
 5. **THE WEEK RUNS** - resolve the five cards in any order. They are the team's cards: no
    card belongs to one person.
-6. **CLOSE** - bank features → walk the Ledger and add adapt tokens → Motivation as
-   one net number (grind, Torso, Need) → anyone at 0 quits → next week.
+6. **CLOSE** - bank features → walk the Ledger and add adapt tokens.
+7. **MOTIVATION** - count it as one net number (the grind -1, Torso, Need) → anyone at 0
+   quits → next week.
 
 ## 7. Activities - one card, one of the week's five days
 
@@ -1061,8 +1083,8 @@ character to receive it.
 | **Plan** | Choose a feature with clear requirements: **every Work card played on it this week produces +1 extra** (Low: no bonus). **If High complexity, the bonus also applies next week.** |
 | **Coordinate** | **+1 Trust.** |
 | **Align** | +1 Adaptability, unconditionally. |
-| **Learn** | Cover a free square **in your own row** of the Zone (§8), immediately **left or right** of one you already cover. No teacher, no Capital - an instrument can be got hold of alone. |
-| **Teach** | Let **up to two different characters**, each already covering a square, each let another character cover it, **any row**, immediately **up, down, left or right** of one they already cover. **Both teachers +1 Capital.** **Does nothing while Trust ≤ 1.** |
+| **Learn** | **The team names one character**, who marks a free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers it on the Zone** (put down or flip a tile). No teacher, no Capital - an instrument can be got hold of alone. |
+| **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover on their own SPECIMEN, **any row**, immediately **up, down, left or right** of one *the teacher* covers - **then cover each on the Zone**. **Both teachers +1 Capital.** **Does nothing while Trust ≤ 1.** |
 | **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
 | **Reflect** | Needs **Trust ≥ 3**. **+1 Adaptability.** If a feature was banked *or* the team adapted to 2 Events this week, also **+1 Shared Practice**. |
 | **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
@@ -1155,67 +1177,61 @@ Note that Plan buys nothing unless Work follows it *in the same week*: a Plan ca
 feature nobody then works on is a wasted day. That's the real decision, and it doesn't need a
 sequencing rule to be sharp.
 
-### Skills modify Activities
-Item/Skills were chosen at creation but never actually did anything until now. Here's the
-fix: if the character playing a card matches one of their Skills to it, add **+1** to that
-Activity's **first listed numeric effect** in the table above - Work's counter gain, Plan's
-Work bonus, Coordinate's Trust, Learn's transfer (a matching teacher may move **two**
-Knowledge in the same action), Demo's Capital, Reflect's Adaptability.
-No match, no bonus - the Activity just resolves at its normal effect.
-
-
-| Skill | Matches |
-|---|---|
-| Technical | Work |
-| Planning | Plan |
-| Facilitation | Align, Coordinate |
-| Communication | Coordinate, Demo |
-| Leadership | Workshop, and Take Charge (Legs) calls |
-| Analysis | Plan, Reflect |
-| Customer | Demo, Align |
-| Quality | Reflect |
-
 Every non-Work activity above maps to a specific Wenger or Vygotsky mechanism, not generic
 "team building" - see [../docs/team-learning-model.md](../docs/team-learning-model.md) for
 why each one exists and what it's really doing, including why Trust stands in for
 psychological safety in this game.
 
-This is what finally pays off the "same skill, different person" idea from
-[../docs/habitus-model.md](../docs/habitus-model.md) on the *capability* side. The skill
-itself is a small, flat, reliable bonus. The habitus is still what decides whether the
-character reaches for that Activity in the first place.
-
 ## 8. Knowledge & Learning - the Zone (board 4)
-What a character knows isn't a private card any more - it's a square on the shared **Zone**
-board (board 4), a 5x5 grid of **Education** (row: your Head) by **Skill** (column: your Item).
-Covering a square means you can do that row's work with that column's instrument; once every **row in play** in a column is covered - by anyone, not necessarily the same character - the card
-named under that column gets **+1**, no matter how many people hold it. A column that is only
-partly covered gives nothing yet; there is no partial credit for a square here or there.
+What a character can do is tracked **twice, and the two do different jobs.** Each character's own
+**SKILLS** grid on their person board (the **SPECIMEN**) is the record of *what I cover*: a 5x5
+grid, **Education** (row: your Head) by **Skill** (column: your Item), the same rows, columns,
+hexagons and diamonds as the **Zone** board (board 4). A counter in a square means you can do that
+row's work with that column's instrument. The **Zone** board is the team's picture of the same
+squares: **25 two-sided tiles**, one per square. Everyone can read everyone's sheet, so nobody
+has to remember who can do what; the Zone shows at a glance what *the team* can do.
 
-> **A row only counts if a character starts on it.** At setup, a row with nobody's Head on it
-> has no way in - Learn only extends your own row, and Teach needs a teacher who already holds
-> a square there, so an empty row can never be entered by either card. **At 4 players, exactly
-> one of the 5 Head values is missing (5 Head cards, dealt without replacement, one per
-> character) - so exactly one row sits permanently empty.** Check which row(s) have nobody on
-> them the moment habitus is dealt (§3.1): those rows don't count toward "every row in a
-> column" for the rest of the game. A column completes once every **occupied** row in it is
-> covered - the empty row is simply not part of the count. (5 players fills all 5 rows exactly
-> once; 6 players fills all 5 with one row doubled - neither has this problem.)
+> **Why it is split.** The first playtest (2026-09-25) tracked squares as tiles on one shared 5x5
+> grid, five or six people at once, and found it close to impossible. A square is one
+> character's fact, so the **sheet** is the record. The Zone tile is only ever updated at the
+> moment somebody marks their sheet - never scanned for.
+
+**The tile has two faces.** **One-person face:** exactly one character covers this square.
+**Stacked face:** two or more characters cover it. A square nobody covers has no tile.
+
+**Setup.** Each character marks **one** square on their SPECIMEN: where their **Head's** row
+meets their **Item's** column. Use any small counter with two distinct faces - a coloured face for
+"new this week" and a plain one. Then put a tile on the Zone for each marked square, **stacked
+face up** if two characters started on the same square.
+
+**Whenever someone covers a square (Learn or Teach), do two things, in this order:**
+1. **Mark it on the SPECIMEN** of the character who learned.
+2. **Cover it on the ZONE.** No tile there: put one down, one-person face up. A tile already
+   there: turn it to its **stacked** face (it stays stacked; a third character changes nothing).
 
 There are two ways to cover a new square, and neither is a diagonal leap - that's Vygotsky's
-**Zone of Proximal Development** made physical, one step from what you can already do. **Learn** (§7) covers a free
-square **left or right** of one you already cover, in your own row only, alone, no teacher
-needed. **Teach** (§7) lets **up to two different characters**, each already covering a
-square, each let one other character cover it, **up, down, left or right** of one *they*
-already cover - in any row, since a teacher can hand someone a square they'd
-never have reached alone. **Both teachers gain +1 Capital.** One card, one day, two pairs - a
-second teacher doesn't cost a second day; a training has to be conferred
-by somebody who holds it, a skill can be picked up alone - that difference is the whole reason
-the two are separate cards.
+**Zone of Proximal Development** made physical, one step from what you can already do. **Learn**
+(§7) covers a free square **left or right** of one you already cover, in your own row only,
+alone, no teacher needed. The team names who learns. **Teach** (§7) lets **up to two different
+characters**, each already covering a square, each let one other character mark a square on their
+own SPECIMEN **up, down, left or right** of one *the teacher* covers - in any row, since a teacher
+can hand someone a square they'd never have reached alone. **Both teachers gain +1 Capital.** One
+card, one day, two pairs - a second teacher doesn't cost a second day; a training has to be
+conferred by somebody who holds it, a skill can be picked up alone - that difference is the whole
+reason the two are separate cards. Counters are never taken off, and tiles are never turned back.
 
-The Ledger reads the same board two ways: **fill any whole row or column** and Capability
-rises; **two characters covering the same square** (a stack) and Shared Practice rises. One
-step a week, as ever - a column can only be filled by teaching, never by Learn alone.
+The Ledger reads the Zone in **two** ways, and only at the moment a tile goes down or flips:
+- **Capability +1** when a **whole row or a whole column of the Zone** now has a tile on every
+  square (either face). Look only at the row and column of the square that just changed.
+- **Shared Practice +1** when a tile **flips to its stacked face**: two of you now cover the
+  same square.
+
+And one read of a single sheet: **Cross-Trained** (+1 Capital, §5.1) the first time a character
+has squares in a **3rd row** of their own SPECIMEN.
+
+One step a week per track, as ever (§7). Nothing else on the Zone pays: no per-column card
+bonuses, no partial credit. A full Zone column can only be reached with teaching, never by Learn
+alone, since Learn never leaves your own row.
 
 ### Teaching costs a day, and a day is the scarcest thing there is
 **Learn and Teach happen as the card is played.** Each takes one of the week's five days and
@@ -1240,8 +1256,8 @@ in the restriction, which made the best teacher the worst person to teach.
 > wants playtesting rather than further modelling.
 
 ### The zone - you can't teach what you only just learned
-**A Knowledge received this week cannot be taught this week.** Turn the card sideways when it
-arrives; straighten it when the week closes.
+**A square you got this week cannot be taught this week.** Its counter goes on coloured side up;
+flip it plain when the week closes.
 
 This is the **zone of proximal development** made physical. Before this rule, a Knowledge could
 cross the whole team in a single week - A teaches B on Monday, B teaches C on Tuesday - which
@@ -1254,7 +1270,7 @@ five days** - a genuinely different choice from the two-teachers-one-card versio
 teacher reaching two learners, instead of two teachers reaching one each).
 
 > **Marx's overcome division of labour, played out square by square.** A character who starts
-> narrow - one row, one column - and ends the project covering half the board isn't just more
+> narrow - one row, one column - and ends the project covering much of their grid isn't just more
 > Capable; they're closer to Marx's "fully developed individual" (*The German Ideology*, 1846),
 > able to do more than one kind of work instead of being fixed to a single fragment of it.
 > **Knowledge Hoarding** (§5.1, §11) is the same idea from the other side: treating what you
@@ -1509,7 +1525,8 @@ properly?"*
 
 ## 13. Leaving the Team
 - **Quit** - happens when a character's Motivation tokens hit 0 (§5), checked once a week at
-  close-the-week step 3 (§6.1).
+  step 7 of the week, Motivation (§6.1). *(Extension: `game/extensions/saboteur/` - the character turns
+  Saboteur and stays at the table instead of leaving.)*
 - **Fired** - under real organisational pressure, management may remove the character with
   the lowest current contribution, if the project is far enough behind schedule. This should
   be a **dangerous** mechanism - it can start a negative spiral.
@@ -1588,7 +1605,7 @@ Each of the three Ledger tracks has **one coin**. Walk it along the six wells as
 it reaches the ringed well, **turn it over** - the reverse face is the Habit. **Team Reflexivity
 is the exception:** Adaptability is a pool of tokens, not a track, so its Habit is a single coin on
 its own Ledger row (board 3) that is turned over, once, the first time the pool holds 4 or more at
-close of week (§6.1 step 2).
+close of week (§6.1 step 6).
 
 The coin can walk back down afterwards. **It never turns back over.** That single physical act
 carries the whole rule: the track is what you have *now*, the face is what you have *become*,
@@ -1633,13 +1650,12 @@ game is playing what it has learned. **Combos** are the last thing that opens: p
 always available individually, now worth more together.
 
 **A Combo is two named triggers landing in the same week.** Check for Combos at close-the-week,
-alongside Motivation (§6.1 step 3). **Maximum one Combo per team per week** - if more than one
+alongside Motivation (§6.1 step 7). **Maximum one Combo per team per week** - if more than one
 pair is satisfied, the team names which one counts. No stacking, no hidden bookkeeping.
 
 | Combo | Trigger (same week) | Reward |
 |---|---|---|
 | **Work + Plan** | Both played on the same feature. (Plan's own +1 Extra Work bonus, §7, already applies regardless of week - this is a second, separate reward layered on top from week 5 on.) | +1 Capital to whoever played the Work |
-| **Teach + Learn** | Both played on the same skill column, by different characters | +1 Shared Practice, on top of the normal Zone payoff (§8) |
 | **Demo + Celebrate** | Both played | +1 Trust |
 | **Coordinate + Workshop** | Both played | +1 Capital to one named character |
 | **Hero + Celebrate** | A character spends their Hero to cancel an Event, and the team plays Celebrate | +1 Motivation to everyone |

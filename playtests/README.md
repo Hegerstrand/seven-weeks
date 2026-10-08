@@ -66,11 +66,67 @@ entry is the design response.
       follows size (8 cards at 1, 11 at 2, 4 at 3), Habit takes 1 off with a minimum of 1,
       Sustainable threshold is 88, and the Work/Event figures in the rulebook were refreshed (12
       Events drawn, neutral rate 1 Work per card, ~21 Work days needed).
+  13. **The Zone is tracked twice** (rulebook v0.32, 2026-10-08, never played). Every character
+      has their own 5x5 in the SKILLS box on their person board (the SPECIMEN; the old Item
+      space): whole box = the grid, label above it, Item diamonds below and Head hexagons to the
+      right. The Zone board is the team's picture: 25 two-sided tiles, one-person face and
+      stacked face (two or more cover the square). When someone Learns or is Taught they mark
+      their SPECIMEN, then put down or flip a Zone tile. One start square (Head row x Item
+      column); Learn left/right in your own row; Teach up/down/left/right of the *teacher's*
+      square into any row; the team names the learner. The Zone pays: Capability +1 for a whole
+      Zone row or column tiled, Shared Practice +1 when a tile flips to stacked, Cross-Trained
+      Capital on a 3rd row of your own SPECIMEN. Removed: column Activity +1, the Teach+Learn
+      combo, the empty-row rule, the sideways "new this week" card (now a two-faced counter).
+      Stale "Skills modify Activities" section deleted. Person board also: Flex and Zone Start
+      swapped; Motivation and Capital swapped (Motivation left); the numbers in the Motivation
+      squares removed; Capital's joining line replaced by arrows between the circles; **the week
+      is now seven steps** (Motivation - the grind, Torso, Need, quits - is its own step 7 after
+      CLOSE). **To check at the next table:** did anyone forget the second step (the Zone tile)
+      after marking their SPECIMEN; did a Teach or Learn take longer than a minute; does the
+      Zone ever reach a full row or column; do stacks fire often enough to matter; is a 5mm
+      counter workable in an 8.8 x 7.2mm cell; does a separate Motivation step stop the grind
+      being forgotten.
+- **Summary of the rule changes (v0.31, as of 2026-10-08).** Everything above in one place:
+  - **Adaptability** is a shared pile of adapt tokens (cap 6, starts at 2, no refresh); Align,
+    Workshop and Reflect (Trust 3+) each add 1 at close of week. "Replace a card" is gone.
+  - **Staging:** week 1 is Work, Coordinate, Celebrate; the whole Ledger, Needs and Shit Happens
+    open together in week 2 (so 12 Events are drawn, weeks 2-7); week 3 adds the Zone lift and
+    Flex/Overtime.
+  - **Activity cards belong to the team.** Nobody plays or executes a card: no character discs,
+    no Skill match. Overtime is a sixth card the team plays (one character pays 1 Motivation and
+    takes the Flex marker).
+  - **Capital** starts at 0 for everyone and is earned only through play; no week-2 catch-up.
+  - **Needs** (read from week 2, +1 Motivation when met): Autonomy = no Event landed on the team
+    that week; Hierarchy = the team played a Teach; Community = the team spent a Coordinate,
+    Reflect or Celebrate; Quality = Work was added to a feature (otherwise -3); Recognition = a
+    feature was banked, or you spent your Hero. Every Need except Recognition also counts as met
+    while the team has its vindicating Habit (Shared Repertoire, Who Knows What, Psychological
+    Safety, Team Reflexivity).
+  - **Events:** Adaptability cost follows size (cost 1: 8 cards, cost 2: 11, cost 3: 4; average
+    1.8, was 2.8). A Habit takes 1 off, minimum 1. All eight "everyone loses 1 Motivation" cards
+    print both the Torso that loses 1 extra and the Torso that is immune.
+  - **Hero:** once per game for everyone (needs 3 Motivation); only the Competitive Base has a
+    reusable Hero.
+  - **Legs and Head** swapped flavour, not rules: Legs is instinct (Pressure Response, Hero),
+    Head is education (Zone row).
+  - **Scoring:** Sustainable High Performance now needs Team Score 88 (68 + 5 per starting
+    character); 80 let a surviving team on a neutral Ledger reach it.
+  - **What the numbers say (expected values, never played):** a neutral team needs about 21 Work
+    days against about 22 available, so investing in Capability and Shared Practice is how the
+    project finishes; roughly 4-5 Celebrates keep everyone above 0; buying out an Event with
+    tokens is only worth it for the cost-1 and the biggest cards, while Trust 4 (a free cancel
+    each week) and Hero are the better routes.
+  - **Component-only changes:** lighter base colour on habitus, Need and Hero cards and the
+    person-board seats; Need tiles headed NEED / HERO with the value name as a caption, and
+    condition text tinted by Event category.
 - **Open - not decided, do not treat as fixed:**
-  - **Zone skill tracking** is the biggest unsolved component problem. Needs a redesign.
+  - **Zone skill tracking** was the biggest unsolved component problem; redesigned in entry 13
+    (skills on your own sheet). Untested - count this open until a table has played it.
   - Should the habit tracks reward from 2+ instead of penalising 1 and below?
   - Feature deadlines, and a cost to non-Work activity (to stop the all-Work/no-Work swing).
   - Consequence for quitting (lose condition, cascade, score hit); coordinate twice per week?
+    An optional answer is drafted, untested, in `game/extensions/saboteur/` (a character at 0
+    turns Saboteur instead of leaving).
   - Stacking Events: does an unhandled Event repeat next week until dealt with?
   - Whether the grind comes before or after Events: the rulebook has it at close of week
     (after Events); the table found the order unclear. Rule unchanged, order now printed.

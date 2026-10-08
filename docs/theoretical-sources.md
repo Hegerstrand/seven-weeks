@@ -215,9 +215,9 @@ design theory (autonomy, mastery, task variety) as a direct response to Tayloris
   *someone else* owning what you built - rather than confirming what's present. That's a more
   useful and more honest finding than forcing a 1:1 mechanical map.
 - **Division of labour is genuinely present**, though, in Skill-to-Activity matching, Domain
-  expertise on named features, and starting Zone position (Legs × Item) - the team's early
+  expertise on named features, and starting Zone position (Head × Item) - the team's early
   efficiency depends on narrow specialization. The game's own counter to this is **Learn/Teach**:
-  covering more of the Zone board over time is structurally the same arc as Marx's "fully
+  covering more of your own Zone grid over time is structurally the same arc as Marx's "fully
   developed individual" overcoming fragmentation - a character who can do more kinds of work
   across the week, not fewer - even though the game never uses that language.
 - **KNOWLEDGE HOARDING** (§11), and the rule that hoarding keeps you *needed* but never
@@ -417,12 +417,12 @@ of system out of the other shape of team is fighting the law, not using it - whi
 why the Reverse Conway Maneuver treats team topology as a design lever, not an afterthought.
 
 **Relevance to this game - an unusually clean fit.**
-- **The Zone board (§8) is a literal communication-structure matrix**, not a metaphor for one:
-  rows are Education (Legs), columns are Skill (Item), and a covered square is a real,
-  named link between a person's training and an instrument. The **Feature Tower - the "system"
-  being designed - is built entirely out of Work produced through those exact links** (Skill
-  match, §7). Conway's Law isn't being borrowed here; the team's covered squares on the Zone
-  board *are* its communication structure, and the tower *is* the system that structure produces.
+- **The Zone (§8) is a literal communication-structure matrix**, not a metaphor for one: rows
+  are Education (Head), columns are Skill (Item), and a covered square on a character's own grid
+  is a real, named link between their training and an instrument. The **Feature Tower - the
+  "system" being designed - is built entirely out of Work produced through those links**
+  (Capability, §4). Conway's Law isn't being borrowed here; the team's covered squares *are* its
+  communication structure, and the tower *is* the system that structure produces.
 - **The dependency gates (§10)** - a feature physically unplaceable until its prerequisite lands
   - are the system's architecture (a strict build order) mirroring whatever the team's own
   attention happened to cover that week. If the team's de facto communication structure never

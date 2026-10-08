@@ -1,12 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>THE ZONE FRONT - the shared skill grid (A4 landscape)</title>
-<desc>One board for the whole table. Rows are education, columns are the skill you work through;
-a square is the practice that training makes with that instrument. Both axes are Bourdieu's
-transmissible forms of capital - institutionalised and objectified - so everything on this board
-can be passed on. Upbringing, values and instinct are not here: they cannot. Squares are 20 mm,
-one player tile. Same page frame as THE TEAM. Print at 100%. This sheet is week-1 content only -
-How Learn/Teach works and what the Ledger reads off this grid live on THE DEVELOPMENT instead, added
-to the table at week 3 - the same week the Specimen panel on each person board starts being read.</desc>
+<title>THE ZONE FRONT - the team's 5x5 board, covered with two-sided tiles (A4 landscape)</title>
+<desc>One board for the whole table. Rows are education, columns are the skill you work through; a
+square is what that training does with that instrument. It is the same 5x5 grid as the SKILLS grid
+on every person board (the SPECIMEN): each character marks their own squares there, and the team
+covers the same square here with a 20 mm two-sided tile - one-person face when one of you covers
+it, stacked face when two or more do. Both axes are Bourdieu's transmissible forms of capital -
+institutionalised and objectified - so everything here can be passed on. Upbringing, values and
+instinct are not here: they cannot. Same page frame as THE TEAM. Print at 100%. This sheet is
+week-1 content only - how Learn/Teach works and what the Ledger reads off the tiles live on THE
+DEVELOPMENT instead, added to the table at week 3.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -26,6 +28,8 @@ to the table at week 3 - the same week the Specimen panel on each person board s
   <g id="p3"><circle cx="0" cy="-1" r=".5" class="pip"/><circle cx="-1" cy=".85" r=".5" class="pip"/><circle cx="1" cy=".85" r=".5" class="pip"/></g>
   <g id="p4"><circle cx="-.8" cy="-.8" r=".45" class="pip"/><circle cx=".8" cy="-.8" r=".45" class="pip"/><circle cx="-.8" cy=".8" r=".45" class="pip"/><circle cx=".8" cy=".8" r=".45" class="pip"/></g>
   <g id="p5"><circle cx="-.8" cy="-.8" r=".4" class="pip"/><circle cx=".8" cy="-.8" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.8" cy=".8" r=".4" class="pip"/><circle cx=".8" cy=".8" r=".4" class="pip"/></g>
+  <g id="tile-one"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#EFE4D3" stroke="#2A2620" stroke-width=".4"/><circle cx="0" cy="0" r="1.1" class="pip"/></g>
+  <g id="tile-stack"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".4"/><circle cx="-.7" cy="-.7" r="1.1" fill="#C7CFB5" stroke="#2A2620" stroke-width=".35"/><circle cx=".7" cy=".7" r="1.1" class="pip"/></g>
 </defs>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
@@ -69,59 +73,24 @@ to the table at week 3 - the same week the Specimen panel on each person board s
   <rect x="62" y="120" width="20" height="20"/><rect x="82" y="120" width="20" height="20"/><rect x="102" y="120" width="20" height="20"/><rect x="122" y="120" width="20" height="20"/><rect x="142" y="120" width="20" height="20"/>
 </g>
 <rect x="62" y="40" width="100" height="100" class="r" stroke-width=".8"/>
-
-<g class="s" font-size="3" text-anchor="middle">
-  <text x="72" y="51">Build</text>
-  <text x="92" y="51">Toolbox talk</text>
-  <text x="112" y="51">Spec</text>
-  <text x="132" y="51">Benchmark</text>
-  <text x="152" y="49">Critical</text><text x="152" y="53">path</text>
-
-  <text x="72" y="71">Pair work</text>
-  <text x="92" y="71">Facilitation</text>
-  <text x="112" y="71">Write-up</text>
-  <text x="132" y="71">Survey</text>
-  <text x="152" y="71">Rota</text>
-
-  <text x="72" y="91">Demo rig</text>
-  <text x="92" y="91">Pitch</text>
-  <text x="112" y="91">Contract</text>
-  <text x="132" y="91">Forecast</text>
-  <text x="152" y="91">Roadmap</text>
-
-  <text x="72" y="111">Prototype</text>
-  <text x="92" y="111">Review</text>
-  <text x="112" y="111">Report</text>
-  <text x="132" y="111">Model</text>
-  <text x="152" y="111">Estimate</text>
-
-  <text x="72" y="131">Pipeline</text>
-  <text x="92" y="131">Stand-up</text>
-  <text x="112" y="131">Process</text>
-  <text x="132" y="131">Audit</text>
-  <text x="152" y="131">Plan</text>
 </g>
 
-<g class="m q" font-size="3.4" text-anchor="middle">
-  <text x="72" y="145">DEMO</text><text x="92" y="145">COORDINATE</text><text x="112" y="145">ALIGN</text><text x="132" y="145">LEARN</text><text x="152" y="145">PLAN</text>
-</g>
-<text x="112" y="150" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">A fully covered column is an ACTION the whole team is better at.</text>
-<text x="112" y="155" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">Give one team member one extra Motivation if the ACTION card is played (maximum 1).</text>
-</g>
+<use href="#tile-one" x="15" y="145"/>
+<text x="21" y="146.2" class="s q" font-size="3.4" font-style="italic">One of you covers this square.</text>
+<use href="#tile-stack" x="15" y="152"/>
+<text x="21" y="153.2" class="s q" font-size="3.4" font-style="italic">Flipped: two or more of you do (stacked).</text>
 
 <rect x="166" y="36" width="119" height="104" rx="2" class="r" stroke-dasharray="3 2"/>
 <text x="225.5" y="44" class="m q" font-size="3.2" letter-spacing="1" text-anchor="middle">THE DEVELOPMENT GOES HERE · FROM WEEK 3</text>
-<text x="225.5" y="86" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">How you cover a square, and what the Ledger reads off this grid, are on THE DEVELOPMENT</text>
+<text x="225.5" y="86" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">How you cover a square, and what the Ledger reads off the tiles, are on THE DEVELOPMENT</text>
 <text x="225.5" y="90.5" class="s q" font-size="3.4" font-style="italic" text-anchor="middle">from week 3 - they need Learn/Teach, and that doesn't exist yet.</text>
-<text x="225.5" y="105" class="s q" font-size="3" text-anchor="middle" font-style="italic">A fully covered row and column both contributes to <tspan font-weight="bold">SHARED PRACTICE</tspan> on THE TEAM.</text>
-<text x="225.5" y="109" class="s q" font-size="3" text-anchor="middle" font-style="italic">If you are 4 team mates, pretend the empty row doesn't exist.</text>
 
 <line x1="12" y1="158" x2="285" y2="158" class="r"/>
 <text x="12" y="166" class="m" font-size="4.4" letter-spacing="1.2">WHAT YOU CAN DO</text>
-<text x="12" y="170.5" class="s" font-size="3.8" font-style="italic">Rows are what you were trained in, columns are what you work through - a square is the practice <tspan font-style="normal">that</tspan> training makes with <tspan font-style="normal">that</tspan> instrument,</text>
-<text x="12" y="175" class="s" font-size="3.8" font-style="italic">and everyone covers squares on the same board, so the whole table can see who can do what.</text>
-<text x="12" y="180.5" class="s" font-size="3.8">Once every row <tspan font-style="italic">in play</tspan> in a column is covered, that column's Activity card produces <tspan font-weight="bold">+1</tspan> more than its printed value - nothing yet if it's only half covered.</text>
-<text x="12" y="186" class="s" font-size="3.4" font-style="italic">4 players: exactly one Legs row starts empty and stays out of the count all game - nobody can ever Learn or Teach into a row nobody started on.</text>
+<text x="12" y="170.5" class="s" font-size="3.8" font-style="italic">Rows are what you were trained in, columns are what you work through - a square is what <tspan font-style="normal">that</tspan> training does with <tspan font-style="normal">that</tspan> instrument.</text>
+<text x="12" y="175" class="s" font-size="3.8" font-style="italic">Each of you has this same grid on your own person board (the SPECIMEN) and marks your own squares there; the team covers them here.</text>
+<text x="12" y="180.5" class="s" font-size="3.8">You start on one square: <tspan font-weight="bold">your Head's row where it meets your Item's column</tspan>. From week 3, whoever Learns or is Taught marks their sheet, <tspan font-weight="bold">then tiles the Zone</tspan>.</text>
+<text x="12" y="186" class="s" font-size="3.4" font-style="italic">Everyone can read everyone's sheet: it is how you know who to ask, and who to teach. What the tiles pay is on THE DEVELOPMENT.</text>
 
 <text x="12" y="202" class="s" font-size="3" font-style="italic">Upbringing, values and instinct are not on this board. Bourdieu's embodied capital cannot be handed over - only a training and an instrument can, and those are the two axes here.</text>
 

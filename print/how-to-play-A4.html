@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>High-Performance Team - How to play (rulebook v0.32)</title>
+<style>
+  @page { size: 210mm 297mm; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: "EB Garamond", Garamond, Georgia, serif; font-size: 9pt; line-height: 1.26; color: #000; }
+  .page { width: 210mm; height: 297mm; padding: 11mm 12mm 10mm; overflow: hidden; page-break-after: always; position: relative; }
+  .page:last-child { page-break-after: auto; }
+  .mono, h1, h2, th { font-family: "IBM Plex Mono", "Courier New", monospace; }
+  header { display: flex; justify-content: space-between; align-items: baseline; border-bottom: .5mm solid #2A2620; padding-bottom: 1.5mm; margin-bottom: 3mm; }
+  h1 { font-size: 15pt; letter-spacing: .5mm; margin: 0; font-weight: 600; }
+  header .pg { font-family: "IBM Plex Mono", "Courier New", monospace; font-size: 8pt; color: #4A5259; }
+  h2 { font-size: 9.5pt; letter-spacing: .3mm; margin: 3.2mm 0 1.2mm; font-weight: 600; border-bottom: .2mm solid #2A2620; padding-bottom: .6mm; }
+  h2:first-child { margin-top: 0; }
+  p { margin: 0 0 1.4mm; }
+  .lead { font-size: 9.6pt; margin-bottom: 2mm; }
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 7mm; }
+  ol, ul { margin: 0 0 1.4mm; padding-left: 4.6mm; }
+  li { margin-bottom: .8mm; }
+  .step { display: grid; grid-template-columns: 5.2mm 1fr; margin-bottom: 1.2mm; }
+  .step .n { font-family: "IBM Plex Mono", "Courier New", monospace; font-weight: 700; background: #2A2620; color: #fff; width: 4.2mm; height: 4.2mm; border-radius: 1mm; text-align: center; font-size: 8pt; line-height: 4.2mm; margin-top: .3mm; }
+  .step b { font-family: "IBM Plex Mono", "Courier New", monospace; font-size: 8pt; letter-spacing: .1mm; }
+  .box { border: .3mm solid #2A2620; border-radius: 1.5mm; padding: 1.6mm 2.4mm; margin: 1.6mm 0; }
+  .tint-work { background: #EFE4D3; }
+  .tint-cap { background: #D9D3C4; }
+  .tint-mot { background: #D3B1B1; }
+  .tint-ok { background: #C7CFB5; }
+  .tint-sp { background: #FAECBE; }
+  table { border-collapse: collapse; width: 100%; font-size: 8.6pt; margin-bottom: 1.6mm; }
+  th { text-align: left; font-size: 7.6pt; border-bottom: .3mm solid #2A2620; padding: .6mm 1mm; font-weight: 600; }
+  td { padding: .7mm 1mm; vertical-align: top; border-bottom: .15mm solid #bbb; }
+  td:first-child { white-space: nowrap; font-weight: 700; padding-right: 2mm; }
+  .small { font-size: 8pt; color: #333; }
+  .it { font-style: italic; }
+  .tile { display: inline-block; vertical-align: -1.6mm; width: 6mm; height: 6mm; }
+  .foot { position: absolute; left: 12mm; right: 12mm; bottom: 7mm; font-family: "IBM Plex Mono", "Courier New", monospace; font-size: 7pt; color: #4A5259; border-top: .2mm solid #2A2620; padding-top: 1mm; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<!-- ============================ PAGE 1 ============================ -->
+<section class="page">
+  <header><h1>HIGH-PERFORMANCE TEAM &middot; HOW TO PLAY</h1><span class="pg">PAGE 1 OF 2 &middot; SET UP, AND THE WEEK</span></header>
+
+  <p class="lead">Seven weeks. Five days a week. Six features (A&ndash;F) to deliver before <b>week 7 closes</b>. You commit
+  all five days <i>before</i> you know what is coming, resolve them together, then close the week. From week 2,
+  Events crash into the plan you already made. Everything is <b>cooperative</b>: the five Activity cards are the
+  <b>team's</b> - nobody plays one. Deliver everything with a Team Score of <b>88+</b> and you did not only finish the
+  project, you built a team that could do it again.</p>
+
+  <div class="cols">
+    <div>
+      <h2>SET UP &middot; ABOUT FIFTEEN MINUTES</h2>
+      <ol>
+        <li><b>Deal and build.</b> Each player is dealt five habitus parts at random - <b>Base, Legs, Torso, Head, Item</b> -
+          and slots them into the seats on their person board (the <b>SPECIMEN</b>). Nobody chooses.</li>
+        <li><b>Take your tiles.</b> The <b>NEED</b> tile that names your Torso and the <b>HERO</b> tile that names your Legs.</li>
+        <li><b>Start square.</b> Mark one square on your <b>SKILLS</b> grid: where your <b>Head's row</b> (education) meets your
+          <b>Item's column</b> (skill). Then put a tile on the same square of <b>THE ZONE</b> (stacked face up if two of you start
+          on the same square).</li>
+        <li><b>Pick a Project card</b>, turn <b>THE PROJECT</b> face up and seat it. It names features A&ndash;F. Read their cost,
+          complexity and locks: <b>D</b> and <b>F</b> cannot be placed until what they sit on is built.</li>
+        <li><b>Motivation 3</b> and <b>Capital 0</b> for everyone. Week marker on 1. Shuffle the Events, do not draw yet.</li>
+        <li>Only <b>THE PROJECT</b> and <b>THE ZONE</b> start face up. <b>SHIT HAPPENS</b> and <b>THE TEAM</b> stay text side up;
+          they turn over in week 2.</li>
+      </ol>
+
+      <h2>YOUR PERSON BOARD</h2>
+      <ul>
+        <li><b>Habitus seats</b> - who you are. Nothing is written down: the figure is the record.</li>
+        <li><b>Zone Start / SKILLS grid</b> - your own 5&times;5: education rows &times; skill columns. A counter in a square
+          means you can do that. Item diamonds sit below the grid, Head hexagons beside it.</li>
+        <li><b>Hero</b> (under Legs) - once a game, cancel an Event that names your Pressure Response. +2 Capital to you,
+          +1 Motivation to another. Needs 3 Motivation.</li>
+        <li><b>Need</b> (under Torso) - from week 2, +1 Motivation if your Torso's condition was met this week.</li>
+        <li><b>Flex</b> - the marker for a day you worked as Overtime and owe back.</li>
+        <li><b>Motivation</b> (5 squares, starts 3) and <b>Capital</b> (0&ndash;5, a marker you slide, only grows when the team
+          witnesses it). <b>THE WEEK</b> checklist is printed down the side.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>THE WEEK &middot; SEVEN STEPS, EVERY WEEK</h2>
+      <div class="step"><span class="n">1</span><span><b>PLAN</b> - lay <b>five</b> Activity cards, Monday to Friday. Nothing resolves. A slot may take the
+        <b>Flex</b> marker instead (Overtime, see page 2).</span></div>
+      <div class="step"><span class="n">2</span><span><b>SHIT HAPPENS</b> <i>(week 2 on)</i> - draw <b>2 Events</b>, read them out. Nothing resolves yet.</span></div>
+      <div class="step"><span class="n">3</span><span><b>ADAPT</b> - cancel Events by paying each one's <b>Adaptability cost</b> (1, 2 or 3) in adapt tokens,
+        or play a Hero. A Habit takes 1 off the cost (minimum 1).</span></div>
+      <div class="step"><span class="n">4</span><span><b>SURVIVING EVENTS HAPPEN</b> - resolve every Event nobody cancelled.</span></div>
+      <div class="step"><span class="n">5</span><span><b>THE WEEK RUNS</b> - resolve the five cards in <b>any order</b>. The week happened at once.</span></div>
+      <div class="step"><span class="n">6</span><span><b>CLOSE</b> - <b>bank</b> finished features (lift any lock, pay Capital to who worked on it) &rarr;
+        <b>walk the Ledger</b>, at most one step per track &rarr; add this week's <b>adapt tokens</b> to the pool (Align,
+        Workshop, Reflect; cap 6).</span></div>
+      <div class="step"><span class="n">7</span><span><b>MOTIVATION</b> - the <b>grind</b>. One net number per character: <b>&minus;1</b> for the grind,
+        &plusmn;1 per Event category your Torso is hit by or immune to, <b>+1</b> if your Need was met. Apply it,
+        <b>then</b> anyone on 0 <b>quits</b>. This is the only moment a quit is checked. Move the week marker.</span></div>
+
+      <div class="box tint-work">
+        <b class="mono" style="font-size:8pt">WEEK 1 IS ONLY STEPS 1, 5, 6 AND 7.</b>
+        Lay five cards from <b>Work, Coordinate, Celebrate</b>, resolve them, bank anything finished, take the grind.
+        No Events, no Ledger, no Needs yet. <span class="it">A week is five days and you choose them - that is the entire idea.</span>
+      </div>
+
+      <h2>WHAT OPENS, AND WHEN</h2>
+      <table>
+        <tr><th>WEEK</th><th>WHAT TURNS UP</th></tr>
+        <tr><td>1</td><td>The week. Work, Coordinate, Celebrate.</td></tr>
+        <tr><td>2</td><td><b>THE TEAM</b> turns over: Trust, Capability, Shared Practice, Standing, Capital, Needs, the adapt pool
+          (starts at 2 tokens), Shit Happens and Adapt.</td></tr>
+        <tr><td>3</td><td><b>THE DEVELOPMENT</b> (Learn/Teach payoff), Flex and Overtime. Now also Learn, Align, Reflect, Workshop, Plan, Demo.</td></tr>
+        <tr><td>4</td><td>Nothing new. Play everything you have met.</td></tr>
+        <tr><td>5</td><td><b>Combos</b>: two named triggers in the same week pay a small bonus (one combo a week).</td></tr>
+        <tr><td>6&ndash;7</td><td>Nothing new. The project ends when week 7 closes.</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="foot"><span>Rulebook v0.32 (draft) &middot; playtest prototype</span><span>Turn over for the cards, the Zone and the score &rarr;</span></div>
+</section>
+
+<!-- ============================ PAGE 2 ============================ -->
+<section class="page">
+  <header><h1>HIGH-PERFORMANCE TEAM &middot; HOW TO PLAY</h1><span class="pg">PAGE 2 OF 2 &middot; CARDS, THE ZONE, THE SCORE</span></header>
+
+  <div class="cols">
+    <div>
+      <h2>THE ACTIVITIES &middot; ONE CARD = ONE DAY</h2>
+      <p class="small">The cards belong to the team. Nothing here is "may": if a number is not listed, nothing happens.</p>
+      <table>
+        <tr><th>CARD</th><th>EXACT EFFECT</th></tr>
+        <tr><td>Work</td><td><b>+1</b> to one feature's Work counter (Capability changes it; never below 0). Not on a feature whose dependency is not yet banked.</td></tr>
+        <tr><td>Plan</td><td>Pick a feature: every Work card on it this week gives <b>+1 extra</b>. High complexity: also next week.</td></tr>
+        <tr><td>Coordinate</td><td><b>+1 Trust.</b></td></tr>
+        <tr><td>Align</td><td><b>+1 adapt token</b>, no conditions.</td></tr>
+        <tr><td>Workshop</td><td><b>+1 adapt token</b>, no conditions.</td></tr>
+        <tr><td>Reflect</td><td>Needs <b>Trust 3+</b>. +1 adapt token. If a feature was banked or you adapted to 2 Events, also <b>+1 Shared Practice</b>.</td></tr>
+        <tr><td>Learn</td><td>The team names one character: they mark a free square <b>left or right</b> of one they cover, in their own row. Then tile the Zone. No Capital.</td></tr>
+        <tr><td>Teach</td><td>Up to <b>two</b> teachers; each lets one other character mark a square <b>up, down, left or right</b> of one the teacher covers, any row. Then tile the Zone. <b>Both teachers +1 Capital.</b> Dead while Trust &le; 1.</td></tr>
+        <tr><td>Demo</td><td>Needs Capital &ge; the team average. The team names one character: <b>+1 Capital</b>. The feature ignores the next Negative Feedback.</td></tr>
+        <tr><td>Celebrate</td><td><b>+2 Motivation to everyone</b> (cap 5) - <b>+3</b> if a feature was banked this week.</td></tr>
+      </table>
+      <p><b>Overtime.</b> A <b>sixth</b> card the team may lay: one character pays <b>1 Motivation</b> and takes the Flex marker,
+      and the team owes that day back later. Unrepaid Flex costs <b>2</b> at scoring.</p>
+
+      <h2>NEEDS &middot; FROM WEEK 2</h2>
+      <p class="small">At step 7 you get <b>+1 Motivation</b> if your Torso's Need was met this week. Each also counts as met while the team holds its Habit.</p>
+      <table>
+        <tr><td>Autonomy</td><td>No Event landed on the team.</td></tr>
+        <tr><td>Hierarchy</td><td>The team played a Teach.</td></tr>
+        <tr><td>Community</td><td>The team spent a Coordinate, Reflect or Celebrate.</td></tr>
+        <tr><td>Quality</td><td>Work was added to a feature. <b>Otherwise &minus;3.</b></td></tr>
+        <tr><td>Recognition</td><td>A feature was banked, or you spent your Hero.</td></tr>
+      </table>
+    </div>
+
+    <div>
+      <h2>THE ZONE &middot; TWO THINGS EVERY TIME</h2>
+      <p>Whenever someone <b>Learns</b> or is <b>Taught</b>, do two things, in this order:</p>
+      <div class="step"><span class="n">1</span><span><b>Mark it on the SPECIMEN</b> - a counter on that character's own SKILLS grid.
+        The coloured face means "new this week": it cannot be taught until the week closes.</span></div>
+      <div class="step"><span class="n">2</span><span><b>Cover it on THE ZONE</b> - no tile there? Put one down. A tile already there? <b>Flip it.</b></span></div>
+      <div class="box" style="display:flex;gap:6mm;align-items:center;margin-top:1mm">
+        <span><svg class="tile" viewBox="-3 -3 6 6"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#EFE4D3" stroke="#2A2620" stroke-width=".35"/><circle r="1.1" fill="#2A2620"/></svg>
+          <b>one dot</b> - one of you covers this square</span>
+        <span><svg class="tile" viewBox="-3 -3 6 6"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".35"/><circle cx="-.7" cy="-.7" r="1.1" fill="#C7CFB5" stroke="#2A2620" stroke-width=".3"/><circle cx=".7" cy=".7" r="1.1" fill="#2A2620"/></svg>
+          <b>two dots</b> - stacked: two or more cover it</span>
+      </div>
+      <p class="small">Counters are never taken off and tiles never flip back. Your sheet is the record of <i>what I can do</i>;
+      the Zone is the team's picture of the same squares. Everyone can read everyone's sheet.</p>
+      <table>
+        <tr><th>THE LEDGER READS THE ZONE</th><th></th></tr>
+        <tr class="tint-ok"><td>Capability +1</td><td>A whole <b>row or column</b> of the Zone now has a tile on every square.</td></tr>
+        <tr class="tint-sp"><td>Shared Practice +1</td><td>A tile <b>flips to stacked</b> - two of you now cover the same square.</td></tr>
+        <tr class="tint-cap"><td>Cross-Trained</td><td>Your own SKILLS grid has squares in a <b>3rd row</b>: <b>+1 Capital</b>, once each.</td></tr>
+      </table>
+
+      <h2>THE LEDGER AND MOTIVATION</h2>
+      <ul>
+        <li><b>Trust, Capability, Shared Practice</b> - coins on THE TEAM (scale 0&ndash;5), one step a week each. A coin that reaches
+          its ring turns into a <b>Habit</b>: it makes one Event category cheaper to cancel, and satisfies a Need.</li>
+        <li><b>Adaptability</b> is a shared pile of tokens (cap 6). Spend them in step 3.</li>
+        <li><b>Capital</b> is earned, never given: banked work, a Demo, a Teach, a Hero, Cross-Trained. Rich in Capital = standing in the team.</li>
+        <li><b>Motivation</b> is personal. The grind takes 1 every week; Celebrate and a met Need give it back. <b>At 0 you quit</b> and
+          the team scores &minus;10.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>HOW IT ENDS &middot; SCORING</h2>
+  <div class="cols" style="grid-template-columns: 1.35fr 1fr; gap: 6mm">
+    <div>
+      <p class="mono" style="font-size:8pt; margin-bottom:1.2mm"><b>TEAM SCORE</b> = features banked &times; 10
+        + (Trust + Capability + Shared Practice + adapt tokens, max 21) + all Motivation
+        &minus; 10 &times; quits &minus; 2 &times; unrepaid Flex</p>
+      <p class="small">Checked when week 7 closes. 88 = 68 + 5 for every character you started with.</p>
+    </div>
+    <table style="margin:0">
+      <tr><td>Failure</td><td>Not all six features banked. The score does not matter.</td></tr>
+      <tr><td>Heroic Success</td><td>All six, score under 88. The project made it. The team did not.</td></tr>
+      <tr><td>High Performance</td><td>All six, score 88+. <b>You built a team as well.</b></td></tr>
+    </table>
+  </div>
+  <p class="it" style="margin-top:2mm">If you only had thirty-five working days, how would you spend them?</p>
+
+  <div class="foot"><span>Rulebook v0.32 (draft) &middot; full rules in game/rules/rulebook.md</span><span>Print at 100% on A4, double-sided</span></div>
+</section>
+
+</body>
+</html>

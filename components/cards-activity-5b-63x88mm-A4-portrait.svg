@@ -42,11 +42,11 @@ outer line. Print at 100%.</desc>
     <text x="5" y="27" class="s" font-size="5.4">Up to 2 characters may</text>
     <text x="5" y="33" class="s" font-size="5.4">each teach 1 partner</text>
     <line x1="5" y1="38" x2="58" y2="38" class="h"/>
-    <text x="5" y="45" class="s" font-size="4.2">Each square must touch</text>
-    <text x="5" y="50" class="s" font-size="4.2">one the partner covers -</text>
-    <text x="5" y="55" class="s" font-size="4.2"><tspan font-weight="bold">any row</tspan>. Kept for good.</text>
+    <text x="5" y="45" class="s" font-size="4.2">Partner marks a square</text>
+    <text x="5" y="50" class="s" font-size="4.2">up, down, left or right of</text>
+    <text x="5" y="55" class="s" font-size="4.2">one you cover - <tspan font-weight="bold">any row</tspan>.</text>
     <text x="5" y="62" class="m trust" font-size="3.2">DEAD IF TRUST ≤ 1</text>
-    <text x="5" y="66.5" class="m q" font-size="2.9">ONE CARD, ONE DAY - UP TO 2 PAIRS</text>
+    <text x="5" y="66.5" class="m q" font-size="2.9">2 PAIRS, THEN TILE THE ZONE</text>
     <rect x="27.7" y="68.74" width="26.3" height="3.04" rx=".4" fill="#D9D3C4"/>
     <text x="5" y="71" class="m q" font-size="2.9">EACH TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
     </g>
@@ -127,14 +127,14 @@ outer line. Print at 100%.</desc>
     <text x="5" y="23.5" class="s" font-size="4">Nobody taught you.</text>
     <text x="5" y="28.3" class="s" font-size="4">It shows, and it holds.</text>
     <g transform="translate(0,10)">
-    <text x="5" y="27" class="s" font-size="5.4">Cover a free square</text>
-    <text x="5" y="33" class="s" font-size="5.4">in your own row</text>
+    <text x="5" y="27" class="s" font-size="5.4">The team names who</text>
+    <text x="5" y="33" class="s" font-size="5.4">marks a free square</text>
     <line x1="5" y1="38" x2="58" y2="38" class="h"/>
-    <text x="5" y="45" class="s" font-size="4.2">It must touch a square</text>
-    <text x="5" y="50" class="s" font-size="4.2">you already cover.</text>
+    <text x="5" y="45" class="s" font-size="4.2">Left or right of one they</text>
+    <text x="5" y="50" class="s" font-size="4.2">cover, in their own row.</text>
     <text x="5" y="55" class="s" font-size="4.2"><tspan font-weight="bold">No teacher needed.</tspan></text>
     <text x="5" y="63" class="m q" font-size="2.9">COSTS THE DAY, NOTHING ELSE</text>
-    <text x="5" y="67.5" class="m" font-size="2.9">ALONG YOUR ROW ONLY</text>
+    <text x="5" y="67.5" class="m" font-size="2.9">THEN TILE THE ZONE</text>
     <rect x="9.82" y="69.74" width="12.98" height="3.04" rx=".4" fill="#D9D3C4"/>
     <text x="5" y="72" class="m q" font-size="2.9">NO <tspan>CAPITAL</tspan> FOR THIS ONE</text>
     </g>

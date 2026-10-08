@@ -100,12 +100,12 @@ graph TD
 | Card | Title | Effect | Key conditions | Footer italic |
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
-| `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "square must touch one the partner covers - any row"; "DEAD IF TRUST ≤ 1"; "ONE CARD, ONE DAY - UP TO 2 PAIRS" | "Scaffolding: give it away and it becomes standing." |
+| `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a square up, down, left or right of one you cover - any row."; "DEAD IF TRUST ≤ 1"; "2 PAIRS, THEN TILE THE ZONE" | "Scaffolding: give it away and it becomes standing." |
 | `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "NOT ON AN UNCLEAR FEATURE" | "Planning pays on hard problems. Only on those." |
 | `demo` | DEMO | "+1 Capital to one named team member" | "CAPITAL ≥ TABLE AVERAGE"; "feature ignores the next NEGATIVE FEEDBACK" | "The field decides who speaks." |
 | `reflect` | REFLECT | "Require Trust 3 or above"; "+1 Adaptability" (+ "+1 Shared Practice" if a bank or adapted to 2 Events this week) | "Ask what's not working - you can only reflect on it." |
 | `workshop` | WORKSHOP | "+1 Adaptability" | - (unconditional, no gate) | "A meeting that changes the plan, not just records it." |
-| `learn` | LEARN | "Cover a free square in your own row" | "must touch a square you already cover"; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "NO CAPITAL FOR THIS ONE" | "Nobody taught you. It shows, and it holds." |
+| `learn` | LEARN | "The team names who marks a free square" | "Left or right of one they cover, in their own row."; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "THEN TILE THE ZONE"; "NO CAPITAL FOR THIS ONE" | "Nobody taught you. It shows, and it holds." |
 
 Sheet placement: Work (10,12), Work (76,12), Teach (142,12); Teach (10,104), Plan (76,104), Demo
 (142,104); Reflect (10,196), Workshop (76,196), Learn (142,196).
@@ -459,7 +459,8 @@ push it).
 | 4 | Analytical | "Your row on the Zone is" | "where things get written down." |
 | 5 | Organisational | "Your row on the Zone is" | "where the schedule lives." |
 
-No mechanic lines or chips on this row - pure flavour.
+No mechanic lines or chips on this row - pure flavour. The row is your row on your SKILLS grid
+(rulebook §8).
 
 ## TORSO row - "VALUES → HOW EVENTS LAND" · aside: "your Torso is also your Need, from week 2"
 
@@ -534,11 +535,11 @@ marks Hysteresis ✅.
 
 | Card | Name | Line 1 | Line 2 | Line 3 | Line 4 |
 |---|---|---|---|---|---|
-| 1 | Laptop | "Your column on the Zone" | "is built with this skill." | "Teach someone to hold it," | "and the column grows." |
-| 2 | Coffee cup | "Your column on the Zone" | "runs on this skill." | "Teach someone to hold it," | "and the column grows." |
-| 3 | Clipboard | "Your column on the Zone" | "is checked with this skill." | "Teach someone to hold it," | "and the column grows." |
-| 4 | Wrench | "Your column on the Zone" | "is fixed with this skill." | "Teach someone to hold it," | "and the column grows." |
-| 5 | Calendar | "Your column on the Zone" | "is scheduled with this skill." | "Teach someone to hold it," | "and the column grows." |
+| 1 | Laptop | "Your Zone column is" | "built with this skill." | "Teach someone to hold it," | "and the column grows." |
+| 2 | Coffee cup | "Your Zone column runs" | "on this skill." | "Teach someone to hold it," | "and the column grows." |
+| 3 | Clipboard | "Your Zone column is" | "checked with this skill." | "Teach someone to hold it," | "and the column grows." |
+| 4 | Wrench | "Your Zone column is" | "fixed with this skill." | "Teach someone to hold it," | "and the column grows." |
+| 5 | Calendar | "Your Zone column is" | "scheduled with this skill." | "Teach someone to hold it," | "and the column grows." |
 
 No mechanic lines or chips on this row - pure flavour.
 

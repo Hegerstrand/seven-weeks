@@ -52,9 +52,11 @@ Four boards, each printed **front and back and glued to one piece of cardboard**
 1-3 the back is that week's rules and the front is that week's board; all three start **text
 side up**, and at the start of each week you **turn one over** - the rule arrives in the same
 gesture that uncovers the board. That is §3.0's staged reveal as a physical object rather than
-a paragraph. **Board 4 (the Zone) never flips** - its grid is live from week 1. What it pays
-off (Learn/Teach, and what the Ledger reads off the grid) doesn't exist before week 3, so that
-content isn't on board 4 at all - it lives on a separate insert, **sheet 4b**, which sits face
+a paragraph. **Board 4 (the Zone) never flips** - it is the team's 5x5 board, live from week 1,
+covered with 25 two-sided tiles (one-person face / stacked face) as people Learn and Teach; each
+character also marks their own squares on the SKILLS grid of their person board (the SPECIMEN).
+What squares pay off (Learn/Teach, and what the Ledger reads off the grids) doesn't exist before
+week 3, so that content isn't on board 4 at all - it lives on a separate insert, **sheet 4b**, which sits face
 down beside board 4 from setup and turns over at the start of week 3, alongside the Ledger.
 Board 4's own back still carries no rule reveal; it exists only so the board glues to cardboard
 the same way the others do, and so it can carry the table-placement guide too.
@@ -81,7 +83,7 @@ both sides are down, not before: paper creeps a millimetre when it is wet with g
 
 | Print | Paper | What it is |
 |---|---|---|
-| `board-person-170x141mm-A4-portrait` | A4 **landscape** (filename now stale - was 170x114mm portrait, now 244x128mm landscape so the habitus seats could be true 44x36mm, matching the printed part-cards) | **The person board.** One per sheet, one per player - Capital+Motivation+Zone Start share a row, Need+Hero+Flex share the row below |
+| `board-person-170x141mm-A4-portrait` | A4 **landscape** (filename now stale - was 170x114mm portrait, now 244x128mm landscape so the habitus seats could be true 44x36mm, matching the printed part-cards) | **The person board.** One per sheet, one per player - Capital+Motivation share a row, Flex+Hero+Need+Zone Start+Skills the row above |
 
 **Week 3 has no shared board, and shouldn't.** Its reveal is the bottom panel of your own
 person board - always physically there, but only worth reading from week 3 on. A light dashed
@@ -225,7 +227,7 @@ without a single pencil mark.
 |---|---|
 | Character name | Nothing - **the assembled figure is the character**. Player boards are printed with a specimen numeral. |
 | Base / Legs / Torso / Head / Item | Five **part-card seats** under the figure socket |
-| What a character knows | **Squares covered on the shared Zone board** (board 4) - no private card |
+| What a character knows | **Squares marked on the SKILLS grid of their own person board**, and covered by a tile on the shared Zone board (board 4) - no private card |
 | Need | **The Torso card itself**, read a second way from week 2 - no separate card |
 | Feature names | The **Project card** on its plinth names all six (§20) |
 | Work progress | A **cube walks the track** in each feature's track to a green target disc |

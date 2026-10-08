@@ -54,7 +54,9 @@ micromanaging boss in the room.
   down: the five Torso values (Autonomy, Hierarchy, Community, Quality, Recognition) double as
   the five Need conditions. It was never a *team* need - it's personal, same as Motivation.
 - **Individual Knowledge** doesn't exist any more - what a character knows is which squares
-  they cover on the shared **Zone** board (board 4), set by their **Head** (row) and **Item**
+  they have marked on the **SKILLS** grid of their own person board (the same 5x5 as the shared
+  **Zone** board, board 4, which the team covers with two-sided tiles), set by their **Head** (row)
+  and **Item**
   (column) at setup and grown by Learn/Teach from there. See
   [../rules/rulebook.md](../rules/rulebook.md) §8.
 

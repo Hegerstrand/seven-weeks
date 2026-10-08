@@ -23,10 +23,9 @@ could survive doing it again: Sustainable High Performance.
    board.
 2. Take the matching **NEED** tile (your VALUES) and **HERO** tile (your PRESSURE RESPONSE), and slot those
    too.
-3. Turn over board **THE ZONE**. Place your figure's tile on the grid: your Head' row × your
-   Item's column.
-4. Read the row/column rule and what **Learn**/**Teach** do in one line each - no detail needed
-   yet.
+3. Turn over board **THE ZONE**. Mark one square on the **SKILLS** grid on your own person board:
+   where your Head's row meets your Item's column.
+4. Read what **Learn**/**Teach** do in one line each - no detail needed yet.
 5. Pick one **PROJECT** card. Turn **THE PROJECT** face up and seat it - it names features A-F.
 6. Read the project and its six features together - complexity, LOCK tiles across **D** and
    **F**, what unlocks what.

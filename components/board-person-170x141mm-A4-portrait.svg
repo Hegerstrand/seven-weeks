@@ -17,6 +17,7 @@ own row underneath, each spanning 2.5 habitus-column widths.</desc>
   .hab { fill:#F0E3D1; stroke:#2A2620; stroke-width:.5; stroke-dasharray:2.5 1.5; }
   .q { fill:#000000; }
   .ic { fill:#F2EDE0; stroke:#2A2620; stroke-width:.4; }
+  .pip { fill:#2A2620; }
 </style>
 
 <defs>
@@ -27,6 +28,11 @@ own row underneath, each spanning 2.5 habitus-column widths.</desc>
   <g id="sh-head"><polygon points="2.6,0 1.3,2.25 -1.3,2.25 -2.6,0 -1.3,-2.25 1.3,-2.25" class="ic"/></g>
   <g id="sh-legs-red"><polygon points="0,-2.9 2.6,1.7 -2.6,1.7" fill="#905151" stroke="#2A2620" stroke-width=".4"/></g>
   <g id="sh-item"><polygon points="0,-3.9 3.9,0 0,3.9 -3.9,0" class="ic"/></g>
+  <g id="p1"><circle cx="0" cy="0" r=".5" class="pip"/></g>
+  <g id="p2"><circle cx="-1" cy="0" r=".5" class="pip"/><circle cx="1" cy="0" r=".5" class="pip"/></g>
+  <g id="p3"><circle cx="0" cy="-1" r=".5" class="pip"/><circle cx="-1" cy=".85" r=".5" class="pip"/><circle cx="1" cy=".85" r=".5" class="pip"/></g>
+  <g id="p4"><circle cx="-.8" cy="-.8" r=".45" class="pip"/><circle cx=".8" cy="-.8" r=".45" class="pip"/><circle cx="-.8" cy=".8" r=".45" class="pip"/><circle cx=".8" cy=".8" r=".45" class="pip"/></g>
+  <g id="p5"><circle cx="-.8" cy="-.8" r=".4" class="pip"/><circle cx=".8" cy="-.8" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.8" cy=".8" r=".4" class="pip"/><circle cx=".8" cy=".8" r=".4" class="pip"/></g>
 </defs>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
@@ -61,12 +67,15 @@ own row underneath, each spanning 2.5 habitus-column widths.</desc>
 <text x="122" y="65" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">the shape on each seat tells you which part-card belongs there</text>
 
 <g transform="translate(0,0)">
-<!-- Row A: Zone Start (under Base), Hero (under Legs), Need (under Torso), Flex (under Head), spare (under Item) - all 44 x 36 -->
+<!-- Row A: Flex (under Base), Hero (under Legs), Need (under Torso), Zone Start (under Head), Skills (under Item) - all 44 x 36 -->
 <rect x="6" y="70" width="44" height="36" rx="1.5" class="w"/>
-<text x="28" y="78" class="m q" font-size="3.2" text-anchor="middle">ZONE START</text>
-<text x="28" y="87" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">Cover Head's row x</text>
-<text x="28" y="92.5" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">Item's column on</text>
-<text x="28" y="98" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">the Zone at setup.</text>
+<text x="28" y="78" class="m" font-size="3.2" letter-spacing=".6" text-anchor="middle">FLEX</text>
+<text x="47" y="77" class="m q" font-size="2.6" text-anchor="end">WEEK 3</text>
+<circle cx="28" cy="93" r="12" class="w" stroke-dasharray="2 1.3"/>
+<text x="28" y="89.5" class="s" font-size="3" text-anchor="middle">A sixth card costs</text>
+<rect x="18.5" y="91.6" width="19" height="4" rx=".4" fill="#D3B1B1"/>
+<text x="28" y="94.8" class="s" font-size="3" font-weight="bold" text-anchor="middle">1 Motivation,</text>
+<text x="28" y="99.5" class="s" font-size="3" text-anchor="middle">a day you owe back.</text>
 
 <rect x="53" y="70" width="44" height="36" rx="1.5" class="seat" style="fill:#F0E3D1"/>
 <text x="94" y="77" class="m q" font-size="2.6" text-anchor="end">WEEK 3</text>
@@ -86,52 +95,74 @@ own row underneath, each spanning 2.5 habitus-column widths.</desc>
 <text x="122" y="104" class="s" font-size="3" text-anchor="middle"><tspan font-weight="bold">+1 Motivation</tspan> (cap 5).</text>
 
 <rect x="147" y="70" width="44" height="36" rx="1.5" class="w"/>
-<text x="169" y="78" class="m" font-size="3.2" letter-spacing=".6" text-anchor="middle">FLEX</text>
-<text x="188" y="77" class="m q" font-size="2.6" text-anchor="end">WEEK 3</text>
-<circle cx="169" cy="93" r="12" class="w" stroke-dasharray="2 1.3"/>
-<text x="169" y="89.5" class="s" font-size="3" text-anchor="middle">A sixth card costs</text>
-<rect x="159.5" y="91.6" width="19" height="4" rx=".4" fill="#D3B1B1"/>
-<text x="169" y="94.8" class="s" font-size="3" font-weight="bold" text-anchor="middle">1 Motivation,</text>
-<text x="169" y="99.5" class="s" font-size="3" text-anchor="middle">a day you owe back.</text>
+<text x="169" y="78" class="m q" font-size="3.2" text-anchor="middle">ZONE START</text>
+<text x="151" y="86.5" class="s q" font-size="3.2" font-style="italic" textLength="16.2" lengthAdjust="spacingAndGlyphs">Mark where your</text>
+<text x="151" y="91.5" class="s q" font-size="3.2" font-style="italic" textLength="9.7" lengthAdjust="spacingAndGlyphs">education</text>
+<g transform="translate(163.8,90.3) scale(.8)"><use href="#sh-head"/></g>
+<text x="167.5" y="91.5" class="s q" font-size="3.2" font-style="italic" textLength="3.2" lengthAdjust="spacingAndGlyphs">row</text>
+<text x="151" y="96.5" class="s q" font-size="3.2" font-style="italic" textLength="16.2" lengthAdjust="spacingAndGlyphs">meets your Item</text>
+<g transform="translate(170.4,95.3) scale(.55)"><use href="#sh-item"/></g>
+<text x="151" y="101.5" class="s q" font-size="3.2" font-style="italic" textLength="18.4" lengthAdjust="spacingAndGlyphs">column, at setup.</text>
 
+<text x="216" y="68.3" class="m q" font-size="3" text-anchor="middle">SKILLS</text>
 <rect x="194" y="70" width="44" height="36" rx="1.5" class="w"/>
-<text x="216" y="78" class="m q" font-size="3.2" text-anchor="middle">ITEM SPACE</text>
-<text x="216" y="88" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">Reserved for a second</text>
-<text x="216" y="93.5" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">skill. Currently</text>
-<text x="216" y="99" class="s q" font-size="3.2" text-anchor="middle" font-style="italic">unoccupied.</text>
+<g class="h">
+  <line x1="202.8" y1="70" x2="202.8" y2="106"/><line x1="211.6" y1="70" x2="211.6" y2="106"/>
+  <line x1="220.4" y1="70" x2="220.4" y2="106"/><line x1="229.2" y1="70" x2="229.2" y2="106"/>
+  <line x1="194" y1="77.2" x2="238" y2="77.2"/><line x1="194" y1="84.4" x2="238" y2="84.4"/>
+  <line x1="194" y1="91.6" x2="238" y2="91.6"/><line x1="194" y1="98.8" x2="238" y2="98.8"/>
+</g>
+<g>
+  <g transform="translate(198.4,108.6) scale(.55)"><use href="#sh-item"/><use href="#p1"/></g>
+  <g transform="translate(207.2,108.6) scale(.55)"><use href="#sh-item"/><use href="#p2"/></g>
+  <g transform="translate(216,108.6) scale(.55)"><use href="#sh-item"/><use href="#p3"/></g>
+  <g transform="translate(224.8,108.6) scale(.55)"><use href="#sh-item"/><use href="#p4"/></g>
+  <g transform="translate(233.6,108.6) scale(.55)"><use href="#sh-item"/><use href="#p5"/></g>
+</g>
+<g>
+  <g transform="translate(241,73.6) scale(.7)"><use href="#sh-head"/><use href="#p1"/></g>
+  <g transform="translate(241,80.8) scale(.7)"><use href="#sh-head"/><use href="#p2"/></g>
+  <g transform="translate(241,88) scale(.7)"><use href="#sh-head"/><use href="#p3"/></g>
+  <g transform="translate(241,95.2) scale(.7)"><use href="#sh-head"/><use href="#p4"/></g>
+  <g transform="translate(241,102.4) scale(.7)"><use href="#sh-head"/><use href="#p5"/></g>
+</g>
 
-<!-- Row B: Capital and Motivation, 2.5 habitus-columns wide each -->
+<!-- Row B: Motivation (left) and Capital (right), 2.5 habitus-columns wide each; pushed 2mm down to clear the SKILLS column icons -->
+<g transform="translate(118,2)">
 <rect x="6" y="110" width="114" height="28" rx="1.5" class="w" style="fill:#D9D3C4;stroke:#6E6249"/>
 <text x="10" y="118" class="m" font-size="3.4" letter-spacing=".8">CAPITAL</text>
 <text x="116" y="118" class="m q" font-size="2.6" text-anchor="end">WEEK 2</text>
 <g style="stroke:#6E6249" stroke-width=".55" fill="none">
-  <line x1="20" y1="127" x2="106" y2="127" stroke-width=".35"/>
   <circle cx="20" cy="127" r="4.2"/><circle cx="37" cy="127" r="4.2"/><circle cx="55" cy="127" r="4.2"/>
   <circle cx="72" cy="127" r="4.2"/><circle cx="89" cy="127" r="4.2"/><circle cx="106" cy="127" r="4.2"/>
+</g>
+<g style="stroke:#6E6249" stroke-width=".4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M25 127H32 M30.6 125.9L32 127L30.6 128.1"/><path d="M42 127H50 M48.6 125.9L50 127L48.6 128.1"/>
+  <path d="M60 127H67 M65.6 125.9L67 127L65.6 128.1"/><path d="M77 127H84 M82.6 125.9L84 127L82.6 128.1"/>
+  <path d="M94 127H101 M99.6 125.9L101 127L99.6 128.1"/>
 </g>
 <g class="m q" font-size="3.2" text-anchor="middle">
   <text x="20" y="128.4">0</text><text x="37" y="128.4">1</text><text x="55" y="128.4">2</text>
   <text x="72" y="128.4">3</text><text x="89" y="128.4">4</text><text x="106" y="128.4">5</text>
 </g>
 <text x="10" y="136" class="s q" font-size="2.9" font-style="italic">one marker - slide it. Starts 0, only grows if witnessed.</text>
+</g>
 
+<g transform="translate(-118,2)">
 <rect x="124" y="110" width="114" height="28" rx="1.5" class="w" style="fill:#D3B1B1"/>
 <text x="128" y="118" class="m" font-size="3.4" letter-spacing=".8">MOTIVATION</text>
 <g stroke="#2A2620" stroke-width=".55" fill="none">
   <rect x="133.8" y="122.8" width="8.4" height="8.4" rx="1"/><rect x="155.8" y="122.8" width="8.4" height="8.4" rx="1"/><rect x="176.8" y="122.8" width="8.4" height="8.4" rx="1"/>
   <rect x="198.8" y="122.8" width="8.4" height="8.4" rx="1"/><rect x="219.8" y="122.8" width="8.4" height="8.4" rx="1"/>
 </g>
-<g class="m q" font-size="3.2" text-anchor="middle">
-  <text x="138" y="128.4">1</text><text x="160" y="128.4">2</text><text x="181" y="128.4">3</text>
-  <text x="203" y="128.4">4</text><text x="224" y="128.4">5</text>
-</g>
 <text x="128" y="136" class="s q" font-size="2.9" font-style="italic">tokens, one per square. Starts 3. The grind: -1 every week. At 0 you quit.</text>
+</g>
 </g>
 
 </g>
 
 <!-- THE WEEK: the weekly turn, printed beside the figure so every player has it in front of them (rulebook 6.1) -->
-<rect x="254" y="14" width="37" height="150" rx="2" class="r"/>
+<rect x="254" y="14" width="37" height="156" rx="2" class="r"/>
 <text x="258" y="22" class="m" font-size="3.6" letter-spacing="1.2">THE WEEK</text>
 <line x1="258" y1="25" x2="287" y2="25" class="h"/>
 <g class="s" font-size="2.6">
@@ -165,11 +196,13 @@ own row underneath, each spanning 2.5 habitus-column widths.</desc>
   <text x="258" y="127">Bank finished features.</text>
   <text x="258" y="130.6">Walk the Ledger. Add</text>
   <text x="258" y="134.2">this week's tokens.</text>
-  <text x="258" y="137.8">Motivation: ONE net</text>
-  <text x="258" y="141.4">number (the grind -1,</text>
-  <text x="258" y="145">Torso, Need). At 0 you</text>
-  <text x="258" y="148.6">quit, checked only here.</text>
-  <text x="258" y="152.2">Then the next week.</text>
+
+  <text x="258" y="141" font-size="3" font-weight="bold">7  MOTIVATION</text>
+  <text x="258" y="145">ONE net number: the</text>
+  <text x="258" y="148.6">grind -1, Torso, Need.</text>
+  <text x="258" y="152.2">At 0 you quit, checked</text>
+  <text x="258" y="155.8">only here. Then the</text>
+  <text x="258" y="159.4">next week.</text>
 </g>
-<text x="272.5" y="160.5" class="s q" font-size="2.6" text-anchor="middle" font-style="italic">tick it off aloud</text>
+<text x="272.5" y="166.5" class="s q" font-size="2.6" text-anchor="middle" font-style="italic">tick it off aloud</text>
 </svg>

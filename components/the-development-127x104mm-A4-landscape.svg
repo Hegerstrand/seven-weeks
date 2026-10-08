@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
 <title>THE DEVELOPMENT - week 3: front and back on one page (127 x 104 mm)</title>
-<desc>Split off THE ZONE on purpose. The grid on THE ZONE is live from week 1, but Learn/Teach and
-the Ledger's Capability/Shared Practice payoff don't exist before week 3 - so this panel sits
-face-down beside THE ZONE until week 3, then turns over - the same week the Specimen panel on
-each person board starts being read. Cut both panels
+<desc>Split off THE ZONE on purpose. The 5x5 grid on THE ZONE (and in each person board's SKILLS box)
+is live from week 1, but Learn/Teach and the Ledger's Capability/Capital payoff don't exist before
+week 3 - so this panel sits face-down beside THE ZONE until week 3, then turns over - the same week
+the Specimen panel on each person board starts being read. Cut both panels
 out, glue them to opposite faces of one piece of 2 mm greyboard. Print at 100% on one side of
 one sheet.</desc>
 
@@ -28,24 +28,28 @@ one sheet.</desc>
 <rect x="10" y="20" width="127" height="47" rx="2" class="r"/>
 <text x="20" y="29" class="m" font-size="5" letter-spacing="1.4">HOW YOU COVER</text>
 <text x="20" y="38" class="m" font-size="3.4" letter-spacing=".4">LEARN</text>
-<text x="45" y="38" class="s" font-size="3.4">pick up a new skill, <tspan font-weight="bold">left or right</tspan></text>
-<text x="45" y="42.5" class="s" font-size="3.4">of one you cover, in your own row. No teacher needed.</text>
+<text x="45" y="38" class="s" font-size="3.4">pick up a new square, <tspan font-weight="bold">left or right</tspan> of one you</text>
+<text x="45" y="42.5" class="s" font-size="3.4">cover, in your own row. The team names who. No teacher.</text>
 <text x="20" y="51" class="m" font-size="3.4" letter-spacing=".4">TEACH</text>
-<text x="45" y="51" class="s" font-size="3.4">let someone cover a square you hold - <tspan font-weight="bold">up, down,</tspan></text>
-<text x="45" y="55.5" class="s" font-size="3.4"><tspan font-weight="bold">left or right</tspan> of one they cover, in any row.</text>
-<text x="20" y="61" class="s q" font-size="2.5" font-style="italic">Always one step from what you already cover, never a diagonal leap -</text>
-<text x="20" y="65" class="s q" font-size="2.5" font-style="italic">Vygotsky's Zone of Proximal Development.</text>
+<text x="45" y="51" class="s" font-size="3.4">let a partner mark a square - <tspan font-weight="bold">up, down,</tspan></text>
+<text x="45" y="55.5" class="s" font-size="3.4"><tspan font-weight="bold">left or right</tspan> of one you cover, in any row.</text>
+<text x="20" y="60" class="m" font-size="3.2" letter-spacing=".4">BOTH</text>
+<text x="45" y="60" class="s" font-size="3.4">mark your SPECIMEN, then put down or flip a tile on <tspan font-weight="bold">THE ZONE</tspan>.</text>
+<text x="20" y="65.5" class="s q" font-size="2.5" font-style="italic">One step from what you cover (Vygotsky's ZPD). A square got this week can't be taught this week.</text>
 
 <!-- ═══ WHAT THE LEDGER READS HERE ═══ -->
 <rect x="10" y="73" width="127" height="47" rx="2" class="r"/>
-<text x="20" y="82" class="m" font-size="4.6" letter-spacing="1.2">THE LEDGER READS THIS</text>
-<rect x="20" y="85" width="112" height="9" rx="1.5" fill="#C7CFB5"/>
-<text x="23" y="89" class="m" font-size="3.4" letter-spacing=".3">CAPABILITY · A FULL LINE</text>
-<text x="23" y="93" class="s" font-size="3.2">fill any whole row or whole column → <tspan font-weight="bold">+1 Capability</tspan></text>
-<rect x="20" y="96" width="112" height="9" rx="1.5" fill="#FAECBE"/>
-<text x="23" y="100" class="m" font-size="3.4" letter-spacing=".3">SHARED PRACTICE · A STACK</text>
-<text x="23" y="104" class="s" font-size="3.2">two of you covering the same square → <tspan font-weight="bold">+1 Shared Practice</tspan></text>
-<text x="20" y="109" class="m q" font-size="2.5"><tspan x="20" dy="0">BOURDIEU 1986 · FORMS OF CAPITAL</tspan><tspan x="20" dy="3.2">VYGOTSKY 1978 · ZONE OF PROXIMAL DEVELOPMENT/SCAFFOLDING</tspan><tspan x="20" dy="3.2">MARX 1846 · DIVISION OF LABOUR</tspan></text>
+<text x="20" y="80.5" class="m" font-size="4.6" letter-spacing="1.2">THE LEDGER READS THIS</text>
+<rect x="20" y="83.5" width="112" height="8.5" rx="1.5" fill="#C7CFB5"/>
+<text x="23" y="87.3" class="m" font-size="3.4" letter-spacing=".3">CAPABILITY · A FULL LINE</text>
+<text x="23" y="90.8" class="s" font-size="3.2">a whole row or column of THE ZONE tiled → <tspan font-weight="bold">+1 Capability</tspan></text>
+<rect x="20" y="93.5" width="112" height="8.5" rx="1.5" fill="#FAECBE"/>
+<text x="23" y="97.3" class="m" font-size="3.4" letter-spacing=".3">SHARED PRACTICE · A STACK</text>
+<text x="23" y="100.8" class="s" font-size="3.2">a tile flipped to its stacked face → <tspan font-weight="bold">+1 Shared Practice</tspan></text>
+<rect x="20" y="103.5" width="112" height="8.5" rx="1.5" fill="#D9D3C4"/>
+<text x="23" y="107.3" class="m" font-size="3.4" letter-spacing=".3">CROSS-TRAINED · A 3RD ROW</text>
+<text x="23" y="110.8" class="s" font-size="3.2">your SPECIMEN covers a 3rd row → <tspan font-weight="bold">+1 Capital</tspan>, once each</text>
+<text x="20" y="117" class="m q" font-size="2.5">BOURDIEU 1986 · VYGOTSKY 1978 · MARX 1846</text>
 </g>
 
 <!-- ───────────── BACK: what shows while it waits ───────────── -->
@@ -57,8 +61,8 @@ one sheet.</desc>
   <text x="20" y="32" class="m q" font-size="4.2" letter-spacing="1.2">TURN ME OVER</text>
   <text x="20" y="38" class="m q" font-size="3.4" letter-spacing="1">START OF WEEK 3</text>
   <text x="20" y="49" class="s" font-size="4.6">The Zone has more to it than the grid.</text>
-  <text x="20" y="55" class="s" font-size="3.4">Covering a square is only half of it - what you do with a</text>
-  <text x="20" y="59.5" class="s" font-size="3.4">square you already cover comes next.</text>
+  <text x="20" y="55" class="s" font-size="3.4">Covering a square is only half of it - the tiles on the</text>
+  <text x="20" y="59.5" class="s" font-size="3.4">Zone, and what they pay, come next.</text>
 </g>
 
 <line x1="10" y1="196" x2="285" y2="196" class="cut"/>

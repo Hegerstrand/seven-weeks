@@ -218,12 +218,14 @@ STRATEGIES = {
         "hero", work_days=(5, 5, 5, 5, 5, 5, 5, 5), trust_goal=0, celebrate_min=1, celebrate_mean=0.0,
         pool_goal=0, learn=0, reflect=False, plan=False, demo=False, overtime_weeks=(6, 7, 8),
         adapt_threshold=99.0, hero_min_cost=1, bank_tokens=False, wolf="never", take_one=False),
-    # Some investment early, Work-heavy late.
-    "balanced": Strategy("balanced", work_days=(3, 3, 3, 3, 3, 3, 4, 4)),
+    # Some investment early, Work-heavy late. Small tweaks from what optimal does: a full first week, Trust 4,
+    # two Learn/Teach a week, cancel more Events, and only celebrate when there is something to mark.
+    "balanced": Strategy("balanced", work_days=(4, 3, 3, 3, 3, 3, 4, 4), trust_goal=4, learn=2, adapt_threshold=0.5,
+                         hero_min_cost=1, celebrate_needs_reason=True),
     # Heavy early investment in Trust, the Zone and the pool.
     "invested": Strategy(
-        "invested", work_days=(3, 2, 2, 3, 3, 4, 4, 4), trust_goal=4, pool_goal=5, learn=2,
-        celebrate_every=3, adapt_threshold=0.7),
+        "invested", work_days=(4, 2, 2, 3, 3, 4, 4, 4), trust_goal=4, pool_goal=4, learn=2,
+        celebrate_every=3, adapt_threshold=0.5, hero_min_cost=1, celebrate_needs_reason=True),
     # Lays five random cards from the ones that are open (Work twice as likely) and never plans ahead.
     "random": Strategy("random", random_play=True, take_one=False, repay_flex=False),
 }
@@ -550,6 +552,20 @@ class Game:
             return True
         return w >= self.R.events_from_week and self.cover_capacity(w) >= 5
 
+    def reflect_wells_open(self) -> list:
+        """Team Reflexivity wells that last week's evidence could fill right now."""
+        if "TR" in self.habits:
+            return []
+        p = self.prev
+        out = []
+        if p["banked"] and "OBJ" not in self.wells:
+            out.append("OBJ")
+        if p["adapted2"] and "STRAT" not in self.wells:
+            out.append("STRAT")
+        if p["process"] and "PROC" not in self.wells:
+            out.append("PROC")
+        return out
+
     def plan_week(self, w: int):
         R, st = self.R, self.st
         if st.random_play:
@@ -585,6 +601,21 @@ class Game:
             if st.demo and self.chars:
                 wanted.append("Demo")
         slots = max(0, R.days - st.work_days[min(w, len(st.work_days)) - 1])
+        # Plan pays +1 on every Work card on a feature, so it goes near the front whenever there are Work days to boost
+        if (w >= 3 and st.plan and self.sp > R.low_band and self.plan_target() is not None
+                and st.work_days[min(w, len(st.work_days)) - 1] >= 2):
+            wanted = [c for c in wanted if c != "Plan"]
+            wanted.insert(1 if "Celebrate" in wanted else 0, "Plan")
+        open_wells: list = []
+        if w >= 3 and st.reflect and self.trust >= R.reflect_trust:
+            open_wells = self.reflect_wells_open()
+            wanted = [c for c in wanted if c != "Reflect"]
+            if open_wells:
+                at = wanted.index("Plan") + 1 if "Plan" in wanted else (1 if "Celebrate" in wanted else 0)
+                for _ in range(min(2, len(open_wells))):
+                    wanted.insert(at, "Reflect")
+            else:
+                wanted.append("Reflect")
         cards = wanted[:slots]
         if "Celebrate" in wanted and "Celebrate" not in cards:
             if cards:
@@ -594,6 +625,10 @@ class Game:
         cards += ["Work"] * (R.days - len(cards))
         if st.celebrate_needs_reason and "Celebrate" in cards and not self.celebrate_worth(w, cards):
             cards[cards.index("Celebrate")] = "Work"
+        if open_wells:
+            self.m["tr_chances"] += 1
+            if "Reflect" not in cards:
+                self.m["tr_missed"] += 1
         if self.flex_owed > 0 and w < R.weeks and st.repay_flex and "Work" in cards:
             cards[cards.index("Work")] = "Flex"
             self.flex_owed -= 1
@@ -886,6 +921,7 @@ class Game:
                     out += 1
                 if self.feat[f]["cx"] != "L" and (f == plan_f or f == self.carry):
                     out += R.plan_bonus
+                    self.m["plan_extra_work"] += R.plan_bonus
                 if W.date_up:
                     out -= 1
                 if W.dashboard and self.feat[f]["cx"] != "L":
@@ -1267,7 +1303,7 @@ class Game:
         return {
             "banked": banked, "score": score, "threshold": threshold, "threshold_high": threshold_high, "outcome": outcome,
             "work_out": self.m["work_out"], "work_cards": self.m["work_cards"], "work_needed": needed,
-            "work_wasted": self.m["work_cards_wasted"], "rework_lost": self.m["rework_lost"],
+            "work_wasted": self.m["work_cards_wasted"], "rework_lost": self.m["rework_lost"], "plan_extra_work": self.m["plan_extra_work"],
             "cost_added": self.m["cost_added"], "last_bank_week": self.last_bank_week,
             "work_by_week": list(self.work_by_week) + [0] * (R.weeks - len(self.work_by_week)),
             "tokens_earned": self.m["tokens_earned"], "tokens_spent": self.m["tokens_spent"],
@@ -1297,6 +1333,7 @@ class Game:
             "teach_dead": self.m["teach_dead"], "reflect_dead": self.m["reflect_dead"],
             "reflect_played": self.m["reflect_played"], "reflect_no_evidence": self.m["reflect_no_evidence"],
             "tr_well_skipped": self.m["tr_well_skipped"], "tr_wells_filled": len(self.wells),
+            "tr_chances": self.m["tr_chances"], "tr_missed": self.m["tr_missed"],
             "tokens_reflect": self.m["tokens_reflect"],
             "lines_filled": self.m["lines_filled"], "stack_flips": self.m["stack_flips"],
             "zone_tiles": len(self.tiles), "squares_learned": self.m["squares_learned"],
@@ -1359,6 +1396,8 @@ def report(name: str, res: list, rules: Rules):
         mean(r["work_out"] / r["work_cards"] if r["work_cards"] else 0 for r in res),
         mean(r["work_wasted"] for r in res), mean(r["rework_lost"] for r in res)))
     print("   Work cards per game %.1f of %d days" % (mean(r["work_cards"] for r in res), rules.weeks * rules.days))
+    print("   PLAN: each Work card on the planned feature delivers double; extra Work from Plan %.1f a game, Plan laid %.2f times a game" % (
+        mean(r["plan_extra_work"] for r in res), mean(sum(d.get("Plan", 0) for d in r["cards_week"]) for r in res)))
     if done:
         print("   last feature banked in week: mean %.1f  (p10 %d, p90 %d)  over the games that finish" % (
             mean(r["last_bank_week"] for r in done), pct([r["last_bank_week"] for r in done], 10), pct([r["last_bank_week"] for r in done], 90)))
@@ -1405,10 +1444,20 @@ def report(name: str, res: list, rules: Rules):
     for k, label in (("OBJ", "objectives"), ("STRAT", "strategy"), ("PROC", "process")):
         print("      %-10s well filled by week (share of games): " % label + "  ".join(
             "w%d %.2f" % (i + 1, mean(r["wells_week"][i][k] for r in res)) for i in range(rules.weeks)))
+    chances = mean(r["tr_chances"] for r in res)
+    missed = mean(r["tr_missed"] for r in res)
+    print("      weeks with evidence for an empty well %.2f a game (needs %d), Reflect not laid in %.2f of them" % (chances, rules.tr_wells, missed))
+    reasons = []
+    if chances < rules.tr_wells:
+        reasons.append("evidence for an empty well showed up in only %.1f weeks a game, fewer than the %d wells (each week needs a banked feature, 2 Events adapted to, or a Hero / token / track drop, and the Reflect comes the week after)" % (chances, rules.tr_wells))
+    if missed > 0.3:
+        reasons.append("%.1f of those weeks had no free day for a Reflect" % missed)
     if mean(r["reflect_played"] for r in res) < rules.tr_wells:
-        print("      WHY NOT: fewer Reflect cards than wells (%d) are played per game, so the habit cannot be reached." % rules.tr_wells)
-    elif mean(r["tr_well_skipped"] for r in res) > 0.5:
-        print("      WHY NOT: Reflect found no new evidence for an empty well.")
+        reasons.append("only %.1f Reflects a game against %d wells" % (mean(r["reflect_played"] for r in res), rules.tr_wells))
+    if reasons:
+        print("      WHY NOT: " + "; ".join(reasons) + ".")
+    elif share(res, lambda r: "TR" in r["habits"]) < 50:
+        print("      WHY NOT: the cards and evidence are there; the wells fill too late in the game to finish.")
 
     print("\n3. MOTIVATION")
     print("   mean Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_mean"][i] for r in res)) for i in range(rules.weeks)))
@@ -1441,8 +1490,11 @@ def report(name: str, res: list, rules: Rules):
         "w%d %.2f" % (i + 1, mean(sum(r["cancel_week"][i].values()) for r in res)) for i in range(W)))
     for how in names_in(res, "cancel_week", CANCEL_ORDER):
         print("     by %-12s" % how + "  ".join("w%d %.2f" % (i + 1, mean(r["cancel_week"][i].get(how, 0) for r in res)) for i in range(W)))
-    for card in names_in(res, "cards_week", CARD_ORDER):
+    for card in shown_cards(res):
         print("   %-17s" % (card + " days") + "  ".join("w%d %.2f" % (i + 1, mean(r["cards_week"][i].get(card, 0) for r in res)) for i in range(W)))
+    all_cards = share(res, lambda r: set(ACTION_CARDS) <= cards_played(r))
+    print("   CARD USE CHECK (goal: every action card is played at least once in a game): all %d in %.0f%% of games" % (len(ACTION_CARDS), all_cards))
+    print("      share of games playing each: " + "  ".join("%s %.0f%%" % (c, share(res, lambda r, c=c: c in cards_played(r))) for c in ACTION_CARDS))
     for key, label in (("hero", "Hero played"), ("dependable", "Dependable Take 1"), ("take_one", "Other Take One"),
                        ("recognition_witness", "Recog. witness"), ("recognition_need_met", "Recog. Need met")):
         print("   %-17s" % label + "  ".join("w%d %.2f" % (i + 1, mean(r["habitus_week"][i][key] for r in res)) for i in range(W)))
@@ -1582,11 +1634,21 @@ def write_csv(path: str, dump: dict):
 # --------------------------------------------------------------------------------------
 
 
+def cards_played(r: dict) -> set:
+    return {c for week in r["cards_week"] for c, n in week.items() if n}
+
+
+def shown_cards(res: list) -> list:
+    """Every action card, played or not, then any other card (Flex) that appeared."""
+    return ACTION_CARDS + [c for c in names_in(res, "cards_week", CARD_ORDER) if c not in ACTION_CARDS]
+
+
 def objective(res: list) -> float:
     # Share of games that reach the upper threshold (percent), plus a little mean score and all-six share as
-    # tie-breakers, minus 15 for each Quality quit after a week without Work.
+    # tie-breakers, minus 15 for each Quality quit after a week without Work and 8 for each action card a game never plays.
+    missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
     return (share(res, lambda r: r["outcome"] == "thriving") + 0.2 * mean(r["score"] for r in res)
-            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res))
+            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing)
 
 
 OPT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "balance_sim_optimal.json")
@@ -1678,13 +1740,18 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
 # SVG plots (standard library only): three panels per strategy, weeks on x, average count on y
 # --------------------------------------------------------------------------------------
 
+# The game's own colours (board-game-boards canon); pastel, so lines get a dark outline
+C_TRUST, C_CAP, C_SP, C_ADAPT, C_MOT, C_HABITUS = "#D3CEDF", "#C7CFB5", "#F7D7A1", "#B5C7CF", "#D3B1B1", "#E8D4B8"
+INK = "#2A2620"
+
 CARD_ORDER = ["Work", "Celebrate", "Coordinate", "Align", "Workshop", "Learn", "Teach", "Reflect", "Plan", "Demo", "Flex"]
+ACTION_CARDS = [c for c in CARD_ORDER if c != "Flex"]
 CARD_COLOUR = {"Work": "#6B7A8F", "Celebrate": "#E3A72F", "Coordinate": "#4C9F70", "Refine": "#2F80ED",
                "Workshop": "#7AB8F5", "Align": "#1C7ED6", "Learn": "#9B51E0", "Teach": "#C9A0F0", "Reflect": "#F2994A",
                "Plan": "#56CCF2", "Demo": "#EB5757", "Flex": "#333333"}
 CANCEL_ORDER = ["free", "habit", "token", "hero", "stand", "trust", "av"]
-CANCEL_COLOUR = {"free": "#9AD1A8", "habit": "#63E6BE", "token": "#2F80ED", "hero": "#E3A72F", "stand": "#E8590C",
-                 "trust": "#4C9F70", "av": "#9B51E0"}
+CANCEL_COLOUR = {"free": "#9AD1A8", "habit": "#63E6BE", "token": C_ADAPT, "hero": "#E3A72F", "stand": "#E8590C",
+                 "trust": C_TRUST, "av": "#9B51E0"}
 FALLBACK_COLOURS = ["#888888", "#BB6BD9", "#219653", "#F2C94C"]
 
 
@@ -1710,6 +1777,14 @@ def _nice_max(v: float) -> float:
         if v <= m:
             return m
     return math.ceil(v / 5) * 5
+
+
+def _pastel(col: str) -> bool:
+    try:
+        r, g, b = int(col[1:3], 16), int(col[3:5], 16), int(col[5:7], 16)
+    except ValueError:
+        return False
+    return 0.299 * r + 0.587 * g + 0.114 * b > 170
 
 
 class _Panel:
@@ -1747,6 +1822,8 @@ def _legend(out: list, p: _Panel, items: list):
             out.append('<rect x="%g" y="%g" width="12" height="10" fill="%s"/>' % (x, y - 8, col))
         else:
             dash = ' stroke-dasharray="4 3"' if kind == "dash" else ""
+            if _pastel(col):
+                out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="%s" stroke-width="4.6"%s/>' % (x, y - 3, x + 12, y - 3, INK, dash))
             out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="%s" stroke-width="2.2"%s/>' % (x, y - 3, x + 12, y - 3, col, dash))
         out.append('<text x="%g" y="%g" class="a">%s</text>' % (x + 18, y, _esc(label)))
 
@@ -1754,10 +1831,15 @@ def _legend(out: list, p: _Panel, items: list):
 def _lines(out: list, p: _Panel, series: list):
     for _, col, vals, dash in series:
         pts = " ".join("%.1f,%.1f" % (p.px(i), p.py(v)) for i, v in enumerate(vals))
+        pale = _pastel(col)
+        if pale:
+            out.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="4.6"%s/>' % (
+                pts, INK, ' stroke-dasharray="4 3"' if dash else ""))
         out.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.2"%s/>' % (
             pts, col, ' stroke-dasharray="4 3"' if dash else ""))
         for i, v in enumerate(vals):
-            out.append('<circle cx="%.1f" cy="%.1f" r="2.6" fill="%s"/>' % (p.px(i), p.py(v), col))
+            out.append('<circle cx="%.1f" cy="%.1f" r="2.6" fill="%s"%s/>' % (
+                p.px(i), p.py(v), col, ' stroke="%s" stroke-width="1"' % INK if pale else ""))
 
 
 def _stack(out: list, p: _Panel, layers: list):
@@ -1780,9 +1862,9 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
 
     # 1. currencies
     lines = [
-        ("Motivation (mean per character)", "#D6336C", week_mean(res, "mot_mean", W), False),
-        ("Capital (mean per character)", "#E8590C", week_mean(res, "capital_week", W), False),
-        ("Adaptability pool (tokens)", "#2F80ED", week_mean(res, "pool_week", W), False),
+        ("Motivation (mean per character)", C_MOT, week_mean(res, "mot_mean", W), False),
+        ("Capital (mean per character)", C_HABITUS, week_mean(res, "capital_week", W), False),
+        ("Adaptability pool (tokens)", C_ADAPT, week_mean(res, "pool_week", W), False),
         ("Features banked", "#212529", week_mean(res, "banked_week", W), False),
     ]
     p1 = _Panel(X0, TOP, PW, PH, _nice_max(max(max(s[2]) for s in lines)), W)
@@ -1793,11 +1875,11 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     # 1b. the Ledger and Habits held
     held = [mean(len(r["habit_week"][i]) for r in res) for i in range(W)]
     ledger = [
-        ("Trust", "#2B8A3E", week_mean(res, "trust_week", W), False),
-        ("Capability", "#7048E8", week_mean(res, "cap_week", W), False),
-        ("Shared Practice", "#0B7285", week_mean(res, "sp_week", W), False),
+        ("Trust", C_TRUST, week_mean(res, "trust_week", W), False),
+        ("Capability", C_CAP, week_mean(res, "cap_week", W), False),
+        ("Shared Practice", C_SP, week_mean(res, "sp_week", W), False),
         ("Standing (highest Capital)", "#868E96", week_mean(res, "standing_week", W), False),
-        ("Habits held (0-5)", "#C2255C", held, True),
+        ("Habits held (0-5)", "#B03A2E", held, True),
         ("Habit threshold (%d)" % rules.habit_at, "#AAAAAA", [float(rules.habit_at)] * W, True),
     ]
     yl = TOP + PH + GAP
@@ -1807,16 +1889,16 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     _legend(out, pl, [(s[0], s[1], "dash" if s[3] else "line") for s in ledger])
 
     # 1c. which Habits, share of games
-    names = [("PS", "Psychological Safety", "#2B8A3E"), ("WKW", "Who Knows What", "#7048E8"),
-             ("SR", "Shared Repertoire", "#0B7285"), ("TR", "Team Reflexivity", "#F2994A"),
+    names = [("PS", "Psychological Safety", C_TRUST), ("WKW", "Who Knows What", C_CAP),
+             ("SR", "Shared Repertoire", C_SP), ("TR", "Team Reflexivity", C_ADAPT),
              ("AV", "Authorized Voice", "#868E96")]
-    share = [(label, col, [mean(r["habit_week"][i].get(k, 0) for r in res) for i in range(W)], False)
+    habit_share = [(label, col, [mean(r["habit_week"][i].get(k, 0) for r in res) for i in range(W)], False)
              for k, label, col in names]
     yh = yl + PH + GAP
     ph = _Panel(X0, yh, PW, PH, 1, W)
     _frame(out, ph, "3. Habits formed: share of games holding each, per week", "share of games")
-    _lines(out, ph, share)
-    _legend(out, ph, [(s[0], s[1], "line") for s in share])
+    _lines(out, ph, habit_share)
+    _legend(out, ph, [(s[0], s[1], "line") for s in habit_share])
 
     # 2. Events cancelled, by how
     base_ways = ["free", "token", "hero", "trust", "av"]
@@ -1833,7 +1915,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     _legend(out, p2, [(l[0], l[1], "bar") for l in layers])
 
     # 3. The five days
-    cards = names_in(res, "cards_week", CARD_ORDER)
+    cards = shown_cards(res)
     layers = [(c, CARD_COLOUR.get(c, "#999999"), week_mean_of(res, "cards_week", c, W)) for c in cards]
     y3 = y2 + PH + GAP
     tot = [sum(l[2][i] for l in layers) for i in range(W)]
@@ -1912,7 +1994,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     for k, label, col in wl:
         ev_key = {"OBJ": "banked", "STRAT": "adapted2", "PROC": "process"}[k]
         tr_lines.append(("%s evidence on offer" % label, col, [mean(r["evidence_week"][i][ev_key] for r in res) for i in range(W)], True))
-    tr_lines.append(("Team Reflexivity held", "#C2255C", [mean(1 if "TR" in r["habit_week"][i] else 0 for r in res) for i in range(W)], False))
+    tr_lines.append(("Team Reflexivity held", C_ADAPT, [mean(1 if "TR" in r["habit_week"][i] else 0 for r in res) for i in range(W)], False))
     ptr = _Panel(X0, yt, PW, PH, 1, W)
     _frame(out, ptr, "8. Team Reflexivity: share of games with each well filled, evidence on offer, and the Habit held", "share of games")
     _lines(out, ptr, tr_lines)
@@ -1920,7 +2002,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
 
     # 9. Table: cards played, average per game, by week
     y6 = yt + PH + GAP
-    rows = names_in(res, "cards_week", CARD_ORDER)
+    rows = shown_cards(res)
     rh, cw = 20, 64
     out.append('<text x="%g" y="%g" class="t">9. Cards played: average per game, by week</text>' % (X0, y6 - 14))
     cols = ["card"] + ["w%d" % (i + 1) for i in range(W)] + ["per game", "% of games"]
@@ -1981,7 +2063,8 @@ def calibrate(dump: dict):
     ok = [t for t in range(lo, hi + 1) if reach(opt, t) >= 0.9]
     top = max(ok) if ok else None
     # lowest score where every 'almost never' strategy is at 2% or less
-    never = [min([t for t in range(lo, hi + 1) if reach(series[n], t) <= 0.02] or [hi]) for n in rnd]
+    # random never banks all six features, so its 'reach' is always 0: judge it on the score alone
+    never = [min([t for t in range(lo, hi + 1) if sum(1 for r in series[n] if r["score"] >= t) / len(series[n]) <= 0.02] or [hi]) for n in rnd]
     low = max(never) if never else lo
     often_ok = [t for t in range(lo, hi + 1) if reasonable and all(reach(series[n], t) >= 0.5 for n in reasonable)]
     often = max(often_ok) if often_ok else None
@@ -2004,14 +2087,22 @@ def calibrate(dump: dict):
         sum(r["celebrates"] for r in opt) / len(opt), sum(r["celebrate_empty"] for r in opt) / len(opt),
         100 * sum(1 for r in opt if r["celebrates"] > 4) / len(opt)))
     lines.append("  Trust cancels in optimal play: %.1f Events a game" % (sum(r["cancel_by"].get("trust", 0) for r in opt) / len(opt)))
+    unused = [c for c in ACTION_CARDS if sum(1 for r in opt if c in cards_played(r)) < len(opt)]
+    lines.append("  Card use in optimal play: every action card in %.0f%% of games (goal 100%%)%s" % (
+        100 * sum(1 for r in opt if set(ACTION_CARDS) <= cards_played(r)) / len(opt),
+        "; not always played: " + ", ".join("%s %.0f%%" % (c, 100 * sum(1 for r in opt if c in cards_played(r)) / len(opt)) for c in unused) if unused else ""))
     if top is None:
         best = max(reach(opt, t) for t in range(lo, hi + 1))
+        near = max([t for t in range(lo, hi + 1) if reach(opt, t) >= best - 0.05] or [lo])
         lines.append("  Upper threshold: no score lets 90%% of optimal play reach it. Only %.0f%% of optimal games bank all six features (best reach %.0f%%)." % (all_six, 100 * best))
+        lines.append("  Closest: %d (base %d) is the highest score that optimal reaches within 5 points of that ceiling (%.0f%%)." % (near, near - per, 100 * reach(opt, near)))
         lines.append("  Failures and the low-score tail (quits at -20) are a rules problem, not a threshold problem.")
-        up_txt = "upper: none (optimal banks all six in only %.0f%%)" % all_six
+        up_txt = "upper: none (optimal banks all six in only %.0f%%), closest %d" % (all_six, near)
+        up_set = near
     else:
         lines.append("  Upper threshold: %d (base %d) is the highest score that 90%% of optimal games reach.   [now %d: %.0f%%]" % (top, top - per, cur2, 100 * reach(opt, cur2)))
         up_txt = "upper %d" % top
+        up_set = top
     lines.append("  Lower threshold: %d (base %d) is the lowest score that %s reach%s 2%% or less." % (
         low, low - per, " and ".join(rnd) if rnd else "nobody", "" if len(rnd) != 1 else "es"))
     for n in reasonable:
@@ -2030,6 +2121,8 @@ def calibrate(dump: dict):
     else:
         low_txt = "lower %d" % low
     short = "%s; %s (now %d and %d)" % (up_txt, low_txt, cur, cur2)
+    lines.append("  SET THESE: --set threshold_base=%d --set threshold_high_base=%d   (lower %d, upper %d at %d players)" % (
+        low - per, up_set - per, low, up_set, rules.players))
     return "\n".join(lines) + "\n", [["threshold"] + names] + rows, short
 
 

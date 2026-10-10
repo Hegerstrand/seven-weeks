@@ -12,7 +12,8 @@ whenever a playtest changes a rule, and log the change in
 > matching Team Reflexivity well **and** still gives the pool token; a spent token counts as process
 > evidence, §7, §18. **Align** gives +3 Adaptability. Eight Events cost 1 more to cancel: BUDGET CUT,
 > REQUIREMENTS CHANGE, PRIORITY CHANGES, FALSE START (now 2); STATUS MEETING, NEGATIVE FEEDBACK, SCOPE
-> CREEP, EQUIPMENT OUTAGE (now 3), §6.1. Thresholds and costs are first guesses from the simulator.
+> CREEP, EQUIPMENT OUTAGE (now 3), §6.1. A **Trust cancel** (Trust 4+, one Event a week) now **steps Trust
+> down one**, so it cannot be used every week for free, §4. Thresholds and costs are first guesses from the simulator.
 
 > ## TEAM REFLEXIVITY: NOT A POOL FLIP ANY MORE, BACK AS A REFLECT HABIT (2026-10-10)
 > Adaptability is a currency, so the old flip ("the pool holds 4") and its row on THE TEAM are gone.
@@ -594,7 +595,7 @@ Event happens (the Adaptability pool has none - it only does something when you 
 
 | Track | At 4-5 | At 0-1 |
 |---|---|---|
-| **Trust** | Once per week, cancel one Event effect completely. | **Teach does nothing.** A square will not be handed on in a team that doesn't trust each other. |
+| **Trust** | Once per week, cancel one Event effect completely - **the Trust coin then steps down one** (a Coordinate builds it back). | **Teach does nothing.** A square will not be handed on in a team that doesn't trust each other. |
 | **Capability** | Work produces **+1**. | **The first Work card each week does nothing.** |
 | **Shared Practice** | The **second and every later Work card** in a week produces **+1 extra**. The team has a routine for the thing it does most. | **Plan does nothing.** No common routines, so planning together doesn't take. |
 
@@ -1081,7 +1082,7 @@ of an Event, never a different plan.
 Three things cancel an Event **without costing Adaptability at all**:
 - a character's **Hero** (§5.1), if the Event names their Pressure Response - once per game, needing 3 Motivation (a Competitive character may do it every time);
 - **Authorized Voice** (§18), once a week, if the team has it;
-- **Trust at 4 or 5** (§4), once a week.
+- **Trust at 4 or 5** (§4), once a week - it costs **one step of Trust** (the coin moves down one), so using it every week means a Coordinate every week.
 
 And a **Habit** (§18) takes 1 off the Adaptability cost of its Event category, so a cost-1 Event of that
 category is free.

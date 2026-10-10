@@ -71,8 +71,8 @@ class Rules:
     habit_at: int = 4
     habit_discount: int = 1
     habit_min_cost: int = 0
-    trust_cancel_at: int = 4                    # Trust needed to cancel one Event a week
-    trust_cancel_cost: int = 1                  # Trust the cancel uses up (0 = free, as before); a Coordinate rebuilds it
+    trust_cancel: bool = False                  # Trust 4+ cancelling one Event a week: removed from the game
+    trust_cancel_at: int = 4                    # only read when trust_cancel is on
     reflect_mot: int = 1                        # a Reflect with evidence lifts every character at or below celebrate_max_mot by this
     low_band: int = 1
     cap_bonus_at: int = 4
@@ -538,7 +538,7 @@ class Game:
     def cover_capacity(self, w: int) -> int:
         R = self.R
         cap = self.pool
-        if self.trust >= R.trust_cancel_at:
+        if R.trust_cancel and self.trust >= R.trust_cancel_at:
             cap += 2
         if "AV" in self.habits:
             cap += 2
@@ -703,10 +703,8 @@ class Game:
             elif R.habit_cancel and CAT_HABIT[e.cat] in self.habits and e.cat not in used_habit:
                 used_habit.add(e.cat)
                 how = "habit"
-            elif not used_trust and self.trust >= R.trust_cancel_at:
+            elif R.trust_cancel and not used_trust and self.trust >= R.trust_cancel_at:
                 used_trust, how = True, "trust"
-                for _ in range(R.trust_cancel_cost):
-                    self.lower("trust")
             elif not used_av and hero_ok and "AV" in self.habits:
                 used_av, how = True, "av"
             else:
@@ -1901,7 +1899,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     _legend(out, ph, [(s[0], s[1], "line") for s in habit_share])
 
     # 2. Events cancelled, by how
-    base_ways = ["free", "token", "hero", "trust", "av"]
+    base_ways = ["free", "token", "hero", "av"]
     hows = base_ways + [h for h in names_in(res, "cancel_week", CANCEL_ORDER) if h not in base_ways]
     labels = {"free": "Habit discount (cost 0)", "token": "Adaptability tokens", "hero": "Hero (Legs, 3+ Motivation)",
               "trust": "Trust 4+ (one a week)", "av": "AV = Authorized Voice (one a week)",
@@ -2086,7 +2084,6 @@ def calibrate(dump: dict):
     lines.append("  Celebrate in optimal play: %.1f a game, %.1f of them with nothing to celebrate, more than 4 times in %.0f%% of games (goal: 4 or fewer)" % (
         sum(r["celebrates"] for r in opt) / len(opt), sum(r["celebrate_empty"] for r in opt) / len(opt),
         100 * sum(1 for r in opt if r["celebrates"] > 4) / len(opt)))
-    lines.append("  Trust cancels in optimal play: %.1f Events a game" % (sum(r["cancel_by"].get("trust", 0) for r in opt) / len(opt)))
     unused = [c for c in ACTION_CARDS if sum(1 for r in opt if c in cards_played(r)) < len(opt)]
     lines.append("  Card use in optimal play: every action card in %.0f%% of games (goal 100%%)%s" % (
         100 * sum(1 for r in opt if set(ACTION_CARDS) <= cards_played(r)) / len(opt),

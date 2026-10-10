@@ -86,10 +86,10 @@ on the reverse.</desc>
 <rect x="68" y="208" width="95" height="39" rx="1.5" fill="#DCE5E8"/>
 <rect x="68" y="208" width="95" height="39" rx="1.5" class="w"/>
 <text x="71" y="213.2" class="m" font-size="3.2" letter-spacing=".3">TEAM REFLEXIVITY: HOW IT WORKS</text>
-<text x="71" y="218" class="s" font-size="3.3">Reflect on last week: token in a well, <tspan font-weight="bold">not</tspan> the pool.</text>
+<text x="71" y="218" class="s" font-size="3.3">Reflect on last week: a well fills, <tspan font-weight="bold">and</tspan> the pool gets its token.</text>
 <use href="#sym-obj" transform="translate(74,222.4) scale(.8)"/><text x="79" y="223.6" class="s" font-size="3.4"><tspan font-weight="bold">Objectives</tspan>: a feature was banked last week.</text>
 <use href="#sym-strat" transform="translate(74,227.8) scale(.8)"/><text x="79" y="229" class="s" font-size="3.4"><tspan font-weight="bold">Strategy</tspan>: you adapted to 2 Events last week.</text>
-<use href="#sym-proc" transform="translate(74,233.2) scale(.8)"/><text x="79" y="234.4" class="s" font-size="3.4"><tspan font-weight="bold">Process</tspan>: last week a Hero played, or an Event</text>
+<use href="#sym-proc" transform="translate(74,233.2) scale(.8)"/><text x="79" y="234.4" class="s" font-size="3.4"><tspan font-weight="bold">Process</tspan>: a Hero or a token played, or an Event</text>
 <text x="79" y="238" class="s" font-size="3.4">cost Trust, Capability or Shared Practice.</text>
 <text x="71" y="243" class="s" font-size="2.9" font-style="italic">Three filled: the coin turns over. Name one change.</text>
 

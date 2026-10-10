@@ -8,7 +8,7 @@ Seven weeks. Thirty-five days. One project standing between your team and the de
 team commits five days at a time, resolves them all at once, then closes the week and moves on.
 From week 2, Events crash into the week you already committed to - spend Adaptability to
 re-plan around them or cancel them outright. Deliver every Feature before Week 7 closes to win
-the project - but hit a Team Score of 88+ and you didn't just finish it, you built a team that
+the project - but hit a Team Score above the upper line (75 plus 5 for every character you started with) and you didn't just finish it, you built a team that
 could survive doing it again: Sustainable High Performance.
 
 ---
@@ -115,13 +115,16 @@ they already did alone (rulebook §18.1).
 
 *The project ends when Week 7 closes.*
 
-**Team Score** = (features × 10) + (3 tracks + adapt tokens, max 21) + (Motivation) − (20 × quits) − (2 ×
+**Team Score** = (features × 10) + (3 tracks + adapt tokens, max 21) + (Motivation) + (10 × Habits held) − (20 × quits) − (2 ×
 unrepaid Flex) − (5 × tracks that finish at 0 or 1)
+
+Two lines: **20 + 5 for every character you started with** (lower) and **75 + 5 for every character** (upper).
 
 | Outcome | Condition | |
 |---|---|---|
 | **Failure** | Not everything delivered. | *The score doesn't matter.* |
-| **Heroic Success** | All six banked, score under 88. | *The project made it. The team didn't.* |
-| **High Performance** | All six banked, score 88+. | *You built a team as well.* |
+| **Heroic Success** | All six banked, score under the lower line. | *The project made it. The team didn't.* |
+| **Sustainable Performance** | All six banked, score between the two lines. | *The team held together.* |
+| **High Performance** | All six banked, score on or over the upper line. | *You built a team as well.* |
 
 *If you only had thirty-five working days, how would you spend them?*

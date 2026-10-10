@@ -112,12 +112,12 @@ outer line. Print at 100%.</desc>
     <text x="5" y="47.6" class="m q" font-size="2.8">LAST WEEK GAVE EVIDENCE?</text>
     <use href="#sym-obj" transform="translate(8,52.4) scale(.8)"/><text x="13" y="53.6" class="s" font-size="3.6">a feature was banked</text>
     <use href="#sym-strat" transform="translate(8,57.8) scale(.8)"/><text x="13" y="59" class="s" font-size="3.6">you adapted to 2 Events</text>
-    <use href="#sym-proc" transform="translate(8,63.2) scale(.8)"/><text x="13" y="64.4" class="s" font-size="3.3">a Hero played, or an Event cost</text>
-    <text x="13" y="68" class="s" font-size="3.3">Trust, Capability or Shared Practice</text>
-    <rect x="4" y="70.4" width="50" height="5.6" rx="1" fill="#F7D7A1"/>
-    <text x="5" y="74.5" class="s" font-size="4"><tspan font-weight="bold">Yes: +1 Shared Practice</tspan></text>
-    <text x="5" y="79.6" class="m q" font-size="2.6">TOKEN MAY GO IN THE MATCHING WELL</text>
-    <text x="5" y="83.4" class="m q" font-size="2.6">TOKEN: AT CLOSE, SPEND NEXT WEEK.</text>
+    <use href="#sym-proc" transform="translate(8,63.2) scale(.8)"/><text x="13" y="64.4" class="s" font-size="3.3">a Hero or a token was played, or</text>
+    <text x="13" y="68" class="s" font-size="3.3">an Event cost a Ledger track</text>
+    <rect x="4" y="69.4" width="50" height="10.6" rx="1" fill="#F7D7A1"/>
+    <text x="5" y="73.6" class="s" font-size="4"><tspan font-weight="bold">Yes: +1 Shared Practice</tspan></text>
+    <text x="5" y="78.2" class="s" font-size="3.2">and +1 Motivation to anyone on 3 or less</text>
+    <text x="5" y="83.4" class="m q" font-size="2.6">ALSO FILLS A WELL. TOKEN AT CLOSE.</text>
   </g>
 
   <g id="workshop" transform="scale(.95238095,1)">

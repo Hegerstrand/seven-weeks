@@ -77,7 +77,7 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <text x="5" y="28.3" class="s" font-size="4.2">Everybody sits through it.</text>
     <g transform="translate(0,10)">
     <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#B5C7CF"/>
-    <text x="5" y="31.6" class="s adapt" font-size="7.4">+2 Adaptability</text>
+    <text x="5" y="31.6" class="s adapt" font-size="7.4">+3 Adaptability</text>
     <rect x="4" y="38" width="50" height="12" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="43.2" class="s" font-size="4.4">Every character pays</text>
     <text x="5" y="48.2" class="s" font-size="4.4" font-weight="bold">1 Motivation</text>
@@ -97,12 +97,13 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <g transform="translate(0,11)">
     <rect x="4" y="23.39" width="50" height="8" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="29" class="s" font-size="6.6">+1 Motivation</text>
-    <text x="5" y="36" class="s" font-size="6.6">to everyone</text>
+    <text x="5" y="36" class="s" font-size="5">to anyone on 3 or less</text>
     <line x1="5" y1="42" x2="58" y2="42" class="h"/>
-    <text x="5" y="51" class="s" font-size="5.4"><tspan font-weight="bold">+2</tspan> if a feature was</text>
-    <text x="5" y="58" class="s" font-size="5.4">banked this week.</text>
-    <text x="5" y="66" class="m q" font-size="2.9">LANDS AT WEEK CLOSE,</text>
-    <text x="5" y="71" class="m q" font-size="2.9">WITH THE GRIND. CAPS AT 5.</text>
+    <text x="5" y="48.5" class="s" font-size="4.4">Only works if there is</text>
+    <text x="5" y="53.8" class="s" font-size="4.4">something to celebrate:</text>
+    <text x="5" y="59.1" class="s" font-size="4.4">a feature banked, or every</text>
+    <text x="5" y="64.4" class="s" font-size="4.4">Event cancelled this week.</text>
+    <text x="5" y="71" class="m q" font-size="2.8">AT WEEK CLOSE, WITH THE GRIND.</text>
     </g>
   </g>
 

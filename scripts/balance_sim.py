@@ -89,12 +89,19 @@ class Rules:
     threshold_base: int = 68
     threshold_per_player: int = 5
     feature_value: int = 10
-    quit_penalty: int = 10
+    quit_penalty: int = 20
     flex_penalty: int = 2
     capital_cap: int = 5
     legs_tendencies: bool = True
     autonomy_max_landed: int = 1                # Autonomy Need holds if at most this many Events landed (printed rule)
     autonomy_rule: str = "events"               # events (count landed Events) | management (no Management Event landed)
+    align_tokens: int = 2                       # ALIGN (the meeting): tokens it adds (0 = card not in the game)
+    align_cost: int = 1                         # Motivation every character pays (one way: Motivation -> Adaptability)
+    align_min_mot: int = 2                      # policy: nobody pays below this, so the meeting is not laid while someone is lower
+    celebrate_repeat: int = 0                   # Celebrate gives this much less if the team celebrated last week
+    stand: bool = False                         # Torso Stand: once per game, pay Motivation to cancel your Torso's category
+    stand_cost: int = 2
+    habit_cancel: bool = False                  # a held Habit cancels one Event of its category a week, free
     standing_live: bool = True
 
 
@@ -119,6 +126,7 @@ FEATURES = {
 CAT_HIT = {"M": "Autonomy", "E": "Hierarchy", "P": "Community", "C": "Quality"}
 CAT_IMMUNE = {"M": "Hierarchy", "E": "Autonomy", "P": "Quality", "C": "Community"}
 CAT_HABIT = {"P": "PS", "E": "WKW", "M": "SR", "C": "TR"}
+TORSO_CAT = {"Autonomy": "M", "Hierarchy": "E", "Community": "P", "Quality": "C"}
 HABIT_TORSO = {"SR": "Autonomy", "WKW": "Hierarchy", "PS": "Community", "TR": "Quality"}
 
 
@@ -143,7 +151,7 @@ EVENTS = [
     Ev("LEADS FROM BEHIND", "M", 1, "Challenge", everyone=1, torso=False, sev=0.5),
     Ev("EVERYONE IS EQUAL", "M", 2, None, everyone=1, sev=0.8),
     Ev("THE WOLF", "M", None, None, torso=False, sev=3.0),
-    Ev("UNCLEAR REQUIREMENT", "C", 1, "TakeCharge", sev=1.0),
+    Ev("REQUIREMENTS CHANGE", "C", 1, "TakeCharge", sev=1.0),
     Ev("NEGATIVE FEEDBACK", "C", 2, "Analyze", sev=2.0),
     Ev("SCOPE CREEP", "C", 2, "Analyze", sev=2.0),
     Ev("PRIORITY CHANGES", "C", 1, "Analyze", sev=1.0),
@@ -163,7 +171,7 @@ EVENTS = [
 ]
 
 # Removal preference when an Event takes one of the week's cards away.
-REMOVE_ORDER = ["Workshop", "Align", "Learn", "Reflect", "Plan", "Demo", "Teach", "Celebrate", "Work"]
+REMOVE_ORDER = ["Align", "Workshop", "Learn", "Reflect", "Plan", "Demo", "Teach", "Celebrate", "Work"]
 
 
 # --------------------------------------------------------------------------------------
@@ -179,7 +187,7 @@ class Strategy:
     celebrate_min: int = 1                     # Celebrate if anyone is at or below this
     celebrate_mean: float = 2.0                # ...or the mean is at or below this
     celebrate_every: int = 0                   # ...or every n-th week (0 = never)
-    pool_goal: int = 4                         # lay Align/Workshop while the pool is below this
+    pool_goal: int = 4                         # lay Workshop while the pool is below this
     learn: int = 1                             # Learn/Teach cards per week from week 3
     reflect: bool = True
     plan: bool = True
@@ -191,6 +199,8 @@ class Strategy:
     bank_tokens: bool = True                   # bank Reflect tokens into Team Reflexivity wells
     wolf: str = "if_mot"                       # always | never | if_mot
     take_one: bool = True                      # Take One For The Team / Dependable when Trust is low
+    align: int = 0                             # Align meetings wanted per week while the pool is below pool_goal
+    use_stand: bool = True                     # use Torso Stand when the rule exists
 
 
 STRATEGIES = {
@@ -224,12 +234,14 @@ class Char:
         self.mot = 3
         self.capital = 0
         self.hero_used = False
+        self.stand_used = False
         self.squares = {(self.head, self.item)}
         self.new_squares: set = set()
         self.flex = False
         self.cross_trained = False
         self.cap_gain_week = 0
         self.onboarding_days = 0
+        self.q_streak = 0
 
 
 class Week:
@@ -252,6 +264,7 @@ class Week:
         self.equal = False
         self.false_start = False
         self.dashboard = False
+        self.date_up = False
         self.one_per = False
         self.halve = False
         self.flat = False
@@ -276,7 +289,7 @@ class Game:
             c.mot = rules.mot_start
         self.next_id = rules.players
         self.feat = {
-            k: {"cost": v[0], "cx": v[1], "dep": v[2], "work": 0, "banked": False, "unclear": False}
+            k: {"cost": v[0], "cx": v[1], "dep": v[2], "work": 0, "banked": False}
             for k, v in FEATURES.items()
         }
         self.tiles: dict = {}
@@ -293,6 +306,9 @@ class Game:
         self.flex_owed = 0
         self.demo_protect = 0
         self.burnout_ids: list = []
+        self.celebrated_prev = False
+        self.no_work_streak = 0
+        self.prev = {"banked": False, "adapted2": False, "process": False}
         self.burnout_new: list = []
         self.join_next = 0
         self.carry: str | None = None
@@ -318,6 +334,7 @@ class Game:
         self.cancel_week: list = []
         self.cards_week: list = []
         self.habitus_week: list = []
+        self.habit_week: list = []
         self.w = Week()
 
     # ------------------------------------------------------------------ helpers
@@ -349,7 +366,7 @@ class Game:
         return out
 
     def plan_target(self):
-        cands = [k for k in self.candidates() if self.feat[k]["cx"] != "L" and not self.feat[k]["unclear"]]
+        cands = [k for k in self.candidates() if self.feat[k]["cx"] != "L"]
         if not cands:
             return None
         return min(cands, key=lambda k: (0 if k in ("B", "C") else 1, self.remaining(k)))
@@ -509,13 +526,13 @@ class Game:
             wanted.append("Coordinate")
         if w >= 3:
             if self.pool < st.pool_goal:
-                wanted.append("Align")
+                wanted.append("Workshop")
+            if R.align_tokens and self.pool < st.pool_goal and all(c.mot >= R.align_min_mot for c in self.chars):
+                wanted.extend(["Align"] * st.align)
             for k in range(st.learn):
                 can_learn = any(self.learn_option(c) for c in self.chars)
                 can_teach = self.trust > R.low_band and self.zone_room_teach()
-                if can_learn and (k == 0 or not can_teach):
-                    wanted.append("Learn")
-                elif can_teach:
+                if can_teach and (not can_learn or (w + k) % 2 == 0):
                     wanted.append("Teach")
                 else:
                     wanted.append("Learn")
@@ -570,6 +587,21 @@ class Game:
               and (not c.hero_used or c.base == "Competitive")]
         return max(ok, key=lambda c: c.mot) if ok else None
 
+    def do_align(self):
+        R = self.R
+        if not self.chars or any(c.mot - R.align_cost < 1 for c in self.chars):
+            self.m["align_dead"] += 1
+            return
+        for c in self.chars:
+            self.add_mot(c, -R.align_cost, "align")
+        self.w.adds += R.align_tokens
+        self.m["tokens_align"] += R.align_tokens
+
+    def pick_stand(self, ev: Ev):
+        ok = [c for c in self.chars if not c.stand_used and TORSO_CAT.get(c.torso) == ev.cat
+              and c.mot - self.R.stand_cost >= 1]
+        return max(ok, key=lambda c: c.mot) if ok else None
+
     def adapt(self, w: int, evs: list):
         R, st = self.R, self.st
         order = sorted(evs, key=lambda e: -e.sev)
@@ -578,6 +610,7 @@ class Game:
         cancelled = set()
         used_trust = False
         used_av = False
+        used_habit: set = set()
         hero_ok = True
         for e in order:
             c = self.eff_cost(e)
@@ -587,6 +620,9 @@ class Game:
             how = None
             if c == 0:
                 how = "free"
+            elif R.habit_cancel and CAT_HABIT[e.cat] in self.habits and e.cat not in used_habit:
+                used_habit.add(e.cat)
+                how = "habit"
             elif not used_trust and self.trust >= R.trust_cancel_at:
                 used_trust, how = True, "trust"
             elif not used_av and hero_ok and "AV" in self.habits:
@@ -605,6 +641,13 @@ class Game:
                     self.w.hero_log.append(h.id)
                     self.m["hero_plays"] += 1
                     self.ps[("legs", h.legs, "hero")] += 1
+                elif (R.stand and st.use_stand and hero_ok and w >= R.hero_from_week and c >= st.hero_min_cost
+                      and e.sev / c >= st.adapt_threshold and self.pick_stand(e) is not None):
+                    s = self.pick_stand(e)
+                    s.stand_used = True
+                    self.add_mot(s, -R.stand_cost, "stand")
+                    self.m["stand_plays"] += 1
+                    how = "stand"
                 elif self.pool >= c and e.sev / c >= st.adapt_threshold:
                     self.pool -= c
                     self.m["tokens_spent"] += c
@@ -672,10 +715,13 @@ class Game:
                         W.blocked.add(hard)
             elif n == "EVERYONE IS EQUAL":
                 W.equal = True
-            elif n == "UNCLEAR REQUIREMENT":
+            elif n == "REQUIREMENTS CHANGE":
                 avail = [k for k, f in self.feat.items() if not f["banked"]]
                 if avail:
-                    self.feat[max(avail, key=lambda k: self.remaining(k))]["unclear"] = True
+                    f = self.feat[max(avail, key=lambda k: self.remaining(k))]
+                    if f["work"] > 0:
+                        f["work"] -= 1
+                        self.m["rework_lost"] += 1
             elif n == "NEGATIVE FEEDBACK":
                 banked = [k for k, f in self.feat.items() if f["banked"]]
                 if banked and self.demo_protect > 0:
@@ -694,9 +740,7 @@ class Game:
                     self.feat[k]["cost"] += 2
                     self.m["cost_added"] += 2
             elif n == "THE DATE MOVES UP":
-                for f in self.feat.values():
-                    if not f["banked"]:
-                        f["unclear"] = True
+                W.date_up = True
             elif n == "THE DASHBOARD":
                 W.dashboard = True
             elif n == "ALWAYS REACTING":
@@ -769,7 +813,7 @@ class Game:
         plan_f = None
         if "Plan" in plan and self.s0 > R.low_band:
             t = self.plan_target()
-            if t and not self.feat[t]["unclear"]:
+            if t:
                 plan_f = t
                 if self.feat[t]["cx"] == "H":
                     W.carry_next = t
@@ -793,7 +837,7 @@ class Game:
                     out += 1
                 if self.feat[f]["cx"] != "L" and (f == plan_f or f == self.carry):
                     out += R.plan_bonus
-                if self.feat[f]["unclear"]:
+                if W.date_up:
                     out -= 1
                 if W.dashboard and self.feat[f]["cx"] != "L":
                     out = 0
@@ -832,15 +876,17 @@ class Game:
         if "Celebrate" in plan:
             W.celebrated = True
             amt = R.celebrate_banked if (newly and not W.flat) else R.celebrate
+            if self.celebrated_prev:
+                amt = max(0, amt - R.celebrate_repeat)
             for c in self.chars:
                 self.add_mot(c, amt, "celebrate")
             self.m["celebrates"] += 1
         for card in plan:
-            if card in ("Align", "Workshop"):
+            if card == "Workshop":
                 W.adds += 1
-                self.m["tokens_" + card.lower()] += 1
-                if card == "Align":
-                    self.clear_unclear()
+                self.m["tokens_workshop"] += 1
+            elif card == "Align":
+                self.do_align()
         for _ in range(plan.count("Learn")):
             self.do_learn()
         n_teach = plan.count("Teach")
@@ -855,7 +901,6 @@ class Game:
             if elig:
                 self.gain_capital(min(elig, key=lambda c: c.capital), 1)
             self.demo_protect += 1
-            self.clear_unclear()
         for _ in range(plan.count("Reflect")):
             self.do_reflect(newly)
         if st.take_one and not W.coord and self.t0 < st.trust_goal and w >= 2:
@@ -871,25 +916,21 @@ class Game:
                 W.trust_up = True
                 self.gain_capital(c, 1)
 
-    def clear_unclear(self):
-        u = [k for k, f in self.feat.items() if f["unclear"] and not f["banked"]]
-        if u:
-            self.feat[max(u, key=lambda k: self.remaining(k))]["unclear"] = False
-
     def do_reflect(self, newly: list):
         R, W, st = self.R, self.w, self.st
         if self.t0 < R.reflect_trust:
             self.m["reflect_dead"] += 1
             return
-        evidence = bool(newly or W.banked) or W.adapted2
+        p = self.prev
+        evidence = p["banked"] or p["adapted2"] or p["process"]
         if evidence:
             W.sp_up = True
         wells = []
-        if (newly or W.banked) and "OBJ" not in self.wells:
+        if p["banked"] and "OBJ" not in self.wells:
             wells.append("OBJ")
-        if W.adapted2 and "STRAT" not in self.wells:
+        if p["adapted2"] and "STRAT" not in self.wells:
             wells.append("STRAT")
-        if (W.track_lowered or W.hero_by) and "PROC" not in self.wells:
+        if p["process"] and "PROC" not in self.wells:
             wells.append("PROC")
         if st.bank_tokens and wells and "TR" not in self.habits:
             self.wells.add(wells[0])
@@ -998,6 +1039,13 @@ class Game:
     def motivation_step(self, w: int):
         R, W = self.R, self.w
         quitters = []
+        if w >= 2:
+            if W.work_added:
+                self.no_work_streak = 0
+            else:
+                self.no_work_streak += 1
+                self.m["no_work_weeks"] += 1
+                self.m["max_no_work_streak"] = max(self.m["max_no_work_streak"], self.no_work_streak)
         for c in list(self.chars):
             d = 0
             if c.base != "Sheltered":
@@ -1011,11 +1059,14 @@ class Game:
                 self.need_seen[c.torso] += 1
                 if self.need_ok(c):
                     self.need_met[c.torso] += 1
+                    if c.torso == "Quality":
+                        c.q_streak = 0
                     if c.torso == "Recognition":
                         W.rec_met += 1
                     d += R.need_bonus
                     self.mot_flow["need"] += R.need_bonus
                 elif c.torso == "Quality":
+                    c.q_streak += 1
                     d -= R.quality_penalty
                     self.mot_flow["quality_penalty"] -= R.quality_penalty
             if c.base == "Competitive":
@@ -1055,6 +1106,12 @@ class Game:
             if c in self.chars:
                 self.chars.remove(c)
                 self.quits += 1
+                if c.torso == "Quality":
+                    self.m["quality_quits"] += 1
+                    if c.q_streak >= 1:
+                        self.m["quality_quit_nowork"] += 1
+                    if c.q_streak >= 2:
+                        self.m["quality_quit_multiweek"] += 1
                 self.m["quit_week_%d" % w] += 1
                 if w < R.weeks:
                     self.join_next += 1
@@ -1074,6 +1131,9 @@ class Game:
         for c in self.chars:
             c.cap_gain_week = 0
         self.carry = self.w.carry_next if w > 1 else None
+        self.celebrated_prev = self.w.celebrated
+        self.prev = {"banked": bool(self.w.banked), "adapted2": self.w.adapted2,
+                     "process": bool(self.w.track_lowered or self.w.hero_by)}
         self.w = Week()
         self.t0, self.c0, self.s0 = self.trust, self.cap, self.sp
         self.cancelled_any = False
@@ -1110,6 +1170,7 @@ class Game:
             self.cap_week.append(self.cap)
             self.sp_week.append(self.sp)
             self.standing_week.append(self.standing)
+            self.habit_week.append({h: 1 for h in self.habits})
             self.capital_week.append(statistics.mean(c.capital for c in self.chars) if self.chars else 0)
             self.banked_week.append(sum(1 for f in self.feat.values() if f["banked"]))
             if w == 1:
@@ -1149,12 +1210,16 @@ class Game:
             "habits": dict(self.habits), "hero_plays": self.m["hero_plays"],
             "wolf_up": self.m["wolf_stepped_up"], "wolf_erased": self.m["wolf_capital_erased"],
             "combos": self.m["combos"], "quits": self.quits,
+            "quality_quits": self.m["quality_quits"], "quality_quit_nowork": self.m["quality_quit_nowork"],
+            "quality_quit_multiweek": self.m["quality_quit_multiweek"], "no_work_weeks": self.m["no_work_weeks"],
+            "max_no_work_streak": self.m["max_no_work_streak"],
             "mot_mean": list(self.mot_week_mean), "mot_min": list(self.mot_week_min),
             "trust_week": list(self.trust_week), "cap_week": list(self.cap_week), "sp_week": list(self.sp_week),
             "standing_week": list(self.standing_week), "capital_week": list(self.capital_week),
             "banked_week": list(self.banked_week), "drawn_week": list(self.drawn_week),
             "cancel_week": list(self.cancel_week), "cards_week": list(self.cards_week),
             "habitus_week": list(self.habitus_week),
+            "habit_week": list(self.habit_week),
             "parts": {"%s|%s|%s" % k: v for k, v in self.ps.items()},
             "mot_flow": dict(self.mot_flow), "celebrates": self.m["celebrates"],
             "need_met": dict(self.need_met), "need_seen": dict(self.need_seen),
@@ -1261,6 +1326,11 @@ def report(name: str, res: list, rules: Rules):
     print("   lowest Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_min"][i] for r in res)) for i in range(rules.weeks)))
     print("   quits per game %.2f   games with a quit %.0f%%   Celebrates %.1f" % (
         mean(r["quits"] for r in res), share(res, lambda r: r["quits"] > 0), mean(r["celebrates"] for r in res)))
+    print("   QUALITY CHECK: Quality quits per game %.3f, of which after a week without Work %.3f, after 2+ weeks in a row %.3f" % (
+        mean(r["quality_quits"] for r in res), mean(r["quality_quit_nowork"] for r in res),
+        mean(r["quality_quit_multiweek"] for r in res)))
+    print("   weeks without Work per game %.2f, longest run %.2f   (the design goal is 0 Quality quits from this)" % (
+        mean(r["no_work_weeks"] for r in res), mean(r["max_no_work_streak"] for r in res)))
     flow = Counter()
     for r in res:
         flow.update(r["mot_flow"])
@@ -1353,7 +1423,7 @@ def apply_overrides(rules: Rules, pairs: list) -> Rules:
     return replace(rules, **kw)
 
 
-COUNTER_FIELDS = ("cancel_by", "mot_flow", "need_met", "need_seen", "cancel_week", "cards_week", "habitus_week", "parts")
+COUNTER_FIELDS = ("cancel_by", "mot_flow", "need_met", "need_seen", "cancel_week", "cards_week", "habitus_week", "habit_week", "parts")
 
 
 def flatten(r: dict) -> dict:
@@ -1419,8 +1489,10 @@ def write_csv(path: str, dump: dict):
 
 
 def objective(res: list) -> float:
-    # Mean score plus 30 points for the share of games that bank all six features.
-    return mean(r["score"] for r in res) + 0.3 * share(res, lambda r: r["banked"] == 6)
+    # Mean score, plus 30 points for the share of games that bank all six features,
+    # minus 15 for each Quality character who quit after a week without Work.
+    return (mean(r["score"] for r in res) + 0.3 * share(res, lambda r: r["banked"] == 6)
+            - 15 * mean(r["quality_quit_nowork"] for r in res))
 
 
 def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", log: list | None = None) -> Strategy:
@@ -1442,6 +1514,7 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
         "adapt_threshold": [0.3, 0.5, 0.7, 0.8, 1.0, 1.5, 99.0], "hero_min_cost": [1, 2, 3],
         "bank_tokens": [True, False], "wolf": ["always", "never", "if_mot"],
         "take_one": [True, False], "repay_flex": [True, False],
+        "align": [0, 1, 2], "use_stand": [True, False],
     }
     groups = [lambda b, k=k, vs=vs: [replace(b, **{k: v}) for v in vs] for k, vs in choices.items()]
     groups += [lambda b, i=i: [replace(b, work_days=b.work_days[:i] + (d,) + b.work_days[i + 1:]) for d in range(6)]
@@ -1473,11 +1546,12 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
 # --------------------------------------------------------------------------------------
 
 CARD_ORDER = ["Work", "Celebrate", "Coordinate", "Align", "Workshop", "Learn", "Teach", "Reflect", "Plan", "Demo", "Flex"]
-CARD_COLOUR = {"Work": "#6B7A8F", "Celebrate": "#E3A72F", "Coordinate": "#4C9F70", "Align": "#2F80ED",
-               "Workshop": "#7AB8F5", "Learn": "#9B51E0", "Teach": "#C9A0F0", "Reflect": "#F2994A",
+CARD_COLOUR = {"Work": "#6B7A8F", "Celebrate": "#E3A72F", "Coordinate": "#4C9F70", "Refine": "#2F80ED",
+               "Workshop": "#7AB8F5", "Align": "#1C7ED6", "Learn": "#9B51E0", "Teach": "#C9A0F0", "Reflect": "#F2994A",
                "Plan": "#56CCF2", "Demo": "#EB5757", "Flex": "#333333"}
-CANCEL_ORDER = ["free", "token", "hero", "trust", "av"]
-CANCEL_COLOUR = {"free": "#9AD1A8", "token": "#2F80ED", "hero": "#E3A72F", "trust": "#4C9F70", "av": "#9B51E0"}
+CANCEL_ORDER = ["free", "habit", "token", "hero", "stand", "trust", "av"]
+CANCEL_COLOUR = {"free": "#9AD1A8", "habit": "#63E6BE", "token": "#2F80ED", "hero": "#E3A72F", "stand": "#E8590C",
+                 "trust": "#4C9F70", "av": "#9B51E0"}
 FALLBACK_COLOURS = ["#888888", "#BB6BD9", "#219653", "#F2C94C"]
 
 
@@ -1518,7 +1592,7 @@ class _Panel:
 
 def _frame(out: list, p: _Panel, title: str, ylabel: str):
     out.append('<text x="%g" y="%g" class="t">%s</text>' % (p.x, p.y - 14, _esc(title)))
-    step = 1 if p.ymax <= 8 else 2 if p.ymax <= 16 else 5
+    step = 0.25 if p.ymax <= 1 else 1 if p.ymax <= 8 else 2 if p.ymax <= 16 else 5
     v = 0
     while v <= p.ymax + 1e-9:
         y = p.py(v)
@@ -1571,30 +1645,54 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     X0, PW, PH, GAP, TOP = 64, 620, 200, 86, 56
     out = []
 
-    # 1. currencies and Ledger
+    # 1. currencies
     lines = [
         ("Motivation (mean per character)", "#D6336C", week_mean(res, "mot_mean", W), False),
         ("Capital (mean per character)", "#E8590C", week_mean(res, "capital_week", W), False),
         ("Adaptability pool (tokens)", "#2F80ED", week_mean(res, "pool_week", W), False),
-        ("Trust", "#2B8A3E", week_mean(res, "trust_week", W), True),
-        ("Capability", "#7048E8", week_mean(res, "cap_week", W), True),
-        ("Shared Practice", "#0B7285", week_mean(res, "sp_week", W), True),
-        ("Standing (highest Capital)", "#868E96", week_mean(res, "standing_week", W), True),
         ("Features banked", "#212529", week_mean(res, "banked_week", W), False),
     ]
     p1 = _Panel(X0, TOP, PW, PH, _nice_max(max(max(s[2]) for s in lines)), W)
-    _frame(out, p1, "1. Currencies and Ledger at the close of each week", "average count")
+    _frame(out, p1, "1. Currencies at the close of each week", "average count")
     _lines(out, p1, lines)
     _legend(out, p1, [(s[0], s[1], "dash" if s[3] else "line") for s in lines])
+
+    # 1b. the Ledger and Habits held
+    held = [mean(len(r["habit_week"][i]) for r in res) for i in range(W)]
+    ledger = [
+        ("Trust", "#2B8A3E", week_mean(res, "trust_week", W), False),
+        ("Capability", "#7048E8", week_mean(res, "cap_week", W), False),
+        ("Shared Practice", "#0B7285", week_mean(res, "sp_week", W), False),
+        ("Standing (highest Capital)", "#868E96", week_mean(res, "standing_week", W), False),
+        ("Habits held (0-5)", "#C2255C", held, True),
+        ("Habit threshold (%d)" % rules.habit_at, "#AAAAAA", [float(rules.habit_at)] * W, True),
+    ]
+    yl = TOP + PH + GAP
+    pl = _Panel(X0, yl, PW, PH, 5, W)
+    _frame(out, pl, "2. The Ledger and Habits held, at the close of each week", "track value / count")
+    _lines(out, pl, ledger)
+    _legend(out, pl, [(s[0], s[1], "dash" if s[3] else "line") for s in ledger])
+
+    # 1c. which Habits, share of games
+    names = [("PS", "Psychological Safety", "#2B8A3E"), ("WKW", "Who Knows What", "#7048E8"),
+             ("SR", "Shared Repertoire", "#0B7285"), ("TR", "Team Reflexivity", "#F2994A"),
+             ("AV", "Authorized Voice", "#868E96")]
+    share = [(label, col, [mean(r["habit_week"][i].get(k, 0) for r in res) for i in range(W)], False)
+             for k, label, col in names]
+    yh = yl + PH + GAP
+    ph = _Panel(X0, yh, PW, PH, 1, W)
+    _frame(out, ph, "3. Habits formed: share of games holding each, per week", "share of games")
+    _lines(out, ph, share)
+    _legend(out, ph, [(s[0], s[1], "line") for s in share])
 
     # 2. Events drawn and cancelled
     hows = names_in(res, "cancel_week", CANCEL_ORDER)
     layers = [(h, CANCEL_COLOUR.get(h, FALLBACK_COLOURS[j % 4]), week_mean_of(res, "cancel_week", h, W)) for j, h in enumerate(hows)]
     drawn = week_mean(res, "drawn_week", W)
-    y2 = TOP + PH + GAP
+    y2 = yh + PH + GAP
     tot = [sum(l[2][i] for l in layers) for i in range(W)]
     p2 = _Panel(X0, y2, PW, PH, _nice_max(max(drawn + tot + [2])), W)
-    _frame(out, p2, "2. Events cancelled per week (of those drawn), by how", "average count")
+    _frame(out, p2, "4. Events cancelled per week (of those drawn), by how", "average count")
     _stack(out, p2, layers)
     _lines(out, p2, [("Events drawn", "#000000", drawn, True)])
     _legend(out, p2, [("drawn", "#000000", "dash")] + [(l[0], l[1], "bar") for l in layers])
@@ -1605,7 +1703,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     y3 = y2 + PH + GAP
     tot = [sum(l[2][i] for l in layers) for i in range(W)]
     p3 = _Panel(X0, y3, PW, PH, _nice_max(max(tot + [rules.days])), W)
-    _frame(out, p3, "3. How the five days are played, per week", "average days")
+    _frame(out, p3, "5. How the five days are played, per week", "average days")
     _stack(out, p3, layers)
     _legend(out, p3, [(l[0], l[1], "bar") for l in reversed(layers)])
 
@@ -1619,11 +1717,54 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     ]
     y4 = y3 + PH + GAP
     p4 = _Panel(X0, y4, PW, PH, _nice_max(max(max(s[2]) for s in hab) or 1), W)
-    _frame(out, p4, "4. Habitus moves per week: Hero, Dependable and Recognition", "average count")
+    _frame(out, p4, "6. Habitus moves per week: Hero, Dependable and Recognition", "average count")
     _lines(out, p4, hab)
     _legend(out, p4, [(s[0], s[1], "dash" if s[3] else "line") for s in hab])
 
-    width, height = X0 + PW + 260, y4 + PH + 50
+    # 7. Team Score histogram with the threshold
+    y5 = y4 + PH + GAP
+    scores = [r["score"] for r in res]
+    thr = res[0]["threshold"]
+    bin_w = 5
+    lo = int(min(min(scores), thr) // bin_w * bin_w - bin_w)
+    hi = int((max(max(scores), thr) // bin_w + 2) * bin_w)
+    nb = (hi - lo) // bin_w
+    counts = [0] * nb
+    for s in scores:
+        counts[min(nb - 1, int((s - lo) // bin_w))] += 1
+    hmax = _nice_max(max(counts))
+    hx = lambda v: X0 + (v - lo) / (hi - lo) * PW
+    hy = lambda c: y5 + PH - c / hmax * PH
+    out.append('<text x="%g" y="%g" class="t">7. Team Score distribution: number of games per score</text>' % (X0, y5 - 14))
+    ystep = 1 if hmax <= 8 else 2 if hmax <= 16 else 5 if hmax <= 40 else 10 if hmax <= 100 else 20 if hmax <= 200 else 50 if hmax <= 500 else 100
+    v = 0
+    while v <= hmax:
+        out.append('<line x1="%g" y1="%.1f" x2="%g" y2="%.1f" class="g"/>' % (X0, hy(v), X0 + PW, hy(v)))
+        out.append('<text x="%g" y="%.1f" class="a" text-anchor="end">%g</text>' % (X0 - 6, hy(v) + 3.5, v))
+        v += ystep
+    xstep = 10 if hi - lo <= 160 else 20
+    t = (lo // xstep + 1) * xstep
+    while t < hi:
+        out.append('<text x="%.1f" y="%g" class="a" text-anchor="middle">%d</text>' % (hx(t), y5 + PH + 14, t))
+        t += xstep
+    out.append('<text x="%g" y="%g" class="a" text-anchor="middle">Team Score (points)</text>' % (X0 + PW / 2, y5 + PH + 30))
+    out.append('<text transform="translate(%g,%g) rotate(-90)" class="a" text-anchor="middle">number of games</text>' % (X0 - 40, y5 + PH / 2))
+    for i, c in enumerate(counts):
+        if c:
+            below = lo + (i + 1) * bin_w <= thr
+            out.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (
+                hx(lo + i * bin_w) + .5, hy(c), PW / nb - 1, y5 + PH - hy(c), "#6B7A8F" if below else "#4C9F70"))
+    avg = statistics.mean(scores)
+    out.append('<line x1="%.1f" y1="%g" x2="%.1f" y2="%g" stroke="#212529" stroke-width="1.4" stroke-dasharray="1.5 2.5"/>' % (hx(avg), y5, hx(avg), y5 + PH))
+    out.append('<line x1="%.1f" y1="%g" x2="%.1f" y2="%g" stroke="#C92A2A" stroke-width="1.8" stroke-dasharray="6 3"/>' % (hx(thr), y5, hx(thr), y5 + PH))
+    lx = X0 + PW + 16
+    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#6B7A8F"/><text x="%g" y="%g" class="a">below the threshold</text>' % (lx, y5 + 2, lx + 18, y5 + 10))
+    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#4C9F70"/><text x="%g" y="%g" class="a">at or above the threshold</text>' % (lx, y5 + 19, lx + 18, y5 + 27))
+    out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#C92A2A" stroke-width="1.8" stroke-dasharray="6 3"/><text x="%g" y="%g" class="a">threshold (%d)</text>' % (lx, y5 + 41, lx + 12, y5 + 41, lx + 18, y5 + 44, thr))
+    out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#212529" stroke-width="1.4" stroke-dasharray="1.5 2.5"/><text x="%g" y="%g" class="a">mean score (%.1f)</text>' % (lx, y5 + 58, lx + 12, y5 + 58, lx + 18, y5 + 61, avg))
+    out.append('<text x="%g" y="%g" class="a">%d%% of games reach the threshold</text>' % (lx, y5 + 82, round(100 * sum(1 for s in scores if s >= thr) / len(scores))))
+
+    width, height = X0 + PW + 260, y5 + PH + 50
     head = ('<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d">'
             '<style>.t{font:bold 13px sans-serif;fill:#111}.a{font:11px sans-serif;fill:#444}.g{stroke:#ddd;stroke-width:1}</style>'
             '<rect width="100%%" height="100%%" fill="#fff"/>'

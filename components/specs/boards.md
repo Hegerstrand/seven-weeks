@@ -734,10 +734,11 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | page background | full-page rect | `#FFFFFF` |
 | header | "SHIT HAPPENS" title + "SHIT HAPPENS · FROM WEEK 2" + rule | - |
 | SHIT HAPPENS box | red-bordered panel, instruction line, 2 landing-zone slots, resolved-vs-stacks note | box border `#905151`; slot fill `#905151` (card silhouette, white label text) |
-| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 4 caption lines (Start with 3. Up to 6. / Earned: Align, Workshop, Reflect. / Spent: pay an Event's number. / Tokens stay until spent.). Panel x 11-65, 47 mm tall | `#B5C7CF` |
-| `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r8 with a red ring r10.5, and **three token wells** (r5.2, the 10.4 mm adapt token) labelled OBJ. / STRAT. / PROC. for banked Reflect tokens. Two caption lines run under all three lanes: "REFLECT: bank its token in the well its evidence matches, and name one change for next week." and "OBJ. a feature banked · STRAT. 2 Events adapted to · PROC. an Event hit a track, or a Hero played. Three wells turn the coin." | `#B5C7CF` |
+| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 5 caption lines at 3.2 under the panel (x 12, y 212.6-230.2: Start with 3. Up to 6. / Earned: Align, Workshop, Reflect. / Spent: pay an Event's number. / Tokens stay until spent. / New tokens count from next week.). Panel x 11-65, 52 mm tall, wells 12 mm | `#B5C7CF` |
+| `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r8 with a red ring r10.5, and **three token wells** (r5.2, the 10.4 mm adapt token) carrying a symbol each, not a word: a target (objectives), a route (strategy) and a cycle arrow (process). Two or three caption lines run under all three lanes: "REFLECT: put its token in a well instead of the pool, if the week gave evidence. One token per well.", then the three symbols with "a feature was banked", "you adapted to 2 Events", "an Event hit a track, or a Hero played", and "Three wells filled: the coin turns over for good. Name one change for next week." | `#B5C7CF` |
 | `lane-1` | HERO lane (x 68-118): label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
-| CLOSE THE WEEK box | title, "TOP TO BOTTOM" note, rule, 4 numbered steps | - |
+| CLOSE THE WEEK box | compact (y 247-291): title 5.4, "TOP TO BOTTOM" note, rule, 4 one-line numbered steps at 4.2 and "FULL DETAIL ON THE SPECIMEN BOARD". The full explanation lives on the SPECIMEN board | - |
+| Team Reflexivity block | full-width panel under the three lanes (y 208-243, `#DCE5E8`): "TEAM REFLEXIVITY: HOW IT WORKS", one sentence on Reflect, then three rows at 3.6 with the well symbols (target = Objectives: a feature was banked last week; route = Strategy: you adapted to 2 Events last week; cycle = Process: an Event cost the team Trust, Capability or Shared Practice, or a Hero played) and an italic footer (one token per well, three filled turns the coin over, name one change) | `#DCE5E8` |
 | table-placement guide | 2 coloured edge lines (`#905151`, `#6E6249`) | - |
 
 ### Text
@@ -755,7 +756,7 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | "ADAPTABILITY" | `.m.q` mono | 3.4 | `#000000` | panel `#B5C7CF` |
 | "The team's adapt tokens, up to 6." / "Cancel an Event: pay its number." / "Tokens stay until spent." (3 lines) | `.s` serif | 2.8 | `#000000` | - |
 | "HERO · CANCELS IT" | `.m.q` mono | 3.4 | `#000000` | panel `#F0E3D1` |
-| "Needs your Legs, and 3+ Motivation." | `.s` serif | 2.8 | `#000000` | - |
+| "Free, but require" / "motivation on 3 or higher" (inside the dashed box, centred, second line bold on a `#D3B1B1` chip) | `.s` serif | 3.6 | `#000000` | `#D3B1B1` |
 | "CLOSE THE WEEK" | `.m` mono | 7 | `#000000` | - |
 | "TOP TO BOTTOM" | `.m.q` mono | 3.6 | `#000000` | - |
 | Step 1-4 headline + detail lines | `.s` serif (bold lead-in) | 5.4 / 4.4 | `#000000` | step 3 headline sits on `#D3B1B1` chip |

@@ -26,7 +26,7 @@ for the editing workflow (md first, then SVG) and `board-game-cards` for the geo
 
 | Sheet | Source SVG | Contains |
 |---|---|---|
-| 1 | `../cards-activity-63x88mm-A4-portrait.svg` | Work x3, Coordinate x2, Align x2, Celebrate x2 |
+| 1 | `../cards-activity-63x88mm-A4-portrait.svg` | Work x3, Coordinate x2, Workshop, Align, Celebrate x2 |
 | 2 | `../cards-activity-5b-63x88mm-A4-portrait.svg` | Work x2 (five total with Sheet 1), Teach x2, Plan, Demo, Reflect, Workshop, Learn |
 
 Eighteen Activity cards, the week 1/3 core loop, split across two A4 sheets (nine per sheet,
@@ -47,7 +47,8 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 |---|---|---|
 | `work` | `#EFE4D3` band behind "+1 to one feature" | plain `.q` |
 | `coordinate` | `#D3CEDF` band behind "+1 Trust" | `.trust` |
-| `align` | `#B5C7CF` band behind "+1 Adaptability instead" | `.adapt` |
+| `workshop` | `#B5C7CF` band behind "+1 Adaptability" | `.adapt` |
+| `align` | `#B5C7CF` band behind "+2 Adaptability"; `#D3B1B1` chip behind "Every character pays 1 Motivation" | `.adapt` |
 | `celebrate` | `#D3B1B1` band behind "+2 Motivation to everyone" | plain |
 
 ### Text
@@ -56,12 +57,19 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" (`#EFE4D3`) | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
 | `coordinate` | COORDINATE | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust ≤ 1: Teach is dead." + "TRUST RISE 1 A WEEK, MAX" | "Safety is not declared. It is built, dully." |
-| `align` | ALIGN | "+1 Adaptability" (`#B5C7CF`) | "ADDS 1 ADAPT TOKEN. SPENT IN THE ADAPT STEP." (mono, 2 lines) | "Clear it the same week and the Work still counts." |
+| `workshop` | WORKSHOP | "+1 Adaptability" (`#B5C7CF`) | "Unconditionally - no gate, no second mode." + "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM NEXT WEEK." (mono) | "A meeting that changes the plan, not just records it." |
+| `align` | ALIGN | "+2 Adaptability" (`#B5C7CF`) and "Every character pays 1 Motivation" (`#D3B1B1`) | "NOTHING IF ANYONE IS ON 1." + "ONE WAY ONLY. NEVER BACK." (mono) | "A meeting nobody wants. Everybody sits through it." |
 | `celebrate` | CELEBRATE | "+2 Motivation to everyone" (`#D3B1B1`, 6.6pt) | "+3 if a feature was banked this week." + "MOTIVATION CAPS AT 5" (mono). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Nobody rests at work. You ship something and say so." |
 
 Sheet placement (top-left corner of each `<use>`): Work at (10,12)/(76,12), Coordinate at
-(142,12)/(10,104), Align at (76,104)/(142,104), Celebrate at (10,196)/(76,196), Work again at
+(142,12)/(10,104), Workshop at (76,104), Align at (142,104), Celebrate at (10,196)/(76,196), Work again at
 (142,196).
+
+**Timing lines (2026-10-10).** Each card that produces something says when it arrives, in 2.9 mono:
+Work "BANKS WHEN THE WEEK CLOSES."; Coordinate "TRUST RISES AT WEEK CLOSE, WORKS FROM NEXT WEEK. 1 RISE A
+WEEK, MAX."; Celebrate "LANDS AT WEEK CLOSE, WITH THE GRIND. CAPS AT 5."; Align "TOKENS ARRIVE AT WEEK
+CLOSE, SPEND THEM FROM NEXT WEEK."; Workshop and Reflect "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM
+NEXT WEEK."
 
 ### Illustration
 
@@ -101,9 +109,9 @@ graph TD
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
 | `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a square up, down, left or right of one you cover - any row."; "DEAD IF TRUST ≤ 1"; "EACH TEACHER GAINS +1 CAPITAL"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Scaffolding: give it away and it becomes standing." |
-| `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "NOT ON AN UNCLEAR FEATURE" | "Planning pays on hard problems. Only on those." |
+| `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "PAYS AS THE WORK RESOLVES" | "Planning pays on hard problems. Only on those." |
 | `demo` | DEMO | "+1 Capital to one named team member" | "CAPITAL ≥ TABLE AVERAGE"; "feature ignores the next NEGATIVE FEEDBACK" | "The field decides who speaks." |
-| `reflect` | REFLECT | "Require Trust 3 or above"; "+1 Adaptability" (+ "+1 Shared Practice" if a bank or adapted to 2 Events this week) | "Ask what's not working - you can only reflect on it." |
+| `reflect` | REFLECT | "Trust ≥ 3"; "+1 Adaptability"; "LAST WEEK GAVE EVIDENCE?" with the three well symbols (target: a feature was banked; route: you adapted to 2 Events; cycle: a Hero played, or an Event cost Trust, Capability or Shared Practice); "Yes: +1 Shared Practice" (`#F7D7A1`); "TOKEN MAY GO IN THE MATCHING WELL"; "TOKEN: AT CLOSE, SPEND NEXT WEEK." | "Ask what's not working - you can only reflect on it." |
 | `workshop` | WORKSHOP | "+1 Adaptability" | - (unconditional, no gate) | "A meeting that changes the plan, not just records it." |
 | `learn` | LEARN | "Everyone marks a free square each" | "Left or right of one they cover, in their own row."; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "NO CAPITAL FOR THIS ONE"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Nobody taught you. It shows, and it holds." |
 
@@ -159,7 +167,7 @@ need to be filled to be valid).
 |---|---|---|
 | `status` | Management | `#F7D7A1` (`.cat-mgmt`) |
 | `budget` | Management | `#F7D7A1` |
-| `unclear` | Customer | `#B5C7CF` (`.cat-cust`) |
+| `requirements` | Customer | `#B5C7CF` (`.cat-cust`) |
 | `feedback` | Customer | `#B5C7CF` |
 | `scope` | Customer | `#B5C7CF` |
 | `priority` | Customer | `#B5C7CF` |
@@ -178,7 +186,7 @@ footer italic line.
 |---|---|---|---|---|---|---|---|
 | `status` | STATUS MEETING | remove one card, never happens; everyone loses 1 Motivation | Autonomy: lose 1 Motivation / Hierarchy: no loss | 2 | Take Charge (1 pip) | Shared Repertoire, costs 1 instead | "Not information - it's about being seen." |
 | `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 1 | Take Charge (1 pip) | Shared Repertoire, free | "Nobody explains the reasoning to you." |
-| `unclear` | UNCLEAR REQUIREMENT | Remove one WORK. PLAN does nothing | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Team Reflexivity, free | "An Align or a Demo also clears it." |
+| `requirements` | REQUIREMENTS CHANGE | The unbanked feature with the most Work left loses 1 Work it already has | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Team Reflexivity, free | none |
 | `feedback` | NEGATIVE FEEDBACK | one banked feature loses 2 Work, comes off the tower | Quality: lose 1 Motivation | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "A feature that passed a Demo is safe." |
 | `scope` | SCOPE CREEP | unbanked feature closest to done gains +2 Work Cost | Quality: lose 1 Motiv. | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "Everybody called it a small addition." |
 | `priority` | PRIORITY CHANGES | remove one card this week | Quality: lose 1 Motivation | 1 | Analyze (2 pips) | Team Reflexivity, free | "Last week was the wrong thing." |
@@ -187,7 +195,7 @@ footer italic line.
 | `outage` | EQUIPMENT OUTAGE | Remove one WORK card; everyone loses 1 Motivation | Hierarchy: lose 1 Motivation | 2 | Support (3 pips) | Who Knows What, costs 1 instead | "Nobody's fault, and it costs a week." |
 
 Sheet placement (assumed 3x3 top-left corners, verify against live SVG if reordering):
-`status`(10,12) `budget`(76,12) `unclear`(142,12) / `feedback`(10,104) `scope`(76,104)
+`status`(10,12) `budget`(76,12) `requirements`(142,12) / `feedback`(10,104) `scope`(76,104)
 `priority`(142,104) / `hoarding`(10,196) `burnout`(76,196) `outage`(142,196).
 
 ### Illustration
@@ -209,7 +217,7 @@ card's cost line reads "SO IT IS FREE" in place of "SO IT COSTS n INSTEAD" (rule
 63x88 card, and the flavour now comes first. On Event cards it is plain serif 4.2 (lines 4.8 mm
 apart, 2 lines max) at y 28-32.8, and the rule text, Torso rows, WAYS OUT box and cost squares
 sit in a `translate(0,9.5)` group below it, so the box spans y 63.5-85.5. Where it reads as one
-sentence the flavour is folded into the rule text instead (unclear, feedback, scope, priority,
+sentence the flavour is folded into the rule text instead (requirements, feedback, scope, priority,
 hoarding, reinforcements, legacy, false start, deadline, bikeshed), 4.2 serif, same group shift.
 A citation goes at the bottom of the card (Reinforcements: `BROOKS 1975`, mono 2.6 at y 86.2, box
 shifted only 6). On Activity cards the flavour leads at y 23.5-28.3 (plain serif 4-4.2) and the rule
@@ -270,7 +278,7 @@ and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save th
 | `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Challenge (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
 | `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +2, no bonus | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
 | `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No one person can be the answer." |
-| `deadline` (THE DATE MOVES UP) | every unbanked feature becomes Unclear; Work on it gives 1 less until cleared | Quality: lose 1 Motiv. | 3 | none - "No hero can save this." | Team Reflexivity, costs 2 instead | "This one is not about any of you." |
+| `deadline` (THE DATE MOVES UP) | every Work card this week produces 1 less (never below 0) | Quality: lose 1 Motiv. | 3 | none - "No hero can save this." | Team Reflexivity, costs 2 instead | "This one is not about any of you." |
 
 Sheet placement: `reinforcements`(10,12) `legacy`(76,12) `build`(142,12) / `split`(10,104)
 `reorg`(76,104) `crunch`(142,104) / `morale`(10,196) `audit`(76,196) `deadline`(142,196).
@@ -350,7 +358,7 @@ card's mechanic already *is* an exemption (highest Capital is spared the flat Mo
 and adding a second, Torso-keyed exemption on top would double the "who's exempt" logic on one
 card - `reinforcements` and `build` (Sheet 2) are the existing precedent for a card with zero
 Torso reaction. `bikeshed` and `dashboard` both react on **Quality** (`i-torso` + `q4`), reusing
-the identical chip/rect snippet already used on `unclear`/`feedback`/`scope`/`priority`
+the identical chip/rect snippet already used on `requirements`/`feedback`/`scope`/`priority`
 (Sheet 1) verbatim - `dashboard`'s copy is shifted down 5mm (`y=46.9`/`48` instead of
 `41.9`/`43`) because its effect text runs one line longer than theirs. `confidence` reuses
 `bikeshed`'s exact geometry (3 body lines, Torso row at `41.9`/`43`) with a Hierarchy reaction

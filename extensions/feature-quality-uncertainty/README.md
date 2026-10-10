@@ -5,6 +5,9 @@
 2026-09-09 playtest finding that the full feature system was too complicated (see
 `game/playtests/README.md`).
 
+> **Naming (rulebook v0.33 item 14):** the base-game card this pack calls **Align** is now
+> **REFINE**. Read "Align" below as Refine; the new Align card is a different, Motivation-paid card.
+
 ## What this pack restores
 - Every feature also carries a **hidden Quality** (Low/Medium/High, starts Medium, tracked
   face-down) alongside its Work Cost/Complexity/Dependencies.

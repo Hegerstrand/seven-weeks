@@ -1,0 +1,3 @@
+__pycache__/
+# per-game simulation output (regenerable, ~1.6 MB each); the _summary, _habitus and _report files are kept
+exp_E?.csv

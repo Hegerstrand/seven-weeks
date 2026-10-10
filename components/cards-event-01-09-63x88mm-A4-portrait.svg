@@ -95,18 +95,16 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     </g>
   </g>
 
-  <g id="unclear" transform="scale(.95238095,1)">
+  <g id="requirements" transform="scale(.95238095,1)">
     <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
-    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">UNCLEAR</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">REQUIREMENT</text>
+    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">REQUIREMENTS</text>
+    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">CHANGE</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.2">Flag the unbanked feature</text>
-    <text x="5" y="32.8" class="s" font-size="4.2">with most Work left: Work</text>
-    <text x="5" y="37.6" class="s" font-size="4.2">gives 1 less, Plan nothing,</text>
-    <text x="5" y="42.4" class="s" font-size="4.2">until an Align or a Demo</text>
-    <text x="5" y="47.2" class="s" font-size="4.2">clears it.</text>
+    <text x="5" y="28" class="s" font-size="4.2">The unbanked feature with</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">the most Work left loses</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">1 Work it already has.</text>
     <g transform="translate(0,9.5)">
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
@@ -285,7 +283,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
 
 <use href="#status" x="10" y="12"/>
 <use href="#budget" x="76" y="12"/>
-<use href="#unclear" x="142" y="12"/>
+<use href="#requirements" x="142" y="12"/>
 
 <use href="#feedback" x="10" y="104"/>
 <use href="#scope" x="76" y="104"/>

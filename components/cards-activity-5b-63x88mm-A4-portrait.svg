@@ -13,6 +13,7 @@ outer line. Print at 100%.</desc>
   .q { fill:#000000; }
   .trust { fill:#000000; }
   .adapt { fill:#000000; }
+  .sy { fill:none; stroke:#2A2620; stroke-width:.45; stroke-linecap:round; stroke-linejoin:round; }
 </style>
 
 <defs>
@@ -35,6 +36,11 @@ outer line. Print at 100%.</desc>
   <!-- Zone tile faces, same glyphs and colours as THE ZONE legend (6 x 6 mm, centred on 0,0) -->
   <g id="ztile-one"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".4"/><circle cx="0" cy="0" r="1.1" fill="#2A2620"/></g>
   <g id="ztile-stack"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#F7D7A1" stroke="#2A2620" stroke-width=".4"/><circle cx="-.7" cy="-.7" r="1.1" fill="#F7D7A1" stroke="#2A2620" stroke-width=".35"/><circle cx=".7" cy=".7" r="1.1" fill="#2A2620"/></g>
+
+  <!-- the three objects of reflection, same symbols as the Team Reflexivity wells on SHIT HAPPENS -->
+  <g id="sym-obj" class="sy"><circle r="3.3"/><circle r="1.9"/><circle r=".6" fill="#2A2620"/></g>
+  <g id="sym-strat" class="sy"><path d="M-2.9,2.9 C-2.9,-1.2 2.6,1.2 2.6,-2.1"/><path d="M0.9,-2.6 L2.7,-3.2 L3.5,-1.1"/></g>
+  <g id="sym-proc" class="sy"><path d="M2.9,-1.1 A3.1,3.1 0 1 0 2.4,1.9"/><path d="M0.9,-1.5 L3.0,-1.0 L3.4,-3.2"/></g>
 
   <g id="teach" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
@@ -74,7 +80,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="50.5" class="m q" font-size="2.6">HIGH COMPLEXITY: ALSO NEXT WEEK</text>
     <line x1="5" y1="52" x2="58" y2="52" class="h"/>
     <text x="5" y="60" class="s" font-size="4.4">Makes work more efficient</text>
-    <text x="5" y="68" class="m" font-size="3.1">NOT ON AN UNCLEAR FEATURE</text>
+    <text x="5" y="68" class="m" font-size="3.1">PAYS AS THE WORK RESOLVES</text>
     </g>
   </g>
 
@@ -100,17 +106,18 @@ outer line. Print at 100%.</desc>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Ask what's not working -</text>
     <text x="5" y="28.3" class="s" font-size="4.2">you can only reflect on it.</text>
-    <g transform="translate(0,10)">
-    <text x="5" y="24" class="m" font-size="3.1">TRUST ≥ 3</text>
-    <rect x="4" y="29" width="50" height="9" rx="1.2" fill="#B5C7CF"/>
-    <text x="5" y="36" class="s adapt" font-size="7.4">+1 Adaptability</text>
-    <line x1="5" y1="44" x2="58" y2="44" class="h"/>
-    <text x="5" y="51" class="s" font-size="4.4">A bank, or 2 Events adapted</text>
-    <text x="5" y="57" class="s" font-size="4.4">this week? Also</text>
-    <rect x="4" y="59" width="50" height="6" rx="1" fill="#F7D7A1"/>
-    <text x="5" y="64" class="s" font-size="4.4"><tspan font-weight="bold">+1 Shared Practice</tspan>.</text>
-    <text x="5" y="71" class="m q" font-size="3.1">AN AFTER-ACTION REVIEW</text>
-    </g>
+    <text x="5" y="33" class="m" font-size="3">TRUST ≥ 3</text>
+    <rect x="4" y="35" width="50" height="8.5" rx="1.2" fill="#B5C7CF"/>
+    <text x="5" y="41.3" class="s adapt" font-size="7.4">+1 Adaptability</text>
+    <text x="5" y="47.6" class="m q" font-size="2.8">LAST WEEK GAVE EVIDENCE?</text>
+    <use href="#sym-obj" transform="translate(8,52.4) scale(.8)"/><text x="13" y="53.6" class="s" font-size="3.6">a feature was banked</text>
+    <use href="#sym-strat" transform="translate(8,57.8) scale(.8)"/><text x="13" y="59" class="s" font-size="3.6">you adapted to 2 Events</text>
+    <use href="#sym-proc" transform="translate(8,63.2) scale(.8)"/><text x="13" y="64.4" class="s" font-size="3.3">a Hero played, or an Event cost</text>
+    <text x="13" y="68" class="s" font-size="3.3">Trust, Capability or Shared Practice</text>
+    <rect x="4" y="70.4" width="50" height="5.6" rx="1" fill="#F7D7A1"/>
+    <text x="5" y="74.5" class="s" font-size="4"><tspan font-weight="bold">Yes: +1 Shared Practice</tspan></text>
+    <text x="5" y="79.6" class="m q" font-size="2.6">TOKEN MAY GO IN THE MATCHING WELL</text>
+    <text x="5" y="83.4" class="m q" font-size="2.6">TOKEN: AT CLOSE, SPEND NEXT WEEK.</text>
   </g>
 
   <g id="workshop" transform="scale(.95238095,1)">
@@ -125,6 +132,8 @@ outer line. Print at 100%.</desc>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
     <text x="5" y="47" class="s" font-size="4.4">Unconditionally - no gate,</text>
     <text x="5" y="53" class="s" font-size="4.4">no second mode.</text>
+    <text x="5" y="61" class="m q" font-size="2.9">TOKEN ARRIVES AT WEEK CLOSE,</text>
+    <text x="5" y="66" class="m q" font-size="2.9">SPENDABLE FROM NEXT WEEK.</text>
     </g>
   </g>
 

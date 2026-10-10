@@ -15,7 +15,15 @@ on the reverse.</desc>
   .h { fill:none; stroke:#2A2620; stroke-width:.4; }
   .slot { fill:none; stroke:#2A2620; stroke-width:.6; stroke-dasharray:4 2.5; }
   .q { fill:#000000; }
+  .sy { fill:none; stroke:#2A2620; stroke-width:.45; stroke-linecap:round; stroke-linejoin:round; }
 </style>
+
+<defs>
+  <!-- the three objects of reflection: target = objectives, route = strategy, cycle = process -->
+  <g id="sym-obj" class="sy"><circle r="3.3"/><circle r="1.9"/><circle r=".6" fill="#2A2620"/></g>
+  <g id="sym-strat" class="sy"><path d="M-2.9,2.9 C-2.9,-1.2 2.6,1.2 2.6,-2.1"/><path d="M0.9,-2.6 L2.7,-3.2 L3.5,-1.1"/></g>
+  <g id="sym-proc" class="sy"><path d="M2.9,-1.1 A3.1,3.1 0 1 0 2.4,1.9"/><path d="M0.9,-1.5 L3.0,-1.0 L3.4,-3.2"/></g>
+</defs>
 
 <rect width="174" height="297" fill="#FFFFFF"/>
 
@@ -35,70 +43,73 @@ on the reverse.</desc>
 <text x="14" y="127" class="s" font-size="4">Any Event you don't cancel happens before the week runs.</text>
 
 <!-- ═══ ADAPT ═══ -->
-<rect x="8" y="129" width="158" height="77" rx="2" class="r"/>
+<rect x="8" y="129" width="158" height="119" rx="2" class="r"/>
 <text x="14" y="138" class="m" font-size="7" letter-spacing="1.6">ADAPT</text>
 <text x="14" y="144.5" class="s" font-size="4.2">Cancel Events now. <tspan font-weight="bold">Nothing resolves until you are done.</tspan></text>
 
 <g id="pool">
   <text x="14" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">ADAPTABILITY</text>
-  <rect x="11" y="153" width="54" height="45" rx="1.5" fill="#B5C7CF"/>
-  <rect x="11" y="153" width="54" height="45" rx="1.5" class="w"/>
-  <rect x="19" y="157" width="10" height="10" rx="1" class="w"/><rect x="33" y="157" width="10" height="10" rx="1" class="w"/><rect x="47" y="157" width="10" height="10" rx="1" class="w"/>
-  <rect x="19" y="170" width="10" height="10" rx="1" class="w"/><rect x="33" y="170" width="10" height="10" rx="1" class="w"/><rect x="47" y="170" width="10" height="10" rx="1" class="w"/>
-  <text x="14" y="185" class="s" font-size="2.7">Start with 3. Up to 6.</text>
-  <text x="14" y="188.5" class="s" font-size="2.7">Earned: Align, Workshop, Reflect.</text>
-  <text x="14" y="192" class="s" font-size="2.7">Spent: pay an Event's number.</text>
-  <text x="14" y="195.5" class="s" font-size="2.7">Tokens stay until spent.</text>
+  <rect x="11" y="153" width="54" height="52" rx="1.5" fill="#B5C7CF"/>
+  <rect x="11" y="153" width="54" height="52" rx="1.5" class="w"/>
+  <rect x="16" y="161" width="11" height="11" rx="1.2" class="w"/><rect x="32.5" y="161" width="11" height="11" rx="1.2" class="w"/><rect x="49" y="161" width="11" height="11" rx="1.2" class="w"/>
+  <rect x="16" y="179" width="11" height="11" rx="1.2" class="w"/><rect x="32.5" y="179" width="11" height="11" rx="1.2" class="w"/><rect x="49" y="179" width="11" height="11" rx="1.2" class="w"/>
+  <text x="12" y="212.6" class="s" font-size="3.2">Start with 3. Up to 6.</text>
+  <text x="12" y="217" class="s" font-size="3.2">Earned: Align, Workshop, Reflect.</text>
+  <text x="12" y="221.4" class="s" font-size="3.2">Spent: pay an Event's number.</text>
+  <text x="12" y="225.8" class="s" font-size="3.2">Tokens stay until spent.</text>
+  <text x="12" y="230.2" class="s" font-size="3.2">New tokens count from next week.</text>
 </g>
 
 <g id="lane-1">
   <text x="71" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">HERO · CANCELS IT</text>
-  <rect x="68" y="153" width="50" height="45" rx="1.5" fill="#F0E3D1"/>
-  <rect x="68" y="153" width="50" height="45" rx="1.5" class="w"/>
-  <rect x="97.46" y="156.48" width="16.38" height="3.22" rx=".45" fill="#D3B1B1"/>
-  <text x="71" y="159" class="s" font-size="2.8">Needs your Legs, and <tspan font-weight="bold">3+ Motivation</tspan>.</text>
-  <rect x="71" y="161" width="44" height="36" rx="1.5" class="w" stroke-dasharray="2 1.5"/>
-  <polygon points="0,-4.32 3.84,2.52 -3.84,2.52" fill="#905151" stroke="#2A2620" stroke-width=".45" transform="translate(93,179)"/>
+  <rect x="68" y="153" width="50" height="52" rx="1.5" fill="#F0E3D1"/>
+  <rect x="68" y="153" width="50" height="52" rx="1.5" class="w"/>
+  <rect x="73" y="170.4" width="40" height="5.2" rx=".5" fill="#D3B1B1"/>
+  <text x="93" y="168" class="s" font-size="3.6" text-anchor="middle">Free, but require</text>
+  <text x="93" y="174.2" class="s" font-size="3.6" text-anchor="middle" font-weight="bold">motivation on 3 or higher</text>
+  <rect x="71" y="161" width="44" height="41" rx="1.5" class="w" stroke-dasharray="2 1.5"/>
+  <polygon points="0,-4.32 3.84,2.52 -3.84,2.52" fill="#905151" stroke="#2A2620" stroke-width=".45" transform="translate(93,189)"/>
 </g>
 
 <g id="habit-lane">
   <text x="124" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">HABIT</text>
-  <rect x="121" y="153" width="42" height="45" rx="1.5" fill="#B5C7CF"/>
-  <rect x="121" y="153" width="42" height="45" rx="1.5" class="w"/>
-  <text x="142" y="157.4" class="m" font-size="2.6" text-anchor="middle">TEAM REFLEXIVITY</text>
-  <text x="142" y="160.6" class="m q" font-size="2.2" text-anchor="middle">WEST 1996</text>
-  <circle cx="142" cy="173.5" r="8" class="w"/>
-  <circle cx="142" cy="173.5" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <g class="m q" font-size="2.1" text-anchor="middle"><text x="129.5" y="186.6">OBJ.</text><text x="142" y="186.6">STRAT.</text><text x="154.5" y="186.6">PROC.</text></g>
-  <circle cx="129.5" cy="192.6" r="5.2" class="w"/><circle cx="142" cy="192.6" r="5.2" class="w"/><circle cx="154.5" cy="192.6" r="5.2" class="w"/>
+  <rect x="121" y="153" width="42" height="52" rx="1.5" fill="#B5C7CF"/>
+  <rect x="121" y="153" width="42" height="52" rx="1.5" class="w"/>
+  <text x="142" y="157.8" class="m" font-size="2.8" text-anchor="middle">TEAM REFLEXIVITY</text>
+  <text x="142" y="161.4" class="m q" font-size="2.4" text-anchor="middle">WEST 1996</text>
+  <circle cx="142" cy="173" r="8" class="w"/>
+  <circle cx="142" cy="173" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <rect x="124" y="191.1" width="11" height="11" rx="1.2" class="w"/><rect x="136.5" y="191.1" width="11" height="11" rx="1.2" class="w"/><rect x="149" y="191.1" width="11" height="11" rx="1.2" class="w"/>
+  <use href="#sym-obj" transform="translate(129.5,196.6)"/><use href="#sym-strat" transform="translate(142,196.6)"/><use href="#sym-proc" transform="translate(154.5,196.6)"/>
 </g>
-<text x="14" y="201.4" class="s" font-size="2.5">REFLECT: bank its token in the well its evidence matches, and name one change for next week.</text>
-<text x="14" y="204.6" class="s" font-size="2.5">OBJ. a feature banked · STRAT. 2 Events adapted to · PROC. an Event hit a track, or a Hero played. Three wells turn the coin.</text>
+<!-- Team Reflexivity: how it works (right of the pool captions) -->
+<rect x="68" y="208" width="95" height="39" rx="1.5" fill="#DCE5E8"/>
+<rect x="68" y="208" width="95" height="39" rx="1.5" class="w"/>
+<text x="71" y="213.2" class="m" font-size="3.2" letter-spacing=".3">TEAM REFLEXIVITY: HOW IT WORKS</text>
+<text x="71" y="218" class="s" font-size="3.3">Reflect on last week: token in a well, <tspan font-weight="bold">not</tspan> the pool.</text>
+<use href="#sym-obj" transform="translate(74,222.4) scale(.8)"/><text x="79" y="223.6" class="s" font-size="3.4"><tspan font-weight="bold">Objectives</tspan>: a feature was banked last week.</text>
+<use href="#sym-strat" transform="translate(74,227.8) scale(.8)"/><text x="79" y="229" class="s" font-size="3.4"><tspan font-weight="bold">Strategy</tspan>: you adapted to 2 Events last week.</text>
+<use href="#sym-proc" transform="translate(74,233.2) scale(.8)"/><text x="79" y="234.4" class="s" font-size="3.4"><tspan font-weight="bold">Process</tspan>: last week a Hero played, or an Event</text>
+<text x="79" y="238" class="s" font-size="3.4">cost Trust, Capability or Shared Practice.</text>
+<text x="71" y="243" class="s" font-size="2.9" font-style="italic">Three filled: the coin turns over. Name one change.</text>
 
 <!-- ═══ CLOSE THE WEEK ═══ -->
-<rect x="8" y="209" width="158" height="82" rx="2" class="r"/>
-<text x="13" y="221" class="m" font-size="7" letter-spacing="1.6">CLOSE THE WEEK</text>
-<text x="164.3" y="221" class="m q" font-size="3.6" text-anchor="end">TOP TO BOTTOM</text>
-<line x1="13" y1="225" x2="161" y2="225" class="h"/>
+<rect x="8" y="249.5" width="158" height="41.5" rx="2" class="r"/>
+<text x="13" y="255.6" class="m" font-size="5.2" letter-spacing="1.4">CLOSE THE WEEK</text>
+<text x="164.3" y="255.6" class="m q" font-size="3" text-anchor="end">TOP TO BOTTOM</text>
+<line x1="13" y1="258" x2="161" y2="258" class="h"/>
 
-<circle cx="18" cy="235" r="5" class="w"/><text x="18" y="237" class="m" font-size="5.5" text-anchor="middle">1</text>
-<text x="26.3" y="234" class="s" font-size="5.4"><tspan font-weight="bold">Anything finished?</tspan> Put its block on the tower.</text>
-<text x="26.3" y="240" class="s" font-size="4.4">Remove the blocking on a feature if it was unblocked.</text>
-
-<circle cx="18" cy="251" r="5" class="w"/><text x="18" y="253" class="m" font-size="5.5" text-anchor="middle">2</text>
-<text x="26.3" y="250" class="s" font-size="5.4"><tspan font-weight="bold">Move the coins.</tspan> One step each, no more.</text>
-<text x="26.3" y="256" class="s" font-size="4.4">Coins on their ring turn over for good. Add Adaptability tokens.</text>
-
-<circle cx="18" cy="267" r="5" class="w"/><text x="18" y="269" class="m" font-size="5.5" text-anchor="middle">3</text>
-<rect x="26.3" y="261.14" width="94.3" height="6.21" rx=".9" fill="#D3B1B1"/>
-<text x="26.3" y="266" class="s" font-size="5.4"><tspan font-weight="bold">The grind: everyone loses 1 Motivation.</tspan></text>
-<text x="26.3" y="272" class="s" font-size="4.4">Check Torso vs Events, <tspan font-style="italic">then</tspan> add up - empty means they leave.</text>
-<polygon points="0,-1.32 1.256,-.408 0.776,1.068 -0.776,1.068 -1.256,-.408" fill="#905151" stroke="#2A2620" stroke-width=".2" transform="translate(28,275.3)"/>
-<text x="30.45" y="277" class="m q" font-size="3.4">FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET</text>
-
-<circle cx="18" cy="283" r="5" class="w"/><text x="18" y="285" class="m" font-size="5.5" text-anchor="middle">4</text>
-<text x="26.3" y="282" class="s" font-size="5.4"><tspan font-weight="bold">Move the week marker.</tspan> One week closer to the deadline.</text>
-<text x="26.3" y="288" class="s" font-size="4.4">The deadline does not move. Nothing else happens here.</text>
+<text x="13" y="263.6" class="m" font-size="3.6">1</text>
+<text x="19" y="263.6" class="s" font-size="4.2"><tspan font-weight="bold">Anything finished?</tspan> Put its block on the tower.</text>
+<text x="13" y="269.2" class="m" font-size="3.6">2</text>
+<text x="19" y="269.2" class="s" font-size="4.2"><tspan font-weight="bold">Move the coins</tspan>, one step each. Add Adaptability tokens.</text>
+<rect x="18" y="270.9" width="101" height="4.8" rx=".8" fill="#D3B1B1"/>
+<text x="13" y="274.8" class="m" font-size="3.6">3</text>
+<text x="19" y="274.8" class="s" font-size="4.2"><tspan font-weight="bold">The grind: everyone loses 1 Motivation.</tspan> Empty means they leave.</text>
+<text x="19" y="278.8" class="m q" font-size="2.8">FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET</text>
+<text x="13" y="284" class="m" font-size="3.6">4</text>
+<text x="19" y="284" class="s" font-size="4.2"><tspan font-weight="bold">Move the week marker.</tspan> The deadline does not move.</text>
+<text x="164.3" y="289" class="m q" font-size="2.6" text-anchor="end">FULL DETAIL ON THE SPECIMEN BOARD</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="6" y1="6" x2="168" y2="6" stroke="#905151" stroke-width="1"/>

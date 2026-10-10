@@ -372,7 +372,7 @@ naming Parkinson on the card. Before this card existed, the closest material was
   process instead of the work" but don't specifically reward trivial-but-visible engagement
   over hard-but-consequential engagement - they're closer to Foucault's disciplinary
   examination (already cited above) than to Parkinson's triviality trap specifically.
-- **UNCLEAR REQUIREMENT and SCOPE CREEP** (§11), which put a hard, ambiguous feature in front of
+- **REQUIREMENTS CHANGE and SCOPE CREEP** (§11), which put a hard, ambiguous feature in front of
   the team without letting them dodge it for something easier - the problem bikeshedding would
   strike at, without the temptation itself being modelled.
 

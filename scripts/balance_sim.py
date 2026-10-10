@@ -88,8 +88,8 @@ class Rules:
     events_per_week: int = 2
     events_from_week: int = 2
     combos_from_week: int = 5
-    threshold_base: int = 20                    # Sustainable: 20 + 5 x 5 players = 45
-    threshold_high_base: int = 75               # Sustainable High Performance: 75 + 5 x 5 players = 100
+    threshold_base: int = -15                   # Sustainable: -15 + 5 x 5 players = 10 (moved from the simulator: random almost never reaches it)
+    threshold_high_base: int = 45               # Sustainable High Performance: 45 + 5 x 5 players = 70 (about half of optimal play)
     threshold_per_player: int = 5
     habit_score: int = 10                       # Team Score per Habit held at the end (5 Habits = up to 50)
     feature_value: int = 10
@@ -210,6 +210,7 @@ class Strategy:
     use_stand: bool = True                     # use Torso Stand when the rule exists
     random_play: bool = False                  # lay the five cards at random from what is open
     celebrate_needs_reason: bool = False       # lay Celebrate only when a feature should bank or the Events can all be covered
+    align_weeks: tuple = ()                    # weeks (from 3) in which to lay an Align meeting whatever the pool holds
 
 
 STRATEGIES = {
@@ -532,7 +533,7 @@ class Game:
     # ------------------------------------------------------------------ planning
 
     def bank_expected(self, plan: list) -> bool:
-        n = plan.count("Work")
+        n = plan.count("Work") * (2 if "Plan" in plan else 1)
         return n > 0 and any(self.remaining(k) <= n for k in self.candidates())
 
     def cover_capacity(self, w: int) -> int:
@@ -600,13 +601,20 @@ class Game:
                 wanted.append("Workshop")
             if st.demo and self.chars:
                 wanted.append("Demo")
-        slots = max(0, R.days - st.work_days[min(w, len(st.work_days)) - 1])
-        # Plan pays +1 on every Work card on a feature, so it goes near the front whenever there are Work days to boost
-        if (w >= 3 and st.plan and self.sp > R.low_band and self.plan_target() is not None
-                and st.work_days[min(w, len(st.work_days)) - 1] >= 2):
+        wd = st.work_days[min(w, len(st.work_days)) - 1]
+        slots = max(0, R.days - wd)
+        # Plan makes every Work card on the feature produce double (+1 on top of its base 1), so Plan + 2 Work = 4 beats
+        # 3 Work = 3: with 3 or more Work cards wanted, Plan takes one Work day; with 2 it takes a free slot.
+        if (w >= 3 and st.plan and self.sp > R.low_band and self.plan_target() is not None and wd >= 2):
             wanted = [c for c in wanted if c != "Plan"]
             wanted.insert(1 if "Celebrate" in wanted else 0, "Plan")
+            if wd >= 3:
+                slots += 1
         open_wells: list = []
+        if (w in st.align_weeks and w >= 3 and R.align_tokens and self.chars
+                and all(c.mot >= R.align_min_mot for c in self.chars)):
+            wanted = [c for c in wanted if c != "Align"]
+            wanted.insert(1 if "Celebrate" in wanted else 0, "Align")
         if w >= 3 and st.reflect and self.trust >= R.reflect_trust:
             open_wells = self.reflect_wells_open()
             wanted = [c for c in wanted if c != "Reflect"]
@@ -1493,6 +1501,9 @@ def report(name: str, res: list, rules: Rules):
     all_cards = share(res, lambda r: set(ACTION_CARDS) <= cards_played(r))
     print("   CARD USE CHECK (goal: every action card is played at least once in a game): all %d in %.0f%% of games" % (len(ACTION_CARDS), all_cards))
     print("      share of games playing each: " + "  ".join("%s %.0f%%" % (c, share(res, lambda r, c=c: c in cards_played(r))) for c in ACTION_CARDS))
+    print("   PLAN AND ALIGN CHECK (goal: each played 2 to 4 times a game): " + "   ".join(
+        "%s %.1f a game, 2 to 4 times in %.0f%% of games" % (c, mean(times_played(r, c) for r in res), share(res, lambda r, c=c: 2 <= times_played(r, c) <= 4))
+        for c in ("Plan", "Align")))
     for key, label in (("hero", "Hero played"), ("dependable", "Dependable Take 1"), ("take_one", "Other Take One"),
                        ("recognition_witness", "Recog. witness"), ("recognition_need_met", "Recog. Need met")):
         print("   %-17s" % label + "  ".join("w%d %.2f" % (i + 1, mean(r["habitus_week"][i][key] for r in res)) for i in range(W)))
@@ -1641,12 +1652,18 @@ def shown_cards(res: list) -> list:
     return ACTION_CARDS + [c for c in names_in(res, "cards_week", CARD_ORDER) if c not in ACTION_CARDS]
 
 
+def times_played(r: dict, card: str) -> int:
+    return int(sum(week.get(card, 0) for week in r["cards_week"]))
+
+
 def objective(res: list) -> float:
     # Share of games that reach the upper threshold (percent), plus a little mean score and all-six share as
-    # tie-breakers, minus 15 for each Quality quit after a week without Work and 8 for each action card a game never plays.
+    # tie-breakers, minus 15 for each Quality quit after a week without Work, 8 for each action card a game never plays,
+    # and 10 for each play of Plan or Align short of 2 or over 4.
     missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
+    off = mean(max(0, 2 - times_played(r, c)) + max(0, times_played(r, c) - 4) for r in res for c in ("Plan", "Align")) * 2
     return (share(res, lambda r: r["outcome"] == "thriving") + 0.2 * mean(r["score"] for r in res)
-            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing)
+            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing - 10 * off)
 
 
 OPT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "balance_sim_optimal.json")
@@ -1658,6 +1675,7 @@ def load_optimal(weeks: int) -> Strategy | None:
             d = json.load(fh)
         d["work_days"] = (tuple(d["work_days"]) + (d["work_days"][-1],) * weeks)[:weeks]
         d["overtime_weeks"] = tuple(d.get("overtime_weeks", ()))
+        d["align_weeks"] = tuple(d.get("align_weeks", ()))
         names = {f.name for f in fields(Strategy)}
         return Strategy(**{k: v for k, v in d.items() if k in names})
     except (OSError, ValueError, KeyError, TypeError, IndexError):
@@ -1699,6 +1717,8 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
     groups += [lambda b, i=i: [replace(b, work_days=b.work_days[:i] + (d,) + b.work_days[i + 1:]) for d in range(6)]
                for i in range(W)]
     groups += [lambda b, i=i: [replace(b, overtime_weeks=tuple(sorted(set(b.overtime_weeks) ^ {i + 1})))]
+               for i in range(W)]
+    groups += [lambda b, i=i: [replace(b, align_weeks=tuple(sorted(set(b.align_weeks) ^ {i + 1})))]
                for i in range(W)]
 
     best_v = value(best)
@@ -2088,6 +2108,10 @@ def calibrate(dump: dict):
     lines.append("  Card use in optimal play: every action card in %.0f%% of games (goal 100%%)%s" % (
         100 * sum(1 for r in opt if set(ACTION_CARDS) <= cards_played(r)) / len(opt),
         "; not always played: " + ", ".join("%s %.0f%%" % (c, 100 * sum(1 for r in opt if c in cards_played(r)) / len(opt)) for c in unused) if unused else ""))
+    lines.append("  Plan and Align in optimal play (goal: each 2 to 4 times a game): " + "; ".join(
+        "%s %.1f a game, in range in %.0f%% of games" % (c, sum(times_played(r, c) for r in opt) / len(opt),
+                                                         100 * sum(1 for r in opt if 2 <= times_played(r, c) <= 4) / len(opt))
+        for c in ("Plan", "Align")))
     if top is None:
         best = max(reach(opt, t) for t in range(lo, hi + 1))
         near = max([t for t in range(lo, hi + 1) if reach(opt, t) >= best - 0.05] or [lo])

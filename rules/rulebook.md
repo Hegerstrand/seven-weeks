@@ -5,8 +5,8 @@ whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
 > ## BALANCE PASS (2026-10-11)
-> **Team Score** now counts **10 per Habit held**, and has **two thresholds**: 20 + 5 × characters (Sustainable
-> Performance) and 75 + 5 × characters (Sustainable High Performance), §16. **Celebrate** gives +1 only to
+> **Team Score** now counts **10 per Habit held**, and has **two thresholds**: 5 × characters − 15 (Sustainable
+> Performance) and 5 × characters + 45 (Sustainable High Performance), §16. **Celebrate** gives +1 only to
 > characters on 3 or less and only if there is something to celebrate (a feature banked, or every Event
 > cancelled), §7. **Reflect** with evidence also gives +1 Motivation to characters on 3 or less, fills the
 > matching Team Reflexivity well **and** still gives the pool token; a spent token counts as process
@@ -1201,7 +1201,7 @@ character to receive it.
 | Activity | Exact effect |
 |---|---|
 | **Work** | **+1** to one feature's Work counter (§10). Modified by Capability (§4). **Minimum 0.** Can't target a feature whose Dependency is unbanked. |
-| **Plan** | Choose a feature: **every Work card played on it this week produces +1 extra** (Low: no bonus). **If High complexity, the bonus also applies next week.** |
+| **Plan** | Choose a feature: **every Work card played on it this week produces +1 extra** - a plain Work card then delivers **2**, so Plan + 2 Work (4) beats 3 Work (3) (Low: no bonus). **If High complexity, the bonus also applies next week.** |
 | **Coordinate** | **+1 Trust.** |
 | **Align** | **Every character pays 1 Motivation.** **+3 Adaptability.** The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. |
 | **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
@@ -1786,20 +1786,20 @@ max 21) + (sum of every remaining character's Motivation tokens) + (**10 × Habi
 or were fired) − (2 × **unrepaid Flex markers**, §7) − (5 × **Ledger tracks that finish in the low band**, a switched-off Activity the team never fixed).
 
 > **Note for player counts other than 4:** the Motivation term scales with the number of
-> characters, so the two thresholds below have to as well. Use **20 + (5 × number of starting
-> characters)** and **75 + (5 × number of starting characters)** - which is 40 and 95 at four
-> players, 45 and 100 at five. Everything else in the game is player-count
+> characters, so the two thresholds below have to as well. Use **(5 × number of starting
+> characters) − 15** and **(5 × number of starting characters) + 45** - which is 5 and 65 at four
+> players, 10 and 70 at five. Everything else in the game is player-count
 > independent (§6.0); this is the one place it isn't, and it needs a playtest before it's
 > trusted.
 
 - **Project Failure** - not enough features delivered (the Tower is short of what was
   required). The team loses, no matter the Team Score.
 - **Heroic Success** - all required features delivered, but Team Score **under the lower
-  threshold** (20 + 5 × characters). The project succeeded; the team didn't.
+  threshold** (5 × characters − 15). The project succeeded; the team didn't.
 - **Sustainable Performance** - all required features delivered and Team Score **from the lower
   threshold up to just under the upper one**.
 - **Sustainable High Performance** *(the ideal outcome)* - all required features delivered
-  **and** Team Score **at or above the upper threshold** (75 + 5 × characters).
+  **and** Team Score **at or above the upper threshold** (5 × characters + 45).
 
 Both thresholds are first guesses from the balance runs (best play, searched by the simulator, reaches the
 lower one in most games and the upper one in about half; balanced and invested play reach neither). Habits are worth

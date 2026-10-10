@@ -39,8 +39,8 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect width="63" height="88" rx="2" class="c"/>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">COORDINATE</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
-    <text x="5" y="23.5" class="s" font-size="4.2">Safety is not declared.</text>
-    <text x="5" y="28.3" class="s" font-size="4.2">It is built, dully.</text>
+    <text x="5" y="23.5" class="s" font-size="4.2">Check in. Ask for help.</text>
+    <text x="5" y="28.3" class="s" font-size="4.2">Admit the small mistakes.</text>
     <g transform="translate(0,11)">
     <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#D3CEDF"/>
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>

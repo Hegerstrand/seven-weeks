@@ -56,7 +56,7 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 | Card | Title | Big effect (in tinted chip) | Body / conditions | Footer italic |
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" (`#EFE4D3`) | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
-| `coordinate` | COORDINATE | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust ≤ 1: Teach is dead." + "TRUST RISE 1 A WEEK, MAX" | "Safety is not declared. It is built, dully." |
+| `coordinate` | COORDINATE | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust ≤ 1: Teach is dead." + "TRUST RISE 1 A WEEK, MAX" | "Check in. Ask for help. Admit the small mistakes." |
 | `workshop` | WORKSHOP | "+1 Adaptability" (`#B5C7CF`) | "Unconditionally - no gate, no second mode." + "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM NEXT WEEK." (mono) | "A meeting that changes the plan, not just records it." |
 | `align` | ALIGN | "+3 Adaptability" (`#B5C7CF`) and "Every character pays 1 Motivation" (`#D3B1B1`) | "NOTHING IF ANYONE IS ON 1." + "ONE WAY ONLY. NEVER BACK." (mono) | "A meeting nobody wants. Everybody sits through it." |
 | `celebrate` | CELEBRATE | "+1 Motivation" (`#D3B1B1`, 6.6pt) and "to anyone on 3 or less" (5pt) | "Only works if there is something to celebrate: a feature banked, or every Event cancelled this week." (4.4pt) + "AT WEEK CLOSE, WITH THE GRIND." (mono). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Nobody rests at work. You ship something and say so." |

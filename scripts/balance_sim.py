@@ -63,7 +63,7 @@ class Rules:
     sheltered_cap: int = 3
     grind: int = 1
     celebrate: int = 1
-    celebrate_banked: int = 2
+    celebrate_banked: int = 1                   # was 2; equal to celebrate = no timing bonus (slight nerf)
     need_bonus: int = 1
     quality_penalty: int = 1
     ledger_start: int = 1
@@ -71,7 +71,7 @@ class Rules:
     habit_at: int = 4
     habit_discount: int = 1
     habit_min_cost: int = 0
-    trust_cancel_at: int = 4
+    trust_cancel_at: int = 5                    # was 4: only a maxed Trust cancels an Event for free
     low_band: int = 1
     cap_bonus_at: int = 4
     sp_bonus_at: int = 4
@@ -86,7 +86,8 @@ class Rules:
     events_per_week: int = 2
     events_from_week: int = 2
     combos_from_week: int = 5
-    threshold_base: int = 35                    # 35 + 5 x 5 players = 60 (was 68; calibration goal: ~90% of optimal, ~5% of balanced)
+    threshold_base: int = 25                    # Sustainable: 25 + 5 x 5 players = 50
+    threshold_high_base: int = 60               # Sustainable High Performance: 60 + 5 x 5 players = 85
     threshold_per_player: int = 5
     feature_value: int = 10
     quit_penalty: int = 20
@@ -96,10 +97,11 @@ class Rules:
     legs_tendencies: bool = True
     autonomy_max_landed: int = 1                # Autonomy Need holds if at most this many Events landed (printed rule)
     autonomy_rule: str = "events"               # events (count landed Events) | management (no Management Event landed)
-    align_tokens: int = 2                       # ALIGN (the meeting): tokens it adds (0 = card not in the game)
+    align_tokens: int = 3                       # ALIGN (the meeting): tokens it adds (was 2; 0 = card not in the game)
     align_cost: int = 1                         # Motivation every character pays (one way: Motivation -> Adaptability)
     align_min_mot: int = 2                      # policy: nobody pays below this, so the meeting is not laid while someone is lower
     celebrate_repeat: int = 0                   # optional: Celebrate gives this much less if the team celebrated last week
+    celebrate_max_mot: int = 3                  # Celebrate only lifts a character at or below this Motivation (5 = everyone, off)
     stand: bool = False                         # Torso Stand: once per game, pay Motivation to cancel your Torso's category
     stand_cost: int = 2
     habit_cancel: bool = False                  # a held Habit cancels one Event of its category a week, free
@@ -888,7 +890,8 @@ class Game:
             if self.celebrated_prev:
                 amt = max(0, amt - R.celebrate_repeat)
             for c in self.chars:
-                self.add_mot(c, amt, "celebrate")
+                if c.mot <= R.celebrate_max_mot:
+                    self.add_mot(c, amt, "celebrate")
             self.m["celebrates"] += 1
         for card in plan:
             if card == "Workshop":
@@ -931,7 +934,10 @@ class Game:
             self.m["reflect_dead"] += 1
             return
         p = self.prev
+        self.m["reflect_played"] += 1
         evidence = p["banked"] or p["adapted2"] or p["process"]
+        if not evidence:
+            self.m["reflect_no_evidence"] += 1
         if evidence:
             W.sp_up = True
         wells = []
@@ -945,6 +951,8 @@ class Game:
             self.wells.add(wells[0])
             self.m["tokens_banked_tr"] += 1
         else:
+            if wells and "TR" not in self.habits:
+                self.m["tr_well_skipped"] += 1
             W.adds += 1
             self.m["tokens_reflect"] += 1
 
@@ -1200,15 +1208,18 @@ class Game:
                  + sum(c.mot for c in self.chars) - R.quit_penalty * self.quits - R.flex_penalty * flex
                  - R.low_track_penalty * low_tracks)
         threshold = R.threshold_base + R.threshold_per_player * R.players
+        threshold_high = R.threshold_high_base + R.threshold_per_player * R.players
         if banked < len(self.feat):
             outcome = "failure"
+        elif score >= threshold_high:
+            outcome = "thriving"
         elif score >= threshold:
             outcome = "sustainable"
         else:
             outcome = "heroic"
         needed = sum(f["cost"] for f in self.feat.values())
         return {
-            "banked": banked, "score": score, "threshold": threshold, "outcome": outcome,
+            "banked": banked, "score": score, "threshold": threshold, "threshold_high": threshold_high, "outcome": outcome,
             "work_out": self.m["work_out"], "work_cards": self.m["work_cards"], "work_needed": needed,
             "work_wasted": self.m["work_cards_wasted"], "rework_lost": self.m["rework_lost"],
             "cost_added": self.m["cost_added"], "last_bank_week": self.last_bank_week,
@@ -1236,6 +1247,8 @@ class Game:
             "need_met": dict(self.need_met), "need_seen": dict(self.need_seen),
             "trust": self.trust, "cap": self.cap, "sp": self.sp, "flex_unrepaid": flex, "low_tracks": low_tracks,
             "teach_dead": self.m["teach_dead"], "reflect_dead": self.m["reflect_dead"],
+            "reflect_played": self.m["reflect_played"], "reflect_no_evidence": self.m["reflect_no_evidence"],
+            "tr_well_skipped": self.m["tr_well_skipped"], "tr_wells_filled": len(self.wells),
             "lines_filled": self.m["lines_filled"], "stack_flips": self.m["stack_flips"],
             "zone_tiles": len(self.tiles), "squares_learned": self.m["squares_learned"],
         }
@@ -1282,11 +1295,11 @@ def share(res, pred):
 def report(name: str, res: list, rules: Rules):
     n = len(res)
     print("=" * 78)
-    print(f"STRATEGY {name}   ({n} games, {rules.players} players, threshold {res[0]['threshold']})")
+    print(f"STRATEGY {name}   ({n} games, {rules.players} players, thresholds {res[0]['threshold']} / {res[0]['threshold_high']})")
     print("=" * 78)
     out = Counter(r["outcome"] for r in res)
-    print("Outcome:  failure %.0f%%   heroic %.0f%%   sustainable %.0f%%   mean score %.1f (p10 %d, p90 %d)" % (
-        100 * out["failure"] / n, 100 * out["heroic"] / n, 100 * out["sustainable"] / n,
+    print("Outcome:  failure %.0f%%   heroic %.0f%%   sustainable %.0f%%   high performance %.0f%%   mean score %.1f (p10 %d, p90 %d)" % (
+        100 * out["failure"] / n, 100 * out["heroic"] / n, 100 * out["sustainable"] / n, 100 * out["thriving"] / n,
         mean(r["score"] for r in res), pct([r["score"] for r in res], 10), pct([r["score"] for r in res], 90)))
 
     print("\n1. WORK COST")
@@ -1331,6 +1344,19 @@ def report(name: str, res: list, rules: Rules):
     print("   Habits (share of games, mean week): " + (habit_txt or "none"))
     print("   Teach cards dead (Trust<=1) %.2f   Reflect dead (Trust<3) %.2f" % (
         mean(r["teach_dead"] for r in res), mean(r["reflect_dead"] for r in res)))
+    n_reflect = sum(r["reflect_played"] for r in res)
+    print("   TEAM REFLEXIVITY CHECK: needs %d Reflect wells (Objectives, Strategies, Processes), one token each, Trust %d+ to Reflect" % (
+        rules.tr_wells, rules.reflect_trust))
+    print("      reached %.0f%% of games   wells filled %.2f / %d   Reflect played %.2f   Reflect with no evidence %.0f%%   Reflect dead %.2f" % (
+        share(res, lambda r: "TR" in r["habits"]), mean(r["tr_wells_filled"] for r in res), rules.tr_wells,
+        mean(r["reflect_played"] for r in res), 100 * sum(r["reflect_no_evidence"] for r in res) / n_reflect if n_reflect else 0,
+        mean(r["reflect_dead"] for r in res)))
+    print("      tokens banked in wells %.2f   tokens the pool got instead (not banking) %.2f   wells skipped while able %.2f" % (
+        mean(r["tokens_banked_tr"] for r in res), mean(r["tokens_reflect"] for r in res), mean(r["tr_well_skipped"] for r in res)))
+    if mean(r["reflect_played"] for r in res) < rules.tr_wells:
+        print("      WHY NOT: fewer Reflect cards than wells (%d) are played per game, so the habit cannot be reached." % rules.tr_wells)
+    elif mean(r["tr_well_skipped"] for r in res) > 0.5:
+        print("      WHY NOT: the policy takes the token for the pool instead of banking it (bank_tokens is off).")
 
     print("\n3. MOTIVATION")
     print("   mean Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_mean"][i] for r in res)) for i in range(rules.weeks)))
@@ -1480,12 +1506,12 @@ def write_csv(path: str, dump: dict):
     nums = [c for c in cols if c not in ("run", "game", "outcome")]
     with open(summary, "w", newline="", encoding="utf-8") as fh:
         wr = csv.writer(fh)
-        wr.writerow(["run", "games", "failure_pct", "heroic_pct", "sustainable_pct"] + nums)
+        wr.writerow(["run", "games", "failure_pct", "heroic_pct", "sustainable_pct", "high_performance_pct"] + nums)
         for title in dump:
             mine = [r for r in rows if r["run"] == title]
             n = len(mine)
             line = [title, n] + [round(100 * sum(1 for r in mine if r["outcome"] == o) / n, 1)
-                                 for o in ("failure", "heroic", "sustainable")]
+                                 for o in ("failure", "heroic", "sustainable", "thriving")]
             for c in nums:
                 vals = [r.get(c, blank(c)) for r in mine]
                 vals = [v for v in vals if isinstance(v, (int, float))]
@@ -1500,9 +1526,9 @@ def write_csv(path: str, dump: dict):
 
 
 def objective(res: list) -> float:
-    # Share of games that reach the threshold (percent), plus a little mean score and all-six share as
+    # Share of games that reach the lower threshold (percent), plus a little mean score and all-six share as
     # tie-breakers, minus 15 for each Quality quit after a week without Work.
-    return (share(res, lambda r: r["outcome"] == "sustainable") + 0.2 * mean(r["score"] for r in res)
+    return (share(res, lambda r: r["outcome"] in ("sustainable", "thriving")) + 0.2 * mean(r["score"] for r in res)
             + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res))
 
 
@@ -1748,9 +1774,10 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     y5 = y4 + PH + GAP
     scores = [r["score"] for r in res]
     thr = res[0]["threshold"]
+    thr2 = res[0]["threshold_high"]
     bin_w = 5
     lo = int(min(min(scores), thr) // bin_w * bin_w - bin_w)
-    hi = int((max(max(scores), thr) // bin_w + 2) * bin_w)
+    hi = int((max(max(scores), thr2) // bin_w + 2) * bin_w)
     nb = (hi - lo) // bin_w
     counts = [0] * nb
     for s in scores:
@@ -1775,17 +1802,20 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     for i, c in enumerate(counts):
         if c:
             below = lo + (i + 1) * bin_w <= thr
+            high = lo + i * bin_w >= thr2
             out.append('<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" fill="%s"/>' % (
-                hx(lo + i * bin_w) + .5, hy(c), PW / nb - 1, y5 + PH - hy(c), "#6B7A8F" if below else "#4C9F70"))
+                hx(lo + i * bin_w) + .5, hy(c), PW / nb - 1, y5 + PH - hy(c), "#6B7A8F" if below else "#1F7A4D" if high else "#4C9F70"))
     avg = statistics.mean(scores)
     out.append('<line x1="%.1f" y1="%g" x2="%.1f" y2="%g" stroke="#212529" stroke-width="1.4" stroke-dasharray="1.5 2.5"/>' % (hx(avg), y5, hx(avg), y5 + PH))
     out.append('<line x1="%.1f" y1="%g" x2="%.1f" y2="%g" stroke="#C92A2A" stroke-width="1.8" stroke-dasharray="6 3"/>' % (hx(thr), y5, hx(thr), y5 + PH))
+    out.append('<line x1="%.1f" y1="%g" x2="%.1f" y2="%g" stroke="#C92A2A" stroke-width="1.8" stroke-dasharray="6 3"/>' % (hx(thr2), y5, hx(thr2), y5 + PH))
     lx = X0 + PW + 16
-    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#6B7A8F"/><text x="%g" y="%g" class="a">below the threshold</text>' % (lx, y5 + 2, lx + 18, y5 + 10))
-    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#4C9F70"/><text x="%g" y="%g" class="a">at or above the threshold</text>' % (lx, y5 + 19, lx + 18, y5 + 27))
-    out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#C92A2A" stroke-width="1.8" stroke-dasharray="6 3"/><text x="%g" y="%g" class="a">threshold (%d)</text>' % (lx, y5 + 41, lx + 12, y5 + 41, lx + 18, y5 + 44, thr))
-    out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#212529" stroke-width="1.4" stroke-dasharray="1.5 2.5"/><text x="%g" y="%g" class="a">mean score (%.1f)</text>' % (lx, y5 + 58, lx + 12, y5 + 58, lx + 18, y5 + 61, avg))
-    out.append('<text x="%g" y="%g" class="a">%d%% of games reach the threshold</text>' % (lx, y5 + 82, round(100 * sum(1 for s in scores if s >= thr) / len(scores))))
+    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#6B7A8F"/><text x="%g" y="%g" class="a">below the lower threshold</text>' % (lx, y5 + 2, lx + 18, y5 + 10))
+    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#4C9F70"/><text x="%g" y="%g" class="a">between the two thresholds</text>' % (lx, y5 + 19, lx + 18, y5 + 27))
+    out.append('<rect x="%g" y="%g" width="12" height="10" fill="#1F7A4D"/><text x="%g" y="%g" class="a">at or above the high threshold</text>' % (lx, y5 + 36, lx + 18, y5 + 44))
+    out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#C92A2A" stroke-width="1.8" stroke-dasharray="6 3"/><text x="%g" y="%g" class="a">thresholds (%d and %d)</text>' % (lx, y5 + 58, lx + 12, y5 + 58, lx + 18, y5 + 61, thr, thr2))
+    out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#212529" stroke-width="1.4" stroke-dasharray="1.5 2.5"/><text x="%g" y="%g" class="a">mean score (%.1f)</text>' % (lx, y5 + 75, lx + 12, y5 + 75, lx + 18, y5 + 78, avg))
+    out.append('<text x="%g" y="%g" class="a">%d%% reach %d, %d%% reach %d</text>' % (lx, y5 + 97, round(100 * sum(1 for s in scores if s >= thr) / len(scores)), thr, round(100 * sum(1 for s in scores if s >= thr2) / len(scores)), thr2))
 
     width, height = X0 + PW + 260, y5 + PH + 50
     head = ('<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d">'
@@ -1822,15 +1852,18 @@ def calibrate(dump: dict):
         lows.append(min(under) if under else hi)
     low = max(lows)
     cur = rules.threshold_base + rules.threshold_per_player * rules.players
+    cur2 = rules.threshold_high_base + rules.threshold_per_player * rules.players
     per = rules.threshold_per_player * rules.players
-    lines = ["THRESHOLD CALIBRATION (goal: about 90% of optimal play and about 5% of balanced/random play reach it;",
-             "'reach' = all six features banked AND Team Score at or above the threshold). Current threshold: %d (%d + %d x %d players)."
-             % (cur, rules.threshold_base, rules.threshold_per_player, rules.players)]
+    lines = ["THRESHOLD CALIBRATION (goal: about 90% of optimal play and about 5% of balanced/random play reach the lower threshold;",
+             "'reach' = all six features banked AND Team Score at or above the threshold). Current thresholds: %d (%d + %d x %d players) and %d (%d + %d x %d)."
+             % (cur, rules.threshold_base, rules.threshold_per_player, rules.players,
+                cur2, rules.threshold_high_base, rules.threshold_per_player, rules.players)]
     for n in names:
         sc = sorted(r["score"] for r in series[n])
-        lines.append("  %-9s all six features %3.0f%%   score p10 %4d  p50 %4d  p90 %4d   reach %3.0f%% at %d" % (
+        lines.append("  %-9s all six features %3.0f%%   score p10 %4d  p50 %4d  p90 %4d   reach %3.0f%% at %d, %3.0f%% at %d" % (
             n, 100 * sum(1 for r in series[n] if r["banked"] == 6) / len(series[n]),
-            sc[len(sc) // 10], sc[len(sc) // 2], sc[min(len(sc) - 1, len(sc) * 9 // 10)], 100 * reach(series[n], cur), cur))
+            sc[len(sc) // 10], sc[len(sc) // 2], sc[min(len(sc) - 1, len(sc) * 9 // 10)],
+            100 * reach(series[n], cur), cur, 100 * reach(series[n], cur2), cur2))
     if top is None:
         lines.append("  No threshold lets 90%% of optimal play reach it: only %.0f%% of optimal games bank all six features." % all_six)
         lines.append("  That is a Work problem, not a threshold problem.")

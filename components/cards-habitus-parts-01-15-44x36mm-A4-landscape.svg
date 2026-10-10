@@ -47,7 +47,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 <text x="258" y="36" class="serif" font-size="2.8" text-anchor="end" font-style="italic">your own Motivation, never Work</text>
 <g>
   <rect x="14" y="40" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="17" y="47" class="serif" font-size="3.5">Bookish</text>
+  <text x="17" y="47" class="serif" font-size="4.8">Bookish</text>
   <line x1="17" y1="50" x2="55" y2="50" class="hair"/>
   <rect x="29.2" y="52.4" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
   <text x="17" y="55" class="mono" font-size="3">LEARN: +1 MOTIVATION</text>
@@ -58,7 +58,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(13.5,0)">
   <rect x="50.5" y="40" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="53.5" y="47" class="serif" font-size="3.5">Hands-On</text>
+  <text x="53.5" y="47" class="serif" font-size="4.8">Hands-On</text>
   <line x1="53.5" y1="50" x2="91.5" y2="50" class="hair"/>
   <rect x="65.7" y="52.4" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
   <text x="53.5" y="55" class="mono" font-size="3">TEACH: +1 MOTIVATION</text>
@@ -70,7 +70,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(27,0)">
   <rect x="87" y="40" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="90" y="47" class="serif" font-size="3.5">Sheltered</text>
+  <text x="90" y="47" class="serif" font-size="4.8">Sheltered</text>
   <line x1="90" y1="50" x2="128" y2="50" class="hair"/>
   <text x="90" y="55" class="mono" font-size="3">THE GRIND SKIPS YOU</text>
   <text x="90" y="60.2" class="serif" font-size="3.2">The highs and lows</text>
@@ -82,7 +82,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(40.5,0)">
   <rect x="123.5" y="40" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="126.5" y="47" class="serif" font-size="3.5">Dependable</text>
+  <text x="126.5" y="47" class="serif" font-size="4.8">Dependable</text>
   <line x1="126.5" y1="50" x2="164.5" y2="50" class="hair"/>
   <text x="126.5" y="54.6" class="mono" font-size="3">TAKE ONE FOR THE TEAM</text>
   <text x="126.5" y="59" class="serif" font-size="3.2">Somebody has to hold</text>
@@ -96,7 +96,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(54,0)">
   <rect x="160" y="40" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="163" y="47" class="serif" font-size="3.5">Competitive</text>
+  <text x="163" y="47" class="serif" font-size="4.8">Competitive</text>
   <line x1="163" y1="50" x2="201" y2="50" class="hair"/>
   <text x="163" y="54.6" class="mono" font-size="3">HERO IS REUSABLE</text>
   <text x="163" y="59" class="serif" font-size="3.2">Still needs 3 Motivation.</text>
@@ -112,44 +112,41 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 <text x="258" y="86" class="serif" font-size="2.8" text-anchor="end" font-style="italic">the row you begin in on the Zone</text>
 <g>
   <rect x="14" y="90" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="17" y="97" class="serif" font-size="3.5">Technical</text>
-  <line x1="17" y1="100" x2="55" y2="100" class="hair"/>
-  <text x="17" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
-  <text x="17" y="110.6" class="serif" font-size="3.2">where the work happens.</text>
+  <text x="17" y="98.6" class="serif" font-size="4.8">Technical</text>
+  <line x1="17" y1="101.6" x2="55" y2="101.6" class="hair"/>
+  <text x="17" y="110" class="serif" font-size="4.6">Where the work</text>
+  <text x="17" y="116" class="serif" font-size="4.6">happens.</text>
 
   <g transform="translate(13.5,0)">
   <rect x="50.5" y="90" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="53.5" y="97" class="serif" font-size="3.5">Social</text>
-  <line x1="53.5" y1="100" x2="91.5" y2="100" class="hair"/>
-  <text x="53.5" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
-  <text x="53.5" y="110.6" class="serif" font-size="3.2">where people talk</text>
-  <text x="53.5" y="115.2" class="serif" font-size="3.2">while they work.</text>
+  <text x="53.5" y="98.6" class="serif" font-size="4.8">Social</text>
+  <line x1="53.5" y1="101.6" x2="91.5" y2="101.6" class="hair"/>
+  <text x="53.5" y="110" class="serif" font-size="4.6">Where people talk</text>
+  <text x="53.5" y="116" class="serif" font-size="4.6">while they work.</text>
   </g>
 
   <g transform="translate(27,0)">
   <rect x="87" y="90" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="90" y="97" class="serif" font-size="3.5">Commercial</text>
-  <line x1="90" y1="100" x2="128" y2="100" class="hair"/>
-  <text x="90" y="106" class="serif" font-size="3.2">Your row on the Zone</text>
-  <text x="90" y="110.6" class="serif" font-size="3.2">faces outward, toward</text>
-  <text x="90" y="115.2" class="serif" font-size="3.2">the customer.</text>
+  <text x="90" y="98.6" class="serif" font-size="4.8">Commercial</text>
+  <line x1="90" y1="101.6" x2="128" y2="101.6" class="hair"/>
+  <text x="90" y="110" class="serif" font-size="4.6">Faces outward,</text>
+  <text x="90" y="116" class="serif" font-size="4.6">to the customer.</text>
   </g>
 
   <g transform="translate(40.5,0)">
   <rect x="123.5" y="90" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="126.5" y="97" class="serif" font-size="3.5">Analytical</text>
-  <line x1="126.5" y1="100" x2="164.5" y2="100" class="hair"/>
-  <text x="126.5" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
-  <text x="126.5" y="110.6" class="serif" font-size="3.2">where things get</text>
-  <text x="126.5" y="115.2" class="serif" font-size="3.2">written down.</text>
+  <text x="126.5" y="98.6" class="serif" font-size="4.8">Analytical</text>
+  <line x1="126.5" y1="101.6" x2="164.5" y2="101.6" class="hair"/>
+  <text x="126.5" y="110" class="serif" font-size="4.6">Where things get</text>
+  <text x="126.5" y="116" class="serif" font-size="4.6">written down.</text>
   </g>
 
   <g transform="translate(54,0)">
   <rect x="160" y="90" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="163" y="97" class="serif" font-size="3.5">Organisational</text>
-  <line x1="163" y1="100" x2="201" y2="100" class="hair"/>
-  <text x="163" y="106" class="serif" font-size="3.2">Your row on the Zone is</text>
-  <text x="163" y="110.6" class="serif" font-size="3.2">where the schedule lives.</text>
+  <text x="163" y="98.6" class="serif" font-size="4.8">Organisational</text>
+  <line x1="163" y1="101.6" x2="201" y2="101.6" class="hair"/>
+  <text x="163" y="110" class="serif" font-size="4.6">Where the schedule</text>
+  <text x="163" y="116" class="serif" font-size="4.6">lives.</text>
   </g>
 </g>
 
@@ -158,7 +155,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 <text x="258" y="136" class="serif" font-size="2.8" text-anchor="end" font-style="italic">your Torso is also your Need, from week 2</text>
 <g>
   <rect x="14" y="140" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="17" y="147" class="serif" font-size="3.5">Autonomy</text>
+  <text x="17" y="147" class="serif" font-size="4.8">Autonomy</text>
   <line x1="17" y1="150" x2="55" y2="150" class="hair"/>
   <rect x="16.6" y="153.4" width="18.8" height="3.4" rx=".3" fill="#F7D7A1"/>
   <text x="17" y="156" class="mono" font-size="3">MANAGEMENT:</text>
@@ -169,7 +166,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(13.5,0)">
   <rect x="50.5" y="140" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="53.5" y="147" class="serif" font-size="3.5">Hierarchy</text>
+  <text x="53.5" y="147" class="serif" font-size="4.8">Hierarchy</text>
   <line x1="53.5" y1="150" x2="91.5" y2="150" class="hair"/>
   <rect x="53.1" y="153.4" width="20.6" height="3.4" rx=".3" fill="#C7CFB5"/>
   <text x="53.5" y="156" class="mono" font-size="3">ENVIRONMENT:</text>
@@ -181,7 +178,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(27,0)">
   <rect x="87" y="140" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="90" y="147" class="serif" font-size="3.5">Community</text>
+  <text x="90" y="147" class="serif" font-size="4.8">Community</text>
   <line x1="90" y1="150" x2="128" y2="150" class="hair"/>
   <rect x="89.6" y="153.4" width="11.6" height="3.4" rx=".3" fill="#D3CEDF"/>
   <text x="90" y="156" class="mono" font-size="3">PEOPLE:</text>
@@ -193,7 +190,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(40.5,0)">
   <rect x="123.5" y="140" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="126.5" y="147" class="serif" font-size="3.5">Quality</text>
+  <text x="126.5" y="147" class="serif" font-size="4.8">Quality</text>
   <line x1="126.5" y1="150" x2="164.5" y2="150" class="hair"/>
   <rect x="126.1" y="153.4" width="15.2" height="3.4" rx=".3" fill="#B5C7CF"/>
   <text x="126.5" y="156" class="mono" font-size="3">CUSTOMER:</text>
@@ -205,7 +202,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
   <g transform="translate(54,0)">
   <rect x="160" y="140" width="44" height="36" rx="1.5" class="cut"/>
-  <text x="163" y="147" class="serif" font-size="3.5">Recognition</text>
+  <text x="163" y="147" class="serif" font-size="4.8">Recognition</text>
   <line x1="163" y1="150" x2="201" y2="150" class="hair"/>
   <text x="163" y="156" class="mono" font-size="3">CAPITAL GAINS:</text>
   <text x="163" y="160.6" class="mono" font-size="3">NAME A TEAMMATE</text>

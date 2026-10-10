@@ -18,7 +18,7 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
   .hair  { stroke:#4A5259; stroke-width:.25; fill:none; opacity:.7; }
   .rl    { font-size:3.3px; letter-spacing:1.2px; }
   .ic    { fill:#F2EDE0; stroke:#2A2620; stroke-width:.45; }
-  .pip   { fill:#2A2620; stroke:none; }
+  .pip   { fill:#FFFFFF; stroke:none; }
 </style>
 
 <defs>
@@ -49,8 +49,8 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
   <text x="17" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="47" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Autonomy</text>
   <line x1="17" y1="50" x2="55" y2="50" class="hair"/>
   <rect x="17" y="52" width="38" height="12.7" rx=".4" fill="#F7D7A1"/>
-  <text x="36" y="55" class="serif" font-size="3.2" text-anchor="middle">No Event landed on</text>
-  <text x="36" y="59.2" class="serif" font-size="3.2" text-anchor="middle">the team, or it has</text>
+  <text x="36" y="55" class="serif" font-size="3.2" text-anchor="middle">At most 1 Event landed</text>
+  <text x="36" y="59.2" class="serif" font-size="3.2" text-anchor="middle">on the team, or it has</text>
   <text x="36" y="63.4" class="serif" font-size="3.2" text-anchor="middle">Shared Repertoire:</text>
   <rect x="24.5" y="66" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="36" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>

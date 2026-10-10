@@ -147,7 +147,7 @@ bands, highlights) and, where it's read as text, a darker ink:
 |---|---|---|---|
 | Trust | `#D3CEDF` Lavender | *(no separate ink - text is pure black per §3)* | The Ledger's Trust band, the "+1/Lose 1 Trust" highlights on cards - seam-32 keeps the Oxblood ink until re-derived from Lavender |
 | Capital | `#D9D3C4` Bone | `#6E6249` Bone Ink | Personal standing/recognition - the "+2 Capital" highlight, the Capital box on the person board; the seam-12 placement line |
-| People | `#F5CE89` Apricot Cream | `#9C7A32` Apricot Cream Ink | Event category header (`cat-ppl`); also board 3's Standing slot (shared colour, different concept); the seam-31 placement line |
+| People | `#F5CE89` Apricot Cream | `#9C7A32` Apricot Cream Ink | Event category header (`cat-ppl`); also board 3's old Standing slot (now Capital Bone `#D9D3C4`, printed as a row on THE TEAM); the seam-31 placement line |
 | Environment | `#B8C1A1` Dry Sage | `#6E7A54` Dry Sage Ink | Event category header (`cat-env`); the seam-43 placement line |
 | Adaptability | `#B5C7CF` Pale Sky | `#3F5B66` Pale Sky Ink | The team's shared token pool - the Ledger's 4th band, the "+1 Adaptability" highlight/keyword; the seam-41 placement line |
 
@@ -162,8 +162,8 @@ No pure black (`#000`), no pure white (`#FFF`), no gradients, no drop shadows, n
 > **field behind text** will run dark and murky and take the Oak Gall contrast with it. Every
 > named colour above is for **outlines, icons, small fills, and text itself only.** Any
 > background sitting behind text must be a **pale tint of that hue at roughly 90%+ lightness**
-> - the existing card/board tints (`#D3CEDF` Lavender/Trust, `#DFF0DB` Capability, `#DDE1E2`
-> Shared Practice, `#FAECBE` Highlighter, `#DCE7F2` Ledger Blue, `#EFE4D3` Timber, `#E8D4B8`
+> - the existing card/board tints (`#D3CEDF` Lavender/Trust, `#C7CFB5` Capability, `#F7D7A1`
+> Shared Practice, `#B5C7CF` Adaptability, `#EFE4D3` Timber, `#E8D4B8`
 > habitus) are the calibrated examples; derive new ones the same way rather than lightening
 > by eye.
 

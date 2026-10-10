@@ -32,7 +32,7 @@ game starts.</desc>
 <text x="24" y="226" class="s" font-size="8">Nothing else yet.</text>
 
 <text x="24" y="246" class="m q" font-size="6" letter-spacing="2.5">CARDS IN PLAY</text>
-<text x="24" y="260" class="m" font-size="7">PLAN · WORK · COORDINATE · CELEBRATE</text>
+<text x="24" y="260" class="m" font-size="7">WORK · COORDINATE · CELEBRATE</text>
 
 <line x1="212" y1="180" x2="212" y2="290" class="h" stroke-width=".4"/>
 
@@ -43,7 +43,7 @@ game starts.</desc>
 <text x="273" y="281" class="s q" font-size="3.6" text-anchor="middle" font-style="italic">the rest wait here</text>
 <rect x="328" y="200" width="65" height="90" rx="2" class="h" stroke-width=".5" stroke-dasharray="3 2"/>
 <text x="360.5" y="214" class="m q" font-size="5" text-anchor="middle">ACTION CARDS</text>
-<text x="360.5" y="276" class="s q" font-size="3.6" text-anchor="middle" font-style="italic">this week's four cards,</text>
+<text x="360.5" y="276" class="s q" font-size="3.6" text-anchor="middle" font-style="italic">this week's five cards,</text>
 <text x="360.5" y="281" class="s q" font-size="3.6" text-anchor="middle" font-style="italic">the rest wait for later</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->

@@ -1,8 +1,63 @@
-# Rulebook - High-Performance Team (v0.32 draft)
+# Rulebook - High-Performance Team (v0.33 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
+
+> ## TEAM REFLEXIVITY: NOT A POOL FLIP ANY MORE, BACK AS A REFLECT HABIT (2026-10-10)
+> Adaptability is a currency, so the old flip ("the pool holds 4") and its row on THE TEAM are gone.
+> **Team Reflexivity returns, earned by Reflect** (§18): a Reflect that finds real evidence may bank
+> its token in one of three HABIT wells beside the pool on SHIT HAPPENS - **objectives, strategy,
+> process**, West's three objects of reflection - and **three filled wells turn the coin over for
+> good**. There are five Habits again. The Customer Event cards and the Quality Need
+> tile that print it are correct as printed. The old rules and the other ways to bring it back are
+> kept in [../extensions/team-reflexivity/README.md](../extensions/team-reflexivity/README.md).
+
+> **v0.33 - two Management Events about power** (§6.1, §11). **EVERYONE IS EQUAL** (cost 2): no
+> Hero, no Authorized Voice and no Capital gained this week - with nobody to speak for the team,
+> nobody does. **THE WOLF** is the first Event that **cannot be cancelled**: not by tokens, a
+> Hero or Authorized Voice. Management goes after the standing of the character with the most
+> Capital: **they stay on the team, but their Capital is erased** unless the team **steps up** to
+> protect them - that character gains +1 Capital, at the price of **every
+> character losing 1 Motivation**. Stepping up is
+> not a Hero play (no Hero tile, no Legs trigger, no 3-Motivation gate). The deck is now 25
+> cards (24 can be bought out; average cost 1.8). Drawn from Nietzsche (the shepherd who is told
+> he is a sheep, so that nobody guards the flock) and Foucault's pastoral power; see
+> `docs/theoretical-sources.md`. Never played. **Also in v0.33, no rule change:** the Zone tiles
+> are printed in the Ledger colours of what they pay (one-person face Capability, stacked face
+> Shared Practice, §8), and the printed explanations of what the Ledger reads off the Zone
+> (leaflet, THE DEVELOPMENT, the tile sheet, the Teach and Learn cards) use the §8 wording. Also
+> no rule change: Trust ≤ 1 stops only **Teach** (never Learn), and Teach is listed among the cards
+> that open in week 3 (§3.0); Plan is not a week-1 card on any printed board.
+>
+> **Rulebook brought in line with the printed cards and boards (2026-10-10).** The cards and boards
+> are the authority where they differ. **(12) Learn is done by the whole team, not one named
+> character:** every character marks a free square beside one they cover, in their own row, so one
+> Learn card can add up to five new squares (four Learns can cover the whole Zone). This replaces
+> v0.32 (4), "the team names the learner". Every Activity card is the team's; only **Demo** hands
+> a gain (+1 Capital) to one character. **(13) The Autonomy Need is "at most 1 Event landed on
+> the team"** (was "no Event landed"): with two Events a week from week 2, simulation showed Autonomy
+> characters quit at 1.6 to 1.9 times the average; at most 1 brings that to 1.25 to 1.4.
+> **(1)** The fourth Base option is **Dependable** (spend 3
+> Motivation: +1 Trust and +1 Capital), not By The Book (§5.2). **(2)** **Withdraw** reads the week,
+> not Capability: +1 Motivation in weeks 1-3, -1 from week 4 (§5.2). **(3)** **Recognition**'s Need pays
+> +1 Motivation like every other Need; it has no Habit (§5). **(4)** **Unclear** is a base-game
+> flag again, as printed on UNCLEAR REQUIREMENT, THE DATE MOVES UP, Plan and Align (§7, §10). **(5)**
+> §11 lists the 25 printed Event cards, with the category **People** (not Team). **(6)** The
+> **Hero** panel opens in week 3, as printed on the person board (§3.0, §5.1). **(7)** Step 4 of the
+> week is **THE REST HAPPENS**, as printed on the person board. **(8)** The three Ledger tracks
+> **start at 1**, not 2, so the game opens with Teach, the first Work card of the week and Plan
+> doing nothing (§3.3, §4). The low band is now one switched-off Activity per track, as printed on
+> the Team board, instead of -1 on Work. Events can take a track to 0. A neutral Team Score is 3
+> lower; the 88 threshold (§16) stays, and the §3.2 balance figures are **not yet recalibrated**.
+> **(9)** The Adaptability pool **starts at 3 tokens**, not 2 (§3.3, §4). **(10)** Adaptability is a
+> currency only: no row on THE TEAM and no pool flip. **Team Reflexivity** is earned by Reflect
+> instead: one Reflect token banked in each of three HABIT wells (objectives, strategy, process) and one
+> named change, then the coin turns over (§18). **Standing** is
+> a row printed on THE TEAM from the start (no separate strip). **(11)** A Habit takes 1 off with a
+> minimum of **0**: an Event that costs 1 is **free** for a team that holds the matching Habit (v0.22
+> had made the minimum 1). Cost 2 and 3 Events cost 1 and 2. The eight cost-1 cards now read
+> "SO IT IS FREE".
 
 > **v0.32 - the Zone is tracked twice** (§5.1, §7, §8, §18.1). Tracking squares as tiles
 > on one shared 5x5 grid, five people at once, was close to impossible at the table (playtest
@@ -328,10 +383,10 @@ the habitus you built at the start.
 - Week board (5 weekday slots, Monday - Friday - where the week's five Activity cards are laid
   before Events are drawn, see §6.1)
 - Week counter (1-7 - one turn per week)
-- Event Deck (23 cards; 2 drawn per week from week 2)
+- Event Deck (25 cards; 2 drawn per week from week 2)
 - Motivation tokens (per character)
 - Knowledge/Skill markers (individual and shared)
-- Ledger tracks: Trust, Capability, Shared Practice (scale 0-5), plus Standing (§5.1)
+- Ledger tracks: Trust, Capability, Shared Practice (scale 0-5), plus the Standing row (§5.1), all on THE TEAM
 - Adaptability pool (a shared pile of adapt tokens on the ADAPT panel of SHIT HAPPENS, board 2 - cap 6, §4)
 
 ## 3. Setup
@@ -343,8 +398,8 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 | From | What opens | Cards in play |
 |---|---|---|
 | **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation. | Work · Coordinate · Celebrate |
-| **Week 2** | **The team, and reality.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing (plate 3b) and the Habits - with each character's Capital, the shared Adaptability pool, **each character's Need** (the tile already on your board) and Shit Happens and Adapt, together. The pool holds **2 tokens** from the first day it exists. | + nothing new |
-| **Week 3** | **Board 4b.** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - and the Flex and Overtime part of the Specimen card. | + Learn · Align · Reflect · Workshop · Plan · Demo |
+| **Week 2** | **The team, and reality.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital, the shared Adaptability pool, **each character's Need** (the tile already on your board) and Shit Happens and Adapt, together. The pool holds **3 tokens** from the first day it exists. | + nothing new |
+| **Week 3** | **THE DEVELOPMENT (board 4b).** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - the Flex and Overtime part of the Specimen card, and the **Hero** panel (§5.1). | + Learn · Teach · Align · Reflect · Workshop · Plan · Demo |
 | **Week 4** | **Nothing opens.** A deliberate breath - the first week the table just plays everything it has met. | + nothing new |
 | **Week 5** | **Combos** (§18.1). Two named triggers landing in the same week now pay a small bonus on top of what they already did alone. | + nothing new |
 
@@ -379,9 +434,9 @@ when you uncover each panel, run its catch-up:
 
 > **Week 2 - the team and its standing.** Move Trust up **1 for every two Coordinate cards**
 > the team has played. Capital is not handed out here: **everyone's Capital starts at 0 and is
-> earned only through play** (§5.1). Then reveal 3b: nobody is Standing yet (all tied at 0), and
+> earned only through play** (§5.1). Then nobody is Standing yet (the Standing coin sits on 0, all tied), and
 > whoever first holds the most Capital becomes Standing (§5.1). The three tracks start where they always were, at
-> 2, and the Adaptability pool starts with 2 tokens. From this week's close, every character's
+> **1**, and the Adaptability pool starts with 3 tokens. From this week's close, every character's
 > Need is read (§5).
 >
 > **Week 3 - how far you reach.** No catch-up to run - the Zone lift and the Flex/Overtime
@@ -464,12 +519,14 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
 
    These numbers are derived (balance check, 2026-10-07). Shit Happens opens in week 2 (§3.0),
    so the team draws **12 Events**; uncancelled they cost about 9 days of removed or wasted
-   cards and about 3 Work of rework. At a neutral Ledger a Work card makes **1** Work, so 18
+   cards and about 3 Work of rework. At a neutral Ledger (all three tracks at 2) a Work card makes **1** Work, so 18
    base Work plus ~3 rework needs about **21 Work days**, against 35 minus ~9 Event days minus
    4-5 Celebrate days = about 21-22. A team that invests nothing has roughly one day to spare;
    an invested one (Capability 4 and Shared Practice 4, three Work cards a week) makes ~2.7 per
    card and needs only 8-12. Investing is how the project gets finished while the team is kept
-   alive, which is the point.
+   alive, which is the point. **Not re-derived for a Ledger that starts at 1** (§3.3): until
+   Capability reaches 2 the first Work card each week does nothing, which costs about one Work
+   card a week.
 
    Only **5 of the 18 Work (28%)** sits behind a dependency gate. Gated features unlock once
    their prerequisite (B or C) is banked (§3.2), so front-loading the Work is what keeps the
@@ -478,8 +535,9 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
 
 ### 3.3 Starting values
 1. Set every character's starting **Motivation to 3** (scale 0-5).
-2. Set the three **Ledger** tracks (Trust, Capability, Shared Practice) to a neutral starting
-   value (v0.1: 2 out of 5 - tune this in playtest), and put **2 tokens** in the Adaptability
+2. Set the three **Ledger** tracks (Trust, Capability, Shared Practice) to **1** (scale 0-5):
+   the low band, where Teach, the first Work card of the week and Plan do nothing until the team
+   earns its way out (§4). Put **3 tokens** in the Adaptability
    pool.
 
 ## 4. Team State
@@ -505,17 +563,18 @@ Event happens (the Adaptability pool has none - it only does something when you 
 
 | Track | At 4-5 | At 0-1 |
 |---|---|---|
-| **Trust** | Once per week, cancel one Event effect completely. | **Learn does nothing.** Knowledge won't move through a team that doesn't trust each other. |
-| **Capability** | Work produces **+1**. | Work produces **−1** (minimum 0). |
-| **Shared Practice** | The **second and every later Work card** in a week produces **+1 extra**. The team has a routine for the thing it does most. | The **second and every later Work card** in a week produces **1 less** (minimum 0). No routines - every one is reinvented from scratch. |
+| **Trust** | Once per week, cancel one Event effect completely. | **Teach does nothing.** A square will not be handed on in a team that doesn't trust each other. |
+| **Capability** | Work produces **+1**. | **The first Work card each week does nothing.** |
+| **Shared Practice** | The **second and every later Work card** in a week produces **+1 extra**. The team has a routine for the thing it does most. | **Plan does nothing.** No common routines, so planning together doesn't take. |
 
 Capability's bonus stacks with everything else on a Work card - there's no ceiling any more
 (§7). A well-invested team is genuinely meant to run a different economy, not a marginally
 faster one.
 
-**Shared Practice counts Work cards, and only Work cards.** Lay three Work cards in a week and
-the *first* is always plain: the 2nd and 3rd are the ones the track touches. At 4-5 that's
-**+1 each**; at 0-1 it's **−1 each**, minimum 0. Everything in between does nothing.
+**At the high end, Shared Practice counts Work cards, and only Work cards.** Lay three Work
+cards in a week and the *first* is always plain: the 2nd and 3rd are the ones the track
+touches, at 4-5 **+1 each**. At 0-1 it does something else: it switches **Plan** off.
+Everything in between does nothing.
 
 Only Work, for an honest reason: the other tracks move **at most one step per week** (§18), so
 a second Coordinate or a second Reflect in the same week already achieves nothing. A general
@@ -527,14 +586,20 @@ buys nothing because reflexivity isn't about how many times a team looks at itse
 whether it paused and adjusted at all. One genuine Reflect a week is the whole mechanism;
 playing it twice is volume, not insight.
 
-The high end is still bounded by the weekly output cap (§7), so a routine makes the team faster
-without letting it dump the whole week into one push - but because that cap now rises with each
-Habit, Shared Practice actually gets paid instead of landing on a ceiling. And note the low
-end is a **penalty, not a prohibition** - a team with no shared routines can still repeat
-itself, it just wastes part of the effort every time, which is the actual failure mode.
+There is no weekly output cap any more (§7), so a routine simply makes the team faster. The low
+end switches off **one thing per track** - Teach, the first Work card, Plan - a **prohibition
+of one Activity, not of the game**: the team can still play everything else and climb out.
+
+**The Ledger starts in the low band.** All three tracks start at **1** (§3.3), so Teach, the
+first Work card of the week and Plan all do nothing until the team earns its way out: Trust by
+Coordinate, Shared Practice by Reflect and by stacking a Zone square, Capability by filling a
+Zone line. Events can push a track further down, to **0** (THE TEAM SPLITS and THE AUDIT:
+Trust; REORGANISED: Shared Practice; SHAKY GROUND: Capability). A track never goes below 0. At
+0 the effect is the same as at 1, but the track is two climbs from leaving the low band
+instead of one, and it is one Team Score lower (§16).
 
 **Adaptability is a shared currency, not a track.** It is a pile of **adapt tokens** -
-one pile for the whole team, kept on the ADAPT panel of SHIT HAPPENS, **cap 6**, starting with **2**. Nobody owns it and nothing
+one pile for the whole team, kept on the ADAPT panel of SHIT HAPPENS, **cap 6**, starting with **3**. Nobody owns it and nothing
 refreshes it: what you earn stays in the pile until the team spends it, and what the team
 spends is gone. Phase 3 of the week (§6.1) is where it is spent. Nothing is spent by default,
 so a team that never needs to react simply keeps what it has - and what it has left at the end
@@ -543,6 +608,14 @@ of the game still counts (§16).
 What the pile does at a glance: **0-1 tokens** - you play the week you laid, whatever lands on
 it. **4 or more tokens** - you can cancel most Events, even the worst in the deck.
 
+**Why it starts at 3.** The pool is the only defence in the first Event weeks: Align, Workshop
+and Reflect open in week 3 and their tokens arrive at close, and the Hero opens in week 3 too.
+Four Events fall in weeks 2-3, about 7 tokens to cancel them all. 3 buys roughly one and a
+half of them: a real choice in week 2 (cancel, or keep the tokens), without covering the lot.
+A higher start would let a team ignore Align and Workshop until late, and 4 tokens would also
+put the Challenge Legs strength (4 or more tokens) in reach on day one. At 3 the pool is a
+cushion, not a plan.
+
 #### How the pool fills
 Three Activities add to it. Unlike the Ledger tracks there is no one-step-a-week limit - it's a
 currency, so three Aligns are three tokens - but tokens only arrive **when the week closes**
@@ -550,7 +623,7 @@ currency, so three Aligns are three tokens - but tokens only arrive **when the w
 
 | Play | Adds |
 |---|---|
-| **Reflect** | 1 token, if Trust ≥ 3 |
+| **Reflect** | 1 token, if Trust ≥ 3 (it may go to a Team Reflexivity well instead, §18) |
 | **Align** | 1 token, unconditionally |
 | **Workshop** | 1 token, unconditionally |
 
@@ -561,7 +634,7 @@ be able to react has to start paying in week 2, not week 6.
 That's the trap the pool exists to set: spending a day on Reflect costs you Work now, against
 a week that hasn't gone wrong yet. And because it is a currency and not a track, there is a
 second decision after the first - when the pile is finally there, *spend it* on a bad week, or
-*keep it* for the Team Reflexivity Habit and the end score?
+*keep it* for the next week and the end score?
 
 This is where §4's warning stops being prose: **Shared Practice pays you for repeating
 yourself, and Adaptability pays you for not having to.** A team that pushes Shared Practice to
@@ -627,20 +700,20 @@ and one it doesn't feel at all:
 
 **Recognition is the fifth Torso and sits outside this table on purpose** - no Event category
 touches it, and none is immune to it either. It's the one that's purely about being *seen*,
-not about how the four categories land, so it pays off differently: **+1 Capital whenever that
-character's own Need is met** (§5.1), rather than off a Habit vindicating it.
+not about how the four categories land, so it has no Habit to be vindicated by: its Need is
+only ever won, week by week (**+1 Motivation**, as on its tile), and its own distinctive
+payoff is the +1 Motivation it hands the teammate who witnessed its Capital gain (§5.1).
 
-**The −1 is not conditional on the card costing Motivation.** Eight Events in the deck now take
-Motivation from everybody (widened from four after a balance pass - see the extension's
-version note); the other ten cost Work, or days, or Trust. But an Autonomy
+**The −1 is not conditional on the card costing Motivation.** Nine Events in the deck take
+Motivation from everybody; the rest cost Work, or days, or Trust, or a track (§11). But an Autonomy
 character loses a point of Motivation *every time a Management Event lands*, whatever else the
 card does - because that category of thing wears them down personally. That is the whole claim:
 the same week is more tiring for some people than others, and not because the week was worse.
 
 The **immunity** column does something on every card that takes Motivation from everybody, and
 the Event cards print it there: STATUS MEETING, BUDGET CUT, REORGANISED, A FLAT WEEK, EQUIPMENT
-OUTAGE, THE TEAM SPLITS, EVERYTHING AT ONCE and THE AUDIT each show the Torso that loses one
-extra and the Torso that is immune. LEADS FROM BEHIND (no Torso reaction at all) is the exception. On every other card the immunity line would be an
+OUTAGE, THE TEAM SPLITS, EVERYTHING AT ONCE, THE AUDIT and EVERYONE IS EQUAL each show the Torso
+that loses one extra and the Torso that is immune. LEADS FROM BEHIND and THE WOLF (no Torso reaction at all) are the exceptions. On every other card the immunity line would be an
 exemption from a penalty that was never coming, so **the Event cards only print the immunity
 line where it does something.** If a card shows one Torso line, that category costs somebody a
 point and nobody is protected from anything.
@@ -676,7 +749,7 @@ your board from the start - the game just waits until week 2 to turn it over.
 
 | Torso (= Need) | Satisfied when, during that week... |
 |---|---|
-| Autonomy | **No Event landed on the team** this week - every Event drawn was cancelled in Adapt, or none was drawn - **or the team has Shared Repertoire** (§18). |
+| Autonomy | **At most 1 Event landed on the team** this week - the other was cancelled in Adapt, or none was drawn - **or the team has Shared Repertoire** (§18). |
 | Hierarchy | **The team played a Teach card**, **or the team has Who Knows What** (§18). |
 | Community | The team spent a Coordinate, Reflect or Celebrate, **or the team has Psychological Safety** (§18). |
 | Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter), **or the team has Team Reflexivity** (§18): **+1**. **Neither: lose 3 Motivation instead.** |
@@ -693,9 +766,9 @@ by week. For a Quality character that also means the -3 never applies. Recogniti
 Habit; it is the one Need that is only ever won, never inherited.
 
 > **Autonomy is the one the team can take away.** Nobody has to override you for you to lose
-> it: any week an Event lands, the plan the team laid on Monday did not survive contact with
+> it: any week both Events land, the plan the team laid on Monday did not survive contact with
 > the week, and a character who needs to be left alone to get on with it goes without - unless
-> the team has made its way of working so routine (Shared Repertoire) that it runs itself. The
+> the team cancelled one of them, or has made its way of working so routine (Shared Repertoire) that it runs itself. The
 > tension is deliberate - Adaptability is what buys a calm week, Shared Repertoire is what buys
 > a calm team.
 
@@ -752,7 +825,7 @@ a shared −1 Trust instead. Cut from the base game, see that pack's README for 
 > trade-off is the whole event, and it only exists once teaching pays Capital.
 
 #### Standing doesn't update itself
-**Standing** (the Ledger row that joins in week 2, §3.0) is not its own resource - it just
+**Standing** (the fourth row on THE TEAM, printed on the board and read from week 2, §3.0) is not its own resource - it just
 names whichever character currently holds the highest Capital, and it is **not live**: nobody
 re-checks it every time a Capital box changes. It gets re-read at two points only - the week 2
 reveal (its first reading), and whenever an Event explicitly says to (REORGANISED is the only
@@ -772,6 +845,9 @@ Habitus shows up in four places, and between them they cover everything a charac
 | **Legs** | **The Hero move** - every part is one of your Pressure Response and Events name a Pressure Response you alone can cancel |
 
 #### The Hero move
+The Hero panel on the person board opens in **week 3** (§3.0); the Events of week 2 are answered
+with adapt tokens alone.
+
 Every Event card names one of the five **Pressure Response** options (Take Charge / Analyze /
 Support / Challenge / Withdraw). A character whose **Legs** is that Pressure Response may, **once per game**, spend their
 **Hero** to **cancel that Event outright** - no Adaptability paid, nothing resolved. They gain
@@ -793,9 +869,11 @@ land.
 It also gives the Hero's own +1 Motivation a second job: hand it to the character sitting on
 2, and you have just made *them* able to step up later.
 
-All eighteen Event cards carry a Hero route except three, split evenly across the five Legs
-options (3 cards each), so **most characters can answer exactly 3 Events, whatever Legs they
-were dealt**. The three that name no Pressure Response at all save nobody.
+All Event cards carry a Hero route except a handful (FALSE START, THE AUDIT, THE DATE MOVES UP,
+EVERYONE IS EQUAL and THE WOLF), and the rest are split across the five Legs options, so **most
+characters can answer several Events, whatever Legs they were dealt**. The cards that name no
+Pressure Response at all save nobody - and **THE WOLF is answered by stepping up, never by a
+Hero** (§11).
 
 This is the sharpest version of the whole thesis. Your habitus is not better or worse than
 anyone else's; it is *tuned to a situation you did not choose*. When the field finally asks the
@@ -828,7 +906,7 @@ is this team.
 > The same test replaces every other "Capital ≥ 3" in the game, including the Take Charge
 > pattern above.
 
-At setup everyone sits at 2, which *is* the average - so **everyone qualifies and nothing is
+At setup everyone sits at 0, which *is* the average - so **everyone qualifies and nothing is
 locked**. But the moment one character pulls ahead, they raise the average and start shutting
 the others out. Nobody wrote that rule; it falls out of the threshold being relative.
 
@@ -861,11 +939,12 @@ Other activities that might reasonably need Capital (e.g. representing the team 
 management-facing meeting): to be decided - playtest and tune.
 
 ### 5.2 Base - your Motivation, not your Work
-Your Base never touches Work, a feature, or any Team State track. It answers a narrower,
+Your Base never touches Work or a feature, and (with one exception, Dependable) never a Team State
+track. It answers a narrower,
 personal question: what costs *you* energy, and what gives it back? Like every other habitus
 part it pairs a strength with a tendency (see the design rule in
 [../docs/habitus-model.md](../docs/habitus-model.md)) - but both halves move only your own
-**Motivation** (§5), never a shared track, never a feature, and never anyone else's day. That's
+**Motivation** (§5), never a feature, and never anyone else's day. That's
 the point: a team can dodge a bad *feature* fit by working in parallel, but it can't dodge one
 character's own Motivation for them.
 
@@ -874,7 +953,7 @@ character's own Motivation for them.
 | **Bookish** | **+1 Motivation** when you play Learn | **−1 Motivation** when you play Teach |
 | **Hands-On** | **+1 Motivation** when you play Teach | **−1 Motivation** when you play Learn |
 | **Sheltered** | The weekly grind (§5) doesn't affect your Motivation | **You never rise above 3 Motivation** - insulated from the highs as much as the lows |
-| **Strict** (now **By The Book**) | Ignore **one** Event's Motivation loss, each week (your choice which, of the two drawn) | **The other** costs you an *extra* **−1 Motivation** |
+| **Dependable** | **TAKE ONE FOR THE TEAM**, printed on the card: spend **3 Motivation** and the team gets **+1 Trust** and you gain **+1 Capital** (Trust still rises at most once a week, §7) | **The price is yours alone:** 3 Motivation, against 1 for the same action when nobody holds this card |
 | **Competitive** | **Your Hero is reusable** - every time an Event names your Pressure Response, you may play it again (still needs 3 Motivation, every time) | **ANOTHER PLAYS HERO:** whenever a *different* character plays their Hero, you lose **1 Motivation** - you needed that win |
 
 Each **Legs/Pressure Response** pairs the same way, keyed to whichever Team State track (§4)
@@ -887,13 +966,15 @@ reads as overreach for **−1 Motivation**:
 | **Analyze** | Capability | +1 Motivation - the question was worth asking | −1 Motivation - analysis paralysis |
 | **Support** | Shared Practice | +1 Motivation - people leave the room feeling better | −1 Motivation - it reads as hollow |
 | **Challenge** | Adaptability pool | +1 Motivation - the thing everyone was quietly worried about | −1 Motivation - it reads as obstruction |
-| **Withdraw** | Capability | +1 Motivation - you'd rather be good at it than explain how | −1 Motivation - it reads as unavailable |
+| **Withdraw** | The week, not a track | **+1 Motivation in weeks 1-3** - you'd rather be good at it than explain how | **−1 Motivation from week 4** - the field has moved on and the same instinct reads as unavailable |
 
 For **Challenge** the "track" is the Adaptability pool: strength at **4 or more tokens**,
-tendency at **1 or none**.
+tendency at **1 or none**. **Withdraw** reads the week number instead of a track: it pays early
+and costs late (Bourdieu's hysteresis - a disposition that outlives the field that rewarded it).
 
-All five Base options are personal and apply only to your own Motivation pool. None of them
-ever touch Work, a feature, or a Team State track directly - which is also why none of them
+All five Base options are personal and apply only to your own Motivation pool, **except that
+Dependable also moves Trust and your own Capital**. None of them
+ever touch Work or a feature - which is also why none of them
 need a Focus, a target feature, or any restriction on who works what: there's nothing left to
 route around.
 
@@ -969,6 +1050,10 @@ Two things cancel an Event **without costing Adaptability at all**:
 - a character's **Hero** (§5.1), if the Event names their Pressure Response - once per game, needing 3 Motivation (a Competitive character may do it every time);
 - **Authorized Voice** (§18), once a week, if the team has it.
 
+**One Event cannot be cancelled at all: THE WOLF** (§11). It prints no ADAPT number and no HERO
+line, and tokens, a Hero and Authorized Voice all do nothing against it. The team answers it
+at step 4 by deciding whether to step up.
+
 **Worked example.** The pool holds **3 tokens**. You draw EQUIPMENT OUTAGE (cost 2) and A FLAT
 WEEK (cost 1). You already hold **Who Knows What**, which discounts Environment Events, so
 the Outage costs **1**, not 2. Now you choose:
@@ -994,8 +1079,8 @@ unit (no repeated "ADAPT" label, since the box header already says it):
 **The third line, HABIT, changes the price - and the card tells you what to.** Each Event
 names the Habit matching its category. If the team has acquired it (§18), the card's own HABIT
 line states the result: a card costing 2 reads *so it costs 1 instead*. **A Habit always
-costs 1 less, minimum 1** - it never fully removes the need to spend Adaptability, and it
-cannot lower a cost-1 card (that card reads *so it still costs 1*). No
+takes 1 off, minimum 0** - a cost-1 Event is **free** for a team that holds the matching Habit
+(that card reads *so it is free*), and costs 2 and 3 become 1 and 2. No
 one has to work out which, and neither board carries the rule: it is printed on the card in
 front of you.
 
@@ -1004,8 +1089,8 @@ about one lost day, or a Motivation hit (BUDGET CUT, UNCLEAR REQUIREMENT, PRIORI
 START, A FLAT WEEK, THE BIKESHED, LEADS FROM BEHIND, ALWAYS REACTING). **2** - a real hit: a lost
 card plus something else, or rework (STATUS MEETING, NEGATIVE FEEDBACK, SCOPE CREEP, KNOWLEDGE
 HOARDING, BURNOUT WARNING, EQUIPMENT OUTAGE, MORE HANDS, OLD FOUNDATIONS, THE TEAM SPLITS,
-REORGANISED, THE AUDIT). **3** - lasting or whole-week damage (EVERYTHING AT ONCE, THE DATE MOVES
-UP, THE DASHBOARD, SHAKY GROUND). A token is a day of Align or Workshop, so a cost-1 Event is
+REORGANISED, THE AUDIT, EVERYONE IS EQUAL). **3** - lasting or whole-week damage (EVERYTHING AT ONCE, THE DATE MOVES
+UP, THE DASHBOARD, SHAKY GROUND). **THE WOLF** has no cost: it cannot be bought out. A token is a day of Align or Workshop, so a cost-1 Event is
 worth cancelling, a cost-3 one is worth planning for.
 
 | Category | Habit that discounts it | Grown on |
@@ -1013,7 +1098,7 @@ worth cancelling, a cost-3 one is worth planning for.
 | **People** | Psychological Safety | Trust |
 | **Environment** | Who Knows What | Capability |
 | **Management** | Shared Repertoire | Shared Practice |
-| **Customer** | Team Reflexivity | Adaptability |
+| **Customer** | Team Reflexivity | Reflect (banked tokens) |
 | *Any* | **Authorized Voice** - cancel one Event a week outright | Standing |
 
 This is the difference between a team that copes and a team that has changed. Adapt is
@@ -1033,7 +1118,7 @@ days of a team's time. They are not a sequencing puzzle.
    anything it unlocks, and pay Capital to whoever worked on it.
 2. **Walk the Ledger** coins, at most one step each, and flip any that reached its ring (§18).
    **Add this week's adapt tokens** to the pool (Align, Workshop, and Reflect if Trust
-   ≥ 3 - cap 6), then flip **Team Reflexivity** if the pool now holds 4 or more.
+   ≥ 3 - cap 6; a Reflect token may go to the Team Reflexivity lane instead, §18).
 
 **Last, count Motivation (step 7, the grind).** It is its own step, after the Ledger, and it is
 done **as a single net number per character:** −1 (the weekly grind), ±1 per matching Event
@@ -1061,7 +1146,7 @@ nobody has to ask. Tick it off aloud.
 2. **SHIT HAPPENS** - draw 2 Events. Read them out. Nothing resolves.
 3. **ADAPT** - cancel Events: pay an Event's Adaptability cost in adapt tokens, or play a Hero.
    Hero (needs 3 Motivation) and Authorized Voice are free of tokens.
-4. **SURVIVING EVENTS HAPPEN** - resolve every Event nobody cancelled.
+4. **THE REST HAPPENS** - resolve every Event nobody cancelled.
 5. **THE WEEK RUNS** - resolve the five cards in any order. They are the team's cards: no
    card belongs to one person.
 6. **CLOSE** - bank features → walk the Ledger and add adapt tokens.
@@ -1080,13 +1165,13 @@ character to receive it.
 | Activity | Exact effect |
 |---|---|
 | **Work** | **+1** to one feature's Work counter (§10). Modified by Capability (§4). **Minimum 0.** Can't target a feature whose Dependency is unbanked. |
-| **Plan** | Choose a feature with clear requirements: **every Work card played on it this week produces +1 extra** (Low: no bonus). **If High complexity, the bonus also applies next week.** |
+| **Plan** | Choose a feature with clear requirements: **every Work card played on it this week produces +1 extra** (Low: no bonus). **If High complexity, the bonus also applies next week.** **Does nothing on an Unclear feature** (§10). |
 | **Coordinate** | **+1 Trust.** |
-| **Align** | +1 Adaptability, unconditionally. |
-| **Learn** | **The team names one character**, who marks a free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers it on the Zone** (put down or flip a tile). No teacher, no Capital - an instrument can be got hold of alone. |
+| **Align** | +1 Adaptability, unconditionally. **Also clears Unclear** from one feature of the team's choice (§10). |
+| **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
 | **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover on their own SPECIMEN, **any row**, immediately **up, down, left or right** of one *the teacher* covers - **then cover each on the Zone**. **Both teachers +1 Capital.** **Does nothing while Trust ≤ 1.** |
-| **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
-| **Reflect** | Needs **Trust ≥ 3**. **+1 Adaptability.** If a feature was banked *or* the team adapted to 2 Events this week, also **+1 Shared Practice**. |
+| **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. **Also clears Unclear** from one feature of the team's choice (§10). |
+| **Reflect** | Needs **Trust ≥ 3**. **+1 Adaptability.** If a feature was banked *or* the team adapted to 2 Events this week, also **+1 Shared Practice**. The team may bank its token in a Team Reflexivity well instead of the pool (§18). |
 | **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
 | **Celebrate** | **+2 Motivation to every character** (cap 5) - **+3 instead if a feature was banked this week.** |
 
@@ -1197,7 +1282,10 @@ has to remember who can do what; the Zone shows at a glance what *the team* can 
 > moment somebody marks their sheet - never scanned for.
 
 **The tile has two faces.** **One-person face:** exactly one character covers this square.
-**Stacked face:** two or more characters cover it. A square nobody covers has no tile.
+**Stacked face:** two or more characters cover it. A square nobody covers has no tile. The faces
+are printed in the Ledger colours of what they feed: the one-person face in **Capability** green
+(a full row or column of tiles pays Capability), the stacked face in **Shared Practice** amber
+(the flip pays Shared Practice).
 
 **Setup.** Each character marks **one** square on their SPECIMEN: where their **Head's** row
 meets their **Item's** column. Use any small counter with two distinct faces - a coloured face for
@@ -1212,7 +1300,8 @@ face up** if two characters started on the same square.
 There are two ways to cover a new square, and neither is a diagonal leap - that's Vygotsky's
 **Zone of Proximal Development** made physical, one step from what you can already do. **Learn**
 (§7) covers a free square **left or right** of one you already cover, in your own row only,
-alone, no teacher needed. The team names who learns. **Teach** (§7) lets **up to two different
+alone, no teacher needed. **Every character learns on the same card**, so one Learn can put up to
+five new tiles on the Zone. **Teach** (§7) lets **up to two different
 characters**, each already covering a square, each let one other character mark a square on their
 own SPECIMEN **up, down, left or right** of one *the teacher* covers - in any row, since a teacher
 can hand someone a square they'd never have reached alone. **Both teachers gain +1 Capital.** One
@@ -1292,9 +1381,12 @@ Each feature has a Work Cost, Complexity, Dependencies, and a running
 **Work counter** starting at 0. A Work card adds to that counter - usually +1;
 Habitus/Capital effects can add more (§5.1), and Capability can add even more (§4).
 
-> **Extension available:** a hidden per-feature **Quality** attribute and an **Unclear**
-> flag were part of this system in early drafts and are now an optional add-on - see
-> `game/extensions/feature-quality-uncertainty/`. The base game below doesn't need either.
+> **Unclear.** UNCLEAR REQUIREMENT flags the unbanked feature with the most Work left, and THE DATE
+> MOVES UP flags every unbanked feature (use the Unclear flag). While a feature is **Unclear**,
+> **Work on it produces 1 less** (minimum 0) and **Plan does nothing on it**. **An Align or a Demo
+> clears it** - each clears one Unclear feature of the team's choice. A hidden per-feature
+> **Quality** attribute and Align's fuller Unclear branch are an optional add-on - see
+> `game/extensions/feature-quality-uncertainty/`.
 
 **Dependencies gate Work.** A feature with an entry in the "Depends on" column (§3.2) can't
 receive Work until its prerequisite feature is placed on the Feature Tower. Work spent on it
@@ -1312,10 +1404,9 @@ wasted just for landing on a feature that already has Work on it this week.
 
 **The consequence isn't a rule, it's an opportunity cost.** Five days is still five days -
 every one spent on Work is a Coordinate, Align, Learn, Reflect or Celebrate that didn't happen.
-A team that never builds **Shared Practice** also never gets its payoff: at 0-1, the **second
-and every later Work card in a week produces 1 less** (§4) - stacking Work without ever having
-built a routine for it genuinely gets worse per card, it just isn't blocked outright. That's
-the brake now: diminishing returns and a stalled Ledger, not a hard ceiling.
+A team that never builds **Shared Practice** also never gets its payoff: at 0-1 **Plan does
+nothing** (§4), and a team that never builds Capability loses its first Work card every week.
+That's the brake now: a stalled Ledger, not a hard ceiling.
 
 **Once a feature's Work counter reaches its Work Cost, the team gets to place that feature's
 block on the Feature Tower** at the end of that week (§6.1). That placement is how
@@ -1347,15 +1438,15 @@ Drawn throughout the project; these represent the unpredictable stuff outside th
 control.
 
 ### Rhythm: two Events per week, drawn *after* the plan is committed
-**Draw 2 Event cards every week, in phase 2 of the weekly turn (§6.1)** - after each character
-has already laid out its five cards, and before any of them resolve. Twelve Events (weeks 2-7)
+**Draw 2 Event cards every week, in phase 2 of the weekly turn (§6.1)** - after the team
+has laid out its five cards, and before any of them resolve. Twelve Events (weeks 2-7)
 across the project.
 
 This timing is the entire point, and it replaces v0.1's hidden-Event-day token. You commit
 the week in ignorance; then reality lands on it. Events can:
 - **take a day off the board** - remove one of the five cards; it never resolves;
-- **invalidate what a card was pointed at** - e.g. the extension-pack UNCLEAR REQUIREMENT
-  Event flags a feature, wasting a Plan card aimed at it this week (`game/extensions/feature-quality-uncertainty/`);
+- **invalidate what a card was pointed at** - e.g. UNCLEAR REQUIREMENT flags a feature Unclear
+  (§10), so a Plan card aimed at it does nothing;
 - **raise a cost you had planned around.**
 
 A team that invested in **Adaptability** (§4) can spend tokens in phase 3 to cancel an Event. A
@@ -1365,13 +1456,55 @@ the price of not having to take what reality throws at you.
 Categories:
 - **Management** - micromanagement, status meetings, reorganisation, new reporting requirements.
 - **Customer** - requirement changes, new priorities, feedback, unclear requirements.
-- **Team** - conflict, burnout, new members, people leaving.
+- **People** - conflict, burnout, new members, people leaving.
 - **Environment** - technical problems, external dependencies, unexpected opportunities, crises.
 
 > **House rule for anyone adding cards:** the rest of the game speaks plainly - see the design
 > guide's three-voice system. **Corporate jargon and buzzwords live only in Management-category
 > Events.** That's the one place the world is allowed to talk like that *at* the team; nowhere
 > else earns it.
+
+### The Event deck - the 25 printed cards
+The printed cards are the authority. "Extra" means the Torso loses 1 more on top of the
+Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed Adaptability cost
+(a Habit takes 1 off, minimum 0, so a cost-1 Event is free, §6.1); Hero is the Pressure Response that cancels it.
+
+| Card | Category | Adapt | Hero | What it does | Torso |
+|---|---|---|---|---|---|
+| STATUS MEETING | Management | 2 | Take Charge | Remove one of the week's five cards. Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
+| BUDGET CUT | Management | 1 | Take Charge | Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
+| REORGANISED | Management | 2 | Withdraw | Everyone −1 Motivation; the team loses 1 Shared Practice. | Autonomy extra, Hierarchy immune |
+| THE AUDIT | Management | 2 | none | One card this week must be a Workshop, or the team loses a card, 1 Trust and 1 Motivation. | Autonomy extra, Hierarchy immune |
+| THE BIKESHED | Management | 1 | Take Charge | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week. | Quality −1 |
+| LEADS FROM BEHIND | Management | 1 | Challenge | Everyone −1 Motivation except whoever has the highest Capital. | none |
+| EVERYONE IS EQUAL | Management | 2 | none | No Hero, no Authorized Voice, no Capital gained this week. Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
+| THE WOLF | Management | cannot be cancelled | none | The Wolf is the boss, the manager. Management targets the shepherd, the character with the most Capital, who stays on the team: the team steps up to shield them, or their Capital is erased (goes to 0) (below). | none |
+| UNCLEAR REQUIREMENT | Customer | 1 | Take Charge | Flag the unbanked feature with the most Work left Unclear (§10). | Quality −1 |
+| NEGATIVE FEEDBACK | Customer | 2 | Analyze | One banked feature loses 2 Work and comes off the tower. A feature that passed a Demo is safe. | Quality −1 |
+| SCOPE CREEP | Customer | 2 | Analyze | The unbanked feature closest to done gains +2 Work Cost. | Quality −1 |
+| PRIORITY CHANGES | Customer | 1 | Analyze | Remove one card this week. | Quality −1 |
+| THE DATE MOVES UP | Customer | 3 | none | Every unbanked feature becomes Unclear (§10). | Quality −1 |
+| THE DASHBOARD | Customer | 3 | Analyze | Work only counts this week on a Low feature; Medium and High Work changes nothing. | Quality −1 |
+| ALWAYS REACTING | Customer | 1 | Challenge | The Adaptability pool loses 1 token. | Quality −1 |
+| KNOWLEDGE HOARDING | People | 2 | Support | Remove all Teach cards this week. | Community −1 |
+| BURNOUT WARNING | People | 2 | Support | Anyone on 1 Motivation leaves next week unless the team plays a Celebrate. | Community −1 |
+| MORE HANDS | People | 2 | Withdraw | The feature with the most Work this week has that Work halved (round down). | none |
+| THE TEAM SPLITS | People | 2 | Challenge | Two characters may not take the same feature; the team loses 1 Trust; everyone −1 Motivation. | Community extra, Quality immune |
+| A FLAT WEEK | People | 1 | Challenge | Everyone −1 Motivation; a Celebrate this week gives only +2, no bonus. | Community extra, Quality immune |
+| EQUIPMENT OUTAGE | Environment | 2 | Support | Remove one Work card. Everyone −1 Motivation. | Hierarchy extra, Autonomy immune |
+| OLD FOUNDATIONS | Environment | 2 | Withdraw | The feature with the most Work already banked gains +2 Work Cost. | Hierarchy −1 |
+| FALSE START | Environment | 1 | none | The first Work card this week produces nothing. | Hierarchy −1 |
+| EVERYTHING AT ONCE | Environment | 3 | Challenge | No feature may take more than 1 Work this week; everyone −1 Motivation. | Hierarchy extra, Autonomy immune |
+| SHAKY GROUND | Environment | 3 | Withdraw | The team loses 1 Capability (the Ledger coin moves down one, permanently). | Hierarchy −1 |
+
+**Counts:** 8 cost 1, 12 cost 2, 4 cost 3, and THE WOLF has no cost (average 1.8 over the 24 that
+can be bought out). 20 cards have a Hero route and 5 do not (FALSE START, THE AUDIT, THE DATE
+MOVES UP, EVERYONE IS EQUAL, THE WOLF). THE BIKESHED is a Management card that hits Quality, as
+printed.
+
+### Draft Event text (superseded - not the printed deck)
+> The two drafts below were written before the deck was printed. **They are not the deck.** The
+> table above is. Only EVERYONE IS EQUAL and THE WOLF in the second draft are current.
 
 ### Example event cards
 > **ANOTHER STATUS MEETING** - remove one of this week's five cards. Everyone: −1
@@ -1398,7 +1531,7 @@ Categories:
 > **KEY SPECIALIST LEAVES** - remove one character. Any Knowledge only they knew is lost. If
 > it had already been shared, nothing is lost.
 
-### More event cards (building toward the ~30-card deck)
+### More draft Event text (superseded, except EVERYONE IS EQUAL and THE WOLF)
 
 **Management**
 > **REORGANISATION** - Roles get reshuffled. Treat two characters (players' choice) as newly
@@ -1442,6 +1575,30 @@ Categories:
 
 > **SURPRISE AUDIT** - see `game/extensions/feature-quality-uncertainty/` (requires the
 > feature Quality/Unclear extension - not in the base Event deck).
+
+> **EVERYONE IS EQUAL** - *"No titles. No one to ask, so nobody does."* This week nobody may
+> play a **Hero** or use **Authorized Voice** (not even against this card), and **nobody gains
+> Capital**. Everyone: −1 Motivation, except Torso = **Autonomy**: −2 instead, and Torso =
+> **Hierarchy**: no loss. Adaptability cost 2. *(Flattening everyone to the same level leaves no
+> one who can speak for the team: the wolf's first move, and the priest's, is to tell the flock
+> it is all sheep.)*
+
+> **THE WOLF** - Management targets **the
+> shepherd**: the character with the **most Capital** (a tie: the team names which of the tied).
+> The shepherd is the target, and the only one it touches. **Nobody leaves
+> the team: the shepherd stays. It is their Capital that is at stake.**
+> **It cannot be cancelled** - no Adaptability, no Hero, no Authorized Voice, no Habit. At step 4
+> the team chooses:
+> - **Step up.** The team shields that character: they gain **+1 Capital** (max 5), and **every
+>   character loses 1
+>   Motivation** - they included. It is **not a Hero play**: no Hero tile, no Pressure Response,
+>   no 3-Motivation gate. The one who resists is carried by everybody else, and everybody pays.
+> - **Do not.** That character stays on the team but their **Capital is erased: it goes to 0** -
+>   they cannot resist Management alone.
+> If nobody has more than 0 Capital, nobody is worth taking: discard the card. *(The shepherd
+> is the one who watches over the flock; the wolf's best move is to make the flock stop
+> noticing it needs one. Whoever steps up is spending the team's Motivation to keep its
+> shepherd - and so the team feels what that is worth.)*
 
 **Customer**
 > **UNCLEAR REQUIREMENT** - see `game/extensions/feature-quality-uncertainty/` (requires the
@@ -1495,9 +1652,8 @@ Categories:
 > (move the Ledger coin down one, permanent, not a one-week penalty). Hierarchy: also lose 1
 > Motivation. *(Closes the gap where Capability had no way down at all.)*
 
-Still short of 30 cards - add more per category during playtesting, once specific rules are
-tuned. Prioritize Team and Customer cards, since those interact most directly with Habitus
-and Capital (§5.1).
+The printed deck is 25 cards. New cards come from playtesting; prioritize People and Customer
+cards, since those interact most directly with Habitus and Capital (§5.1).
 
 ## 12. Onboarding
 A new character brings new Skills, Knowledge, Habitus, and Motivation - but doesn't
@@ -1603,9 +1759,9 @@ category of Event permanently less painful, for good, even if the track later dr
 ### One coin, two jobs
 Each of the three Ledger tracks has **one coin**. Walk it along the six wells as the track moves. When
 it reaches the ringed well, **turn it over** - the reverse face is the Habit. **Team Reflexivity
-is the exception:** Adaptability is a pool of tokens, not a track, so its Habit is a single coin on
-its own Ledger row (board 3) that is turned over, once, the first time the pool holds 4 or more at
-close of week (§6.1 step 6).
+is the exception:** Adaptability is a pool of tokens, not a track, so it has no row on THE TEAM and
+its coin is not walked. It sits in the HABIT lane beside the pool on SHIT HAPPENS, with three token
+wells, and is earned by Reflect (the table below).
 
 The coin can walk back down afterwards. **It never turns back over.** That single physical act
 carries the whole rule: the track is what you have *now*, the face is what you have *become*,
@@ -1626,18 +1782,19 @@ board prints the source under the name, because the whole point is that these ar
 
 | Habit | Source | Acquired at | Permanent effect on Events |
 |---|---|---|---|
-| **Psychological Safety** | Edmondson 1999 | Trust reaches 4 (through deliberate Coordinate spending). | Every **People**-category Event costs **1 less** Adaptability to cancel (minimum 1). |
-| **Who Knows What** | Wegner 1986; Lewis 2003 - *transactive memory* | Capability reaches 4 (through deliberate Learn spending). | Every **Environment**-category Event costs **1 less** Adaptability (minimum 1). |
-| **Shared Repertoire** | Lave & Wenger 1991; Wenger 1998 | Shared Practice reaches 4 (through deliberate Reflect/Coordinate spending). | Every **Management**-category Event costs **1 less** Adaptability (minimum 1). |
-| **Team Reflexivity** | West 1996 | The Adaptability pool holds 4 or more tokens at close of week (through deliberate Align/Reflect/Workshop spending - and then not spending it all). | Every **Customer**-category Event costs **1 less** Adaptability (minimum 1). |
+| **Psychological Safety** | Edmondson 1999 | Trust reaches 4 (through deliberate Coordinate spending). | Every **People**-category Event costs **1 less** Adaptability to cancel (minimum 0: a cost-1 Event is free). |
+| **Who Knows What** | Wegner 1986; Lewis 2003 - *transactive memory* | Capability reaches 4 (through deliberate Learn spending). | Every **Environment**-category Event costs **1 less** Adaptability (minimum 0: a cost-1 Event is free). |
+| **Shared Repertoire** | Lave & Wenger 1991; Wenger 1998 | Shared Practice reaches 4 (through deliberate Reflect/Coordinate spending). | Every **Management**-category Event costs **1 less** Adaptability (minimum 0: a cost-1 Event is free). |
+| **Team Reflexivity** | West 1996 | **Three wells filled, one per object of reflection.** When a Reflect resolves, the team may put its +1 Adaptability token in a HABIT well instead of the pool, if this week gave it evidence for that well: **OBJECTIVES** - a feature was banked; **STRATEGY** - the team adapted to 2 Events; **PROCESS** - an Event lowered a Ledger track, or a Hero was played. The team also **names one thing it will do differently next week** (a card it will lay, a rule it will follow). A well takes one token. When all three are filled the coin turns over, once, and the tokens go back to the supply. | Every **Customer**-category Event costs **1 less** Adaptability (minimum 0: a cost-1 Event is free). |
 | **Authorized Voice** | Bourdieu 1991, *Language and Symbolic Power* | Standing reaches 5 - any one character's Capital (§5.1). | Once per week, any character may **cancel one Event completely**. *(Extension: `game/extensions/performance-review/` restores a second use, Collective Bargaining, as an alternative.)* |
 
 **Why these names.** *Who Knows What* is Wegner's transactive memory: a group that knows who
 holds which expertise, which is exactly what a Knowledge reaching three holders produces. It
 replaces "Full Capability," which was consultancy vocabulary describing nothing. *Team
 Reflexivity* is West's finding that teams which overtly reflect on their objectives and
-processes, and change them, outperform teams that don't - which is precisely what Reflect does
-to the Adaptability pool. It replaces "Battle-Tested," which was folklore. *Authorized Voice*
+processes, and change them, outperform teams that don't - which is what a Reflect with real
+evidence does, and why the Habit is paid for in Reflect tokens that never reach the pool. It
+replaces "Battle-Tested," which was folklore. *Authorized Voice*
 is Bourdieu's authorized speaker: an utterance carries force because of the position of the
 person making it, not its content - which is why the Demo gate is relative to the team average.
 

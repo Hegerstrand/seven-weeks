@@ -18,7 +18,6 @@ THE ZONE row widths) - not a playing card.
 | Section | Source SVG(s) |
 |---|---|
 | [Person board (Specimen board)](#person-board-specimen-board) | `../board-person-170x141mm-A4-portrait.svg` |
-| [Standing strip](#standing-strip-both-faces-one-page) | `../standing-281x34mm-A4-landscape.svg` |
 | [THE DEVELOPMENT (the Zone, week 3 payoff)](#the-development-the-zone-week-3-payoff-both-faces-one-page) | `../the-development-127x104mm-A4-landscape.svg` |
 | [THE PROJECT](#the-project-a3-landscape) | `../the-project-FRONT-A3-landscape.svg`, `../the-project-BACK-A3-landscape.svg` |
 | [THE TEAM](#the-team-a4-landscape) | `../the-team-FRONT-A4-landscape.svg`, `../the-team-BACK-A4-landscape.svg` |
@@ -115,7 +114,11 @@ graph TD
 
 ---
 
-# Standing strip (single face)
+# Standing strip - DELETED
+
+> **Deleted (2026-10-10).** Standing is no longer a separate strip: it is the fourth row printed on
+> THE TEAM (see the THE TEAM section). Delete `../standing-281x34mm-A4-landscape.svg`. The notes
+> below are legacy and describe the removed strip.
 
 Source: `../standing-281x34mm-A4-landscape.svg`
 Page: 333x210mm landscape · strip itself is 317x34mm (widened from 281 to match THE TEAM's
@@ -187,7 +190,7 @@ week the Specimen panel on each person board starts being read.
 | `<g id>` | Contents | Background (hex) |
 |---|---|---|
 | header (ungrouped) | sheet title banner + rule | - |
-| `board-4b-front` | "HOW YOU COVER" panel (LEARN/TEACH rules + ZPD note) + "THE LEDGER READS THIS" panel (Capability full-line rule, Shared Practice stack rule, Cross-Trained 3rd-row rule, one-line citation) | Capability strip `#C7CFB5`; Shared Practice strip `#FAECBE`; Cross-Trained strip `#D9D3C4` |
+| `board-4b-front` | "HOW YOU COVER" panel (LEARN/TEACH rules + ZPD note) + "THE LEDGER READS THIS" panel (Capability full-line rule, Shared Practice stack rule, Cross-Trained 3rd-row rule, one-line citation) | Capability strip `#C7CFB5`; Shared Practice strip `#F7D7A1`; Cross-Trained strip `#D9D3C4` |
 | `board-4b-back` | "THE PAYOFF/ TURN ME OVER START OF WEEK 3" + 3-line teaser paragraph | none, plain `.r` outline |
 | cut instructions (ungrouped) | dashed cut line + 3 lines of glue/assembly instructions | - |
 
@@ -203,8 +206,8 @@ week the Specimen panel on each person board starts being read.
 | ZPD footnote (Vygotsky) | `.s.q` italic serif | 2.5 | `#000000` | - |
 | "THE LEDGER READS THIS" | `.m` mono | 4.6 | `#000000` | - |
 | "CAPABILITY · A FULL LINE" | `.m` mono | 3.4 | `#000000` | strip `#C7CFB5` |
-| "a whole row or column of THE ZONE tiled → +1 Capability" | `.s` serif | 3.2 | `#000000` | - |
-| "SHARED PRACTICE · A STACK" / "a tile flipped to its stacked face → +1 Shared Practice" | `.m` mono / `.s` serif | 3.4 / 3.2 | `#000000` | strip `#FAECBE` |
+| "every square of a row or column of THE ZONE tiled → +1 Capability" | `.s` serif | 3.2 | `#000000` | - |
+| "SHARED PRACTICE · A STACK" / "a tile flips to stacked: two of you cover it → +1 Shared Practice" | `.m` mono / `.s` serif | 3.4 / 3.2 | `#000000` | strip `#F7D7A1` |
 | "CROSS-TRAINED · A 3RD ROW" | `.m` mono | 3.4 | `#000000` | strip `#D9D3C4` |
 | "your SPECIMEN covers a 3rd row → +1 Capital, once each" | `.s` serif | 3.2 | `#000000` | - |
 | "BOTH" + "mark your SPECIMEN, then put down or flip a tile on THE ZONE." | `.m` mono / `.s` serif | 3.2 / 3.4 | `#000000` | - |
@@ -218,7 +221,7 @@ week the Specimen panel on each person board starts being read.
 
 Front and back panels are each `<g transform="translate(0,N)">` wrappers so both sit on one A4
 sheet with a shared cut line between them. The "THE LEDGER READS THIS" panel draws its two
-category strips as **filled rects first** (`#C7CFB5`, `#FAECBE`, both `rx 1.5`), then the label
+category strips as **filled rects first** (`#C7CFB5`, `#F7D7A1`, both `rx 1.5`), then the label
 + body text on top - the same pattern as THE TEAM's row bands, deliberately, since this panel
 is restating what the Ledger will do with what's covered here. The cut line uses `.cut`
 (`#4A5259`, dashed `3 2`), distinct from every content-area dashed use.
@@ -229,7 +232,7 @@ is restating what the Ledger will do with what's covered here. The cut line uses
 graph TD
   A["page background #FFFFFF"] --> B["sheet header + rule"]
   B --> C["FRONT: HOW YOU COVER panel"]
-  C --> D["FRONT: THE LEDGER READS THIS panel (Capability #C7CFB5, Shared Practice #FAECBE)"]
+  C --> D["FRONT: THE LEDGER READS THIS panel (Capability #C7CFB5, Shared Practice #F7D7A1)"]
   D --> E["BACK: turn-over teaser panel"]
   E --> F["dashed cut line"]
   F --> G["glue/assembly instructions"]
@@ -359,10 +362,10 @@ document order. Treat these as the logical groups for editing purposes.
 | "Your figure, your Knowledge, your Motivation." | `.s` serif | 8 | `#000000` | `#D3B1B1` behind "Motivation" |
 | "Nothing else yet." | `.s` serif | 8 | `#000000` | - |
 | "CARDS IN PLAY" | `.m.q` mono | 6 | `#000000` | - |
-| "PLAN · WORK · COORDINATE · CELEBRATE" | `.m` mono | 7 | `#000000` | - |
+| "WORK · COORDINATE · CELEBRATE" | `.m` mono | 7 | `#000000` | - |
 | "SET OUT THESE STACKS" | `.m.q` mono | 6 | `#000000` | - |
 | "PROJECT CARDS" / "pick one at setup, the rest wait here" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
-| "ACTION CARDS" / "this week's four cards, the rest wait for later" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
+| "ACTION CARDS" / "this week's five cards, the rest wait for later" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
 
 ### Illustration
 
@@ -410,8 +413,8 @@ graph TD
 
 FRONT is the master colour source for the whole game - see the colour canon in
 `board-game-boards` and `board-game-cards`. One coin per row; walk it as the track moves; at
-the ring, turn it over - that's a permanent **HABIT**. The Standing row is a separate strip,
-dropped into the dashed slot at the start of week 2. BACK is Week 1's reveal, glued to the reverse.
+the ring, turn it over - that's a permanent **HABIT**. Standing is the fourth row, printed on the
+board. Adaptability is not a row: it is a pool of tokens on SHIT HAPPENS. BACK is Week 1's reveal, glued to the reverse.
 
 ## FRONT
 
@@ -423,12 +426,12 @@ dropped into the dashed slot at the start of week 2. BACK is Week 1's reveal, gl
 | `trust` | title, subtitle, 6-circle coin track numbered 0-5, red flip-ring at circle 4, 'TEACH DOES NOTHING' footnote under circles 0-1, "Psychological Safety" + citation | `#D3CEDF` |
 | `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#C7CFB5` |
 | `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circles 0-1, "Shared Repertoire" + citation | `#F7D7A1` |
-| `adaptability` | title, subtitle ("a shared pool of tokens, kept on SHIT HAPPENS - not a track"), **one** coin well at the flip position (circle 4's x) with its red flip-ring, footnote "TURN IT OVER THE FIRST TIME THE POOL HOLDS 4 AT WEEK END", "Team Reflexivity" + citation. The six-circle 0-5 track is gone: Adaptability is a pool (rulebook §4), the coin only carries the Habit | `#B5C7CF` |
-| `standing-slot` | title, subtitle, "STANDING GOES HERE" + "DROP IT IN AT THE START OF WEEK 2 - COIN ON THE HIGHEST CAPITAL" | `#F5CE89`, dashed border |
+| `standing` | title, subtitle ("grown by nobody" / "starts on 0"), 6-circle track numbered 0-5 at the same centres as the other rows, red flip-ring at circle 5, bracket + "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE", "FLIP AT 5" label above the ring, "Authorized Voice" + description + citation. Absolute at y 157-185, no `translate`. A footer line says Adaptability is a pool on SHIT HAPPENS | `#D9D3C4` (Capital Bone) |
 
-Row tint follows the same People/Environment/Management/Customer categories the Event-card
-tints derive from: Trust = People, Capability = Environment, Shared Practice = Management,
-Adaptability = Customer - see the colour canon in `board-game-boards`/`board-game-cards`.
+Row tint follows the same People/Environment/Management categories the Event-card tints derive
+from: Trust = People, Capability = Environment, Shared Practice = Management. Standing uses the
+Capital Bone `#D9D3C4`. Adaptability has no row (it is a pool, and has no Habit) - see the colour canon in
+`board-game-boards`/`board-game-cards`.
 
 ### Text
 
@@ -441,21 +444,23 @@ Adaptability = Customer - see the colour canon in `board-game-boards`/`board-gam
 | "START" | `.m` mono | 4.2 | `#000000` | - |
 | "FLIP → HABIT" | `.m` mono | 4.2 | `#000000` | - |
 | "HABIT - PRINTED ON THE EVENT CARDS" | `.m` mono | 3 | `#000000` | - |
-| Row title (Trust/Capability/Shared Practice/Adaptability) | `.s` serif | 6 | `#000000` | - |
+| Row title (Trust/Capability/Shared Practice/Standing) | `.s` serif | 6 | `#000000` | - |
 | Row subtitle ("grown by ...") | `.s` italic serif | 3.4 | `#000000` | - |
 | Track numbers 0-5 (inside each of the 6 circles, all four rows) | `.m q` mono | 4.2 | `#000000` | - |
 | Row footnote caption under circles 0-1 (e.g. "TEACH DOES NOTHING", "FIRST WORK DOES NOTHING", "PLAN DOES NOTHING") | `.m` mono | 2.6-2.8 | `#000000` | - |
 | Row habit name (e.g. "Psychological Safety") | `.s` serif | 5 | `#000000` | - |
 | Row citation (e.g. "EDMONDSON 1999") | `.m.q` mono | 2.6 | `#000000` | - |
 | "Standing" | `.s` serif | 6 | `#000000` | - |
-| "the fifth row, on its own strip" | `.s` italic serif | 3.4 | `#000000` | - |
-| "STANDING GOES HERE" | `.m` mono | 4.4 | `#000000` | - |
-| "DROP IT IN AT THE START OF WEEK 2 - COIN ON THE HIGHEST CAPITAL" | `.m.q` mono | 3.2 | `#000000` | - |
+| "grown by nobody" / "starts on 0" | `.s` italic serif | 3.4 | `#000000` | - |
+| "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE" | `.m` mono | 2.8 | `#000000` | - |
+| "FLIP AT 5" | `.m` mono | 2.6 | `#000000` | - |
+| "Authorized Voice" / "Once a week: cancel an Event outright." / "BOURDIEU 1991" | `.s` 5 / `.s` italic 3.4 / `.m.q` 2.6 | - | `#000000` | - |
+| "Adaptability is not a track here..." footer | `.s` italic serif | 3.8 | `#000000` | - |
 
 ### Illustration
 
-Each Ledger row is a `<g id="...">` with a small vertical `translate` offset (rows drift -4,
--3, -2, -1 respectively - a leftover of an old layout pass; preserve unless resequencing).
+Each Ledger row is a `<g id="...">` with a vertical `translate` offset that spreads the three
+track rows evenly (Trust -2, Capability +6, Shared Practice +14, i.e. a 38 mm pitch);
 Paint order **inside each row**: tinted band rect, title, subtitle, then the 6 outline circles
 (`.w`, r=8, centres at x = 86, 103.7, 121.5, 139.2, 156.9, 174.7), then a 0-5 track number
 centred inside each circle (`.m q` mono, 4.2), then a red-outlined **flip ring** (r=10.5,
@@ -466,8 +471,7 @@ to carry a **second** footnote bracket under circles 4-5 (the 'after the ring' s
 removed, since a single footnote per row reads cleaner and Adaptability never had one to match.
 
 **Row order top to bottom:** Trust (`#D3CEDF`) → Capability (`#C7CFB5`) → Shared Practice
-(`#F7D7A1`) → Adaptability (`#B5C7CF`) → Standing slot (`#F5CE89`, dashed,
-filled by the strip at the start of week 2). This top-to-bottom order **is** the colour canon other components derive from -
+(`#F7D7A1`) → Standing (`#D9D3C4`, absolute at y 157, solid, printed on the board). This top-to-bottom order **is** the colour canon other components derive from -
 do not reorder rows without updating every card/board that reads it.
 
 ### Layout diagram
@@ -478,9 +482,8 @@ graph TD
   B --> C["trust band #D3CEDF"]
   C --> D["capability band #C7CFB5"]
   D --> E["shared-practice band #F7D7A1"]
-  E --> F["adaptability band #B5C7CF"]
-  F --> G["standing-slot band #F5CE89, dashed, strip dropped in week 2"]
-  G --> H["table-placement guide"]
+  E --> F["standing band #D9D3C4"]
+  F --> H["table-placement guide"]
 ```
 
 ## BACK
@@ -511,13 +514,13 @@ landscape.
 | "THE ONE IDEA" | `.m.q` mono | 6 | `#000000` | - |
 | "It was never only the project." | `.s` serif | 20 | `#000000` | - |
 | "CARDS ADDED" | `.m.q` mono | 6 | `#000000` | - |
-| "LEARN · ALIGN · REFLECT · WORKSHOP" | `.m` mono | 9 | `#000000` | - |
+| "NONE - THE LEDGER AND EVENTS ARRIVE" | `.m` mono | 9 | `#000000` | - |
 | "WHAT OPENS" | `.m.q` mono | 6 | `#000000` | - |
-| "The Ledger: Trust, Capability, Shared Practice, Adaptability..." (3 lines) | `.s` serif | 8 | `#000000` | - |
-| "Adapt is now your full Adaptability, not 1." | `.s` serif | 8 | `#000000` | - |
+| "The Ledger: Trust, Capability, Shared Practice, Standing..." (3 lines) | `.s` serif | 8 | `#000000` | - |
+| "Adaptability is a pool of tokens on SHIT HAPPENS." | `.s` serif | 8 | `#000000` | - |
 | "CATCH UP BEFORE YOU PLAY" | `.m` mono | 6 | `#000000` | - |
 | "Move Trust up 1 for every two Coordinate cards..." (2 lines) | `.s` serif | 8 | `#000000` | - |
-| "Everything else starts where it always was, at 2..." (2 lines) | `.s` serif | 8 | `#000000` | - |
+| "Everything else starts where it always was, at 1..." (2 lines) | `.s` serif | 8 | `#000000` | - |
 | "It was counting all along." | `.s` italic serif | 9 | `#000000` | - |
 
 ### Illustration
@@ -579,7 +582,7 @@ it is never meant to be read at the table.
 | column headers | skill names (LAPTOP...CALENDAR) + "SKILL" label + 5 Item-diamond icons with pip counts | - |
 | row headers | "EDUCATION" (rotated -90°), 5 Head-hexagon icons with pip counts, row names | - |
 | the 5x5 grid | 25 cells (`.cell` class), thick outer border, no text in the cells; whole block inside `<g transform="translate(-16,0)">` | cells: no fill, outline only |
-| grid legend | two 6mm sample tiles (`tile-one`: one dot, fill `#EFE4D3`; `tile-stack`: two overlapping dots, fill `#C7CFB5`) at x 15, y 145 / 152, each with an italic caption ("One of you covers this square." / "Flipped: two or more of you do (stacked).") | - |
+| grid legend | two 6mm sample tiles (`tile-one`: one dot, fill `#C7CFB5`; `tile-stack`: two overlapping dots, fill `#F7D7A1`) at x 15, y 145 / 152, each with an italic caption ("One of you covers this square." / "Flipped: two or more of you do (stacked).") | - |
 | THE DEVELOPMENT placeholder | dashed 119x104 box + "THE DEVELOPMENT GOES HERE · FROM WEEK 3" + 2-line note | none, dashed `.r` border |
 | footer | rule + "WHAT YOU CAN DO" label + 4 explanatory lines + Bourdieu closing note | - |
 | table-placement guide | 2 coloured edge lines (`#6E7A54`, `#3F5B66`) | - |
@@ -620,14 +623,27 @@ One tile per square, 25 in all, so a square can never run out. Two faces, told a
 
 | Face | Meaning | Mark | Colour |
 |---|---|---|---|
-| One-person | exactly one character covers the square | one filled dot | `#EFE4D3` |
-| Stacked | two or more characters cover it | two overlapping dots | `#C7CFB5` |
+| One-person | exactly one character covers the square | one filled dot | `#C7CFB5` (Capability) |
+| Stacked | two or more characters cover it | two overlapping dots | `#F7D7A1` (Shared Practice) |
+
+Face colours are the Ledger colours (board 3) of the track each face feeds: tiles filling a row or
+column pay Capability, a flip to stacked pays Shared Practice.
 
 Put down one-person face up; flip to stacked when a second character covers the square; never
 flipped back. **If printed in 3D:** 18.5mm square (1.5mm clear in each 20mm Zone square), 2mm
 thick, printed **flat on the bed, no supports**, faces as embossed 0.6mm dots or a two-colour
 swap; 0.3mm tolerance on the edge so a tile can be lifted out. If cut from board: glue one
 of each face to opposite sides of 2mm greyboard.
+
+**Print sheet:** `../zone-tiles-A4-landscape.svg`, one A4 landscape page with both faces. Left
+block = one-person face, right block = stacked face; each is a 5x5 block of identical 18.5mm
+squares with **no gaps**, 92.5mm square (left at x 41, right at x 163.5, both at y 58.75). Cut
+the sheet in half at the dashed line (x 148.5), glue one block to each side of one greyboard
+sheet so the two blocks sit exactly over each other, then cut along the tick marks outside each
+block: one cut per shared border. Each tile has a 1mm-inset outline so a slightly off cut does
+not read as a missing edge. The sheet footer repeats the rule: green = a full row or column
+(either face) pays +1 Capability, amber = the flip to stacked pays +1 Shared Practice, checked
+only when a tile goes down or flips.
 
 ### Layout diagram
 
@@ -718,8 +734,9 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | page background | full-page rect | `#FFFFFF` |
 | header | "SHIT HAPPENS" title + "SHIT HAPPENS · FROM WEEK 2" + rule | - |
 | SHIT HAPPENS box | red-bordered panel, instruction line, 2 landing-zone slots, resolved-vs-stacks note | box border `#905151`; slot fill `#905151` (card silhouette, white label text) |
-| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 3 caption lines | `#B5C7CF` |
-| `lane-1` | HERO lane: label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
+| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 4 caption lines (Start with 3. Up to 6. / Earned: Align, Workshop, Reflect. / Spent: pay an Event's number. / Tokens stay until spent.). Panel x 11-65, 47 mm tall | `#B5C7CF` |
+| `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r8 with a red ring r10.5, and **three token wells** (r5.2, the 10.4 mm adapt token) labelled OBJ. / STRAT. / PROC. for banked Reflect tokens. Two caption lines run under all three lanes: "REFLECT: bank its token in the well its evidence matches, and name one change for next week." and "OBJ. a feature banked · STRAT. 2 Events adapted to · PROC. an Event hit a track, or a Hero played. Three wells turn the coin." | `#B5C7CF` |
+| `lane-1` | HERO lane (x 68-118): label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
 | CLOSE THE WEEK box | title, "TOP TO BOTTOM" note, rule, 4 numbered steps | - |
 | table-placement guide | 2 coloured edge lines (`#905151`, `#6E6249`) | - |
 

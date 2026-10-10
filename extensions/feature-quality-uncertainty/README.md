@@ -33,7 +33,7 @@ rulebook section it was cut from.
   applies with this pack (base-game tile prints the simplified condition - see addendum).
 - `board-1-FRONT` - the Unclear flag seat and Quality chip seat printed next to each feature
   slot are only used with this pack in play; without it, leave those seats empty.
-- `board-3b-standing` - drop the "ALSO NOW: A FACE-DOWN QUALITY CHIP GOES ON EACH FEATURE"
+- `the-team-FRONT` (Standing row) - drop the "ALSO NOW: A FACE-DOWN QUALITY CHIP GOES ON EACH FEATURE"
   line from the base-game sheet; it belongs here instead.
 
 None of the above SVG files have been re-cut yet - this pack currently only contains the

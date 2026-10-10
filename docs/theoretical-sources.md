@@ -3,7 +3,7 @@
 Status: **research reference.** The three core theorists (Bourdieu, Vygotsky, Wenger) already
 have dedicated model docs - this file doesn't repeat that work. It exists to do the same
 thorough treatment for the sources added after the fact: **Michael A. West, Michel Foucault,
-Norbert Elias, Karl Marx, Charles Goodhart, C. Northcote Parkinson, Derek de Solla Price, and
+Friedrich Nietzsche, Norbert Elias, Karl Marx, Charles Goodhart, C. Northcote Parkinson, Derek de Solla Price, and
 Melvin Conway** - what each one actually argues, why it's relevant to teamwork in general, and
 where (if anywhere) it lands on this game's actual mechanics. **Lave** is confirmed as a
 pairing with Wenger (legitimate peripheral participation) - see
@@ -13,9 +13,11 @@ Conway respectively, but deliberately kept off the thinker roster - both are pra
 aphorisms, not named theorists' findings, and this document draws that line honestly rather
 than blurring it.
 
-As with the rest of the design: **no component ever names a theorist**, and a mechanic that
+As with the rest of the design: **no game component ever names a theorist**, and a mechanic that
 needs a lecture to make sense is a mechanic to fix, not a footnote to add. This document is for
-the designers, not the table.
+the designers, not the table. **One deliberate exception:** the optional A5 theory cards in
+[../print/theory-cards-A5.html](../print/theory-cards-A5.html) name the researchers on purpose. They
+are companion reading, not game components, and nothing on them changes a rule.
 
 ## The full roster, at a glance
 
@@ -28,6 +30,7 @@ the designers, not the table.
 | Fred Brooks | Software engineering management | [team-learning-model.md](./team-learning-model.md) |
 | **Michael A. West** | Organizational psychology - team effectiveness | **This document** |
 | **Michel Foucault** | Philosophy/history - power and discipline | **This document** |
+| **Friedrich Nietzsche** | Philosophy - ressentiment, the herd and the priest | **This document** |
 | **Norbert Elias** | Sociology - figurational/process sociology | **This document** |
 | **Karl Marx** | Political economy - labour and alienation | **This document** |
 | **Charles Goodhart** | Economics - measurement and control | **This document** |
@@ -82,6 +85,19 @@ outcomes when they're taken seriously, and why they're theatre when they're not.
   physical - everyone at the table is working toward the same six named things, not five
   private agendas.
 
+- The **Team Reflexivity Habit** (§18) follows what the research says about *how* teams get it:
+  reflection needs psychological safety (Reflect needs Trust 3), real evidence rather than anecdote
+  (a feature banked, 2 Events adapted to, a track hit or a Hero played), coverage of all three
+  objects of reflection (the three wells: objectives, strategy, process), and, above all, a change
+  afterwards ("name one thing you will do differently"). Reflection without change is just
+  discussion. It is a recurring practice paid for in tokens that never reach the pool, so a team
+  trades Adaptability now for the Habit later. Sources read: Umbrex's practitioner summary of
+  West's framework; the abstracts of Konradt, Otte, Schippers & Steenfatt (2016), *Reflexivity in
+  Teams: A Review and New Perspectives*, and Schippers, Edmondson & West (2017), *Team
+  reflexivity*, Oxford Handbook of Group and Organizational Learning. The full texts were not
+  available, so the antecedents beyond safety, evidence and authority are from background
+  knowledge and unchecked.
+
 **Key works.** West, M.A., *Effective Teamwork: Practical Lessons from Organizational Research*
 (various editions, Blackwell/BPS); West, M.A., "Reflexivity and Work Group Effectiveness" and
 related team reflexivity literature with J. Lyubovnikova and colleagues.
@@ -133,6 +149,56 @@ that it is never neutral either - visibility is a form of power, whoever's watch
 **Key works.** Foucault, M., *Discipline and Punish: The Birth of the Prison* (1975); his later
 1970s lecture courses at the Collège de France on governmentality (published posthumously as
 *Security, Territory, Population* and *The Birth of Biopolitics*).
+
+---
+
+## Friedrich Nietzsche - the shepherd, the herd, and who gains from "we are all equal"
+
+**The theory.** In *On the Genealogy of Morality* (1887), Nietzsche argues that a morality of
+equality and meekness grows out of **ressentiment**: the weak cannot act against the strong, so
+they recast weakness as virtue and strength as guilt. His image is the lambs who call the birds
+of prey evil and themselves good (Essay I, §13). In Essay III the **ascetic priest** appears as
+the *shepherd of the herd of the suffering*. He does not cure the suffering. He gives it a
+meaning and **turns its resentment inward** (as guilt), away from whoever is actually above the
+herd, so the herd stays manageable - and the priest, who stands outside it, is the one who
+holds the power. Everyone in the flock is "equal"; the shepherd is not in the flock.
+
+**Relevance to teamwork generally.** "We are all equal here" can be true and kind, and it can
+also be the sentence that stops anyone from speaking for the team. A flat structure with no
+legitimate voice leaves the people who *do* hold power (budgets, promotion, the roadmap) as
+the only ones left with any, and nobody inside the team is positioned to protect it. The
+reverse move is just as common: tell the one who looks after the team that they are "just one
+of the team", so that nobody does.
+
+**Foucault's bridge.** Foucault's lectures on governmentality (*Security, Territory,
+Population*, 1977-78) trace **pastoral power** - a power that cares for each and for all, the
+Christian shepherd's - as one root of modern management. That is the same figure from the
+opposite side: not the priest's trick, but the care that makes the herd govern itself.
+
+**Relevance to this game.**
+- **EVERYONE IS EQUAL** (Management Event, §11) levels the table for a week: no Hero, no
+  Authorized Voice, no Capital gained. Bourdieu's *standing* needs difference to exist at all;
+  take it away and nobody can speak for the team.
+- **THE WOLF** (Management Event, §11) is the next step: Management targets the character with
+  the most Capital, who stays on the team but whose standing is at stake. Adaptability cannot stop it, because buying out a threat
+  is exactly how a team stops *noticing* it. Only **stepping up** works, and it costs
+  **everybody** a point of Motivation, because a team that keeps its shepherd pays for it
+  together. If it does not, that character's Capital goes to 0: they could not resist alone.
+- **Where the game inverts him.** In Nietzsche the shepherd *is* the priest, and the flattening
+  serves the priest. Here the shepherd is the **guardian** and the flattening serves
+  **Management**. What is kept is the structure: equality used as a tool by whoever stands
+  outside the flock. The wolf-and-shepherd line is the designers' own formulation, not
+  Nietzsche's wording; his own images are the lambs and birds of prey and the priest as
+  shepherd.
+- **The honest limit.** Nietzsche despised the "herd" and the egalitarian morality, and would
+  not recognise a cooperative game that wants everyone to win together as anything but herd
+  morality. The game borrows his *diagnosis* of how equality can be weaponised, not his
+  conclusion. Like Foucault, he stays as a named tension (see
+  [04-designers-notes.md](./04-designers-notes.md)), not a mechanic.
+
+**Key works.** Nietzsche, F., *On the Genealogy of Morality* (1887), Essay I §13 and Essay III
+(the ascetic priest as shepherd - check the section numbers against an edition before citing in
+print); Foucault, M., *Security, Territory, Population* (lectures 1977-78).
 
 ---
 

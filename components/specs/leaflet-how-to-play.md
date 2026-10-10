@@ -35,10 +35,10 @@ could survive doing it again: Sustainable High Performance.
 **Finish the room**
 
 - Only **THE PROJECT** and **THE ZONE** start face up. **SHIT HAPPENS** and **THE TEAM** stay
-  text side up; **THE PAYOFF** and **STANDING** stay boxed.
+  text side up; **THE DEVELOPMENT** stays boxed.
 - **Motivation 3** for every character. Week marker on Week 1. Shuffle the Events but don't draw
   yet.
-- *Everything on the covered boards already sits at 2. It just isn't your problem for a few more
+- *Everything on the covered boards already sits at 1. It just isn't your problem for a few more
   weeks.*
 
 ### Week 1
@@ -105,7 +105,8 @@ who was hit and who was immune), +1 if the Need was met.
 
 **Week 2:** the Ledger (with Standing and Capital), the Adaptability pool, your Need, and Shit
 Happens/Adapt, together.
-**Week 3:** the Development + the Flex and Overtime part of the Specimen panel.
+**Week 3:** the Development + the Flex and Overtime part of the Specimen panel. Learn, Teach,
+Align, Reflect, Workshop, Plan and Demo join the cards you can lay.
 **Week 4:** nothing new.
 **Week 5:** Combos - two named triggers in the same week now pay a small bonus on top of what
 they already did alone (rulebook §18.1).

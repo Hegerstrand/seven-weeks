@@ -86,6 +86,15 @@ entry is the design response.
       Zone ever reach a full row or column; do stacks fire often enough to matter; is a 5mm
       counter workable in an 8.8 x 7.2mm cell; does a separate Motivation step stop the grind
       being forgotten.
+  14. **Two Events about power** (rulebook v0.33, 2026-10-09, never played). **EVERYONE IS
+      EQUAL** (Management, cost 2): no Hero, no Authorized Voice, no Capital gained this week,
+      everyone -1 Motivation (Autonomy -2, Hierarchy 0). **THE WOLF** (Management): the character
+      with the most Capital is targeted (they stay on the team; their Capital is at stake); it cannot be cancelled (no tokens, no Hero, no
+      Authorized Voice). The team steps up - that character +1 Capital, every character -1
+      Motivation - or their Capital is erased (goes to 0). Not a Hero play. If nobody has Capital, discard.
+      Deck is 25 cards. **To check:** does the team step up every time (the cost is only 1 each),
+      or does it let the leader fall; does the top-Capital character ever want to be the one who
+      is not saved; is a 48% chance of meeting the Wolf in a game (12 of 25 cards drawn) too high.
 - **Summary of the rule changes (v0.31, as of 2026-10-08).** Everything above in one place:
   - **Adaptability** is a shared pile of adapt tokens (cap 6, starts at 2, no refresh); Align,
     Workshop and Reflect (Trust 3+) each add 1 at close of week. "Replace a card" is gone.

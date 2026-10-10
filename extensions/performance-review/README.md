@@ -31,6 +31,6 @@ No physical card currently prints "PERFORMANCE REVIEW" as its own title (it was 
 mechanic in rulebook prose, not yet a cut card) - restoring this pack means designing that
 event card, or wiring the mechanic into an existing one. Not yet done.
 
-- `board-3b-standing` - the FRONT face's Authorized Voice text ("...or Collective Bargaining -
+- `the-team-FRONT` (Standing row) - the FRONT face's Authorized Voice text ("...or Collective Bargaining -
   shield a teammate's Performance Review instead") is simplified in the base-game sheet; this
   pack's version should restore the second line.

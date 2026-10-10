@@ -54,13 +54,7 @@ that doesn't line up with it - only one placement and orientation reads as corre
 <rect x="523" y="231" width="297" height="210" class="board"/>
 <text x="671.5" y="323" class="m" font-size="8" text-anchor="middle">THE TEAM</text>
 <text x="671.5" y="335" class="s q" font-size="5" text-anchor="middle" font-style="italic">A4 landscape, 297 x 210 mm - widen reverted</text>
-<text x="671.5" y="344" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">STANDING's slot width needs reconsidering to match (was tied to the 333mm version)</text>
-
-<!-- STANDING, a separate glued strip that drops into THE TEAM's own dashed slot -->
-<rect x="531" y="397" width="281" height="34" rx="2" class="spare"/>
-<text x="671.5" y="411" class="m" font-size="5.5" text-anchor="middle" fill="#905151">STANDING</text>
-<text x="671.5" y="418" class="s q" font-size="4" text-anchor="middle" font-style="italic">shown back at its original 281 x 34 mm - needs re-verifying against THE TEAM's real slot</text>
-<text x="671.5" y="424" class="s q" font-size="4" text-anchor="middle" font-style="italic">drops into THE TEAM's dashed slot at the foot of the Ledger</text>
+<text x="671.5" y="344" class="s q" font-size="4.4" text-anchor="middle" font-style="italic">Standing is a row on the board itself - no separate strip</text>
 
 <!-- top row - 4-3 -->
 <rect x="226" y="231" width="594" height="210" class="pair"/>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>High-Performance Team - How to play (rulebook v0.32)</title>
+<title>High-Performance Team - How to play (rulebook v0.33)</title>
 <style>
   @page { size: 210mm 297mm; margin: 0; }
   * { box-sizing: border-box; }
@@ -29,7 +29,7 @@
   .tint-cap { background: #D9D3C4; }
   .tint-mot { background: #D3B1B1; }
   .tint-ok { background: #C7CFB5; }
-  .tint-sp { background: #FAECBE; }
+  .tint-sp { background: #F7D7A1; }
   table { border-collapse: collapse; width: 100%; font-size: 8.6pt; margin-bottom: 1.6mm; }
   th { text-align: left; font-size: 7.6pt; border-bottom: .3mm solid #2A2620; padding: .6mm 1mm; font-weight: 600; }
   td { padding: .7mm 1mm; vertical-align: top; border-bottom: .15mm solid #bbb; }
@@ -89,7 +89,7 @@
         <b>Flex</b> marker instead (Overtime, see page 2).</span></div>
       <div class="step"><span class="n">2</span><span><b>SHIT HAPPENS</b> <i>(week 2 on)</i> - draw <b>2 Events</b>, read them out. Nothing resolves yet.</span></div>
       <div class="step"><span class="n">3</span><span><b>ADAPT</b> - cancel Events by paying each one's <b>Adaptability cost</b> (1, 2 or 3) in adapt tokens,
-        or play a Hero. A Habit takes 1 off the cost (minimum 1).</span></div>
+        or play a Hero. A Habit takes 1 off the cost (minimum 0: a cost-1 Event is free).</span></div>
       <div class="step"><span class="n">4</span><span><b>SURVIVING EVENTS HAPPEN</b> - resolve every Event nobody cancelled.</span></div>
       <div class="step"><span class="n">5</span><span><b>THE WEEK RUNS</b> - resolve the five cards in <b>any order</b>. The week happened at once.</span></div>
       <div class="step"><span class="n">6</span><span><b>CLOSE</b> - <b>bank</b> finished features (lift any lock, pay Capital to who worked on it) &rarr;
@@ -110,8 +110,8 @@
         <tr><th>WEEK</th><th>WHAT TURNS UP</th></tr>
         <tr><td>1</td><td>The week. Work, Coordinate, Celebrate.</td></tr>
         <tr><td>2</td><td><b>THE TEAM</b> turns over: Trust, Capability, Shared Practice, Standing, Capital, Needs, the adapt pool
-          (starts at 2 tokens), Shit Happens and Adapt.</td></tr>
-        <tr><td>3</td><td><b>THE DEVELOPMENT</b> (Learn/Teach payoff), Flex and Overtime. Now also Learn, Align, Reflect, Workshop, Plan, Demo.</td></tr>
+          (starts at 3 tokens), Shit Happens and Adapt.</td></tr>
+        <tr><td>3</td><td><b>THE DEVELOPMENT</b> (Learn/Teach payoff), Flex and Overtime. Now also Learn, Teach, Align, Reflect, Workshop, Plan, Demo.</td></tr>
         <tr><td>4</td><td>Nothing new. Play everything you have met.</td></tr>
         <tr><td>5</td><td><b>Combos</b>: two named triggers in the same week pay a small bonus (one combo a week).</td></tr>
         <tr><td>6&ndash;7</td><td>Nothing new. The project ends when week 7 closes.</td></tr>
@@ -119,7 +119,7 @@
     </div>
   </div>
 
-  <div class="foot"><span>Rulebook v0.32 (draft) &middot; playtest prototype</span><span>Turn over for the cards, the Zone and the score &rarr;</span></div>
+  <div class="foot"><span>Rulebook v0.33 (draft) &middot; playtest prototype</span><span>Turn over for the cards, the Zone and the score &rarr;</span></div>
 </section>
 
 <!-- ============================ PAGE 2 ============================ -->
@@ -138,7 +138,7 @@
         <tr><td>Align</td><td><b>+1 adapt token</b>, no conditions.</td></tr>
         <tr><td>Workshop</td><td><b>+1 adapt token</b>, no conditions.</td></tr>
         <tr><td>Reflect</td><td>Needs <b>Trust 3+</b>. +1 adapt token. If a feature was banked or you adapted to 2 Events, also <b>+1 Shared Practice</b>.</td></tr>
-        <tr><td>Learn</td><td>The team names one character: they mark a free square <b>left or right</b> of one they cover, in their own row. Then tile the Zone. No Capital.</td></tr>
+        <tr><td>Learn</td><td>Every character marks a free square <b>left or right</b> of one they cover, in their own row (up to five new squares). Then tile the Zone for each. No Capital.</td></tr>
         <tr><td>Teach</td><td>Up to <b>two</b> teachers; each lets one other character mark a square <b>up, down, left or right</b> of one the teacher covers, any row. Then tile the Zone. <b>Both teachers +1 Capital.</b> Dead while Trust &le; 1.</td></tr>
         <tr><td>Demo</td><td>Needs Capital &ge; the team average. The team names one character: <b>+1 Capital</b>. The feature ignores the next Negative Feedback.</td></tr>
         <tr><td>Celebrate</td><td><b>+2 Motivation to everyone</b> (cap 5) - <b>+3</b> if a feature was banked this week.</td></tr>
@@ -149,7 +149,7 @@
       <h2>NEEDS &middot; FROM WEEK 2</h2>
       <p class="small">At step 7 you get <b>+1 Motivation</b> if your Torso's Need was met this week. Each also counts as met while the team holds its Habit.</p>
       <table>
-        <tr><td>Autonomy</td><td>No Event landed on the team.</td></tr>
+        <tr><td>Autonomy</td><td>At most 1 Event landed on the team.</td></tr>
         <tr><td>Hierarchy</td><td>The team played a Teach.</td></tr>
         <tr><td>Community</td><td>The team spent a Coordinate, Reflect or Celebrate.</td></tr>
         <tr><td>Quality</td><td>Work was added to a feature. <b>Otherwise &minus;3.</b></td></tr>
@@ -164,18 +164,19 @@
         The coloured face means "new this week": it cannot be taught until the week closes.</span></div>
       <div class="step"><span class="n">2</span><span><b>Cover it on THE ZONE</b> - no tile there? Put one down. A tile already there? <b>Flip it.</b></span></div>
       <div class="box" style="display:flex;gap:6mm;align-items:center;margin-top:1mm">
-        <span><svg class="tile" viewBox="-3 -3 6 6"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#EFE4D3" stroke="#2A2620" stroke-width=".35"/><circle r="1.1" fill="#2A2620"/></svg>
+        <span><svg class="tile" viewBox="-3 -3 6 6"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".35"/><circle r="1.1" fill="#2A2620"/></svg>
           <b>one dot</b> - one of you covers this square</span>
-        <span><svg class="tile" viewBox="-3 -3 6 6"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".35"/><circle cx="-.7" cy="-.7" r="1.1" fill="#C7CFB5" stroke="#2A2620" stroke-width=".3"/><circle cx=".7" cy=".7" r="1.1" fill="#2A2620"/></svg>
+        <span><svg class="tile" viewBox="-3 -3 6 6"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#F7D7A1" stroke="#2A2620" stroke-width=".35"/><circle cx="-.7" cy="-.7" r="1.1" fill="#F7D7A1" stroke="#2A2620" stroke-width=".3"/><circle cx=".7" cy=".7" r="1.1" fill="#2A2620"/></svg>
           <b>two dots</b> - stacked: two or more cover it</span>
       </div>
-      <p class="small">Counters are never taken off and tiles never flip back. Your sheet is the record of <i>what I can do</i>;
+      <p class="small">Counters are never taken off and tiles never flip back. The Ledger reads the Zone only at the moment a tile goes down or flips.
+      Your sheet is the record of <i>what I can do</i>;
       the Zone is the team's picture of the same squares. Everyone can read everyone's sheet.</p>
       <table>
         <tr><th>THE LEDGER READS THE ZONE</th><th></th></tr>
-        <tr class="tint-ok"><td>Capability +1</td><td>A whole <b>row or column</b> of the Zone now has a tile on every square.</td></tr>
-        <tr class="tint-sp"><td>Shared Practice +1</td><td>A tile <b>flips to stacked</b> - two of you now cover the same square.</td></tr>
-        <tr class="tint-cap"><td>Cross-Trained</td><td>Your own SKILLS grid has squares in a <b>3rd row</b>: <b>+1 Capital</b>, once each.</td></tr>
+        <tr class="tint-ok"><td>Capability +1</td><td>A whole <b>row or column</b> of the Zone now has a tile on every square (either face).</td></tr>
+        <tr class="tint-sp"><td>Shared Practice +1</td><td>A tile <b>flips to its stacked face</b> - two of you now cover the same square.</td></tr>
+        <tr class="tint-cap"><td>Cross-Trained</td><td>The first time your own SKILLS grid has squares in a <b>3rd row</b>: <b>+1 Capital</b>, once each.</td></tr>
       </table>
 
       <h2>THE LEDGER AND MOTIVATION</h2>
@@ -206,7 +207,7 @@
   </div>
   <p class="it" style="margin-top:2mm">If you only had thirty-five working days, how would you spend them?</p>
 
-  <div class="foot"><span>Rulebook v0.32 (draft) &middot; full rules in game/rules/rulebook.md</span><span>Print at 100% on A4, double-sided</span></div>
+  <div class="foot"><span>Rulebook v0.33 (draft) &middot; full rules in game/rules/rulebook.md</span><span>Print at 100% on A4, double-sided</span></div>
 </section>
 
 </body>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>High-Performance Team - Theory cards (A5)</title>
+<style>
+  @page { size: 148mm 210mm; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; }
+  body { font-family: "EB Garamond", Garamond, Georgia, serif; font-size: 10.6pt; line-height: 1.26; color: #000; }
+  .card { width: 148mm; height: 210mm; padding: 0 10mm 8mm; overflow: hidden; page-break-after: always; position: relative; }
+  .card:last-child { page-break-after: auto; }
+  .mono, h1, h2, .band, .foot { font-family: "IBM Plex Mono", "Courier New", monospace; }
+  .band { margin: 0 -10mm 4mm; padding: 3.2mm 10mm 2.6mm; background: var(--tint); border-bottom: .3mm solid #2A2620; display: flex; justify-content: space-between; font-size: 7.8pt; letter-spacing: .3mm; }
+  h1 { font-size: 15pt; letter-spacing: .3mm; margin: 0 0 1.2mm; font-weight: 600; line-height: 1.15; }
+  .sub { font-style: italic; font-size: 10.6pt; margin: 0 0 3mm; color: #333; }
+  h2 { font-size: 8.2pt; letter-spacing: .4mm; margin: 3.2mm 0 1.2mm; font-weight: 600; border-bottom: .2mm solid #2A2620; padding-bottom: .5mm; }
+  p { margin: 0 0 1.4mm; }
+  ul { margin: 0 0 1.2mm; padding-left: 4.2mm; }
+  li { margin-bottom: .9mm; }
+  .game { background: var(--tint); border: .3mm solid #2A2620; border-radius: 1.5mm; padding: 1.6mm 2.6mm .8mm; margin-top: 2.6mm; }
+  .game h2 { margin-top: 0; }
+  .read { font-size: 7.8pt; line-height: 1.25; color: #333; margin-top: 3mm; }
+  .read b { font-family: "IBM Plex Mono", "Courier New", monospace; font-weight: 600; font-size: 7.2pt; letter-spacing: .2mm; }
+  .foot { position: absolute; left: 10mm; right: 10mm; bottom: 5mm; font-size: 6.6pt; color: #4A5259; border-top: .2mm solid #2A2620; padding-top: .8mm; display: flex; justify-content: space-between; }
+  .cover h1 { font-size: 19pt; margin-top: 8mm; }
+  .cover .idx { columns: 1; margin: 2mm 0; padding: 0; list-style: none; font-size: 8.6pt; }
+  .cover .idx li { display: flex; gap: 2mm; align-items: baseline; margin-bottom: .7mm; }
+  .cover .chip { display: inline-block; width: 4.4mm; height: 3mm; border: .2mm solid #2A2620; border-radius: .6mm; flex: none; }
+  .cover .n { font-family: "IBM Plex Mono", "Courier New", monospace; font-size: 7.6pt; width: 5mm; flex: none; }
+</style>
+</head>
+<body>
+
+<!-- ============================ COVER ============================ -->
+<section class="card cover" style="--tint:#EFE4D3">
+  <div class="band"><span>THEORY CARDS</span><span>OPTIONAL READING</span></div>
+  <h1>THE RESEARCH BEHIND THE GAME</h1>
+  <p class="sub">What is known about high-performance teams, one page each, and where you can see it at the table.</p>
+  <p>Every mechanic in High-Performance Team was built from something researchers found about real teams, or from a theory about how people work together. Each card says what the idea is in plain words, lists what the research or the theory says, and then shows where it appears in the game.</p>
+  <p>Nothing here changes a rule, and you can play the whole game without reading a card. <b>These cards name the researchers on purpose.</b> The game itself never does.</p>
+  <ul class="idx">
+    <li><span class="chip" style="background:#EFE4D3"></span><span class="n">01</span>What makes a team high-performing</li>
+    <li><span class="chip" style="background:#EFE4D3"></span><span class="n">02</span>Teams develop over time</li>
+    <li><span class="chip" style="background:#D3CEDF"></span><span class="n">03</span>Psychological safety</li>
+    <li><span class="chip" style="background:#B5C7CF"></span><span class="n">04</span>Team reflexivity</li>
+    <li><span class="chip" style="background:#C7CFB5"></span><span class="n">05</span>Transactive memory: who knows what</li>
+    <li><span class="chip" style="background:#F7D7A1"></span><span class="n">06</span>Shared practice</li>
+    <li><span class="chip" style="background:#EFE4D3"></span><span class="n">07</span>Scaffolding and the zone of proximal development</li>
+    <li><span class="chip" style="background:#C7CFB5"></span><span class="n">08</span>Cross-training and breadth</li>
+    <li><span class="chip" style="background:#F0E3D1"></span><span class="n">09</span>Habitus: who you arrive as</li>
+    <li><span class="chip" style="background:#D9D3C4"></span><span class="n">10</span>Capital, standing and voice</li>
+    <li><span class="chip" style="background:#D3B1B1"></span><span class="n">11</span>Motivation and needs</li>
+    <li><span class="chip" style="background:#B5C7CF"></span><span class="n">12</span>Adaptation and resilience</li>
+    <li><span class="chip" style="background:#D3B1B1"></span><span class="n">13</span>Heroes, shared leadership and sustainable pace</li>
+    <li><span class="chip" style="background:#EFE4D3"></span><span class="n">14</span>Adding people: Brooks's Law and process loss</li>
+    <li><span class="chip" style="background:#D9D3C4"></span><span class="n">15</span>Newcomers: the established and the outsiders</li>
+    <li><span class="chip" style="background:#D3CEDF"></span><span class="n">16</span>Power, visibility and measures</li>
+    <li><span class="chip" style="background:#F7D7A1"></span><span class="n">17</span>Equality, shepherds and wolves</li>
+  </ul>
+  <p class="read"><b>A NOTE ON ACCURACY.</b> These are designers' summaries of the original works and of reviews, written to be read in a minute. Where a card describes how the game uses an idea, that is a design reading, not a finding. Cards 9, 10, 16 and 17 rest on theory and philosophy, not on experiments. Check the originals before you cite anything. The colour band on each card is the colour of the part of the game it belongs to.</p>
+  <div class="foot"><span>Rulebook v0.33 (draft)</span><span>Print at 100% on A5, one card per page</span></div>
+</section>
+
+<!-- ============================ 01 ============================ -->
+<section class="card" style="--tint:#EFE4D3">
+  <div class="band"><span>THEORY CARD 01</span><span>THE BIG PICTURE</span></div>
+  <h1>WHAT MAKES A TEAM HIGH-PERFORMING</h1>
+  <p class="sub">A group of people is not a team.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Katzenbach and Smith (1993) described a real team as a small number of people with complementary skills, committed to a shared purpose and to performance goals, who hold each other mutually accountable. A high-performance team goes one step further: its members are committed to one another's growth.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li><b>Hackman (2002)</b> found that how well a team does depends less on the team than on five conditions around it: it is a real team (bounded and interdependent), it has a compelling direction, an enabling structure, a supportive context and expert coaching.</li>
+    <li><b>Google's Project Aristotle</b> studied about 180 teams and found that who was on a team mattered less than how its members worked together. Psychological safety came first, then dependability, structure and clarity, meaning, and impact.</li>
+    <li><b>Woolley et al. (2010)</b> found a "collective intelligence" factor in groups. It predicted performance across different tasks. It related to members' social sensitivity and to how evenly they shared the talking, not to the average or highest individual IQ.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>The week is five days for the <b>whole team</b>, whatever its size. A real, interdependent team is the starting condition, not a goal.</li>
+      <li>The Ledger, the pool of adapt tokens and the Zone belong to the team, not to a player.</li>
+      <li><b>Team Score 88 or more</b> is Sustainable High Performance: the project shipped and the team got better. All features delivered with less than 88 is <b>Heroic Success</b>: the project made it, the team did not.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Katzenbach & Smith, <i>The Wisdom of Teams</i> (1993). Hackman, <i>Leading Teams</i> (2002). Google re:Work, write-up of Project Aristotle. Woolley, Chabris, Pentland, Hashmi & Malone, "Evidence for a collective intelligence factor in the performance of human groups", <i>Science</i> 330 (2010).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>01 / 17</span></div>
+</section>
+
+<!-- ============================ 02 ============================ -->
+<section class="card" style="--tint:#EFE4D3">
+  <div class="band"><span>THEORY CARD 02</span><span>THE BIG PICTURE</span></div>
+  <h1>TEAMS DEVELOP OVER TIME</h1>
+  <p class="sub">A team is not the same on day 1 and on day 35.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Tuckman (1965) described a sequence that groups tend to pass through: forming, storming, norming, performing. Adjourning was added in 1977. It is a useful map, not a law: real teams loop back, stall and skip steps.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li><b>Gersick (1988)</b> watched project teams and found they did not progress smoothly. The pattern set at the first meeting held until almost exactly the halfway point of the time they had. Then came a sudden transition: old approaches dropped, new ones adopted, and most of the progress followed.</li>
+    <li><b>Marks, Mathieu and Zaccaro (2001)</b> describe teamwork as alternating <b>transition phases</b> (planning, reviewing) and <b>action phases</b> (doing the work).</li>
+    <li>Early routines are sticky. What the team gets used to in its first weeks is hard to change later.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>The game switches parts on in stages: week 1 is only Work, Coordinate and Celebrate; the Ledger and the Events arrive in week 2; Learn, Teach and the Zone payoff in week 3; Combos in week 5. The table meets the team one idea at a time.</li>
+      <li>Every week alternates a transition (lay five cards, face the Events, adapt) with an action (the week runs, then you close it).</li>
+      <li>Week 4 opens nothing: a deliberate breath near the halfway point. That is a design echo of Gersick, not a rule taken from him.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Tuckman, "Developmental sequence in small groups", <i>Psychological Bulletin</i> 63 (1965); Tuckman & Jensen (1977). Gersick, "Time and transition in work teams", <i>Academy of Management Journal</i> 31 (1988). Marks, Mathieu & Zaccaro, "A temporally based framework and taxonomy of team processes", <i>Academy of Management Review</i> 26 (2001).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>02 / 17</span></div>
+</section>
+
+<!-- ============================ 03 ============================ -->
+<section class="card" style="--tint:#D3CEDF">
+  <div class="band"><span>THEORY CARD 03</span><span>THE LEDGER: TRUST</span></div>
+  <h1>PSYCHOLOGICAL SAFETY</h1>
+  <p class="sub">Safety is not declared. It is built, dully.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Psychological safety is a shared belief that the team is safe for interpersonal risk taking: asking a question, admitting a mistake, disagreeing with the plan. Edmondson (1999) showed it is a property of the <b>team</b>, not of individuals. Members of one team tend to feel alike about it, and teams differ from each other.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>In 51 work teams in a manufacturing company, higher team psychological safety went with more <b>learning behaviour</b> (asking for help, discussing errors, testing assumptions), and learning behaviour went with better team performance.</li>
+    <li>In hospital units, Edmondson (1996) found that the better teams reported <b>more</b> errors, not fewer, because they felt safe to say so.</li>
+    <li>Leaders build it by admitting they are fallible, inviting input and responding productively when someone speaks up. It builds slowly and is lost quickly.</li>
+    <li>Google's Project Aristotle ranked it first of five team dynamics.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li><b>Trust</b> is the game's psychological safety. Coordinate is the only card that raises it, one step a week. Take One For The Team lets a character spend Motivation to lift it, like a leader going first.</li>
+      <li>At Trust 0-1, <b>Teach does nothing</b>: nobody hands over a skill where it is not safe to say "I don't know". Reflect needs Trust 3.</li>
+      <li>At 4, the <b>Psychological Safety</b> Habit makes every People Event cost 1 less to cancel (a cost-1 People Event becomes free), and Trust 4-5 cancels one Event effect a week.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Edmondson, "Psychological safety and learning behavior in work teams", <i>Administrative Science Quarterly</i> 44(2) (1999). Edmondson, "Learning from mistakes is easier said than done", <i>Journal of Applied Behavioral Science</i> 32 (1996). Edmondson, <i>The Fearless Organization</i> (2018).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>03 / 17</span></div>
+</section>
+
+<!-- ============================ 04 ============================ -->
+<section class="card" style="--tint:#B5C7CF">
+  <div class="band"><span>THEORY CARD 04</span><span>HABIT: TEAM REFLEXIVITY</span></div>
+  <h1>TEAM REFLEXIVITY</h1>
+  <p class="sub">Reflection without change is just discussion.</p>
+  <h2>THE SCIENCE</h2>
+  <p>West (1996) defined team reflexivity as the extent to which team members overtly reflect upon the team's objectives, strategies and processes, and adapt them to current or expected circumstances. The adapting is the point: a team that talks and changes nothing has not been reflexive.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>Reflexivity has three objects: what we are trying to do (<b>objectives</b>), how we plan to do it (<b>strategies</b>) and how we work together (<b>processes</b>). A useful session touches all three, not only whether people get along.</li>
+    <li>It works best with honest dialogue (safety), a credible fact base instead of anecdote, and the authority to change how the team works.</li>
+    <li>It is a recurring practice (retrospectives, after-action reviews), not a one-off. Teams tend to reflect after setbacks and less under time pressure; in a real emergency the team needs command first and reflection afterward.</li>
+    <li>Reviews generally report a positive link with team performance, with caveats.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li><b>Reflect</b> needs Trust 3 and gives an Adaptability token. When the week gave real evidence, the team may <b>bank</b> that token in one of three HABIT wells instead of the pool: <b>OBJ.</b> a feature was banked, <b>STRAT.</b> the team adapted to 2 Events, <b>PROC.</b> an Event hit a track or a Hero was played.</li>
+      <li>The team also names <b>one thing it will do differently next week</b>.</li>
+      <li>Three wells filled turns over the Team Reflexivity coin: Customer Events then cost 1 less to cancel. The price is real: a banked token is one you cannot spend on an Event.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> West, "Reflexivity and work group effectiveness: a conceptual integration", in West (ed.), <i>Handbook of Work Group Psychology</i> (1996). Schippers, Edmondson & West, "Team reflexivity" (2017). Konradt, Otte, Schippers & Steenfatt, "Reflexivity in teams: a review and new perspectives", <i>Journal of Psychology</i> 150 (2016).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>04 / 17</span></div>
+</section>
+
+<!-- ============================ 05 ============================ -->
+<section class="card" style="--tint:#C7CFB5">
+  <div class="band"><span>THEORY CARD 05</span><span>THE LEDGER: CAPABILITY</span></div>
+  <h1>TRANSACTIVE MEMORY: WHO KNOWS WHAT</h1>
+  <p class="sub">A team remembers more than any one head can.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Wegner (1987) noticed that close couples and groups share a memory system: each person remembers a part, and everybody knows who remembers what. This "transactive memory" is a directory plus the habit of asking the right person.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li><b>Lewis (2003)</b> measured it in real teams with three parts: <b>specialisation</b> (members hold different expertise), <b>credibility</b> (members trust each other's knowledge) and <b>coordination</b> (they pass work smoothly).</li>
+    <li><b>Liang, Moreland and Argote (1995)</b>: groups trained together to assemble a radio performed better than groups whose members trained alone, and the difference came from a better shared sense of who knew what.</li>
+    <li>It is fragile. Lose the person who held a piece and you lose the knowledge and the directory entry. Time together builds it.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>Every character's SKILLS grid is public: everyone can read everyone's sheet, "how you know who to ask, and who to teach". The Zone is the team's picture of the same squares.</li>
+      <li>Filling a whole Zone row or column raises <b>Capability</b>. At Capability 0-1 the first Work card each week does nothing; at 4 the <b>Who Knows What</b> Habit makes Environment Events cost 1 less.</li>
+      <li>KNOWLEDGE HOARDING removes every Teach card for a week: a directory nobody can update.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Wegner, "Transactive memory: a contemporary analysis of the group mind", in Mullen & Goethals (eds), <i>Theories of Group Behavior</i> (1987). Lewis, "Measuring transactive memory systems in the field", <i>Journal of Applied Psychology</i> 88 (2003). Liang, Moreland & Argote, <i>Personality and Social Psychology Bulletin</i> 21 (1995).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>05 / 17</span></div>
+</section>
+
+<!-- ============================ 06 ============================ -->
+<section class="card" style="--tint:#F7D7A1">
+  <div class="band"><span>THEORY CARD 06</span><span>THE LEDGER: SHARED PRACTICE</span></div>
+  <h1>SHARED PRACTICE</h1>
+  <p class="sub">Familiar work goes faster, until it is the wrong work.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Lave and Wenger (1991) and Wenger (1998) describe a community of practice as people held together by <b>mutual engagement</b> (doing things together), a <b>joint enterprise</b> (a purpose the group negotiates) and a <b>shared repertoire</b>: the routines, words, tools and stories the group has built. Learning is becoming a participant, not just receiving information.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>A shared repertoire makes familiar work faster and cheaper, because less has to be explained.</li>
+    <li>The cost is inertia. Gersick and Hackman (1990) found that habitual routines in groups save effort, but can keep a group repeating the old pattern after the situation has changed.</li>
+    <li>Newcomers learn by <b>legitimate peripheral participation</b>: real, low-risk work at the edge of the practice, moving inward as they gain competence.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li><b>Shared Practice</b> grows with Reflect and with stacking a Zone square (two of you now cover it).</li>
+      <li>At 4-5, the second and every later Work card each week gives +1 extra: the team has a routine for what it does most. At 0-1, Plan does nothing. At 4 the <b>Shared Repertoire</b> Habit makes Management Events cost 1 less.</li>
+      <li>The rulebook prints the warning: high Shared Practice with a thin pool of adapt tokens is the rigid team, brilliant at what it already knows and unable to change course.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Lave & Wenger, <i>Situated Learning</i> (1991). Wenger, <i>Communities of Practice</i> (1998). Gersick & Hackman, "Habitual routines in task-performing groups", <i>Organizational Behavior and Human Decision Processes</i> 47 (1990).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>06 / 17</span></div>
+</section>
+
+<!-- ============================ 07 ============================ -->
+<section class="card" style="--tint:#EFE4D3">
+  <div class="band"><span>THEORY CARD 07</span><span>LEARN AND TEACH</span></div>
+  <h1>SCAFFOLDING AND THE ZONE OF PROXIMAL DEVELOPMENT</h1>
+  <p class="sub">One step beyond what you can do alone.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Vygotsky argued that learning happens first <b>between</b> people and only later inside a person. The zone of proximal development is the gap between what a learner can do alone and what they can do with help from a more knowledgeable other.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li><b>Wood, Bruner and Ross (1976)</b> called that help <b>scaffolding</b>: the tutor takes over the parts of a task the learner cannot yet manage, then gradually withdraws.</li>
+    <li>Learning works best one step beyond the present level: too easy teaches nothing, too far gets nowhere.</li>
+    <li>Teaching costs the teacher time, and it is how one person's knowledge becomes the team's.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li><b>Learn</b>: a character marks one square left or right of one they already cover, in their own row, with nobody teaching them. A short step, taken alone.</li>
+      <li><b>Teach</b>: up to two teachers each hand a partner a square up, down, left or right of one the teacher covers, in any row. Both teachers gain +1 Capital: give it away and it becomes standing.</li>
+      <li>Orthogonal steps only, never a diagonal leap. A square you got this week cannot be taught this week.</li>
+      <li>Each takes one of the week's five days, so the more knowledgeable other is paid for in opportunity, not as a penalty.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Vygotsky, <i>Mind in Society</i> (1978). Wood, Bruner & Ross, "The role of tutoring in problem solving", <i>Journal of Child Psychology and Psychiatry</i> 17 (1976).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>07 / 17</span></div>
+</section>
+
+<!-- ============================ 08 ============================ -->
+<section class="card" style="--tint:#C7CFB5">
+  <div class="band"><span>THEORY CARD 08</span><span>THE ZONE</span></div>
+  <h1>CROSS-TRAINING AND BREADTH</h1>
+  <p class="sub">Deep in one thing, able to follow the next.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Splitting work into narrow slices makes people efficient and makes the team fragile. Marx (1846) contrasted the fragmented worker with a "fully developed individual" able to do different kinds of work. Modern team research asks the practical version: what happens when teammates learn each other's jobs?</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li><b>Marks, Sabella, Burke and Zaccaro (2002)</b> found that cross-training teammates in each other's roles improved their shared understanding of the work and how well they coordinated.</li>
+    <li>Specialisation with no overlap creates <b>single points of failure</b>: when the one expert is away, the work stops.</li>
+    <li>Too much overlap throws away the gain from specialising. The useful shape is deep in one area and broad enough to understand the next (sometimes called "T-shaped").</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>Your Head sets the row and your Item the column you start in. The rest of the 5x5 grid is what you can grow into.</li>
+      <li><b>Cross-Trained</b>: the first time your own sheet has squares in a third row, you gain +1 Capital.</li>
+      <li>A full Zone row or column raises the team's Capability. A full column can only be reached with Teach, because Learn never leaves your own row.</li>
+      <li>No block on the Feature Tower carries a name: the work is the team's.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Marks, Sabella, Burke & Zaccaro, "The impact of cross-training on team effectiveness", <i>Journal of Applied Psychology</i> 87 (2002). Marx & Engels, <i>The German Ideology</i> (1846).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>08 / 17</span></div>
+</section>
+
+<!-- ============================ 09 ============================ -->
+<section class="card" style="--tint:#F0E3D1">
+  <div class="band"><span>THEORY CARD 09</span><span>THE FIGURE: HABITUS</span></div>
+  <h1>HABITUS: WHO YOU ARRIVE AS</h1>
+  <p class="sub">History made into instinct. (Theory, not experiment.)</p>
+  <h2>THE SCIENCE</h2>
+  <p>Bourdieu used <b>habitus</b> for the durable dispositions people carry from their upbringing, education and experience: ways of seeing, valuing and acting that feel natural and arrive without calculation. It is not a personality trait and not a choice.</p>
+  <h2>WHAT THE THEORY SAYS</h2>
+  <ul>
+    <li>Habitus fits some settings better than others. Where a field rewards your dispositions, you feel at home; elsewhere you feel out of place.</li>
+    <li>It is slow to change. When a field changes fast, habitus lags and old instincts keep firing. Bourdieu called this <b>hysteresis</b>.</li>
+    <li>The same background gives both strengths and costs: what makes someone good at one thing makes another harder.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>You are <b>dealt</b> five parts and build the figure before any rule is read: Base (upbringing), Legs (instinct under pressure), Torso (values), Head (education, your row on the Zone) and Item (the skill you hold, your column).</li>
+      <li>No part is a flat bonus. Each pairs a <b>strength</b> with a <b>tendency</b>. Your Torso decides which Events wear you down and which you shrug off.</li>
+      <li>The Withdraw Legs card shows hysteresis: +1 Motivation in weeks 1-3, then a loss of 1 from week 4. Same instinct, a field that has moved on.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Bourdieu, <i>Outline of a Theory of Practice</i> (1977); <i>The Logic of Practice</i> (1990).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>09 / 17</span></div>
+</section>
+
+<!-- ============================ 10 ============================ -->
+<section class="card" style="--tint:#D9D3C4">
+  <div class="band"><span>THEORY CARD 10</span><span>CAPITAL AND STANDING</span></div>
+  <h1>CAPITAL, STANDING AND VOICE</h1>
+  <p class="sub">Standing is converted, in public, from something you already hold. (Theory.)</p>
+  <h2>THE SCIENCE</h2>
+  <p>Bourdieu (1986) argued that capital is not only money. Economic, cultural (knowledge, credentials), social (networks) and symbolic (recognised prestige) capital can be converted into one another. Symbolic capital exists only when others in the field recognise it. In <i>Language and Symbolic Power</i> (1991) he adds that what someone says carries force because of who is saying it.</p>
+  <h2>WHAT THE THEORY SAYS</h2>
+  <ul>
+    <li>Private competence earns nothing until other people see it.</li>
+    <li>Capital is <b>relative</b>: its worth depends on what everyone else in the field holds.</li>
+    <li>Whoever is recognised as speaking for the group has an authority that can be used well, or can concentrate in one person.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>Capital starts at 0 and is earned only through play: teaching, banked work, a Demo, a strength that visibly worked, Cross-Trained, Take One For The Team. The team must witness it.</li>
+      <li><b>Demo</b> needs Capital at or above the team average, a relative gate. Standing compounds: a character who pulls ahead shuts the others out unless the team spreads it.</li>
+      <li><b>Standing</b> names whoever holds the most Capital. At 5 the team gets <b>Authorized Voice</b>: once a week, cancel an Event outright.</li>
+      <li>A Recognition character names the teammate who witnessed their gain, and that teammate gains +1 Motivation.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Bourdieu, "The forms of capital" (1986); <i>Language and Symbolic Power</i> (1991).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>10 / 17</span></div>
+</section>
+
+<!-- ============================ 11 ============================ -->
+<section class="card" style="--tint:#D3B1B1">
+  <div class="band"><span>THEORY CARD 11</span><span>MOTIVATION AND THE GRIND</span></div>
+  <h1>MOTIVATION AND NEEDS</h1>
+  <p class="sub">What keeps people in the game, and what wears them out.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Self-determination theory (Deci and Ryan, 2000) holds that people function and feel best when three basic needs are met: <b>autonomy</b> (choice over what you do), <b>competence</b> (feeling effective and learning) and <b>relatedness</b> (belonging with the people you work with). When these are thwarted, motivation and wellbeing fall.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>Burnout research (Maslach and Leiter) and the job demands-resources model (Demerouti et al., 2001) say that sustained high demands without enough resources lead to exhaustion, while resources such as support and autonomy sustain engagement.</li>
+    <li>Recovery matters: a team that only pushes loses people.</li>
+    <li>People are not all worn down by the same things. Fit between person and work matters.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>Motivation starts at 3 (cap 5). The weekly <b>grind</b> takes 1 from everyone; <b>Celebrate</b> gives +2, or +3 when a feature was banked: marking progress is the recovery. At 0 a character quits.</li>
+      <li>Your Torso is also your <b>Need</b>, read when the week closes: Autonomy (at most 1 Event landed on the team), Community (a Coordinate, Reflect or Celebrate), Quality (Work added to a feature, or you lose 3), Hierarchy (a Teach), Recognition (a feature banked or a Hero spent). A met Need gives +1.</li>
+      <li>The five Needs are a loose design reading of self-determination theory, not a validated scale. Overtime and Flex are demands taken on credit.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Deci & Ryan, "The 'what' and 'why' of goal pursuits", <i>Psychological Inquiry</i> 11 (2000). Demerouti, Bakker, Nachreiner & Schaufeli, <i>Journal of Applied Psychology</i> 86 (2001). Maslach & Leiter, <i>The Truth About Burnout</i> (1997).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>11 / 17</span></div>
+</section>
+
+<!-- ============================ 12 ============================ -->
+<section class="card" style="--tint:#B5C7CF">
+  <div class="band"><span>THEORY CARD 12</span><span>THE ADAPTABILITY POOL</span></div>
+  <h1>ADAPTATION AND RESILIENCE</h1>
+  <p class="sub">Plans are made in ignorance, and reality lands on them.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Teams meet surprises. Burke, Stagl, Salas, Pierce and Kendall (2006) describe team adaptation as a cycle: assess the new situation, formulate a plan, execute it, and learn from the result. Adaptive teams do this together, drawing on shared understanding, trust and watching each other's work.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>Adaptation needs <b>spare capacity</b>. A team running at its limit has nothing left to respond with.</li>
+    <li>It cannot be bought at the moment of need. The capacity has to be built beforehand.</li>
+    <li>There is a difference between <b>coping</b> (absorbing a hit, at the same cost every time) and <b>changing</b> (altering how the team works so the hit costs less afterward).</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>The pool of <b>adapt tokens</b> (start 3, cap 6) is the spare capacity. Align, Workshop and Reflect add tokens when the week closes, so a token added this week cannot help against this week's Events: a team that wants to react has to start paying in week 2, not week 6.</li>
+      <li>Events are drawn after the plan is laid, two a week from week 2.</li>
+      <li>Paying tokens is coping: it costs the same every time. A <b>Habit</b> is changing: it makes a whole category of Event cheaper for good.</li>
+      <li>A Hero cancels an Event for free, once per game.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Burke, Stagl, Salas, Pierce & Kendall, "Understanding team adaptation: a conceptual analysis and model", <i>Journal of Applied Psychology</i> 91 (2006). Weick & Sutcliffe, <i>Managing the Unexpected</i> (2001).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>12 / 17</span></div>
+</section>
+
+<!-- ============================ 13 ============================ -->
+<section class="card" style="--tint:#D3B1B1">
+  <div class="band"><span>THEORY CARD 13</span><span>HERO AND OVERTIME</span></div>
+  <h1>HEROES, SHARED LEADERSHIP AND SUSTAINABLE PACE</h1>
+  <p class="sub">Time borrowed from the future gets repaid, with interest.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Many teams lean on a hero: one person who steps up, takes charge and works the extra hours. It works for a while. Research on shared leadership (Pearce and Conger, 2003) treats leadership as influence spread across the team, passing to whoever has the knowledge the moment needs.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>A meta-analysis (Wang, Waldman and Zhang, 2014) found shared leadership positively related to team effectiveness.</li>
+    <li>A team that depends on one hero is fragile: when they leave or burn out, nothing is left. Sustained overwork drives exhaustion (card 11).</li>
+    <li>Time borrowed from the future must be repaid, and the bill tends to arrive when the team can least afford it.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li><b>Hero</b>: once per game, a character whose Legs match an Event's Pressure Response, with 3 Motivation, cancels it for free, gains +2 Capital and gives another character +1 Motivation. A Competitive Base makes the Hero reusable, and loses 1 Motivation when someone else plays theirs.</li>
+      <li><b>Overtime</b>: a sixth card costs 1 Motivation and a Flex marker, a day you owe back. Unrepaid Flex costs 2 Team Score. In week 7 there is no later to repay: crunch buys days and the bill arrives at scoring.</li>
+      <li>The two endings are the argument: <b>Heroic Success</b> against <b>Sustainable High Performance</b>.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Pearce & Conger (eds), <i>Shared Leadership</i> (2003). Wang, Waldman & Zhang, "A meta-analysis of shared leadership and team effectiveness", <i>Journal of Applied Psychology</i> 99 (2014).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>13 / 17</span></div>
+</section>
+
+<!-- ============================ 14 ============================ -->
+<section class="card" style="--tint:#EFE4D3">
+  <div class="band"><span>THEORY CARD 14</span><span>TEAM SIZE AND WORK</span></div>
+  <h1>ADDING PEOPLE: BROOKS'S LAW AND PROCESS LOSS</h1>
+  <p class="sub">More hands, more talk.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Brooks (1975) argued that adding people to a late software project makes it later. New people need time to learn, they pull experienced people away to teach them, and the number of communication paths grows fast: a team of n people has n(n-1)/2 pairs.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li><b>Steiner (1972)</b>: a team's actual output is its potential output minus <b>process loss</b>, the effort lost to coordination and to lowered motivation.</li>
+    <li>Individual effort tends to fall as groups grow (the Ringelmann effect; social loafing, Latane, Williams and Harkins, 1979).</li>
+    <li>Larger teams can know more. The gain is real only when coordination is cheap.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>The week is <b>five team days</b>, whatever the headcount. A bigger team gets more options, not more actions, and more people to keep motivated, because the weekly grind hits everyone.</li>
+      <li><b>MORE HANDS</b>: the feature with the most Work this week has that Work halved.</li>
+      <li>A character who quits is gone for the week. The replacement joins at the start of the next and pays two days of onboarding, with no shortcut.</li>
+      <li>Features with a dependency cannot take Work until the feature they depend on is banked, and the blocks are shaped so they cannot be placed early.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Brooks, <i>The Mythical Man-Month</i> (1975). Steiner, <i>Group Process and Productivity</i> (1972). Latane, Williams & Harkins, "Many hands make light the work", <i>Journal of Personality and Social Psychology</i> 37 (1979).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>14 / 17</span></div>
+</section>
+
+<!-- ============================ 15 ============================ -->
+<section class="card" style="--tint:#D9D3C4">
+  <div class="band"><span>THEORY CARD 15</span><span>ONBOARDING</span></div>
+  <h1>NEWCOMERS: THE ESTABLISHED AND THE OUTSIDERS</h1>
+  <p class="sub">The gap is cohesion, not competence.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Elias and Scotson (1965) studied a town they called Winston Parva, with two similar groups of workers who differed mainly in how long they had lived there. The long-settled "established" group held the higher status and kept it through gossip, praise for themselves and stigma for the newcomers. The difference was cohesion and time together, not merit.</p>
+  <h2>WHAT THE RESEARCH SAYS</h2>
+  <ul>
+    <li>Newcomers to teams are often judged by tenure before ability. A newcomer can be the strongest person in the room and still sit at the edge for months.</li>
+    <li>Lave and Wenger: newcomers become full members through <b>legitimate peripheral participation</b>, real work at low risk, moving inward.</li>
+    <li>Established members who vouch for a newcomer tend to shorten the gap (a common finding in mentoring and sponsorship practice, not tied to one study here).</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>When a character quits or is fired, the seat sits empty for the week. The replacement goes through <b>Rushed Onboarding</b>: Work output 1 lower and no Capital, until two days of Learn or Coordinate involving them have been played.</li>
+      <li>It is <b>positional, not a competence penalty</b>. The newcomer's skills change nothing.</li>
+      <li><b>Sponsorship</b>: a character with Capital 4 or more can spend one of the two days paired with the newcomer, which finishes onboarding in 1 day instead of 2. An established member vouching for an outsider.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Elias & Scotson, <i>The Established and the Outsiders</i> (1965). Lave & Wenger, <i>Situated Learning</i> (1991).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>15 / 17</span></div>
+</section>
+
+<!-- ============================ 16 ============================ -->
+<section class="card" style="--tint:#D3CEDF">
+  <div class="band"><span>THEORY CARD 16</span><span>THE LEDGER AND THE SCORE</span></div>
+  <h1>POWER, VISIBILITY AND MEASURES</h1>
+  <p class="sub">When a measure becomes a target, it ceases to be a good measure.</p>
+  <h2>THE SCIENCE</h2>
+  <p>Foucault (1975) argued that modern institutions govern less by force than by <b>visibility and comparison</b>: being observed, being measured against a norm, being examined. His emblem is the Panopticon, where people who might be watched start watching themselves. Goodhart (1975), in Strathern's 1997 wording, made the matching point about numbers: once a measure becomes a target, people optimise the number.</p>
+  <h2>WHAT THE THEORY SAYS</h2>
+  <ul>
+    <li>Dashboards and scorecards make performance legible. That can build fairness and trust, and it also changes behaviour.</li>
+    <li>Targets get gamed: padded estimates, split tickets, the easy items closed first.</li>
+    <li>"Above average" is a norm, a position in a distribution that moves as everyone moves.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li>The Ledger and every character's Capital sit face up for the whole game. Standing is always legible.</li>
+      <li><b>Demo</b> needs Capital at or above the team average, a gate that moves as the team does.</li>
+      <li><b>Team Score</b> is a proxy. The two endings keep it honest: every feature delivered with under 88 is Heroic Success, "the project made it, the team did not".</li>
+      <li>THE DASHBOARD Event: "The number went up. Nothing else did."</li>
+      <li>Foucault would read the Ledger's growth tracks as the same machinery. The game keeps that as a tension, not a mechanic.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Foucault, <i>Discipline and Punish</i> (1975). Goodhart (1975). Strathern, "'Improving ratings': audit in the British university system", <i>European Review</i> 5 (1997).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>16 / 17</span></div>
+</section>
+
+<!-- ============================ 17 ============================ -->
+<section class="card" style="--tint:#F7D7A1">
+  <div class="band"><span>THEORY CARD 17</span><span>TWO MANAGEMENT EVENTS</span></div>
+  <h1>EQUALITY, SHEPHERDS AND WOLVES</h1>
+  <p class="sub">Philosophy, not experiment. The game borrows a diagnosis, not a conclusion.</p>
+  <h2>THE IDEA</h2>
+  <p>Nietzsche (1887) argued that a morality of equality can grow out of resentment, and can be used by whoever stands outside the flock. His figure is the ascetic priest as shepherd of the herd, who keeps it manageable by turning its resentment inward. Foucault's lectures (1977-78) on <b>pastoral power</b> trace the shepherd's care for each and for all as one root of modern management.</p>
+  <h2>WHAT TO TAKE FROM IT</h2>
+  <ul>
+    <li>"We are all equal here" can be true and kind. It can also be the sentence that leaves nobody able to speak for the team, while the people who hold budgets and roadmaps stay unequal.</li>
+    <li>Research on collective intelligence points the other way on one thing: evenly shared turn-taking helps (Woolley et al., card 01). Equal voice is not the same as erasing everyone's standing.</li>
+    <li>A team's guardian is easier to remove than to replace.</li>
+  </ul>
+  <div class="game">
+    <h2>IN THE GAME</h2>
+    <ul>
+      <li><b>EVERYONE IS EQUAL</b>: no Hero and no Authorized Voice this week, nobody gains Capital, and everyone loses 1 Motivation.</li>
+      <li><b>THE WOLF</b> cannot be cancelled by tokens, a Hero or Authorized Voice. Management targets <b>the shepherd</b>, the character with the most Capital, who stays on the team. The team <b>steps up</b> to shield them (that character gains +1 Capital, every character loses 1 Motivation) or that character's Capital is erased.</li>
+      <li>The wolf-and-shepherd line is the designers' own, not Nietzsche's wording.</li>
+    </ul>
+  </div>
+  <p class="read"><b>READ.</b> Nietzsche, <i>On the Genealogy of Morality</i> (1887), essay III. Foucault, <i>Security, Territory, Population</i> (lectures, 1977-78).</p>
+  <div class="foot"><span>Optional reading - not part of the rules</span><span>17 / 17</span></div>
+</section>
+
+</body>
+</html>

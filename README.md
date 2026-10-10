@@ -10,6 +10,10 @@
   `leaflet-how-to-play.md`) covering every print sheet (grouping, colours, text,
   illustration) - edit these to drive SVG changes; see `board-game-component-specs` skill.
 - `components/3d-models/` - 3D-printable files (STL/3MF/STEP) and print notes (material, supports, orientation).
+- `print/theory-cards-A5.html` - 17 optional A5 theory cards (plus a cover): the research behind the
+  game and where it shows at the table. Print at 100% on A5, one card per page. Companion reading, not rules.
+- `scripts/balance_sim.py` - Monte Carlo balance simulator (Work cost, Adaptability, Motivation). A model of
+  rulebook v0.33 with explicit assumptions at the top of the file; run `python scripts/balance_sim.py --help`.
 - `extensions/` - optional add-on modules, one subfolder per pack, cut out of the core game
   after a playtest finding of "too complicated" (see `board-game-extension-packs` skill).
 - `playtests/` - dated playtest logs: what we tested, what worked, what changed.

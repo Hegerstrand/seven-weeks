@@ -40,25 +40,40 @@ on the reverse.</desc>
 <text x="14" y="144.5" class="s" font-size="4.2">Cancel Events now. <tspan font-weight="bold">Nothing resolves until you are done.</tspan></text>
 
 <g id="pool">
-  <text x="27" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">ADAPTABILITY</text>
-  <rect x="24" y="153" width="58" height="49" rx="1.5" fill="#B5C7CF"/>
-  <rect x="24" y="153" width="58" height="49" rx="1.5" class="w"/>
-  <rect x="34" y="163" width="10" height="10" rx="1" class="w"/><rect x="48" y="163" width="10" height="10" rx="1" class="w"/><rect x="62" y="163" width="10" height="10" rx="1" class="w"/>
-  <rect x="34" y="179" width="10" height="10" rx="1" class="w"/><rect x="48" y="179" width="10" height="10" rx="1" class="w"/><rect x="62" y="179" width="10" height="10" rx="1" class="w"/>
-  <text x="27" y="192" class="s" font-size="2.8">The team's adapt tokens, up to 6.</text>
-  <text x="27" y="196" class="s" font-size="2.8">Cancel an Event: pay its number.</text>
-  <text x="27" y="200" class="s" font-size="2.8">Tokens stay until spent.</text>
+  <text x="14" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">ADAPTABILITY</text>
+  <rect x="11" y="153" width="54" height="45" rx="1.5" fill="#B5C7CF"/>
+  <rect x="11" y="153" width="54" height="45" rx="1.5" class="w"/>
+  <rect x="19" y="157" width="10" height="10" rx="1" class="w"/><rect x="33" y="157" width="10" height="10" rx="1" class="w"/><rect x="47" y="157" width="10" height="10" rx="1" class="w"/>
+  <rect x="19" y="170" width="10" height="10" rx="1" class="w"/><rect x="33" y="170" width="10" height="10" rx="1" class="w"/><rect x="47" y="170" width="10" height="10" rx="1" class="w"/>
+  <text x="14" y="185" class="s" font-size="2.7">Start with 3. Up to 6.</text>
+  <text x="14" y="188.5" class="s" font-size="2.7">Earned: Align, Workshop, Reflect.</text>
+  <text x="14" y="192" class="s" font-size="2.7">Spent: pay an Event's number.</text>
+  <text x="14" y="195.5" class="s" font-size="2.7">Tokens stay until spent.</text>
 </g>
 
 <g id="lane-1">
-  <text x="95" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">HERO · CANCELS IT</text>
-  <rect x="92" y="153" width="58" height="49" rx="1.5" fill="#F0E3D1"/>
-  <rect x="92" y="153" width="58" height="49" rx="1.5" class="w"/>
-  <rect x="121.46" y="156.48" width="16.38" height="3.22" rx=".45" fill="#D3B1B1"/>
-  <text x="95" y="159" class="s" font-size="2.8">Needs your Legs, and <tspan font-weight="bold">3+ Motivation</tspan>.</text>
-  <rect x="99" y="163" width="44" height="36" rx="1.5" class="w" stroke-dasharray="2 1.5"/>
-  <polygon points="0,-4.32 3.84,2.52 -3.84,2.52" fill="#905151" stroke="#2A2620" stroke-width=".45" transform="translate(121,181)"/>
+  <text x="71" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">HERO · CANCELS IT</text>
+  <rect x="68" y="153" width="50" height="45" rx="1.5" fill="#F0E3D1"/>
+  <rect x="68" y="153" width="50" height="45" rx="1.5" class="w"/>
+  <rect x="97.46" y="156.48" width="16.38" height="3.22" rx=".45" fill="#D3B1B1"/>
+  <text x="71" y="159" class="s" font-size="2.8">Needs your Legs, and <tspan font-weight="bold">3+ Motivation</tspan>.</text>
+  <rect x="71" y="161" width="44" height="36" rx="1.5" class="w" stroke-dasharray="2 1.5"/>
+  <polygon points="0,-4.32 3.84,2.52 -3.84,2.52" fill="#905151" stroke="#2A2620" stroke-width=".45" transform="translate(93,179)"/>
 </g>
+
+<g id="habit-lane">
+  <text x="124" y="151.5" class="m q" font-size="3.4" letter-spacing=".4">HABIT</text>
+  <rect x="121" y="153" width="42" height="45" rx="1.5" fill="#B5C7CF"/>
+  <rect x="121" y="153" width="42" height="45" rx="1.5" class="w"/>
+  <text x="142" y="157.4" class="m" font-size="2.6" text-anchor="middle">TEAM REFLEXIVITY</text>
+  <text x="142" y="160.6" class="m q" font-size="2.2" text-anchor="middle">WEST 1996</text>
+  <circle cx="142" cy="173.5" r="8" class="w"/>
+  <circle cx="142" cy="173.5" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <g class="m q" font-size="2.1" text-anchor="middle"><text x="129.5" y="186.6">OBJ.</text><text x="142" y="186.6">STRAT.</text><text x="154.5" y="186.6">PROC.</text></g>
+  <circle cx="129.5" cy="192.6" r="5.2" class="w"/><circle cx="142" cy="192.6" r="5.2" class="w"/><circle cx="154.5" cy="192.6" r="5.2" class="w"/>
+</g>
+<text x="14" y="201.4" class="s" font-size="2.5">REFLECT: bank its token in the well its evidence matches, and name one change for next week.</text>
+<text x="14" y="204.6" class="s" font-size="2.5">OBJ. a feature banked · STRAT. 2 Events adapted to · PROC. an Event hit a track, or a Hero played. Three wells turn the coin.</text>
 
 <!-- ═══ CLOSE THE WEEK ═══ -->
 <rect x="8" y="209" width="158" height="82" rx="2" class="r"/>

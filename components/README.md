@@ -31,7 +31,7 @@ for the full workflow and template.
 | Lock tiles | 2 | Physically cover features D and F until B / C bank | To design |
 | **Habit coins** | 5 | **3D print, resin - double-sided 14 mm coins, one per Ledger row. Track marker on one face, the acquired Habit on the other (§18)** | Spec'd in `3d-models/` |
 | Week board | 1 | 5 weekday slots + the 1-7 ladder to the deadline | On the main board |
-| Event Deck | 23 cards | Printed cards; 2 drawn per week from week 2 | Drafted in rulebook §11 |
+| Event Deck | 25 cards | Printed cards; 2 drawn per week from week 2 | Drafted in rulebook §11 |
 | **Motivation tokens** | 25 (5 per character × 5 characters) | Domed discs seating into player-board wells | **Off-the-shelf token, not printed** - fallback print spec in `3d-models/` |
 | Knowledge cards | Per character | Cards, copied to whoever you teach | To design |
 | Team State tracks (Trust, Capability, Shared Practice, Adaptability, Standing) | 1 board | The Ledger, on the main board | To design |
@@ -70,6 +70,7 @@ the same way the others do, and so it can carry the table-placement guide too.
 | **3** | A4 landscape | `board-3-FRONT-the-team-A4-landscape.svg` | `board-3-BACK-week-3-the-team-A4-landscape.svg` |
 | **4** | A4 landscape | `board-4-FRONT-the-zone-A4-landscape.svg` | `board-4-BACK-the-zone-A4-landscape.svg` - never flips during play |
 | **4b** | A4 landscape, both faces on one page | `board-4b-the-zone-payoff-127x104mm-A4-landscape.svg` (Face A) | same file (Face B) - waits face down until week 3 |
+| **Zone tiles** | A4 landscape, both faces on one page | `zone-tiles-A4-landscape.svg` (left block: 25 one-person faces) | same file (right block: 25 stacked faces) - cut the sheet in half, glue one block to each side of one 2 mm greyboard, then cut along the tick marks |
 
 Only board 1 needs A3 - it carries five 65 × 90 card slots, six features and the tower
 plinth. Boards 2, 3 and 4 fit A4 comfortably and printing them larger would only cost paper.
@@ -135,7 +136,7 @@ before this paragraph is true again.
 **The cover plates.** Three pieces of cardboard hide the parts of the board that aren't in play
 yet (§3.0). Each one carries its reveal card on the *underside*, so the rule arrives in the same
 gesture that uncovers the board - nobody is read a subsystem before the week they need it.
-Plate 2 covers sheet 2, plate 3 covers the Ledger, plate 4 covers the Standing row. The
+Plate 2 covers sheet 2, plate 3 covers the Ledger. Standing is a row printed on the Ledger itself. The
 Specimen panel along the bottom of each player board isn't a cover plate either - it's printed
 there from setup and simply isn't read until week 3 (a light dashed rule marks where it
 starts). Sheet 4b isn't a cover plate - it's a

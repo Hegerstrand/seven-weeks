@@ -28,8 +28,8 @@ DEVELOPMENT instead, added to the table at week 3.</desc>
   <g id="p3"><circle cx="0" cy="-1" r=".5" class="pip"/><circle cx="-1" cy=".85" r=".5" class="pip"/><circle cx="1" cy=".85" r=".5" class="pip"/></g>
   <g id="p4"><circle cx="-.8" cy="-.8" r=".45" class="pip"/><circle cx=".8" cy="-.8" r=".45" class="pip"/><circle cx="-.8" cy=".8" r=".45" class="pip"/><circle cx=".8" cy=".8" r=".45" class="pip"/></g>
   <g id="p5"><circle cx="-.8" cy="-.8" r=".4" class="pip"/><circle cx=".8" cy="-.8" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.8" cy=".8" r=".4" class="pip"/><circle cx=".8" cy=".8" r=".4" class="pip"/></g>
-  <g id="tile-one"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#EFE4D3" stroke="#2A2620" stroke-width=".4"/><circle cx="0" cy="0" r="1.1" class="pip"/></g>
-  <g id="tile-stack"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".4"/><circle cx="-.7" cy="-.7" r="1.1" fill="#C7CFB5" stroke="#2A2620" stroke-width=".35"/><circle cx=".7" cy=".7" r="1.1" class="pip"/></g>
+  <g id="tile-one"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".4"/><circle cx="0" cy="0" r="1.1" class="pip"/></g>
+  <g id="tile-stack"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#F7D7A1" stroke="#2A2620" stroke-width=".4"/><circle cx="-.7" cy="-.7" r="1.1" fill="#F7D7A1" stroke="#2A2620" stroke-width=".35"/><circle cx=".7" cy=".7" r="1.1" class="pip"/></g>
 </defs>
 
 <rect width="297" height="210" fill="#FFFFFF"/>

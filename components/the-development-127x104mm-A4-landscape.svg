@@ -29,7 +29,7 @@ one sheet.</desc>
 <text x="20" y="29" class="m" font-size="5" letter-spacing="1.4">HOW YOU COVER</text>
 <text x="20" y="38" class="m" font-size="3.4" letter-spacing=".4">LEARN</text>
 <text x="45" y="38" class="s" font-size="3.4">pick up a new square, <tspan font-weight="bold">left or right</tspan> of one you</text>
-<text x="45" y="42.5" class="s" font-size="3.4">cover, in your own row. The team names who. No teacher.</text>
+<text x="45" y="42.5" class="s" font-size="3.4">cover, in your own row. Everyone does it, up to 5 new squares. No teacher.</text>
 <text x="20" y="51" class="m" font-size="3.4" letter-spacing=".4">TEACH</text>
 <text x="45" y="51" class="s" font-size="3.4">let a partner mark a square - <tspan font-weight="bold">up, down,</tspan></text>
 <text x="45" y="55.5" class="s" font-size="3.4"><tspan font-weight="bold">left or right</tspan> of one you cover, in any row.</text>
@@ -42,10 +42,10 @@ one sheet.</desc>
 <text x="20" y="80.5" class="m" font-size="4.6" letter-spacing="1.2">THE LEDGER READS THIS</text>
 <rect x="20" y="83.5" width="112" height="8.5" rx="1.5" fill="#C7CFB5"/>
 <text x="23" y="87.3" class="m" font-size="3.4" letter-spacing=".3">CAPABILITY · A FULL LINE</text>
-<text x="23" y="90.8" class="s" font-size="3.2">a whole row or column of THE ZONE tiled → <tspan font-weight="bold">+1 Capability</tspan></text>
-<rect x="20" y="93.5" width="112" height="8.5" rx="1.5" fill="#FAECBE"/>
+<text x="23" y="90.8" class="s" font-size="3.2">every square of a row or column of THE ZONE tiled → <tspan font-weight="bold">+1 Capability</tspan></text>
+<rect x="20" y="93.5" width="112" height="8.5" rx="1.5" fill="#F7D7A1"/>
 <text x="23" y="97.3" class="m" font-size="3.4" letter-spacing=".3">SHARED PRACTICE · A STACK</text>
-<text x="23" y="100.8" class="s" font-size="3.2">a tile flipped to its stacked face → <tspan font-weight="bold">+1 Shared Practice</tspan></text>
+<text x="23" y="100.8" class="s" font-size="3.2">a tile flips to stacked: two of you cover it → <tspan font-weight="bold">+1 Shared Practice</tspan></text>
 <rect x="20" y="103.5" width="112" height="8.5" rx="1.5" fill="#D9D3C4"/>
 <text x="23" y="107.3" class="m" font-size="3.4" letter-spacing=".3">CROSS-TRAINED · A 3RD ROW</text>
 <text x="23" y="110.8" class="s" font-size="3.2">your SPECIMEN covers a 3rd row → <tspan font-weight="bold">+1 Capital</tspan>, once each</text>

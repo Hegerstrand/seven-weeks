@@ -100,12 +100,12 @@ graph TD
 | Card | Title | Effect | Key conditions | Footer italic |
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
-| `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a square up, down, left or right of one you cover - any row."; "DEAD IF TRUST ≤ 1"; "2 PAIRS, THEN TILE THE ZONE" | "Scaffolding: give it away and it becomes standing." |
+| `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a square up, down, left or right of one you cover - any row."; "DEAD IF TRUST ≤ 1"; "EACH TEACHER GAINS +1 CAPITAL"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Scaffolding: give it away and it becomes standing." |
 | `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "NOT ON AN UNCLEAR FEATURE" | "Planning pays on hard problems. Only on those." |
 | `demo` | DEMO | "+1 Capital to one named team member" | "CAPITAL ≥ TABLE AVERAGE"; "feature ignores the next NEGATIVE FEEDBACK" | "The field decides who speaks." |
 | `reflect` | REFLECT | "Require Trust 3 or above"; "+1 Adaptability" (+ "+1 Shared Practice" if a bank or adapted to 2 Events this week) | "Ask what's not working - you can only reflect on it." |
 | `workshop` | WORKSHOP | "+1 Adaptability" | - (unconditional, no gate) | "A meeting that changes the plan, not just records it." |
-| `learn` | LEARN | "The team names who marks a free square" | "Left or right of one they cover, in their own row."; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "THEN TILE THE ZONE"; "NO CAPITAL FOR THIS ONE" | "Nobody taught you. It shows, and it holds." |
+| `learn` | LEARN | "Everyone marks a free square each" | "Left or right of one they cover, in their own row."; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "NO CAPITAL FOR THIS ONE"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Nobody taught you. It shows, and it holds." |
 
 Sheet placement: Work (10,12), Work (76,12), Teach (142,12); Teach (10,104), Plan (76,104), Demo
 (142,104); Reflect (10,196), Workshop (76,196), Learn (142,196).
@@ -139,9 +139,9 @@ graph TD
 |---|---|---|
 | 1 | `../cards-event-01-09-63x88mm-A4-portrait.svg` | Events 1-9 |
 | 2 | `../cards-event-10-18-63x88mm-A4-portrait.svg` | Events 10-18 |
-| 3 | `../cards-event-19-21-63x88mm-A4-portrait.svg` | Events 19-23 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD, SHAKY GROUND, ALWAYS REACTING) - two rows on the sheet, rest blank |
+| 3 | `../cards-event-19-21-63x88mm-A4-portrait.svg` | Events 19-25 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD, SHAKY GROUND, ALWAYS REACTING, EVERYONE IS EQUAL, THE WOLF) - three rows on the sheet, rest blank |
 
-Twenty-three "shit happens" cards, same size as Activity cards, split across three A4 sheets.
+Twenty-five "shit happens" cards, same size as Activity cards, split across three A4 sheets.
 Draw two every week. See `board-game-cards` for the full WAYS OUT / HOW TO ADAPT anatomy and
 tint-derivation rule every sheet follows. Icon defs (`i-base/i-head/i-item/i-torso`, `i-head` is the HERO glyph and now draws the Legs triangle,
 `q1`-`q5`) are shared shapes but each sheet defines its own copy - they don't share `<defs>`
@@ -177,11 +177,11 @@ footer italic line.
 | Card | Title | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|---|
 | `status` | STATUS MEETING | remove one card, never happens; everyone loses 1 Motivation | Autonomy: lose 1 Motivation / Hierarchy: no loss | 2 | Take Charge (1 pip) | Shared Repertoire, costs 1 instead | "Not information - it's about being seen." |
-| `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 1 | Take Charge (1 pip) | Shared Repertoire, still costs 1 | "Nobody explains the reasoning to you." |
-| `unclear` | UNCLEAR REQUIREMENT | Remove one WORK. PLAN does nothing | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Team Reflexivity, still costs 1 | "An Align or a Demo also clears it." |
+| `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 1 | Take Charge (1 pip) | Shared Repertoire, free | "Nobody explains the reasoning to you." |
+| `unclear` | UNCLEAR REQUIREMENT | Remove one WORK. PLAN does nothing | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Team Reflexivity, free | "An Align or a Demo also clears it." |
 | `feedback` | NEGATIVE FEEDBACK | one banked feature loses 2 Work, comes off the tower | Quality: lose 1 Motivation | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "A feature that passed a Demo is safe." |
 | `scope` | SCOPE CREEP | unbanked feature closest to done gains +2 Work Cost | Quality: lose 1 Motiv. | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "Everybody called it a small addition." |
-| `priority` | PRIORITY CHANGES | remove one card this week | Quality: lose 1 Motivation | 1 | Analyze (2 pips) | Team Reflexivity, still costs 1 | "Last week was the wrong thing." |
+| `priority` | PRIORITY CHANGES | remove one card this week | Quality: lose 1 Motivation | 1 | Analyze (2 pips) | Team Reflexivity, free | "Last week was the wrong thing." |
 | `hoarding` | KNOWLEDGE HOARDING | Remove all TEACH cards | Community: lose 1 Motivation | 2 | Support (3 pips) | Psychological Safety, costs 1 instead | "Nobody wanted to be the one to ask." |
 | `burnout` | BURNOUT WARNING | anyone on 1 Motivation leaves next week unless a Celebrate is played | Community: lose 1 Motivation | 2 | Support (3 pips) | Psychological Safety, costs 1 instead | "Everyone saw it coming." |
 | `outage` | EQUIPMENT OUTAGE | Remove one WORK card; everyone loses 1 Motivation | Hierarchy: lose 1 Motivation | 2 | Support (3 pips) | Who Knows What, costs 1 instead | "Nobody's fault, and it costs a week." |
@@ -203,8 +203,8 @@ board 2, so tokens are placed on the card as they are paid; `#cost1` / `#cost2` 
 defs), "or", tint strip (`5.4,68.6,52.2,7.2`,
 same category colour) with HERO icon/text on top of it, HABIT label/name below, cost line.
 **Cost follows size (2026-10-07):** cost 1 = a nuisance, 2 = a real hit, 3 = lasting or
-whole-week damage (8 / 11 / 4 cards, average 1.8). Habit takes 1 off, minimum 1, so a cost-1
-card's cost line reads "SO IT STILL COSTS 1" in place of "SO IT COSTS n INSTEAD" (rulebook §6.1).
+whole-week damage (8 / 12 / 4 cards, average 1.8). Habit takes 1 off, minimum 0, so a cost-1
+card's cost line reads "SO IT IS FREE" in place of "SO IT COSTS n INSTEAD" (rulebook §6.1).
 **Flavour text leads the card (2026-10-07):** the old italic footer at y=84 is gone on every
 63x88 card, and the flavour now comes first. On Event cards it is plain serif 4.2 (lines 4.8 mm
 apart, 2 lines max) at y 28-32.8, and the rule text, Torso rows, WAYS OUT box and cost squares
@@ -264,11 +264,11 @@ and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save th
 |---|---|---|---|---|---|---|
 | `reinforcements` (MORE HANDS) | feature with most Work this week: halve that Work (round down) | none | 2 | Withdraw (4 pips) | Shared Repertoire, costs 1 instead | "More hands, more talk. BROOKS 1975" |
 | `legacy` (OLD FOUNDATIONS) | feature with most Work already banked gains +2 Work Cost | Hierarchy: lose 1 Motiv. | 2 | Withdraw (4 pips) | Who Knows What, costs 1 instead | "Built years ago. Nobody wrote down why." |
-| `build` (FALSE START) | first Work card this week produces nothing | Hierarchy: lose 1 Motiv. | 1 | none - "No hero can save this." | Who Knows What, still costs 1 | "It worked yesterday." |
+| `build` (FALSE START) | first Work card this week produces nothing | Hierarchy: lose 1 Motiv. | 1 | none - "No hero can save this." | Who Knows What, free | "It worked yesterday." |
 | `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 2 | Challenge (5 pips) | Psychological Safety, costs 1 instead | "Nobody said anything out loud." |
 | `reorg` (REORGANISED) | everyone loses 1 Motivation; lose 1 Shared Practice | Autonomy: lose 1 / Hierarchy: no loss | 2 | Withdraw (4 pips) | Shared Repertoire, costs 1 instead | "Only the chart changed, not the work." |
 | `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Challenge (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
-| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +2, no bonus | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, still costs 1 | "Nothing happened. That is it." |
+| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +2, no bonus | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
 | `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No one person can be the answer." |
 | `deadline` (THE DATE MOVES UP) | every unbanked feature becomes Unclear; Work on it gives 1 less until cleared | Quality: lose 1 Motiv. | 3 | none - "No hero can save this." | Team Reflexivity, costs 2 instead | "This one is not about any of you." |
 
@@ -310,19 +310,25 @@ rest of the page is intentionally blank.
 | `dashboard` | Customer | `#B5C7CF` (`.cat-cust`) |
 | `confidence` | Environment | `#C7CFB5` (`.cat-env`) |
 | `reacting` | Customer | `#B5C7CF` |
+| `equal` (title "EVERYONE IS EQUAL") | Management | `#F7D7A1` |
+| `wolf` (title "THE WOLF") | Management | `#F7D7A1` |
 
 ### Text
 
 | Card | Title | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|---|
-| `bikeshed` (THE BIKESHED) | one line | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Shared Repertoire, still costs 1 | "Somebody had a strong opinion about the paint." |
-| `leadsbehind` (LEADS FROM BEHIND) | two lines | Everyone loses 1 Motivation, except whoever has the highest Capital - they wrote it, they're exempt | none (the Capital exemption *is* the card; no Torso layer added on top) | 1 | Challenge (5 pips) | Shared Repertoire, still costs 1 | "Everyone felt it. Almost everyone." |
+| `bikeshed` (THE BIKESHED) | one line | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Shared Repertoire, free | "Somebody had a strong opinion about the paint." |
+| `leadsbehind` (LEADS FROM BEHIND) | two lines | Everyone loses 1 Motivation, except whoever has the highest Capital - they wrote it, they're exempt | none (the Capital exemption *is* the card; no Torso layer added on top) | 1 | Challenge (5 pips) | Shared Repertoire, free | "Everyone felt it. Almost everyone." |
 | `dashboard` (THE DASHBOARD) | one line | Work only counts this week if it's on a Low feature; Medium/High Work happens but changes nothing | Quality: lose 1 Motivation | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "The number went up. Nothing else did." |
 | `confidence` (SHAKY GROUND) | one line | A demo crashed in front of the customer - **the team loses 1 Capability** (move the Ledger coin down one, permanently, not a one-week penalty) | Hierarchy: lose 1 Motivation | 3 | Withdraw (4 pips) | Who Knows What, costs 2 instead | "Confidence is earned in public - and lost there too." |
-| `reacting` (ALWAYS REACTING) | one line | The team stops planning ahead and only reacts; deadlines slip sideways - **the team's Adaptability pool loses 1 token** (shared pool, cap 6; rulebook §4) | Quality: lose 1 Motivation | 1 | Challenge (5 pips) | Team Reflexivity, still costs 1 | "There was a plan. Nobody remembers it now." |
+| `reacting` (ALWAYS REACTING) | one line | The team stops planning ahead and only reacts; deadlines slip sideways - **the team's Adaptability pool loses 1 token** (shared pool, cap 6; rulebook §4) | Quality: lose 1 Motivation | 1 | Challenge (5 pips) | Team Reflexivity, free | "There was a plan. Nobody remembers it now." |
+| `equal` (EVERYONE IS EQUAL) | two lines | No Hero and no Authorized Voice this week, nobody gains Capital; everyone loses 1 Motivation | Autonomy: lose 1 extra / Hierarchy: no loss | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No titles. No one to ask, so nobody does." |
+| `wolf` (THE WOLF) | one line | **The Wolf is the boss, the manager** (named on the card). Management targets the character with the most Capital (**the shepherd**, named on the card as "TARGET: THE SHEPHERD" with a target glyph), who **stays on the team**. **Cannot be cancelled.** Team steps up to shield them (+1 Capital to that character, every character loses 1 Motivation) or that character's Capital is erased (goes to 0) | none (the cost is flat and falls on everybody) | **none - no ADAPT number** | **none - no HERO line** (stepping up is not a Hero play) | none | "" (no flavour line: the rule text fills the space) |
 
 Sheet placement: `bikeshed`(10,12) `leadsbehind`(76,12) `dashboard`(142,12) / `confidence`(10,104)
-`reacting`(76,104) - two rows, third slot of row 2 left blank.
+`reacting`(76,104) `equal`(142,104) / `wolf`(10,196) - three rows, the last two slots of row 3 left blank.
+
+**THE WOLF breaks the WAYS OUT anatomy on purpose.** The "HOW TO ADAPT" box becomes "HOW TO RESIST": a large "STEP UP" (mono 4) with "+1 CAPITAL", an italic "by the one with most Capital", a tinted strip carrying "COST: ALL LOSE 1 MOTIVATION" and "IF NOT: THEIR CAPITAL → 0", and "NO ADAPT. NO HERO.". There are no cost squares, no Torso row, no HERO icon and no HABIT line. Its border is `stroke-width .9`, the same marker the no-HERO cards use for "this one is different".
 
 **Why these two exist.** Every Team State track needs a way down as well as up, or the Ledger's
 own rule (§18: "the coin can walk back down afterwards") has nothing to point at for two of the
@@ -619,8 +625,8 @@ Event cards, so a tile and its matching card show the same glyph.
 
 | Row | 5 tiles | Shape used | Shared def |
 |---|---|---|---|
-| NEED | Autonomy(1 pip), Hierarchy(2), Community(3), Quality(4), Recognition(5) | `sh-torso-red` (filled red pentagon) | `p1`-`p5` pip glyphs |
-| HERO | Take Charge(1), Analyze(2), Support(3), Withdraw(4), Challenge(5) | `sh-legs-red` (filled red triangle) | `p1`-`p5` pip glyphs |
+| NEED | Autonomy(1 pip), Hierarchy(2), Community(3), Quality(4), Recognition(5) | `sh-torso-red` (filled red pentagon) | `p1`-`p5` pip glyphs, white `#FFFFFF` (`.pip`) for contrast on the `#905151` red |
+| HERO | Take Charge(1), Analyze(2), Support(3), Withdraw(4), Challenge(5) | `sh-legs-red` (filled red triangle) | `p1`-`p5` pip glyphs, white `#FFFFFF` (`.pip`) for contrast on the `#905151` red |
 
 All ten tiles are drawn inline (no `<defs>`/`<use>` for the card body itself, only the shape
 and pip glyphs are shared defs). Each tile: `44x36`, `rx 1.5`, class `.cut` (`#F0E3D1` fill,
@@ -650,7 +656,10 @@ row-level footnote under the NEED row instead of repeating on every tile.
 **Autonomy's Need was rebuilt after the 2026-09-25 playtest, and again when Activity cards became
 the team's.** It used to read "Finished the week you planned, unreplaced", which only made sense
 while Adapt could swap a laid card (rulebook v0.30), then "You executed at least one card". With
-no executor the tile now reads **"No Event landed on the team, or it has Shared Repertoire: +1
+no executor the tile read "No Event landed on the team, or it has Shared Repertoire"; simulation
+(2000 games) showed that left Autonomy characters quitting at 1.6-1.9 times the average, since two
+Events are drawn every week from week 2. It now reads **"At most 1 Event landed on the team, or it
+has Shared Repertoire: +1
 Motivation."** Every Need tile except Recognition now ends with its vindicating Habit as an
 alternative (Hierarchy: Who Knows What, Community: Psychological Safety, Quality: Team
 Reflexivity), replacing Community's old "Trust is 4+".

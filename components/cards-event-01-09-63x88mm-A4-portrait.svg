@@ -90,7 +90,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT STILL COSTS 1</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT IS FREE</text>
     <use href="#cost1"/>
     </g>
   </g>
@@ -116,7 +116,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT STILL COSTS 1</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT IS FREE</text>
     <use href="#cost1"/>
     </g>
   </g>
@@ -190,7 +190,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q2"/></g><text x="23" y="67" class="vl">ANALYZE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT STILL COSTS 1</text>
+    <text x="20" y="75" class="m" font-size="2.6">SO IT IS FREE</text>
     <use href="#cost1"/>
     </g>
   </g>

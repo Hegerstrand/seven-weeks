@@ -2,8 +2,8 @@
 <title>THE TEAM FRONT - the Ledger (A4 landscape)</title>
 <desc>True A4 landscape (297 x 210) - SHIT HAPPENS is narrowed instead to keep the table's two rows
 matching widths (see _check-table-layout.svg). One coin per row; walk it, turn it over at
-the ring. The Standing row is dashed because it is a separate strip, dropped in at the start of
-week 2. Glue to cardboard;
+the ring. Four rows: Trust, Capability, Shared Practice and Standing. Adaptability is not a row:
+it is a pool of tokens on SHIT HAPPENS. Glue to cardboard;
 the-team-BACK matches and goes on the reverse.</desc>
 
 <style>
@@ -31,7 +31,7 @@ the-team-BACK matches and goes on the reverse.</desc>
 <text x="220.7" y="36" class="m" font-size="3" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
 
 <!-- TRUST -->
-<g id="trust" transform="translate(0,-4)">
+<g id="trust" transform="translate(0,-2)">
   <rect x="8" y="45" width="281" height="28" rx="2" class="band" fill="#D3CEDF"/>
   <text x="12" y="52" class="s" font-size="6">Trust</text>
   <text x="12" y="59" class="s" font-size="3.4" font-style="italic">grown by Coordinate</text>
@@ -51,7 +51,7 @@ the-team-BACK matches and goes on the reverse.</desc>
 </g>
 
 <!-- CAPABILITY -->
-<g id="capability" transform="translate(0,-3)">
+<g id="capability" transform="translate(0,6)">
   <rect x="8" y="75" width="281" height="28" rx="2" class="band" fill="#C7CFB5"/>
   <text x="12" y="82" class="s" font-size="6">Capability</text>
   <text x="12" y="89" class="s" font-size="3.4" font-style="italic">grown by filling a whole</text>
@@ -72,7 +72,7 @@ the-team-BACK matches and goes on the reverse.</desc>
 </g>
 
 <!-- SHARED PRACTICE -->
-<g id="shared-practice" transform="translate(0,-2)">
+<g id="shared-practice" transform="translate(0,14)">
   <rect x="8" y="105" width="281" height="28" rx="2" class="band" fill="#F7D7A1"/>
   <text x="12" y="112" class="s" font-size="6">Shared Practice</text>
   <text x="12" y="119" class="s" font-size="3.4" font-style="italic">grown by Reflect, and by</text>
@@ -92,28 +92,31 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="220.7" y="118.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
 </g>
 
-<!-- ADAPTABILITY - a shared pool of tokens on SHIT HAPPENS, not a track; this row only holds the Team Reflexivity coin -->
-<g id="adaptability" transform="translate(0,-1)">
-  <rect x="8" y="135" width="281" height="28" rx="2" class="band" fill="#B5C7CF"/>
-  <text x="12" y="142" class="s" font-size="6">Adaptability</text>
-  <text x="12" y="149" class="s" font-size="3.4" font-style="italic">a shared pool of tokens, kept on</text>
-  <text x="12" y="153.5" class="s" font-style="italic" font-size="3.4">SHIT HAPPENS - not a track</text>
-  <circle cx="156.9" cy="144" r="8" class="w"/>
-  <circle cx="156.9" cy="144" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M78.9,154 L78.9,157 L181.7,157 L181.7,154" class="w" stroke-width=".5"/>
-  <text x="130.3" y="161" class="m" font-size="2.6" text-anchor="middle">TURN IT OVER THE FIRST TIME THE POOL HOLDS 4 AT WEEK END</text>
-  <text x="220.7" y="142" class="s" font-size="5">Team Reflexivity</text>
-  <text x="220.7" y="148.5" class="m q" font-size="2.6">WEST 1996</text>
+<!-- STANDING - on the board from the start; the coin mirrors the highest Capital, it is never walked -->
+<g id="standing">
+  <rect x="8" y="157" width="281" height="28" rx="2" class="band" fill="#D9D3C4"/>
+  <text x="12" y="164" class="s" font-size="6">Standing</text>
+  <text x="12" y="171" class="s" font-size="3.4" font-style="italic">grown by nobody</text>
+  <text x="12" y="175.5" class="s" font-size="3.4" font-style="italic">starts on 0</text>
+  <g class="w">
+    <circle cx="86" cy="166" r="8"/><circle cx="103.7" cy="166" r="8"/><circle cx="121.5" cy="166" r="8"/>
+    <circle cx="139.2" cy="166" r="8"/><circle cx="156.9" cy="166" r="8"/><circle cx="174.7" cy="166" r="8"/>
+  </g>
+  <g class="m q" font-size="4.2" text-anchor="middle">
+    <text x="86" y="167.4">0</text><text x="103.7" y="167.4">1</text><text x="121.5" y="167.4">2</text>
+    <text x="139.2" y="167.4">3</text><text x="156.9" y="167.4">4</text><text x="174.7" y="167.4">5</text>
+  </g>
+  <circle cx="174.7" cy="166" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <path d="M78.9,176 L78.9,179 L181.7,179 L181.7,176" class="w" style="stroke:#905151;stroke-width:.5"/>
+  <text x="130.3" y="183" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE</text>
+  <text x="220.7" y="164" class="s" font-size="5">Authorized Voice</text>
+  <text x="220.7" y="170.5" class="s" font-size="3.4" font-style="italic">Once a week: cancel an</text>
+  <text x="220.7" y="174.5" class="s" font-size="3.4" font-style="italic">Event outright.</text>
+  <text x="220.7" y="180.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
 </g>
+<text x="174.7" y="155" class="m" font-size="2.6" text-anchor="middle">FLIP AT 5</text>
 
-<!-- STANDING - a separate strip, dropped in at the start of week 2 -->
-<g id="standing-slot">
-  <rect x="8" y="166" width="281" height="34" rx="2" fill="#F5CE89" class="r" stroke-dasharray="4 2.5"/>
-  <text x="12" y="177" class="s" font-size="6">Standing</text>
-  <text x="12" y="184" class="s" font-size="3.4" font-style="italic">the fifth row, on its own strip</text>
-  <text x="148.5" y="180" class="m" font-size="4.4" text-anchor="middle" letter-spacing="1.2">STANDING GOES HERE</text>
-  <text x="148.5" y="187" class="m q" font-size="3.2" text-anchor="middle">DROP IT IN AT THE START OF WEEK 2 - COIN ON THE HIGHEST CAPITAL</text>
-</g>
+<text x="12" y="194" class="s" font-size="3.8" font-style="italic">Adaptability is not a track here: it is a pool of tokens, kept on SHIT HAPPENS, with the Team Reflexivity coin beside it.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="6" y1="6" x2="6" y2="200" stroke="#6E7A54" stroke-width="1"/>

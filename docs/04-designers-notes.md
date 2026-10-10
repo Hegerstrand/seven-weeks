@@ -49,6 +49,10 @@ Law** - aren't thinkers at all; see the notes after the roster below.
   face-up on the table all game, is a small version of exactly this; **Collective Bargaining**
   (the second use of Authorized Voice, `game/extensions/performance-review/` - not in the base
   game) is close to a named act of collective resistance to individualized discipline.
+- **Friedrich Nietzsche** - equality as a tool in the hands of whoever stands outside the flock;
+  the shepherd told he is "just a sheep" so that nobody guards the herd. **EVERYONE IS EQUAL**
+  and **THE WOLF** (§11) are built on this, with the figure inverted: the game's shepherd is the
+  guardian, and the one who flattens the flock is Management.
 - **Norbert Elias** - no individual exists outside the web of relationships around them; a
   long-tenured group holds informal status over newcomers regardless of the newcomers' actual
   ability. Why Onboarding penalises position, not skill, and why sponsorship can shorten it.
@@ -99,6 +103,8 @@ Left visible on purpose, not smoothed over:
 - Foucault's suspicion of "the team gets better" as a story sits in real tension with the whole
   design's optimism about growth. Nothing resolves this on purpose - see
   [theoretical-sources.md](./theoretical-sources.md) for the full argument.
+- Nietzsche would call a cooperative game where everyone wins together *herd morality*. THE
+  WOLF borrows his diagnosis of how equality gets weaponised, not his contempt for the herd.
 - Price's Law predicts output concentrates among a few contributors - which the mechanics
   already assume (Knowledge Hoarding, Skill match) - while the win condition insists Team Score
   belongs to the whole table, nobody's name on any block (§10). Also left open on purpose.
@@ -106,7 +112,7 @@ Left visible on purpose, not smoothed over:
 ## Where a citation actually lives on a physical component
 
 The rule against naming theorists on components has exactly two carve-outs, both deliberate:
-the **Ledger** (board 3/3b) prints a source under each Habit's name, and **board 4 (the Zone)**
+the **Ledger** (board 3) prints a source under each Habit's name, and **board 4 (the Zone)**
 prints a citation line under the grid - because on those two boards, and only those two, the
 point being made *is* that these are findings, not folklore. Nowhere else earns it.
 

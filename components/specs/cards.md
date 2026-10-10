@@ -49,7 +49,7 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 | `coordinate` | `#D3CEDF` band behind "+1 Trust" | `.trust` |
 | `workshop` | `#B5C7CF` band behind "+1 Adaptability" | `.adapt` |
 | `align` | `#B5C7CF` band behind "+2 Adaptability"; `#D3B1B1` chip behind "Every character pays 1 Motivation" | `.adapt` |
-| `celebrate` | `#D3B1B1` band behind "+2 Motivation to everyone" | plain |
+| `celebrate` | `#D3B1B1` band behind "+1 Motivation to everyone" | plain |
 
 ### Text
 
@@ -59,7 +59,7 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 | `coordinate` | COORDINATE | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust ≤ 1: Teach is dead." + "TRUST RISE 1 A WEEK, MAX" | "Safety is not declared. It is built, dully." |
 | `workshop` | WORKSHOP | "+1 Adaptability" (`#B5C7CF`) | "Unconditionally - no gate, no second mode." + "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM NEXT WEEK." (mono) | "A meeting that changes the plan, not just records it." |
 | `align` | ALIGN | "+2 Adaptability" (`#B5C7CF`) and "Every character pays 1 Motivation" (`#D3B1B1`) | "NOTHING IF ANYONE IS ON 1." + "ONE WAY ONLY. NEVER BACK." (mono) | "A meeting nobody wants. Everybody sits through it." |
-| `celebrate` | CELEBRATE | "+2 Motivation to everyone" (`#D3B1B1`, 6.6pt) | "+3 if a feature was banked this week." + "MOTIVATION CAPS AT 5" (mono). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Nobody rests at work. You ship something and say so." |
+| `celebrate` | CELEBRATE | "+1 Motivation to everyone" (`#D3B1B1`, 6.6pt) | "+2 if a feature was banked this week." + "LANDS AT WEEK CLOSE, WITH THE GRIND. CAPS AT 5." (mono). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Nobody rests at work. You ship something and say so." |
 
 Sheet placement (top-left corner of each `<use>`): Work at (10,12)/(76,12), Coordinate at
 (142,12)/(10,104), Workshop at (76,104), Align at (142,104), Celebrate at (10,196)/(76,196), Work again at
@@ -276,7 +276,7 @@ and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save th
 | `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 2 | Challenge (5 pips) | Psychological Safety, costs 1 instead | "Nobody said anything out loud." |
 | `reorg` (REORGANISED) | everyone loses 1 Motivation; lose 1 Shared Practice | Autonomy: lose 1 / Hierarchy: no loss | 2 | Withdraw (4 pips) | Shared Repertoire, costs 1 instead | "Only the chart changed, not the work." |
 | `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Challenge (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
-| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +2, no bonus | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
+| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a Celebrate this week gives only +1, no bonus | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
 | `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No one person can be the answer." |
 | `deadline` (THE DATE MOVES UP) | every Work card this week produces 1 less (never below 0) | Quality: lose 1 Motiv. | 3 | none - "No hero can save this." | Team Reflexivity, costs 2 instead | "This one is not about any of you." |
 
@@ -685,7 +685,7 @@ italic serif 3 caption, right-aligned at x+33, so a tile can still be matched to
 **Quality's Need was rebuilt after the 2026-09-25 playtest.** It first dropped its "or a feature
 cleared Unclear" clause (Unclear went to the `feature-quality-uncertainty` extension, rulebook
 v0.21), leaving "The team spent an Align." Players then spent weeks 1-3 on everything but Work,
-so the Need now reads **"Work added to a feature this week: +1 Motivation. No Work added to feature: -3
+so the Need now reads **"Work added to a feature this week: +1 Motivation. No Work added to feature: -1
 Motivation."** (two lines each with a `#D3B1B1` chip; rulebook.md, "Need gives bonus
 Motivation"). It counts Work that really moved a feature's counter, not just a Work card laid
 down. It is the only Need that can cost you.

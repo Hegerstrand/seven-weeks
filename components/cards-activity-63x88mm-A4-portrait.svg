@@ -96,10 +96,10 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <text x="5" y="28.3" class="s" font-size="4.2">ship something and say so.</text>
     <g transform="translate(0,11)">
     <rect x="4" y="23.39" width="50" height="8" rx="1.2" fill="#D3B1B1"/>
-    <text x="5" y="29" class="s" font-size="6.6">+2 Motivation</text>
+    <text x="5" y="29" class="s" font-size="6.6">+1 Motivation</text>
     <text x="5" y="36" class="s" font-size="6.6">to everyone</text>
     <line x1="5" y1="42" x2="58" y2="42" class="h"/>
-    <text x="5" y="51" class="s" font-size="5.4"><tspan font-weight="bold">+3</tspan> if a feature was</text>
+    <text x="5" y="51" class="s" font-size="5.4"><tspan font-weight="bold">+2</tspan> if a feature was</text>
     <text x="5" y="58" class="s" font-size="5.4">banked this week.</text>
     <text x="5" y="66" class="m q" font-size="2.9">LANDS AT WEEK CLOSE,</text>
     <text x="5" y="71" class="m q" font-size="2.9">WITH THE GRIND. CAPS AT 5.</text>

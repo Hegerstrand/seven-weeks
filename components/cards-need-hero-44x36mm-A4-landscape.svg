@@ -90,7 +90,7 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
   <rect x="167" y="66.7" width="38" height="3.4" rx=".4" fill="#EFE4D3"/>
   <text x="186" y="69.4" class="serif" font-size="3.2" text-anchor="middle">No Work added to feature:</text>
   <rect x="174.5" y="70.6" width="23" height="4" rx=".4" fill="#D3B1B1"/>
-  <text x="186" y="73.7" class="serif" font-size="3.2" text-anchor="middle">-3 Motivation.</text>
+  <text x="186" y="73.7" class="serif" font-size="3.2" text-anchor="middle">-1 Motivation.</text>
 
   <rect x="214" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-torso-red" x="253" y="46"/><use href="#p5" x="253" y="46"/>

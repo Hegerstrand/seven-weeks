@@ -62,10 +62,10 @@ class Rules:
     mot_cap: int = 5
     sheltered_cap: int = 3
     grind: int = 1
-    celebrate: int = 2
-    celebrate_banked: int = 3
+    celebrate: int = 1
+    celebrate_banked: int = 2
     need_bonus: int = 1
-    quality_penalty: int = 3
+    quality_penalty: int = 1
     ledger_start: int = 1
     ledger_max: int = 5
     habit_at: int = 4
@@ -86,11 +86,12 @@ class Rules:
     events_per_week: int = 2
     events_from_week: int = 2
     combos_from_week: int = 5
-    threshold_base: int = 68
+    threshold_base: int = 35                    # 35 + 5 x 5 players = 60 (was 68; calibration goal: ~90% of optimal, ~5% of balanced)
     threshold_per_player: int = 5
     feature_value: int = 10
     quit_penalty: int = 20
     flex_penalty: int = 2
+    low_track_penalty: int = 5                  # Team Score lost per Ledger track that finishes at 0-1
     capital_cap: int = 5
     legs_tendencies: bool = True
     autonomy_max_landed: int = 1                # Autonomy Need holds if at most this many Events landed (printed rule)
@@ -98,7 +99,7 @@ class Rules:
     align_tokens: int = 2                       # ALIGN (the meeting): tokens it adds (0 = card not in the game)
     align_cost: int = 1                         # Motivation every character pays (one way: Motivation -> Adaptability)
     align_min_mot: int = 2                      # policy: nobody pays below this, so the meeting is not laid while someone is lower
-    celebrate_repeat: int = 0                   # Celebrate gives this much less if the team celebrated last week
+    celebrate_repeat: int = 0                   # optional: Celebrate gives this much less if the team celebrated last week
     stand: bool = False                         # Torso Stand: once per game, pay Motivation to cancel your Torso's category
     stand_cost: int = 2
     habit_cancel: bool = False                  # a held Habit cancels one Event of its category a week, free
@@ -201,6 +202,7 @@ class Strategy:
     take_one: bool = True                      # Take One For The Team / Dependable when Trust is low
     align: int = 0                             # Align meetings wanted per week while the pool is below pool_goal
     use_stand: bool = True                     # use Torso Stand when the rule exists
+    random_play: bool = False                  # lay the five cards at random from what is open
 
 
 STRATEGIES = {
@@ -215,6 +217,8 @@ STRATEGIES = {
     "invested": Strategy(
         "invested", work_days=(3, 2, 2, 3, 3, 4, 4, 4), trust_goal=4, pool_goal=5, learn=2,
         celebrate_every=3, adapt_threshold=0.7),
+    # Lays five random cards from the ones that are open (Work twice as likely) and never plans ahead.
+    "random": Strategy("random", random_play=True, take_one=False, repay_flex=False),
 }
 
 
@@ -517,6 +521,11 @@ class Game:
 
     def plan_week(self, w: int):
         R, st = self.R, self.st
+        if st.random_play:
+            open_cards = ["Work", "Work", "Coordinate", "Celebrate"]
+            if w >= 3:
+                open_cards += ["Workshop", "Align", "Learn", "Teach", "Reflect", "Plan", "Demo"]
+            return [self.rng.choice(open_cards) for _ in range(R.days)]
         mots = [c.mot for c in self.chars] or [0]
         wanted = []
         if min(mots) <= st.celebrate_min or statistics.mean(mots) <= st.celebrate_mean or (
@@ -1186,8 +1195,10 @@ class Game:
         R = self.R
         banked = sum(1 for f in self.feat.values() if f["banked"])
         flex = sum(1 for c in self.chars if c.flex)
+        low_tracks = sum(1 for v in (self.trust, self.cap, self.sp) if v <= R.low_band)
         score = (banked * R.feature_value + self.trust + self.cap + self.sp + self.pool
-                 + sum(c.mot for c in self.chars) - R.quit_penalty * self.quits - R.flex_penalty * flex)
+                 + sum(c.mot for c in self.chars) - R.quit_penalty * self.quits - R.flex_penalty * flex
+                 - R.low_track_penalty * low_tracks)
         threshold = R.threshold_base + R.threshold_per_player * R.players
         if banked < len(self.feat):
             outcome = "failure"
@@ -1223,7 +1234,7 @@ class Game:
             "parts": {"%s|%s|%s" % k: v for k, v in self.ps.items()},
             "mot_flow": dict(self.mot_flow), "celebrates": self.m["celebrates"],
             "need_met": dict(self.need_met), "need_seen": dict(self.need_seen),
-            "trust": self.trust, "cap": self.cap, "sp": self.sp, "flex_unrepaid": flex,
+            "trust": self.trust, "cap": self.cap, "sp": self.sp, "flex_unrepaid": flex, "low_tracks": low_tracks,
             "teach_dead": self.m["teach_dead"], "reflect_dead": self.m["reflect_dead"],
             "lines_filled": self.m["lines_filled"], "stack_flips": self.m["stack_flips"],
             "zone_tiles": len(self.tiles), "squares_learned": self.m["squares_learned"],
@@ -1489,14 +1500,18 @@ def write_csv(path: str, dump: dict):
 
 
 def objective(res: list) -> float:
-    # Mean score, plus 30 points for the share of games that bank all six features,
-    # minus 15 for each Quality character who quit after a week without Work.
-    return (mean(r["score"] for r in res) + 0.3 * share(res, lambda r: r["banked"] == 6)
-            - 15 * mean(r["quality_quit_nowork"] for r in res))
+    # Share of games that reach the threshold (percent), plus a little mean score and all-six share as
+    # tie-breakers, minus 15 for each Quality quit after a week without Work.
+    return (share(res, lambda r: r["outcome"] == "sustainable") + 0.2 * mean(r["score"] for r in res)
+            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res))
 
 
 def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", log: list | None = None) -> Strategy:
     W = rules.weeks
+
+    def fit(t):
+        return (tuple(t) + (t[-1],) * W)[:W]
+
     best = Strategy("optimal", work_days=(3,) * W)
     cache: dict = {}
 
@@ -1523,6 +1538,12 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
                for i in range(W)]
 
     best_v = value(best)
+    seeds = [best,
+             replace(STRATEGIES["invested"], name="optimal", work_days=fit(STRATEGIES["invested"].work_days)),
+             Strategy("optimal", work_days=fit((5, 5, 0, 0, 0, 4, 3, 4)), trust_goal=4, celebrate_min=2, celebrate_mean=3.5,
+                      pool_goal=2, learn=2, plan=False, overtime_weeks=(5,), adapt_threshold=0.5, hero_min_cost=1,
+                      bank_tokens=False, wolf="never")]
+    best_v, best = max(((value(s), s) for s in seeds), key=lambda t: t[0])
     for p in range(1, passes + 1):
         improved = False
         for gi, g in enumerate(groups, 1):
@@ -1685,17 +1706,19 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     _lines(out, ph, share)
     _legend(out, ph, [(s[0], s[1], "line") for s in share])
 
-    # 2. Events drawn and cancelled
-    hows = names_in(res, "cancel_week", CANCEL_ORDER)
-    layers = [(h, CANCEL_COLOUR.get(h, FALLBACK_COLOURS[j % 4]), week_mean_of(res, "cancel_week", h, W)) for j, h in enumerate(hows)]
-    drawn = week_mean(res, "drawn_week", W)
+    # 2. Events cancelled, by how
+    base_ways = ["free", "token", "hero", "trust", "av"]
+    hows = base_ways + [h for h in names_in(res, "cancel_week", CANCEL_ORDER) if h not in base_ways]
+    labels = {"free": "Habit discount (cost 0)", "token": "Adaptability tokens", "hero": "Hero (Legs, 3+ Motivation)",
+              "trust": "Trust 4+ (one a week)", "av": "AV = Authorized Voice (one a week)",
+              "stand": "Torso Stand (optional)", "habit": "Habit cancel (optional)"}
+    layers = [(labels.get(h, h), CANCEL_COLOUR.get(h, FALLBACK_COLOURS[j % 4]), week_mean_of(res, "cancel_week", h, W)) for j, h in enumerate(hows)]
     y2 = yh + PH + GAP
     tot = [sum(l[2][i] for l in layers) for i in range(W)]
-    p2 = _Panel(X0, y2, PW, PH, _nice_max(max(drawn + tot + [2])), W)
-    _frame(out, p2, "4. Events cancelled per week (of those drawn), by how", "average count")
+    p2 = _Panel(X0, y2, PW, PH, _nice_max(max(tot + [2])), W)
+    _frame(out, p2, "4. Events cancelled per week, by how (two are drawn each week from week 2)", "average count")
     _stack(out, p2, layers)
-    _lines(out, p2, [("Events drawn", "#000000", drawn, True)])
-    _legend(out, p2, [("drawn", "#000000", "dash")] + [(l[0], l[1], "bar") for l in layers])
+    _legend(out, p2, [(l[0], l[1], "bar") for l in layers])
 
     # 3. The five days
     cards = names_in(res, "cards_week", CARD_ORDER)
@@ -1774,12 +1797,62 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
         fh.write(head + "".join(out) + "</svg>\n")
 
 
+def calibrate(dump: dict):
+    """Threshold window: ~90% of optimal play and ~5% of balanced/random play should reach it."""
+    series = {t: res for t, (_, res) in dump.items()}
+    others = [n for n in ("balanced", "random") if n in series]
+    if "optimal" not in series or not others:
+        return "", [], ""
+    rules = dump["optimal"][0]
+    names = list(series)
+
+    def reach(res, t):
+        return sum(1 for r in res if r["banked"] == 6 and r["score"] >= t) / len(res)
+
+    lo = min(r["score"] for res in series.values() for r in res) - 1
+    hi = max(r["score"] for res in series.values() for r in res) + 1
+    rows = [[t] + [round(100 * reach(series[n], t), 1) for n in names] for t in range(lo, hi + 1)]
+    opt = series["optimal"]
+    all_six = 100 * sum(1 for r in opt if r["banked"] == 6) / len(opt)
+    ok = [t for t in range(lo, hi + 1) if reach(opt, t) >= 0.9]
+    top = max(ok) if ok else None
+    lows = []
+    for n in others:
+        under = [t for t in range(lo, hi + 1) if reach(series[n], t) <= 0.05]
+        lows.append(min(under) if under else hi)
+    low = max(lows)
+    cur = rules.threshold_base + rules.threshold_per_player * rules.players
+    per = rules.threshold_per_player * rules.players
+    lines = ["THRESHOLD CALIBRATION (goal: about 90% of optimal play and about 5% of balanced/random play reach it;",
+             "'reach' = all six features banked AND Team Score at or above the threshold). Current threshold: %d (%d + %d x %d players)."
+             % (cur, rules.threshold_base, rules.threshold_per_player, rules.players)]
+    for n in names:
+        sc = sorted(r["score"] for r in series[n])
+        lines.append("  %-9s all six features %3.0f%%   score p10 %4d  p50 %4d  p90 %4d   reach %3.0f%% at %d" % (
+            n, 100 * sum(1 for r in series[n] if r["banked"] == 6) / len(series[n]),
+            sc[len(sc) // 10], sc[len(sc) // 2], sc[min(len(sc) - 1, len(sc) * 9 // 10)], 100 * reach(series[n], cur), cur))
+    if top is None:
+        lines.append("  No threshold lets 90%% of optimal play reach it: only %.0f%% of optimal games bank all six features." % all_six)
+        lines.append("  That is a Work problem, not a threshold problem.")
+        short = "no threshold gives 90%% of optimal (only %.0f%% bank all six); keep it above %d to hold balanced/random at 5%%" % (all_six, low)
+    else:
+        lines.append("  Highest threshold that 90%% of optimal reach: %d (base %d)." % (top, top - per))
+        lines.append("  Lowest threshold that keeps %s at 5%% or less: %d (base %d)." % (" and ".join(others), low, low - per))
+        if low <= top:
+            lines.append("  A window exists: choose a threshold from %d to %d." % (low, top))
+            short = "threshold window %d to %d (now %d)" % (low, top, cur)
+        else:
+            lines.append("  No window: balanced/random need %d or more, optimal only gets 90%% up to %d. The rules, not the threshold, must change." % (low, top))
+            short = "no window: %d needed to hold balanced/random at 5%%, but 90%% of optimal only reaches %d" % (low, top)
+    return "\n".join(lines) + "\n", [["threshold"] + names] + rows, short
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--runs", type=int, default=2000)
     ap.add_argument("--players", type=int, default=5)
     ap.add_argument("--seed", type=int, default=1)
-    ap.add_argument("--strategies", default="hero,balanced,invested,optimal",
+    ap.add_argument("--strategies", default="hero,balanced,invested,random,optimal",
                     help="comma list from: %s, optimal (optimal = searched best policy)" % ", ".join(STRATEGIES))
     ap.add_argument("--opt-runs", type=int, default=150, help="games per candidate while searching for optimal play")
     ap.add_argument("--opt-passes", type=int, default=3, help="max search passes for optimal play")
@@ -1827,6 +1900,9 @@ def main():
                 print(buf.getvalue())
             dump[title] = (rules, res)
     status("writing files...")
+    cal_text, cal_rows, cal_short = calibrate(dump) if not a.sweep else ("", [], "")
+    if cal_text:
+        reports.append(cal_text)
     with open(a.report, "w", encoding="utf-8") as fh:
         fh.write("\n".join(log + reports))
     if a.json:
@@ -1835,6 +1911,9 @@ def main():
     if a.csv:
         write_csv(a.csv, dump)
         write_habitus_csv(os.path.splitext(a.csv)[0] + "_habitus.csv", dump)
+        if cal_rows:
+            with open(os.path.splitext(a.csv)[0] + "_threshold.csv", "w", newline="", encoding="utf-8") as fh:
+                csv.writer(fh).writerows(cal_rows)
     if not a.no_plots:
         os.makedirs(a.plots, exist_ok=True)
         for title, (rules, res) in dump.items():
@@ -1842,6 +1921,8 @@ def main():
             plot_strategy(os.path.join(a.plots, fname), title, res, rules)
     status("done in %.0fs" % (time.time() - t0), final=True)
     print("  report  %s" % a.report)
+    if cal_short:
+        print("  calibration: %s" % cal_short)
     if a.csv:
         print("  csv     %s (+ _summary, _habitus)" % a.csv)
     if not a.no_plots:

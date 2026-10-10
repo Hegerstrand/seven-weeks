@@ -55,6 +55,11 @@ whenever a playtest changes a rule, and log the change in
 > **(19) A quit now costs 20 Team Score points, not 10** (§16): losing someone has to hurt more than
 > the Motivation they would have added. A Quality character with no Work added for several weeks takes
 > -3 a week and can quit; the balance runs now report how often that happens (the aim is never).
+> **(20) The Quality Need's penalty is -1, not -3:** with -3 an investing team lost its Quality character
+> in the first week without Work; with -1 one Celebrate covers it. **(21) Each Ledger track that
+> finishes in the low band (0 or 1) costs 5 Team Score** (§16): a team that only ever invested in one
+> track, such as Trust, no longer scores as well as a team that built all three. **(22) Celebrate is +1 Motivation, or +2 when a feature was banked** (was +2 / +3, §7): celebrating
+> every week was the best play by far.
 > **(1)** The fourth Base option is **Dependable** (spend 3
 > Motivation: +1 Trust and +1 Capital), not By The Book (§5.2). **(2)** **Withdraw** reads the week,
 > not Capability: +1 Motivation in weeks 1-3, -1 from week 4 (§5.2). **(3)** **Recognition**'s Need pays
@@ -751,9 +756,10 @@ From week 2, when the week closes (§6.1), check whether the week satisfied it. 
 grind.
 
 **Quality is the one Need that can cost you.** Craft needs something to be made: in any week
-where **no Work was added to any feature**, a Quality character loses **3 Motivation** (on top of the
-grind) instead of gaining 1. That is meant to hurt: a character on 3 Motivation is gone the same
-week (−1 grind, −3 Need). It was added after the first full playtest, where a table spent
+where **no Work was added to any feature**, a Quality character loses **1 Motivation** (on top of the
+grind) instead of gaining 1. That is felt but survivable: one Celebrate (+2) covers the grind and the
+penalty together, so a team that invests for several weeks in a row without delivering Work does not
+lose its Quality character to it. It was added after the first full playtest, where a table spent
 weeks 1-3 on everything but Work and nobody paid for it. Like every Need it is only read from
 week 2, so a table that skips Work in week 1 alone is still free of it. A Work card does not count
 if it produced 0 - aimed at a blocked feature, or cancelled to nothing by a −1 Capability or
@@ -768,7 +774,7 @@ your board from the start - the game just waits until week 2 to turn it over.
 | Autonomy | **At most 1 Event landed on the team** this week - the other was cancelled in Adapt, or none was drawn - **or the team has Shared Repertoire** (§18). |
 | Hierarchy | **The team played a Teach card**, **or the team has Who Knows What** (§18). |
 | Community | The team spent a Coordinate, Reflect or Celebrate, **or the team has Psychological Safety** (§18). |
-| Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter), **or the team has Team Reflexivity** (§18): **+1**. **Neither: lose 3 Motivation instead.** |
+| Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter), **or the team has Team Reflexivity** (§18): **+1**. **Neither: lose 1 Motivation instead.** |
 | Recognition | **A feature was banked** this week, or you spent your Hero. |
 
 Checking this once per week rather than once per day keeps it to one pass over four
@@ -778,7 +784,7 @@ characters at a natural stopping point - and it makes the Need question the righ
 **Habits meet Needs.** Every Torso except Recognition has one Habit that vindicates it (the
 "Vindicated by" column above). **While the team has that Habit, your Need counts as met every
 week** - the thing you needed has become how the team works, so it no longer has to be won week
-by week. For a Quality character that also means the -3 never applies. Recognition has no
+by week. For a Quality character that also means the -1 never applies. Recognition has no
 Habit; it is the one Need that is only ever won, never inherited.
 
 > **Autonomy is the one the team can take away.** Nobody has to override you for you to lose
@@ -1062,9 +1068,13 @@ of an Event, never a different plan.
 > card for another Activity. It was removed after the first full playtest: nobody understood it
 > as a second use of the same token, and it only existed to feed the Autonomy Need.
 
-Two things cancel an Event **without costing Adaptability at all**:
+Three things cancel an Event **without costing Adaptability at all**:
 - a character's **Hero** (§5.1), if the Event names their Pressure Response - once per game, needing 3 Motivation (a Competitive character may do it every time);
-- **Authorized Voice** (§18), once a week, if the team has it.
+- **Authorized Voice** (§18), once a week, if the team has it;
+- **Trust at 4 or 5** (§4), once a week.
+
+And a **Habit** (§18) takes 1 off the Adaptability cost of its Event category, so a cost-1 Event of that
+category is free.
 
 **One Event cannot be cancelled at all: THE WOLF** (§11). It prints no ADAPT number and no HERO
 line, and tokens, a Hero and Authorized Voice all do nothing against it. The team answers it
@@ -1140,7 +1150,7 @@ days of a team's time. They are not a sequencing puzzle.
 done **as a single net number per character:** −1 (the weekly grind), ±1 per matching Event
 category this week per their Torso (§5, "Motivation depends on habitus" - check who was hit
 and who was immune before totaling), +1 if their Need was met (§5; a **Quality** character
-with no Work added to a feature this week takes −3 instead), −1 if they are **Competitive** and
+with no Work added to a feature this week takes −1 instead), −1 if they are **Competitive** and
 somebody else played a Hero this week. Apply the net number, then any character at 0 quits -
 this is the only moment a quit is checked. Then **advance the week.**
 
@@ -1189,7 +1199,7 @@ character to receive it.
 | **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
 | **Reflect** | Needs **Trust ≥ 3**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero was played or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, and the team may put the token in the matching Team Reflexivity well instead of the pool (§18). The token arrives at the close like any other. |
 | **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
-| **Celebrate** | **+2 Motivation to every character** (cap 5) - **+3 instead if a feature was banked this week.** |
+| **Celebrate** | **+1 Motivation to every character** (cap 5) - **+2 instead if a feature was banked this week.** |
 
 There are **eleven** Activities, and none of them is "rest" - resting isn't something a team does
 at work. **Celebrate** is what is: you mark what you got done, in work time, together. It is
@@ -1217,14 +1227,20 @@ does nothing while anyone is that low. Workshop is the cheap version of the same
 spare Motivation, but a day buys only one token.
 
 ### Why Celebrate pays more when you've shipped
-A celebration with nothing behind it still helps - the base +2 is unconditional, so a team in
-trouble always has a lifeline and can't spiral. But **+3 when a feature was banked that same
+A celebration with nothing behind it only cancels the weekly grind - the base +1 is unconditional, so
+a team in trouble always has a lifeline, but it can hold a team level, never lift it. **+2 when a
+feature was banked that same
 week** builds the rhythm the game is really about: *deliver, then mark it*. It makes the
 Feature Tower emotionally load-bearing rather than decorative, and it rewards timing rather
 than just spending.
 
 It's also the honest version of how teams actually sustain themselves across a hard project.
 They don't rest in the middle of it. They ship something and say so.
+
+### Why Celebrate is small
+In the balance runs the best play was a Celebrate every single week: for one day it gave every
+character +2, twice what the weekly grind takes. At +1 (+2 when you shipped) a Celebrate only cancels
+the grind, so it cannot be the whole plan: Needs, Habits and the Events you cancel have to carry the rest.
 
 ### Overtime, and the hours you owe
 > **Overtime.** Any week, the team may play **one sixth card**, matching one character's
@@ -1520,7 +1536,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | BURNOUT WARNING | People | 2 | Support | Anyone on 1 Motivation leaves next week unless the team plays a Celebrate. | Community −1 |
 | MORE HANDS | People | 2 | Withdraw | The feature with the most Work this week has that Work halved (round down). | none |
 | THE TEAM SPLITS | People | 2 | Challenge | Two characters may not take the same feature; the team loses 1 Trust; everyone −1 Motivation. | Community extra, Quality immune |
-| A FLAT WEEK | People | 1 | Challenge | Everyone −1 Motivation; a Celebrate this week gives only +2, no bonus. | Community extra, Quality immune |
+| A FLAT WEEK | People | 1 | Challenge | Everyone −1 Motivation; a Celebrate this week gives only +1, no bonus. | Community extra, Quality immune |
 | EQUIPMENT OUTAGE | Environment | 2 | Support | Remove one Work card. Everyone −1 Motivation. | Hierarchy extra, Autonomy immune |
 | OLD FOUNDATIONS | Environment | 2 | Withdraw | The feature with the most Work already banked gains +2 Work Cost. | Hierarchy −1 |
 | FALSE START | Environment | 1 | none | The first Work card this week produces nothing. | Hierarchy −1 |
@@ -1753,7 +1769,7 @@ a **Team Score** to see *how* the team got there:
 **Team Score** = (features placed on the Tower × 10) + (sum of the three Ledger tracks plus the
 adapt tokens still in the Adaptability pool,
 max 21) + (sum of every remaining character's Motivation tokens) − (20 × characters who quit
-or were fired) − (2 × **unrepaid Flex markers**, §7).
+or were fired) − (2 × **unrepaid Flex markers**, §7) − (5 × **Ledger tracks that finish in the low band**, 0 or 1: a switched-off Activity the team never fixed).
 
 > **Note for player counts other than 4:** the Motivation term scales with the number of
 > characters, so the threshold below has to as well. Use **68 + (5 × number of starting

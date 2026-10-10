@@ -116,7 +116,7 @@ they already did alone (rulebook §18.1).
 *The project ends when Week 7 closes.*
 
 **Team Score** = (features × 10) + (3 tracks + adapt tokens, max 21) + (Motivation) − (20 × quits) − (2 ×
-unrepaid Flex)
+unrepaid Flex) − (5 × tracks that finish at 0 or 1)
 
 | Outcome | Condition | |
 |---|---|---|

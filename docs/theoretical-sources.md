@@ -501,7 +501,7 @@ why the Reverse Conway Maneuver treats team topology as a design lever, not an a
   purpose to get the system it wants, rather than accepting whatever shape its Work happened to
   fall into.
 - **Cross-Trained** (§5.1) rewards exactly the capability the maneuver requires: a character who
-  has covered three rows has deliberately reshaped their own place in the team's communication
+  has covered a second row has deliberately reshaped their own place in the team's communication
   graph, ahead of need, not in response to a gap already discovered.
 
 **Key works.** Conway, M.E., "How Do Committees Invent?" (*Datamation*, 1968); Skelton, M. &

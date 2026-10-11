@@ -36,7 +36,7 @@ could survive doing it again: Sustainable High Performance.
 
 - Only **THE PROJECT** and **THE ZONE** start face up. **SHIT HAPPENS** and **THE TEAM** stay
   text side up; **THE DEVELOPMENT** stays boxed.
-- **Motivation 3** for every character. Week marker on Week 1. Shuffle the Events but don't draw
+- **Motivation 4** for every character. Week marker on Week 1. Shuffle the Events but don't draw
   yet.
 - *Everything on the covered boards already sits at 1. It just isn't your problem for a few more
   weeks.*
@@ -115,7 +115,7 @@ they already did alone (rulebook §18.1).
 
 *The project ends when Week 7 closes.*
 
-**Team Score** = (features × 10) + (3 tracks + adapt tokens, max 21) + (Motivation) + (10 × Habits held) − (20 × quits) − (2 ×
+**Team Score** = (features × 10) + (3 tracks + adapt tokens, max 21) + (Motivation) + (10 × Habits held) + (20 if nobody quit) − (20 × quits) − (2 ×
 unrepaid Flex) − (5 × tracks that finish at 0 or 1)
 
 Two lines: **5 for every character you started with, minus 15** (lower) and **5 for every character, plus 45** (upper).

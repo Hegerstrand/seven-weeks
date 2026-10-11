@@ -672,10 +672,10 @@ no executor the tile read "No Event landed on the team, or it has Shared Reperto
 Events are drawn every week from week 2. It now reads **"At most 1 Event landed on the team, or it
 has Shared Repertoire: +1
 Motivation."** Every Need tile except Recognition now ends with its vindicating Habit as an
-alternative (Hierarchy: Who Knows What, Community: Psychological Safety, Quality: Team
-Reflexivity), replacing Community's old "Trust is 4+".
+alternative (Hierarchy: Who Knows What, Community: Psychological Safety); Quality (since 2026-10-11) has no Habit, only
+"Work added this week", and Recognition has none either. Community's old "Trust is 4+" is replaced.
 (rulebook.md, "Need gives bonus Motivation"). Hierarchy reads "Team played a Teach, or team has
-Who Knows What" and Recognition "A feature was banked this week, or you spent Hero".
+Who Knows What" and Recognition "A feature was banked this week, or you spent Hero, or held a Demo".
 **The condition text sits on a tint (2026-10-07)**, a rounded rect behind the condition lines
 (38 mm wide, `rx` .4) in the colour of the Event category that gets to that Torso (rulebook §5):
 Autonomy `#F7D7A1` (Management), Hierarchy `#C7CFB5` (Environment), Community `#D3CEDF` (People),
@@ -688,7 +688,7 @@ italic serif 3 caption, right-aligned at x+33, so a tile can still be matched to
 **Quality's Need was rebuilt after the 2026-09-25 playtest.** It first dropped its "or a feature
 cleared Unclear" clause (Unclear went to the `feature-quality-uncertainty` extension, rulebook
 v0.21), leaving "The team spent an Align." Players then spent weeks 1-3 on everything but Work,
-so the Need now reads **"Work added to a feature this week: +1 Motivation. No Work added to feature: -1
+so the Need now reads **"Work added this week: +1 Motivation. No Work added to feature: -3
 Motivation."** (two lines each with a `#D3B1B1` chip; rulebook.md, "Need gives bonus
 Motivation"). It counts Work that really moved a feature's counter, not just a Work card laid
 down. It is the only Need that can cost you.

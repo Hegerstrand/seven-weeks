@@ -76,7 +76,7 @@ read them as minimums.
 | "CAPITAL" + "WEEK 2" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
 | "one marker - slide it. Starts 0, only grows if witnessed." | `.s.q` italic serif | 2.1 | `#000000` | - |
 | "MOTIVATION" + caption (the squares carry no numbers) | `.m` mono / `.s.q` serif | 2.8 / 2.9 | `#000000` | panel `#D3B1B1` |
-| "tokens - one per circle. Starts 3, -1 per week; 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
+| "tokens - one per circle. Starts 4, -1 per week; 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
 
 ## Illustration
 
@@ -190,7 +190,7 @@ week the Specimen panel on each person board starts being read.
 | `<g id>` | Contents | Background (hex) |
 |---|---|---|
 | header (ungrouped) | sheet title banner + rule | - |
-| `board-4b-front` | "HOW YOU COVER" panel (LEARN/TEACH rules + ZPD note) + "THE LEDGER READS THIS" panel (Capability full-line rule, Shared Practice stack rule, Cross-Trained 3rd-row rule, one-line citation) | Capability strip `#C7CFB5`; Shared Practice strip `#F7D7A1`; Cross-Trained strip `#D9D3C4` |
+| `board-4b-front` | "HOW YOU COVER" panel (LEARN/TEACH rules + ZPD note) + "THE LEDGER READS THIS" panel (Capability full-line rule, Shared Practice stack rule, Cross-Trained 2nd-row rule, one-line citation) | Capability strip `#C7CFB5`; Shared Practice strip `#F7D7A1`; Cross-Trained strip `#D9D3C4` |
 | `board-4b-back` | "THE PAYOFF/ TURN ME OVER START OF WEEK 3" + 3-line teaser paragraph | none, plain `.r` outline |
 | cut instructions (ungrouped) | dashed cut line + 3 lines of glue/assembly instructions | - |
 
@@ -208,8 +208,8 @@ week the Specimen panel on each person board starts being read.
 | "CAPABILITY · A FULL LINE" | `.m` mono | 3.4 | `#000000` | strip `#C7CFB5` |
 | "every square of a row or column of THE ZONE tiled → +1 Capability" | `.s` serif | 3.2 | `#000000` | - |
 | "SHARED PRACTICE · A STACK" / "a tile flips to stacked: two of you cover it → +1 Shared Practice" | `.m` mono / `.s` serif | 3.4 / 3.2 | `#000000` | strip `#F7D7A1` |
-| "CROSS-TRAINED · A 3RD ROW" | `.m` mono | 3.4 | `#000000` | strip `#D9D3C4` |
-| "your SPECIMEN covers a 3rd row → +1 Capital, once each" | `.s` serif | 3.2 | `#000000` | - |
+| "CROSS-TRAINED · A 2ND ROW" | `.m` mono | 3.4 | `#000000` | strip `#D9D3C4` |
+| "your SPECIMEN covers a 2nd row → +1 Capability, once each" | `.s` serif | 3.2 | `#000000` | - |
 | "BOTH" + "mark your SPECIMEN, then put down or flip a tile on THE ZONE." | `.m` mono / `.s` serif | 3.2 / 3.4 | `#000000` | - |
 | 3-line citation block (Bourdieu/Vygotsky/Marx) | `.m.q` mono | 2.5 | `#000000` | - |
 | "BACK · UNTIL WEEK 3" | `.m` mono | 3.2 | `#000000` | - |
@@ -425,7 +425,7 @@ board. Adaptability is not a row: it is a pool of tokens on SHIT HAPPENS. BACK i
 | header (ungrouped) | "THE TEAM" title, italic tagline, "THE TEAM · FROM END OF WEEK 1", rule, legend box + 2-line legend, "START" (over circle 1) / "FLIP → HABIT" (over circle 4) / "HABIT and who named it" | legend box: `.r` outline only |
 | `trust` | title, subtitle, 6-circle coin track numbered 0-5, red flip-ring at circle 4, 'TEACH DOES NOTHING' footnote under circles 0-1, "Psychological Safety" + citation | `#D3CEDF` |
 | `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#C7CFB5` |
-| `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circles 0-1, "Shared Repertoire" + citation | `#F7D7A1` |
+| `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circle 0 only, "Shared Repertoire" + citation | `#F7D7A1` |
 | `standing` | title, subtitle ("grown by nobody" / "starts on 0"), 6-circle track numbered 0-5 at the same centres as the other rows, red flip-ring at circle 5, bracket + "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE", "FLIP AT 5" label above the ring, "Authorized Voice" + description + citation. Absolute at y 157-185, no `translate`. A footer line says Adaptability is a pool on SHIT HAPPENS | `#D9D3C4` (Capital Bone) |
 
 Row tint follows the same People/Environment/Management categories the Event-card tints derive

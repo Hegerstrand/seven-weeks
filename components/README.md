@@ -23,7 +23,7 @@ for the full workflow and template.
 | Habitus cards/tiles (Base, Legs, Torso, Head, Item options) | 1 deck | Printed cards | To design |
 | Project cards | 6 | Printed cards - six themed projects over one identical slot structure, §20 | Written in rulebook §20 |
 | **Activity cards** | 16 per sheet (9 designs) | **The week's five slots are filled from these** - print sheet in `print-5-activities.svg` | Drawn |
-| **Flex markers** | 6 | Taken on Overtime; a day the project owes. Placed **into a weekday slot** to give the day back, or −5 Team Score each if never repaid (§7) | **Off-the-shelf token, not printed** |
+| **Flex markers** | 1 | Taken on Overtime; a day the project owes. The team holds at most one. Placed **into a weekday slot** to give the day back, or -2 Team Score if never repaid (§7) | **Off-the-shelf token, not printed** |
 | **Feature Tower blocks** | 6 | **3D print, wood-fill PLA - hex, height proportional to Work Cost. D and F have cone/wedge bottoms and can only stand on B and C** | Spec'd in `3d-models/` |
 | Feature Work cubes | 6 | One cube walking each feature's track on the Project Rack | **Off-the-shelf cube, not printed** |
 | **Quality chips** | 6 | **3D print - same blank body across all tiers, engraved reveal face** | Spec'd in `3d-models/` |
@@ -94,7 +94,7 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | Print | Paper | Used from | What it is |
 |---|---|---|---|
 | `cards-activity-63x88mm-A4-portrait` | A4 | Week 1 | Nine Activity cards - Work x3, Coordinate x2, Workshop, Align, Celebrate x2. **Print once** |
-| `cards-activity-5b-63x88mm-A4-portrait` | A4 | Week 1/3 | The other nine - Work x2 (five total), Teach x2, Plan, Demo, Reflect, Workshop, Learn. **Print once** |
+| `cards-activity-5b-63x88mm-A4-portrait` | A4 | Week 1/3 | The other nine - Work x2 (five total), Teach x2, Plan, Demo, Reflect (one card, so at most one Reflect a week), Workshop, Learn. **Print once** |
 | `cards-event-01-09-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 1-9 |
 | `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18 |
 | `cards-event-19-21-63x88mm-A4-portrait` | A4, one row used | Week 2 | Event cards 19-21 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD). Shuffle all three sheets into one 21-card deck |

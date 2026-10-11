@@ -86,8 +86,8 @@ the-team-BACK matches and goes on the reverse.</desc>
     <text x="139.2" y="115.4">3</text><text x="156.9" y="115.4">4</text><text x="174.7" y="115.4">5</text>
   </g>
   <circle cx="156.9" cy="114" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M78.9,124 L78.9,127 L110.8,127 L110.8,124" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="131" class="m" font-size="2.6" text-anchor="middle">PLAN DOES NOTHING</text>
+  <path d="M78.9,124 L78.9,127 L93.1,127 L93.1,124" class="w" style="stroke:#905151;stroke-width:.5"/>
+  <text x="78.9" y="131" class="m" font-size="2.6">PLAN DOES NOTHING</text>
   <text x="220.7" y="112" class="s" font-size="5">Shared Repertoire</text>
   <text x="220.7" y="118.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
 </g>

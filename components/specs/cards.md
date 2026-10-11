@@ -12,7 +12,7 @@ for the editing workflow (md first, then SVG) and `board-game-cards` for the geo
 
 | Section | Source SVG(s) |
 |---|---|
-| [Activity cards](#activity-cards-63x88mm-a4) | `../cards-activity-63x88mm-A4-portrait.svg`, `../cards-activity-5b-63x88mm-A4-portrait.svg` |
+| [Activity cards](#activity-cards-63x88mm-a4) | `../cards-activity-63x88mm-A4-portrait.svg`, `../cards-activity-5b-63x88mm-A4-portrait.svg`, `../cards-activity-5c-63x88mm-A4-portrait.svg` |
 | [Event cards](#event-cards-63x88mm-a4) | `../cards-event-01-09-63x88mm-A4-portrait.svg`, `../cards-event-10-18-63x88mm-A4-portrait.svg`, `../cards-event-19-21-63x88mm-A4-portrait.svg` |
 | [Habitus part-cards](#habitus-part-cards-44x36mm-a4-landscape) | `../cards-habitus-parts-01-15-44x36mm-A4-landscape.svg`, `../cards-habitus-parts-16-25-44x36mm-A4-landscape.svg` |
 | [NEED and HERO tiles](#need-and-hero-tiles-44x36mm-a4-landscape) | `../cards-need-hero-44x36mm-A4-landscape.svg` |
@@ -28,9 +28,10 @@ for the editing workflow (md first, then SVG) and `board-game-cards` for the geo
 |---|---|---|
 | 1 | `../cards-activity-63x88mm-A4-portrait.svg` | Work x3, Coordinate x2, Workshop, Align, Celebrate x2 |
 | 2 | `../cards-activity-5b-63x88mm-A4-portrait.svg` | Work x2 (five total with Sheet 1), Teach x2, Plan, Demo, Reflect, Workshop, Learn |
+| 3 | `../cards-activity-5c-63x88mm-A4-portrait.svg` | Onboarding x1 (the team lays it to fill an empty seat; it carries every quitting rule) |
 
-Eighteen Activity cards, the week 1/3 core loop, split across two A4 sheets (nine per sheet,
-each printed once - no reprinting). Card size 63x88mm, text column x=5..58 (53mm). All cards
+Nineteen Activity cards, the week 1/3 core loop plus Onboarding, split across three A4 sheets (nine,
+nine and one, each printed once - no reprinting). Card size 63x88mm, text column x=5..58 (53mm). All cards
 share the same skeleton: `63x88` border rect (`.c`), title (mono, 6.6-7.5pt, letter-spacing
 1.2-1.5), a `.h` rule at y=17, then the card's own body. No category tint band (that's an
 Event-card feature, not Activity) - the **effect** itself gets the tinted rounded rect instead,
@@ -117,6 +118,14 @@ graph TD
 
 Sheet placement: Work (10,12), Work (76,12), Teach (142,12); Teach (10,104), Plan (76,104), Demo
 (142,104); Reflect (10,196), Workshop (76,196), Learn (142,196).
+
+## Sheet 3
+
+| Card | Title | Headline | Rules text | Flavour |
+|---|---|---|---|---|
+| `onboarding` | ONBOARDING (mono 5.6, letter-spacing .8) | "Bring in a replacement" (`#D9D3C4` strip) | "ONLY WITH AN EMPTY SEAT"; "Motivation 5. Capital 0."; "Work 1 lower until 2 days of Learn or Coordinate with them."; a `#D3B1B1` strip "WHEN SOMEONE QUITS" with the five quitting lines in mono 2.8: "AT 0 MOTIVATION, WEEK CLOSE", "TEAM SCORE -20", "EVERYONE STILL IN THE TEAM:", "-1 MOTIVATION", "SEAT EMPTY UNTIL THIS CARD" | "A new face. A day gone before any work gets done." |
+
+Sheet placement: Onboarding (10,12). One card, so at most one replacement a week.
 
 ### Illustration
 

@@ -5,13 +5,15 @@ whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
 > ## BALANCE PASS (2026-10-11)
-> **When a character quits, everyone left loses 1 Motivation** (§6.1, §16).
+> **New action card: Onboarding.** After a quit, the replacement only joins when the team lays Onboarding, which costs a day (§7, §13). All the quitting rules are printed on that card.
+> **A quit costs 20 Team Score** (back to 20 after a brief 40), §16.
+> **When a character quits, everyone still in the team loses 1 Motivation** (§6.1, §16).
 > **Teach may also step diagonally** (Learn stays left or right in your own row), but **only onto a square someone already covers**: it only flips a tile to stacked, never puts one down, §7, §8.
 > **Plan does nothing on Low complexity features** (A and E) and gives +1 per Work card on Medium and High ones (B, C, D, F), §7. B and C are Medium in the sim, as printed.
 > **Reflect: at most one a week** (one card, §7).
-> **Starting Motivation is 4** (was 3), and **Take One For The Team moves Trust at once, from week 1** (§7), so a Dependable character can pay for it early (§5.2). **Team Score gains +20 if nobody quit or was fired all game** (§16).
+> **Starting Motivation is 5** (was 3, then 4), and **Take One For The Team moves Trust at once, from week 1** (§7), so a Dependable character can pay for it early (§5.2). **Team Score: each feature and each Habit held is now worth 12** (was 10), §16.
 > **Motivation economy:** Bookish gets **+2** for Learn and Hands-On **+2** for Teach (their dislike stays −1), and a Legs
-> strength now pays at track **3 or more** instead of 4, §5. **Team Score** now counts **10 per Habit held**, and has **two thresholds**: 5 × characters − 15 (Sustainable
+> strength now pays at track **3 or more** instead of 4, §5. **Team Score** now counts **12 per Habit held**, and has **two thresholds**: 5 × characters − 15 (Sustainable
 > Performance) and 5 × characters + 45 (Sustainable High Performance), §16. **Celebrate** gives +1 only to
 > characters on 3 or less and only if there is something to celebrate (a feature banked, or every Event
 > cancelled), §7. **Reflect** with evidence also gives +1 Motivation to characters on 3 or less, fills the
@@ -576,7 +578,7 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
    [playability assessment](../docs/playability-assessment.md).
 
 ### 3.3 Starting values
-1. Set every character's starting **Motivation to 4** (scale 0-5).
+1. Set every character's starting **Motivation to 5** (scale 0-5).
 2. Set the three **Ledger** tracks (Trust, Capability, Shared Practice) to **1** (scale 0-5):
    the low band, where Teach and the first Work card of the week do nothing until the team
    earns its way out (§4). Plan works from Shared Practice 1 and only does nothing at 0. Put **3 tokens** in the Adaptability
@@ -689,7 +691,7 @@ action.
 The best teams keep a healthy balance across all of them - not "max everything."
 
 ## 5. Motivation
-Each character has their own pool of **Motivation tokens** (starts at 4, cap 5) instead of
+Each character has their own pool of **Motivation tokens** (starts at 5, cap 5) instead of
 just a number on a track. The physical count matters, because tokens move in three different
 ways:
 - **Gain** - Celebrate (§7), or a good Event/team condition, adds a token.
@@ -1168,7 +1170,7 @@ category this week per their Torso (§5, "Motivation depends on habitus" - check
 and who was immune before totaling), +1 if their Need was met (§5; a **Quality** character
 with no Work added to a feature this week takes −3 instead), −1 if they are **Competitive** and
 somebody else played a Hero this week. Apply the net number, then any character at 0 quits -
-this is the only moment a quit is checked. **Everyone left then loses 1 Motivation for each character who quit.** Then **advance the week.**
+this is the only moment a quit is checked. **Everyone still in the team then loses 1 Motivation for each character who quit.** Then **advance the week.**
 
 Banking comes first because a banked feature lifts its lock and decides whether Celebrate had something to mark. **The
 project ends when Week 7 closes.**
@@ -1215,6 +1217,7 @@ character to receive it.
 | **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
 | **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
+| **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 5** and **Capital 0**, and goes into Rushed Onboarding (§12). **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
 | **Celebrate** | **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. |
 
 There are **eleven** Activities, and none of them is "rest" - resting isn't something a team does
@@ -1755,16 +1758,18 @@ properly?"*
 
 ### Replacement - deliberately expensive
 No like-for-like swap. Whenever a character quits or is fired:
-- **The seat sits empty for the rest of that week** - nobody plays it, not even at reduced
-  effect. That week's plan runs one character short.
-- **At the start of the following week**, a new character joins with a fresh Habitus,
-  Skills, Knowledge, and Motivation, and goes straight into **Rushed Onboarding (§12)**,
-  same 2-day cost as ever. No shortcut, no buy-out.
+- **The team pays:** Team Score −20, and **everyone still in the team loses 1 Motivation** (§6.1, §16).
+- **The seat sits empty until the team lays the Onboarding card** (§7). Nobody plays an empty
+  seat, so the plan runs one character short.
+- **Onboarding costs a day.** When the team lays it, a new character joins at once with a fresh
+  Habitus, Skills, Knowledge and **Motivation 5**, and goes straight into **Rushed Onboarding
+  (§12)**, same 2-day cost as ever. No shortcut, no buy-out. One card, so one replacement a week.
+- **All of this is printed on the Onboarding card**, so a table never has to look it up.
 
 This is now the **only** way Onboarding gets triggered - the old **NEW TEAM MEMBER** Event
 card is retired. It used to depend on a random draw, which meant a whole subsystem could go
 unseen in a short game (see [playability-assessment.md](../docs/playability-assessment.md),
-M7). Now it's guaranteed, and it costs more than it used to: a lost week on top of the usual
+M7). Now it's guaranteed, and it costs more than it used to: a day on top of the usual
 onboarding tax, because losing someone should hurt more than the Motivation math alone says
 it does. See [Designer's Notes](../docs/04-designers-notes.md) - this is also where **Brooks's
 Law** gets a mechanic back, via the Event that took NEW TEAM MEMBER's card slot.
@@ -1786,9 +1791,9 @@ team falls apart when its key person or process gets disrupted.
 At the end of Week 7 / Day 35, first check whether the project was delivered, then work out
 a **Team Score** to see *how* the team got there:
 
-**Team Score** = (features placed on the Tower × 10) + (sum of the three Ledger tracks plus the
+**Team Score** = (features placed on the Tower × 12) + (sum of the three Ledger tracks plus the
 adapt tokens still in the Adaptability pool,
-max 21) + (sum of every remaining character's Motivation tokens) + (**10 × Habits the team holds**, max 5) + (**20 if nobody quit or was fired all game**) − (20 × characters who quit
+max 21) + (sum of every remaining character's Motivation tokens) + (**12 × Habits the team holds**, max 5) − (20 × characters who quit
 or were fired) − (2 × **unrepaid Flex markers**, §7) − (5 × **Ledger tracks that finish in the low band**, a switched-off Activity the team never fixed).
 
 > **Note for player counts other than 4:** the Motivation term scales with the number of
@@ -1896,7 +1901,7 @@ check Motivation and the Ledger.
 
 ## 19. Prototype scope (v0.1)
 3-6 players · 6 features · 18 total Work · 7 weeks × 5 team-days = **35 days** · 3 Ledger
-tracks + an Adaptability pool · Motivation starts at 4 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
+tracks + an Adaptability pool · Motivation starts at 5 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
 simple individual/shared Knowledge system · 6 Project cards (§20). Keep components ugly at
 first (index cards, cubes, sticky notes) - see
 [../components/README.md](../components/README.md).

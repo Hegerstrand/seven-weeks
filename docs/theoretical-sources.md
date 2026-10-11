@@ -318,7 +318,7 @@ it was meant to only observe, from two different centuries and two different dis
 
 **Relevance to this game.**
 - **§16's Team Score / victory-condition split is Goodhart's Law built as a win condition**,
-  not just illustrated by one: **Team Score** is the proxy (features banked × 10, the four
+  not just illustrated by one: **Team Score** is the proxy (features banked × 12, the four
   Team State tracks, remaining Motivation), and it is *always* possible to over-fit it - bank
   conservatively, avoid every risky Reflect or Celebrate, hoard Motivation instead of spending
   it on the team. That's exactly why **Heroic Success** (all features delivered, Team Score

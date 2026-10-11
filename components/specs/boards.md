@@ -76,7 +76,7 @@ read them as minimums.
 | "CAPITAL" + "WEEK 2" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
 | "one marker - slide it. Starts 0, only grows if witnessed." | `.s.q` italic serif | 2.1 | `#000000` | - |
 | "MOTIVATION" + caption (the squares carry no numbers) | `.m` mono / `.s.q` serif | 2.8 / 2.9 | `#000000` | panel `#D3B1B1` |
-| "tokens - one per circle. Starts 4, -1 per week; 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
+| "tokens - one per circle. Starts 5, -1 per week; 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
 
 ## Illustration
 

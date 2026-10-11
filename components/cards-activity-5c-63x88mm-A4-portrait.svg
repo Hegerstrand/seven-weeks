@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Sheet 5c - Activity cards, the Onboarding card (63 x 88 mm)</title>
+<desc>One card: Onboarding. The team lays it to bring a replacement in after someone has quit, and it
+carries every quitting rule. Print once, cut on the outer line. Print at 100%.</desc>
+
+<style>
+  .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
+  .m { font-family:"IBM Plex Mono","Courier New",monospace; fill:#000000; }
+  .c { fill:none; stroke:#2A2620; stroke-width:.5; }
+  .h { stroke:#2A2620; stroke-width:.4; fill:none; }
+  .q { fill:#000000; }
+</style>
+
+<defs>
+  <!-- 63 x 88 card. Text column is x=5..58 (53 mm); baselines stop at y=84. -->
+  <g id="onboarding" transform="scale(.95238095,1)">
+    <rect width="63" height="88" rx="2" class="c"/>
+    <text x="5" y="13" class="m" font-size="5.6" letter-spacing=".8">ONBOARDING</text>
+    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
+    <text x="5" y="23.5" class="s" font-size="4.2" font-style="italic">A new face. A day gone</text>
+    <text x="5" y="28.3" class="s" font-size="4.2" font-style="italic">before any work gets done.</text>
+    <text x="5" y="33" class="m q" font-size="3.1">ONLY WITH AN EMPTY SEAT</text>
+    <rect x="4" y="35" width="50" height="8" rx="1.2" fill="#D9D3C4"/>
+    <text x="5" y="41" class="s" font-size="5">Bring in a replacement</text>
+    <text x="5" y="47.5" class="s" font-size="4">Motivation 5. Capital 0.</text>
+    <text x="5" y="52" class="s" font-size="4">Work 1 lower until 2 days of</text>
+    <text x="5" y="56.5" class="s" font-size="4">Learn or Coordinate with them.</text>
+    <line x1="5" y1="60" x2="58" y2="60" class="h"/>
+    <rect x="4" y="61.4" width="50" height="4" rx=".8" fill="#D3B1B1"/>
+    <text x="5" y="64.4" class="m q" font-size="3.1">WHEN SOMEONE QUITS</text>
+    <text x="5" y="69.2" class="m q" font-size="2.8">AT 0 MOTIVATION, WEEK CLOSE</text>
+    <text x="5" y="72.6" class="m q" font-size="2.8">TEAM SCORE -20</text>
+    <text x="5" y="76" class="m q" font-size="2.8">EVERYONE STILL IN THE TEAM:</text>
+    <text x="5" y="79.4" class="m q" font-size="2.8">-1 MOTIVATION</text>
+    <text x="5" y="82.8" class="m q" font-size="2.8">SEAT EMPTY UNTIL THIS CARD</text>
+  </g>
+</defs>
+
+<text x="10" y="8" class="m" font-size="3.2" letter-spacing=".5">SHEET 5c · ACTIVITY CARD · ONBOARDING · PRINT AT 100% · PRINT ONCE</text>
+
+<use href="#onboarding" x="10" y="12"/>
+</svg>

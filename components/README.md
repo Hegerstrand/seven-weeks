@@ -95,6 +95,7 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 |---|---|---|---|
 | `cards-activity-63x88mm-A4-portrait` | A4 | Week 1 | Nine Activity cards - Work x3, Coordinate x2, Workshop, Align, Celebrate x2. **Print once** |
 | `cards-activity-5b-63x88mm-A4-portrait` | A4 | Week 1/3 | The other nine - Work x2 (five total), Teach x2, Plan, Demo, Reflect (one card, so at most one Reflect a week), Workshop, Learn. **Print once** |
+| `cards-activity-5c-63x88mm-A4-portrait` | A4 | When someone quits | One card: **Onboarding**. The team lays it to bring a replacement in (it costs the day) and it carries every quitting rule. **Print once** |
 | `cards-event-01-09-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 1-9 |
 | `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18 |
 | `cards-event-19-21-63x88mm-A4-portrait` | A4, one row used | Week 2 | Event cards 19-21 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD). Shuffle all three sheets into one 21-card deck |

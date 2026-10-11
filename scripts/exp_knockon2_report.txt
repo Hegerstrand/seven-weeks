@@ -1,0 +1,95 @@
+OPTIMAL SEARCH ([1/1] optimal): 150 games per candidate, objective 15.3
+  Strategy(name='optimal', work_days=(5, 0, 0, 2, 1, 1, 3, 4), trust_goal=3, celebrate_min=2, celebrate_mean=3.5, celebrate_every=3, pool_goal=2, learn=2, reflect=True, plan=False, demo=False, overtime_weeks=(3,), repay_flex=False, adapt_threshold=0.3, hero_min_cost=1, bank_tokens=False, wolf='never', take_one=True, align=0, use_stand=True, random_play=False, celebrate_needs_reason=True, align_weeks=(4, 6, 8))
+
+==============================================================================
+STRATEGY optimal   (1000 games, 5 players, thresholds 10 / 70)
+==============================================================================
+Outcome:  failure 8%   heroic 5%   sustainable 14%   high performance 74%   mean score 106.4 (p10 26, p90 158)
+
+1. WORK COST
+   features banked: mean 5.91 / 6    all six: 92%
+   Work produced 22.2 (needed 18 + 0.6 added), per Work card 1.17, wasted cards 1.23, rework lost 0.33
+   Work cards per game 19.0 of 40 days
+   PLAN: each Work card on the planned feature delivers double; extra Work from Plan 2.6 a game, Plan laid 1.92 times a game
+   last feature banked in week: mean 8.0  (p10 8, p90 8)  over the games that finish
+   Work output by week: w1 4.0  w2 1.9  w3 0.6  w4 1.7  w5 1.2  w6 1.5  w7 5.7  w8 5.6
+   Ledger at end: Trust 3.0  Capability 4.5  Shared Practice 5.0   lines filled 2.5  stacks 9.4
+
+2. ADAPTABILITY
+   tokens earned 9.4   spent 8.0   lost to events 0.00   wasted at the cap 0.65   banked in TR wells 2.90   pool at end 4.0
+   pool at close of week: w1 3.0  w2 0.3  w3 2.1  w4 2.2  w5 2.5  w6 3.9  w7 3.3  w8 4.0
+   Events drawn 14.0/game, cancelled 9.7 (69%): av 1.32, free 0.57, hero 3.38, token 4.38
+   Hero plays 3.38   Wolf: stepped up 0.00, Capital erased 0.57   combos 1.29
+   FLEX CHECK: most Flex markers held at once: max 1, games above 1: 0 of 1000  (ok)
+   Habits (share of games, mean week): WKW 93% w5.5   SR 100% w5.2   TR 90% w6.0   AV 64% w5.9
+   Teach cards dead (Trust<=1) 0.00   Reflect dead (Trust<3) 0.00
+   TEAM REFLEXIVITY CHECK: needs 3 Reflect wells (Objectives, Strategies, Processes), one token each, Trust 3+ to Reflect
+      reached 90% of games   wells filled 2.90 / 3   Reflect played 3.25   Reflect with no evidence 4%   Reflect dead 0.00
+      tokens banked in wells 2.90   tokens the pool got instead (not banking) 3.25   wells skipped while able 0.00
+      objectives well filled by week (share of games): w1 0.00  w2 0.00  w3 0.81  w4 0.83  w5 0.96  w6 0.98  w7 1.00  w8 1.00
+      strategy   well filled by week (share of games): w1 0.00  w2 0.00  w3 0.00  w4 0.14  w5 0.48  w6 0.67  w7 0.85  w8 0.91
+      process    well filled by week (share of games): w1 0.00  w2 0.00  w3 0.09  w4 0.47  w5 0.78  w6 0.92  w7 0.98  w8 0.99
+      weeks with evidence for an empty well 2.96 a game (needs 3), Reflect not laid in 0.04 of them
+      WHY NOT: evidence for an empty well showed up in only 3.0 weeks a game, fewer than the 3 wells (each week needs a banked feature, 2 Events adapted to, or a Hero / token / track drop, and the Reflect comes the week after).
+
+3. MOTIVATION
+   mean Motivation by week: w1 3.00  w2 2.68  w3 2.40  w4 3.09  w5 3.50  w6 3.88  w7 4.07  w8 3.76
+   lowest Motivation by week: w1 2.69  w2 1.72  w3 1.38  w4 1.95  w5 2.40  w6 2.72  w7 2.90  w8 2.37
+   quits per game 1.51   games with a quit 54%   Celebrates 4.0
+   median Motivation by week: w1 3.00  w2 2.56  w3 2.42  w4 3.15  w5 3.63  w6 4.02  w7 4.25  w8 3.93
+   QUIT CHECK: quits by week: w1 0.00  w2 0.13  w3 0.64  w4 0.29  w5 0.25  w6 0.10  w7 0.04  w8 0.07   games with 0 quits 46%
+   QUIT CAUSES per game (the biggest Motivation loss in the week the character quit): the weekly grind 0.59   a week without Work (Quality Need) 0.46   Events 0.44   a track in the low band (instinct) 0.01   another character's Hero 0.01   spent it on Align, Overtime or Take One 0.00   the burnout Event 0.00
+   CELEBRATE CHECK: played 4.0 a game (target 4 or fewer), 0.9 of them with nothing to celebrate   more than 4 times in 31% of games   Motivation given 7.4 a game   characters skipped by the cap (Motivation above 3) 6.8 a game
+   QUALITY CHECK: Quality quits per game 0.590, of which after a week without Work 0.463, after 2+ weeks in a row 0.008
+   weeks without Work per game 0.68, longest run 0.61   (the design goal is 0 Quality quits from this)
+   IMMUNITY CHECK: Events spared immune Torsos 1.3 Motivation a game (Autonomy 0.4, Hierarchy 0.7, Community 0.0, Quality 0.3); the hit Torso lost 3.5 extra
+   Motivation flow per game (all characters): align -7.3, base_hero_gift +13.7, celebrate +7.4, competitive -2.4, event -9.1, grind -31.3, legs_down -9.5, legs_up +21.5, need +29.2, overtime -1.0, quality_penalty -2.0, quit_knock_on -7.3, recognition_witness +11.4, reflect +6.7, take_one -1.0
+   Need met rate: Autonomy 92%  Hierarchy 84%  Community 83%  Quality 89%  Recognition 70%
+
+4. EVENTS AND DAYS (average count per week)
+   Events drawn     w1 0.00  w2 2.00  w3 2.00  w4 2.00  w5 2.00  w6 2.00  w7 2.00  w8 2.00
+   Events cancelled w1 0.00  w2 1.18  w3 0.68  w4 1.35  w5 1.28  w6 1.63  w7 1.77  w8 1.75
+     by free        w1 0.00  w2 0.00  w3 0.00  w4 0.00  w5 0.00  w6 0.16  w7 0.18  w8 0.24
+     by token       w1 0.00  w2 1.18  w3 0.07  w4 0.66  w5 0.57  w6 0.68  w7 0.66  w8 0.56
+     by hero        w1 0.00  w2 0.00  w3 0.61  w4 0.69  w5 0.67  w6 0.56  w7 0.48  w8 0.38
+     by av          w1 0.00  w2 0.00  w3 0.00  w4 0.00  w5 0.04  w6 0.24  w7 0.46  w8 0.58
+   Work days        w1 5.00  w2 2.98  w3 1.66  w4 1.96  w5 1.35  w6 1.01  w7 1.99  w8 3.07
+   Celebrate days   w1 0.00  w2 0.85  w3 0.26  w4 0.76  w5 0.48  w6 0.97  w7 0.33  w8 0.29
+   Coordinate days  w1 0.00  w2 1.00  w3 0.11  w4 0.07  w5 0.03  w6 0.02  w7 0.02  w8 0.00
+   Align days       w1 0.00  w2 0.00  w3 0.00  w4 0.24  w5 0.00  w6 0.59  w7 0.00  w8 0.63
+   Workshop days    w1 0.00  w2 0.00  w3 0.91  w4 0.12  w5 0.41  w6 0.23  w7 0.09  w8 0.00
+   Learn days       w1 0.00  w2 0.00  w3 1.08  w4 0.27  w5 0.98  w6 0.63  w7 0.78  w8 0.00
+   Teach days       w1 0.00  w2 0.00  w3 0.85  w4 0.89  w5 0.74  w6 0.92  w7 0.52  w8 0.00
+   Reflect days     w1 0.00  w2 0.00  w3 0.89  w4 0.56  w5 0.91  w6 0.57  w7 0.25  w8 0.07
+   Plan days        w1 0.00  w2 0.00  w3 0.00  w4 0.00  w5 0.00  w6 0.00  w7 1.00  w8 0.92
+   Demo days        w1 0.00  w2 0.00  w3 0.00  w4 0.00  w5 0.00  w6 0.00  w7 0.00  w8 0.00
+   CARD USE CHECK (goal: every action card is played at least once in a game): all 10 in 0% of games
+      share of games playing each: Work 100%  Celebrate 100%  Coordinate 100%  Align 80%  Workshop 99%  Learn 100%  Teach 100%  Reflect 100%  Plan 100%  Demo 0%
+   PLAN AND ALIGN CHECK (goal: each played 1.5 to 3 times a game): Plan 1.9 a game, 1.5 to 3 times in 92% of games   Align 1.5 a game, 1.5 to 3 times in 51% of games
+   PLAN RULE CHECK: weeks with 3 or more Work cards on a non-Low feature and no Plan, 0.00 a game (should be 0; only Shared Practice 0 allows it)
+   Hero played      w1 0.00  w2 0.00  w3 0.61  w4 0.69  w5 0.67  w6 0.56  w7 0.48  w8 0.38
+   Dependable Take 1w1 0.00  w2 0.00  w3 0.00  w4 0.00  w5 0.00  w6 0.00  w7 0.00  w8 0.00
+   Other Take One   w1 1.00  w2 0.00  w3 0.00  w4 0.00  w5 0.00  w6 0.00  w7 0.00  w8 0.01
+   Recog. witness   w1 0.98  w2 0.00  w3 2.17  w4 2.27  w5 2.01  w6 2.21  w7 1.34  w8 0.40
+   Recog. Need met  w1 0.00  w2 0.91  w3 0.18  w4 0.85  w5 0.46  w6 0.61  w7 1.06  w8 1.05
+
+5. HABITUS PARTS (a character-week = one character at the table for one week)
+   torso                quits/100   vs avg mean Mot mean Cap Hero/100
+           Quality           8.39     2.21     3.22     1.15     0.00  <- vulnerable
+           Autonomy          3.32     0.88     3.56     1.69     0.00
+           Recognition       2.68     0.71     3.52     1.25     0.00  <- safest
+           Community         2.61     0.69     3.49     1.30     0.00  <- safest
+           Hierarchy         2.61     0.69     3.48     1.58     0.00  <- safest
+   legs                 quits/100   vs avg mean Mot mean Cap Hero/100
+           Engage            5.13     1.35     3.03     1.44     8.37  <- vulnerable
+           Challenge         4.71     1.24     3.30     1.42     8.81
+           Analyze           3.83     1.01     3.50     1.33     8.35
+           Support           3.54     0.93     3.54     1.30     7.47
+           TakeCharge        1.84     0.48     3.90     1.53     9.31  <- safest
+   base                 quits/100   vs avg mean Mot mean Cap Hero/100
+           HandsOn           5.36     1.41     3.53     1.43     0.00  <- vulnerable
+           Competitive       5.01     1.32     3.41     1.43     0.00  <- vulnerable
+           Dependable        4.38     1.16     3.64     1.25     0.00
+           Sheltered         2.45     0.65     2.77     1.37     0.00  <- safest
+           Bookish           2.09     0.55     4.01     1.54     0.00  <- safest
+

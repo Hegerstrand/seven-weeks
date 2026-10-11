@@ -98,8 +98,8 @@ Full detail in [habitus-model.md](./habitus-model.md) (Bourdieu) and
 | Zone of Proximal Development, scaffolding, the MKO | Learn - and it costs the teacher their day too |
 | Mediation by tools | The Item (the weakest link - see the open question in the model doc) |
 | Between-people → inside-the-person | Knowledge becomes Shared Practice at three holders |
-| Mutual engagement / joint enterprise / shared repertoire | Coordinate / Align / the Shared Practice track |
-| Participation ↔ reification | Work and Coordinate vs. Reflect, Demo, and the Tower itself |
+| Mutual engagement / joint enterprise / shared repertoire | Engagement / Workshop / the Shared Practice track |
+| Participation ↔ reification | Work and Engagement vs. Reflect, Demo, and the Tower itself |
 | Legitimate peripheral participation | Onboarding: a newcomer does real work from day one, at reduced effect |
 | Identity - learning as becoming | Capital and the figure, running on one track |
 

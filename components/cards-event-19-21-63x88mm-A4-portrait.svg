@@ -62,7 +62,7 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">OWN IT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT IS FREE</text>
     <use href="#cost1"/>
@@ -90,7 +90,7 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">SPEAK UP</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT IS FREE</text>
     <use href="#cost1"/>
@@ -167,7 +167,7 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">CHALLENGE</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">SPEAK UP</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT IS FREE</text>
     <use href="#cost1"/>
@@ -193,7 +193,7 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">No hero can save this.</text>
+    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">1 less if the plinth has ≤ 1 feature</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>

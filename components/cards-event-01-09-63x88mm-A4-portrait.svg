@@ -62,7 +62,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">OWN IT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <use href="#cost3"/>
@@ -88,7 +88,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">OWN IT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <use href="#cost2"/>
@@ -112,7 +112,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">TAKE CHARGE</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q1"/></g><text x="23" y="67" class="vl">OWN IT</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <use href="#cost2"/>
@@ -128,8 +128,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
     <text x="5" y="28" class="s" font-size="4.2">One banked feature loses</text>
     <text x="5" y="32.8" class="s" font-size="4.2"><tspan font-weight="bold">2 Work</tspan> and comes off the</text>
-    <text x="5" y="37.6" class="s" font-size="4.2">tower, unless it passed</text>
-    <text x="5" y="42.4" class="s" font-size="4.2">a Demo.</text>
+    <text x="5" y="37.6" class="s" font-size="4.2">tower.</text>
     <g transform="translate(0,9.5)">
     <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>

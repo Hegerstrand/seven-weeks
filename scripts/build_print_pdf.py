@@ -46,7 +46,6 @@ SHEETS = [
     "board-person-170x141mm-A4-portrait.svg",
     "cards-activity-63x88mm-A4-portrait.svg",
     "cards-activity-5b-63x88mm-A4-portrait.svg",
-    "cards-activity-5c-63x88mm-A4-portrait.svg",
     "cards-event-01-09-63x88mm-A4-portrait.svg",
     "cards-event-10-18-63x88mm-A4-portrait.svg",
     "cards-event-19-21-63x88mm-A4-portrait.svg",

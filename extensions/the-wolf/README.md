@@ -33,7 +33,7 @@ Nothing else changes: it still cannot be cancelled (no tokens, no Hero, no Autho
 ## Open questions
 - Does the escalating cost make the team stop stepping up after the second time, and is that
   the interesting outcome (a team that learns to let go) or just a punishment?
-- Should EVERYONE IS EQUAL also repeat (Authorized Voice stays off until a Coordinate is
+- Should EVERYONE IS EQUAL also repeat (Authorized Voice stays off until an Engagement is
   played)? Not in this draft - one escalating pressure is enough to test first.
 - Is "shuffle it back" too much, given the 12-of-25 draw? Alternative: put it back only if the
   team stepped up, so a team that lets the shepherd fall is left alone.

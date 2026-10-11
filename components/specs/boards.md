@@ -181,8 +181,8 @@ graph TD
 Source: `../the-development-127x104mm-A4-landscape.svg`
 Page: 297x210mm landscape · panel itself is 127x104mm
 
-Split off THE ZONE on purpose: Learn/Teach and the Ledger's Capability/Capital payoff
-don't exist before week 3. Sits face-down beside THE ZONE until week 3, then turns over - same
+Split off THE ZONE on purpose: Learn and Teach open in week 2, but the Ledger's Capability/Capital
+payoff is only read from week 3. Sits face-down beside THE ZONE until week 3, then turns over - same
 week the Specimen panel on each person board starts being read.
 
 ## Grouping
@@ -362,7 +362,7 @@ document order. Treat these as the logical groups for editing purposes.
 | "Your figure, your Knowledge, your Motivation." | `.s` serif | 8 | `#000000` | `#D3B1B1` behind "Motivation" |
 | "Nothing else yet." | `.s` serif | 8 | `#000000` | - |
 | "CARDS IN PLAY" | `.m.q` mono | 6 | `#000000` | - |
-| "WORK · COORDINATE · CELEBRATE" | `.m` mono | 7 | `#000000` | - |
+| "WORK · ENGAGEMENT · CELEBRATE · WORKSHOP · PLAN" | `.m` mono | 6 | `#000000` | - |
 | "SET OUT THESE STACKS" | `.m.q` mono | 6 | `#000000` | - |
 | "PROJECT CARDS" / "pick one at setup, the rest wait here" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
 | "ACTION CARDS" / "this week's five cards, the rest wait for later" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
@@ -454,7 +454,7 @@ Capital Bone `#D9D3C4`. Adaptability has no row (it is a pool, and has no Habit)
 | "grown by nobody" / "starts on 0" | `.s` italic serif | 3.4 | `#000000` | - |
 | "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE" | `.m` mono | 2.8 | `#000000` | - |
 | "FLIP AT 5" | `.m` mono | 2.6 | `#000000` | - |
-| "Authorized Voice" / "Once a week: cancel an Event outright." / "BOURDIEU 1991" | `.s` 5 / `.s` italic 3.4 / `.m.q` 2.6 | - | `#000000` | - |
+| "Authorized Voice" / "Once a week: cancel a Management or Customer Event outright." / "BOURDIEU 1991" | `.s` 5 / `.s` italic 3.4 / `.m.q` 2.6 | - | `#000000` | - |
 | "Adaptability is not a track here..." footer | `.s` italic serif | 3.8 | `#000000` | - |
 
 ### Illustration
@@ -519,7 +519,7 @@ landscape.
 | "The Ledger: Trust, Capability, Shared Practice, Standing..." (3 lines) | `.s` serif | 8 | `#000000` | - |
 | "Adaptability is a pool of tokens on SHIT HAPPENS." | `.s` serif | 8 | `#000000` | - |
 | "CATCH UP BEFORE YOU PLAY" | `.m` mono | 6 | `#000000` | - |
-| "Move Trust up 1 for every two Coordinate cards..." (2 lines) | `.s` serif | 8 | `#000000` | - |
+| "Move Trust up 1 if the team played an Engagement in week 1" (2 lines) | `.s` serif | 8 | `#000000` | - |
 | "Everything else starts where it always was, at 1..." (2 lines) | `.s` serif | 8 | `#000000` | - |
 | "It was counting all along." | `.s` italic serif | 9 | `#000000` | - |
 
@@ -734,7 +734,7 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | page background | full-page rect | `#FFFFFF` |
 | header | "SHIT HAPPENS" title + "SHIT HAPPENS · FROM WEEK 2" + rule | - |
 | SHIT HAPPENS box | red-bordered panel, instruction line, 2 landing-zone slots, resolved-vs-stacks note | box border `#905151`; slot fill `#905151` (card silhouette, white label text) |
-| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 5 caption lines at 3.2 under the panel (x 12, y 212.6-230.2: Start with 3. Up to 6. / Earned: Align, Workshop, Reflect. / Spent: pay an Event's number. / Tokens stay until spent. / New tokens count from next week.). Panel x 11-65, 52 mm tall, wells 12 mm | `#B5C7CF` |
+| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 5 caption lines at 3.2 under the panel (x 12, y 212.6-230.2: Start with 3. Up to 6. / Earned: Workshop, Reflect. / Spent: pay an Event's number. / Tokens stay until spent. / New tokens count from next week.). Panel x 11-65, 52 mm tall, wells 12 mm | `#B5C7CF` |
 | `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r8 with a red ring r10.5, and **three token wells** (r5.2, the 10.4 mm adapt token) carrying a symbol each, not a word: a target (objectives), a route (strategy) and a cycle arrow (process). Two or three caption lines run under all three lanes: "REFLECT: put its token in a well instead of the pool, if the week gave evidence. One token per well.", then the three symbols with "a feature was banked", "you adapted to 2 Events", "an Event hit a track, or a Hero played", and "Three wells filled: the coin turns over for good. Name one change for next week." | `#B5C7CF` |
 | `lane-1` | HERO lane (x 68-118): label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
 | CLOSE THE WEEK box | compact (y 247-291): title 5.4, "TOP TO BOTTOM" note, rule, 4 one-line numbered steps at 4.2 and "FULL DETAIL ON THE SPECIMEN BOARD". The full explanation lives on the SPECIMEN board | - |

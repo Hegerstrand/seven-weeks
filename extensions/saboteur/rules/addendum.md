@@ -31,8 +31,8 @@ A Saboteur may skip a week. Two Saboteurs may not pick the same action in the sa
 ## Winning them back
 A Saboteur becomes a normal character again, with **2 Motivation**, at step 7 of the week if
 **either**:
-- **The team played both a Coordinate and a Celebrate** that week and Trust is **3 or more**; or
-- **another character spent a Hero on them** (Support or Take Charge only; the Hero is spent as
+- **The team played both an Engagement and a Celebrate** that week and Trust is **3 or more**; or
+- **another character spent a Hero on them** (Support or Own It only; the Hero is spent as
   normal and needs 3 Motivation).
 
 Once won back they are no longer counted as having quit. They may turn again later.

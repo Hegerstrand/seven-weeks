@@ -34,12 +34,13 @@ same compensating scale as before, just repacked into a narrower horizontal span
 <text x="24" y="232" class="s" font-size="8">Standing. One coin walks each row; at the</text>
 <text x="24" y="243" class="s" font-size="8">ring it turns over and becomes a <tspan font-weight="bold">HABIT</tspan>, for good.</text>
 <text x="24" y="260" class="s" font-size="8">Adaptability is a pool of tokens on SHIT HAPPENS.</text>
+<text x="24" y="273" class="s" font-size="8"><tspan font-weight="bold">New cards:</tspan> Demo, Learn, Teach, Reflect.</text>
 
 <line x1="237.1" y1="196" x2="237.1" y2="268" class="h" stroke-width=".4"/>
 
 <text x="251.4" y="206" class="m" font-size="6" letter-spacing="2.5">CATCH UP BEFORE YOU PLAY</text>
-<text x="251.4" y="222" class="s" font-size="8">Move Trust up <tspan font-weight="bold">1 for every two Coordinate</tspan></text>
-<text x="251.4" y="233" class="s" font-size="8"><tspan font-weight="bold">cards</tspan> the team has already played.</text>
+<text x="251.4" y="222" class="s" font-size="8">Move Trust up <tspan font-weight="bold">1 if the team played</tspan></text>
+<text x="251.4" y="233" class="s" font-size="8"><tspan font-weight="bold">an Engagement</tspan> in week 1.</text>
 <text x="251.4" y="250" class="s" font-size="8">Everything else starts where it always was,</text>
 <text x="251.4" y="261" class="s" font-size="8">at 1. Nothing has been lost by starting small.</text>
 

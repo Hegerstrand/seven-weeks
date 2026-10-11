@@ -32,7 +32,7 @@ confirmed `cards.md`/`boards.md` cover everything.
 
 | File | Covers |
 |---|---|
-| [cards.md](./cards.md) | `../cards-activity-63x88mm-A4-portrait.svg`, `../cards-activity-5b-63x88mm-A4-portrait.svg`, `../cards-activity-5c-63x88mm-A4-portrait.svg`, `../cards-event-01-09-63x88mm-A4-portrait.svg`, `../cards-event-10-18-63x88mm-A4-portrait.svg`, `../cards-event-19-21-63x88mm-A4-portrait.svg`, `../cards-habitus-parts-01-15-44x36mm-A4-landscape.svg`, `../cards-habitus-parts-16-25-44x36mm-A4-landscape.svg`, `../cards-need-hero-44x36mm-A4-landscape.svg`, `../cards-project-63x88mm-A4-portrait.svg` |
+| [cards.md](./cards.md) | `../cards-activity-63x88mm-A4-portrait.svg`, `../cards-activity-5b-63x88mm-A4-portrait.svg`, `../cards-event-01-09-63x88mm-A4-portrait.svg`, `../cards-event-10-18-63x88mm-A4-portrait.svg`, `../cards-event-19-21-63x88mm-A4-portrait.svg`, `../cards-habitus-parts-01-15-44x36mm-A4-landscape.svg`, `../cards-habitus-parts-16-25-44x36mm-A4-landscape.svg`, `../cards-need-hero-44x36mm-A4-landscape.svg`, `../cards-project-63x88mm-A4-portrait.svg` |
 | [boards.md](./boards.md) | `../board-person-170x141mm-A4-portrait.svg`, `../standing-281x34mm-A4-landscape.svg`, `../the-development-127x104mm-A4-landscape.svg`, `../the-project-FRONT-A3-landscape.svg` + BACK, `../the-team-FRONT-A4-landscape.svg` + BACK, `../the-zone-FRONT-A4-landscape.svg` + BACK, `../shit-happens-FRONT-A4-portrait.svg` + BACK |
 | [leaflet-how-to-play.md](./leaflet-how-to-play.md) | plain printable Markdown, no matching SVG |
 

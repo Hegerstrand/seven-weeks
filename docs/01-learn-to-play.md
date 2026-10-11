@@ -15,7 +15,7 @@ weekly pulse from week 2 on, and how the project ends.
 1. **Deal habitus parts, one per row, five parts each - Base, Legs, Torso, Head, Item.**
    Nobody picks; you're handed a person. Ninety seconds, no decisions.
 2. **Put one Project card in its seat.** It names features A-F. Lock tiles go across D and F.
-3. **Out come three cards: Work, Coordinate, Celebrate.** That's all of Week 1's toolkit.
+3. **Out come five cards: Work, Engagement, Celebrate, Workshop, Plan.** That's all of Week 1's toolkit.
    Everything else arrives later, at the week it's actually needed.
 
 ## The pulse of a week
@@ -36,7 +36,7 @@ Do that seven times. Week 7 is the deadline.
 
 ## The one thing worth knowing before you start
 
-**Work is the only card that moves the project - and that's the trap.** Coordinate, Align,
+**Work is the only card that moves the project - and that's the trap.** Engagement, Workshop,
 Learn, Reflect, Celebrate don't build anything directly, but skip them for too long and the
 team itself starts to fail under you, long before the deadline does.
 

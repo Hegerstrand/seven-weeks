@@ -12,7 +12,7 @@ for the editing workflow (md first, then SVG) and `board-game-cards` for the geo
 
 | Section | Source SVG(s) |
 |---|---|
-| [Activity cards](#activity-cards-63x88mm-a4) | `../cards-activity-63x88mm-A4-portrait.svg`, `../cards-activity-5b-63x88mm-A4-portrait.svg`, `../cards-activity-5c-63x88mm-A4-portrait.svg` |
+| [Activity cards](#activity-cards-63x88mm-a4) | `../cards-activity-63x88mm-A4-portrait.svg`, `../cards-activity-5b-63x88mm-A4-portrait.svg` |
 | [Event cards](#event-cards-63x88mm-a4) | `../cards-event-01-09-63x88mm-A4-portrait.svg`, `../cards-event-10-18-63x88mm-A4-portrait.svg`, `../cards-event-19-21-63x88mm-A4-portrait.svg` |
 | [Habitus part-cards](#habitus-part-cards-44x36mm-a4-landscape) | `../cards-habitus-parts-01-15-44x36mm-A4-landscape.svg`, `../cards-habitus-parts-16-25-44x36mm-A4-landscape.svg` |
 | [NEED and HERO tiles](#need-and-hero-tiles-44x36mm-a4-landscape) | `../cards-need-hero-44x36mm-A4-landscape.svg` |
@@ -26,12 +26,11 @@ for the editing workflow (md first, then SVG) and `board-game-cards` for the geo
 
 | Sheet | Source SVG | Contains |
 |---|---|---|
-| 1 | `../cards-activity-63x88mm-A4-portrait.svg` | Work x3, Coordinate x2, Workshop, Align, Celebrate x2 |
-| 2 | `../cards-activity-5b-63x88mm-A4-portrait.svg` | Work x2 (five total with Sheet 1), Teach x2, Plan, Demo, Reflect, Workshop, Learn |
-| 3 | `../cards-activity-5c-63x88mm-A4-portrait.svg` | Onboarding x1 (the team lays it to fill an empty seat; it carries every quitting rule) |
+| 1 | `../cards-activity-63x88mm-A4-portrait.svg` | Work x3, Engagement, Workshop, Celebrate, Onboarding (the team lays it to fill an empty seat; it carries every quitting rule) |
+| 2 | `../cards-activity-5b-63x88mm-A4-portrait.svg` | Work x2 (five total with Sheet 1), Teach x2, Plan, Demo, Reflect, Learn |
 
-Nineteen Activity cards, the week 1/3 core loop plus Onboarding, split across three A4 sheets (nine,
-nine and one, each printed once - no reprinting). Card size 63x88mm, text column x=5..58 (53mm). All cards
+Fifteen Activity cards, the week 1/3 core loop plus Onboarding, split across two A4 sheets (seven
+and eight, each printed once - no reprinting). There is one Celebrate card, so at most one Celebrate a week. Card size 63x88mm, text column x=5..58 (53mm). All cards
 share the same skeleton: `63x88` border rect (`.c`), title (mono, 6.6-7.5pt, letter-spacing
 1.2-1.5), a `.h` rule at y=17, then the card's own body. No category tint band (that's an
 Event-card feature, not Activity) - the **effect** itself gets the tinted rounded rect instead,
@@ -47,29 +46,26 @@ board's 65x90 slot; do not remove without checking the printed card still fits.
 | `<g id>` (in `<defs>`) | Header band | Header colour text class |
 |---|---|---|
 | `work` | `#EFE4D3` band behind "+1 to one feature" | plain `.q` |
-| `coordinate` | `#D3CEDF` band behind "+1 Trust" | `.trust` |
-| `workshop` | `#B5C7CF` band behind "+1 Adaptability" | `.adapt` |
-| `align` | `#B5C7CF` band behind "+3 Adaptability"; `#D3B1B1` chip behind "Every character pays 1 Motivation" | `.adapt` |
+| `engagement` | `#D3CEDF` band behind "+1 Trust" | `.trust` |
+| `workshop` | `#B5C7CF` band behind "+3 Adaptability"; `#D3B1B1` chip behind "Every character pays 1 Motivation" | `.adapt` |
 | `celebrate` | `#D3B1B1` band behind "+1 Motivation" | plain |
 
 ### Text
 
 | Card | Title | Big effect (in tinted chip) | Body / conditions | Footer italic |
 |---|---|---|---|---|
-| `work` | WORK | "+1 to one feature" (`#EFE4D3`) | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
-| `coordinate` | COORDINATE | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust 1 or less: Teach is dead." + "TRUST RISE 1 A WEEK, MAX" | "Check in. Ask for help. Admit the small mistakes." |
-| `workshop` | WORKSHOP | "+1 Adaptability" (`#B5C7CF`) | "Unconditionally - no gate, no second mode." + "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM NEXT WEEK." (mono) | "A meeting that changes the plan, not just records it." |
-| `align` | ALIGN | "+3 Adaptability" (`#B5C7CF`) and "Every character pays 1 Motivation" (`#D3B1B1`) | "NOTHING IF ANYONE IS ON 1." + "ONE WAY ONLY. NEVER BACK." (mono) | "A meeting nobody wants. Everybody sits through it." |
-| `celebrate` | CELEBRATE | "+1 Motivation" (`#D3B1B1`, 6.6pt) and "to anyone on 3 or less" (5pt) | "Only works if there is something to celebrate: a feature banked, or every Event cancelled this week." (4.4pt) + "AT WEEK CLOSE, WITH THE GRIND." (mono). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Nobody rests at work. You ship something and say so." |
+| `work` | WORK | "+1 to one feature" (`#EFE4D3`) | - (the old "Adjust total Work for Capability and Shared Practice." lines were deleted; sheet 5 keeps the "BANKS WHEN THE WEEK CLOSES." timing line) | "The only card that moves the project. Hence the trap." |
+| `engagement` | ENGAGEMENT | "+1 Trust" (`#D3CEDF`, 9pt) | "Trust 1 or less: Teach is dead." + theory flavour in mono: "MUTUAL ENGAGEMENT (WENGER)." / "SAFE TO ASK, SAFE TO ADMIT" / "A MISTAKE (EDMONDSON 1999)." (it replaced the Trust timing lines) | "Check in. Ask for help. Admit the small mistakes." |
+| `workshop` | WORKSHOP | "+3 Adaptability" (`#B5C7CF`) and "Every character pays 1 Motivation" (`#D3B1B1`) | "NOTHING IF ANYONE IS ON 1." + "OPEN FROM WEEK 1. ONE CARD." + "TOKENS ARRIVE AT WEEK CLOSE, SPEND THEM FROM NEXT WEEK." (mono). Merges the old Align and Workshop cards. | "A meeting nobody wants. Everybody sits through it." |
+| `celebrate` | CELEBRATE | "+1 Motivation" (`#D3B1B1`, 6.6pt) and "to anyone on 3 or less" (5pt) | "Only works if there is something to celebrate: a feature banked, or every Event cancelled this week." (4.4pt) + "AT WEEK CLOSE, WITH THE GRIND." + "NOTHING IF LAST WEEK TOO." (mono, 2.8pt; the body group moved up 3 mm to fit the second line). The old "NO CELEBRATE: LOSE 1 MOTIVATION" chip and "AT 0, A CHARACTER LEAVES" line are gone: they named the weekly grind and the quit rule in week 1, before the table has met either (2026-09-25 playtest) | "Ship something and say so." |
 
-Sheet placement (top-left corner of each `<use>`): Work at (10,12)/(76,12), Coordinate at
-(142,12)/(10,104), Workshop at (76,104), Align at (142,104), Celebrate at (10,196)/(76,196), Work again at
+Sheet placement (top-left corner of each `<use>`): Work at (10,12)/(76,12), Engagement at
+(142,12), Workshop at (76,104), (10,104) and (142,104) are empty, Celebrate at (10,196)/(76,196), Work again at
 (142,196).
 
 **Timing lines (2026-10-10).** Each card that produces something says when it arrives, in 2.9 mono:
-Work "BANKS WHEN THE WEEK CLOSES."; Coordinate "TRUST RISES AT WEEK CLOSE, WORKS FROM NEXT WEEK. 1 RISE A
-WEEK, MAX."; Celebrate "LANDS AT WEEK CLOSE, WITH THE GRIND. CAPS AT 5."; Align "TOKENS ARRIVE AT WEEK
-CLOSE, SPEND THEM FROM NEXT WEEK."; Workshop and Reflect "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM
+Work "BANKS WHEN THE WEEK CLOSES."; Engagement carries theory flavour instead of a timing line; Celebrate "LANDS AT WEEK CLOSE, WITH THE GRIND. CAPS AT 5."; Workshop "TOKENS ARRIVE AT WEEK
+CLOSE, SPEND THEM FROM NEXT WEEK."; Reflect "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM
 NEXT WEEK."
 
 ### Illustration
@@ -101,7 +97,6 @@ graph TD
 | `plan` | `#EFE4D3` behind "+1 EXTRA WORK" | plain |
 | `demo` | `#D9D3C4` chip behind "+1 Capital" | plain |
 | `reflect` | `#B5C7CF` behind "+1 Adaptability"; `#F7D7A1` behind "+1 Shared Practice" | `.adapt` |
-| `workshop` | `#B5C7CF` behind "+1 Adaptability" | `.adapt` |
 | `learn` | `#D9D3C4` chip behind "NO CAPITAL FOR THIS ONE" | plain |
 
 ### Text
@@ -111,21 +106,20 @@ graph TD
 | `work` | WORK | "+1 to one feature" | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
 | `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a covered square next to yours, diagonals too."; "DEAD IF TRUST 1 OR LESS"; "EACH TEACHER GAINS +1 CAPITAL"; icon row "ZONE: [one-person tile] FLIPS TO [stacked tile]" (Teach never puts a tile down) | "Scaffolding: give it away and it becomes standing." |
 | `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "PAYS AS THE WORK RESOLVES" | "Planning pays on hard problems. Only on those." |
-| `demo` | DEMO | "+1 Capital to one named team member" | "CAPITAL AT OR ABOVE AVERAGE"; "feature ignores the next NEGATIVE FEEDBACK" | "The field decides who speaks." |
+| `demo` | DEMO | "+1 Capital to one named team member" | "CAPITAL AT OR ABOVE AVERAGE" (the "FEATURE IGNORES NEXT NEGATIVE FEEDBACK" lines and the rule were deleted) | "The field decides who speaks." |
 | `reflect` | REFLECT | "Trust 3 or more"; "+1 Adaptability"; "LAST WEEK GAVE EVIDENCE?" with the three well symbols (target: a feature was banked; route: you adapted to 2 Events; cycle: a Hero or a token was played, or an Event cost a Ledger track); "Yes: +1 Shared Practice" (`#F7D7A1`) and "and +1 Motivation to anyone on 3 or less"; "ALSO FILLS A WELL. TOKEN AT CLOSE." | "Ask what's not working - you can only reflect on it." |
-| `workshop` | WORKSHOP | "+1 Adaptability" | - (unconditional, no gate) | "A meeting that changes the plan, not just records it." |
 | `learn` | LEARN | "Everyone marks a free square each" | "Left or right of one they cover, in their own row."; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "NO CAPITAL FOR THIS ONE"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Nobody taught you. It shows, and it holds." |
 
 Sheet placement: Work (10,12), Work (76,12), Teach (142,12); Teach (10,104), Plan (76,104), Demo
-(142,104); Reflect (10,196), Workshop (76,196), Learn (142,196).
+(142,104); Reflect (10,196), Learn (76,196). The Workshop card moved to sheet 1 (76,104); there is one.
 
 ## Sheet 3
 
 | Card | Title | Headline | Rules text | Flavour |
 |---|---|---|---|---|
-| `onboarding` | ONBOARDING (mono 5.6, letter-spacing .8) | "Bring in a replacement" (`#D9D3C4` strip) | "ONLY WITH AN EMPTY SEAT"; "Motivation 5. Capital 0."; "Work 1 lower until 2 days of Learn or Coordinate with them."; a `#D3B1B1` strip "WHEN SOMEONE QUITS" with the five quitting lines in mono 2.8: "AT 0 MOTIVATION, WEEK CLOSE", "TEAM SCORE -20", "EVERYONE STILL IN THE TEAM:", "-1 MOTIVATION", "SEAT EMPTY UNTIL THIS CARD" | "A new face. A day gone before any work gets done." |
+| `onboarding` | ONBOARDING (mono 5.6, letter-spacing .8) | "Bring in a replacement" (`#D9D3C4` strip) | "Motivation 4. Capital 0."; a `#D3B1B1` strip "WHEN SOMEONE QUITS" with the four quitting lines in mono 2.8: "AT 0 MOTIVATION, WEEK CLOSE", "TEAM SCORE -40", "EVERYONE STILL IN THE TEAM:", "-1 MOTIVATION" (the lines "ONLY WITH AN EMPTY SEAT", "Work 1 lower until 2 days of Learn or Engagement with them." and "SEAT EMPTY UNTIL THIS CARD" were deleted) | "A new face. A day gone before any work gets done." |
 
-Sheet placement: Onboarding (10,12). One card, so at most one replacement a week.
+Sheet placement: Onboarding (76,196) on sheet 1, where the second Celebrate used to be. One card, so at most one replacement a week.
 
 ### Illustration
 
@@ -193,10 +187,10 @@ footer italic line.
 
 | Card | Title | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|---|
-| `status` | STATUS MEETING | remove one card, never happens; everyone loses 1 Motivation | Autonomy: lose 1 Motivation / Hierarchy: no loss | 3 | Take Charge (1 pip) | Shared Repertoire, costs 2 instead | "Not information - it's about being seen." |
-| `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 2 | Take Charge (1 pip) | Shared Repertoire, costs 1 instead | "Nobody explains the reasoning to you." |
-| `requirements` | REQUIREMENTS CHANGE | The unbanked feature with the most Work left loses 1 Work it already has | Quality: lose 1 Motivation | 2 | Take Charge (1 pip) | Team Reflexivity, costs 1 instead | none |
-| `feedback` | NEGATIVE FEEDBACK | one banked feature loses 2 Work, comes off the tower | Quality: lose 1 Motivation | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "A feature that passed a Demo is safe." |
+| `status` | STATUS MEETING | remove one card, never happens; everyone loses 1 Motivation | Autonomy: lose 1 Motivation / Hierarchy: no loss | 3 | Own It (1 pip) | Shared Repertoire, costs 2 instead | "Not information - it's about being seen." |
+| `budget` | BUDGET CUT | everyone loses 1 Motivation | Autonomy: lose 1 / Hierarchy: no loss | 2 | Own It (1 pip) | Shared Repertoire, costs 1 instead | "Nobody explains the reasoning to you." |
+| `requirements` | REQUIREMENTS CHANGE | The unbanked feature with the most Work left loses 1 Work it already has | Quality: lose 1 Motivation | 2 | Own It (1 pip) | Team Reflexivity, costs 1 instead | none |
+| `feedback` | NEGATIVE FEEDBACK | one banked feature loses 2 Work, comes off the tower | Quality: lose 1 Motivation | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | none |
 | `scope` | SCOPE CREEP | unbanked feature closest to done gains +2 Work Cost | Quality: lose 1 Motiv. | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "Everybody called it a small addition." |
 | `priority` | PRIORITY CHANGES | remove one card this week | Quality: lose 1 Motivation | 2 | Analyze (2 pips) | Team Reflexivity, costs 1 instead | "Last week was the wrong thing." |
 | `hoarding` | KNOWLEDGE HOARDING | Remove all TEACH cards | Community: lose 1 Motivation | 2 | Support (3 pips) | Psychological Safety, costs 1 instead | "Nobody wanted to be the one to ask." |
@@ -258,7 +252,7 @@ graph TD
 ## Sheet 2
 
 The second half of the Event deck. HERO now keys off all 5 Legs/Pressure-Response options
-(Take Charge/Analyze/Support/Engage/Challenge). `build` (False Start), `audit` (The Audit)
+(Own It/Analyze/Support/Engage/Speak Up). `build` (False Start), `audit` (The Audit)
 and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save this."
 
 ### Grouping
@@ -282,11 +276,11 @@ and `deadline` (The Date Moves Up) have **no HERO route** - "No hero can save th
 | `reinforcements` (MORE HANDS) | feature with most Work this week: halve that Work (round down) | none | 2 | Engage (4 pips) | Shared Repertoire, costs 1 instead | "More hands, more talk. BROOKS 1975" |
 | `legacy` (OLD FOUNDATIONS) | feature with most Work already banked gains +2 Work Cost | Hierarchy: lose 1 Motiv. | 2 | Engage (4 pips) | Who Knows What, costs 1 instead | "Built years ago. Nobody wrote down why." |
 | `build` (FALSE START) | first Work card this week produces nothing | Hierarchy: lose 1 Motiv. | 2 | none - "No hero can save this." | Who Knows What, costs 1 instead | "It worked yesterday." |
-| `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 2 | Challenge (5 pips) | Psychological Safety, costs 1 instead | "Nobody said anything out loud." |
+| `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 2 | Speak Up (5 pips) | Psychological Safety, costs 1 instead | "Nobody said anything out loud." |
 | `reorg` (REORGANISED) | everyone loses 1 Motivation; lose 1 Shared Practice | Autonomy: lose 1 / Hierarchy: no loss | 2 | Engage (4 pips) | Shared Repertoire, costs 1 instead | "Only the chart changed, not the work." |
-| `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Challenge (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
-| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a feature banked this week is no reason to Celebrate | Community: lose 1 / Quality: no loss | 1 | Challenge (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
-| `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No one person can be the answer." |
+| `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Speak Up (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
+| `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a feature banked this week is no reason to Celebrate | Community: lose 1 / Quality: no loss | 1 | Speak Up (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
+| `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none - "1 less if the plinth has ≤ 1 feature" | Shared Repertoire, costs 1 instead | "No one person can be the answer." |
 | `deadline` (THE DATE MOVES UP) | every Work card this week produces 1 less (never below 0) | Quality: lose 1 Motiv. | 3 | none - "No hero can save this." | Team Reflexivity, costs 2 instead | "This one is not about any of you." |
 
 Sheet placement: `reinforcements`(10,12) `legacy`(76,12) `build`(142,12) / `split`(10,104)
@@ -334,12 +328,12 @@ rest of the page is intentionally blank.
 
 | Card | Title | Effect | Torso reaction | ADAPT | HERO | HABIT | Footer italic |
 |---|---|---|---|---|---|---|---|
-| `bikeshed` (THE BIKESHED) | one line | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week | Quality: lose 1 Motivation | 1 | Take Charge (1 pip) | Shared Repertoire, free | "Somebody had a strong opinion about the paint." |
-| `leadsbehind` (LEADS FROM BEHIND) | two lines | Everyone loses 1 Motivation, except whoever has the highest Capital - they wrote it, they're exempt | none (the Capital exemption *is* the card; no Torso layer added on top) | 1 | Challenge (5 pips) | Shared Repertoire, free | "Everyone felt it. Almost everyone." |
+| `bikeshed` (THE BIKESHED) | one line | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week | Quality: lose 1 Motivation | 1 | Own It (1 pip) | Shared Repertoire, free | "Somebody had a strong opinion about the paint." |
+| `leadsbehind` (LEADS FROM BEHIND) | two lines | Everyone loses 1 Motivation, except whoever has the highest Capital - they wrote it, they're exempt | none (the Capital exemption *is* the card; no Torso layer added on top) | 1 | Speak Up (5 pips) | Shared Repertoire, free | "Everyone felt it. Almost everyone." |
 | `dashboard` (THE DASHBOARD) | one line | Work only counts this week if it's on a Low feature; Medium/High Work happens but changes nothing | Quality: lose 1 Motivation | 3 | Analyze (2 pips) | Team Reflexivity, costs 2 instead | "The number went up. Nothing else did." |
 | `confidence` (SHAKY GROUND) | one line | A demo crashed in front of the customer - **the team loses 1 Capability** (move the Ledger coin down one, permanently, not a one-week penalty) | Hierarchy: lose 1 Motivation | 3 | Engage (4 pips) | Who Knows What, costs 2 instead | "Confidence is earned in public - and lost there too." |
-| `reacting` (ALWAYS REACTING) | one line | The team stops planning ahead and only reacts; deadlines slip sideways - **the team's Adaptability pool loses 1 token** (shared pool, cap 6; rulebook §4) | Quality: lose 1 Motivation | 1 | Challenge (5 pips) | Team Reflexivity, free | "There was a plan. Nobody remembers it now." |
-| `equal` (EVERYONE IS EQUAL) | two lines | No Hero and no Authorized Voice this week, nobody gains Capital; everyone loses 1 Motivation | Autonomy: lose 1 extra / Hierarchy: no loss | 2 | none - "No hero can save this." | Shared Repertoire, costs 1 instead | "No titles. No one to ask, so nobody does." |
+| `reacting` (ALWAYS REACTING) | one line | The team stops planning ahead and only reacts; deadlines slip sideways - **the team's Adaptability pool loses 1 token** (shared pool, cap 6; rulebook §4) | Quality: lose 1 Motivation | 1 | Speak Up (5 pips) | Team Reflexivity, free | "There was a plan. Nobody remembers it now." |
+| `equal` (EVERYONE IS EQUAL) | two lines | No Hero and no Authorized Voice this week, nobody gains Capital; everyone loses 1 Motivation | Autonomy: lose 1 extra / Hierarchy: no loss | 2 | none - "1 less if the plinth has ≤ 1 feature" | Shared Repertoire, costs 1 instead | "No titles. No one to ask, so nobody does." |
 | `wolf` (THE WOLF) | one line | **The Wolf is the boss, the manager** (named on the card). Management targets the character with the most Capital (**the shepherd**, named on the card as "TARGET: THE SHEPHERD" with a target glyph), who **stays on the team**. **Cannot be cancelled.** Team steps up to shield them (+1 Capital to that character, every character loses 1 Motivation) or that character's Capital is erased (goes to 0) | none (the cost is flat and falls on everybody) | **none - no ADAPT number** | **none - no HERO line** (stepping up is not a Hero play) | none | "" (no flavour line: the rule text fills the space) |
 
 Sheet placement: `bikeshed`(10,12) `leadsbehind`(76,12) `dashboard`(142,12) / `confidence`(10,104)
@@ -493,7 +487,7 @@ No mechanic lines or chips on this row - pure flavour. The row is your row on yo
 | 2 | Hierarchy | `ENVIRONMENT:` (chip on "ENVIRONMENT", `#C7CFB5`) + wrapped `-1 MOTIVATION` (own chip, `#D3B1B1`) | `IMMUNE TO MANAGEMENT` (chip on "MANAGEMENT", `#F7D7A1`) |
 | 3 | Community | `PEOPLE:` (chip on "PEOPLE", `#D3CEDF`) + wrapped `-1 MOTIVATION` (own chip, `#D3B1B1`) | `IMMUNE TO CUSTOMER` (chip on "CUSTOMER", `#B5C7CF`) |
 | 4 | Quality | `CUSTOMER:` (chip on "CUSTOMER", `#B5C7CF`) + wrapped `-1 MOTIVATION` (own chip, `#D3B1B1`) | `IMMUNE TO PEOPLE` (chip on "PEOPLE", `#D3CEDF`) |
-| 5 | Recognition | `SOMEONE GAINS CAPITAL:` (no chip, 2.8pt) + wrapped `NAME A TEAMMATE` (no chip) | `+1 MOTIVATION TO THEM` (chip on "+1 MOTIVATION", `#D3B1B1`) |
+| 5 | Recognition | `ONCE A WEEK,` + `SOMEONE GAINS CAPITAL:` (no chip, 2.8pt) + wrapped `NAME A TEAMMATE` (no chip) | `+1 MOTIVATION TO THEM` (chip on "+1 MOTIVATION", `#D3B1B1`) |
 
 "-1 MOTIVATION" is never abbreviated - it now wraps onto its own line under the chipped
 category label instead of being squeezed onto one line as "-1 MOTIV." (all four category
@@ -505,6 +499,7 @@ differently-coloured chips stacked on one card, each sized to fit its own line.
 
 **Recognition payout widened (2026-10-11).** The trigger is now "someone gains Capital" (anyone, not only
 the Recognition character): each Recognition character then names a teammate, who gains **+1 Motivation**.
+It fires **once a week for the whole team** (it was every gain; optimal play got about 12 Motivation a game from it).
 The earlier version below fired only on their own gains.
 
 **Recognition was emptied and rebuilt a third time.** It went through "EITHER WAY", then a
@@ -527,10 +522,10 @@ depends on habitus") that already makes Recognition different in a separate, unr
 
 | Card | Name | Mono line 1 (category chip + wrapped amount chip) | Mono line 2 (category chip + wrapped amount chip) |
 |---|---|---|---|
-| 1 | Take Charge | `TRUST` (chip, `#D3CEDF`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `TRUST` (chip, `#D3CEDF`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
+| 1 | Own It | `TRUST` (chip, `#D3CEDF`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `TRUST` (chip, `#D3CEDF`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 | 2 | Analyze | `CAPABILITY` (chip, `#C7CFB5`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `CAPABILITY` (chip, `#C7CFB5`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 | 3 | Support | `SHARED PRACTICE` (chip, `#F7D7A1`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `SHARED PRACTICE` (chip, `#F7D7A1`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
-| 4 | Challenge | `ADAPTABILITY` (chip, `#B5C7CF`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `ADAPTABILITY` (chip, `#B5C7CF`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
+| 4 | Speak Up | `STANDING` (chip, `#D9D3C4`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `STANDING` (chip, `#D9D3C4`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 | 5 | Engage | `FIRST 3 WEEKS:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `AFTER THAT:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 
 Every label line now carries its own category-tint chip on just the stat word (matching the
@@ -646,7 +641,7 @@ Event cards, so a tile and its matching card show the same glyph.
 | Row | 5 tiles | Shape used | Shared def |
 |---|---|---|---|
 | NEED | Autonomy(1 pip), Hierarchy(2), Community(3), Quality(4), Recognition(5) | `sh-torso-red` (filled red pentagon) | `p1`-`p5` pip glyphs, white `#FFFFFF` (`.pip`) for contrast on the `#905151` red |
-| HERO | Take Charge(1), Analyze(2), Support(3), Engage (4), Challenge(5) | `sh-legs-red` (filled red triangle) | `p1`-`p5` pip glyphs, white `#FFFFFF` (`.pip`) for contrast on the `#905151` red |
+| HERO | Own It(1), Analyze(2), Support(3), Engage (4), Speak Up(5) | `sh-legs-red` (filled red triangle) | `p1`-`p5` pip glyphs, white `#FFFFFF` (`.pip`) for contrast on the `#905151` red |
 
 All ten tiles are drawn inline (no `<defs>`/`<use>` for the card body itself, only the shape
 and pip glyphs are shared defs). Each tile: `44x36`, `rx 1.5`, class `.cut` (`#F0E3D1` fill,
@@ -658,7 +653,7 @@ and pip glyphs are shared defs). Each tile: `44x36`, `rx 1.5`, class `.cut` (`#F
 |---|---|---|---|---|
 | Row header ("NEED · SAME 5 VALUES AS TORSO", "HERO · SAME 5 OPTIONS AS LEGS") | `.mono.rl` | 3.3 | `#000000` | - |
 | Row-level italic hint | `.serif` | 2.8 | `#000000` | - |
-| Tile name (e.g. "Autonomy", "Take Charge") | `.serif` | 3.5 | `#000000` | - |
+| Tile name (e.g. "Autonomy", "Own It") | `.serif` | 3.5 | `#000000` | - |
 | NEED condition (2-3 lines, centred) | `.serif` | 2.6 | `#000000` | - |
 | NEED reward ("+1 Motivation.", own line, centred) | `.serif` | 2.6 | `#000000` | `#D3B1B1` |
 | NEED row footnote ("FROM WEEK 2") | `.serif` italic | 2.8 | `#000000` | - |
@@ -681,23 +676,23 @@ no executor the tile read "No Event landed on the team, or it has Shared Reperto
 Events are drawn every week from week 2. It now reads **"At most 1 Event landed on the team, or it
 has Shared Repertoire: +1
 Motivation."** Every Need tile except Recognition now ends with its vindicating Habit as an
-alternative (Hierarchy: Who Knows What, Community: Psychological Safety); Quality (since 2026-10-11) has no Habit, only
-"Work added this week", and Recognition has none either. Community's old "Trust is 4+" is replaced.
-(rulebook.md, "Need gives bonus Motivation"). Hierarchy reads "Team played a Teach, or team has
-Who Knows What" and Recognition "A feature was banked this week, or you spent Hero, or held a Demo".
+alternative (Hierarchy: Who Knows What, Community: Psychological Safety); Quality has no Habit, only
+"Work added", and Recognition has none either. Community's old "Trust is 4+" is replaced.
+(rulebook.md, "Need gives bonus Motivation"). Hierarchy reads "Team played a Teach, Learn or Workshop, or has
+Who Knows What", Community "Team spent Engagement, Reflect or Workshop, or has Psychological Safety" and Recognition "A feature was banked this week, or you spent Hero, or held a Demo".
 **The condition text sits on a tint (2026-10-07)**, a rounded rect behind the condition lines
 (38 mm wide, `rx` .4) in the colour of the Event category that gets to that Torso (rulebook §5):
 Autonomy `#F7D7A1` (Management), Hierarchy `#C7CFB5` (Environment), Community `#D3CEDF` (People),
-Quality `#B5C7CF` (Customer; the "No Work added to feature:" line sits on the Work colour `#EFE4D3`), Recognition `#D9D3C4` (no category; the
+Quality has no tint on its "Work added:" line (the "No Work:" line sits on the Work colour `#EFE4D3`), Recognition `#D9D3C4` (no category; the
 Capital chip tint). The "+1 Motivation" chip stays `#D3B1B1`.
 **Tile headlines (2026-10-07):** all ten tiles now carry the headline `NEED` or `HERO` (`.mono` 3.4,
-letter-spacing 1, x+3, y 47 / 97). The value name (Autonomy... / Take Charge...) stays as a small
+letter-spacing 1, x+3, y 47 / 97). The value name (Autonomy... / Own It...) stays as a small
 italic serif 3 caption, right-aligned at x+33, so a tile can still be matched to its Torso or Legs card.
 
 **Quality's Need was rebuilt after the 2026-09-25 playtest.** It first dropped its "or a feature
 cleared Unclear" clause (Unclear went to the `feature-quality-uncertainty` extension, rulebook
 v0.21), leaving "The team spent an Align." Players then spent weeks 1-3 on everything but Work,
-so the Need now reads **"Work added this week: +1 Motivation. No Work added to feature: -3
+so the Need now reads **"Work added or Demo held: +1 Motivation. No Work, no Demo: -3
 Motivation."** (two lines each with a `#D3B1B1` chip; rulebook.md, "Need gives bonus
 Motivation"). It counts Work that really moved a feature's counter, not just a Work card laid
 down. It is the only Need that can cost you.

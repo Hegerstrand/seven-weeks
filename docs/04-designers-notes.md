@@ -27,7 +27,7 @@ Law** - aren't thinkers at all; see the notes after the roster below.
 - **Lev Vygotsky** - the zone of proximal development. Why Learn costs the teacher a day too,
   why a Knowledge you just received can't be taught again this week.
 - **Etienne Wenger**, with **Lave** for legitimate peripheral participation - communities of
-  practice. Why Coordinate, Align, Reflect, Demo and Celebrate all exist as separate cards
+  practice. Why Engagement, Workshop, Reflect, Demo and Celebrate all exist as separate cards
   instead of one generic "team-building" action. Both detailed in
   [team-learning-model.md](./team-learning-model.md).
 

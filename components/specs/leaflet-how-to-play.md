@@ -8,7 +8,7 @@ Seven weeks. Thirty-five days. One project standing between your team and the de
 team commits five days at a time, resolves them all at once, then closes the week and moves on.
 From week 2, Events crash into the week you already committed to - spend Adaptability to
 re-plan around them or cancel them outright. Deliver every Feature before Week 7 closes to win
-the project - but hit a Team Score above the upper line (5 for every character you started with, plus 45) and you didn't just finish it, you built a team that
+the project - but hit a Team Score above the upper line (5 for every character you started with, plus 64) and you didn't just finish it, you built a team that
 could survive doing it again: Sustainable High Performance.
 
 ---
@@ -29,14 +29,14 @@ could survive doing it again: Sustainable High Performance.
 5. Pick one **PROJECT** card. Turn **THE PROJECT** face up and seat it - it names features A-F.
 6. Read the project and its six features together - complexity, LOCK tiles across **D** and
    **F**, what unlocks what.
-7. Go through the **Activity cards** that come out now: **Work, Coordinate, Celebrate**. The
+7. Go through the **Activity cards** that come out now: **Work, Engagement, Celebrate, Workshop, Plan**. The
    rest wait for later weeks.
 
 **Finish the room**
 
 - Only **THE PROJECT** and **THE ZONE** start face up. **SHIT HAPPENS** and **THE TEAM** stay
   text side up; **THE DEVELOPMENT** stays boxed.
-- **Motivation 5** for every character. Week marker on Week 1. Shuffle the Events but don't draw
+- **Motivation 4** for every character. Week marker on Week 1. Shuffle the Events but don't draw
   yet.
 - *Everything on the covered boards already sits at 1. It just isn't your problem for a few more
   weeks.*
@@ -104,9 +104,8 @@ who was hit and who was immune), +1 if the Need was met.
 > apply motivation as one number, then check for zero.
 
 **Week 2:** the Ledger (with Standing and Capital), the Adaptability pool, your Need, and Shit
-Happens/Adapt, together.
-**Week 3:** the Development + the Flex and Overtime part of the Specimen panel. Learn, Teach,
-Align, Reflect, Workshop, Plan and Demo join the cards you can lay.
+Happens/Adapt, together. The Demo card opens, with Learn, Teach and Reflect.
+**Week 3:** the Development + the Flex and Overtime part of the Specimen panel. No new cards.
 **Week 4:** nothing new.
 **Week 5:** Combos - two named triggers in the same week now pay a small bonus on top of what
 they already did alone (rulebook §18.1).
@@ -115,14 +114,16 @@ they already did alone (rulebook §18.1).
 
 *The project ends when Week 7 closes.*
 
-**Team Score** = (features × 12) + (3 tracks + adapt tokens, max 21) + (Motivation) + (12 × Habits held) − (20 × quits) − (2 ×
+**Team Score** = (features × 12) + (3 tracks + adapt tokens, max 21) + (Motivation) + (12 × Habits held) − (40 × quits) − (2 ×
 unrepaid Flex) − (5 × tracks that finish at 0 or 1)
 
-Two lines: **5 for every character you started with, minus 15** (lower) and **5 for every character, plus 45** (upper).
+**If any feature is missing, the Team Score is 0. It never goes below 0.**
+
+Two lines: **5 for every character you started with, minus 24** (lower) and **5 for every character, plus 64** (upper).
 
 | Outcome | Condition | |
 |---|---|---|
-| **Failure** | Not everything delivered. | *The score doesn't matter.* |
+| **Failure** | Not everything delivered. | *The score is 0.* |
 | **Heroic Success** | All six banked, score under the lower line. | *The project made it. The team didn't.* |
 | **Sustainable Performance** | All six banked, score between the two lines. | *The team held together.* |
 | **High Performance** | All six banked, score on or over the upper line. | *You built a team as well.* |

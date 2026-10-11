@@ -1,7 +1,7 @@
 # Team Learning Model
 
-Status: **v0.2 - full coverage pass.** This explains why spending a person-day on Coordinate,
-Align, Learn, Reflect, or Demo (instead of Work) actually makes the team better - not just
+Status: **v0.2 - full coverage pass.** This explains why spending a person-day on Engagement,
+Workshop, Learn, Reflect, or Demo (instead of Work) actually makes the team better - not just
 flavour text on the Team State tracks in [../rules/rulebook.md](../rules/rulebook.md) §4/§7.
 
 Bourdieu lives in [habitus-model.md](./habitus-model.md). This file covers **Vygotsky** and
@@ -14,12 +14,11 @@ building."
 
 | Activity | Wenger / Vygotsky mechanism | What it actually does |
 |---|---|---|
-| **Coordinate** | Wenger's **mutual engagement** - the ongoing relationship that turns a group of people into a real community of practice | Builds **Trust**, this game's stand-in for psychological safety (see below). Mutual engagement is what lets people disagree, admit mistakes, or ask for help. |
-| **Align** | Wenger's **joint enterprise** - a goal the group has actually agreed to, not one just handed down | Builds shared understanding of *why*, which is what keeps **Adaptability** working when the *what* changes (§4). |
+| **Engagement** | Wenger's **mutual engagement** - the ongoing relationship that turns a group of people into a real community of practice | Builds **Trust**, this game's stand-in for psychological safety (see below). Mutual engagement is what lets people disagree, admit mistakes, or ask for help. |
 | **Learn** | Vygotsky's **zone of proximal development & scaffolding** - a more knowledgeable other helps a learner do something they couldn't do alone, then steps back as it's learned | Transfers Knowledge and grows **Capability** (§8) - this is scaffolding, played out mechanically. |
 | **Reflect** | Wenger's **reification** (turning experience into something shareable) plus Vygotsky's **internalization** (turning outside experience into inside skill) | Grows **Shared Practice** and **Adaptability** - an After Action Review is the step that turns one person's experience into the team's shared memory. |
 | **Demo** | Wenger's **boundary encounter** - showing the work to people outside the practice, which tests whether the team's actual skill matches what it thought it had | Produces honest feedback - sometimes the news that the team is behind where it thought it was. That's exactly the information the Zone of Proximal Development needs. |
-| **Workshop** | Wenger's **joint enterprise** carried out directly - this is the "useful coordination" half of the old Working/Record Meeting split; the empty-ritual half is gone (§9, v0.28) | Grows **Adaptability**, unconditionally - no no-op version to fall back on any more. |
+| **Workshop** | Wenger's **joint enterprise** - a goal the group has actually agreed to, not one just handed down (the old Align and Workshop merged into this one card) | Builds shared understanding of *why*, which is what keeps **Adaptability** working when the *what* changes (§4): +3 Adaptability, paid for by every character's Motivation. |
 | **Celebrate** | Wenger's **reification**, pointed at the team rather than the work - marking an achievement turns "stuff we did" into a shared story the team can hold about itself | The only thing that pushes back on the weekly grind. **Deliberately not "rest":** nobody rests *at* work. Teams sustain themselves across a hard project by shipping something and saying so - which is why it only works when there is something to mark (a feature banked, or every Event cancelled) and only lifts the people on 3 Motivation or less. |
 
 ---
@@ -70,23 +69,22 @@ condition that you can only Reflect on a week in which something actually happen
 
 | Dimension | In the game |
 |---|---|
-| **Mutual engagement** | Coordinate → Trust |
-| **Joint enterprise** | Align → Adaptability |
+| **Mutual engagement** | Engagement → Trust |
+| **Joint enterprise** | Workshop → Adaptability |
 | **Shared repertoire** | The Shared Practice track. At 4-5, the second and every later **Work** card in a week produces +1 extra - the team has a routine for the thing it does most. At 0-1 each of those repeats produces 1 less: nothing is routine, so every one is reinvented. Its Habit is literally named *Shared Repertoire*. |
 
 **2. The participation ↔ reification duality.** Wenger's central claim: practice is made by
 two things in tension - *participating* (doing the work together, tacit, in the moment) and
 *reifying* (freezing experience into an artifact: a document, a routine, a name for a thing).
-Neither alone is enough. → **Participation** is Work, Coordinate, Learn. **Reification** is
+Neither alone is enough. → **Participation** is Work, Engagement, Learn. **Reification** is
 Reflect and Demo, and the physical **Feature Tower** - the tower is the team's experience
 turned into an object you can point at.
 
 **3. Legitimate peripheral participation** (Lave & Wenger). Newcomers don't sit and watch;
 they do real, low-stakes work at the edge of the practice from day one, and move inward. →
-**Onboarding (§12)**: a new character works *immediately*, at −1 output, and earns no Capital
-until onboarding is paid off. That's LPP precisely - legitimate (real work, from the start),
-peripheral (reduced effect, no standing yet). It's also why "rushed onboarding" is a real
-option rather than a punishment: peripheral participation is how it's supposed to start.
+**Onboarding (§12)**: a new character works *immediately*, like anyone else, and starts at Capital 0 -
+legitimate (real work, from the start) and peripheral (no standing yet). The game no longer adds a
+separate onboarding penalty: the team card, the quit cost and Capital 0 already say it.
 
 **4. Boundary encounters and brokering.** Practice meets other practice at its edges;
 brokers carry it across. → **Demo** is the boundary encounter with the customer. **NEW TEAM
@@ -137,7 +135,7 @@ team that stops coordinating loses the Trust, but not the safety it learned to e
 "Psychological safety" (Amy Edmondson) isn't one of this project's three named theorists,
 but it's the real-world outcome the game is chasing: a team where people will challenge an
 idea, admit a mistake, or ask a "stupid" question without fear. In this game, **Trust stands
-in for psychological safety** - and it only moves through **Coordinate**, because safety
+in for psychological safety** - and it only moves through **Engagement**, because safety
 isn't declared, it's built through repeated, low-stakes engagement. That's exactly how
 Wenger describes a community of practice forming.
 
@@ -167,10 +165,10 @@ that *late* reinforcement carries a coordination tax. See
 | Vygotsky | Internalization | ✅ Reflect |
 | Vygotsky | Social-then-individual (general genetic law) | ✅ **Strongest.** Knowledge → Shared at 3 holders |
 | Vygotsky | **Mediation by tools & signs** | ⚠️ **Weakest link.** The Item exists and is thematically the mediating artifact, but mechanically it's just a once-per-game extra person-day. See the open question below. |
-| Wenger | Mutual engagement | ✅ Coordinate |
-| Wenger | Joint enterprise | ✅ Align |
+| Wenger | Mutual engagement | ✅ Engagement |
+| Wenger | Joint enterprise | ✅ Workshop |
 | Wenger | Shared repertoire | ✅ Shared Practice track + the Shared Repertoire habit |
-| Wenger | Participation / reification duality | ✅ Work & Coordinate vs. Reflect, Demo, the Tower |
+| Wenger | Participation / reification duality | ✅ Work & Engagement vs. Reflect, Demo, the Tower |
 | Wenger | Legitimate peripheral participation | ✅ §12 Onboarding |
 | Wenger | Boundary encounters / brokering | ✅ Demo · the Replacement rule (§13) |
 | Wenger | Identity / becoming | ✅ Capital + the figure |

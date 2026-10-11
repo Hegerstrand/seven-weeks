@@ -8,7 +8,7 @@ many free/near-free ways a team has to shrug off Events (see the balance discuss
 
 ## What this pack restores
 - **Losing Capital \u2192 Performance Review:** a named character loses **1 Capital**, no weekly
-  cap. If Trust \u2265 4, the team may spend a Coordinate to take this as **-1 Trust, shared**,
+  cap. If Trust \u2265 4, the team may spend an Engagement to take this as **-1 Trust, shared**,
   instead of -1 Capital for the named character alone.
 - **Authorized Voice** gains its second use: instead of cancelling an Event outright, the team
   may spend it as **Collective Bargaining** - convert a named character's Performance Review

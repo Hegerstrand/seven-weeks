@@ -16,7 +16,7 @@ is capability, and it's kept separate on purpose:
 | **Base** | Upbringing / family background | Social conditions, incorporated history | Starting assumptions, social capital, what feels familiar |
 | **Head** | Education & inclination | Cultural capital, dispositions | What kinds of problems the character is naturally good at |
 | **Torso** | Values | Durable preferences | What feels *right* to do, and what causes tension |
-| **Legs** | Instinct - how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Engage) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with those Legs can cancel it. |
+| **Legs** | Instinct - how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Own It / Analyze / Support / Speak Up / Engage) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with those Legs can cancel it. |
 | **Item** | Skills (held) | Capability, not habitus | What the character can actually *do* |
 
 Arms are sculpted into the Torso, not a separate swappable piece. A loose arm is fragile to
@@ -41,7 +41,7 @@ micromanaging boss in the room.
 - **Torso - Værdier (values, pick one):** Autonomy, Hierarchy, Community, Quality, Recognition -
   exactly five, because Torso is also **Need** (see below): whichever value you're dealt
   is both how Events land on you and what you need from the team from week 2 on.
-- **Legs - Instinct, Pressure Response (pick one):** Take Charge / Analyze / Support / Challenge /
+- **Legs - Instinct, Pressure Response (pick one):** Own It / Analyze / Support / Speak Up /
   Engage - sculpted as its own stance or pose. Also what Event cards name for the
   **Hero** move (rulebook §5.1) - exactly one of these five, once per game, cancels an Event.
 - **Item - Værktøjer & færdigheder (skills, 2-3):** e.g. technical, planning, facilitation,
@@ -83,8 +83,8 @@ sides - never two unrelated mechanics bolted together, and never two different c
 > **Elite Athlete - Tendency:** take the same charge with **Trust 1 or less**, and it reads
 > as overreach instead: **−1 Motivation**.
 
-This pairs with the Head/Pressure Response choice - "Elite Athlete" naturally reads as Take
-Charge, so match the strength/tendency to whichever Head the player picked.
+This pairs with the Head/Pressure Response choice - "Elite Athlete" naturally reads as Own
+It, so match the strength/tendency to whichever Head the player picked.
 
 The same rule applies to **Motivation**, not just to strengths and tendencies. An Event or
 Activity that touches a character's Values (Torso) or Pressure Response (Head) shouldn't cost
@@ -97,7 +97,7 @@ differently. See [../rules/rulebook.md](../rules/rulebook.md) §5 for two worked
 Habitus is only part of Bourdieu's picture. The other two pieces are **capital** and
 **field**. The same habitus can land differently depending on how much capital you hold
 *within a specific field* - because every field has its own rules about whose behaviour
-counts as legitimate. A Take Charge instinct reads as leadership from someone with standing,
+counts as legitimate. An Own It instinct reads as leadership from someone with standing,
 and as overreach from someone without it. Same habitus, different position, different
 result.
 
@@ -115,7 +115,7 @@ action is them **converting into each other**:
 | Form | What it is | In this game |
 |---|---|---|
 | **Cultural** | Education, credentials, embodied know-how | **Knowledge** and **Skills** - i.e. **Base** (upbringing) and **Legs** (education) |
-| **Social** | Networks, relationships, obligations | **Trust**, and the relationships Coordinate builds |
+| **Social** | Networks, relationships, obligations | **Trust**, and the relationships Engagement builds |
 | **Symbolic** | Prestige, standing, the right to be listened to | **Capital** (§5.1) |
 
 Symbolic capital is what the other forms *become* once the field **recognises** them as

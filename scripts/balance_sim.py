@@ -29,7 +29,7 @@ ASSUMPTIONS (places where the rulebook is silent or ambiguous; each is a switch 
   - Bookish / Hands-On Base effects apply to the character who learns / teaches.
   - The adapt policy cancels an Event if severity / cost >= Strategy.adapt_threshold. Severity
     values in EVENTS are rough guesses in "days of damage"; tune them first.
-  - Onboarding is modelled only as "no Capital until two Learn/Coordinate days have passed".
+  - Onboarding is modelled as one day, one a week; the replacement joins at once with no penalty.
 """
 from __future__ import annotations
 
@@ -47,6 +47,7 @@ import sys
 import time
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass, field, fields, replace
+from itertools import combinations
 
 # --------------------------------------------------------------------------------------
 # Rules (every constant the rulebook states; override with --set name=value)
@@ -58,7 +59,7 @@ class Rules:
     weeks: int = 8                              # 7 working weeks + the deadline week
     days: int = 5
     players: int = 5
-    mot_start: int = 5
+    mot_start: int = 4
     mot_cap: int = 5
     sheltered_cap: int = 3
     grind: int = 1
@@ -74,11 +75,17 @@ class Rules:
     base_dislike: int = 1                       # Bookish teaching / Hands-On learning: -this Motivation
     habit_discount: int = 1
     habit_min_cost: int = 0
+    early_discount: int = 1                     # The Audit / Everyone Is Equal: this much cheaper while the plinth is nearly empty
+    early_max_features: int = 1                 # "nearly empty" = this many banked features or fewer
     trust_cancel: bool = False                  # Trust 4+ cancelling one Event a week: removed from the game
     trust_cancel_at: int = 4                    # only read when trust_cancel is on
     reflect_mot: int = 1                        # a Reflect with evidence lifts every character at or below celebrate_max_mot by this
     low_band: int = 1
-    plan_dead_at: int = 0                       # Plan does nothing when Shared Practice is at or below this (was the low band, 1)
+    plan_dead_at: int = 1                       # Plan does nothing when Shared Practice is at or below this (the low band: nothing in week 1)
+    demo_from_week: int = 2                     # first week the Demo card can be laid
+    plan_from_week: int = 1                     # first week the Plan card can be laid
+    cards_from_week: int = 2                    # first week Learn, Teach and Reflect can be laid
+    quality_demo: bool = False                  # a Demo also meets the Quality Need (off: only Work meets it)
     cap_first_len: int = 5                      # tiles in a row or column that pay the FIRST Capability gain (later lines need 5)
     cap_per_tiles: int = 0                      # 0 = off; else every Nth tile on the Zone pays Capability +1
     cross_rows: int = 2                         # a character's first square in this many rows pays the TEAM Capability +1 (once each); no Capital
@@ -86,7 +93,8 @@ class Rules:
     sp_bonus_at: int = 4
     reflect_trust: int = 3
     plan_bonus: int = 1
-    pool_start: int = 3
+    pool_start: int = 1                         # was 3: a thin pool forces an early Workshop
+    av_categories: str = "MC"                   # Authorized Voice cancels only Events of these categories (M anagement, C ustomer, P eople, E nvironment; empty = any)
     pool_cap: int = 6
     tr_wells: int = 3
     hero_min_mot: int = 3
@@ -95,12 +103,12 @@ class Rules:
     events_per_week: int = 2
     events_from_week: int = 2
     combos_from_week: int = 5
-    threshold_base: int = -15                   # Sustainable: -15 + 5 x 5 players = 10 (moved from the simulator: random almost never reaches it)
-    threshold_high_base: int = 45               # Sustainable High Performance: 45 + 5 x 5 players = 70 (about half of optimal play)
+    threshold_base: int = -24                   # lower line: -24 + 5 x 5 players = 1 (the lowest score that random play reaches in 2% or fewer games)
+    threshold_high_base: int = 64               # upper line: 64 + 5 x 5 players = 89 (90% of the optimal games that finish reach it)
     threshold_per_player: int = 5
     habit_score: int = 12                       # Team Score per Habit held at the end (5 Habits = up to 60)
     feature_value: int = 12
-    quit_penalty: int = 20
+    quit_penalty: int = 40
     quit_mot_cost: int = 1                      # every remaining character loses this much Motivation for each character who quits
     flex_penalty: int = 2
     low_track_penalty: int = 5                  # Team Score lost per Ledger track that finishes at 0-1
@@ -108,10 +116,11 @@ class Rules:
     legs_tendencies: bool = True
     autonomy_max_landed: int = 1                # Autonomy Need holds if at most this many Events landed (printed rule)
     autonomy_rule: str = "events"               # events (count landed Events) | management (no Management Event landed)
-    align_tokens: int = 3                       # ALIGN (the meeting): tokens it adds (was 2; 0 = card not in the game)
+    align_tokens: int = 3                       # WORKSHOP (the merged meeting): tokens it adds (0 = card not in the game)
+    workshop_from_week: int = 1                 # first week the Workshop card is open
     align_cost: int = 1                         # Motivation every character pays (one way: Motivation -> Adaptability)
     align_min_mot: int = 3                      # policy: nobody pays below this (pay 1, then the grind takes 1: at 2 that is a quit)
-    celebrate_repeat: int = 0                   # optional: Celebrate gives this much less if the team celebrated last week
+    celebrate_repeat: int = 1                   # Celebrate gives this much less if the team celebrated last week (1 = nothing)
     celebrate_max_mot: int = 3                  # Celebrate only lifts a character at or below this Motivation (5 = everyone, off)
     celebrate_needs_reason: bool = True         # Celebrate gives nothing unless a feature was banked this week or every Event was cancelled
     stand: bool = False                         # Torso Stand: once per game, pay Motivation to cancel your Torso's category
@@ -126,14 +135,15 @@ class Rules:
 
 TORSOS = ["Autonomy", "Hierarchy", "Community", "Quality", "Recognition"]
 NEED_SOFT_LO, NEED_SOFT_HI = 75.0, 95.0   # soft goal: each Need is met in this share of character-weeks
-QUIT_WEIGHT = 300.0                        # optimiser objective points lost per quit: a quit must never be worth it
+QUIT_WEIGHT = 1000.0                       # optimiser priority 1: no quits. A quit outweighs finishing, which outweighs points
+FINISH_WEIGHT = 9.0                        # optimiser priority 2: objective points per percent of games that deliver every feature (max 900, below one quit)
 QUIT_RATE_HARD = 5.0                       # hard goal in optimal play: at most this many quits per 100 character-weeks
 QUIT_RATE_SOFT_MIN = 1.0                   # soft goal in optimal play: every habitus card sees at least this many quits per 100 character-weeks
 HUMAN_KIND = {"torso": "values", "legs": "instinct", "base": "upbringing"}
 CARD_ALL_GOAL = 90.0                       # goal: this share of games play every action card at least once
 CARD_MEAN_MIN = 1.0                        # goal in optimal play: every action card averages at least this many plays a game
-PLAY_LO, PLAY_HI = 1.3, 2.5                # goal: Plan and Align are each played this many times a game
-LEGS = ["TakeCharge", "Analyze", "Support", "Engage", "Challenge"]
+PLAY_RANGES = {"Plan": (1.0, 2.5), "Workshop": (1.0, 2.5)}   # goal: plays a game for each of these cards
+LEGS = ["OwnIt", "Analyze", "Support", "Engage", "SpeakUp"]
 BASES = ["Bookish", "HandsOn", "Sheltered", "Dependable", "Competitive"]
 
 # feature: (work cost, complexity, depends on)
@@ -163,38 +173,39 @@ class Ev:
     hit: str | None = None   # Torso override (replaces the category's Torso, no immunity)
     torso: bool = True       # False = no Torso reaction line on the card
     sev: float = 1.0         # rough damage in "days"; used only by the adapt policy
+    early: bool = False      # costs R.early_discount less while the plinth holds R.early_max_features or fewer
 
 
 EVENTS = [
-    Ev("STATUS MEETING", "M", 3, "TakeCharge", everyone=1, sev=1.5),
-    Ev("BUDGET CUT", "M", 2, "TakeCharge", everyone=1, sev=0.6),
+    Ev("STATUS MEETING", "M", 3, "OwnIt", everyone=1, sev=1.5),
+    Ev("BUDGET CUT", "M", 2, "OwnIt", everyone=1, sev=0.6),
     Ev("REORGANISED", "M", 2, "Engage", everyone=1, sev=1.2),
-    Ev("THE AUDIT", "M", 2, None, everyone=1, sev=1.0),
-    Ev("THE BIKESHED", "M", 1, "TakeCharge", hit="Quality", sev=0.7),
-    Ev("LEADS FROM BEHIND", "M", 1, "Challenge", everyone=1, torso=False, sev=0.5),
-    Ev("EVERYONE IS EQUAL", "M", 2, None, everyone=1, sev=0.8),
+    Ev("THE AUDIT", "M", 2, None, everyone=1, sev=1.0, early=True),
+    Ev("THE BIKESHED", "M", 1, "OwnIt", hit="Quality", sev=0.7),
+    Ev("LEADS FROM BEHIND", "M", 1, "SpeakUp", everyone=1, torso=False, sev=0.5),
+    Ev("EVERYONE IS EQUAL", "M", 2, None, everyone=1, sev=0.8, early=True),
     Ev("THE WOLF", "M", None, None, torso=False, sev=3.0),
-    Ev("REQUIREMENTS CHANGE", "C", 2, "TakeCharge", sev=1.0),
+    Ev("REQUIREMENTS CHANGE", "C", 2, "OwnIt", sev=1.0),
     Ev("NEGATIVE FEEDBACK", "C", 3, "Analyze", sev=2.0),
     Ev("SCOPE CREEP", "C", 3, "Analyze", sev=2.0),
     Ev("PRIORITY CHANGES", "C", 2, "Analyze", sev=1.0),
     Ev("THE DATE MOVES UP", "C", 3, None, sev=3.0),
     Ev("THE DASHBOARD", "C", 3, "Analyze", sev=2.5),
-    Ev("ALWAYS REACTING", "C", 1, "Challenge", sev=0.7),
+    Ev("ALWAYS REACTING", "C", 1, "SpeakUp", sev=0.7),
     Ev("KNOWLEDGE HOARDING", "P", 2, "Support", sev=0.8),
     Ev("BURNOUT WARNING", "P", 2, "Support", sev=1.0),
     Ev("MORE HANDS", "P", 2, "Engage", torso=False, sev=1.5),
-    Ev("THE TEAM SPLITS", "P", 2, "Challenge", everyone=1, sev=1.2),
-    Ev("A FLAT WEEK", "P", 1, "Challenge", everyone=1, sev=0.6),
+    Ev("THE TEAM SPLITS", "P", 2, "SpeakUp", everyone=1, sev=1.2),
+    Ev("A FLAT WEEK", "P", 1, "SpeakUp", everyone=1, sev=0.6),
     Ev("EQUIPMENT OUTAGE", "E", 3, "Support", everyone=1, sev=1.8),
     Ev("OLD FOUNDATIONS", "E", 2, "Engage", sev=2.0),
     Ev("FALSE START", "E", 2, None, sev=1.0),
-    Ev("EVERYTHING AT ONCE", "E", 3, "Challenge", everyone=1, sev=3.0),
+    Ev("EVERYTHING AT ONCE", "E", 3, "SpeakUp", everyone=1, sev=3.0),
     Ev("SHAKY GROUND", "E", 3, "Engage", sev=2.0),
 ]
 
 # Removal preference when an Event takes one of the week's cards away.
-REMOVE_ORDER = ["Align", "Workshop", "Learn", "Reflect", "Plan", "Demo", "Teach", "Celebrate", "Work"]
+REMOVE_ORDER = ["Workshop", "Learn", "Reflect", "Plan", "Demo", "Teach", "Celebrate", "Work"]
 
 
 # --------------------------------------------------------------------------------------
@@ -206,7 +217,7 @@ REMOVE_ORDER = ["Align", "Workshop", "Learn", "Reflect", "Plan", "Demo", "Teach"
 class Strategy:
     name: str
     work_days: tuple = (3, 3, 3, 3, 3, 3, 3)   # Work cards wanted per week (of 5)
-    trust_goal: int = 3                        # lay Coordinate while Trust is below this
+    trust_goal: int = 3                        # lay Engagement while Trust is below this
     celebrate_min: int = 1                     # Celebrate if anyone is at or below this
     celebrate_mean: float = 2.0                # ...or the mean is at or below this
     celebrate_every: int = 0                   # ...or every n-th week (0 = never)
@@ -222,11 +233,14 @@ class Strategy:
     bank_tokens: bool = True                   # unused: a Reflect now always fills a well AND gives the pool token
     wolf: str = "if_mot"                       # always | never | if_mot
     take_one: bool = True                      # Take One For The Team / Dependable when Trust is low
-    align: int = 0                             # Align meetings wanted per week while the pool is below pool_goal
     use_stand: bool = True                     # use Torso Stand when the rule exists
     random_play: bool = False                  # lay the five cards at random from what is open
     celebrate_needs_reason: bool = False       # lay Celebrate only when a feature should bank or the Events can all be covered
-    align_weeks: tuple = ()                    # weeks (from 3) in which to lay an Align meeting whatever the pool holds
+    plan_weeks: tuple = ()                     # weeks in which to lay a Plan whatever `plan` says
+    workshop_weeks: tuple = ()                 # weeks in which to lay the Workshop whatever the pool holds
+    care: bool = False                         # watch for characters at risk of quitting: Celebrate, and lay the card that meets their Need
+    care_at: int = 1                           # at risk = this Motivation or lower at the start of the week
+    finish_first: bool = False                 # add Work days when the planned days cannot cover the Work still owed
 
 
 STRATEGIES = {
@@ -238,11 +252,11 @@ STRATEGIES = {
     # Some investment early, Work-heavy late. Small tweaks from what optimal does: a full first week, Trust 4,
     # two Learn/Teach a week, cancel more Events, and only celebrate when there is something to mark.
     "balanced": Strategy("balanced", work_days=(4, 3, 3, 3, 3, 3, 4, 4), trust_goal=4, learn=2, adapt_threshold=0.5,
-                         hero_min_cost=1, celebrate_needs_reason=True),
+                         hero_min_cost=1, celebrate_needs_reason=True, care=True, finish_first=True),
     # Heavy early investment in Trust, the Zone and the pool.
     "invested": Strategy(
         "invested", work_days=(4, 2, 2, 3, 3, 4, 4, 4), trust_goal=4, pool_goal=4, learn=2,
-        celebrate_every=3, adapt_threshold=0.5, hero_min_cost=1, celebrate_needs_reason=True),
+        celebrate_every=3, adapt_threshold=0.5, hero_min_cost=1, celebrate_needs_reason=True, care=True, finish_first=True),
     # Lays five random cards from the ones that are open (Work twice as likely) and never plans ahead.
     "random": Strategy("random", random_play=True, take_one=False, repay_flex=False),
 }
@@ -270,7 +284,6 @@ class Char:
         self.flex = False
         self.cross_trained = False
         self.cap_gain_week = 0
-        self.onboarding_days = 0
         self.q_streak = 0
 
 
@@ -289,6 +302,7 @@ class Week:
         self.hero_by: set = set()
         self.hero_log: list = []
         self.witness: dict = defaultdict(int)
+        self.wit_named: set = set()
         self.take_dep = 0
         self.take_other = 0
         self.rec_met = 0
@@ -305,6 +319,7 @@ class Week:
         self.work_added = False
         self.blocked: set = set()
         self.ev_loss: dict = defaultdict(int)
+        self.ev_by: dict = defaultdict(lambda: defaultdict(int))
         self.mot_adj: dict = defaultdict(int)
         self.survivors: list = []
         self.carry_next: str | None = None
@@ -336,11 +351,10 @@ class Game:
         rng.shuffle(self.deck)
         self.flex_owed = 0
         self.max_flex = 0
-        self.demo_protect = 0
         self.burnout_ids: list = []
         self.celebrated_prev = False
         self.no_work_streak = 0
-        self.prev = {"banked": False, "adapted2": False, "process": False}
+        self.prev = {"banked": False, "adapted2": False, "process": False, "work": False}
         self.burnout_new: list = []
         self.vacant = 0                      # seats left empty by quits, filled one per Onboarding card played
         self.carry: str | None = None
@@ -355,6 +369,7 @@ class Game:
         self.need_seen: Counter = Counter()
         self.cancel_by: Counter = Counter()
         self.ps: Counter = Counter()
+        self.pair_ps: Counter = Counter()
         self.pool_week: list = []
         self.last_bank_week = 0
         self.work_by_week: list = []
@@ -371,6 +386,7 @@ class Game:
         self.evidence_week: list = []
         self.habitus_week: list = []
         self.habit_week: list = []
+        self.prev_ev_by: dict = {}
         self.w = Week()
 
     # ------------------------------------------------------------------ helpers
@@ -379,6 +395,8 @@ class Game:
         if ev.cost is None:
             return None
         c = ev.cost
+        if ev.early and sum(1 for f in self.feat.values() if f["banked"]) <= self.R.early_max_features:
+            c = max(0, c - self.R.early_discount)
         if CAT_HABIT[ev.cat] in self.habits:
             c = max(self.R.habit_min_cost, c - self.R.habit_discount)
         return c
@@ -408,7 +426,7 @@ class Game:
         return min(cands, key=lambda k: (0 if k in ("B", "C") else 1, self.remaining(k)))
 
     def gain_capital(self, c: Char, amt: int, hero: bool = False, direct: bool = False):
-        if self.w.equal or c.onboarding_days > 0:
+        if self.w.equal:
             return
         if not hero and not direct and c.cap_gain_week >= 1:
             return
@@ -417,11 +435,13 @@ class Game:
         if not hero and not direct:
             c.cap_gain_week += 1
         self.m["capital_gained"] += amt
-        if c.capital > before:
+        if c.capital > before and not self.w.wit_named:
             for r in [x for x in self.chars if x.torso == "Recognition"]:
                 others = [x for x in self.chars if x is not r]
                 if others:
+                    self.w.wit_named.add(r.id)
                     self.w.witness[min(others, key=lambda x: x.mot).id] += 1
+                    break
 
     def lower(self, track: str):
         cur = getattr(self, track)
@@ -570,13 +590,15 @@ class Game:
         if R.trust_cancel and self.trust >= R.trust_cancel_at:
             cap += 2
         if "AV" in self.habits:
-            cap += 2
+            cap += 2 if not R.av_categories else max(1, 2 * len(R.av_categories) // 4)
         if w >= R.hero_from_week:
             heroes = sum(1 for c in self.chars if c.mot >= R.hero_min_mot and (not c.hero_used or c.base == "Competitive"))
             cap += 2 * min(2, heroes)
         return cap
 
     def celebrate_worth(self, w: int, plan: list) -> bool:
+        if self.celebrated_prev and self.R.celebrate_repeat >= self.R.celebrate_banked:
+            return False
         if self.bank_expected(plan):
             return True
         return w >= self.R.events_from_week and self.cover_capacity(w) >= 5
@@ -595,35 +617,76 @@ class Game:
             out.append("PROC")
         return out
 
+    def work_out(self, n: int) -> int:
+        """Work that n Work cards would deliver at the Ledger as it stands (the first card is dead while Capability is low)."""
+        R, total = self.R, 0
+        for idx in range(1, n + 1):
+            if idx == 1 and self.cap <= R.low_band:
+                continue
+            total += 1 + (1 if self.cap >= R.cap_bonus_at else 0) + (1 if idx >= 2 and self.sp >= R.sp_bonus_at else 0)
+        return total
+
+    def care_cards(self, w: int, cards: list):
+        """A team that watches its people: for anyone at risk of quitting, lay Celebrate and the card that meets their Need."""
+        risky = sorted((c for c in self.chars if c.mot <= self.st.care_at), key=lambda c: c.mot)
+        quality_exposed = any(c.torso == "Quality" and c.mot <= self.R.quality_penalty + self.R.grind for c in self.chars)
+
+        def put(card):
+            if card in cards or cards.count("Work") <= 1:
+                return
+            cards[len(cards) - 1 - cards[::-1].index("Work")] = card
+
+        # At most two cards change: a Motivation lift, and the Need card of the character closest to quitting
+        if risky:
+            p = self.prev
+            if self.celebrate_worth(w, cards):
+                put("Celebrate")
+            elif w >= self.R.cards_from_week and self.trust >= self.R.reflect_trust and (p["banked"] or p["adapted2"] or p["process"]):
+                put("Reflect")
+            need_card = {"Community": "Engagement", "Hierarchy": "Learn" if w >= self.R.cards_from_week else None,
+                         "Recognition": "Demo" if w >= self.R.demo_from_week else None}
+            if need_card.get(risky[0].torso):
+                put(need_card[risky[0].torso])
+        if quality_exposed and "Work" not in cards and not ("Demo" in cards and self.demo_meets_quality()):
+            spare = [i for i, x in enumerate(cards) if x not in ("Onboarding", "Celebrate")]
+            if spare:
+                cards[spare[-1]] = "Work"
+
     def plan_week(self, w: int):
         R, st = self.R, self.st
         self.m["empty_seat_weeks"] += self.vacant
         if st.random_play:
-            open_cards = ["Work", "Work", "Coordinate", "Celebrate"]
+            open_cards = ["Work", "Work", "Engagement", "Celebrate"]
             if self.vacant:
                 open_cards.append("Onboarding")
-            if w >= 3:
-                open_cards += ["Workshop", "Align", "Learn", "Teach", "Reflect", "Plan", "Demo"]
+            if R.workshop_from_week <= w:
+                open_cards.append("Workshop")
+            if w >= R.plan_from_week:
+                open_cards.append("Plan")
+            if w >= R.cards_from_week:
+                open_cards += ["Learn", "Teach", "Reflect"]
+            if w >= R.demo_from_week:
+                open_cards.append("Demo")
             picks = [self.rng.choice(open_cards) for _ in range(R.days)]
-            if picks.count("Reflect") > 1:
-                first = picks.index("Reflect")
-                picks = [("Work" if c == "Reflect" and i != first else c) for i, c in enumerate(picks)]
+            for single in ("Reflect", "Celebrate", "Workshop", "Engagement"):
+                if picks.count(single) > 1:
+                    first = picks.index(single)
+                    picks = [("Work" if c == single and i != first else c) for i, c in enumerate(picks)]
             if picks.count("Onboarding") > 1:
                 first = picks.index("Onboarding")
                 picks = [("Work" if c == "Onboarding" and i != first else c) for i, c in enumerate(picks)]
             return picks
         mots = [c.mot for c in self.chars] or [0]
         wanted = []
-        if min(mots) <= st.celebrate_min or statistics.mean(mots) <= st.celebrate_mean or (
-                st.celebrate_every and w % st.celebrate_every == 0):
+        if (min(mots) <= st.celebrate_min or statistics.mean(mots) <= st.celebrate_mean or (
+                st.celebrate_every and w % st.celebrate_every == 0)) and not (
+                self.celebrated_prev and R.celebrate_repeat >= R.celebrate_banked):
             wanted.append("Celebrate")
         if self.trust < st.trust_goal:
-            wanted.append("Coordinate")
-        if w >= 3:
-            if self.pool < st.pool_goal:
-                wanted.append("Workshop")
-            if R.align_tokens and self.pool < st.pool_goal and all(c.mot >= R.align_min_mot for c in self.chars):
-                wanted.extend(["Align"] * st.align)
+            wanted.append("Engagement")
+        if R.workshop_from_week <= w < R.cards_from_week and self.pool < st.pool_goal and self.can_workshop():
+            wanted.append("Workshop")
+        if w >= R.cards_from_week:
             for k in range(st.learn):
                 can_learn = any(self.learn_option(c) for c in self.chars)
                 can_teach = self.trust > R.low_band and self.zone_room_teach()
@@ -633,27 +696,34 @@ class Game:
                     wanted.append("Learn")
             if st.reflect and self.trust >= R.reflect_trust:
                 wanted.append("Reflect")
-            if st.plan and self.sp > R.plan_dead_at and self.plan_target():
-                wanted.append("Plan")
-            if self.pool < st.pool_goal:
+        if w >= R.plan_from_week and st.plan and self.sp > R.plan_dead_at and self.plan_target():
+            wanted.append("Plan")
+        if w >= R.cards_from_week:
+            if self.pool < st.pool_goal and self.can_workshop():
                 wanted.append("Workshop")
-            if st.demo and self.chars:
-                wanted.append("Demo")
+        if w >= R.demo_from_week and st.demo and self.chars:
+            wanted.append("Demo")
         wd = st.work_days[min(w, len(st.work_days)) - 1]
+        if st.finish_first and w >= 3 and self.chars:
+            owed = sum(max(0, self.remaining(k)) for k, f in self.feat.items() if not f["banked"])
+            short = owed - sum(st.work_days[w - 1:])
+            if short > 0:
+                wd = min(R.days, wd + -(-short // (R.weeks - w + 1)))
         slots = max(0, R.days - wd)
         # Plan makes every Work card on the feature produce double (+1 on top of its base 1), so Plan + 2 Work = 4 beats
         # 3 Work = 3: with 3 or more Work cards wanted, Plan takes one Work day; with 2 it takes a free slot.
-        if (w >= 3 and st.plan and self.sp > R.plan_dead_at and self.plan_target() is not None and wd >= 2):
+        if (w >= R.plan_from_week and (st.plan or w in st.plan_weeks) and self.sp > R.plan_dead_at and self.plan_target() is not None
+                and (wd >= 2 or w in st.plan_weeks)):
             wanted = [c for c in wanted if c != "Plan"]
             wanted.insert(1 if "Celebrate" in wanted else 0, "Plan")
-            if wd >= 3:
+            if wd >= 3 or slots < 1:
                 slots += 1
         open_wells: list = []
-        if (w in st.align_weeks and w >= 3 and R.align_tokens and self.chars
-                and all(c.mot >= R.align_min_mot for c in self.chars)):
-            wanted = [c for c in wanted if c != "Align"]
-            wanted.insert(1 if "Celebrate" in wanted else 0, "Align")
-        if w >= 3 and st.reflect and self.trust >= R.reflect_trust:
+        if w in st.workshop_weeks and w >= R.workshop_from_week and self.can_workshop():
+            wanted = [c for c in wanted if c != "Workshop"]
+            wanted.insert(1 if "Celebrate" in wanted else 0, "Workshop")
+            slots = max(slots, 1)
+        if w >= R.cards_from_week and st.reflect and self.trust >= R.reflect_trust:
             open_wells = self.reflect_wells_open()
             wanted = [c for c in wanted if c != "Reflect"]
             if open_wells:
@@ -670,12 +740,28 @@ class Game:
         cards += ["Work"] * (R.days - len(cards))
         while cards.count("Reflect") > 1:
             cards[len(cards) - 1 - cards[::-1].index("Reflect")] = "Work"
+        while cards.count("Engagement") > 1:
+            cards[len(cards) - 1 - cards[::-1].index("Engagement")] = "Work"
         if self.vacant > 0 and "Onboarding" not in cards:
             cards[cards.index("Work") if "Work" in cards else -1] = "Onboarding"
         if st.celebrate_needs_reason and "Celebrate" in cards and not self.celebrate_worth(w, cards):
             cards[cards.index("Celebrate")] = "Work"
-        # Plan + 2 Work beats 3 Work, so 3 or more Work cards on a non-Low feature always carry the Plan card
-        if w >= 3 and "Plan" not in cards and cards.count("Work") >= 3 and self.plan_target() is not None:
+        if st.care and w >= 2:
+            self.care_cards(w, cards)
+        # Read the Ledger: with Capability in the low band the first Work card of the week delivers nothing
+        spare = lambda: [i for i, x in enumerate(cards) if x not in ("Work", "Onboarding", "Celebrate")]
+        if cards.count("Work") and self.work_out(cards.count("Work")) == 0 and spare():
+            cards[spare()[-1]] = "Work"
+        # The Quality Need is met only by Work added, so Quality characters need Work that delivers, plus one spare
+        # card once Events are in play (an Event can remove a card after the week is laid)
+        if any(c.torso == "Quality" for c in self.chars) and not ("Demo" in cards and self.demo_meets_quality()):
+            spare_work = 1 if w >= R.events_from_week else 0
+            while (self.work_out(cards.count("Work") - spare_work) == 0) and spare():
+                cards[spare()[-1]] = "Work"
+        # Plan + 2 Work beats 3 Work once Capability is out of the low band (the first Work card then delivers); in the low
+        # band that first card is dead either way, so Plan only pays from 4 Work cards
+        plan_pays_at = 4 if self.cap <= R.low_band else 3
+        if w >= R.plan_from_week and "Plan" not in cards and cards.count("Work") >= plan_pays_at and self.plan_target() is not None:
             if self.sp > R.plan_dead_at:
                 cards[cards.index("Work")] = "Plan"
             else:
@@ -710,6 +796,8 @@ class Game:
             return []
         n = min(self.R.events_per_week, len(self.deck))
         evs = [self.deck.pop() for _ in range(n)]
+        for e in evs:
+            self.m["ev_drawn_w%d|%s" % (w, e.name)] += 1
         self.m["events_drawn"] += len(evs)
         return evs
 
@@ -720,15 +808,20 @@ class Game:
               and (not c.hero_used or c.base == "Competitive")]
         return max(ok, key=lambda c: c.mot) if ok else None
 
-    def do_align(self):
+    def can_workshop(self) -> bool:
+        """The team only holds the Workshop when everyone can pay for it (nobody pays below align_min_mot)."""
+        R = self.R
+        return bool(R.align_tokens and self.chars and all(c.mot >= R.align_min_mot for c in self.chars))
+
+    def do_workshop(self):
         R = self.R
         if not self.chars or any(c.mot - R.align_cost < 1 for c in self.chars):
-            self.m["align_dead"] += 1
+            self.m["workshop_dead"] += 1
             return
         for c in self.chars:
-            self.add_mot(c, -R.align_cost, "align")
+            self.add_mot(c, -R.align_cost, "workshop")
         self.w.adds += R.align_tokens
-        self.m["tokens_align"] += R.align_tokens
+        self.m["tokens_workshop"] += R.align_tokens
 
     def pick_stand(self, ev: Ev):
         ok = [c for c in self.chars if not c.stand_used and TORSO_CAT.get(c.torso) == ev.cat
@@ -761,7 +854,7 @@ class Game:
                 how = "habit"
             elif R.trust_cancel and not used_trust and self.trust >= R.trust_cancel_at:
                 used_trust, how = True, "trust"
-            elif not used_av and hero_ok and "AV" in self.habits:
+            elif not used_av and hero_ok and "AV" in self.habits and (not R.av_categories or e.cat in R.av_categories):
                 used_av, how = True, "av"
             else:
                 h = self.pick_hero(e, w) if hero_ok else None
@@ -801,8 +894,8 @@ class Game:
         self.w.adapted2 = len(evs) == 2 and not wolf and len(cancelled) == 2
 
     def remove_card(self, plan: list):
-        if plan.count("Coordinate") > 1:
-            plan.remove("Coordinate")
+        if plan.count("Engagement") > 1:
+            plan.remove("Engagement")
             return
         for k in REMOVE_ORDER:
             if k in plan:
@@ -829,11 +922,14 @@ class Game:
                         self.m["hit_extra"] += 1
             if loss:
                 self.w.ev_loss[c.id] += loss
+                self.w.ev_by[c.id][e.name] += loss
 
     def resolve_events(self, w: int, plan: list):
         W = self.w
         for e in W.survivors:
             n = e.name
+            self.m["ev_landed|" + n] += 1
+            self.m["ev_landed_w%d|%s" % (w, n)] += 1
             if n == "THE WOLF":
                 self.resolve_wolf()
                 continue
@@ -866,9 +962,7 @@ class Game:
                         self.m["rework_lost"] += 1
             elif n == "NEGATIVE FEEDBACK":
                 banked = [k for k, f in self.feat.items() if f["banked"]]
-                if banked and self.demo_protect > 0:
-                    self.demo_protect -= 1
-                elif banked:
+                if banked:
                     k = max(banked, key=lambda x: self.feat[x]["cost"])
                     f = self.feat[k]
                     f["work"] = max(0, f["work"] - 2)
@@ -930,6 +1024,7 @@ class Game:
             shepherd.capital = min(self.R.capital_cap, shepherd.capital + 1)
             for c in self.chars:
                 self.w.ev_loss[c.id] += 1
+                self.w.ev_by[c.id]["THE WOLF"] += 1
             self.m["wolf_stepped_up"] += 1
         else:
             shepherd.capital = 0
@@ -1011,21 +1106,17 @@ class Game:
             c = Char(self.rng, self.next_id)
             self.next_id += 1
             c.mot = R.mot_start
-            c.onboarding_days = 2
             self.chars.append(c)
             sq = next(iter(c.squares))
             self.tiles[sq] = self.tiles.get(sq, 0) + 1
         if w == 1:
-            self.m["week1_coordinate"] += plan.count("Coordinate")
+            self.m["week1_coordinate"] += plan.count("Engagement")
         newly = self.banked_now()
         for c in self.chars:
             c.new_squares = set()
-        if "Coordinate" in plan:
+        if "Engagement" in plan:
             W.coord = True
             W.trust_up = True
-        for c in self.chars:
-            if c.onboarding_days > 0 and ("Coordinate" in plan or "Learn" in plan):
-                c.onboarding_days -= 1
         if "Celebrate" in plan:
             W.celebrated = True
             amt = R.celebrate_banked if (newly and not W.flat) else R.celebrate
@@ -1043,10 +1134,7 @@ class Game:
             self.m["celebrates"] += 1
         for card in plan:
             if card == "Workshop":
-                W.adds += 1
-                self.m["tokens_workshop"] += 1
-            elif card == "Align":
-                self.do_align()
+                self.do_workshop()
         for _ in range(plan.count("Learn")):
             self.do_learn()
         n_teach = plan.count("Teach")
@@ -1060,7 +1148,6 @@ class Game:
             elig = [c for c in self.chars if c.capital >= self.team_avg_capital()]
             if elig:
                 self.gain_capital(min(elig, key=lambda c: c.capital), 1)
-            self.demo_protect += 1
         for _ in range(min(1, plan.count("Reflect"))):
             self.do_reflect(newly)
         if st.take_one and not W.coord and self.t0 < st.trust_goal:
@@ -1156,7 +1243,7 @@ class Game:
             return
         if "Demo" in plan and W.celebrated:
             self.trust = min(self.R.ledger_max, self.trust + 1)
-        elif "Coordinate" in plan and "Workshop" in plan:
+        elif "Engagement" in plan and "Workshop" in plan:
             self.gain_capital(min(self.chars, key=lambda c: c.capital), 1)
         elif W.hero_by and W.celebrated:
             for c in self.chars:
@@ -1168,6 +1255,9 @@ class Game:
         self.m["combos"] += 1
 
     # ------------------------------------------------------------------ Motivation (step 7)
+
+    def demo_meets_quality(self) -> bool:
+        return self.R.quality_demo
 
     def need_ok(self, c: Char) -> bool:
         W, plan = self.w, self.plan_now
@@ -1182,9 +1272,9 @@ class Game:
         if t == "Hierarchy":
             return W.teach_played or any(x in plan for x in ("Learn", "Workshop"))
         if t == "Community":
-            return any(x in plan for x in ("Coordinate", "Reflect"))
+            return any(x in plan for x in ("Engagement", "Reflect", "Workshop"))
         if t == "Quality":
-            return W.work_added
+            return W.work_added or (self.demo_meets_quality() and "Demo" in plan)
         return bool(W.banked) or c.id in W.hero_by or "Demo" in plan
 
     def legs_delta(self, c: Char, w: int) -> int:
@@ -1193,7 +1283,7 @@ class Game:
             return 0
         if c.legs == "Engage":
             return 1 if w <= 3 else -1
-        v = {"TakeCharge": self.trust, "Analyze": self.cap, "Support": self.sp, "Challenge": self.pool}[c.legs]
+        v = {"OwnIt": self.trust, "Analyze": self.cap, "Support": self.sp, "SpeakUp": self.standing}[c.legs]
         if v >= R.legs_strength_at:
             return 1
         if v <= R.low_band:
@@ -1219,6 +1309,9 @@ class Game:
                 neg["the weekly grind"] = R.grind
                 self.mot_flow["grind"] -= R.grind
             ev = W.ev_loss.get(c.id, 0)
+            for e_name, e_loss in W.ev_by.get(c.id, {}).items():
+                for kind, val in ("torso", c.torso), ("legs", c.legs), ("base", c.base):
+                    self.m["evx|%s|%s|%s" % (kind, val, e_name)] += e_loss
             if ev:
                 d -= ev
                 neg["Events"] = ev
@@ -1261,7 +1354,7 @@ class Game:
             c.mot = max(0, min(self.mot_cap_for(c), c.mot + d))
             if c.mot <= 0:
                 quitters.append(c)
-                causes[c.id] = max(neg, key=neg.get) if neg else "spent it on Align, Overtime or Take One"
+                causes[c.id] = max(neg, key=neg.get) if neg else "spent it on Workshop, Overtime or Take One"
         if self.burnout_ids:
             if not W.celebrated:
                 for c in self.chars:
@@ -1275,11 +1368,33 @@ class Game:
                 self.ps[(kind, val, "capital")] += c.capital
                 if c in quitters:
                     self.ps[(kind, val, "quits")] += 1
+            tags = (("values", c.torso), ("instinct", c.legs), ("upbringing", c.base))
+            for i in range(3):
+                for j in range(i + 1, 3):
+                    pk = "%s %s + %s %s" % (tags[i][0], tags[i][1], tags[j][0], tags[j][1])
+                    self.pair_ps[pk + "|weeks"] += 1
+                    if c in quitters:
+                        self.pair_ps[pk + "|quits"] += 1
         for c in quitters:
             if c in self.chars:
                 self.chars.remove(c)
                 self.quits += 1
                 self.m["quit_cause_" + causes.get(c.id, "the burnout Event")] += 1
+                look = Counter()
+                for src in (W.ev_by, self.prev_ev_by):
+                    look.update(src.get(c.id, {}))
+                look_total = sum(look.values())
+                if look_total:
+                    for e_name, e_loss in look.items():
+                        for kind, val in ("torso", c.torso), ("legs", c.legs), ("base", c.base):
+                            self.m["evq|%s|%s|%s" % (kind, val, e_name)] += e_loss / look_total
+                if causes.get(c.id) == "Events" and W.ev_by.get(c.id):
+                    by = W.ev_by[c.id]
+                    self.m["ev_quit|" + max(by, key=by.get)] += 1
+                    if c.torso == "Quality":
+                        self.m["ev_quit_q|" + max(by, key=by.get)] += 1
+                if c.torso == "Quality":
+                    self.m["quit_q_cause|" + causes.get(c.id, "the burnout Event")] += 1
                 for kind, val in (("torso", c.torso), ("legs", c.legs), ("base", c.base)):
                     self.m["quit_who_%d|%s|%s" % (w, kind, val)] += 1
                 if c.torso == "Quality":
@@ -1302,7 +1417,8 @@ class Game:
             c.cap_gain_week = 0
         self.carry = self.w.carry_next if w > 1 else None
         self.celebrated_prev = self.w.celebrated
-        self.prev = {"banked": bool(self.w.banked), "adapted2": self.w.adapted2,
+        self.prev_ev_by = self.w.ev_by
+        self.prev = {"banked": bool(self.w.banked), "adapted2": self.w.adapted2, "work": self.w.work_added,
                      "process": bool(self.w.track_lowered or self.w.hero_by or self.w.token_used)}
         self.w = Week()
         self.t0, self.c0, self.s0 = self.trust, self.cap, self.sp
@@ -1352,9 +1468,9 @@ class Game:
         return self.finish()
 
     def catch_up_trust(self):
-        # Week 2 reveal: Trust rises 1 for every two Coordinate cards played in week 1.
+        # Week 2 reveal: Trust rises 1 if an Engagement was played in week 1 (there is one Engagement card).
         n = self.m["week1_coordinate"]
-        self.trust = min(self.R.ledger_max, self.trust + int(n // 2))
+        self.trust = min(self.R.ledger_max, self.trust + (1 if n else 0))
 
     def finish(self) -> dict:
         R = self.R
@@ -1364,6 +1480,9 @@ class Game:
         score = (banked * R.feature_value + self.trust + self.cap + self.sp + self.pool
                  + sum(c.mot for c in self.chars) - R.quit_penalty * self.quits - R.flex_penalty * flex
                  - R.low_track_penalty * low_tracks + R.habit_score * len(self.habits))
+        if banked < len(self.feat):
+            score = 0                                   # an unfinished project scores nothing
+        score = max(0, score)
         threshold = R.threshold_base + R.threshold_per_player * R.players
         threshold_high = R.threshold_high_base + R.threshold_per_player * R.players
         if banked < len(self.feat):
@@ -1396,6 +1515,8 @@ class Game:
             "mot_hist": list(self.mot_hist_week), "mot_med": list(self.mot_med_week),
             "quit_causes": {k[len("quit_cause_"):]: v for k, v in self.m.items() if k.startswith("quit_cause_")},
             "quit_who": {k[len("quit_who_"):]: v for k, v in self.m.items() if k.startswith("quit_who_")},
+            "event_stats": {k: v for k, v in self.m.items() if k.startswith(("ev_landed|", "ev_quit|", "ev_quit_q|", "quit_q_cause|", "ev_drawn_w", "ev_landed_w"))},
+            "event_habitus": {k: v for k, v in self.m.items() if k.startswith(("evq|", "evx|"))},
             "empty_seat_weeks": self.m["empty_seat_weeks"], "onboarding_played": self.m["onboarding_played"], "quit_week": [self.m["quit_week_%d" % i] for i in range(1, R.weeks + 1)],
             "trust_week": list(self.trust_week), "cap_week": list(self.cap_week), "sp_week": list(self.sp_week),
             "standing_week": list(self.standing_week), "capital_week": list(self.capital_week),
@@ -1405,6 +1526,7 @@ class Game:
             "habitus_week": list(self.habitus_week),
             "habit_week": list(self.habit_week),
             "parts": {"%s|%s|%s" % k: v for k, v in self.ps.items()},
+            "quit_pairs": dict(self.pair_ps),
             "mot_flow": dict(self.mot_flow), "celebrates": self.m["celebrates"], "celebrate_capped": self.m["celebrate_capped"],
             "celebrate_empty": self.m["celebrate_empty"],
             "need_met": dict(self.need_met), "need_seen": dict(self.need_seen),
@@ -1477,6 +1599,23 @@ def quit_rate(res: list) -> float:
 def card_means(res: list) -> dict:
     """Average plays a game for every action card."""
     return {c: sum(times_played(r, c) for r in res) / len(res) for c in ACTION_CARDS}
+
+
+def pair_quit_table(res: list, min_weeks: int = 300) -> list:
+    """(quits per 100 character-weeks, ratio to the overall rate, quits, character-weeks, name) for every pair of
+    habitus parts from two different rows (values, instinct, upbringing), worst first."""
+    agg = Counter()
+    for r in res:
+        agg.update(r["quit_pairs"])
+    overall = quit_rate(res) or 1.0
+    out = []
+    for key in {k.rsplit("|", 1)[0] for k in agg}:
+        wks = agg.get(key + "|weeks", 0)
+        if wks >= min_weeks:
+            q = agg.get(key + "|quits", 0)
+            rate = 100.0 * q / wks
+            out.append((rate, rate / overall, q, wks, key))
+    return sorted(out, reverse=True)
 
 
 def part_quit_rates(res: list) -> dict:
@@ -1591,9 +1730,18 @@ def report(name: str, res: list, rules: Rules):
         mean(r["onboarding_played"] for r in res), mean(r["empty_seat_weeks"] for r in res)))
     print("   QUIT CAUSES per game (the biggest Motivation loss in the week the character quit): " + (
         "   ".join("%s %.2f" % (k, v / len(res)) for k, v in qc.most_common()) or "none"))
+    print("   EARLY EVENTS (weeks 2 to 4, landed a game, share of draws that landed): " + "   ".join(
+        "%s %.2f (%.0f%%)" % (n, l, 100 * s) for l, n, _, s in event_early_rows(res)[:8]))
+    print("   EVENT QUITS (quits a game where this Event cost the quitter the most; per 100 times it landed): " + "   ".join(
+        "%s %.2f (%.1f)" % (n, q, p) for q, n, _, p in event_quit_rows(res)[:6]))
+    print("   EVENT x HABITUS (quits a game blamed on the Events of the quit week and the week before):")
+    for kind, val, rows in event_habitus_top(res):
+        print("      %-6s %-14s" % (kind, val) + "   ".join("%s %.3f" % (n, v) for v, n in rows))
     print("   QUIT RATE (hard goal in optimal: %.0f or less per 100 character-weeks): %.2f  %s" % (
         QUIT_RATE_HARD, quit_rate(res), "ok" if quit_rate(res) <= QUIT_RATE_HARD else "OVER"))
     low = sorted((v, k) for k, v in part_quit_rates(res).items() if v < QUIT_RATE_SOFT_MIN)
+    print("   QUIT PAIRS (worst combinations of two habitus parts, quits per 100 character-weeks, vs the overall rate): " + "   ".join(
+        "%s %.1f (%.1fx)" % (name, rate, ratio) for rate, ratio, _, _, name in pair_quit_table(res)[:6]))
     print("   QUIT FLOOR (soft goal: every habitus card at least %.0f quit per 100 character-weeks): %s" % (
         QUIT_RATE_SOFT_MIN, "all ok" if not low else "below the floor: " + ", ".join("%s %.2f" % (k, v) for v, k in low)))
     cel_flow = mean(r["mot_flow"].get("celebrate", 0) for r in res)
@@ -1637,9 +1785,10 @@ def report(name: str, res: list, rules: Rules):
     print("   CARD AVERAGES (goal in optimal: every card %.0f or more plays a game): " % CARD_MEAN_MIN + "  ".join(
         "%s %.2f%s" % (c, v, "" if v >= CARD_MEAN_MIN else " LOW") for c, v in cm.items()))
     print("      share of games playing each: " + "  ".join("%s %.0f%%" % (c, share(res, lambda r, c=c: c in cards_played(r))) for c in ACTION_CARDS))
-    print("   PLAN AND ALIGN CHECK (goal: each played %.1f to %.1f times a game): " % (PLAY_LO, PLAY_HI) + "   ".join(
-        "%s %.1f a game, in range in %.0f%% of games" % (c, mean(times_played(r, c) for r in res), share(res, lambda r, c=c: PLAY_LO <= times_played(r, c) <= PLAY_HI))
-        for c in ("Plan", "Align")))
+    print("   PLAN AND WORKSHOP CHECK (goal: Plan %.1f to %.1f, Workshop %.1f to %.1f times a game): " % (
+        PLAY_RANGES["Plan"] + PLAY_RANGES["Workshop"]) + "   ".join(
+        "%s %.1f a game, in range in %.0f%% of games" % (c, mean(times_played(r, c) for r in res), share(res, lambda r, c=c: PLAY_RANGES[c][0] <= times_played(r, c) <= PLAY_RANGES[c][1]))
+        for c in ("Plan", "Workshop")))
     print("   PLAN RULE CHECK: weeks with 3 or more Work cards on a non-Low feature and no Plan, %.2f a game (should be 0; only Shared Practice 0 allows it)" % mean(r["plan_skipped"] for r in res))
     for key, label in (("hero", "Hero played"), ("dependable", "Dependable Take 1"), ("take_one", "Other Take One"),
                        ("recognition_witness", "Recog. witness"), ("recognition_need_met", "Recog. Need met")):
@@ -1715,12 +1864,14 @@ def apply_overrides(rules: Rules, pairs: list) -> Rules:
 
 
 COUNTER_FIELDS = ("cancel_by", "mot_flow", "need_met", "need_seen", "cancel_week", "cards_week", "habitus_week", "habit_week", "parts",
-                  "wells_week", "evidence_week", "quit_causes", "quit_who")
+                  "wells_week", "evidence_week", "quit_causes", "quit_who", "quit_pairs", "event_stats")
 
 
 def flatten(r: dict) -> dict:
     row = {}
     for k, v in r.items():
+        if k == "event_habitus":
+            continue
         if isinstance(v, list):
             for i, x in enumerate(v):
                 if isinstance(x, dict):
@@ -1794,16 +1945,18 @@ def times_played(r: dict, card: str) -> int:
 
 
 def objective(res: list) -> float:
-    # Share of games that reach the upper threshold (percent), plus a little mean score and all-six share as
-    # tie-breakers, minus 15 for each Quality quit after a week without Work, 8 for each action card a game never plays,
-    # and 10 for each play of Plan or Align short of 1.5 or over 3, and QUIT_WEIGHT for each character who quits (goal: none).
+    # Priorities: no quits (QUIT_WEIGHT each), then every feature delivered (FINISH_WEIGHT), then points: the share reaching
+    # the upper threshold plus 2 per point of mean score (a Habit is 12 points, so worth 24). Also minus 100 for each
+    # Quality quit after a week without Work, 60 for each action card a game never plays,
+    # and 30 for each play of Plan or Workshop short of 1.3 or over 2.5.
     missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
-    off = mean(max(0, PLAY_LO - times_played(r, c)) + max(0, times_played(r, c) - PLAY_HI) for r in res for c in ("Plan", "Align")) * 2
+    off = mean(max(0, PLAY_RANGES[c][0] - times_played(r, c)) + max(0, times_played(r, c) - PLAY_RANGES[c][1]) for r in res for c in PLAY_RANGES) * 2
     need_off = sum(max(0.0, NEED_SOFT_LO - v) + max(0.0, v - NEED_SOFT_HI) for v in need_rates(res).values())
-    return (share(res, lambda r: r["outcome"] == "thriving") + 0.2 * mean(r["score"] for r in res)
-            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing - 10 * off
+    return (share(res, lambda r: r["outcome"] == "thriving") + 2.0 * mean(r["score"] for r in res)
+            + FINISH_WEIGHT * share(res, lambda r: r["banked"] == 6) - 100 * mean(r["quality_quit_nowork"] for r in res) - 60 * missing - 30 * off
             - 20 * sum(max(0.0, CARD_MEAN_MIN - v) for v in card_means(res).values())
             - QUIT_WEIGHT * mean(r["quits"] for r in res) - 500 * max(0.0, quit_rate(res) - QUIT_RATE_HARD) - 0.2 * need_off
+            - 3 * max(0.0, 50 - share(res, lambda r: "PS" in r["habits"]))
             - 0.5 * sum(max(0.0, QUIT_RATE_SOFT_MIN - v) for v in part_quit_rates(res).values()))
 
 
@@ -1816,7 +1969,8 @@ def load_optimal(weeks: int) -> Strategy | None:
             d = json.load(fh)
         d["work_days"] = (tuple(d["work_days"]) + (d["work_days"][-1],) * weeks)[:weeks]
         d["overtime_weeks"] = tuple(d.get("overtime_weeks", ()))
-        d["align_weeks"] = tuple(d.get("align_weeks", ()))
+        d["plan_weeks"] = tuple(d.get("plan_weeks", ()))
+        d["workshop_weeks"] = tuple(d.get("workshop_weeks", ()))
         names = {f.name for f in fields(Strategy)}
         return Strategy(**{k: v for k, v in d.items() if k in names})
     except (OSError, ValueError, KeyError, TypeError, IndexError):
@@ -1852,15 +2006,20 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
         "adapt_threshold": [0.3, 0.5, 0.7, 0.8, 1.0, 1.5, 99.0], "hero_min_cost": [1, 2, 3],
         "bank_tokens": [True, False], "wolf": ["always", "never", "if_mot"],
         "take_one": [True, False], "repay_flex": [True, False],
-        "align": [0, 1, 2], "use_stand": [True, False], "celebrate_needs_reason": [True, False],
+        "use_stand": [True, False], "celebrate_needs_reason": [True, False], "care": [True, False], "care_at": [1, 2, 3], "finish_first": [True, False],
     }
     groups = [lambda b, k=k, vs=vs: [replace(b, **{k: v}) for v in vs] for k, vs in choices.items()]
     groups += [lambda b, i=i: [replace(b, work_days=b.work_days[:i] + (d,) + b.work_days[i + 1:]) for d in range(6)]
                for i in range(W)]
     groups += [lambda b, i=i: [replace(b, overtime_weeks=tuple(sorted(set(b.overtime_weeks) ^ {i + 1})))]
                for i in range(W)]
-    groups += [lambda b, i=i: [replace(b, align_weeks=tuple(sorted(set(b.align_weeks) ^ {i + 1})))]
+    groups += [lambda b, i=i: [replace(b, plan_weeks=tuple(sorted(set(b.plan_weeks) ^ {i + 1})))]
                for i in range(W)]
+    # One flip at a time cannot reach "Plan twice" or "Workshop twice" (one more play alone does not pay), so try whole sets
+    groups += [lambda b, i=i: [replace(b, workshop_weeks=tuple(sorted(set(b.workshop_weeks) ^ {i + 1})))]
+               for i in range(W)]
+    groups += [lambda b: [replace(b, workshop_weeks=c) for n in (1, 2) for c in combinations(range(rules.workshop_from_week, W + 1), n)]]
+    groups += [lambda b: [replace(b, plan_weeks=c) for n in (1, 2) for c in combinations(range(rules.plan_from_week, W + 1), n)]]
 
     best_v = value(best)
     seeds = [best, replace(best, plan=True),
@@ -1871,6 +2030,7 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
                       bank_tokens=False, wolf="never", celebrate_needs_reason=True)]
     if saved is not None:
         seeds.append(replace(saved, celebrate_needs_reason=True))
+        seeds.append(replace(saved, celebrate_needs_reason=True, care=True, care_at=3, finish_first=True))
     best_v, best = max(((value(s), s) for s in seeds), key=lambda t: t[0])
     for p in range(1, passes + 1):
         improved = False
@@ -1903,10 +2063,10 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
 C_TRUST, C_CAP, C_SP, C_ADAPT, C_MOT, C_HABITUS = "#D3CEDF", "#C7CFB5", "#F7D7A1", "#B5C7CF", "#D3B1B1", "#E8D4B8"
 INK = "#2A2620"
 
-CARD_ORDER = ["Work", "Celebrate", "Coordinate", "Align", "Workshop", "Learn", "Teach", "Reflect", "Plan", "Demo", "Onboarding", "Flex"]
+CARD_ORDER = ["Work", "Celebrate", "Engagement", "Workshop", "Learn", "Teach", "Reflect", "Plan", "Demo", "Onboarding", "Flex"]
 ACTION_CARDS = [c for c in CARD_ORDER if c not in ("Flex", "Onboarding")]
-CARD_COLOUR = {"Work": "#6B7A8F", "Onboarding": "#A39A8B", "Celebrate": "#E3A72F", "Coordinate": "#4C9F70", "Refine": "#2F80ED",
-               "Workshop": "#7AB8F5", "Align": "#1C7ED6", "Learn": "#9B51E0", "Teach": "#C9A0F0", "Reflect": "#F2994A",
+CARD_COLOUR = {"Work": "#6B7A8F", "Onboarding": "#A39A8B", "Celebrate": "#E3A72F", "Engagement": "#4C9F70", "Refine": "#2F80ED",
+               "Workshop": "#7AB8F5", "Learn": "#9B51E0", "Teach": "#C9A0F0", "Reflect": "#F2994A",
                "Plan": "#56CCF2", "Demo": "#EB5757", "Flex": "#333333"}
 CANCEL_ORDER = ["free", "habit", "token", "hero", "stand", "trust", "av"]
 CANCEL_COLOUR = {"free": "#9AD1A8", "habit": "#63E6BE", "token": C_ADAPT, "hero": "#E3A72F", "stand": "#E8590C",
@@ -2278,16 +2438,18 @@ def calibrate(dump: dict):
     lines.append("  Card use in optimal play: every action card in %.0f%% of games (goal %.0f%%)%s" % (
         100 * sum(1 for r in opt if set(ACTION_CARDS) <= cards_played(r)) / len(opt), CARD_ALL_GOAL,
         "; not always played: " + ", ".join("%s %.0f%%" % (c, 100 * sum(1 for r in opt if c in cards_played(r)) / len(opt)) for c in unused) if unused else ""))
-    lines.append("  Plan and Align in optimal play (goal: each %.1f to %.1f times a game): " % (PLAY_LO, PLAY_HI) + "; ".join(
+    lines.append("  Plan and Workshop in optimal play (goal: Plan %.1f to %.1f, Workshop %.1f to %.1f times a game): " % (
+        PLAY_RANGES["Plan"] + PLAY_RANGES["Workshop"]) + "; ".join(
         "%s %.1f a game, in range in %.0f%% of games" % (c, sum(times_played(r, c) for r in opt) / len(opt),
-                                                         100 * sum(1 for r in opt if PLAY_LO <= times_played(r, c) <= PLAY_HI) / len(opt))
-        for c in ("Plan", "Align")))
+                                                         100 * sum(1 for r in opt if PLAY_RANGES[c][0] <= times_played(r, c) <= PLAY_RANGES[c][1]) / len(opt))
+        for c in ("Plan", "Workshop")))
     if top is None:
         best = max(reach(opt, t) for t in range(lo, hi + 1))
-        near = max([t for t in range(lo, hi + 1) if reach(opt, t) >= best - 0.05] or [lo])
+        fin = [r for r in opt if r["banked"] == 6]
+        near = max([t for t in range(lo, hi + 1) if fin and sum(1 for r in fin if r["score"] >= t) / len(fin) >= 0.9] or [lo])
         lines.append("  Upper threshold: no score lets 90%% of optimal play reach it. Only %.0f%% of optimal games bank all six features (best reach %.0f%%)." % (all_six, 100 * best))
-        lines.append("  Closest: %d (base %d) is the highest score that optimal reaches within 5 points of that ceiling (%.0f%%)." % (near, near - per, 100 * reach(opt, near)))
-        lines.append("  Failures and the low-score tail (quits at -20) are a rules problem, not a threshold problem.")
+        lines.append("  Closest: %d (base %d) is the highest score that 90%% of the optimal games that finish reach (%.0f%% of all optimal games)." % (near, near - per, 100 * reach(opt, near)))
+        lines.append("  Make optimal play finish first (every unfinished game scores 0); only then can the upper threshold hit 90%.")
         up_txt = "upper: none (optimal banks all six in only %.0f%%), closest %d" % (all_six, near)
         up_set = near
     else:
@@ -2329,13 +2491,16 @@ def _target_rows(title: str, res: list) -> list:
     lo = share(res, lambda r: r["outcome"] in ("sustainable", "thriving"))
     every = share(res, lambda r: set(ACTION_CARDS) <= cards_played(r))
     plan = mean(times_played(r, "Plan") for r in res)
-    align = mean(times_played(r, "Align") for r in res)
+    align = mean(times_played(r, "Workshop") for r in res)
     cel = mean(r["celebrates"] for r in res)
     tr = share(res, lambda r: "TR" in r["habits"])
+    ps = share(res, lambda r: "PS" in r["habits"])
     quits = mean(r["quits"] for r in res)
     zero = share(res, lambda r: r["quits"] == 0)
     flex = max(r["max_flex"] for r in res)
     qnw = mean(r["quality_quit_nowork"] for r in res)
+    onb = mean(r["onboarding_played"] for r in res)
+    scored0 = share(res, lambda r: r["score"] == 0)
     return [
         ("Reach UPPER threshold (goal: optimal 90% or more)", "%.0f%%" % up, ok_mark(up >= 90) if k == "optimal" else ""),
         ("Reach LOWER threshold (goal: random 2% or less, balanced and invested 50% or more)", "%.0f%%" % lo,
@@ -2344,17 +2509,20 @@ def _target_rows(title: str, res: list) -> list:
         ("Every action card averages %.0f or more plays a game (goal in optimal)" % CARD_MEAN_MIN,
          "fewest: %s %.2f" % min(card_means(res).items(), key=lambda kv: kv[1]),
          ok_mark(min(card_means(res).values()) >= CARD_MEAN_MIN) if k == "optimal" else ""),
-        ("Plan plays a game (goal: %.1f to %.1f)" % (PLAY_LO, PLAY_HI), "%.1f" % plan, ok_mark(PLAY_LO <= plan <= PLAY_HI)),
-        ("Align plays a game (goal: %.1f to %.1f)" % (PLAY_LO, PLAY_HI), "%.1f" % align, ok_mark(PLAY_LO <= align <= PLAY_HI)),
+        ("Plan plays a game (goal: %.1f to %.1f)" % PLAY_RANGES["Plan"], "%.1f" % plan, ok_mark(PLAY_RANGES["Plan"][0] <= plan <= PLAY_RANGES["Plan"][1])),
+        ("Workshop plays a game (goal: %.1f to %.1f)" % PLAY_RANGES["Workshop"], "%.1f" % align, ok_mark(PLAY_RANGES["Workshop"][0] <= align <= PLAY_RANGES["Workshop"][1])),
         ("Celebrate plays a game (goal: 4 or fewer)", "%.1f" % cel, ok_mark(cel <= 4)),
         ("Team Reflexivity held at the end (goal: reachable in optimal, 50% or more)", "%.0f%%" % tr, ok_mark(tr >= 50) if k == "optimal" else ""),
+        ("Psychological Safety held at the end (goal: reachable in optimal, 50% or more)", "%.0f%%" % ps, ok_mark(ps >= 50) if k == "optimal" else ""),
         ("Quits per 100 character-weeks (HARD goal in optimal: 5 or less)", "%.2f (%.2f a game, 0 quits in %.0f%% of games)" % (quit_rate(res), quits, zero),
          ok_mark(quit_rate(res) <= QUIT_RATE_HARD) if k == "optimal" else ""),
         ("Habitus cards under %.0f quit per 100 character-weeks (soft goal: none)" % QUIT_RATE_SOFT_MIN,
          "%d of %d" % (sum(1 for v in part_quit_rates(res).values() if v < QUIT_RATE_SOFT_MIN), len(part_quit_rates(res))),
          ok_mark(all(v >= QUIT_RATE_SOFT_MIN for v in part_quit_rates(res).values())) if k == "optimal" else ""),
         ("Most Flex markers held at once (goal: 1 or fewer)", "%d" % flex, ok_mark(flex <= 1)),
-        ("Quality quits after a week without Work (goal in optimal: 0)", "%.3f" % qnw, ok_mark(qnw == 0) if k == "optimal" else ""),
+        ("Quality quits after a week without Work (goal in optimal: 0.05 or less)", "%.3f" % qnw, ok_mark(qnw <= 0.05) if k == "optimal" else ""),
+        ("Onboarding plays a game (goal in optimal: 0.1 or less, same as few quits; not an action card)", "%.2f" % onb, ok_mark(onb <= 0.1) if k == "optimal" else ""),
+        ("Games that end on 0 points, project unfinished (goal in optimal: 5% or less)", "%.0f%%" % scored0, ok_mark(scored0 <= 5) if k == "optimal" else ""),
     ] + [("%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, NEED_SOFT_HI), "%.0f%%" % v,
           ok_mark(NEED_SOFT_LO <= v <= NEED_SOFT_HI) if k == "optimal" else "") for t, v in need_rates(res).items()]
 
@@ -2410,6 +2578,18 @@ def write_postsim(path: str, dump: dict):
             qc.update(r["quit_causes"])
         L += ["", "Quit causes per game (biggest Motivation loss in the week): " + (
             ", ".join("%s %.2f" % (k, v / len(res)) for k, v in qc.most_common()) or "none") + "."]
+        L += ["", "### Event cards in weeks 2 to 4 (every card is drawn equally often; the difference is which ones land)", "",
+              "| Event | cost to cancel | drawn a game | landed a game | share that landed |", "|---|---|---|---|---|"]
+        cost_of = {e.name: ("cannot" if e.cost is None else e.cost) for e in EVENTS}
+        for landed, n, drawn, s in event_early_rows(res):
+            L.append("| %s | %s | %.3f | %.3f | %.0f%% |" % (n, cost_of[n], drawn, landed, 100 * s))
+        L += ["", "### Event cards behind quits", "", "| Event | quits a game | lands a game | quits per 100 landings |", "|---|---|---|---|"]
+        for q, n, landed, p in event_quit_rows(res)[:8]:
+            L.append("| %s | %.3f | %.2f | %.1f |" % (n, q, landed, p))
+        L += ["", "### Event cards behind each habitus card's quits (the quit week and the week before)", "",
+              "| Habitus card | Event cards (quits a game) |", "|---|---|"]
+        for kind, val, rows in event_habitus_top(res):
+            L.append("| %s %s | %s |" % (kind, val, ", ".join("%s %.3f" % (n, v) for v, n in rows)))
         L += ["", "### Cards (share of games playing each, plays a game)", "", "| Card | share | per game |", "|---|---|---|"]
         for c in ACTION_CARDS:
             L.append("| %s | %.0f%% | %.2f |" % (c, share(res, lambda r, c=c: c in cards_played(r)), per_game(res, c)))
@@ -2425,8 +2605,37 @@ def write_postsim(path: str, dump: dict):
         for q, mo, name in sorted(rows, reverse=True)[:8]:
             L.append("| %s | %.1f | %.2f |" % (name, q, mo))
         L += ["", "Lowest mean Motivation: " + ", ".join("%s %.2f" % (n, mo) for _, mo, n in sorted(rows, key=lambda x: x[1])[:4]) + "."]
+        pairs = pair_quit_table(res)
+        L += ["", "### Pairs of habitus parts that quit most (per 100 character-weeks, pairs with 300+ character-weeks)", "",
+              "| Pair | quits/100 | vs all | quits | character-weeks |", "|---|---|---|---|---|"]
+        for rate, ratio, q, wks, name in pairs[:12]:
+            L.append("| %s | %.1f | %.1fx | %d | %d |" % (name, rate, ratio, q, wks))
     with open(path, "w", encoding="utf-8") as fh:
         fh.write("\n".join(L) + "\n")
+
+
+def event_early_rows(res: list, first: int = 2, last: int = 4) -> list:
+    """(landed a game, Event, drawn a game, share that landed) for weeks first..last, most-landed first."""
+    agg = Counter()
+    for r in res:
+        agg.update(r.get("event_stats", {}))
+    out = []
+    for e in EVENTS:
+        drawn = sum(agg["ev_drawn_w%d|%s" % (w, e.name)] for w in range(first, last + 1)) / len(res)
+        landed = sum(agg["ev_landed_w%d|%s" % (w, e.name)] for w in range(first, last + 1)) / len(res)
+        out.append((landed, e.name, drawn, landed / drawn if drawn else 0.0))
+    return sorted(out, reverse=True)
+
+
+def event_quit_rows(res: list) -> list:
+    """(quits a game, Event, times landed a game, quits per 100 landings), worst first: quits where that Event cost the quitter the most."""
+    agg = Counter()
+    for r in res:
+        agg.update(r.get("event_stats", {}))
+    names = {k.split("|", 1)[1] for k in agg if k.startswith(("ev_landed|", "ev_quit|"))}
+    rows = [(agg["ev_quit|" + n] / len(res), n, agg["ev_landed|" + n] / len(res),
+             100 * agg["ev_quit|" + n] / max(1, agg["ev_landed|" + n])) for n in names]
+    return sorted(rows, reverse=True)
 
 
 def quit_who_rows(res: list, weeks: int) -> list:
@@ -2481,6 +2690,111 @@ def _hbars(out: list, x: float, y: float, w: float, title: str, rows: list, maxv
     return y + len(rows) * 20
 
 
+def event_habitus_top(res: list, top: int = 3) -> list:
+    """Per habitus part: the Event cards with the most quits attributed to them (the Motivation they cost in the quit week
+    and the week before, shared out by size), in quits a game."""
+    q = Counter()
+    for r in res:
+        for k, v in r.get("event_habitus", {}).items():
+            if k.startswith("evq|"):
+                q[k.split("|", 1)[1]] += v
+    out = []
+    for kind, val in [("torso", t) for t in TORSOS] + [("legs", l) for l in LEGS] + [("base", b) for b in BASES]:
+        rows = sorted(((q["%s|%s|%s" % (kind, val, e.name)] / len(res), e.name) for e in EVENTS), reverse=True)[:top]
+        out.append((kind, val, rows))
+    return out
+
+
+def plot_event_habitus(path: str, dump: dict):
+    """Heatmap: which Event cards sit behind the quits of each habitus part (2-week look-back), per 100 games."""
+    modes = [m for m in dump if _flat(m) in ("balanced", "optimal")]
+    parts = [("torso", t) for t in TORSOS] + [("legs", l) for l in LEGS] + [("base", b) for b in BASES]
+    CW, CH, X0, LAB = 46, 16, 200, 210
+    out, y = [], 30
+    for m in modes:
+        res = dump[m][1]
+        n = len(res)
+        q = Counter()
+        for r in res:
+            for k, v in r.get("event_habitus", {}).items():
+                if k.startswith("evq|"):
+                    q[k.split("|", 1)[1]] += v
+        grid = {(e.name, p): 100 * q["%s|%s|%s" % (p[0], p[1], e.name)] / n for e in EVENTS for p in parts}
+        order = sorted(EVENTS, key=lambda e: -sum(grid[(e.name, p)] for p in parts))
+        hi = max(grid.values()) or 1
+        out.append('<text x="20" y="%d" font-size="15" font-weight="bold">%s: Event cards behind quits, per habitus card (quits per 100 games, Events of the quit week and the week before)</text>' % (y, _esc(_flat(m))))
+        y += 14
+        for j, (kind, val) in enumerate(parts):
+            out.append('<text x="%d" y="%d" font-size="10" transform="rotate(-45 %d %d)">%s %s</text>' % (
+                X0 + j * CW + CW / 2, y + 72, X0 + j * CW + CW / 2, y + 72, kind, _esc(val)))
+        y += 80
+        for e in order:
+            out.append('<text x="%d" y="%d" font-size="10" text-anchor="end">%s</text>' % (X0 - 6, y + 12, _esc(e.name)))
+            for j, p in enumerate(parts):
+                v = grid[(e.name, p)]
+                shade = int(255 - 190 * min(1.0, v / hi))
+                out.append('<rect x="%d" y="%d" width="%d" height="%d" fill="rgb(255,%d,%d)" stroke="#fff"/>' % (X0 + j * CW, y, CW, CH, shade, shade))
+                if v >= 0.5:
+                    out.append('<text x="%d" y="%d" font-size="9" text-anchor="middle">%.0f</text>' % (X0 + j * CW + CW / 2, y + 12, v))
+            y += CH
+        y += 50
+    W = X0 + len(parts) * CW + 40
+    svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" font-family="Arial, sans-serif">' % (W, y, W, y),
+           '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, y)] + out + ["</svg>"]
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(svg))
+
+
+def plot_quit_triggers(path: str, dump: dict):
+    """What triggers quitting: the biggest Motivation loss behind each quit, and the Event cards behind the Event quits."""
+    modes = [m for m in dump if _flat(m) in ("balanced", "invested", "optimal")]
+    W, PH = 1180, 340
+    out = []
+
+    def bars(x, y, labels, series, colours, scale, w, row=17):
+        for i, (lab, vals) in enumerate(zip(labels, series)):
+            yy = y + i * row
+            out.append('<text x="%d" y="%d" font-size="11" text-anchor="end">%s</text>' % (x - 6, yy + 12, _esc(lab)))
+            xx = x
+            for v, col in zip(vals, colours):
+                bw = v * scale
+                if bw > 0:
+                    out.append('<rect x="%.1f" y="%d" width="%.1f" height="%d" fill="%s"/>' % (xx, yy, bw, row - 4, col))
+                xx += bw
+            out.append('<text x="%.1f" y="%d" font-size="10" fill="#444">%.2f</text>' % (xx + 4, yy + 12, sum(vals)))
+
+    for i, m in enumerate(modes):
+        res = dump[m][1]
+        n = len(res)
+        y0 = 30 + i * PH
+        out.append('<text x="20" y="%d" font-size="15" font-weight="bold">%s: what triggers quitting (quits a game, %d games)</text>' % (y0, _esc(_flat(m)), n))
+        qc, qq, agg = Counter(), Counter(), Counter()
+        for r in res:
+            qc.update(r["quit_causes"])
+            agg.update(r.get("event_stats", {}))
+            for k, v in r.get("event_stats", {}).items():
+                if k.startswith("quit_q_cause|"):
+                    qq[k.split("|", 1)[1]] += v
+        out.append('<text x="20" y="%d" font-size="12" fill="#555">Biggest Motivation loss behind the quit (dark: a Quality character)</text>' % (y0 + 22))
+        causes = qc.most_common(7)
+        labels = [c for c, _ in causes]
+        series = [((v - qq[c]) / n, qq[c] / n) for c, v in causes]
+        top = max([sum(s) for s in series] or [1])
+        bars(300, y0 + 32, labels, series, ("#74A9CF", "#08519C"), 200 / top, 200)
+        out.append('<text x="640" y="%d" font-size="12" fill="#555">Event cards behind the Event quits (dark: a Quality character)</text>' % (y0 + 22))
+        names = {k.split("|", 1)[1] for k in agg if k.startswith("ev_quit|")}
+        rows = sorted(((agg["ev_quit|" + e] / n, agg["ev_quit_q|" + e] / n, e) for e in names), reverse=True)[:12]
+        labels = [e for _, _, e in rows]
+        series = [(t - q, q) for t, q, _ in rows]
+        top = max([t for t, _, _ in rows] or [1])
+        bars(900, y0 + 32, labels, series, ("#F4A582", "#B2182B"), 220 / top, 220)
+    H = 30 + len(modes) * PH
+    svg = ['<svg xmlns="http://www.w3.org/2000/svg" width="%d" height="%d" viewBox="0 0 %d %d" font-family="Arial, sans-serif">' % (W, H, W, H),
+           '<rect width="%d" height="%d" fill="#ffffff"/>' % (W, H)] + out + ["</svg>"]
+    with open(path, "w", encoding="utf-8") as fh:
+        fh.write("\n".join(svg))
+
+
 def plot_summary(path: str, dump: dict):
     """One page: every target by mode, then a focus on optimal play."""
     modes = list(dump)
@@ -2526,7 +2840,7 @@ def plot_summary(path: str, dump: dict):
         # cards per game
         card_rows = [(c, mean(times_played(r, c) for r in res), CARD_COLOUR.get(c, "#999999")) for c in ACTION_CARDS]
         _hbars(out, 880, ys, 480, "Cards played per game (green band = goal)", card_rows,
-               _nice_max(max(v for _, v, _ in card_rows)), "%.1f", {"Plan": (PLAY_LO, PLAY_HI), "Align": (PLAY_LO, PLAY_HI), "Celebrate": (0, 4)})
+               _nice_max(max(v for _, v, _ in card_rows)), "%.1f", {**PLAY_RANGES, "Celebrate": (0, 4)})
         ys2 = ys + 220 + 90
         # needs met
         need_rows = []
@@ -2648,6 +2962,8 @@ def main():
             fname = "plot_" + "".join(ch if ch.isalnum() else "_" for ch in title).strip("_") + ".svg"
             plot_strategy(os.path.join(a.plots, fname), title, res, rules)
         plot_summary(os.path.join(a.plots, "summary_targets_optimal.svg"), dump)
+        plot_quit_triggers(os.path.join(a.plots, "quit_triggers.svg"), dump)
+        plot_event_habitus(os.path.join(a.plots, "quit_event_habitus.svg"), dump)
     status("done in %.0fs" % (time.time() - t0), final=True)
     print("  report  %s" % a.report)
     if cal_short:

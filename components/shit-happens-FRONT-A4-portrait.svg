@@ -54,7 +54,7 @@ on the reverse.</desc>
   <rect x="16" y="161" width="11" height="11" rx="1.2" class="w"/><rect x="32.5" y="161" width="11" height="11" rx="1.2" class="w"/><rect x="49" y="161" width="11" height="11" rx="1.2" class="w"/>
   <rect x="16" y="179" width="11" height="11" rx="1.2" class="w"/><rect x="32.5" y="179" width="11" height="11" rx="1.2" class="w"/><rect x="49" y="179" width="11" height="11" rx="1.2" class="w"/>
   <text x="12" y="212.6" class="s" font-size="3.2">Start with 3. Up to 6.</text>
-  <text x="12" y="217" class="s" font-size="3.2">Earned: Align, Workshop, Reflect.</text>
+  <text x="12" y="217" class="s" font-size="3.2">Earned: Workshop, Reflect.</text>
   <text x="12" y="221.4" class="s" font-size="3.2">Spent: pay an Event's number.</text>
   <text x="12" y="225.8" class="s" font-size="3.2">Tokens stay until spent.</text>
   <text x="12" y="230.2" class="s" font-size="3.2">New tokens count from next week.</text>

@@ -8,8 +8,8 @@ cards-habitus-parts, so all physical tiles pack the same. NEED (5 tiles, one per
 slots into the person board's NEED seat; HERO (5 tiles, one per Legs/Pressure-Response option)
 slots into the HERO seat. The HERO tiles use the same shape (hexagon) and pip-count-per-option
 as the HOW TO ADAPT box on Event cards (cards-event-01-09/10-18), so a tile and a matching
-Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 = Engage,
-5 = Challenge.</desc>
+Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Engage,
+5 = Speak Up.</desc>
 
 <style>
   .serif { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -71,9 +71,9 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
   <text x="117" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="147" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Community</text>
   <line x1="117" y1="50" x2="155" y2="50" class="hair"/>
   <rect x="117" y="52" width="38" height="12.7" rx=".4" fill="#D3CEDF"/>
-  <text x="136" y="55" class="serif" font-size="3.2" text-anchor="middle">Team spent Coordinate</text>
-  <text x="136" y="59.2" class="serif" font-size="3.2" text-anchor="middle">or Reflect, or has</text>
-  <text x="136" y="63.4" class="serif" font-size="3.2" text-anchor="middle">Psychological Safety:</text>
+  <text x="136" y="55" class="serif" font-size="3.2" text-anchor="middle">Team spent Engagement,</text>
+  <text x="136" y="59.2" class="serif" font-size="3.2" text-anchor="middle">Reflect or Workshop, or</text>
+  <text x="136" y="63.4" class="serif" font-size="3.2" text-anchor="middle">has Psychological Safety:</text>
   <rect x="124.5" y="66" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="136" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
 
@@ -81,11 +81,11 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
   <use href="#sh-torso-red" x="203" y="46"/><use href="#p4" x="203" y="46"/>
   <text x="167" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="197" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Quality</text>
   <line x1="167" y1="50" x2="205" y2="50" class="hair"/>
-  <text x="186" y="55.2" class="serif" font-size="3.2" text-anchor="middle">Work added this week:</text>
+  <text x="186" y="55.2" class="serif" font-size="3.2" text-anchor="middle">Work added:</text>
   <rect x="174.5" y="57.6" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="186" y="60.7" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
   <rect x="167" y="63.2" width="38" height="3.4" rx=".4" fill="#EFE4D3"/>
-  <text x="186" y="65.9" class="serif" font-size="3.2" text-anchor="middle">No Work added to feature:</text>
+  <text x="186" y="65.9" class="serif" font-size="3.2" text-anchor="middle">No Work:</text>
   <rect x="174.5" y="67.1" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="186" y="70.2" class="serif" font-size="3.2" text-anchor="middle">-3 Motivation.</text>
 
@@ -108,7 +108,7 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
 <g>
   <rect x="14" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="53" y="96"/><use href="#p1" x="53" y="96.5"/>
-  <text x="17" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="47" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Take Charge</text>
+  <text x="17" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="47" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Own It</text>
   <line x1="17" y1="100" x2="55" y2="100" class="hair"/>
   <text x="36" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
   <text x="36" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
@@ -152,7 +152,7 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
 
   <rect x="214" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="253" y="96"/><use href="#p5" x="253" y="96.5"/>
-  <text x="217" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="247" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Challenge</text>
+  <text x="217" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="247" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Speak Up</text>
   <line x1="217" y1="100" x2="255" y2="100" class="hair"/>
   <text x="236" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
   <text x="236" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>

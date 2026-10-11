@@ -12,7 +12,7 @@ of this file is the record of the old rules and the alternatives.
 
 ## Why it was removed
 Adaptability stopped being a Ledger track and became a **currency**: a pool of adapt tokens
-(cap 6, start 3) on SHIT HAPPENS, earned by Align, Workshop and Reflect, spent on Events. A Habit
+(cap 6, start 3) on SHIT HAPPENS, earned by Workshop and Reflect, spent on Events. A Habit
 is a coin that walks a track and is turned over for good at the ring. A pool that is spent down
 and refilled has no track to walk and no ring to reach, so a permanent flip tied to "the pool
 holds 4" no longer fitted: the thing that earns the Habit is the same thing you are meant to

@@ -1,0 +1,16 @@
+run,kind,value,char_weeks,quits,quits_per_100_char_weeks,vs_average,mean_motivation,mean_capital,hero_per_100_char_weeks
+optimal,torso,Autonomy,8239,155,1.881,0.741,3.782,1.816,0.0
+optimal,torso,Hierarchy,8334,123,1.476,0.582,3.709,1.716,0.0
+optimal,torso,Community,8091,136,1.681,0.662,3.738,1.408,0.0
+optimal,torso,Quality,7010,480,6.847,2.698,3.501,1.259,0.0
+optimal,torso,Recognition,8326,121,1.453,0.573,3.746,1.395,0.0
+optimal,legs,TakeCharge,8009,100,1.249,0.492,4.119,1.651,9.814
+optimal,legs,Analyze,8341,220,2.638,1.039,3.724,1.453,8.152
+optimal,legs,Support,8110,225,2.774,1.093,3.732,1.391,7.781
+optimal,legs,Engage,8100,241,2.975,1.173,3.339,1.578,8.864
+optimal,legs,Challenge,7440,229,3.078,1.213,3.587,1.572,9.368
+optimal,base,Bookish,8072,80,0.991,0.391,4.275,1.635,0.0
+optimal,base,HandsOn,7479,273,3.65,1.439,3.851,1.55,0.0
+optimal,base,Sheltered,8500,145,1.706,0.672,2.826,1.466,0.0
+optimal,base,Dependable,8107,267,3.293,1.298,3.867,1.465,0.0
+optimal,base,Competitive,7842,250,3.188,1.256,3.746,1.528,0.0

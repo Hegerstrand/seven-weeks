@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
 <title>Sheet 5b - Activity cards, the second sheet (60 x 88 mm)</title>
 <desc>Sheet 5 holds nine cards, which is all an A4 will take at 63 x 88 - this sheet is a second
-full 3 x 3 sheet, not an afterthought. Two more Work (five total with sheet 5), two Teach, and
-one each of Plan, Demo, Reflect, Workshop and Learn. One print each, no reprinting. Cut on the
+sheet of eight, not an afterthought. Two more Work (five total with sheet 5), two Teach, and
+one each of Plan, Demo, Reflect and Learn. One print each, no reprinting. Cut on the
 outer line. Print at 100%.</desc>
 
 <style>
@@ -28,8 +28,6 @@ outer line. Print at 100%.</desc>
     <g transform="translate(0,11)">
     <rect x="4" y="22" width="50" height="10" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="30" class="s" font-size="7">+1 to one feature</text>
-    <text x="5" y="42" class="s" font-size="4.4">Adjust total Work for</text>
-    <text x="5" y="48" class="s" font-size="4.4">Capability and Shared Practice.</text>
     </g>
   </g>
 
@@ -93,9 +91,6 @@ outer line. Print at 100%.</desc>
     <rect x="4" y="29" width="50" height="9" rx="1.2" fill="#D9D3C4"/>
     <text x="5" y="36" class="s" font-size="6.4">+1 Capital</text>
     <text x="5" y="46" class="s" font-size="4.4">to one named team member.</text>
-    <line x1="5" y1="52" x2="58" y2="52" class="h"/>
-    <text x="5" y="60" class="m q" font-size="2.7" letter-spacing=".1">FEATURE IGNORES NEXT</text>
-    <text x="5" y="65" class="m q" font-size="2.7" letter-spacing=".1">NEGATIVE FEEDBACK</text>
     </g>
   </g>
 
@@ -117,23 +112,6 @@ outer line. Print at 100%.</desc>
     <text x="5" y="73.6" class="s" font-size="4"><tspan font-weight="bold">Yes: +1 Shared Practice</tspan></text>
     <text x="5" y="78.2" class="s" font-size="3.2">and +1 Motivation to anyone on 3 or less</text>
     <text x="5" y="83.4" class="m q" font-size="2.6">ALSO FILLS A WELL. TOKEN AT CLOSE.</text>
-  </g>
-
-  <g id="workshop" transform="scale(.95238095,1)">
-    <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORKSHOP</text>
-    <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
-    <text x="5" y="23.5" class="s" font-size="4.2">A meeting that changes the</text>
-    <text x="5" y="28.3" class="s" font-size="4.2">plan, not just records it.</text>
-    <g transform="translate(0,10)">
-    <rect x="4" y="25" width="50" height="9" rx="1.2" fill="#B5C7CF"/>
-    <text x="5" y="32" class="s adapt" font-size="7.4">+1 Adaptability</text>
-    <line x1="5" y1="40" x2="58" y2="40" class="h"/>
-    <text x="5" y="47" class="s" font-size="4.4">Unconditionally - no gate,</text>
-    <text x="5" y="53" class="s" font-size="4.4">no second mode.</text>
-    <text x="5" y="61" class="m q" font-size="2.9">TOKEN ARRIVES AT WEEK CLOSE,</text>
-    <text x="5" y="66" class="m q" font-size="2.9">SPENDABLE FROM NEXT WEEK.</text>
-    </g>
   </g>
 
   <g id="learn" transform="scale(.95238095,1)">
@@ -173,6 +151,5 @@ outer line. Print at 100%.</desc>
 <use href="#demo" x="142" y="104"/>
 
 <use href="#reflect" x="10" y="196"/>
-<use href="#workshop" x="76" y="196"/>
-<use href="#learn" x="142" y="196"/>
+<use href="#learn" x="76" y="196"/>
 </svg>

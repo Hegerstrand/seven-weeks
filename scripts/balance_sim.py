@@ -126,6 +126,7 @@ class Rules:
 # --------------------------------------------------------------------------------------
 
 TORSOS = ["Autonomy", "Hierarchy", "Community", "Quality", "Recognition"]
+NEED_SOFT_LO, NEED_SOFT_HI = 75.0, 95.0   # soft goal: each Need is met in this share of character-weeks
 LEGS = ["TakeCharge", "Analyze", "Support", "Engage", "Challenge"]
 BASES = ["Bookish", "HandsOn", "Sheltered", "Dependable", "Competitive"]
 
@@ -1157,7 +1158,7 @@ class Game:
         if t == "Hierarchy":
             return W.teach_played or any(x in plan for x in ("Learn", "Workshop"))
         if t == "Community":
-            return any(x in plan for x in ("Coordinate", "Reflect", "Celebrate"))
+            return any(x in plan for x in ("Coordinate", "Reflect"))
         if t == "Quality":
             return W.work_added
         return bool(W.banked) or c.id in W.hero_by or "Demo" in plan
@@ -1441,6 +1442,15 @@ def share(res, pred):
     return 100.0 * sum(1 for r in res if pred(r)) / len(res)
 
 
+def need_rates(res: list) -> dict:
+    """Share of character-weeks (percent) in which each Need was met."""
+    met, seen = Counter(), Counter()
+    for r in res:
+        met.update(r["need_met"])
+        seen.update(r["need_seen"])
+    return {t: (100.0 * met[t] / seen[t] if seen[t] else 0.0) for t in TORSOS}
+
+
 def report(name: str, res: list, rules: Rules):
     n = len(res)
     print("=" * 78)
@@ -1560,6 +1570,9 @@ def report(name: str, res: list, rules: Rules):
         need_m.update(r["need_met"])
         need_s.update(r["need_seen"])
     print("   Need met rate: " + "  ".join("%s %.0f%%" % (t, 100 * need_m[t] / need_s[t]) for t in TORSOS if need_s[t]))
+    print("   NEED CHECK (soft goal: each Need met %d%% to %d%%): " % (NEED_SOFT_LO, NEED_SOFT_HI) + "  ".join(
+        "%s %.0f%% %s" % (t, v, "ok" if NEED_SOFT_LO <= v <= NEED_SOFT_HI else ("TOO EASY" if v > NEED_SOFT_HI else "TOO HARD"))
+        for t, v in need_rates(res).items()))
 
     print("\n4. EVENTS AND DAYS (average count per week)")
     W = rules.weeks
@@ -1735,9 +1748,10 @@ def objective(res: list) -> float:
     # and 10 for each play of Plan or Align short of 1.5 or over 3, and 60 for each character who quits (goal: none).
     missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
     off = mean(max(0, 1.5 - times_played(r, c)) + max(0, times_played(r, c) - 3) for r in res for c in ("Plan", "Align")) * 2
+    need_off = sum(max(0.0, NEED_SOFT_LO - v) + max(0.0, v - NEED_SOFT_HI) for v in need_rates(res).values())
     return (share(res, lambda r: r["outcome"] == "thriving") + 0.2 * mean(r["score"] for r in res)
             + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing - 10 * off
-            - 60 * mean(r["quits"] for r in res))
+            - 60 * mean(r["quits"] for r in res) - 0.2 * need_off)
 
 
 OPT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "balance_sim_optimal.json")
@@ -2277,7 +2291,8 @@ def _target_rows(title: str, res: list) -> list:
         ("Quits a game (goal: 0 in optimal)", "%.2f (0 quits in %.0f%% of games)" % (quits, zero), ok_mark(quits == 0) if k == "optimal" else ""),
         ("Most Flex markers held at once (goal: 1 or fewer)", "%d" % flex, ok_mark(flex <= 1)),
         ("Quality quits after a week without Work (goal: 0)", "%.3f" % qnw, ok_mark(qnw == 0)),
-    ]
+    ] + [("%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, NEED_SOFT_HI), "%.0f%%" % v,
+          ok_mark(NEED_SOFT_LO <= v <= NEED_SOFT_HI) if k == "optimal" else "") for t, v in need_rates(res).items()]
 
 
 def write_postsim(path: str, dump: dict):
@@ -2418,7 +2433,7 @@ def plot_summary(path: str, dump: dict):
         for t, col in (("Autonomy", "#F7D7A1"), ("Hierarchy", "#C7CFB5"), ("Community", "#D3CEDF"), ("Quality", "#B5C7CF"), ("Recognition", "#D9D3C4")):
             seen = sum(r["need_seen"].get(t, 0) for r in res)
             need_rows.append((t, 100 * sum(r["need_met"].get(t, 0) for r in res) / seen if seen else 0.0, col))
-        end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks", need_rows, 100, "%.0f%%")
+        end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks (green band = soft goal)", need_rows, 100, "%.0f%%", {t: (NEED_SOFT_LO, NEED_SOFT_HI) for t, _, _ in need_rows})
         # quits by habitus part, human names
         human = {"torso": "values", "legs": "instinct", "base": "upbringing"}
         agg = Counter()

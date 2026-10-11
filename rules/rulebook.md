@@ -793,7 +793,7 @@ your board from the start - the game just waits until week 2 to turn it over.
 |---|---|
 | Autonomy | **At most 1 Event landed on the team** this week - the other was cancelled in Adapt, or none was drawn - **or the team has Shared Repertoire** (§18). |
 | Hierarchy | **The team played a Teach, Learn or Workshop card**, **or the team has Who Knows What** (§18). |
-| Community | The team spent a Coordinate, Reflect or Celebrate, **or the team has Psychological Safety** (§18). |
+| Community | The team spent a Coordinate or a Reflect, **or the team has Psychological Safety** (§18). |
 | Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter): **+1**. **No Work added: lose 3 Motivation instead.** |
 | Recognition | **A feature was banked** this week, **you spent your Hero**, or **the team held a Demo**. |
 

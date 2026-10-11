@@ -209,7 +209,7 @@ week the Specimen panel on each person board starts being read.
 | "every square of a row or column of THE ZONE tiled → +1 Capability" | `.s` serif | 3.2 | `#000000` | - |
 | "SHARED PRACTICE · A STACK" / "a tile flips to stacked: two of you cover it → +1 Shared Practice" | `.m` mono / `.s` serif | 3.4 / 3.2 | `#000000` | strip `#F7D7A1` |
 | "CROSS-TRAINED · A 2ND ROW" | `.m` mono | 3.4 | `#000000` | strip `#D9D3C4` |
-| "your SPECIMEN covers a 2nd row → +1 Capability, once each" | `.s` serif | 3.2 | `#000000` | - |
+| "your SPECIMEN covers a 2nd row → +1 Capability, the first time" | `.s` serif | 3.2 | `#000000` | - |
 | "BOTH" + "mark your SPECIMEN, then put down or flip a tile on THE ZONE." | `.m` mono / `.s` serif | 3.2 / 3.4 | `#000000` | - |
 | 3-line citation block (Bourdieu/Vygotsky/Marx) | `.m.q` mono | 2.5 | `#000000` | - |
 | "BACK · UNTIL WEEK 3" | `.m` mono | 3.2 | `#000000` | - |

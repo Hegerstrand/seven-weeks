@@ -29,10 +29,10 @@ one sheet.</desc>
 <text x="20" y="29" class="m" font-size="5" letter-spacing="1.4">HOW YOU COVER</text>
 <text x="20" y="38" class="m" font-size="3.4" letter-spacing=".4">LEARN</text>
 <text x="45" y="38" class="s" font-size="3.4">pick up a new square, <tspan font-weight="bold">left or right</tspan> of one you</text>
-<text x="45" y="42.5" class="s" font-size="3.4">cover, in your own row. Everyone does it, up to 5 new squares. No teacher.</text>
+<text x="45" y="42.5" class="s" font-size="3.4">cover, in your own row. Everyone does it. No teacher.</text>
 <text x="20" y="51" class="m" font-size="3.4" letter-spacing=".4">TEACH</text>
-<text x="45" y="51" class="s" font-size="3.4">let a partner mark a square - <tspan font-weight="bold">up, down,</tspan></text>
-<text x="45" y="55.5" class="s" font-size="3.4"><tspan font-weight="bold">left or right</tspan> of one you cover, in any row.</text>
+<text x="45" y="51" class="s" font-size="3.4">let a partner mark a covered square - <tspan font-weight="bold">up, down,</tspan></text>
+<text x="45" y="55.5" class="s" font-size="3.4"><tspan font-weight="bold">left, right or diagonal</tspan> of one you cover, in any row.</text>
 <text x="20" y="60" class="m" font-size="3.2" letter-spacing=".4">BOTH</text>
 <text x="45" y="60" class="s" font-size="3.4">mark your SPECIMEN, then put down or flip a tile on <tspan font-weight="bold">THE ZONE</tspan>.</text>
 <text x="20" y="65.5" class="s q" font-size="2.5" font-style="italic">One step from what you cover (Vygotsky's ZPD). A square got this week can't be taught this week.</text>
@@ -48,7 +48,7 @@ one sheet.</desc>
 <text x="23" y="100.8" class="s" font-size="3.2">a tile flips to stacked: two of you cover it → <tspan font-weight="bold">+1 Shared Practice</tspan></text>
 <rect x="20" y="103.5" width="112" height="8.5" rx="1.5" fill="#D9D3C4"/>
 <text x="23" y="107.3" class="m" font-size="3.4" letter-spacing=".3">CROSS-TRAINED · A 2ND ROW</text>
-<text x="23" y="110.8" class="s" font-size="3.2">your SPECIMEN covers a 2nd row → <tspan font-weight="bold">+1 Capability</tspan>, once each</text>
+<text x="23" y="110.8" class="s" font-size="3.2">your SPECIMEN covers a 2nd row → <tspan font-weight="bold">+1 Capability</tspan>, the first time</text>
 <text x="20" y="117" class="m q" font-size="2.5">BOURDIEU 1986 · VYGOTSKY 1978 · MARX 1846</text>
 </g>
 

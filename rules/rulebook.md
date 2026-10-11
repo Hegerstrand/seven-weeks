@@ -5,6 +5,8 @@ whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
 > ## BALANCE PASS (2026-10-11)
+> **When a character quits, everyone left loses 1 Motivation** (§6.1, §16).
+> **Teach may also step diagonally** (Learn stays left or right in your own row), but **only onto a square someone already covers**: it only flips a tile to stacked, never puts one down, §7, §8.
 > **Plan does nothing on Low complexity features** (A and E) and gives +1 per Work card on Medium and High ones (B, C, D, F), §7. B and C are Medium in the sim, as printed.
 > **Reflect: at most one a week** (one card, §7).
 > **Starting Motivation is 4** (was 3), and **Take One For The Team moves Trust at once, from week 1** (§7), so a Dependable character can pay for it early (§5.2). **Team Score gains +20 if nobody quit or was fired all game** (§16).
@@ -1166,7 +1168,7 @@ category this week per their Torso (§5, "Motivation depends on habitus" - check
 and who was immune before totaling), +1 if their Need was met (§5; a **Quality** character
 with no Work added to a feature this week takes −3 instead), −1 if they are **Competitive** and
 somebody else played a Hero this week. Apply the net number, then any character at 0 quits -
-this is the only moment a quit is checked. Then **advance the week.**
+this is the only moment a quit is checked. **Everyone left then loses 1 Motivation for each character who quit.** Then **advance the week.**
 
 Banking comes first because a banked feature lifts its lock and decides whether Celebrate had something to mark. **The
 project ends when Week 7 closes.**
@@ -1209,7 +1211,7 @@ character to receive it.
 | **Coordinate** | **+1 Trust.** |
 | **Align** | **Every character pays 1 Motivation.** **+3 Adaptability.** The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. |
 | **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
-| **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover on their own SPECIMEN, **any row**, immediately **up, down, left or right** of one *the teacher* covers - **then cover each on the Zone**. **Both teachers +1 Capital.** **Does nothing while Trust is 1 or less.** |
+| **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover **that someone already covers**, any row, immediately **up, down, left, right or diagonally** of one *the teacher* covers - **then flip that tile to its stacked face on the Zone** (Teach never puts a new tile down). **Both teachers +1 Capital.** **Does nothing while Trust is 1 or less.** |
 | **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
 | **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
@@ -1369,14 +1371,13 @@ face up** if two characters started on the same square.
 2. **Cover it on the ZONE.** No tile there: put one down, one-person face up. A tile already
    there: turn it to its **stacked** face (it stays stacked; a third character changes nothing).
 
-There are two ways to cover a new square, and neither is a diagonal leap - that's Vygotsky's
+There are two ways to cover a new square, and neither is a long leap - that's Vygotsky's
 **Zone of Proximal Development** made physical, one step from what you can already do. **Learn**
 (§7) covers a free square **left or right** of one you already cover, in your own row only,
 alone, no teacher needed. **Every character learns on the same card**, so one Learn can put up to
 five new tiles on the Zone. **Teach** (§7) lets **up to two different
 characters**, each already covering a square, each let one other character mark a square on their
-own SPECIMEN **up, down, left or right** of one *the teacher* covers - in any row, since a teacher
-can hand someone a square they'd never have reached alone. **Both teachers gain +1 Capital.** One
+own SPECIMEN **up, down, left, right or diagonally** of one *the teacher* covers - in any row, but only a square somebody already covers: Teach flips a one-person tile to its stacked face and never puts a new tile down. **Both teachers gain +1 Capital.** One
 card, one day, two pairs - a second teacher doesn't cost a second day; a training has to be
 conferred by somebody who holds it, a skill can be picked up alone - that difference is the whole
 reason the two are separate cards. Counters are never taken off, and tiles are never turned back.
@@ -1391,8 +1392,7 @@ And one read of a single sheet: **Cross-Trained** (**Capability +1** for the tea
 has squares in a **3rd row** of their own SPECIMEN.
 
 One step a week per track, as ever (§7). Nothing else on the Zone pays: no per-column card
-bonuses, no partial credit. A full Zone column can only be reached with teaching, never by Learn
-alone, since Learn never leaves your own row.
+bonuses, no partial credit. Only Learn puts new tiles on the Zone, so a full Zone column needs characters who start in every row, since Learn never leaves your own row.
 
 ### Teaching costs a day, and a day is the scarcest thing there is
 **Learn and Teach happen as the card is played.** Each takes one of the week's five days and

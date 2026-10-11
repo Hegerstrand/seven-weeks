@@ -101,6 +101,7 @@ class Rules:
     habit_score: int = 10                       # Team Score per Habit held at the end (5 Habits = up to 50)
     feature_value: int = 10
     quit_penalty: int = 20
+    quit_mot_cost: int = 1                      # every remaining character loses this much Motivation for each character who quits
     no_quit_bonus: int = 20                     # Team Score bonus when nobody quit or was fired all game
     flex_penalty: int = 2
     low_track_penalty: int = 5                  # Team Score lost per Ledger track that finishes at 0-1
@@ -436,7 +437,7 @@ class Game:
 
     def neighbours(self, sq, own_row_only: bool):
         r, c = sq
-        steps = [(0, -1), (0, 1)] if own_row_only else [(0, -1), (0, 1), (-1, 0), (1, 0)]
+        steps = [(0, -1), (0, 1)] if own_row_only else [(0, -1), (0, 1), (-1, 0), (1, 0), (-1, -1), (-1, 1), (1, -1), (1, 1)]
         for dr, dc in steps:
             rr, cc = r + dr, c + dc
             if 0 <= rr < 5 and 0 <= cc < 5:
@@ -469,7 +470,7 @@ class Game:
         opts = set()
         for sq in t.squares - t.new_squares:
             for nb in self.neighbours(sq, False):
-                if nb not in p.squares:
+                if nb not in p.squares and nb in self.tiles:
                     opts.add(nb)
         return list(opts)
 
@@ -644,8 +645,7 @@ class Game:
             wanted = [c for c in wanted if c != "Reflect"]
             if open_wells:
                 at = wanted.index("Plan") + 1 if "Plan" in wanted else (1 if "Celebrate" in wanted else 0)
-                for _ in range(min(2, len(open_wells))):
-                    wanted.insert(at, "Reflect")
+                wanted.insert(at, "Reflect")
             else:
                 wanted.append("Reflect")
         cards = wanted[:slots]
@@ -655,6 +655,8 @@ class Game:
             else:
                 cards = ["Celebrate"]
         cards += ["Work"] * (R.days - len(cards))
+        while cards.count("Reflect") > 1:
+            cards[len(cards) - 1 - cards[::-1].index("Reflect")] = "Work"
         if st.celebrate_needs_reason and "Celebrate" in cards and not self.celebrate_worth(w, cards):
             cards[cards.index("Celebrate")] = "Work"
         # Plan + 2 Work beats 3 Work, so 3 or more Work cards on a non-Low feature always carry the Plan card
@@ -1176,6 +1178,7 @@ class Game:
     def motivation_step(self, w: int):
         R, W = self.R, self.w
         quitters = []
+        causes: dict = {}
         if w >= 2:
             if W.work_added:
                 self.no_work_streak = 0
@@ -1185,12 +1188,15 @@ class Game:
                 self.m["max_no_work_streak"] = max(self.m["max_no_work_streak"], self.no_work_streak)
         for c in list(self.chars):
             d = 0
+            neg: dict = {}
             if c.base != "Sheltered":
                 d -= R.grind
+                neg["the weekly grind"] = R.grind
                 self.mot_flow["grind"] -= R.grind
             ev = W.ev_loss.get(c.id, 0)
             if ev:
                 d -= ev
+                neg["Events"] = ev
                 self.mot_flow["event"] -= ev
             if w >= 2:
                 self.need_seen[c.torso] += 1
@@ -1205,11 +1211,13 @@ class Game:
                 elif c.torso == "Quality":
                     c.q_streak += 1
                     d -= R.quality_penalty
+                    neg["a week without Work (Quality Need)"] = R.quality_penalty
                     self.mot_flow["quality_penalty"] -= R.quality_penalty
             if c.base == "Competitive":
                 lost = sum(1 for h in W.hero_log if h != c.id)
                 if lost:
                     d -= lost
+                    neg["another character's Hero"] = lost
                     self.mot_flow["competitive"] -= lost
             wit = W.witness.get(c.id, 0)
             if wit:
@@ -1219,6 +1227,8 @@ class Game:
             if ld:
                 d += ld
                 self.mot_flow["legs_up" if ld > 0 else "legs_down"] += ld
+                if ld < 0:
+                    neg["a track in the low band (instinct)"] = -ld
             adj = W.mot_adj.get(c.id, 0)
             if adj:
                 d += adj
@@ -1226,6 +1236,7 @@ class Game:
             c.mot = max(0, min(self.mot_cap_for(c), c.mot + d))
             if c.mot <= 0:
                 quitters.append(c)
+                causes[c.id] = max(neg, key=neg.get) if neg else "spent it on Align, Overtime or Take One"
         if self.burnout_ids:
             if not W.celebrated:
                 for c in self.chars:
@@ -1243,6 +1254,7 @@ class Game:
             if c in self.chars:
                 self.chars.remove(c)
                 self.quits += 1
+                self.m["quit_cause_" + causes.get(c.id, "the burnout Event")] += 1
                 if c.torso == "Quality":
                     self.m["quality_quits"] += 1
                     if c.q_streak >= 1:
@@ -1252,6 +1264,10 @@ class Game:
                 self.m["quit_week_%d" % w] += 1
                 if w < R.weeks:
                     self.join_next += 1
+        if R.quit_mot_cost and quitters:
+            gone = sum(1 for c in quitters if c not in self.chars)
+            for c in self.chars:
+                self.add_mot(c, -R.quit_mot_cost * gone, "quit_knock_on")
 
     # ------------------------------------------------------------------ driver
 
@@ -1361,7 +1377,8 @@ class Game:
             "quality_quit_multiweek": self.m["quality_quit_multiweek"], "no_work_weeks": self.m["no_work_weeks"],
             "max_no_work_streak": self.m["max_no_work_streak"],
             "mot_mean": list(self.mot_week_mean), "mot_min": list(self.mot_week_min),
-            "mot_hist": list(self.mot_hist_week), "mot_med": list(self.mot_med_week), "quit_week": [self.m["quit_week_%d" % i] for i in range(1, R.weeks + 1)],
+            "mot_hist": list(self.mot_hist_week), "mot_med": list(self.mot_med_week),
+            "quit_causes": {k[len("quit_cause_"):]: v for k, v in self.m.items() if k.startswith("quit_cause_")}, "quit_week": [self.m["quit_week_%d" % i] for i in range(1, R.weeks + 1)],
             "trust_week": list(self.trust_week), "cap_week": list(self.cap_week), "sp_week": list(self.sp_week),
             "standing_week": list(self.standing_week), "capital_week": list(self.capital_week),
             "banked_week": list(self.banked_week), "drawn_week": list(self.drawn_week),
@@ -1516,6 +1533,11 @@ def report(name: str, res: list, rules: Rules):
     print("   median Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_med"][i] for r in res)) for i in range(rules.weeks)))
     print("   QUIT CHECK: quits by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["quit_week"][i] for r in res)) for i in range(rules.weeks))
           + "   games with 0 quits %.0f%%" % share(res, lambda r: r["quits"] == 0))
+    qc = Counter()
+    for r in res:
+        qc.update(r["quit_causes"])
+    print("   QUIT CAUSES per game (the biggest Motivation loss in the week the character quit): " + (
+        "   ".join("%s %.2f" % (k, v / len(res)) for k, v in qc.most_common()) or "none"))
     cel_flow = mean(r["mot_flow"].get("celebrate", 0) for r in res)
     print("   CELEBRATE CHECK: played %.1f a game (target 4 or fewer), %.1f of them with nothing to celebrate   more than 4 times in %.0f%% of games   Motivation given %.1f a game   characters skipped by the cap (Motivation above %d) %.1f a game" % (
         mean(r["celebrates"] for r in res), mean(r["celebrate_empty"] for r in res), share(res, lambda r: r["celebrates"] > 4), cel_flow, rules.celebrate_max_mot,
@@ -1551,8 +1573,8 @@ def report(name: str, res: list, rules: Rules):
     all_cards = share(res, lambda r: set(ACTION_CARDS) <= cards_played(r))
     print("   CARD USE CHECK (goal: every action card is played at least once in a game): all %d in %.0f%% of games" % (len(ACTION_CARDS), all_cards))
     print("      share of games playing each: " + "  ".join("%s %.0f%%" % (c, share(res, lambda r, c=c: c in cards_played(r))) for c in ACTION_CARDS))
-    print("   PLAN AND ALIGN CHECK (goal: each played 2 to 4 times a game): " + "   ".join(
-        "%s %.1f a game, 2 to 4 times in %.0f%% of games" % (c, mean(times_played(r, c) for r in res), share(res, lambda r, c=c: 2 <= times_played(r, c) <= 4))
+    print("   PLAN AND ALIGN CHECK (goal: each played 1.5 to 3 times a game): " + "   ".join(
+        "%s %.1f a game, 1.5 to 3 times in %.0f%% of games" % (c, mean(times_played(r, c) for r in res), share(res, lambda r, c=c: 1.5 <= times_played(r, c) <= 3))
         for c in ("Plan", "Align")))
     print("   PLAN RULE CHECK: weeks with 3 or more Work cards on a non-Low feature and no Plan, %.2f a game (should be 0; only Shared Practice 0 allows it)" % mean(r["plan_skipped"] for r in res))
     for key, label in (("hero", "Hero played"), ("dependable", "Dependable Take 1"), ("take_one", "Other Take One"),
@@ -1629,7 +1651,7 @@ def apply_overrides(rules: Rules, pairs: list) -> Rules:
 
 
 COUNTER_FIELDS = ("cancel_by", "mot_flow", "need_met", "need_seen", "cancel_week", "cards_week", "habitus_week", "habit_week", "parts",
-                  "wells_week", "evidence_week")
+                  "wells_week", "evidence_week", "quit_causes")
 
 
 def flatten(r: dict) -> dict:
@@ -1710,9 +1732,9 @@ def times_played(r: dict, card: str) -> int:
 def objective(res: list) -> float:
     # Share of games that reach the upper threshold (percent), plus a little mean score and all-six share as
     # tie-breakers, minus 15 for each Quality quit after a week without Work, 8 for each action card a game never plays,
-    # and 10 for each play of Plan or Align short of 2 or over 4, and 60 for each character who quits (goal: none).
+    # and 10 for each play of Plan or Align short of 1.5 or over 3, and 60 for each character who quits (goal: none).
     missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
-    off = mean(max(0, 2 - times_played(r, c)) + max(0, times_played(r, c) - 4) for r in res for c in ("Plan", "Align")) * 2
+    off = mean(max(0, 1.5 - times_played(r, c)) + max(0, times_played(r, c) - 3) for r in res for c in ("Plan", "Align")) * 2
     return (share(res, lambda r: r["outcome"] == "thriving") + 0.2 * mean(r["score"] for r in res)
             + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing - 10 * off
             - 60 * mean(r["quits"] for r in res))
@@ -2185,9 +2207,9 @@ def calibrate(dump: dict):
     lines.append("  Card use in optimal play: every action card in %.0f%% of games (goal 100%%)%s" % (
         100 * sum(1 for r in opt if set(ACTION_CARDS) <= cards_played(r)) / len(opt),
         "; not always played: " + ", ".join("%s %.0f%%" % (c, 100 * sum(1 for r in opt if c in cards_played(r)) / len(opt)) for c in unused) if unused else ""))
-    lines.append("  Plan and Align in optimal play (goal: each 2 to 4 times a game): " + "; ".join(
+    lines.append("  Plan and Align in optimal play (goal: each 1.5 to 3 times a game): " + "; ".join(
         "%s %.1f a game, in range in %.0f%% of games" % (c, sum(times_played(r, c) for r in opt) / len(opt),
-                                                         100 * sum(1 for r in opt if 2 <= times_played(r, c) <= 4) / len(opt))
+                                                         100 * sum(1 for r in opt if 1.5 <= times_played(r, c) <= 3) / len(opt))
         for c in ("Plan", "Align")))
     if top is None:
         best = max(reach(opt, t) for t in range(lo, hi + 1))
@@ -2248,8 +2270,8 @@ def _target_rows(title: str, res: list) -> list:
         ("Reach LOWER threshold (goal: random 2% or less, balanced and invested 50% or more)", "%.0f%%" % lo,
          ok_mark(lo <= 2) if k == "random" else ok_mark(lo >= 50) if k in ("balanced", "invested") else ""),
         ("Every action card played in a game (goal: 100% of games)", "%.0f%%" % every, ok_mark(every >= 99.95)),
-        ("Plan plays a game (goal: 2 to 4)", "%.1f" % plan, ok_mark(2 <= plan <= 4)),
-        ("Align plays a game (goal: 2 to 4)", "%.1f" % align, ok_mark(2 <= align <= 4)),
+        ("Plan plays a game (goal: 1.5 to 3)", "%.1f" % plan, ok_mark(1.5 <= plan <= 3)),
+        ("Align plays a game (goal: 1.5 to 3)", "%.1f" % align, ok_mark(1.5 <= align <= 3)),
         ("Celebrate plays a game (goal: 4 or fewer)", "%.1f" % cel, ok_mark(cel <= 4)),
         ("Team Reflexivity held at the end (goal: reachable in optimal, 50% or more)", "%.0f%%" % tr, ok_mark(tr >= 50) if k == "optimal" else ""),
         ("Quits a game (goal: 0 in optimal)", "%.2f (0 quits in %.0f%% of games)" % (quits, zero), ok_mark(quits == 0) if k == "optimal" else ""),
@@ -2304,6 +2326,11 @@ def write_postsim(path: str, dump: dict):
         L += ["", "### Motivation and quits by week", "", "| Week | " + " | ".join(str(i + 1) for i in range(W)) + " |", "|---|" + "---|" * W]
         for label, key in (("Lowest", "mot_min"), ("Mean", "mot_mean"), ("Median", "mot_med"), ("Quits", "quit_week")):
             L.append("| %s | %s |" % (label, " | ".join("%.2f" % mean(r[key][i] for r in res) for i in range(W))))
+        qc = Counter()
+        for r in res:
+            qc.update(r["quit_causes"])
+        L += ["", "Quit causes per game (biggest Motivation loss in the week): " + (
+            ", ".join("%s %.2f" % (k, v / len(res)) for k, v in qc.most_common()) or "none") + "."]
         L += ["", "### Cards (share of games playing each, plays a game)", "", "| Card | share | per game |", "|---|---|---|"]
         for c in ACTION_CARDS:
             L.append("| %s | %.0f%% | %.2f |" % (c, share(res, lambda r, c=c: c in cards_played(r)), per_game(res, c)))
@@ -2384,7 +2411,7 @@ def plot_summary(path: str, dump: dict):
         # cards per game
         card_rows = [(c, mean(times_played(r, c) for r in res), CARD_COLOUR.get(c, "#999999")) for c in ACTION_CARDS]
         _hbars(out, 880, ys, 480, "Cards played per game (green band = goal)", card_rows,
-               _nice_max(max(v for _, v, _ in card_rows)), "%.1f", {"Plan": (2, 4), "Align": (2, 4), "Celebrate": (0, 4)})
+               _nice_max(max(v for _, v, _ in card_rows)), "%.1f", {"Plan": (1.5, 3), "Align": (1.5, 3), "Celebrate": (0, 4)})
         ys2 = ys + 220 + 90
         # needs met
         need_rows = []

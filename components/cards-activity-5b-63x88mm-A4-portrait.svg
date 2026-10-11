@@ -52,17 +52,16 @@ outer line. Print at 100%.</desc>
     <text x="5" y="27" class="s" font-size="5.4">Up to 2 characters may</text>
     <text x="5" y="33" class="s" font-size="5.4">each teach 1 partner</text>
     <line x1="5" y1="38" x2="58" y2="38" class="h"/>
-    <text x="5" y="45" class="s" font-size="4.2">Partner marks a square</text>
-    <text x="5" y="50" class="s" font-size="4.2">up, down, left or right of</text>
-    <text x="5" y="55" class="s" font-size="4.2">one you cover - <tspan font-weight="bold">any row</tspan>.</text>
+    <text x="5" y="45" class="s" font-size="4.2">Partner marks a covered</text>
+    <text x="5" y="50" class="s" font-size="4.2">square next to yours,</text>
+    <text x="5" y="55" class="s" font-size="4.2">diagonals too.</text>
     <text x="5" y="60" class="m trust" font-size="3.2">DEAD IF TRUST 1 OR LESS</text>
     <rect x="27.7" y="63.24" width="26.3" height="3.04" rx=".4" fill="#D9D3C4"/>
     <text x="5" y="65.5" class="m q" font-size="2.9">EACH TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
     <text x="5" y="72" class="m q" font-size="2.9">ZONE:</text>
     <use href="#ztile-one" x="17" y="71"/>
-    <text x="21" y="72" class="m q" font-size="2.9">PUT DOWN</text>
+    <text x="21" y="72" class="m q" font-size="2.9">FLIPS TO</text>
     <use href="#ztile-stack" x="40" y="71"/>
-    <text x="44" y="72" class="m q" font-size="2.9">OR FLIP</text>
     </g>
   </g>
 

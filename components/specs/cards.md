@@ -108,7 +108,7 @@ graph TD
 | Card | Title | Effect | Key conditions | Footer italic |
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
-| `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a square up, down, left or right of one you cover - any row."; "DEAD IF TRUST 1 OR LESS"; "EACH TEACHER GAINS +1 CAPITAL"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Scaffolding: give it away and it becomes standing." |
+| `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a covered square next to yours, diagonals too."; "DEAD IF TRUST 1 OR LESS"; "EACH TEACHER GAINS +1 CAPITAL"; icon row "ZONE: [one-person tile] FLIPS TO [stacked tile]" (Teach never puts a tile down) | "Scaffolding: give it away and it becomes standing." |
 | `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "PAYS AS THE WORK RESOLVES" | "Planning pays on hard problems. Only on those." |
 | `demo` | DEMO | "+1 Capital to one named team member" | "CAPITAL AT OR ABOVE AVERAGE"; "feature ignores the next NEGATIVE FEEDBACK" | "The field decides who speaks." |
 | `reflect` | REFLECT | "Trust 3 or more"; "+1 Adaptability"; "LAST WEEK GAVE EVIDENCE?" with the three well symbols (target: a feature was banked; route: you adapted to 2 Events; cycle: a Hero or a token was played, or an Event cost a Ledger track); "Yes: +1 Shared Practice" (`#F7D7A1`) and "and +1 Motivation to anyone on 3 or less"; "ALSO FILLS A WELL. TOKEN AT CLOSE." | "Ask what's not working - you can only reflect on it." |

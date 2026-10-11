@@ -33,7 +33,7 @@ handled. Which 2 ship first is an arbitrary placeholder below - swap freely.
 | Part | Phase 1 (now) | Phase 2 (later) |
 |---|---|---|
 | Base | Academic · Trade | Entrepreneurial · Public sector |
-| Legs | Take Charge · Analyze | Support · Withdraw |
+| Legs | Take Charge · Analyze | Support · Engage |
 | Torso | Autonomy · Hierarchy | Community · Quality |
 | Head | Technical · Social | Commercial · Analytical |
 | Item | Laptop · Clipboard | Coffee cup · Wrench |

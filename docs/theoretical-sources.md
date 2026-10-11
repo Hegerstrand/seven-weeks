@@ -131,7 +131,7 @@ that it is never neutral either - visibility is a form of power, whoever's watch
 - **PERFORMANCE REVIEW** (§11) is close to a named disciplinary examination: a single character
   singled out, measured, and docked Capital for it. It is Foucault's "examination" - hierarchical
   observation plus normalizing judgment - almost without translation.
-- **Capital ≥ the team average**, not an absolute threshold (§5.1), can be read two ways at
+- **Capital at or above the team average**, not an absolute threshold (§5.1), can be read two ways at
   once, and it's worth naming both. Bourdieu's own account (relational capital, a position in a
   field) is the primary citation already used here. But Foucault's *normalization* makes the
   same point from a different angle: power doesn't need an external absolute standard, only a
@@ -526,7 +526,7 @@ draft," "straw-man proposal," and "show, don't ask" review cultures.
 
 **Relevance to this game.** **Demo** (§7, "Reveal a feature's Quality") is structurally this
 exact move: instead of debating a feature's quality in the abstract, the team commits it
-publicly to the field's judgment (Capital ≥ the table average, §5.1), and the correction - a bad
+publicly to the field's judgment (Capital at or above the table average, §5.1), and the correction - a bad
 review costing Work and Capital, or a good one paying out - **is** the feedback, produced by
 showing rather than asking. Nobody has to raise the question of whether the feature is good;
 committing it wrong (or right) produces the answer directly. **Align**, by contrast, resolves

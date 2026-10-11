@@ -69,6 +69,9 @@ class Rules:
     ledger_start: int = 1
     ledger_max: int = 5
     habit_at: int = 4
+    legs_strength_at: int = 3                   # a Legs strength pays +1 Motivation at this track value or more (was 4)
+    base_like: int = 2                          # Bookish learning / Hands-On teaching: +this Motivation (was 1)
+    base_dislike: int = 1                       # Bookish teaching / Hands-On learning: -this Motivation
     habit_discount: int = 1
     habit_min_cost: int = 0
     trust_cancel: bool = False                  # Trust 4+ cancelling one Event a week: removed from the game
@@ -102,7 +105,7 @@ class Rules:
     autonomy_rule: str = "events"               # events (count landed Events) | management (no Management Event landed)
     align_tokens: int = 3                       # ALIGN (the meeting): tokens it adds (was 2; 0 = card not in the game)
     align_cost: int = 1                         # Motivation every character pays (one way: Motivation -> Adaptability)
-    align_min_mot: int = 2                      # policy: nobody pays below this, so the meeting is not laid while someone is lower
+    align_min_mot: int = 3                      # policy: nobody pays below this (pay 1, then the grind takes 1: at 2 that is a quit)
     celebrate_repeat: int = 0                   # optional: Celebrate gives this much less if the team celebrated last week
     celebrate_max_mot: int = 3                  # Celebrate only lifts a character at or below this Motivation (5 = everyone, off)
     celebrate_needs_reason: bool = True         # Celebrate gives nothing unless a feature was banked this week or every Event was cancelled
@@ -117,17 +120,17 @@ class Rules:
 # --------------------------------------------------------------------------------------
 
 TORSOS = ["Autonomy", "Hierarchy", "Community", "Quality", "Recognition"]
-LEGS = ["TakeCharge", "Analyze", "Support", "Withdraw", "Challenge"]
+LEGS = ["TakeCharge", "Analyze", "Support", "Engage", "Challenge"]
 BASES = ["Bookish", "HandsOn", "Sheltered", "Dependable", "Competitive"]
 
 # feature: (work cost, complexity, depends on)
 FEATURES = {
     "A": (3, "L", None),
-    "B": (4, "M", None),
-    "C": (4, "M", None),
-    "D": (3, "H", "B"),
+    "B": (3, "L", None),
+    "C": (3, "L", None),
+    "D": (4, "H", "B"),
     "E": (2, "L", None),
-    "F": (2, "H", "C"),
+    "F": (3, "H", "C"),
 }
 
 CAT_HIT = {"M": "Autonomy", "E": "Hierarchy", "P": "Community", "C": "Quality"}
@@ -152,7 +155,7 @@ class Ev:
 EVENTS = [
     Ev("STATUS MEETING", "M", 3, "TakeCharge", everyone=1, sev=1.5),
     Ev("BUDGET CUT", "M", 2, "TakeCharge", everyone=1, sev=0.6),
-    Ev("REORGANISED", "M", 2, "Withdraw", everyone=1, sev=1.2),
+    Ev("REORGANISED", "M", 2, "Engage", everyone=1, sev=1.2),
     Ev("THE AUDIT", "M", 2, None, everyone=1, sev=1.0),
     Ev("THE BIKESHED", "M", 1, "TakeCharge", hit="Quality", sev=0.7),
     Ev("LEADS FROM BEHIND", "M", 1, "Challenge", everyone=1, torso=False, sev=0.5),
@@ -167,14 +170,14 @@ EVENTS = [
     Ev("ALWAYS REACTING", "C", 1, "Challenge", sev=0.7),
     Ev("KNOWLEDGE HOARDING", "P", 2, "Support", sev=0.8),
     Ev("BURNOUT WARNING", "P", 2, "Support", sev=1.0),
-    Ev("MORE HANDS", "P", 2, "Withdraw", torso=False, sev=1.5),
+    Ev("MORE HANDS", "P", 2, "Engage", torso=False, sev=1.5),
     Ev("THE TEAM SPLITS", "P", 2, "Challenge", everyone=1, sev=1.2),
     Ev("A FLAT WEEK", "P", 1, "Challenge", everyone=1, sev=0.6),
     Ev("EQUIPMENT OUTAGE", "E", 3, "Support", everyone=1, sev=1.8),
-    Ev("OLD FOUNDATIONS", "E", 2, "Withdraw", sev=2.0),
+    Ev("OLD FOUNDATIONS", "E", 2, "Engage", sev=2.0),
     Ev("FALSE START", "E", 2, None, sev=1.0),
     Ev("EVERYTHING AT ONCE", "E", 3, "Challenge", everyone=1, sev=3.0),
-    Ev("SHAKY GROUND", "E", 3, "Withdraw", sev=2.0),
+    Ev("SHAKY GROUND", "E", 3, "Engage", sev=2.0),
 ]
 
 # Removal preference when an Event takes one of the week's cards away.
@@ -398,10 +401,11 @@ class Game:
         if not hero and not direct:
             c.cap_gain_week += 1
         self.m["capital_gained"] += amt
-        if c.torso == "Recognition" and c.capital > before:
-            others = [x for x in self.chars if x is not c]
-            if others:
-                self.w.witness[min(others, key=lambda x: x.mot).id] += 1
+        if c.capital > before:
+            for r in [x for x in self.chars if x.torso == "Recognition"]:
+                others = [x for x in self.chars if x is not r]
+                if others:
+                    self.w.witness[min(others, key=lambda x: x.mot).id] += 1
 
     def lower(self, track: str):
         cur = getattr(self, track)
@@ -489,9 +493,9 @@ class Game:
             self.zone_add(c, max(opts, key=lambda s: self.score_square(s, c)))
             learned += 1
             if c.base == "Bookish":
-                self.w.mot_adj[c.id] += 1
+                self.w.mot_adj[c.id] += R.base_like
             elif c.base == "HandsOn":
-                self.w.mot_adj[c.id] -= 1
+                self.w.mot_adj[c.id] -= R.base_dislike
         if learned:
             self.m["learn_done"] += 1
             self.m["squares_learned"] += learned
@@ -521,9 +525,9 @@ class Game:
             self.gain_capital(t, 1)
             self.m["teach_done"] += 1
             if t.base == "HandsOn":
-                self.w.mot_adj[t.id] += 1
+                self.w.mot_adj[t.id] += self.R.base_like
             elif t.base == "Bookish":
-                self.w.mot_adj[t.id] -= 1
+                self.w.mot_adj[t.id] -= self.R.base_dislike
         if not used_t:
             self.m["teach_wasted"] += 1
 
@@ -645,7 +649,7 @@ class Game:
                     c.flex = False
                     break
         if w in st.overtime_weeks:
-            who = [c for c in self.chars if not c.flex and c.mot >= 2]
+            who = [c for c in self.chars if not c.flex and c.mot >= 3]
             if who:
                 c = max(who, key=lambda x: x.mot)
                 self.add_mot(c, -1, "overtime")
@@ -773,8 +777,12 @@ class Game:
                 imm = None if e.hit else CAT_IMMUNE[e.cat]
                 if e.everyone and c.torso == imm:
                     loss = 0
+                    self.m["immune_saved"] += e.everyone
+                    self.m["immune_saved_" + c.torso] += e.everyone
                 else:
                     loss = e.everyone + (1 if c.torso == hit else 0)
+                    if c.torso == hit:
+                        self.m["hit_extra"] += 1
             if loss:
                 self.w.ev_loss[c.id] += loss
 
@@ -1060,9 +1068,6 @@ class Game:
             self.feat[k]["banked"] = True
             W.banked.append(k)
             self.last_bank_week = w
-            cand = [c for c in self.chars if c.onboarding_days == 0] or self.chars
-            if cand:
-                self.gain_capital(min(cand, key=lambda c: c.capital), 1)
         if w >= 2:
             if W.trust_up:
                 self.trust = min(R.ledger_max, self.trust + 1)
@@ -1091,9 +1096,7 @@ class Game:
         plan = self.plan_now
         if not self.chars:
             return
-        if "Plan" in plan and "Work" in plan and any(c.onboarding_days == 0 for c in self.chars):
-            self.gain_capital(min(self.chars, key=lambda c: c.capital), 1)
-        elif "Demo" in plan and W.celebrated:
+        if "Demo" in plan and W.celebrated:
             self.trust = min(self.R.ledger_max, self.trust + 1)
         elif "Coordinate" in plan and "Workshop" in plan:
             self.gain_capital(min(self.chars, key=lambda c: c.capital), 1)
@@ -1130,10 +1133,10 @@ class Game:
         R = self.R
         if not R.legs_tendencies or w < 2:
             return 0
-        if c.legs == "Withdraw":
+        if c.legs == "Engage":
             return 1 if w <= 3 else -1
         v = {"TakeCharge": self.trust, "Analyze": self.cap, "Support": self.sp, "Challenge": self.pool}[c.legs]
-        if v >= R.habit_at:
+        if v >= R.legs_strength_at:
             return 1
         if v <= R.low_band:
             return -1
@@ -1340,6 +1343,8 @@ class Game:
             "reflect_played": self.m["reflect_played"], "reflect_no_evidence": self.m["reflect_no_evidence"],
             "tr_well_skipped": self.m["tr_well_skipped"], "tr_wells_filled": len(self.wells),
             "tr_chances": self.m["tr_chances"], "tr_missed": self.m["tr_missed"],
+            "immune_saved": self.m["immune_saved"], "hit_extra": self.m["hit_extra"],
+            "immune_by": {t: self.m["immune_saved_" + t] for t in ("Autonomy", "Hierarchy", "Community", "Quality", "Recognition")},
             "tokens_reflect": self.m["tokens_reflect"],
             "lines_filled": self.m["lines_filled"], "stack_flips": self.m["stack_flips"],
             "zone_tiles": len(self.tiles), "squares_learned": self.m["squares_learned"],
@@ -1482,6 +1487,10 @@ def report(name: str, res: list, rules: Rules):
     flow = Counter()
     for r in res:
         flow.update(r["mot_flow"])
+    print("   IMMUNITY CHECK: Events spared immune Torsos %.1f Motivation a game (%s); the hit Torso lost %.1f extra" % (
+        mean(r["immune_saved"] for r in res),
+        ", ".join("%s %.1f" % (t, mean(r["immune_by"][t] for r in res)) for t in ("Autonomy", "Hierarchy", "Community", "Quality")),
+        mean(r["hit_extra"] for r in res)))
     print("   Motivation flow per game (all characters): " + ", ".join("%s %+.1f" % (k, v / n) for k, v in sorted(flow.items())))
     need_m, need_s = Counter(), Counter()
     for r in res:
@@ -1659,11 +1668,12 @@ def times_played(r: dict, card: str) -> int:
 def objective(res: list) -> float:
     # Share of games that reach the upper threshold (percent), plus a little mean score and all-six share as
     # tie-breakers, minus 15 for each Quality quit after a week without Work, 8 for each action card a game never plays,
-    # and 10 for each play of Plan or Align short of 2 or over 4.
+    # and 10 for each play of Plan or Align short of 2 or over 4, and 10 for each character who quits.
     missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
     off = mean(max(0, 2 - times_played(r, c)) + max(0, times_played(r, c) - 4) for r in res for c in ("Plan", "Align")) * 2
     return (share(res, lambda r: r["outcome"] == "thriving") + 0.2 * mean(r["score"] for r in res)
-            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing - 10 * off)
+            + 0.2 * share(res, lambda r: r["banked"] == 6) - 15 * mean(r["quality_quit_nowork"] for r in res) - 8 * missing - 10 * off
+            - 10 * mean(r["quits"] for r in res))
 
 
 OPT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "balance_sim_optimal.json")

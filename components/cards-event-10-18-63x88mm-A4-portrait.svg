@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 210 297">
 <title>Sheet 7 - Event cards 10-18, 63 x 88 mm (A4)</title>
 <desc>The second half of the Event deck. HERO now keys off the 5 Legs/Pressure-Response
-options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per option across the
+options only (Take Charge/Analyze/Support/Challenge/Engage), 3 cards per option across the
 18-card deck; FALSE START, and cards 17-18, have no HERO route at all.</desc>
 
 <style>
@@ -55,7 +55,7 @@ options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per optio
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-ppl"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">ENGAGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <use href="#cost2"/>
@@ -81,7 +81,7 @@ options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per optio
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">ENGAGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <use href="#cost2"/>
@@ -162,7 +162,7 @@ options only (Take Charge/Analyze/Support/Challenge/Withdraw), 3 cards per optio
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">ENGAGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
     <use href="#cost2"/>

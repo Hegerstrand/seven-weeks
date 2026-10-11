@@ -50,7 +50,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
   <text x="17" y="47" class="serif" font-size="4.8">Bookish</text>
   <line x1="17" y1="50" x2="55" y2="50" class="hair"/>
   <rect x="29.2" y="52.4" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
-  <text x="17" y="55" class="mono" font-size="3">LEARN: +1 MOTIVATION</text>
+  <text x="17" y="55" class="mono" font-size="3">LEARN: +2 MOTIVATION</text>
   <text x="17" y="60.2" class="serif" font-size="3.2">Theory first, then</text>
   <text x="17" y="64.6" class="serif" font-size="3.2">hands, eventually.</text>
   <rect x="29.2" y="68" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
@@ -61,7 +61,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
   <text x="53.5" y="47" class="serif" font-size="4.8">Hands-On</text>
   <line x1="53.5" y1="50" x2="91.5" y2="50" class="hair"/>
   <rect x="65.7" y="52.4" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
-  <text x="53.5" y="55" class="mono" font-size="3">TEACH: +1 MOTIVATION</text>
+  <text x="53.5" y="55" class="mono" font-size="3">TEACH: +2 MOTIVATION</text>
   <text x="53.5" y="60.2" class="serif" font-size="3.2">You fix it, then</text>
   <text x="53.5" y="64.6" class="serif" font-size="3.2">explain it - maybe.</text>
   <rect x="65.7" y="68" width="24.2" height="3.4" rx=".4" fill="#D3B1B1"/>
@@ -204,7 +204,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
   <rect x="160" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="163" y="147" class="serif" font-size="4.8">Recognition</text>
   <line x1="163" y1="150" x2="201" y2="150" class="hair"/>
-  <text x="163" y="156" class="mono" font-size="3">CAPITAL GAINS:</text>
+  <text x="163" y="156" class="mono" font-size="2.8">SOMEONE GAINS CAPITAL:</text>
   <text x="163" y="160.6" class="mono" font-size="3">NAME A TEAMMATE</text>
   <rect x="162.6" y="165.4" width="24.2" height="3.4" rx=".3" fill="#D3B1B1"/>
   <text x="163" y="168" class="mono" font-size="3">+1 MOTIVATION TO THEM</text>

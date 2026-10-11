@@ -95,12 +95,12 @@ to cancel it outright.
 **4 · The week runs** - Resolve whatever survived Adapt, then all five cards. **Order does not
 matter** - the week happened at once.
 
-**5 · Close the week** - **Bank** completed features (lift any lock, pay Capital) → **walk the
+**5 · Close the week** - **Bank** completed features (lift any lock) → **walk the
 Ledger** coins, at most one step each, and flip any that reached its ring → **Motivation as one
 net number**: −1 for the grind - every week, ±1 per matching Event category per Torso (check
 who was hit and who was immune), +1 if the Need was met.
 
-> bank first - it pays the capital the ledger needs.
+> bank first - it lifts locks and tells you whether Celebrate had something to mark.
 > apply motivation as one number, then check for zero.
 
 **Week 2:** the Ledger (with Standing and Capital), the Adaptability pool, your Need, and Shit

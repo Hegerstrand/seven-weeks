@@ -55,7 +55,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="45" class="s" font-size="4.2">Partner marks a square</text>
     <text x="5" y="50" class="s" font-size="4.2">up, down, left or right of</text>
     <text x="5" y="55" class="s" font-size="4.2">one you cover - <tspan font-weight="bold">any row</tspan>.</text>
-    <text x="5" y="60" class="m trust" font-size="3.2">DEAD IF TRUST ≤ 1</text>
+    <text x="5" y="60" class="m trust" font-size="3.2">DEAD IF TRUST 1 OR LESS</text>
     <rect x="27.7" y="63.24" width="26.3" height="3.04" rx=".4" fill="#D9D3C4"/>
     <text x="5" y="65.5" class="m q" font-size="2.9">EACH TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
     <text x="5" y="72" class="m q" font-size="2.9">ZONE:</text>
@@ -90,7 +90,7 @@ outer line. Print at 100%.</desc>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4">The field decides who speaks.</text>
     <g transform="translate(0,6)">
-    <text x="5" y="24" class="m" font-size="3.1">CAPITAL ≥ TABLE AVERAGE</text>
+    <text x="5" y="24" class="m" font-size="3.1">CAPITAL AT OR ABOVE AVERAGE</text>
     <rect x="4" y="29" width="50" height="9" rx="1.2" fill="#D9D3C4"/>
     <text x="5" y="36" class="s" font-size="6.4">+1 Capital</text>
     <text x="5" y="46" class="s" font-size="4.4">to one named team member.</text>
@@ -106,7 +106,7 @@ outer line. Print at 100%.</desc>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Ask what's not working -</text>
     <text x="5" y="28.3" class="s" font-size="4.2">you can only reflect on it.</text>
-    <text x="5" y="33" class="m" font-size="3">TRUST ≥ 3</text>
+    <text x="5" y="33" class="m" font-size="3">TRUST 3 OR MORE</text>
     <rect x="4" y="35" width="50" height="8.5" rx="1.2" fill="#B5C7CF"/>
     <text x="5" y="41.3" class="s adapt" font-size="7.4">+1 Adaptability</text>
     <text x="5" y="47.6" class="m q" font-size="2.8">LAST WEEK GAVE EVIDENCE?</text>

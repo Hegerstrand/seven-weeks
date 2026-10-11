@@ -106,9 +106,9 @@ implements, with the source printed on the board.
 
 | Track | Habit at the ring | Source | The claim being modelled |
 |---|---|---|---|
-| **Trust** | Psychological Safety | Edmondson 1999, *ASQ* 44(2) 350-383 | A shared belief that interpersonal risk is safe. It is the most-studied enabling condition in team-learning research - hence `Trust ≤ 1 → Teach does nothing`. |
+| **Trust** | Psychological Safety | Edmondson 1999, *ASQ* 44(2) 350-383 | A shared belief that interpersonal risk is safe. It is the most-studied enabling condition in team-learning research - hence `Trust 1 or less → Teach does nothing`. |
 | **Capability** | **Who Knows What** | Wegner 1986; Lewis 2003 - *transactive memory* | A group memory made of who holds which expertise, plus the metamemory to find it. Exactly what a Knowledge reaching **3 holders** produces. |
-| **Shared Practice** | Shared Repertoire | Lave & Wenger 1991; Wenger 1998 | The communal resources - routines, tools, language - a practice builds. Hence repeated Work pays at `≥4` and costs at `≤1`: a repertoire is exactly what makes the second one cheaper than the first. |
+| **Shared Practice** | Shared Repertoire | Lave & Wenger 1991; Wenger 1998 | The communal resources - routines, tools, language - a practice builds. Hence repeated Work pays at `4 or more` and costs at `1 or less`: a repertoire is exactly what makes the second one cheaper than the first. |
 | **Adaptability** | **Team Reflexivity** | West 1996 | Teams that overtly reflect on objectives and processes, *and change them*, outperform those that don't. Reflect grows the track; the track is the capacity to change the plan. |
 | **Standing** | **Authorized Voice** | Bourdieu 1991, *Language and Symbolic Power* | An utterance carries force from the speaker's position, not its content. Hence the Demo gate is **relative to the team average**, not absolute. |
 
@@ -141,7 +141,7 @@ in for psychological safety** - and it only moves through **Coordinate**, becaus
 isn't declared, it's built through repeated, low-stakes engagement. That's exactly how
 Wenger describes a community of practice forming.
 
-Its clearest mechanical expression is **Trust ≤ 1 → Teach does nothing**: without safety,
+Its clearest mechanical expression is **Trust 1 or less → Teach does nothing**: without safety,
 knowledge will not move, no matter how many person-days you spend pushing it.
 
 ## One borrowed law, and where it stands
@@ -174,7 +174,7 @@ that *late* reinforcement carries a coordination tax. See
 | Wenger | Legitimate peripheral participation | ✅ §12 Onboarding |
 | Wenger | Boundary encounters / brokering | ✅ Demo · the Replacement rule (§13) |
 | Wenger | Identity / becoming | ✅ Capital + the figure |
-| Edmondson | Psychological safety | ✅ Trust, and Trust ≤ 1 kills Learn |
+| Edmondson | Psychological safety | ✅ Trust, and Trust 1 or less kills Learn |
 | **Wegner / Lewis** | **Transactive memory** | ✅ The **Who Knows What** habit; Knowledge at 3 holders |
 | **West** | **Team reflexivity** | ✅ The **Team Reflexivity** habit; Reflect → Adaptability |
 | **Bourdieu** | **Authorized speaker** | ✅ The **Authorized Voice** habit; Demo gated on team average |

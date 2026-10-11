@@ -8,7 +8,7 @@ cards-habitus-parts, so all physical tiles pack the same. NEED (5 tiles, one per
 slots into the person board's NEED seat; HERO (5 tiles, one per Legs/Pressure-Response option)
 slots into the HERO seat. The HERO tiles use the same shape (hexagon) and pip-count-per-option
 as the HOW TO ADAPT box on Event cards (cards-event-01-09/10-18), so a tile and a matching
-Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 = Withdraw,
+Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 = Engage,
 5 = Challenge.</desc>
 
 <style>
@@ -144,7 +144,7 @@ Event card show the same code: 1 pip = Take Charge, 2 = Analyze, 3 = Support, 4 
 
   <rect x="164" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="203" y="96"/><use href="#p4" x="203" y="96.5"/>
-  <text x="167" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="197" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Withdraw</text>
+  <text x="167" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="197" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Engage</text>
   <line x1="167" y1="100" x2="205" y2="100" class="hair"/>
   <text x="186" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
   <text x="186" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>

@@ -87,7 +87,7 @@ typographic system.
 │                                         │
 │  Costs every character their            │  ← EB Garamond - the rule
 │  person-day. Everyone: −1 Motivation.   │
-│  Head = Withdraw: −2 instead.           │
+│  Legs = Engage: −2 instead.           │
 │                                         │
 │    the meeting is not about             │  ← Caveat, pencil grey, slightly askew
 │    information. it is about being       │

@@ -91,7 +91,7 @@ Full detail in [habitus-model.md](./habitus-model.md) (Bourdieu) and
 | Habitus | The five-part figure you build before any rule is read |
 | Field | The team itself |
 | Capital, and its convertibility | Teaching and delivering convert Knowledge into standing |
-| Capital as *position*, not substance | Demo needs Capital ≥ the team average |
+| Capital as *position*, not substance | Demo needs Capital at or above the team average |
 | **Illusio** | **Motivation - and why zero means you leave, not that you work badly** |
 | **Doxa** | **Events cannot be refused. The absence of that option is the mechanic.** |
 | **Symbolic violence** | **The team sidelines its own low-Capital character, unprompted** |

@@ -45,7 +45,8 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#D3CEDF"/>
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
-    <text x="5" y="49" class="s" font-size="4.4"><tspan class="trust">Trust ≤ 1</tspan>: Teach is dead.</text>
+    <text x="5" y="47.6" class="s" font-size="4.4"><tspan class="trust">Trust 1 or less</tspan>:</text>
+    <text x="5" y="53" class="s" font-size="4.4">Teach is dead.</text>
     <text x="5" y="58" class="m q" font-size="2.9">TRUST RISES AT WEEK CLOSE,</text>
     <text x="5" y="63" class="m q" font-size="2.9">WORKS FROM NEXT WEEK.</text>
     <text x="5" y="68" class="m q" font-size="2.9">1 RISE A WEEK, MAX.</text>

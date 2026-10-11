@@ -176,7 +176,7 @@ All cost the acting character their person-day. **Learn costs two** - see the no
 | **Work** | 1 person-day | Add **+1** to one feature's Work counter. Modified by: Capability (§7), your Knowledge (§3), your Head (§3), Technical skill (+1), and Unclear (−1). Minimum 0. |
 | **Align** | 1 person-day | Clear the **Unclear** flag from one feature. If no feature is Unclear: **+1 Trust** instead. |
 | **Coordinate** | 1 person-day each | **+1 Trust.** If **two or more** characters Coordinate on the same day, also **+1 Capability**. |
-| **Learn** | **2 person-days** | Name one Knowledge you hold and one other character - **both of you spend your day**, and they now hold it too. The **third** time a given Knowledge is taught to someone new, **+1 Capability** (once per Knowledge). **Learn does nothing while Trust ≤ 1.** |
+| **Learn** | **2 person-days** | Name one Knowledge you hold and one other character - **both of you spend your day**, and they now hold it too. The **third** time a given Knowledge is taught to someone new, **+1 Capability** (once per Knowledge). **Learn does nothing while Trust is 1 or less.** |
 | **Rest** | 1 person-day | **+2 Motivation** to yourself (cap 5), and you take no weekly grind loss this week (§7). |
 
 Learn costing both people is deliberate: teaching is the most expensive thing in the game, and
@@ -190,12 +190,12 @@ Each track may rise by at most **1 per day**, no matter how many person-days pus
 ## 7. Team State, Motivation, and the grind
 
 ### Capability (0-5, starts 2)
-- **≥ 4** → every Work action produces **+1**.
-- **≤ 1** → every Work action produces **−1** (min 0).
+- **4 or more** → every Work action produces **+1**.
+- **1 or less** → every Work action produces **−1** (min 0).
 
 ### Trust (0-5, starts 2)
-- **≥ 4** → once per week, cancel one negative Event effect entirely.
-- **≤ 1** → **Learn does nothing.** Knowledge won't move through a team that doesn't trust
+- **4 or more** → once per week, cancel one negative Event effect entirely.
+- **1 or less** → **Learn does nothing.** Knowledge won't move through a team that doesn't trust
   each other.
 
 ### Motivation (0-5, starts 3) - and the weekly grind

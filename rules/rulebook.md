@@ -5,7 +5,8 @@ whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
 > ## BALANCE PASS (2026-10-11)
-> **Team Score** now counts **10 per Habit held**, and has **two thresholds**: 5 × characters − 15 (Sustainable
+> **Motivation economy:** Bookish gets **+2** for Learn and Hands-On **+2** for Teach (their dislike stays −1), and a Legs
+> strength now pays at track **3 or more** instead of 4, §5. **Team Score** now counts **10 per Habit held**, and has **two thresholds**: 5 × characters − 15 (Sustainable
 > Performance) and 5 × characters + 45 (Sustainable High Performance), §16. **Celebrate** gives +1 only to
 > characters on 3 or less and only if there is something to celebrate (a feature banked, or every Event
 > cancelled), §7. **Reflect** with evidence also gives +1 Motivation to characters on 3 or less, fills the
@@ -38,7 +39,7 @@ whenever a playtest changes a rule, and log the change in
 > are printed in the Ledger colours of what they pay (one-person face Capability, stacked face
 > Shared Practice, §8), and the printed explanations of what the Ledger reads off the Zone
 > (leaflet, THE DEVELOPMENT, the tile sheet, the Teach and Learn cards) use the §8 wording. Also
-> no rule change: Trust ≤ 1 stops only **Teach** (never Learn), and Teach is listed among the cards
+> no rule change: Trust 1 or less stops only **Teach** (never Learn), and Teach is listed among the cards
 > that open in week 3 (§3.0); Plan is not a week-1 card on any printed board.
 >
 > **Rulebook brought in line with the printed cards and boards (2026-10-10).** The cards and boards
@@ -147,7 +148,7 @@ whenever a playtest changes a rule, and log the change in
 > checked once a week, at close-the-week step 3 (§5, §13); the weekly turn is now a printable
 > checklist (§6.1) and lives on every person board. Open items from the playtest are in the log.
 
-> **v0.30 - Reflect gated; Align/Coordinate card-text fixes.** Reflect now needs **Trust ≥ 3**
+> **v0.30 - Reflect gated; Align/Coordinate card-text fixes.** Reflect now needs **Trust 3 or more**
 > to give its +1 Adaptability (previously unconditional) - a genuine after-action review needs
 > enough psychological safety in the room to say what didn't work; earlier than that, it's just
 > a meeting. Its Shared Practice bonus trigger changed from "a bank or an Event resolved since
@@ -160,7 +161,8 @@ whenever a playtest changes a rule, and log the change in
 > **v0.29 - Combos, a fifth reveal at week 5.** "Weeks 5-7 are nothing new" is no longer quite
 > true: week 5 now opens **Combos** (§18.1) - two named triggers (an Activity pair, or an
 > Activity paired with Hero/Adapt/Need) landing in the same week pay a small, flat, always-the-
-> same bonus. Maximum one Combo per team per week. Seven combos to start: Work+Plan,
+> same bonus. Maximum one Combo per team per week. Seven combos to start (Work+Plan was later
+> dropped when banking and Work stopped paying Capital): Work+Plan,
 > Teach+Learn, Demo+Celebrate, Coordinate+Workshop, Hero+Celebrate, Adapt-cancel+Workshop, and
 > Need-met+Celebrate. Deliberately excludes a Habit-flip combo - Vindication (§5) already pays
 > that trigger once, and a Combo on top would double-pay it.
@@ -655,7 +657,7 @@ currency, so three Workshops are three tokens - but tokens only arrive **when th
 
 | Play | Adds |
 |---|---|
-| **Reflect** | 1 token, if Trust ≥ 3 (it also fills a Team Reflexivity well when last week gave evidence, §18) |
+| **Reflect** | 1 token, if Trust is 3 or more (it also fills a Team Reflexivity well when last week gave evidence, §18) |
 | **Workshop** | 1 token, unconditionally |
 | **Align** | 3 tokens, **paid for in Motivation**: every character pays 1 (§7) |
 
@@ -832,18 +834,17 @@ into once the team recognises them.
 | Trigger | What converts |
 |---|---|
 | You taught on a **Teach** card this week. | Knowledge → standing. You give the know-how away and get standing back. |
-| A feature you played a **Work** card on was **banked** this week. | Delivered work → standing. |
 | You led a **Demo**. | A public success → standing. |
 | A **habitus strength** of yours visibly worked in front of the team - a Take Charge call that landed, calling out Knowledge Hoarding. | Disposition → standing. |
 | **Cross-Trained** - you just covered a square in your **3rd row** of your SKILLS grid (§8), once per character, whenever it first happens. | Breadth → standing. Not the team's Capability, *yours* - the moment you stop being fixed to one fragment of the work. |
 | You paid the Motivation for **Take One For The Team** (§6.1) this week. | Personal sacrifice → standing. You spent your own Motivation so the team's Trust could rise; the team saw it cost you something. |
 
-All six require the team to **witness** it - no exceptions. Private competence earns nothing -
+All five require the team to **witness** it - no exceptions. Private competence earns nothing -
 recognition is what makes standing exist at all. **Recognition (the Torso) leans into this
-instead of opting out of it**: whenever one of their own six triggers fires, witnessed as
-normal, they **name the teammate who witnessed it** - that teammate gains **+1 Motivation**.
-Being seen is relational: crediting the person who saw it back is the one thing none of the
-other five triggers ask for, and Recognition is the one habitus built to do it anyway.
+instead of opting out of it**: whenever **someone gains Capital**, each Recognition character
+**names a teammate** - that teammate gains **+1 Motivation**.
+Being seen is relational: crediting a teammate back is the one thing none of the
+other four triggers ask for, and Recognition is the one habitus built to do it anyway.
 
 **Losing Capital.** No weekly cap:
 - A habitus **tendency** of yours fired publicly against the team's wishes: **−1**.
@@ -882,7 +883,7 @@ The Hero panel on the person board opens in **week 3** (§3.0); the Events of we
 with adapt tokens alone.
 
 Every Event card names one of the five **Pressure Response** options (Take Charge / Analyze /
-Support / Challenge / Withdraw). A character whose **Legs** is that Pressure Response may, **once per game**, spend their
+Support / Challenge / Engage). A character whose **Legs** is that Pressure Response may, **once per game**, spend their
 **Hero** to **cancel that Event outright** - no Adaptability paid, nothing resolved. They gain
 **+2 Capital**, and **one other character of their choosing gains +1 Motivation**: somebody
 saw it, and it mattered to them. **The one exception is a Competitive Base** (§5.2), whose Hero
@@ -920,7 +921,7 @@ tendency's price.
 
 > **Elite Athlete, revisited:** when the team is under real pressure (X) and a character's
 > Legs is Take Charge (Y):
-> - If **Capital ≥ the team average**: they get +1 immediate Work output - the team accepts
+> - If **Capital is at or above the team average**: they get +1 immediate Work output - the team accepts
 >   the lead.
 > - If **below average**: no Work bonus. The team hesitates or pushes back, and the **−1
 >   Trust** tendency still applies if no Knowledge holder was consulted.
@@ -933,10 +934,10 @@ Capital isn't a substance you accumulate; it's a **position in a distribution**.
 is how much you hold compared to everyone else in this particular field - and the field here
 is this team.
 
-> **Demo requires Capital ≥ the team's average Capital**, counting every character still on
+> **Demo requires Capital at or above the team's average Capital**, counting every character still on
 > the team. Check it when the week is laid out (§6.1 phase 1).
 >
-> The same test replaces every other "Capital ≥ 3" in the game, including the Take Charge
+> The same test replaces every other "Capital of 3 or more" in the game, including the Take Charge
 > pattern above.
 
 At setup everyone sits at 0, which *is* the average - so **everyone qualifies and nothing is
@@ -961,7 +962,7 @@ it's a real rule.
 > [../docs/theoretical-sources.md](../docs/theoretical-sources.md).
 
 > **Not yet in play - sponsorship.** A researched option, held back until a playtest shows
-> Capital genuinely concentrating: *a character with Capital ≥ 4 may be named alongside the
+> Capital genuinely concentrating: *a character with Capital 4 or more may be named alongside the
 > presenter to sponsor a lower-Capital character's Demo, which then ignores the threshold.
 > Success gives the presenter +2 instead of +1; failure costs the **sponsor** −1 as well.* This is
 > Bourdieu's **consecration** - the established lending legitimacy to a newcomer, and carrying
@@ -983,8 +984,8 @@ character's own Motivation for them.
 
 | Base | Strength | Tendency |
 |---|---|---|
-| **Bookish** | **+1 Motivation** when you play Learn | **−1 Motivation** when you play Teach |
-| **Hands-On** | **+1 Motivation** when you play Teach | **−1 Motivation** when you play Learn |
+| **Bookish** | **+2 Motivation** when you play Learn | **−1 Motivation** when you play Teach |
+| **Hands-On** | **+2 Motivation** when you play Teach | **−1 Motivation** when you play Learn |
 | **Sheltered** | The weekly grind (§5) doesn't affect your Motivation | **You never rise above 3 Motivation** - insulated from the highs as much as the lows |
 | **Dependable** | **TAKE ONE FOR THE TEAM**, printed on the card: spend **3 Motivation** and the team gets **+1 Trust** and you gain **+1 Capital** (Trust still rises at most once a week, §7) | **The price is yours alone:** 3 Motivation, against 1 for the same action when nobody holds this card |
 | **Competitive** | **Your Hero is reusable** - every time an Event names your Pressure Response, you may play it again (still needs 3 Motivation, every time) | **ANOTHER PLAYS HERO:** whenever a *different* character plays their Hero, you lose **1 Motivation** - you needed that win |
@@ -993,16 +994,16 @@ Each **Legs/Pressure Response** pairs the same way, keyed to whichever Team Stat
 it reads as most under pressure - high, it lands as **+1 Motivation**; low, the same instinct
 reads as overreach for **−1 Motivation**:
 
-| Legs | Track | Strength (track ≥ 4) | Tendency (track ≤ 1) |
+| Legs | Track | Strength (track 3 or more) | Tendency (track 1 or less) |
 |---|---|---|---|
 | **Take Charge** | Trust | +1 Motivation - the team backs your call | −1 Motivation - it reads as overreach |
 | **Analyze** | Capability | +1 Motivation - the question was worth asking | −1 Motivation - analysis paralysis |
 | **Support** | Shared Practice | +1 Motivation - people leave the room feeling better | −1 Motivation - it reads as hollow |
 | **Challenge** | Adaptability pool | +1 Motivation - the thing everyone was quietly worried about | −1 Motivation - it reads as obstruction |
-| **Withdraw** | The week, not a track | **+1 Motivation in weeks 1-3** - you'd rather be good at it than explain how | **−1 Motivation from week 4** - the field has moved on and the same instinct reads as unavailable |
+| **Engage** | The week, not a track | **+1 Motivation in weeks 1-3** - you throw yourself in while the project is new | **−1 Motivation from week 4** - the field has moved on and the same instinct reads as overreach |
 
-For **Challenge** the "track" is the Adaptability pool: strength at **4 or more tokens**,
-tendency at **1 or none**. **Withdraw** reads the week number instead of a track: it pays early
+For **Challenge** the "track" is the Adaptability pool: strength at **3 or more tokens**,
+tendency at **1 or none**. **Engage** reads the week number instead of a track: it pays early
 and costs late (Bourdieu's hysteresis - a disposition that outlives the field that rewarded it).
 
 All five Base options are personal and apply only to your own Motivation pool, **except that
@@ -1151,10 +1152,10 @@ days of a team's time. They are not a sequencing puzzle.
 
 **Then close the week**, in this order:
 1. **Bank** any feature whose Work counter reached its Work Cost (§10) - lift the lock tile off
-   anything it unlocks, and pay Capital to whoever worked on it.
+   anything it unlocks.
 2. **Walk the Ledger** coins, at most one step each, and flip any that reached its ring (§18).
-   **Add this week's adapt tokens** to the pool (Align, Workshop, and Reflect if Trust
-   ≥ 3 - cap 6; a Reflect token may go to the Team Reflexivity lane instead, §18).
+   **Add this week's adapt tokens** to the pool (Align, Workshop, and Reflect if Trust is
+   3 or more - cap 6; a Reflect also fills a Team Reflexivity well, §18).
 
 **Last, count Motivation (step 7, the grind).** It is its own step, after the Ledger, and it is
 done **as a single net number per character:** −1 (the weekly grind), ±1 per matching Event
@@ -1164,7 +1165,7 @@ with no Work added to a feature this week takes −1 instead), −1 if they are 
 somebody else played a Hero this week. Apply the net number, then any character at 0 quits -
 this is the only moment a quit is checked. Then **advance the week.**
 
-Banking comes first because it pays the Capital that feeds the Ledger's Standing row. **The
+Banking comes first because a banked feature lifts its lock and decides whether Celebrate had something to mark. **The
 project ends when Week 7 closes.**
 
 > **Why weeks and not days.** You commit all five days *before* you know what's coming. Plans
@@ -1205,9 +1206,9 @@ character to receive it.
 | **Coordinate** | **+1 Trust.** |
 | **Align** | **Every character pays 1 Motivation.** **+3 Adaptability.** The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. |
 | **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
-| **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover on their own SPECIMEN, **any row**, immediately **up, down, left or right** of one *the teacher* covers - **then cover each on the Zone**. **Both teachers +1 Capital.** **Does nothing while Trust ≤ 1.** |
-| **Demo** | Needs **Capital ≥ the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
-| **Reflect** | Needs **Trust ≥ 3**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
+| **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover on their own SPECIMEN, **any row**, immediately **up, down, left or right** of one *the teacher* covers - **then cover each on the Zone**. **Both teachers +1 Capital.** **Does nothing while Trust is 1 or less.** |
+| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**, and the feature ignores the next NEGATIVE FEEDBACK. |
+| **Reflect** | Needs **Trust 3 or more**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **+1 Adaptability**, unconditionally - replaced Meet's Working/Record split (§9, v0.28). |
 | **Celebrate** | **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. |
 
@@ -1533,7 +1534,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 |---|---|---|---|---|---|
 | STATUS MEETING | Management | 3 | Take Charge | Remove one of the week's five cards. Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
 | BUDGET CUT | Management | 2 | Take Charge | Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
-| REORGANISED | Management | 2 | Withdraw | Everyone −1 Motivation; the team loses 1 Shared Practice. | Autonomy extra, Hierarchy immune |
+| REORGANISED | Management | 2 | Engage | Everyone −1 Motivation; the team loses 1 Shared Practice. | Autonomy extra, Hierarchy immune |
 | THE AUDIT | Management | 2 | none | One card this week must be a Workshop, or the team loses a card, 1 Trust and 1 Motivation. | Autonomy extra, Hierarchy immune |
 | THE BIKESHED | Management | 1 | Take Charge | The easiest unbanked feature gets +1 Work; the hardest gets nothing this week. | Quality −1 |
 | LEADS FROM BEHIND | Management | 1 | Challenge | Everyone −1 Motivation except whoever has the highest Capital. | none |
@@ -1548,14 +1549,14 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | ALWAYS REACTING | Customer | 1 | Challenge | The Adaptability pool loses 1 token. | Quality −1 |
 | KNOWLEDGE HOARDING | People | 2 | Support | Remove all Teach cards this week. | Community −1 |
 | BURNOUT WARNING | People | 2 | Support | Anyone on 1 Motivation leaves next week unless the team plays a Celebrate. | Community −1 |
-| MORE HANDS | People | 2 | Withdraw | The feature with the most Work this week has that Work halved (round down). | none |
+| MORE HANDS | People | 2 | Engage | The feature with the most Work this week has that Work halved (round down). | none |
 | THE TEAM SPLITS | People | 2 | Challenge | Two characters may not take the same feature; the team loses 1 Trust; everyone −1 Motivation. | Community extra, Quality immune |
 | A FLAT WEEK | People | 1 | Challenge | Everyone −1 Motivation; a feature banked this week is no reason to Celebrate. | Community extra, Quality immune |
 | EQUIPMENT OUTAGE | Environment | 3 | Support | Remove one Work card. Everyone −1 Motivation. | Hierarchy extra, Autonomy immune |
-| OLD FOUNDATIONS | Environment | 2 | Withdraw | The feature with the most Work already banked gains +2 Work Cost. | Hierarchy −1 |
+| OLD FOUNDATIONS | Environment | 2 | Engage | The feature with the most Work already banked gains +2 Work Cost. | Hierarchy −1 |
 | FALSE START | Environment | 2 | none | The first Work card this week produces nothing. | Hierarchy −1 |
 | EVERYTHING AT ONCE | Environment | 3 | Challenge | No feature may take more than 1 Work this week; everyone −1 Motivation. | Hierarchy extra, Autonomy immune |
-| SHAKY GROUND | Environment | 3 | Withdraw | The team loses 1 Capability (the Ledger coin moves down one, permanently). | Hierarchy −1 |
+| SHAKY GROUND | Environment | 3 | Engage | The team loses 1 Capability (the Ledger coin moves down one, permanently). | Hierarchy −1 |
 
 **Counts:** 4 cost 1, 12 cost 2, 8 cost 3, and THE WOLF has no cost (average 2.2 over the 24 that
 can be bought out). 20 cards have a Hero route and 5 do not (FALSE START, THE AUDIT, THE DATE
@@ -1568,7 +1569,7 @@ printed.
 
 ### Example event cards
 > **ANOTHER STATUS MEETING** - remove one of this week's five cards. Everyone: −1
-> Motivation, except Legs = **Withdraw**: −2 instead. (Forced synchronous social time costs
+> Motivation, except Legs = **Engage**: −2 instead. (Forced synchronous social time costs
 > more when your instinct is to solve things alone.)
 
 > **BOSS MICROMANAGES** - everyone: −1 Motivation, except Torso = **Autonomy**: −2 instead
@@ -1583,7 +1584,7 @@ printed.
 > this becomes a habit, the team is running on one person's unpaid hours.
 
 > **KNOWLEDGE HOARDING** - a specialist won't share critical Knowledge; nobody else can use
-> it. If Trust ≥ 4, the team may call this out.
+> it. If Trust is 4 or more, the team may call this out.
 
 > **RETIRED: NEW TEAM MEMBER.** Onboarding is no longer triggered by drawing a card - see
 > §13's Replacement rule. This card slot now carries **REINFORCEMENTS ARRIVE** (Brooks's Law).
@@ -1604,7 +1605,7 @@ printed.
 > **EXECUTIVE VISIT** - a Demo is expected within 2 days. If it doesn't happen: −1
 > Motivation (everyone).
 
-> **BUDGET CUT** - −1 Motivation (everyone), once. If Trust ≥ 4, the team may spend a
+> **BUDGET CUT** - −1 Motivation (everyone), once. If Trust is 4 or more, the team may spend a
 > Coordinate day to turn this into no effect instead.
 
 > **MANAGEMENT PRAISE** - if a feature was completed this week: +1 Motivation (everyone).
@@ -1734,7 +1735,7 @@ properly?"*
 > missing, and only time spent together (Learn/Coordinate) closes that gap. See
 > [../docs/theoretical-sources.md](../docs/theoretical-sources.md).
 
-> **Sponsorship.** A character with Capital ≥ 4 may spend one of the two onboarding days
+> **Sponsorship.** A character with Capital 4 or more may spend one of the two onboarding days
 > paired with the newcomer (as a Coordinate or Learn naming both of them). If they do,
 > **Onboarding finishes in 1 day instead of 2** - an established member's own standing can
 > vouch for an outsider and shorten the gap, the same concept parked for Demo in §5.1.
@@ -1874,7 +1875,6 @@ pair is satisfied, the team names which one counts. No stacking, no hidden bookk
 
 | Combo | Trigger (same week) | Reward |
 |---|---|---|
-| **Work + Plan** | Both played on the same feature. (Plan's own +1 Extra Work bonus, §7, already applies regardless of week - this is a second, separate reward layered on top from week 5 on.) | +1 Capital to whoever played the Work |
 | **Demo + Celebrate** | Both played | +1 Trust |
 | **Coordinate + Workshop** | Both played | +1 Capital to one named character |
 | **Hero + Celebrate** | A character spends their Hero to cancel an Event, and the team plays Celebrate | +1 Motivation to everyone |

@@ -22,8 +22,8 @@ Law** - aren't thinkers at all; see the notes after the roster below.
 
 **The three the game is built on:**
 - **Pierre Bourdieu** - habitus, capital, field. Why the figure is built before a single project
-  rule is read, why Capital is never an absolute number, why Demo needs Capital ≥ the team
-  average rather than "≥ 3." Full detail: [habitus-model.md](./habitus-model.md).
+  rule is read, why Capital is never an absolute number, why Demo needs Capital at or above the team
+  average rather than "3 or more." Full detail: [habitus-model.md](./habitus-model.md).
 - **Lev Vygotsky** - the zone of proximal development. Why Learn costs the teacher a day too,
   why a Knowledge you just received can't be taught again this week.
 - **Etienne Wenger**, with **Lave** for legitimate peripheral participation - communities of

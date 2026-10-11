@@ -141,7 +141,7 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
     <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">or</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-env"/>
-    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">WITHDRAW</text>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q4"/></g><text x="23" y="67" class="vl">ENGAGE</text>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl capab">WHO KNOWS WHAT</text>
     <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
     <use href="#cost3"/>

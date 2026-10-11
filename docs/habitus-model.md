@@ -16,7 +16,7 @@ is capability, and it's kept separate on purpose:
 | **Base** | Upbringing / family background | Social conditions, incorporated history | Starting assumptions, social capital, what feels familiar |
 | **Head** | Education & inclination | Cultural capital, dispositions | What kinds of problems the character is naturally good at |
 | **Torso** | Values | Durable preferences | What feels *right* to do, and what causes tension |
-| **Legs** | Instinct - how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Withdraw) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with those Legs can cancel it. |
+| **Legs** | Instinct - how they react under pressure | Schemes of perception, bodily hexis | How the character reads a situation and reacts on instinct. This is where **Pressure Response** (Take Charge / Analyze / Support / Challenge / Engage) becomes something physical instead of a line on a card - and it's what the **Hero** move (rulebook §5.1) keys off: every Event names one Pressure Response, and only a character with those Legs can cancel it. |
 | **Item** | Skills (held) | Capability, not habitus | What the character can actually *do* |
 
 Arms are sculpted into the Torso, not a separate swappable piece. A loose arm is fragile to
@@ -42,7 +42,7 @@ micromanaging boss in the room.
   exactly five, because Torso is also **Need** (see below): whichever value you're dealt
   is both how Events land on you and what you need from the team from week 2 on.
 - **Legs - Instinct, Pressure Response (pick one):** Take Charge / Analyze / Support / Challenge /
-  Withdraw - sculpted as its own stance or pose. Also what Event cards name for the
+  Engage - sculpted as its own stance or pose. Also what Event cards name for the
   **Hero** move (rulebook §5.1) - exactly one of these five, once per game, cancels an Event.
 - **Item - Værktøjer & færdigheder (skills, 2-3):** e.g. technical, planning, facilitation,
   communication, leadership, analysis, customer, quality - shown as a small held prop (laptop,
@@ -78,9 +78,9 @@ sides - never two unrelated mechanics bolted together, and never two different c
 > every row, not just Base's exception** - Head, Torso and any future row pair strength and
 > tendency on one currency, opposite condition, same as Learn/Teach.
 
-> **Elite Athlete - Strength:** when the team is under real pressure and **Trust ≥ 4**, you
+> **Elite Athlete - Strength:** when the team is under real pressure and **Trust 4 or more**, you
 > take charge and it lands: **+1 Motivation**.
-> **Elite Athlete - Tendency:** take the same charge with **Trust ≤ 1**, and it reads
+> **Elite Athlete - Tendency:** take the same charge with **Trust 1 or less**, and it reads
 > as overreach instead: **−1 Motivation**.
 
 This pairs with the Head/Pressure Response choice - "Elite Athlete" naturally reads as Take
@@ -199,12 +199,12 @@ People carry on doing the thing that used to work.
 | **Habitus** | ✅ The five-part figure |
 | **Field** | ✅ The team itself (§5.1) |
 | **Capital - forms and convertibility** | ✅ Knowledge/Trust → Capital, teaching and delivering |
-| **Capital as relational position** | ✅ Demo needs ≥ the team average |
+| **Capital as relational position** | ✅ Demo needs Capital at or above the team average |
 | **Consecration** | ⏸ Sponsorship, written but deliberately inactive (§5.1) |
 | **Illusio** | ✅ Motivation, incl. quitting at 0 - now named |
 | **Doxa** | ✅ Events cannot be refused - now named |
 | **Symbolic violence / misrecognition** | ✅ The relative Capital gate - now named |
-| **Hysteresis** | ✅ The Withdraw Head card - strength stops working from week 4, tendency doesn't |
+| **Hysteresis** | ✅ The Engage Legs card - strength stops working from week 4, tendency doesn't |
 
 
 This turns the trigger pattern into three parts, not two: **when [Event X] happens, if a

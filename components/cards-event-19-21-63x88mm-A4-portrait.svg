@@ -193,10 +193,9 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">1 less if the plinth has ≤ 1 feature</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="8" y="75" class="lb">OR</text><text x="20" y="75" class="m" font-size="2.6">PLINTH ≤ 1 FEATURE</text>
     <use href="#cost2"/>
     </g>
   </g>

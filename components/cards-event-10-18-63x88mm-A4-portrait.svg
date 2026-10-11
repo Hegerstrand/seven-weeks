@@ -2,7 +2,8 @@
 <title>Sheet 7 - Event cards 10-18, 63 x 88 mm (A4)</title>
 <desc>The second half of the Event deck. HERO now keys off the 5 Legs/Pressure-Response
 options only (Own It/Analyze/Support/Speak Up/Engage), 3 cards per option across the
-18-card deck; FALSE START, and cards 17-18, have no HERO route at all.</desc>
+18-card deck; FALSE START and THE AUDIT have no HERO route at all. THE DATE MOVES UP has no ADAPT cost:
+only a Speak Up Hero or Authorized Voice cancels it.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -244,10 +245,9 @@ options only (Own It/Analyze/Support/Speak Up/Engage), 3 cards per option across
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">1 less if the plinth has ≤ 1 feature</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-mgmt"/>
     <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl shpra">SHARED REPERTOIRE</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 1 INSTEAD</text>
+    <text x="8" y="75" class="lb">OR</text><text x="20" y="75" class="m" font-size="2.6">PLINTH ≤ 1 FEATURE</text>
     <use href="#cost2"/>
     </g>
   </g>
@@ -259,20 +259,22 @@ options only (Own It/Analyze/Support/Speak Up/Engage), 3 cards per option across
     <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">THE DATE</text>
     <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">MOVES UP</text>
     <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
-    <text x="5" y="28" class="s" font-size="4.2">This one is not about any</text>
-    <text x="5" y="32.8" class="s" font-size="4.2">of you: every Work card</text>
-    <text x="5" y="37.6" class="s" font-size="4.2">this week produces 1 less</text>
-    <text x="5" y="42.4" class="s" font-size="4.2">(never below 0).</text>
+    <text x="5" y="28" class="s" font-size="4.2">The customer wants it</text>
+    <text x="5" y="32.8" class="s" font-size="4.2">a week early.</text>
     <g transform="translate(0,9.5)">
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <text x="5" y="28" class="s" font-size="4.4">The <tspan font-weight="bold">deadline moves one</tspan></text>
+    <text x="5" y="33" class="s" font-size="4.4"><tspan font-weight="bold">week closer</tspan>: move the</text>
+    <text x="5" y="38" class="s" font-size="4.4">week marker down a box.</text>
+    <text x="5" y="43" class="s" font-size="4.4">Not in the last week.</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
-    <text x="8" y="66" class="s q" font-size="2.6" font-style="italic">No hero can save this.</text>
+    <text x="8" y="62.5" class="m" font-size="4">SAY NO</text><text x="27" y="62.5" class="m q" font-size="2" letter-spacing=".2">NO TOKENS</text>
+    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">tokens cannot buy this off</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
-    <text x="8" y="71.5" class="lb">HABIT</text><text x="20" y="71.5" class="vl adapt">TEAM REFLEXIVITY</text>
-    <text x="20" y="75" class="m" font-size="2.6">SO IT COSTS 2 INSTEAD</text>
-    <use href="#cost3"/>
+    <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">SPEAK UP</text>
+    <text x="8" y="71.5" class="lb">OR</text><text x="20" y="71.5" class="vl">AUTHORIZED VOICE</text>
+    <text x="20" y="75" class="m" font-size="2.6">ONCE A WEEK</text>
     </g>
   </g>
   <!-- Adaptability cost: one rounded square per adapt token, same shape as the pool wells on board 2 -->

@@ -98,7 +98,7 @@ Every card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which mark
   <text x="126.5" y="53.4" class="mono" font-size="2.8">STANDING</text>
   <text x="126.5" y="56.5" class="mono" font-size="2.8">3 OR MORE:</text>
   <rect x="126.1" y="57.2" width="24.2" height="3" rx=".35" fill="#D3B1B1"/>
-  <text x="126.5" y="59.6" class="mono" font-size="2.8">+1 MOTIVATION</text>
+  <text x="126.5" y="59.6" class="mono" font-size="2.8">+2 MOTIVATION</text>
   <line x1="126.5" y1="63.2" x2="164.5" y2="63.2" class="hair"/>
   <rect x="126.1" y="64.6" width="14.6" height="3" rx=".3" fill="#D9D3C4"/>
   <text x="126.5" y="67" class="mono" font-size="2.8">STANDING</text>

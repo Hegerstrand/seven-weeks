@@ -43,6 +43,7 @@ SHEETS = [
     "board-4-BACK-the-zone-A4-landscape.svg",
     "board-4b-the-zone-payoff-127x104mm-A4-landscape.svg",
     "zone-tiles-A4-landscape.svg",
+    "markers-coins-clock-capital-zone-A4-landscape.svg",
     "board-person-170x141mm-A4-portrait.svg",
     "cards-activity-63x88mm-A4-portrait.svg",
     "cards-activity-5b-63x88mm-A4-portrait.svg",

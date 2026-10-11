@@ -96,7 +96,7 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
     <text x="5" y="28.3" class="s" font-size="4.2" font-style="italic">before any work gets done.</text>
     <rect x="4" y="33" width="50" height="8" rx="1.2" fill="#D9D3C4"/>
     <text x="5" y="39" class="s" font-size="5">Bring in a replacement</text>
-    <text x="5" y="45.5" class="s" font-size="4">Motivation 4. Capital 0.</text>
+    <text x="5" y="45.5" class="s" font-size="4">Motivation 5. Capital 0.</text>
     <line x1="5" y1="50" x2="58" y2="50" class="h"/>
     <rect x="4" y="52" width="50" height="4" rx=".8" fill="#D3B1B1"/>
     <text x="5" y="55" class="m q" font-size="3.1">WHEN SOMEONE QUITS</text>

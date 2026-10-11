@@ -108,7 +108,7 @@ on the reverse.</desc>
 <text x="19" y="274.8" class="s" font-size="4.2"><tspan font-weight="bold">The grind: everyone loses 1 Motivation.</tspan> Empty means they leave.</text>
 <text x="19" y="278.8" class="m q" font-size="2.8">FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET</text>
 <text x="13" y="284" class="m" font-size="3.6">4</text>
-<text x="19" y="284" class="s" font-size="4.2"><tspan font-weight="bold">Move the week marker.</tspan> The deadline does not move.</text>
+<text x="19" y="284" class="s" font-size="4.2"><tspan font-weight="bold">Move the week marker</tspan> one box down.</text>
 <text x="164.3" y="289" class="m q" font-size="2.6" text-anchor="end">FULL DETAIL ON THE SPECIMEN BOARD</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->

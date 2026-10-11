@@ -5,9 +5,9 @@ whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
 > ## BALANCE PASS (2026-10-11)
-> **THE AUDIT and EVERYONE IS EQUAL cost 1 less Adaptability while the plinth holds 1 feature or none** (so 1 instead of 2 in the opening weeks; it stacks with a Habit), §6.1, §11.> **Demo opens in week 2** (it was week 3). **Only Work meets the Quality Need** (a Demo does not, §5). **The Challenge instinct is now Speak Up and reads Standing**, not the Adaptability pool (§5.2). **The Take Charge instinct is now Own It** (it reads Trust).
+> **Speak Up pays +2 Motivation** at Standing 3 or more (every other Legs pays +1), §5.2. **STATUS MEETING now costs only Autonomy characters 1 Motivation** (it used to cost everyone 1, Autonomy 2, Hierarchy none), §11.> **THE DATE MOVES UP now moves the deadline one week closer** (the week marker goes one box down on THE CLOCK, for good), and it does nothing in the last week. **Only someone saying no cancels it: a Speak Up Hero or Authorized Voice.** Adaptability tokens, Habits and Trust cannot buy it off, and it has no ADAPT cost any more (it used to cost 3 and make every Work card this week produce 1 less), §6.1, §11.> **THE AUDIT and EVERYONE IS EQUAL cost 1 less Adaptability while the plinth holds 1 feature or none** (so 1 instead of 2 in the opening weeks; it stacks with a Habit), §6.1, §11.> **Demo opens in week 2** (it was week 3). **Only Work meets the Quality Need** (a Demo does not, §5). **The Challenge instinct is now Speak Up and reads Standing**, not the Adaptability pool (§5.2). **The Take Charge instinct is now Own It** (it reads Trust).
 > **New action card: Onboarding.** After a quit, the replacement only joins when the team lays Onboarding, which costs a day (§7, §13). All the quitting rules are printed on that card.
-> **A quit costs 40 Team Score** (it was 20), §16. **Everyone starts on Motivation 4** (was 5; the Onboarding card says so too). **A Demo no longer protects a feature from NEGATIVE FEEDBACK.** **Coordinate is renamed Engagement** (Wenger's mutual engagement; card text now cites Wenger and Edmondson). **Rushed Onboarding is removed**: a replacement joins at once with no penalty (§12). **Plan does nothing at Shared Practice 1 or less, so nothing in week 1, and nothing on a Low complexity feature** (it was 0 or less), §4. **Only Work meets the Quality Need**, so a team can't live on Demos, §5. **Authorized Voice cancels only Management or Customer Events** (it cancelled any Event), §18. **The upper threshold is now 5 × characters + 64 and the lower 5 × characters − 24** (89 and 1 at five players; they were +45 and −15), §16. **If a feature is missing the Team Score is 0, and it is never below 0**, §16. **Recognition's +1 Motivation to a teammate fires once a week for the whole team** (it fired on every Capital gain), §5.1. **The Community Need is also met by a Workshop**, §5, §7.
+> **A quit costs 40 Team Score** (it was 20), §16. **Everyone starts on Motivation 5** (it was 4 for one pass; the Onboarding card says so too). **A Demo no longer protects a feature from NEGATIVE FEEDBACK.** **Coordinate is renamed Engagement** (Wenger's mutual engagement; card text now cites Wenger and Edmondson). **Rushed Onboarding is removed**: a replacement joins at once with no penalty (§12). **Plan does nothing at Shared Practice 1 or less, so nothing in week 1, and nothing on a Low complexity feature** (it was 0 or less), §4. **Only Work meets the Quality Need**, so a team can't live on Demos, §5. **Authorized Voice cancels only Management or Customer Events** (it cancelled any Event), §18. **The upper threshold is now 5 × characters + 64 and the lower 5 × characters − 24** (89 and 1 at five players; they were +45 and −15), §16. **If a feature is missing the Team Score is 0, and it is never below 0**, §16. **Recognition's +1 Motivation to a teammate fires once a week for the whole team** (it fired on every Capital gain), §5.1. **The Community Need is also met by a Workshop**, §5, §7.
 > **When a character quits, everyone still in the team loses 1 Motivation** (§6.1, §16).
 > **Teach may also step diagonally** (Learn stays left or right in your own row), but **only onto a square someone already covers**: it only flips a tile to stacked, never puts one down, §7, §8.
 > **Plan does nothing on Low complexity features** (A and E) and gives +1 per Work card on Medium and High ones (B, C, D, F), §7. B and C are Medium in the sim, as printed.
@@ -68,7 +68,7 @@ whenever a playtest changes a rule, and log the change in
 > Align card (which also cleared Unclear) was then identical to Workshop, so it is gone and the second
 > copy on the card sheet is a Workshop. UNCLEAR REQUIREMENT is now **REQUIREMENTS CHANGE** (the
 > unbanked feature with the most Work left loses 1 Work it already has) and THE DATE MOVES UP now
-> makes every Work card this week produce 1 less (never below 0). **(16) Every card says when its
+> moves the deadline one week closer (a Speak Up Hero or Authorized Voice cancels it). **(16) Every card says when its
 > result arrives** (§7): Work counters and Ledger steps at the close of the week, adapt tokens at the
 > close and spendable from the next week, Motivation with the grind. **(17) The three Team
 > Reflexivity wells carry symbols** (target, route, cycle), not abbreviations (§18). **(18) Reflect
@@ -692,7 +692,7 @@ action.
 The best teams keep a healthy balance across all of them - not "max everything."
 
 ## 5. Motivation
-Each character has their own pool of **Motivation tokens** (starts at 4, cap 5) instead of
+Each character has their own pool of **Motivation tokens** (starts at 5, cap 5) instead of
 just a number on a track. The physical count matters, because tokens move in three different
 ways:
 - **Gain** - Celebrate (§7), or a good Event/team condition, adds a token.
@@ -911,7 +911,7 @@ land.
 It also gives the Hero's own +1 Motivation a second job: hand it to the character sitting on
 2, and you have just made *them* able to step up later.
 
-All Event cards carry a Hero route except a handful (FALSE START, THE AUDIT, THE DATE MOVES UP,
+All Event cards carry a Hero route except a handful (FALSE START, THE AUDIT,
 EVERYONE IS EQUAL and THE WOLF), and the rest are split across the five Legs options, so **most
 characters can answer several Events, whatever Legs they were dealt**. The cards that name no
 Pressure Response at all save nobody - and **THE WOLF is answered by stepping up, never by a
@@ -1007,10 +1007,11 @@ reads as overreach for **−1 Motivation**:
 | **Own It** | Trust | +1 Motivation - you owned it and the team backed you | −1 Motivation - nobody trusts you with it, so it reads as overreach |
 | **Analyze** | Capability | +1 Motivation - the question was worth asking | −1 Motivation - analysis paralysis |
 | **Support** | Shared Practice | +1 Motivation - people leave the room feeling better | −1 Motivation - it reads as hollow |
-| **Speak Up** | Standing | +1 Motivation - you said the thing everyone was quietly worried about, and they listened | −1 Motivation - nobody listens, so it reads as obstruction |
+| **Speak Up** | Standing | **+2 Motivation** - you said the thing everyone was quietly worried about, and they listened | −1 Motivation - nobody listens, so it reads as obstruction |
 | **Engage** | The week, not a track | **+1 Motivation in weeks 1-3** - you throw yourself in while the project is new | **−1 Motivation from week 4** - the field has moved on and the same instinct reads as overreach |
 
-For **Speak Up** the "track" is **Standing** (the highest Capital in the team, §5.1): strength at **3 or more**,
+For **Speak Up** the "track" is **Standing** (the highest Capital in the team, §5.1): strength at **3 or more**
+(**+2** Motivation, the only Legs that pays more than +1),
 tendency at **1 or less**. **Engage** reads the week number instead of a track: it pays early
 and costs late (Bourdieu's hysteresis - a disposition that outlives the field that rewarded it).
 
@@ -1093,7 +1094,9 @@ Two things cancel an Event **without costing Adaptability at all**:
 - **Authorized Voice** (§18), once a week, if the team has it, against a **Management or Customer** Event only.
 
 And a **Habit** (§18) takes 1 off the Adaptability cost of its Event category, so a cost-1 Event of that
-category is free. **THE AUDIT and EVERYONE IS EQUAL** also cost **1 less while the plinth holds 1 feature or
+category is free. **THE DATE MOVES UP is the exception: it costs no tokens because tokens cannot buy it
+off.** Someone has to say no - a **Speak Up** Hero or **Authorized Voice** - or the deadline moves.
+**THE AUDIT and EVERYONE IS EQUAL** also cost **1 less while the plinth holds 1 feature or
 none** - an audit needs something to audit - and this stacks with the Habit.
 
 **One Event cannot be cancelled at all: THE WOLF** (§11). It prints no ADAPT number and no HERO
@@ -1218,7 +1221,7 @@ character to receive it.
 | **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**. |
 | **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **Every character pays 1 Motivation.** **+3 Adaptability.** The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. **Open from week 1. There is one Workshop card, so at most one a week.** It counts for the Community and the Hierarchy Needs (§5). It merges the old Align and Workshop (§9, v0.28). |
-| **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 4** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
+| **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 5** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
 | **Celebrate** | **At most one a week - there is only one Celebrate card.** **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. **A Celebrate also does nothing if the team celebrated last week.** |
 
 There are **ten** Activities, and none of them is "rest" - resting isn't something a team does
@@ -1514,7 +1517,7 @@ This timing is the entire point, and it replaces v0.1's hidden-Event-day token. 
 the week in ignorance; then reality lands on it. Events can:
 - **take a day off the board** - remove one of the five cards; it never resolves;
 - **invalidate what a card was pointed at** - e.g. REQUIREMENTS CHANGE takes Work back off the feature
-  with the most Work left, and THE DATE MOVES UP makes every Work card this week produce less;
+  with the most Work left, and THE DATE MOVES UP moves the deadline one week closer;
 - **raise a cost you had planned around.**
 
 A team that invested in **Adaptability** (§4) can spend tokens in phase 3 to cancel an Event. A
@@ -1539,7 +1542,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 
 | Card | Category | Adapt | Hero | What it does | Torso |
 |---|---|---|---|---|---|
-| STATUS MEETING | Management | 3 | Own It | Remove one of the week's five cards. Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
+| STATUS MEETING | Management | 3 | Own It | Remove one of the week's five cards. Only Autonomy characters lose 1 Motivation. | Autonomy −1 |
 | BUDGET CUT | Management | 2 | Own It | Everyone −1 Motivation. | Autonomy extra, Hierarchy immune |
 | REORGANISED | Management | 2 | Engage | Everyone −1 Motivation; the team loses 1 Shared Practice. | Autonomy extra, Hierarchy immune |
 | THE AUDIT | Management | 2 (1 if the plinth holds 1 feature or none) | none | One card this week must be a Workshop, or the team loses a card, 1 Trust and 1 Motivation. | Autonomy extra, Hierarchy immune |
@@ -1551,7 +1554,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | NEGATIVE FEEDBACK | Customer | 3 | Analyze | One banked feature loses 2 Work and comes off the tower. | Quality −1 |
 | SCOPE CREEP | Customer | 3 | Analyze | The unbanked feature closest to done gains +2 Work Cost. | Quality −1 |
 | PRIORITY CHANGES | Customer | 2 | Analyze | Remove one card this week. | Quality −1 |
-| THE DATE MOVES UP | Customer | 3 | none | Every Work card this week produces 1 less (never below 0). | Quality −1 |
+| THE DATE MOVES UP | Customer | none - say no | Speak Up | The deadline moves one week closer: move the week marker one box down, for good. Nothing happens in the last week. Only a Speak Up Hero or Authorized Voice cancels it; tokens and Habits cannot. | Quality −1 |
 | THE DASHBOARD | Customer | 3 | Analyze | Work only counts this week on a Low feature; Medium and High Work changes nothing. | Quality −1 |
 | ALWAYS REACTING | Customer | 1 | Speak Up | The Adaptability pool loses 1 token. | Quality −1 |
 | KNOWLEDGE HOARDING | People | 2 | Support | Remove all Teach cards this week. | Community −1 |
@@ -1748,7 +1751,7 @@ No like-for-like swap. Whenever a character quits or is fired:
 - **The seat sits empty until the team lays the Onboarding card** (§7). Nobody plays an empty
   seat, so the plan runs one character short.
 - **Onboarding costs a day.** When the team lays it, a new character joins at once with a fresh
-  Habitus, Skills, Knowledge and **Motivation 4**. No shortcut, no buy-out. One card, so one replacement a week.
+  Habitus, Skills, Knowledge and **Motivation 5**. No shortcut, no buy-out. One card, so one replacement a week.
 - **All of this is printed on the Onboarding card**, so a table never has to look it up.
 
 This is now the **only** way Onboarding gets triggered - the old **NEW TEAM MEMBER** Event
@@ -1888,7 +1891,7 @@ check Motivation and the Ledger.
 
 ## 19. Prototype scope (v0.1)
 3-6 players · 6 features · 18 total Work · 7 weeks × 5 team-days = **35 days** · 3 Ledger
-tracks + an Adaptability pool · Motivation starts at 4 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
+tracks + an Adaptability pool · Motivation starts at 5 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
 simple individual/shared Knowledge system · 6 Project cards (§20). Keep components ugly at
 first (index cards, cubes, sticky notes) - see
 [../components/README.md](../components/README.md).

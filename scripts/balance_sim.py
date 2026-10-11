@@ -59,7 +59,7 @@ class Rules:
     weeks: int = 8                              # 7 working weeks + the deadline week
     days: int = 5
     players: int = 5
-    mot_start: int = 4
+    mot_start: int = 5
     mot_cap: int = 5
     sheltered_cap: int = 3
     grind: int = 1
@@ -71,6 +71,7 @@ class Rules:
     ledger_max: int = 5
     habit_at: int = 4
     legs_strength_at: int = 3                   # a Legs strength pays +1 Motivation at this track value or more (was 4)
+    speakup_strength: int = 2                   # ... except Speak Up, which pays this much
     base_like: int = 2                          # Bookish learning / Hands-On teaching: +this Motivation (was 1)
     base_dislike: int = 1                       # Bookish teaching / Hands-On learning: -this Motivation
     habit_discount: int = 1
@@ -174,10 +175,11 @@ class Ev:
     torso: bool = True       # False = no Torso reaction line on the card
     sev: float = 1.0         # rough damage in "days"; used only by the adapt policy
     early: bool = False      # costs R.early_discount less while the plinth holds R.early_max_features or fewer
+    say_no: bool = False     # only a Hero or Authorized Voice cancels it: tokens, Habits and Trust cannot buy it off
 
 
 EVENTS = [
-    Ev("STATUS MEETING", "M", 3, "OwnIt", everyone=1, sev=1.5),
+    Ev("STATUS MEETING", "M", 3, "OwnIt", sev=1.0),
     Ev("BUDGET CUT", "M", 2, "OwnIt", everyone=1, sev=0.6),
     Ev("REORGANISED", "M", 2, "Engage", everyone=1, sev=1.2),
     Ev("THE AUDIT", "M", 2, None, everyone=1, sev=1.0, early=True),
@@ -189,7 +191,7 @@ EVENTS = [
     Ev("NEGATIVE FEEDBACK", "C", 3, "Analyze", sev=2.0),
     Ev("SCOPE CREEP", "C", 3, "Analyze", sev=2.0),
     Ev("PRIORITY CHANGES", "C", 2, "Analyze", sev=1.0),
-    Ev("THE DATE MOVES UP", "C", 3, None, sev=3.0),
+    Ev("THE DATE MOVES UP", "C", 3, "SpeakUp", sev=3.0, say_no=True),
     Ev("THE DASHBOARD", "C", 3, "Analyze", sev=2.5),
     Ev("ALWAYS REACTING", "C", 1, "SpeakUp", sev=0.7),
     Ev("KNOWLEDGE HOARDING", "P", 2, "Support", sev=0.8),
@@ -309,7 +311,6 @@ class Week:
         self.equal = False
         self.false_start = False
         self.dashboard = False
-        self.date_up = False
         self.one_per = False
         self.halve = False
         self.flat = False
@@ -351,6 +352,7 @@ class Game:
         rng.shuffle(self.deck)
         self.flex_owed = 0
         self.max_flex = 0
+        self.deadline = rules.weeks
         self.burnout_ids: list = []
         self.celebrated_prev = False
         self.no_work_streak = 0
@@ -708,7 +710,7 @@ class Game:
             owed = sum(max(0, self.remaining(k)) for k, f in self.feat.items() if not f["banked"])
             short = owed - sum(st.work_days[w - 1:])
             if short > 0:
-                wd = min(R.days, wd + -(-short // (R.weeks - w + 1)))
+                wd = min(R.days, wd + -(-short // (self.deadline - w + 1)))
         slots = max(0, R.days - wd)
         # Plan makes every Work card on the feature produce double (+1 on top of its base 1), so Plan + 2 Work = 4 beats
         # 3 Work = 3: with 3 or more Work cards wanted, Plan takes one Work day; with 2 it takes a free slot.
@@ -770,7 +772,7 @@ class Game:
             self.m["tr_chances"] += 1
             if "Reflect" not in cards:
                 self.m["tr_missed"] += 1
-        if self.flex_owed > 0 and w < R.weeks and st.repay_flex and "Work" in cards:
+        if self.flex_owed > 0 and w < self.deadline and st.repay_flex and "Work" in cards:
             cards[cards.index("Work")] = "Flex"
             self.flex_owed -= 1
             for c in self.chars:
@@ -849,10 +851,10 @@ class Game:
             how = None
             if c == 0:
                 how = "free"
-            elif R.habit_cancel and CAT_HABIT[e.cat] in self.habits and e.cat not in used_habit:
+            elif R.habit_cancel and not e.say_no and CAT_HABIT[e.cat] in self.habits and e.cat not in used_habit:
                 used_habit.add(e.cat)
                 how = "habit"
-            elif R.trust_cancel and not used_trust and self.trust >= R.trust_cancel_at:
+            elif R.trust_cancel and not e.say_no and not used_trust and self.trust >= R.trust_cancel_at:
                 used_trust, how = True, "trust"
             elif not used_av and hero_ok and "AV" in self.habits and (not R.av_categories or e.cat in R.av_categories):
                 used_av, how = True, "av"
@@ -877,7 +879,7 @@ class Game:
                     self.add_mot(s, -R.stand_cost, "stand")
                     self.m["stand_plays"] += 1
                     how = "stand"
-                elif self.pool >= c and e.sev / c >= thr:
+                elif not e.say_no and self.pool >= c and e.sev / c >= thr:
                     self.pool -= c
                     self.m["tokens_spent"] += c
                     how = "token"
@@ -976,7 +978,9 @@ class Game:
                     self.feat[k]["cost"] += 2
                     self.m["cost_added"] += 2
             elif n == "THE DATE MOVES UP":
-                W.date_up = True
+                if self.deadline > w:
+                    self.deadline -= 1
+                    self.m["deadline_moved"] += 1
             elif n == "THE DASHBOARD":
                 W.dashboard = True
             elif n == "ALWAYS REACTING":
@@ -1075,8 +1079,6 @@ class Game:
                 if self.feat[f]["cx"] != "L" and (f == plan_f or f == self.carry):
                     out += R.plan_bonus
                     self.m["plan_extra_work"] += R.plan_bonus
-                if W.date_up:
-                    out -= 1
                 if W.dashboard and self.feat[f]["cx"] != "L":
                     out = 0
                 out = max(0, out)
@@ -1285,7 +1287,7 @@ class Game:
             return 1 if w <= 3 else -1
         v = {"OwnIt": self.trust, "Analyze": self.cap, "Support": self.sp, "SpeakUp": self.standing}[c.legs]
         if v >= R.legs_strength_at:
-            return 1
+            return R.speakup_strength if c.legs == "SpeakUp" else 1
         if v <= R.low_band:
             return -1
         return 0
@@ -1427,6 +1429,9 @@ class Game:
     def run(self) -> dict:
         R = self.R
         for w in range(1, R.weeks + 1):
+            if w > self.deadline:
+                self.pad_week()
+                continue
             self.begin_week(w)
             self.evidence_week.append({k: int(bool(v)) for k, v in self.prev.items()})
             plan = self.plan_week(w)
@@ -1467,6 +1472,18 @@ class Game:
                 self.catch_up_trust()
         return self.finish()
 
+    def pad_week(self):
+        """A week that never happens (the deadline moved up) still needs a row in every per-week list."""
+        self.evidence_week.append({k: 0 for k in self.prev})
+        self.cancel_week.append({})
+        self.drawn_week.append(0)
+        self.cards_week.append({})
+        self.wells_week.append(dict(self.wells_week[-1]))
+        self.habitus_week.append({"hero": 0, "dependable": 0, "take_one": 0, "recognition_witness": 0, "recognition_need_met": 0})
+        for lst in (self.pool_week, self.mot_week_mean, self.mot_week_min, self.mot_hist_week, self.mot_med_week, self.trust_week,
+                    self.cap_week, self.sp_week, self.standing_week, self.habit_week, self.capital_week, self.banked_week):
+            lst.append(lst[-1])
+
     def catch_up_trust(self):
         # Week 2 reveal: Trust rises 1 if an Engagement was played in week 1 (there is one Engagement card).
         n = self.m["week1_coordinate"]
@@ -1498,7 +1515,7 @@ class Game:
             "banked": banked, "score": score, "threshold": threshold, "threshold_high": threshold_high, "outcome": outcome,
             "work_out": self.m["work_out"], "work_cards": self.m["work_cards"], "work_needed": needed,
             "work_wasted": self.m["work_cards_wasted"], "rework_lost": self.m["rework_lost"], "plan_extra_work": self.m["plan_extra_work"], "plan_skipped": self.m["plan_skipped"],
-            "cost_added": self.m["cost_added"], "last_bank_week": self.last_bank_week,
+            "cost_added": self.m["cost_added"], "last_bank_week": self.last_bank_week, "deadline_moved": self.m["deadline_moved"],
             "work_by_week": list(self.work_by_week) + [0] * (R.weeks - len(self.work_by_week)),
             "tokens_earned": self.m["tokens_earned"], "tokens_spent": self.m["tokens_spent"],
             "tokens_lost": self.m["tokens_lost"], "tokens_wasted_cap": self.m["tokens_wasted_cap"],
@@ -1753,6 +1770,9 @@ def report(name: str, res: list, rules: Rules):
         mean(r["quality_quit_multiweek"] for r in res)))
     print("   weeks without Work per game %.2f, longest run %.2f   (the design goal is 0 Quality quits from this)" % (
         mean(r["no_work_weeks"] for r in res), mean(r["max_no_work_streak"] for r in res)))
+    print("   DEADLINE CHECK: THE DATE MOVES UP cost the team a week in %.0f%% of games; of those, the project still finished in %.0f%%" % (
+        share(res, lambda r: r["deadline_moved"] > 0),
+        100.0 * sum(1 for r in res if r["deadline_moved"] > 0 and r["banked"] == 6) / max(1, sum(1 for r in res if r["deadline_moved"] > 0))))
     flow = Counter()
     for r in res:
         flow.update(r["mot_flow"])
@@ -2580,7 +2600,7 @@ def write_postsim(path: str, dump: dict):
             ", ".join("%s %.2f" % (k, v / len(res)) for k, v in qc.most_common()) or "none") + "."]
         L += ["", "### Event cards in weeks 2 to 4 (every card is drawn equally often; the difference is which ones land)", "",
               "| Event | cost to cancel | drawn a game | landed a game | share that landed |", "|---|---|---|---|---|"]
-        cost_of = {e.name: ("cannot" if e.cost is None else e.cost) for e in EVENTS}
+        cost_of = {e.name: ("cannot" if e.cost is None else "say no" if e.say_no else e.cost) for e in EVENTS}
         for landed, n, drawn, s in event_early_rows(res):
             L.append("| %s | %s | %.3f | %.3f | %.0f%% |" % (n, cost_of[n], drawn, landed, 100 * s))
         L += ["", "### Event cards behind quits", "", "| Event | quits a game | lands a game | quits per 100 landings |", "|---|---|---|---|"]

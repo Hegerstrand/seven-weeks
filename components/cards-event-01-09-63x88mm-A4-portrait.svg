@@ -53,10 +53,7 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <g transform="translate(0,9.5)">
     <text x="5" y="28" class="s" font-size="4.4">Remove one card from this</text>
     <text x="5" y="33" class="s" font-size="4.4">week. It never happens.</text>
-    <rect x="4" y="33" width="50" height="6" rx="1" fill="#D3B1B1"/>
-    <text x="5" y="38" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="40.57" width="11.72" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">AUTONOMY: LOSE 1 EXTRA</text>
-    <g transform="translate(7,46.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="47.5" class="m q" font-size="2.7">HIERARCHY: IMMUNE</text>
+    <g transform="translate(7,36.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="35.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="38" class="m" font-size="2.7">AUTONOMY LOSES 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>

@@ -39,9 +39,9 @@ spend.
   SHIT HAPPENS.
 
 ## What still carries its trace (not yet reprinted)
-- **Seven Customer Event cards** print "HABIT: TEAM REFLEXIVITY" and a cost line: UNCLEAR
+- **Six Customer Event cards** print "HABIT: TEAM REFLEXIVITY" and a cost line: UNCLEAR
   REQUIREMENT (still costs 1), NEGATIVE FEEDBACK (costs 1 instead of 2), SCOPE CREEP (costs 1
-  instead of 2), PRIORITY CHANGES (still costs 1), THE DATE MOVES UP (costs 2 instead of 3), THE
+  instead of 2), PRIORITY CHANGES (still costs 1), THE
   DASHBOARD (costs 2 instead of 3), ALWAYS REACTING (still costs 1). Files:
   `cards-event-01-09`, `cards-event-10-18`, `cards-event-19-21`.
 - **The Quality Need tile** on `cards-need-hero-44x36mm-A4-landscape.svg` still reads "Work added

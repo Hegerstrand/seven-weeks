@@ -90,7 +90,7 @@ both sides are down, not before: paper creeps a millimetre when it is wet with g
 person board - always physically there, but only worth reading from week 3 on. A light dashed
 rule marks where it starts, so nobody is asked to care about it before the week that needs it.
 
-## Cards and leaflets - A4, print at 100%
+## Cards - A4, print at 100%
 
 | Print | Paper | Used from | What it is |
 |---|---|---|---|
@@ -102,7 +102,6 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | `cards-project-63x88mm-A4-portrait` | A4 | Setup | Six projects. Choose one; it drops into the seat on board 1 |
 | `cards-habitus-parts-01-15-44x36mm-A4-landscape` + `cards-habitus-parts-16-25-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm), split across two sheets so the 5-per-row cards print at true 44 x 36 mm, matching the person board's seats exactly - the board is master | Setup | 25 part-cards (15 + 10), dealt at random |
 | `cards-need-hero-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm) - the board is master, same fix as the habitus part-cards | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Legs, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
-| `specs/leaflet-how-to-play.md` | A4 | - | Setup, Week 1, the weekly pulse from week 2 on, and how it ends - plain printable Markdown, not an SVG. Paginated into `game-print-all.pdf` by `scripts/build_print_pdf.py`, or print the Markdown directly |
 
 **Everything that goes in a weekday slot is 63 × 88 mm** - Activity and Event cards alike - so
 the two decks handle identically and either fits any 65 × 90 seat. **The Project card is the

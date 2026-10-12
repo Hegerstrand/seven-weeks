@@ -72,6 +72,11 @@ class Rules:
     habit_at: int = 4
     legs_strength_at: int = 3                   # a Legs strength pays +1 Motivation at this track value or more (was 4)
     speakup_strength: int = 2                   # ... except Speak Up, which pays this much
+    engage_low_weeks: tuple = (5, 6)            # Engage loses 1 Motivation in these weeks (+1 in weeks 2 to 3, nothing otherwise)
+    speakup_gift: bool = True                   # Speak Up no longer reads Standing; once a game its holder gives any teammate +1 Motivation
+    gift_giver_min: int = 3                     # the giver must be on at least this much Motivation at step 7
+    gift_receiver_max: int = 2                  # policy: give to the lowest teammate once someone is on this much or less (or about to quit, or in the last week)
+    gift_from_week: int = 3
     base_like: int = 2                          # Bookish learning / Hands-On teaching: +this Motivation (was 1)
     base_dislike: int = 1                       # Bookish teaching / Hands-On learning: -this Motivation
     habit_discount: int = 1
@@ -104,8 +109,8 @@ class Rules:
     events_per_week: int = 2
     events_from_week: int = 2
     combos_from_week: int = 5
-    threshold_base: int = -24                   # lower line: -24 + 5 x 5 players = 1 (the lowest score that random play reaches in 2% or fewer games)
-    threshold_high_base: int = 64               # upper line: 64 + 5 x 5 players = 89 (90% of the optimal games that finish reach it)
+    threshold_base: int = 75                    # lower line: 75 + 5 x 5 players = 100 (set by hand; random play is no longer a reference)
+    threshold_high_base: int = 115              # upper line: 115 + 5 x 5 players = 140
     threshold_per_player: int = 5
     habit_score: int = 12                       # Team Score per Habit held at the end (5 Habits = up to 60)
     feature_value: int = 12
@@ -136,13 +141,17 @@ class Rules:
 
 TORSOS = ["Autonomy", "Hierarchy", "Community", "Quality", "Recognition"]
 NEED_SOFT_LO, NEED_SOFT_HI = 75.0, 95.0   # soft goal: each Need is met in this share of character-weeks
+NEED_HABIT = {"Autonomy", "Hierarchy", "Community"}   # a Habit meets these Needs outright, so they may reach 100%
+ONBOARDING_MAX = 0.15                      # goal in optimal play: Onboarding plays a game (about three quits in four are replaced)
+UPPER_GOAL = 80.0                          # goal: this share of optimal games reach the upper threshold
+HAND_ZERO_MIN = 1.0                        # goal: balanced and invested end on 0 points in more than this share of games (they can fail); optimal never does
 QUIT_WEIGHT = 1000.0                       # optimiser priority 1: no quits. A quit outweighs finishing, which outweighs points
 FINISH_WEIGHT = 9.0                        # optimiser priority 2: objective points per percent of games that deliver every feature (max 900, below one quit)
 QUIT_RATE_HARD = 5.0                       # hard goal in optimal play: at most this many quits per 100 character-weeks
-QUIT_RATE_SOFT_MIN = 1.0                   # soft goal in optimal play: every habitus card sees at least this many quits per 100 character-weeks
+QUIT_RATE_SOFT_MIN = 0.25                  # soft goal in optimal play: every habitus card sees at least this many quits per 100 character-weeks
 HUMAN_KIND = {"torso": "values", "legs": "instinct", "base": "upbringing"}
-CARD_ALL_GOAL = 90.0                       # goal: this share of games play every action card at least once
-CARD_MEAN_MIN = 1.0                        # goal in optimal play: every action card averages at least this many plays a game
+CARD_MISSING_MAX = 1                       # goal a: in every game at most this many action cards go unplayed
+CARD_SHARE_MIN = 50.0                      # goal b: every action card is played in more than this share of games
 PLAY_RANGES = {"Plan": (1.0, 2.5), "Workshop": (1.0, 2.5)}   # goal: plays a game for each of these cards
 LEGS = ["OwnIt", "Analyze", "Support", "Engage", "SpeakUp"]
 BASES = ["Bookish", "HandsOn", "Sheltered", "Dependable", "Competitive"]
@@ -181,7 +190,7 @@ class Ev:
 EVENTS = [
     Ev("STATUS MEETING", "M", 3, "OwnIt", sev=1.0),
     Ev("BUDGET CUT", "M", 2, "OwnIt", everyone=1, sev=0.6),
-    Ev("REORGANISED", "M", 2, "Engage", everyone=1, sev=1.2),
+    Ev("REORGANISED", "M", 2, "Engage", sev=1.0),
     Ev("THE AUDIT", "M", 2, None, everyone=1, sev=1.0, early=True),
     Ev("THE BIKESHED", "M", 1, "OwnIt", hit="Quality", sev=0.7),
     Ev("LEADS FROM BEHIND", "M", 1, "SpeakUp", everyone=1, torso=False, sev=0.5),
@@ -202,7 +211,7 @@ EVENTS = [
     Ev("EQUIPMENT OUTAGE", "E", 3, "Support", everyone=1, sev=1.8),
     Ev("OLD FOUNDATIONS", "E", 2, "Engage", sev=2.0),
     Ev("FALSE START", "E", 2, None, sev=1.0),
-    Ev("EVERYTHING AT ONCE", "E", 3, "SpeakUp", everyone=1, sev=3.0),
+    Ev("EVERYTHING AT ONCE", "E", 3, "SpeakUp", sev=2.5),
     Ev("SHAKY GROUND", "E", 3, "Engage", sev=2.0),
 ]
 
@@ -281,6 +290,7 @@ class Char:
         self.capital = 0
         self.hero_used = False
         self.stand_used = False
+        self.gift_used = False
         self.squares = {(self.head, self.item)}
         self.new_squares: set = set()
         self.flex = False
@@ -1227,7 +1237,7 @@ class Game:
                 self.flip(name, w)
         if R.standing_live and self.chars:
             self.standing = max(c.capital for c in self.chars)
-        if self.standing >= R.ledger_max:
+        if self.standing >= R.habit_at:
             self.flip("AV", w)
         room = R.pool_cap - self.pool
         self.m["tokens_wasted_cap"] += max(0, W.adds - room)
@@ -1274,7 +1284,7 @@ class Game:
         if t == "Hierarchy":
             return W.teach_played or any(x in plan for x in ("Learn", "Workshop"))
         if t == "Community":
-            return any(x in plan for x in ("Engagement", "Reflect", "Workshop"))
+            return any(x in plan for x in ("Engagement", "Reflect"))
         if t == "Quality":
             return W.work_added or (self.demo_meets_quality() and "Demo" in plan)
         return bool(W.banked) or c.id in W.hero_by or "Demo" in plan
@@ -1284,8 +1294,10 @@ class Game:
         if not R.legs_tendencies or w < 2:
             return 0
         if c.legs == "Engage":
-            return 1 if w <= 3 else -1
+            return 1 if w <= 3 else -1 if w in R.engage_low_weeks else 0
         v = {"OwnIt": self.trust, "Analyze": self.cap, "Support": self.sp, "SpeakUp": self.standing}[c.legs]
+        if c.legs == "SpeakUp" and R.speakup_gift:
+            return 0
         if v >= R.legs_strength_at:
             return R.speakup_strength if c.legs == "SpeakUp" else 1
         if v <= R.low_band:
@@ -1357,6 +1369,24 @@ class Game:
             if c.mot <= 0:
                 quitters.append(c)
                 causes[c.id] = max(neg, key=neg.get) if neg else "spent it on Workshop, Overtime or Take One"
+        if R.speakup_gift and w >= R.gift_from_week:
+            for g in sorted(self.chars, key=lambda x: x.id):
+                if g.legs != "SpeakUp" or g.gift_used or g in quitters or g.mot < R.gift_giver_min:
+                    continue
+                mates = [c for c in self.chars if c is not g]
+                if not mates:
+                    continue
+                c = min(mates, key=lambda x: x.mot)
+                if not (c in quitters or c.mot <= R.gift_receiver_max or (w == R.weeks and c.mot < self.mot_cap_for(c))):
+                    continue
+                g.gift_used = True
+                c.mot = min(self.mot_cap_for(c), c.mot + 1)
+                self.mot_flow["speakup_gift"] += 1
+                self.m["gifts"] += 1
+                if c in quitters:
+                    quitters.remove(c)
+                    causes.pop(c.id, None)
+                    self.m["gift_rescues"] += 1
         if self.burnout_ids:
             if not W.celebrated:
                 for c in self.chars:
@@ -1524,7 +1554,7 @@ class Game:
             "event_cost_faced": self.m["event_cost_faced"], "cancel_by": dict(self.cancel_by),
             "habits": dict(self.habits), "hero_plays": self.m["hero_plays"],
             "wolf_up": self.m["wolf_stepped_up"], "wolf_erased": self.m["wolf_capital_erased"],
-            "combos": self.m["combos"], "quits": self.quits,
+            "combos": self.m["combos"], "quits": self.quits, "gifts": self.m["gifts"], "gift_rescues": self.m["gift_rescues"],
             "quality_quits": self.m["quality_quits"], "quality_quit_nowork": self.m["quality_quit_nowork"],
             "quality_quit_multiweek": self.m["quality_quit_multiweek"], "no_work_weeks": self.m["no_work_weeks"],
             "max_no_work_streak": self.m["max_no_work_streak"],
@@ -1598,6 +1628,10 @@ def share(res, pred):
     return 100.0 * sum(1 for r in res if pred(r)) / len(res)
 
 
+def need_hi(t: str) -> float:
+    return 100.0 if t in NEED_HABIT else NEED_SOFT_HI
+
+
 def need_rates(res: list) -> dict:
     """Share of character-weeks (percent) in which each Need was met."""
     met, seen = Counter(), Counter()
@@ -1613,9 +1647,14 @@ def quit_rate(res: list) -> float:
     return 100.0 * sum(r["quits"] for r in res) / weeks if weeks else 0.0
 
 
-def card_means(res: list) -> dict:
-    """Average plays a game for every action card."""
-    return {c: sum(times_played(r, c) for r in res) / len(res) for c in ACTION_CARDS}
+def card_shares(res: list) -> dict:
+    """Share of games (percent) that play each action card at least once."""
+    return {c: share(res, lambda r, c=c: c in cards_played(r)) for c in ACTION_CARDS}
+
+
+def all_but_one(res: list) -> float:
+    """Share of games (percent) that play all but at most CARD_MISSING_MAX action cards."""
+    return share(res, lambda r: len(set(ACTION_CARDS) - cards_played(r)) <= CARD_MISSING_MAX)
 
 
 def pair_quit_table(res: list, min_weeks: int = 300) -> list:
@@ -1737,6 +1776,8 @@ def report(name: str, res: list, rules: Rules):
     print("   lowest Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_min"][i] for r in res)) for i in range(rules.weeks)))
     print("   quits per game %.2f   games with a quit %.0f%%   Celebrates %.1f" % (
         mean(r["quits"] for r in res), share(res, lambda r: r["quits"] > 0), mean(r["celebrates"] for r in res)))
+    print("   SPEAK UP GIFT: %.2f a game, %.2f of them stopping a quit that week (quits without the rescues: at least %.2f a game)" % (
+        mean(r["gifts"] for r in res), mean(r["gift_rescues"] for r in res), mean(r["quits"] + r["gift_rescues"] for r in res)))
     print("   median Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_med"][i] for r in res)) for i in range(rules.weeks)))
     print("   QUIT CHECK: quits by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["quit_week"][i] for r in res)) for i in range(rules.weeks))
           + "   games with 0 quits %.0f%%" % share(res, lambda r: r["quits"] == 0))
@@ -1759,7 +1800,7 @@ def report(name: str, res: list, rules: Rules):
     low = sorted((v, k) for k, v in part_quit_rates(res).items() if v < QUIT_RATE_SOFT_MIN)
     print("   QUIT PAIRS (worst combinations of two habitus parts, quits per 100 character-weeks, vs the overall rate): " + "   ".join(
         "%s %.1f (%.1fx)" % (name, rate, ratio) for rate, ratio, _, _, name in pair_quit_table(res)[:6]))
-    print("   QUIT FLOOR (soft goal: every habitus card at least %.0f quit per 100 character-weeks): %s" % (
+    print("   QUIT FLOOR (soft goal: every habitus card at least %.2f quit per 100 character-weeks): %s" % (
         QUIT_RATE_SOFT_MIN, "all ok" if not low else "below the floor: " + ", ".join("%s %.2f" % (k, v) for v, k in low)))
     cel_flow = mean(r["mot_flow"].get("celebrate", 0) for r in res)
     print("   CELEBRATE CHECK: played %.1f a game (target 4 or fewer), %.1f of them with nothing to celebrate   more than 4 times in %.0f%% of games   Motivation given %.1f a game   characters skipped by the cap (Motivation above %d) %.1f a game" % (
@@ -1786,8 +1827,8 @@ def report(name: str, res: list, rules: Rules):
         need_m.update(r["need_met"])
         need_s.update(r["need_seen"])
     print("   Need met rate: " + "  ".join("%s %.0f%%" % (t, 100 * need_m[t] / need_s[t]) for t in TORSOS if need_s[t]))
-    print("   NEED CHECK (soft goal: each Need met %d%% to %d%%): " % (NEED_SOFT_LO, NEED_SOFT_HI) + "  ".join(
-        "%s %.0f%% %s" % (t, v, "ok" if NEED_SOFT_LO <= v <= NEED_SOFT_HI else ("TOO EASY" if v > NEED_SOFT_HI else "TOO HARD"))
+    print("   NEED CHECK (soft goal: each Need met %d%% to %d%%, %d%% for Needs a Habit meets): " % (NEED_SOFT_LO, NEED_SOFT_HI, 100) + "  ".join(
+        "%s %.0f%% %s" % (t, v, "ok" if NEED_SOFT_LO <= v <= need_hi(t) else ("TOO EASY" if v > need_hi(t) else "TOO HARD"))
         for t, v in need_rates(res).items()))
 
     print("\n4. EVENTS AND DAYS (average count per week)")
@@ -1799,12 +1840,9 @@ def report(name: str, res: list, rules: Rules):
         print("     by %-12s" % how + "  ".join("w%d %.2f" % (i + 1, mean(r["cancel_week"][i].get(how, 0) for r in res)) for i in range(W)))
     for card in shown_cards(res):
         print("   %-17s" % (card + " days") + "  ".join("w%d %.2f" % (i + 1, mean(r["cards_week"][i].get(card, 0) for r in res)) for i in range(W)))
-    all_cards = share(res, lambda r: set(ACTION_CARDS) <= cards_played(r))
-    print("   CARD USE CHECK (goal: every action card is played at least once in %.0f%% of games): all %d in %.0f%% of games" % (CARD_ALL_GOAL, len(ACTION_CARDS), all_cards))
-    cm = card_means(res)
-    print("   CARD AVERAGES (goal in optimal: every card %.0f or more plays a game): " % CARD_MEAN_MIN + "  ".join(
-        "%s %.2f%s" % (c, v, "" if v >= CARD_MEAN_MIN else " LOW") for c, v in cm.items()))
-    print("      share of games playing each: " + "  ".join("%s %.0f%%" % (c, share(res, lambda r, c=c: c in cards_played(r))) for c in ACTION_CARDS))
+    print("   CARD USE CHECK a (goal: every game plays all but %d action cards): %.0f%% of games" % (CARD_MISSING_MAX, all_but_one(res)))
+    print("   CARD USE CHECK b (goal: every action card is played in more than %.0f%% of games): " % CARD_SHARE_MIN + "  ".join(
+        "%s %.0f%%%s" % (c, v, "" if v > CARD_SHARE_MIN else " LOW") for c, v in card_shares(res).items()))
     print("   PLAN AND WORKSHOP CHECK (goal: Plan %.1f to %.1f, Workshop %.1f to %.1f times a game): " % (
         PLAY_RANGES["Plan"] + PLAY_RANGES["Workshop"]) + "   ".join(
         "%s %.1f a game, in range in %.0f%% of games" % (c, mean(times_played(r, c) for r in res), share(res, lambda r, c=c: PLAY_RANGES[c][0] <= times_played(r, c) <= PLAY_RANGES[c][1]))
@@ -1967,14 +2005,16 @@ def times_played(r: dict, card: str) -> int:
 def objective(res: list) -> float:
     # Priorities: no quits (QUIT_WEIGHT each), then every feature delivered (FINISH_WEIGHT), then points: the share reaching
     # the upper threshold plus 2 per point of mean score (a Habit is 12 points, so worth 24). Also minus 100 for each
-    # Quality quit after a week without Work, 60 for each action card a game never plays,
+    # Quality quit after a week without Work, 60 for each action card a game leaves unplayed beyond the one it may skip,
+    # 4 for each percent an action card falls short of being played in half the games,
     # and 30 for each play of Plan or Workshop short of 1.3 or over 2.5.
-    missing = mean(len(set(ACTION_CARDS) - cards_played(r)) for r in res)
+    missing = mean(max(0, len(set(ACTION_CARDS) - cards_played(r)) - CARD_MISSING_MAX) for r in res)
     off = mean(max(0, PLAY_RANGES[c][0] - times_played(r, c)) + max(0, times_played(r, c) - PLAY_RANGES[c][1]) for r in res for c in PLAY_RANGES) * 2
-    need_off = sum(max(0.0, NEED_SOFT_LO - v) + max(0.0, v - NEED_SOFT_HI) for v in need_rates(res).values())
+    need_off = sum(max(0.0, NEED_SOFT_LO - v) + max(0.0, v - need_hi(t)) for t, v in need_rates(res).items())
     return (share(res, lambda r: r["outcome"] == "thriving") + 2.0 * mean(r["score"] for r in res)
             + FINISH_WEIGHT * share(res, lambda r: r["banked"] == 6) - 100 * mean(r["quality_quit_nowork"] for r in res) - 60 * missing - 30 * off
-            - 20 * sum(max(0.0, CARD_MEAN_MIN - v) for v in card_means(res).values())
+            - 4.0 * sum(max(0.0, CARD_SHARE_MIN - v) for v in card_shares(res).values())
+            - 6.0 * share(res, lambda r: r["score"] == 0)
             - QUIT_WEIGHT * mean(r["quits"] for r in res) - 500 * max(0.0, quit_rate(res) - QUIT_RATE_HARD) - 0.2 * need_off
             - 3 * max(0.0, 50 - share(res, lambda r: "PS" in r["habits"]))
             - 0.5 * sum(max(0.0, QUIT_RATE_SOFT_MIN - v) for v in part_quit_rates(res).values()))
@@ -2409,7 +2449,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
 
 
 def calibrate(dump: dict):
-    """Upper threshold: 90% of optimal play reach it. Lower threshold: random almost never reaches it, balanced/invested often do."""
+    """Upper threshold: UPPER_GOAL percent of optimal play reach it. Lower threshold: balanced/invested reach it in half of their games."""
     series = {t: res for t, (_, res) in dump.items()}
     rnd = [n for n in ("random", "hero") if n in series]
     reasonable = [n for n in ("balanced", "invested") if n in series]
@@ -2426,7 +2466,7 @@ def calibrate(dump: dict):
     rows = [[t] + [round(100 * reach(series[n], t), 1) for n in names] for t in range(lo, hi + 1)]
     opt = series["optimal"]
     all_six = 100 * sum(1 for r in opt if r["banked"] == 6) / len(opt)
-    ok = [t for t in range(lo, hi + 1) if reach(opt, t) >= 0.9]
+    ok = [t for t in range(lo, hi + 1) if reach(opt, t) >= UPPER_GOAL / 100]
     top = max(ok) if ok else None
     # lowest score where every 'almost never' strategy is at 2% or less
     # random never banks all six features, so its 'reach' is always 0: judge it on the score alone
@@ -2436,9 +2476,10 @@ def calibrate(dump: dict):
     often = max(often_ok) if often_ok else None
     cur = rules.threshold_base + rules.threshold_per_player * rules.players
     cur2 = rules.threshold_high_base + rules.threshold_per_player * rules.players
+    if not rnd:
+        low = cur
     per = rules.threshold_per_player * rules.players
-    lines = ["THRESHOLD CALIBRATION (goals: optimal play reaches the UPPER threshold in 90% of games; the LOWER threshold is one that",
-             "random play almost never reaches (2% or less) and balanced/invested play often reaches (50% or more).",
+    lines = ["THRESHOLD CALIBRATION (goals: optimal play reaches the UPPER threshold in %.0f%% of games; balanced/invested play reaches the LOWER threshold in 50%% or more)." % UPPER_GOAL,
              "'reach' = all six features banked AND Team Score at or above the threshold).",
              "Current thresholds: %d (%d + %d x %d players) and %d (%d + %d x %d)."
              % (cur, rules.threshold_base, rules.threshold_per_player, rules.players,
@@ -2454,10 +2495,9 @@ def calibrate(dump: dict):
     lines.append("  Celebrate in optimal play: %.1f a game, %.1f of them with nothing to celebrate, more than 4 times in %.0f%% of games (goal: 4 or fewer)" % (
         sum(r["celebrates"] for r in opt) / len(opt), sum(r["celebrate_empty"] for r in opt) / len(opt),
         100 * sum(1 for r in opt if r["celebrates"] > 4) / len(opt)))
-    unused = [c for c in ACTION_CARDS if sum(1 for r in opt if c in cards_played(r)) < len(opt)]
-    lines.append("  Card use in optimal play: every action card in %.0f%% of games (goal %.0f%%)%s" % (
-        100 * sum(1 for r in opt if set(ACTION_CARDS) <= cards_played(r)) / len(opt), CARD_ALL_GOAL,
-        "; not always played: " + ", ".join("%s %.0f%%" % (c, 100 * sum(1 for r in opt if c in cards_played(r)) / len(opt)) for c in unused) if unused else ""))
+    shares = card_shares(opt)
+    lines.append("  Card use in optimal play: all but %d action cards in %.0f%% of games (goal 100%%); every card in more than %.0f%% of games (goal): %s" % (
+        CARD_MISSING_MAX, all_but_one(opt), CARD_SHARE_MIN, ", ".join("%s %.0f%%%s" % (c, v, "" if v > CARD_SHARE_MIN else " LOW") for c, v in shares.items())))
     lines.append("  Plan and Workshop in optimal play (goal: Plan %.1f to %.1f, Workshop %.1f to %.1f times a game): " % (
         PLAY_RANGES["Plan"] + PLAY_RANGES["Workshop"]) + "; ".join(
         "%s %.1f a game, in range in %.0f%% of games" % (c, sum(times_played(r, c) for r in opt) / len(opt),
@@ -2466,18 +2506,18 @@ def calibrate(dump: dict):
     if top is None:
         best = max(reach(opt, t) for t in range(lo, hi + 1))
         fin = [r for r in opt if r["banked"] == 6]
-        near = max([t for t in range(lo, hi + 1) if fin and sum(1 for r in fin if r["score"] >= t) / len(fin) >= 0.9] or [lo])
-        lines.append("  Upper threshold: no score lets 90%% of optimal play reach it. Only %.0f%% of optimal games bank all six features (best reach %.0f%%)." % (all_six, 100 * best))
-        lines.append("  Closest: %d (base %d) is the highest score that 90%% of the optimal games that finish reach (%.0f%% of all optimal games)." % (near, near - per, 100 * reach(opt, near)))
-        lines.append("  Make optimal play finish first (every unfinished game scores 0); only then can the upper threshold hit 90%.")
+        near = max([t for t in range(lo, hi + 1) if fin and sum(1 for r in fin if r["score"] >= t) / len(fin) >= UPPER_GOAL / 100] or [lo])
+        lines.append("  Upper threshold: no score lets %.0f%% of optimal play reach it. Only %.0f%% of optimal games bank all six features (best reach %.0f%%)." % (UPPER_GOAL, all_six, 100 * best))
+        lines.append("  Closest: %d (base %d) is the highest score that %.0f%% of the optimal games that finish reach (%.0f%% of all optimal games)." % (near, near - per, UPPER_GOAL, 100 * reach(opt, near)))
+        lines.append("  Make optimal play finish first (every unfinished game scores 0); only then can the upper threshold hit %.0f%%." % UPPER_GOAL)
         up_txt = "upper: none (optimal banks all six in only %.0f%%), closest %d" % (all_six, near)
         up_set = near
     else:
-        lines.append("  Upper threshold: %d (base %d) is the highest score that 90%% of optimal games reach.   [now %d: %.0f%%]" % (top, top - per, cur2, 100 * reach(opt, cur2)))
+        lines.append("  Upper threshold: %d (base %d) is the highest score that %.0f%% of optimal games reach.   [now %d: %.0f%%]" % (top, top - per, UPPER_GOAL, cur2, 100 * reach(opt, cur2)))
         up_txt = "upper %d" % top
         up_set = top
     lines.append("  Lower threshold: %d (base %d) is the lowest score that %s reach%s 2%% or less." % (
-        low, low - per, " and ".join(rnd) if rnd else "nobody", "" if len(rnd) != 1 else "es"))
+        low, low - per, " and ".join(rnd), "" if len(rnd) != 1 else "es") if rnd else "  Lower threshold: %d (base %d), set by hand (random play is not run)." % (low, low - per))
     for n in reasonable:
         lines.append("    at %d: %s reaches it in %.0f%% of games (all six features in %.0f%%)" % (
             low, n, 100 * reach(series[n], low), 100 * sum(1 for r in series[n] if r["banked"] == 6) / len(series[n])))
@@ -2509,7 +2549,8 @@ def _target_rows(title: str, res: list) -> list:
     k = _flat(title)
     up = share(res, lambda r: r["outcome"] == "thriving")
     lo = share(res, lambda r: r["outcome"] in ("sustainable", "thriving"))
-    every = share(res, lambda r: set(ACTION_CARDS) <= cards_played(r))
+    every = all_but_one(res)
+    shares = card_shares(res)
     plan = mean(times_played(r, "Plan") for r in res)
     align = mean(times_played(r, "Workshop") for r in res)
     cel = mean(r["celebrates"] for r in res)
@@ -2522,13 +2563,13 @@ def _target_rows(title: str, res: list) -> list:
     onb = mean(r["onboarding_played"] for r in res)
     scored0 = share(res, lambda r: r["score"] == 0)
     return [
-        ("Reach UPPER threshold (goal: optimal 90% or more)", "%.0f%%" % up, ok_mark(up >= 90) if k == "optimal" else ""),
-        ("Reach LOWER threshold (goal: random 2% or less, balanced and invested 50% or more)", "%.0f%%" % lo,
-         ok_mark(lo <= 2) if k == "random" else ok_mark(lo >= 50) if k in ("balanced", "invested") else ""),
-        ("Every action card played in a game (goal: %.0f%% of games)" % CARD_ALL_GOAL, "%.0f%%" % every, ok_mark(every >= CARD_ALL_GOAL)),
-        ("Every action card averages %.0f or more plays a game (goal in optimal)" % CARD_MEAN_MIN,
-         "fewest: %s %.2f" % min(card_means(res).items(), key=lambda kv: kv[1]),
-         ok_mark(min(card_means(res).values()) >= CARD_MEAN_MIN) if k == "optimal" else ""),
+        ("Reach UPPER threshold (goal: optimal %.0f%% or more)" % UPPER_GOAL, "%.0f%%" % up, ok_mark(up >= UPPER_GOAL) if k == "optimal" else ""),
+        ("Reach LOWER threshold (goal: balanced and invested 50% or more)", "%.0f%%" % lo,
+         ok_mark(lo >= 50) if k in ("balanced", "invested") else ""),
+        ("All but %d action cards played in every game (goal: 100%% of games)" % CARD_MISSING_MAX, "%.0f%%" % every, ok_mark(every >= 100)),
+        ("Every action card played in more than %.0f%% of games (goal in optimal)" % CARD_SHARE_MIN,
+         "fewest: %s %.0f%%" % min(shares.items(), key=lambda kv: kv[1]),
+         ok_mark(min(shares.values()) > CARD_SHARE_MIN) if k == "optimal" else ""),
         ("Plan plays a game (goal: %.1f to %.1f)" % PLAY_RANGES["Plan"], "%.1f" % plan, ok_mark(PLAY_RANGES["Plan"][0] <= plan <= PLAY_RANGES["Plan"][1])),
         ("Workshop plays a game (goal: %.1f to %.1f)" % PLAY_RANGES["Workshop"], "%.1f" % align, ok_mark(PLAY_RANGES["Workshop"][0] <= align <= PLAY_RANGES["Workshop"][1])),
         ("Celebrate plays a game (goal: 4 or fewer)", "%.1f" % cel, ok_mark(cel <= 4)),
@@ -2536,15 +2577,16 @@ def _target_rows(title: str, res: list) -> list:
         ("Psychological Safety held at the end (goal: reachable in optimal, 50% or more)", "%.0f%%" % ps, ok_mark(ps >= 50) if k == "optimal" else ""),
         ("Quits per 100 character-weeks (HARD goal in optimal: 5 or less)", "%.2f (%.2f a game, 0 quits in %.0f%% of games)" % (quit_rate(res), quits, zero),
          ok_mark(quit_rate(res) <= QUIT_RATE_HARD) if k == "optimal" else ""),
-        ("Habitus cards under %.0f quit per 100 character-weeks (soft goal: none)" % QUIT_RATE_SOFT_MIN,
+        ("Habitus cards under %.2f quit per 100 character-weeks (soft goal: none)" % QUIT_RATE_SOFT_MIN,
          "%d of %d" % (sum(1 for v in part_quit_rates(res).values() if v < QUIT_RATE_SOFT_MIN), len(part_quit_rates(res))),
          ok_mark(all(v >= QUIT_RATE_SOFT_MIN for v in part_quit_rates(res).values())) if k == "optimal" else ""),
         ("Most Flex markers held at once (goal: 1 or fewer)", "%d" % flex, ok_mark(flex <= 1)),
         ("Quality quits after a week without Work (goal in optimal: 0.05 or less)", "%.3f" % qnw, ok_mark(qnw <= 0.05) if k == "optimal" else ""),
-        ("Onboarding plays a game (goal in optimal: 0.1 or less, same as few quits; not an action card)", "%.2f" % onb, ok_mark(onb <= 0.1) if k == "optimal" else ""),
-        ("Games that end on 0 points, project unfinished (goal in optimal: 5% or less)", "%.0f%%" % scored0, ok_mark(scored0 <= 5) if k == "optimal" else ""),
-    ] + [("%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, NEED_SOFT_HI), "%.0f%%" % v,
-          ok_mark(NEED_SOFT_LO <= v <= NEED_SOFT_HI) if k == "optimal" else "") for t, v in need_rates(res).items()]
+        ("Onboarding plays a game (goal in optimal: %.2f or less, follows the quits; not an action card)" % ONBOARDING_MAX, "%.2f" % onb, ok_mark(onb <= ONBOARDING_MAX) if k == "optimal" else ""),
+        ("Games that end on 0 points (goal: optimal never, balanced and invested more than %.0f%%)" % HAND_ZERO_MIN, "%.1f%%" % scored0,
+         ok_mark(scored0 <= 0) if k == "optimal" else ok_mark(scored0 > HAND_ZERO_MIN) if k in ("balanced", "invested") else ""),
+    ] + [("%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, need_hi(t)), "%.0f%%" % v,
+          ok_mark(NEED_SOFT_LO <= v <= need_hi(t)) if k == "optimal" else "") for t, v in need_rates(res).items()]
 
 
 def write_postsim(path: str, dump: dict):
@@ -2815,6 +2857,45 @@ def plot_quit_triggers(path: str, dump: dict):
         fh.write("\n".join(svg))
 
 
+SCORE_COL = {"balanced": "#1971C2", "invested": "#E8590C", "optimal": "#1F7A4D", "random": "#868E96", "hero": "#9B51E0"}
+
+
+def _score_chart(out: list, x: float, y: float, w: float, h: float, dump: dict) -> float:
+    """Share of games that reach at least each Team Score, one line per mode, with both thresholds and the goals. Returns the bottom edge."""
+    from bisect import bisect_left
+    modes = list(dump)
+    R = dump[modes[0]][0]
+    lo_t = R.threshold_base + R.threshold_per_player * R.players
+    hi_t = R.threshold_high_base + R.threshold_per_player * R.players
+    mx = max(20, math.ceil((max(max(r["score"] for r in dump[m][1]) for m in modes) + 1) / 20) * 20)
+    px = lambda s: x + w * s / mx
+    py = lambda p: y + h - h * p / 100
+    out.append('<text x="%g" y="%g" class="h">TEAM SCORE BY MODE</text>' % (x, y - 34))
+    out.append('<text x="%g" y="%g" class="a">share of games that reach at least this Team Score (the drop at 1 is the games that end on 0)</text>' % (x, y - 16))
+    out.append('<rect x="%g" y="%g" width="%g" height="%g" fill="#fafafa" stroke="#ccc"/>' % (x, y, w, h))
+    for p in (0, 25, 50, 75, 100):
+        out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" class="g"/><text x="%g" y="%g" class="a" text-anchor="end">%d%%</text>' % (x, py(p), x + w, py(p), x - 6, py(p) + 4, p))
+    for s in range(0, mx + 1, 20):
+        out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" class="g"/><text x="%g" y="%g" class="a" text-anchor="middle">%d</text>' % (px(s), y, px(s), y + h, px(s), y + h + 16, s))
+    for t, label in ((lo_t, "lower threshold %d" % lo_t), (hi_t, "upper threshold %d" % hi_t)):
+        out.append('<line x1="%g" y1="%g" x2="%g" y2="%g" stroke="#C92A2A" stroke-width="1.4" stroke-dasharray="6 3"/>' % (px(t), y, px(t), y + h))
+        out.append('<text x="%g" y="%g" class="a" text-anchor="middle">%s</text>' % (px(t), y - 3, _esc(label)))
+    for i, m in enumerate(modes):
+        sc = sorted(r["score"] for r in dump[m][1])
+        n = len(sc)
+        col = SCORE_COL.get(_flat(m), "#444444")
+        pts = " ".join("%g,%g" % (px(s), py(100 * (n - bisect_left(sc, s)) / n)) for s in range(0, mx + 1))
+        out.append('<polyline points="%s" fill="none" stroke="%s" stroke-width="2.4"/>' % (pts, col))
+        out.append('<rect x="%g" y="%g" width="14" height="4" fill="%s"/><text x="%g" y="%g" class="a">%s</text>' % (
+            x + w - 150, y + 14 + i * 18, col, x + w - 130, y + 19 + i * 18, _esc(_flat(m))))
+    out.append('<circle cx="%g" cy="%g" r="6" fill="none" stroke="#1F7A4D" stroke-width="2"/>' % (px(hi_t), py(UPPER_GOAL)))
+    out.append('<text x="%g" y="%g" class="a">goal: optimal %.0f%% at the upper threshold</text>' % (px(hi_t) + 10, py(UPPER_GOAL) - 8, UPPER_GOAL))
+    out.append('<circle cx="%g" cy="%g" r="6" fill="none" stroke="#1971C2" stroke-width="2"/>' % (px(lo_t), py(50)))
+    out.append('<text x="%g" y="%g" class="a">goal: balanced and invested 50%% at the lower threshold</text>' % (px(lo_t) + 10, py(50) - 8))
+    out.append('<text x="%g" y="%g" class="a" text-anchor="middle">Team Score</text>' % (x + w / 2, y + h + 34))
+    return y + h + 40
+
+
 def plot_summary(path: str, dump: dict):
     """One page: every target by mode, then a focus on optimal play."""
     modes = list(dump)
@@ -2840,7 +2921,9 @@ def plot_summary(path: str, dump: dict):
             out.append('<text x="%d" y="%d" class="a" text-anchor="middle">%s%s</text>' % (
                 cx + COL / 2, yy + 15, _esc(val if len(val) < 22 else val.split(" (")[0]), (" " + mark) if mark else ""))
     tab_end = y0 + (len(rows0) + 1) * RH
+    tab_end = _score_chart(out, X0 + 40, tab_end + 70, 1000, 300, dump) + 10
     width = X0 + LAB + COL * len(modes) + 40
+    width = max(width, 1120)
     height = tab_end + 40
     opt = next((m for m in modes if _flat(m) == "optimal"), None)
     if opt:
@@ -2867,7 +2950,7 @@ def plot_summary(path: str, dump: dict):
         for t, col in (("Autonomy", "#F7D7A1"), ("Hierarchy", "#C7CFB5"), ("Community", "#D3CEDF"), ("Quality", "#B5C7CF"), ("Recognition", "#D9D3C4")):
             seen = sum(r["need_seen"].get(t, 0) for r in res)
             need_rows.append((t, 100 * sum(r["need_met"].get(t, 0) for r in res) / seen if seen else 0.0, col))
-        end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks (green band = soft goal)", need_rows, 100, "%.0f%%", {t: (NEED_SOFT_LO, NEED_SOFT_HI) for t, _, _ in need_rows})
+        end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks (green band = soft goal)", need_rows, 100, "%.0f%%", {t: (NEED_SOFT_LO, need_hi(t)) for t, _, _ in need_rows})
         # quits by habitus part, human names
         human = {"torso": "values", "legs": "instinct", "base": "upbringing"}
         agg = Counter()

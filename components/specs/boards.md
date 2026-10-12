@@ -159,7 +159,7 @@ Face A and Face B are each drawn inside their own `<g transform="translate(...)"
 **local** coordinates match Standing-slot geometry exactly (six circle centres at
 x = 96,116,136,156,176,196, matching the wells this strip must line up with when seated). Paint
 order per face: panel fill + border, title, subtitle, scale number labels, then the 6 outline
-circles, then the red flip-ring (`stroke:#905151;stroke-width:.8`) over the 6th circle, then a
+circles, then the red flip-ring (`stroke:#905151;stroke-width:.8`) over the 5th circle (Standing 4), then a
 footnote bracket path, then the description/citation on the right. The cut line uses the
 `.cut` dashed class (`#4A5259`, `stroke-dasharray:3 2`) to visually distinguish "cut here" from
 every other dashed use (`.slot`/`.seat`/`.hab`, all `#2A2620`).
@@ -426,7 +426,7 @@ board. Adaptability is not a row: it is a pool of tokens on SHIT HAPPENS. BACK i
 | `trust` | title, subtitle, 6-circle coin track numbered 0-5, red flip-ring at circle 4, 'TEACH DOES NOTHING' footnote under circles 0-1, "Psychological Safety" + citation | `#D3CEDF` |
 | `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#C7CFB5` |
 | `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circle 0 only, "Shared Repertoire" + citation | `#F7D7A1` |
-| `standing` | title, subtitle ("grown by nobody" / "starts on 0"), 6-circle track numbered 0-5 at the same centres as the other rows, red flip-ring at circle 5, bracket + "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE", "FLIP AT 5" label above the ring, "Authorized Voice" + description + citation. Absolute at y 157-185, no `translate`. A footer line says Adaptability is a pool on SHIT HAPPENS | `#D9D3C4` (Capital Bone) |
+| `standing` | title, subtitle ("grown by nobody" / "starts on 0"), 6-circle track numbered 0-5 at the same centres as the other rows, red flip-ring at circle 4, bracket + "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE", "FLIP AT 4" label above the ring, "Authorized Voice" + description + citation. Absolute at y 157-185, no `translate`. A footer line says Adaptability is a pool on SHIT HAPPENS | `#D9D3C4` (Capital Bone) |
 
 Row tint follows the same People/Environment/Management categories the Event-card tints derive
 from: Trust = People, Capability = Environment, Shared Practice = Management. Standing uses the
@@ -453,7 +453,7 @@ Capital Bone `#D9D3C4`. Adaptability has no row (it is a pool, and has no Habit)
 | "Standing" | `.s` serif | 6 | `#000000` | - |
 | "grown by nobody" / "starts on 0" | `.s` italic serif | 3.4 | `#000000` | - |
 | "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE" | `.m` mono | 2.8 | `#000000` | - |
-| "FLIP AT 5" | `.m` mono | 2.6 | `#000000` | - |
+| "FLIP AT 4" | `.m` mono | 2.6 | `#000000` | - |
 | "Authorized Voice" / "Once a week: cancel a Management or Customer Event outright." / "BOURDIEU 1991" | `.s` 5 / `.s` italic 3.4 / `.m.q` 2.6 | - | `#000000` | - |
 | "Adaptability is not a track here..." footer | `.s` italic serif | 3.8 | `#000000` | - |
 

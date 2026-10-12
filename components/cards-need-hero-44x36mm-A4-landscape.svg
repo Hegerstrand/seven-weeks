@@ -71,9 +71,9 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <text x="117" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="147" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Community</text>
   <line x1="117" y1="50" x2="155" y2="50" class="hair"/>
   <rect x="117" y="52" width="38" height="12.7" rx=".4" fill="#D3CEDF"/>
-  <text x="136" y="55" class="serif" font-size="3.2" text-anchor="middle">Team spent Engagement,</text>
-  <text x="136" y="59.2" class="serif" font-size="3.2" text-anchor="middle">Reflect or Workshop, or</text>
-  <text x="136" y="63.4" class="serif" font-size="3.2" text-anchor="middle">has Psychological Safety:</text>
+  <text x="136" y="55" class="serif" font-size="3.2" text-anchor="middle">Team spent Engagement</text>
+  <text x="136" y="59.2" class="serif" font-size="3.2" text-anchor="middle">or Reflect, or has</text>
+  <text x="136" y="63.4" class="serif" font-size="3.2" text-anchor="middle">Psychological Safety:</text>
   <rect x="124.5" y="66" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="136" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
 

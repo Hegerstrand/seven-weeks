@@ -204,7 +204,7 @@ People carry on doing the thing that used to work.
 | **Illusio** | ✅ Motivation, incl. quitting at 0 - now named |
 | **Doxa** | ✅ Events cannot be refused - now named |
 | **Symbolic violence / misrecognition** | ✅ The relative Capital gate - now named |
-| **Hysteresis** | ✅ The Engage Legs card - strength stops working from week 4, tendency doesn't |
+| **Hysteresis** | ✅ The Engage Legs card - it pays +1 in weeks 1-3, nothing in week 4, costs 1 in weeks 5-6 and stops again |
 
 
 This turns the trigger pattern into three parts, not two: **when [Event X] happens, if a

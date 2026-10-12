@@ -106,7 +106,7 @@ the-team-BACK matches and goes on the reverse.</desc>
     <text x="86" y="167.4">0</text><text x="103.7" y="167.4">1</text><text x="121.5" y="167.4">2</text>
     <text x="139.2" y="167.4">3</text><text x="156.9" y="167.4">4</text><text x="174.7" y="167.4">5</text>
   </g>
-  <circle cx="174.7" cy="166" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <circle cx="156.9" cy="166" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
   <path d="M78.9,176 L78.9,179 L181.7,179 L181.7,176" class="w" style="stroke:#905151;stroke-width:.5"/>
   <text x="130.3" y="183" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE</text>
   <text x="220.7" y="164" class="s" font-size="5">Authorized Voice</text>
@@ -114,7 +114,7 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="220.7" y="174.5" class="s" font-size="3.4" font-style="italic">or Customer Event outright.</text>
   <text x="220.7" y="180.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
 </g>
-<text x="174.7" y="155" class="m" font-size="2.6" text-anchor="middle">FLIP AT 5</text>
+<text x="156.9" y="155" class="m" font-size="2.6" text-anchor="middle">FLIP AT 4</text>
 
 <text x="12" y="194" class="s" font-size="3.8" font-style="italic">Adaptability is not a track here: it is a pool of tokens, kept on SHIT HAPPENS, with the Team Reflexivity coin beside it.</text>
 

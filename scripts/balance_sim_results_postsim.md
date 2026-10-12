@@ -1,188 +1,188 @@
 # Post-sim report
 
-Games per mode: balanced 1000, invested 1000, random 1000, optimal 1000. Players: 5. Thresholds: lower 1, upper 89.
+Games per mode: balanced 1000, invested 1000, optimal 1000. Players: 5. Thresholds: lower 100, upper 140.
 
 ## 1. Targets by mode
 
-| Target | balanced | invested | random | optimal |
-|---|---|---|---|---|
-| Reach UPPER threshold (goal: optimal 90% or more) | 40% | 38% | 0% | 70% **MISS** |
-| Reach LOWER threshold (goal: random 2% or less, balanced and invested 50% or more) | 54% **PASS** | 54% **PASS** | 0% **PASS** | 82% |
-| Every action card played in a game (goal: 90% of games) | 0% **MISS** | 0% **MISS** | 75% **MISS** | 87% **MISS** |
-| Every action card averages 1 or more plays a game (goal in optimal) | fewest: Workshop 0.00 | fewest: Workshop 0.00 | fewest: Reflect 2.46 | fewest: Plan 1.24 **PASS** |
-| Plan plays a game (goal: 1.0 to 2.5) | 3.5 **MISS** | 3.6 **MISS** | 3.8 **MISS** | 1.2 **PASS** |
-| Workshop plays a game (goal: 1.0 to 2.5) | 0.0 **MISS** | 0.0 **MISS** | 2.8 **MISS** | 1.4 **PASS** |
-| Celebrate plays a game (goal: 4 or fewer) | 1.7 **PASS** | 2.3 **PASS** | 3.1 **PASS** | 1.8 **PASS** |
-| Team Reflexivity held at the end (goal: reachable in optimal, 50% or more) | 46% | 41% | 1% | 81% **PASS** |
-| Psychological Safety held at the end (goal: reachable in optimal, 50% or more) | 100% | 100% | 60% | 100% **PASS** |
-| Quits per 100 character-weeks (HARD goal in optimal: 5 or less) | 8.08 (2.91 a game, 0 quits in 25% of games) | 8.22 (2.96 a game, 0 quits in 24% of games) | 25.55 (5.39 a game, 0 quits in 1% of games) | 3.47 (1.31 a game, 0 quits in 50% of games) **PASS** |
-| Habitus cards under 1 quit per 100 character-weeks (soft goal: none) | 0 of 15 | 0 of 15 | 0 of 15 | 1 of 15 **MISS** |
-| Most Flex markers held at once (goal: 1 or fewer) | 0 **PASS** | 0 **PASS** | 0 **PASS** | 1 **PASS** |
-| Quality quits after a week without Work (goal in optimal: 0.05 or less) | 0.257 | 0.321 | 1.078 | 0.132 **MISS** |
-| Onboarding plays a game (goal in optimal: 0.1 or less, same as few quits; not an action card) | 2.18 | 2.15 | 1.94 | 1.01 **MISS** |
-| Games that end on 0 points, project unfinished (goal in optimal: 5% or less) | 46% | 46% | 100% | 18% **MISS** |
-| Autonomy Need met (soft goal: 75% to 95%) | 74% | 74% | 45% | 93% **PASS** |
-| Hierarchy Need met (soft goal: 75% to 95%) | 56% | 49% | 73% | 89% **PASS** |
-| Community Need met (soft goal: 75% to 95%) | 99% | 99% | 82% | 100% **MISS** |
-| Quality Need met (soft goal: 75% to 95%) | 91% | 90% | 43% | 91% **PASS** |
-| Recognition Need met (soft goal: 75% to 95%) | 67% | 65% | 57% | 84% **PASS** |
+| Target | balanced | invested | optimal |
+|---|---|---|---|
+| Reach UPPER threshold (goal: optimal 80% or more) | 51% | 45% | 83% **PASS** |
+| Reach LOWER threshold (goal: balanced and invested 50% or more) | 69% **PASS** | 65% **PASS** | 94% |
+| All but 1 action cards played in every game (goal: 100% of games) | 4% **MISS** | 5% **MISS** | 97% **MISS** |
+| Every action card played in more than 50% of games (goal in optimal) | fewest: Workshop 0% | fewest: Workshop 0% | fewest: Demo 56% **PASS** |
+| Plan plays a game (goal: 1.0 to 2.5) | 3.3 **MISS** | 3.4 **MISS** | 1.1 **PASS** |
+| Workshop plays a game (goal: 1.0 to 2.5) | 0.0 **MISS** | 0.0 **MISS** | 1.9 **PASS** |
+| Celebrate plays a game (goal: 4 or fewer) | 0.8 **PASS** | 2.2 **PASS** | 2.9 **PASS** |
+| Team Reflexivity held at the end (goal: reachable in optimal, 50% or more) | 73% | 66% | 91% **PASS** |
+| Psychological Safety held at the end (goal: reachable in optimal, 50% or more) | 100% | 100% | 100% **PASS** |
+| Quits per 100 character-weeks (HARD goal in optimal: 5 or less) | 2.65 (1.02 a game, 0 quits in 55% of games) | 2.77 (1.07 a game, 0 quits in 52% of games) | 0.56 (0.22 a game, 0 quits in 85% of games) **PASS** |
+| Habitus cards under 0.25 quit per 100 character-weeks (soft goal: none) | 0 of 15 | 0 of 15 | 2 of 15 **MISS** |
+| Most Flex markers held at once (goal: 1 or fewer) | 0 **PASS** | 0 **PASS** | 1 **PASS** |
+| Quality quits after a week without Work (goal in optimal: 0.05 or less) | 0.322 | 0.388 | 0.110 **MISS** |
+| Onboarding plays a game (goal in optimal: 0.15 or less, follows the quits; not an action card) | 0.63 | 0.62 | 0.11 **PASS** |
+| Games that end on 0 points (goal: optimal never, balanced and invested more than 1%) | 17.7% **PASS** | 16.8% **PASS** | 2.9% **MISS** |
+| Autonomy Need met (soft goal: 75% to 100%) | 83% | 82% | 97% **PASS** |
+| Hierarchy Need met (soft goal: 75% to 100%) | 68% | 53% | 87% **PASS** |
+| Community Need met (soft goal: 75% to 100%) | 100% | 99% | 100% **PASS** |
+| Quality Need met (soft goal: 75% to 95%) | 88% | 86% | 89% **PASS** |
+| Recognition Need met (soft goal: 75% to 95%) | 69% | 67% | 81% **PASS** |
 
 PASS/MISS is only shown where the goal applies to that mode.
 
 ## 2. Summary by mode
 
-| Measure | balanced | invested | random | optimal |
-|---|---|---|---|---|
-| Failure / heroic / sustainable / high performance | 40 / 5 / 15 / 40 % | 40 / 6 / 16 / 38 % | 100 / 0 / 0 / 0 % | 14 / 4 / 12 / 70 % |
-| Mean score (p10 / p90) | 63.9 (0 / 164) | 58.7 (0 / 154) | 0.0 (0 / 0) | 109.4 (0 / 169) |
-| Features banked, all six | 5.28, 60% | 5.30, 60% | 1.64, 0% | 5.79, 86% |
-| Habits held at the end | 3.1 | 2.8 | 1.3 | 4.1 |
-| Events cancelled | 6.0 of 13.3 | 6.0 of 13.3 | 2.9 of 13.1 | 9.4 of 13.4 |
-| Mean Motivation at week 8 (lowest) | 3.25 (1.93) | 3.18 (1.92) | 2.28 (1.90) | 3.67 (2.27) |
-| Quits a game, games with a quit | 2.91, 75% | 2.96, 76% | 5.39, 99% | 1.31, 50% |
-| Capability / Trust / Shared Practice at the end | 2.8 / 4.1 / 4.2 | 2.5 / 4.1 / 4.2 | 1.8 / 3.7 / 2.7 | 3.8 / 4.0 / 4.9 |
+| Measure | balanced | invested | optimal |
+|---|---|---|---|
+| Failure / heroic / sustainable / high performance | 16 / 15 / 18 / 51 % | 14 / 21 / 20 / 45 % | 3 / 3 / 11 / 83 % |
+| Mean score (p10 / p90) | 112.0 (0 / 168) | 105.5 (0 / 166) | 152.5 (117 / 171) |
+| Features banked, all six | 5.77, 84% | 5.80, 86% | 5.97, 97% |
+| Habits held at the end | 4.0 | 3.7 | 4.7 |
+| Events cancelled | 8.1 of 13.5 | 8.1 of 13.6 | 10.9 of 13.6 |
+| Mean Motivation at week 8 (lowest) | 3.47 (2.20) | 3.36 (2.07) | 3.96 (2.64) |
+| Quits a game, games with a quit | 1.02, 45% | 1.07, 48% | 0.22, 15% |
+| Capability / Trust / Shared Practice at the end | 3.3 / 4.0 / 4.7 | 2.8 / 4.0 / 4.6 | 4.2 / 4.1 / 5.0 |
 
 ## 3. Optimal play only: optimal
 
 ### Targets
 
-- Reach UPPER threshold (goal: optimal 90% or more): 70% **MISS**
-- Reach LOWER threshold (goal: random 2% or less, balanced and invested 50% or more): 82%
-- Every action card played in a game (goal: 90% of games): 87% **MISS**
-- Every action card averages 1 or more plays a game (goal in optimal): fewest: Plan 1.24 **PASS**
-- Plan plays a game (goal: 1.0 to 2.5): 1.2 **PASS**
-- Workshop plays a game (goal: 1.0 to 2.5): 1.4 **PASS**
-- Celebrate plays a game (goal: 4 or fewer): 1.8 **PASS**
-- Team Reflexivity held at the end (goal: reachable in optimal, 50% or more): 81% **PASS**
+- Reach UPPER threshold (goal: optimal 80% or more): 83% **PASS**
+- Reach LOWER threshold (goal: balanced and invested 50% or more): 94%
+- All but 1 action cards played in every game (goal: 100% of games): 97% **MISS**
+- Every action card played in more than 50% of games (goal in optimal): fewest: Demo 56% **PASS**
+- Plan plays a game (goal: 1.0 to 2.5): 1.1 **PASS**
+- Workshop plays a game (goal: 1.0 to 2.5): 1.9 **PASS**
+- Celebrate plays a game (goal: 4 or fewer): 2.9 **PASS**
+- Team Reflexivity held at the end (goal: reachable in optimal, 50% or more): 91% **PASS**
 - Psychological Safety held at the end (goal: reachable in optimal, 50% or more): 100% **PASS**
-- Quits per 100 character-weeks (HARD goal in optimal: 5 or less): 3.47 (1.31 a game, 0 quits in 50% of games) **PASS**
-- Habitus cards under 1 quit per 100 character-weeks (soft goal: none): 1 of 15 **MISS**
+- Quits per 100 character-weeks (HARD goal in optimal: 5 or less): 0.56 (0.22 a game, 0 quits in 85% of games) **PASS**
+- Habitus cards under 0.25 quit per 100 character-weeks (soft goal: none): 2 of 15 **MISS**
 - Most Flex markers held at once (goal: 1 or fewer): 1 **PASS**
-- Quality quits after a week without Work (goal in optimal: 0.05 or less): 0.132 **MISS**
-- Onboarding plays a game (goal in optimal: 0.1 or less, same as few quits; not an action card): 1.01 **MISS**
-- Games that end on 0 points, project unfinished (goal in optimal: 5% or less): 18% **MISS**
-- Autonomy Need met (soft goal: 75% to 95%): 93% **PASS**
-- Hierarchy Need met (soft goal: 75% to 95%): 89% **PASS**
-- Community Need met (soft goal: 75% to 95%): 100% **MISS**
-- Quality Need met (soft goal: 75% to 95%): 91% **PASS**
-- Recognition Need met (soft goal: 75% to 95%): 84% **PASS**
+- Quality quits after a week without Work (goal in optimal: 0.05 or less): 0.110 **MISS**
+- Onboarding plays a game (goal in optimal: 0.15 or less, follows the quits; not an action card): 0.11 **PASS**
+- Games that end on 0 points (goal: optimal never, balanced and invested more than 1%): 2.9% **MISS**
+- Autonomy Need met (soft goal: 75% to 100%): 97% **PASS**
+- Hierarchy Need met (soft goal: 75% to 100%): 87% **PASS**
+- Community Need met (soft goal: 75% to 100%): 100% **PASS**
+- Quality Need met (soft goal: 75% to 95%): 89% **PASS**
+- Recognition Need met (soft goal: 75% to 95%): 81% **PASS**
 
 ### Motivation and quits by week
 
 | Week | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 |
 |---|---|---|---|---|---|---|---|---|
-| Lowest | 2.00 | 1.25 | 1.93 | 2.36 | 2.50 | 2.65 | 2.56 | 2.27 |
-| Mean | 2.21 | 2.27 | 3.04 | 3.49 | 3.72 | 3.85 | 3.89 | 3.67 |
-| Median | 2.05 | 2.30 | 3.03 | 3.56 | 3.85 | 4.00 | 4.15 | 3.88 |
-| Quits | 0.00 | 0.27 | 0.33 | 0.18 | 0.13 | 0.09 | 0.15 | 0.16 |
+| Lowest | 3.00 | 2.48 | 2.83 | 3.05 | 2.83 | 3.03 | 3.21 | 2.64 |
+| Mean | 3.00 | 3.34 | 3.79 | 4.08 | 3.93 | 4.15 | 4.30 | 3.96 |
+| Median | 3.00 | 3.23 | 3.81 | 4.19 | 4.04 | 4.32 | 4.51 | 4.15 |
+| Quits | 0.00 | 0.01 | 0.03 | 0.02 | 0.03 | 0.02 | 0.01 | 0.10 |
 
-Quit causes per game (biggest Motivation loss in the week): the weekly grind 0.83, Events 0.33, a week without Work (Quality Need) 0.13, a track in the low band (instinct) 0.01, the burnout Event 0.01, another character's Hero 0.01, spent it on Workshop, Overtime or Take One 0.00.
+Quit causes per game (biggest Motivation loss in the week): a week without Work (Quality Need) 0.11, the weekly grind 0.05, Events 0.05, another character's Hero 0.01, a track in the low band (instinct) 0.00.
 
 ### Event cards in weeks 2 to 4 (every card is drawn equally often; the difference is which ones land)
 
 | Event | cost to cancel | drawn a game | landed a game | share that landed |
 |---|---|---|---|---|
 | THE WOLF | cannot | 0.253 | 0.253 | 100% |
-| THE DATE MOVES UP | say no | 0.233 | 0.198 | 85% |
-| SCOPE CREEP | 3 | 0.267 | 0.139 | 52% |
-| FALSE START | 2 | 0.231 | 0.131 | 57% |
-| EQUIPMENT OUTAGE | 3 | 0.228 | 0.121 | 53% |
-| THE DASHBOARD | 3 | 0.232 | 0.120 | 52% |
-| STATUS MEETING | 3 | 0.240 | 0.116 | 48% |
-| EVERYTHING AT ONCE | 3 | 0.234 | 0.115 | 49% |
-| NEGATIVE FEEDBACK | 3 | 0.232 | 0.110 | 47% |
-| PRIORITY CHANGES | 2 | 0.254 | 0.103 | 41% |
-| BUDGET CUT | 2 | 0.257 | 0.094 | 37% |
-| REQUIREMENTS CHANGE | 2 | 0.250 | 0.091 | 36% |
-| KNOWLEDGE HOARDING | 2 | 0.240 | 0.085 | 35% |
-| THE TEAM SPLITS | 2 | 0.263 | 0.084 | 32% |
-| REORGANISED | 2 | 0.252 | 0.084 | 33% |
-| BURNOUT WARNING | 2 | 0.233 | 0.083 | 36% |
-| SHAKY GROUND | 3 | 0.234 | 0.078 | 33% |
-| OLD FOUNDATIONS | 2 | 0.244 | 0.068 | 28% |
-| MORE HANDS | 2 | 0.238 | 0.060 | 25% |
-| THE AUDIT | 2 | 0.225 | 0.042 | 19% |
-| EVERYONE IS EQUAL | 2 | 0.232 | 0.041 | 18% |
-| ALWAYS REACTING | 1 | 0.231 | 0.034 | 15% |
-| LEADS FROM BEHIND | 1 | 0.235 | 0.033 | 14% |
-| THE BIKESHED | 1 | 0.236 | 0.026 | 11% |
-| A FLAT WEEK | 1 | 0.226 | 0.026 | 12% |
+| THE DATE MOVES UP | say no | 0.233 | 0.158 | 68% |
+| FALSE START | 2 | 0.231 | 0.125 | 54% |
+| STATUS MEETING | 3 | 0.240 | 0.102 | 42% |
+| SCOPE CREEP | 3 | 0.267 | 0.090 | 34% |
+| BUDGET CUT | 2 | 0.257 | 0.083 | 32% |
+| EQUIPMENT OUTAGE | 3 | 0.228 | 0.082 | 36% |
+| REQUIREMENTS CHANGE | 2 | 0.250 | 0.080 | 32% |
+| PRIORITY CHANGES | 2 | 0.254 | 0.078 | 31% |
+| NEGATIVE FEEDBACK | 3 | 0.232 | 0.072 | 31% |
+| EVERYTHING AT ONCE | 3 | 0.234 | 0.070 | 30% |
+| THE DASHBOARD | 3 | 0.232 | 0.069 | 30% |
+| REORGANISED | 2 | 0.252 | 0.069 | 27% |
+| SHAKY GROUND | 3 | 0.234 | 0.062 | 26% |
+| KNOWLEDGE HOARDING | 2 | 0.240 | 0.057 | 24% |
+| THE TEAM SPLITS | 2 | 0.263 | 0.056 | 21% |
+| BURNOUT WARNING | 2 | 0.233 | 0.055 | 24% |
+| OLD FOUNDATIONS | 2 | 0.244 | 0.051 | 21% |
+| MORE HANDS | 2 | 0.238 | 0.050 | 21% |
+| EVERYONE IS EQUAL | 2 | 0.232 | 0.042 | 18% |
+| THE AUDIT | 2 | 0.225 | 0.032 | 14% |
+| LEADS FROM BEHIND | 1 | 0.235 | 0.020 | 9% |
+| ALWAYS REACTING | 1 | 0.231 | 0.017 | 7% |
+| THE BIKESHED | 1 | 0.236 | 0.016 | 7% |
+| A FLAT WEEK | 1 | 0.226 | 0.014 | 6% |
 
 ### Event cards behind quits
 
 | Event | quits a game | lands a game | quits per 100 landings |
 |---|---|---|---|
-| EQUIPMENT OUTAGE | 0.055 | 0.20 | 28.2 |
-| REORGANISED | 0.042 | 0.12 | 35.0 |
-| EVERYTHING AT ONCE | 0.040 | 0.22 | 18.2 |
-| BUDGET CUT | 0.040 | 0.13 | 30.3 |
-| THE AUDIT | 0.035 | 0.09 | 39.3 |
-| THE TEAM SPLITS | 0.031 | 0.10 | 30.7 |
-| EVERYONE IS EQUAL | 0.024 | 0.07 | 33.3 |
-| SCOPE CREEP | 0.009 | 0.22 | 4.1 |
+| EQUIPMENT OUTAGE | 0.011 | 0.13 | 8.7 |
+| EVERYONE IS EQUAL | 0.010 | 0.05 | 19.6 |
+| THE AUDIT | 0.008 | 0.04 | 18.2 |
+| THE TEAM SPLITS | 0.005 | 0.06 | 7.8 |
+| SCOPE CREEP | 0.003 | 0.12 | 2.4 |
+| BUDGET CUT | 0.003 | 0.09 | 3.2 |
+| REQUIREMENTS CHANGE | 0.002 | 0.10 | 1.9 |
+| PRIORITY CHANGES | 0.002 | 0.10 | 2.0 |
 
 ### Event cards behind each habitus card's quits (the quit week and the week before)
 
 | Habitus card | Event cards (quits a game) |
 |---|---|
-| torso Autonomy | BUDGET CUT 0.033, REORGANISED 0.032, STATUS MEETING 0.027 |
-| torso Hierarchy | EVERYTHING AT ONCE 0.036, EQUIPMENT OUTAGE 0.034, SHAKY GROUND 0.026 |
-| torso Community | THE TEAM SPLITS 0.023, EQUIPMENT OUTAGE 0.019, REORGANISED 0.018 |
-| torso Quality | THE DATE MOVES UP 0.042, PRIORITY CHANGES 0.039, EQUIPMENT OUTAGE 0.034 |
-| torso Recognition | EVERYTHING AT ONCE 0.030, EQUIPMENT OUTAGE 0.026, REORGANISED 0.021 |
-| legs OwnIt | THE TEAM SPLITS 0.011, BUDGET CUT 0.005, EQUIPMENT OUTAGE 0.005 |
-| legs Analyze | EQUIPMENT OUTAGE 0.024, EVERYTHING AT ONCE 0.020, THE TEAM SPLITS 0.020 |
-| legs Support | REORGANISED 0.028, PRIORITY CHANGES 0.016, EQUIPMENT OUTAGE 0.014 |
-| legs Engage | EVERYTHING AT ONCE 0.055, EQUIPMENT OUTAGE 0.037, THE AUDIT 0.025 |
-| legs SpeakUp | EQUIPMENT OUTAGE 0.034, THE TEAM SPLITS 0.027, REORGANISED 0.025 |
-| base Bookish | THE TEAM SPLITS 0.017, EQUIPMENT OUTAGE 0.016, THE AUDIT 0.013 |
-| base HandsOn | EQUIPMENT OUTAGE 0.030, EVERYTHING AT ONCE 0.029, THE TEAM SPLITS 0.019 |
-| base Sheltered | REORGANISED 0.014, EQUIPMENT OUTAGE 0.014, EVERYTHING AT ONCE 0.012 |
-| base Dependable | EVERYTHING AT ONCE 0.026, EQUIPMENT OUTAGE 0.026, REORGANISED 0.023 |
-| base Competitive | EQUIPMENT OUTAGE 0.029, BUDGET CUT 0.028, EVERYTHING AT ONCE 0.027 |
+| torso Autonomy | EVERYONE IS EQUAL 0.008, THE AUDIT 0.005, STATUS MEETING 0.005 |
+| torso Hierarchy | EQUIPMENT OUTAGE 0.012, THE TEAM SPLITS 0.003, FALSE START 0.003 |
+| torso Community | THE TEAM SPLITS 0.004, EVERYONE IS EQUAL 0.003, EQUIPMENT OUTAGE 0.002 |
+| torso Quality | THE DASHBOARD 0.006, EQUIPMENT OUTAGE 0.005, BUDGET CUT 0.004 |
+| torso Recognition | LEADS FROM BEHIND 0.003, THE TEAM SPLITS 0.003, EVERYONE IS EQUAL 0.002 |
+| legs OwnIt | THE TEAM SPLITS 0.001, THE DASHBOARD 0.001, PRIORITY CHANGES 0.001 |
+| legs Analyze | THE TEAM SPLITS 0.004, EQUIPMENT OUTAGE 0.004, EVERYONE IS EQUAL 0.004 |
+| legs Support | EQUIPMENT OUTAGE 0.003, THE DASHBOARD 0.003, THE AUDIT 0.002 |
+| legs Engage | EQUIPMENT OUTAGE 0.010, EVERYONE IS EQUAL 0.005, BUDGET CUT 0.004 |
+| legs SpeakUp | EQUIPMENT OUTAGE 0.004, THE TEAM SPLITS 0.004, EVERYONE IS EQUAL 0.003 |
+| base Bookish | THE TEAM SPLITS 0.003, THE AUDIT 0.003, THE DASHBOARD 0.003 |
+| base HandsOn | EVERYONE IS EQUAL 0.005, EQUIPMENT OUTAGE 0.005, THE TEAM SPLITS 0.003 |
+| base Sheltered | EQUIPMENT OUTAGE 0.003, BUDGET CUT 0.002, THE DATE MOVES UP 0.001 |
+| base Dependable | EQUIPMENT OUTAGE 0.005, THE AUDIT 0.003, BUDGET CUT 0.003 |
+| base Competitive | EQUIPMENT OUTAGE 0.006, EVERYONE IS EQUAL 0.004, THE TEAM SPLITS 0.003 |
 
 ### Cards (share of games playing each, plays a game)
 
 | Card | share | per game |
 |---|---|---|
-| Work | 100% | 19.65 |
-| Celebrate | 100% | 1.76 |
-| Engagement | 100% | 3.01 |
-| Workshop | 100% | 1.37 |
-| Learn | 98% | 2.51 |
-| Teach | 97% | 2.58 |
-| Reflect | 100% | 3.42 |
-| Plan | 94% | 1.24 |
-| Demo | 92% | 2.25 |
+| Work | 100% | 19.95 |
+| Celebrate | 100% | 2.88 |
+| Engagement | 100% | 2.99 |
+| Workshop | 100% | 1.89 |
+| Learn | 100% | 3.05 |
+| Teach | 100% | 3.92 |
+| Reflect | 100% | 3.01 |
+| Plan | 96% | 1.07 |
+| Demo | 56% | 0.68 |
 
 ### Habitus parts by quits (per 100 character-weeks)
 
 | Part | quits/100 | mean Motivation |
 |---|---|---|
-| legs SpeakUp | 6.2 | 3.20 |
-| legs Engage | 6.0 | 2.73 |
-| torso Quality | 5.1 | 3.07 |
-| base Competitive | 4.6 | 3.20 |
-| base HandsOn | 4.4 | 3.46 |
-| base Dependable | 3.8 | 3.45 |
-| torso Hierarchy | 3.7 | 3.30 |
-| base Bookish | 3.4 | 3.65 |
+| torso Quality | 1.6 | 3.63 |
+| legs Engage | 1.2 | 3.55 |
+| legs SpeakUp | 0.9 | 3.60 |
+| base HandsOn | 0.7 | 4.00 |
+| base Competitive | 0.7 | 3.82 |
+| base Dependable | 0.5 | 4.07 |
+| base Bookish | 0.5 | 4.29 |
+| legs Analyze | 0.5 | 3.83 |
 
-Lowest mean Motivation: legs Engage 2.73, base Sheltered 2.86, torso Quality 3.07, base Competitive 3.20.
+Lowest mean Motivation: base Sheltered 2.94, legs Engage 3.55, legs SpeakUp 3.60, torso Quality 3.63.
 
 ### Pairs of habitus parts that quit most (per 100 character-weeks, pairs with 300+ character-weeks)
 
 | Pair | quits/100 | vs all | quits | character-weeks |
 |---|---|---|---|---|
-| values Quality + instinct Engage | 10.1 | 2.9x | 165 | 1635 |
-| instinct SpeakUp + upbringing Bookish | 9.5 | 2.7x | 91 | 956 |
-| instinct Engage + upbringing HandsOn | 8.8 | 2.5x | 125 | 1421 |
-| instinct SpeakUp + upbringing Competitive | 8.4 | 2.4x | 94 | 1118 |
-| instinct Engage + upbringing Competitive | 8.3 | 2.4x | 126 | 1520 |
-| values Quality + instinct SpeakUp | 7.9 | 2.3x | 91 | 1153 |
-| values Autonomy + instinct SpeakUp | 7.6 | 2.2x | 97 | 1271 |
-| instinct SpeakUp + upbringing Dependable | 7.2 | 2.1x | 95 | 1326 |
-| instinct SpeakUp + upbringing HandsOn | 6.9 | 2.0x | 86 | 1239 |
-| values Hierarchy + instinct SpeakUp | 6.9 | 2.0x | 82 | 1196 |
-| instinct Engage + upbringing Dependable | 6.8 | 1.9x | 102 | 1511 |
-| values Hierarchy + instinct Engage | 6.1 | 1.8x | 104 | 1700 |
+| values Quality + instinct Engage | 3.7 | 6.6x | 62 | 1682 |
+| values Quality + instinct SpeakUp | 3.3 | 5.9x | 48 | 1450 |
+| values Quality + upbringing Sheltered | 2.0 | 3.5x | 32 | 1623 |
+| values Quality + upbringing Competitive | 1.8 | 3.3x | 29 | 1576 |
+| values Quality + upbringing Bookish | 1.6 | 2.8x | 23 | 1475 |
+| instinct SpeakUp + upbringing Competitive | 1.5 | 2.7x | 21 | 1373 |
+| instinct Engage + upbringing HandsOn | 1.4 | 2.5x | 21 | 1478 |
+| values Quality + upbringing HandsOn | 1.4 | 2.5x | 23 | 1674 |
+| instinct Engage + upbringing Dependable | 1.3 | 2.3x | 20 | 1556 |
+| values Quality + upbringing Dependable | 1.2 | 2.2x | 21 | 1718 |
+| instinct Engage + upbringing Competitive | 1.2 | 2.1x | 19 | 1579 |
+| instinct Analyze + upbringing HandsOn | 1.1 | 2.0x | 18 | 1607 |

@@ -228,9 +228,9 @@ content sits in a translate group (6-15.5 mm) below it; no divider. On Project c
 the header, right of the title (x 46, serif 3.4); the footer rule is gone.
 
 **Torso loss on top of "Everyone loses 1" reads "LOSE 1 EXTRA"** (Budget Cut,
-Equipment Outage, The Team Splits, Reorganised, Everything At Once, A Flat Week, The Audit): the
+Equipment Outage, The Team Splits, A Flat Week, The Audit): the
 chip sits behind "1 EXTRA" only. On cards with no all-character loss the row still reads
-"LOSE 1 MOTIVATION" (Status Meeting reads "AUTONOMY LOSES 1 MOTIVATION" and prints no immune line). Every one of those seven cards also prints the immune Torso ("X: NO LOSS",
+"LOSE 1 MOTIVATION" (Status Meeting, Reorganised and Everything At Once read "AUTONOMY / HIERARCHY LOSES 1 MOTIVATION" and print no immune line). Every one of those five cards also prints the immune Torso ("X: NO LOSS",
 plain mono 2.7) under the extra-loss row; the pairs follow rulebook section 5 (Environment:
 Hierarchy loses, Autonomy immune; People: Community loses, Quality immune; Management: Autonomy
 loses, Hierarchy immune). Cards with no HERO route (none on this sheet) would drop the icon and print "No
@@ -278,8 +278,8 @@ cost: only a Speak Up Hero or Authorized Voice cancels it.
 | `legacy` (OLD FOUNDATIONS) | feature with most Work already banked gains +2 Work Cost | Hierarchy: lose 1 Motiv. | 2 | Engage (4 pips) | Who Knows What, costs 1 instead | "Built years ago. Nobody wrote down why." |
 | `build` (FALSE START) | first Work card this week produces nothing | Hierarchy: lose 1 Motiv. | 2 | none - "No hero can save this." | Who Knows What, costs 1 instead | "It worked yesterday." |
 | `split` (THE TEAM SPLITS) | two characters may not take the same feature; lose 1 Trust; everyone loses 1 Motivation | Community: lose 1 Motiv. | 2 | Speak Up (5 pips) | Psychological Safety, costs 1 instead | "Nobody said anything out loud." |
-| `reorg` (REORGANISED) | everyone loses 1 Motivation; lose 1 Shared Practice | Autonomy: lose 1 / Hierarchy: no loss | 2 | Engage (4 pips) | Shared Repertoire, costs 1 instead | "Only the chart changed, not the work." |
-| `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; everyone loses 1 Motivation | Hierarchy: lose 1 Motiv. | 3 | Speak Up (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
+| `reorg` (REORGANISED) | lose 1 Shared Practice; only Autonomy characters lose 1 Motivation | "AUTONOMY LOSES 1 MOTIVATION" (no all-character loss, no immune line) | 2 | Engage (4 pips) | Shared Repertoire, costs 1 instead | "Only the chart changed, not the work." |
+| `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; only Hierarchy characters lose 1 Motivation | "HIERARCHY LOSES 1 MOTIVATION" (no all-character loss, no immune line) | 3 | Speak Up (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
 | `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a feature banked this week is no reason to Celebrate | Community: lose 1 / Quality: no loss | 1 | Speak Up (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
 | `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none; HABIT Shared Repertoire, OR plinth ≤ 1 feature | 1 off each, they stack | "No one person can be the answer." |
 | `deadline` (THE DATE MOVES UP) | the deadline moves one week closer: move the week marker down a box; nothing in the last week | Quality: lose 1 Motiv. | none - "SAY NO / NO TOKENS / tokens cannot buy this off" | Speak Up (5 pips), OR Authorized Voice once a week | none (no Habit line, no cost squares) | "The customer wants it a week early." |
@@ -526,8 +526,8 @@ depends on habitus") that already makes Recognition different in a separate, unr
 | 1 | Own It | `TRUST` (chip, `#D3CEDF`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `TRUST` (chip, `#D3CEDF`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 | 2 | Analyze | `CAPABILITY` (chip, `#C7CFB5`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `CAPABILITY` (chip, `#C7CFB5`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 | 3 | Support | `SHARED PRACTICE` (chip, `#F7D7A1`) `3 OR MORE:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `SHARED PRACTICE` (chip, `#F7D7A1`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
-| 4 | Speak Up | `STANDING` (chip, `#D9D3C4`) `3 OR MORE:` + `+2 MOTIVATION` (chip, `#D3B1B1`) | `STANDING` (chip, `#D9D3C4`) `1 OR LESS:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
-| 5 | Engage | `FIRST 3 WEEKS:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `AFTER THAT:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
+| 4 | Speak Up | `ONCE A GAME:` / `GIVE ANY TEAMMATE` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `FROM WEEK 3.` / `NEEDS 3 MOTIVATION.` (plain mono, no chips) |
+| 5 | Engage | `FIRST 3 WEEKS:` + `+1 MOTIVATION` (chip, `#D3B1B1`) | `WEEKS 5 TO 6:` + `-1 MOTIVATION` (chip, `#D3B1B1`) |
 
 Every label line now carries its own category-tint chip on just the stat word (matching the
 same People=Trust `#D3CEDF` / Environment=Capability `#C7CFB5` / Management=Shared Practice
@@ -680,7 +680,7 @@ Motivation."** Every Need tile except Recognition now ends with its vindicating 
 alternative (Hierarchy: Who Knows What, Community: Psychological Safety); Quality has no Habit, only
 "Work added", and Recognition has none either. Community's old "Trust is 4+" is replaced.
 (rulebook.md, "Need gives bonus Motivation"). Hierarchy reads "Team played a Teach, Learn or Workshop, or has
-Who Knows What", Community "Team spent Engagement, Reflect or Workshop, or has Psychological Safety" and Recognition "A feature was banked this week, or you spent Hero, or held a Demo".
+Who Knows What", Community "Team spent Engagement or Reflect, or has Psychological Safety" and Recognition "A feature was banked this week, or you spent Hero, or held a Demo".
 **The condition text sits on a tint (2026-10-07)**, a rounded rect behind the condition lines
 (38 mm wide, `rx` .4) in the colour of the Event category that gets to that Torso (rulebook §5):
 Autonomy `#F7D7A1` (Management), Hierarchy `#C7CFB5` (Environment), Community `#D3CEDF` (People),

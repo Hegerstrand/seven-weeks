@@ -8,7 +8,7 @@ Seven weeks. Thirty-five days. One project standing between your team and the de
 team commits five days at a time, resolves them all at once, then closes the week and moves on.
 From week 2, Events crash into the week you already committed to - spend Adaptability to
 re-plan around them or cancel them outright. Deliver every Feature before Week 7 closes to win
-the project - but hit a Team Score above the upper line (5 for every character you started with, plus 64) and you didn't just finish it, you built a team that
+the project - but hit a Team Score above the upper line (5 for every character you started with, plus 115) and you didn't just finish it, you built a team that
 could survive doing it again: Sustainable High Performance.
 
 ---
@@ -119,7 +119,7 @@ unrepaid Flex) − (5 × tracks that finish at 0 or 1)
 
 **If any feature is missing, the Team Score is 0. It never goes below 0.**
 
-Two lines: **5 for every character you started with, minus 24** (lower) and **5 for every character, plus 64** (upper).
+Two lines: **5 for every character you started with, plus 75** (lower) and **5 for every character, plus 115** (upper).
 
 | Outcome | Condition | |
 |---|---|---|

@@ -251,12 +251,9 @@ Draw two every week, after the week is laid out. Sheet 7 carries cards 10-18.</d
     <text x="5" y="28" class="s" font-size="4.2">Nobody's fault, and it</text>
     <text x="5" y="32.8" class="s" font-size="4.2">costs a week.</text>
     <g transform="translate(0,9.5)">
-    <text x="5" y="28" class="s" font-size="4.8">Every Work card this</text>
-    <text x="5" y="34" class="s" font-size="4.8">week produces <tspan font-weight="bold">1 less</tspan>.</text>
-    <g transform="translate(7,37.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="36.57" width="11.72" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="39" class="m" font-size="2.7">HIERARCHY: LOSE 1 EXTRA</text>
-    <rect x="4" y="41" width="50" height="6" rx="1" fill="#D3B1B1"/>
-    <text x="5" y="46" class="s" font-size="4">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
-    <g transform="translate(7,50.9)"><use href="#i-torso"/><use href="#q1"/></g><text x="11" y="52" class="m q" font-size="2.7">AUTONOMY: IMMUNE</text>
+    <text x="5" y="28" class="s" font-size="4.8">Remove one Work card</text>
+    <text x="5" y="34" class="s" font-size="4.8">from this week.</text>
+    <g transform="translate(7,37.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="37.78" y="36.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="39" class="m" font-size="2.7">HIERARCHY LOSES 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>

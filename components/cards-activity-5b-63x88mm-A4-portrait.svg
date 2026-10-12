@@ -91,6 +91,10 @@ outer line. Print at 100%.</desc>
     <rect x="4" y="29" width="50" height="9" rx="1.2" fill="#D9D3C4"/>
     <text x="5" y="36" class="s" font-size="6.4">+1 Capital</text>
     <text x="5" y="46" class="s" font-size="4.4">to one named team member.</text>
+    <rect x="4" y="49.5" width="50" height="7" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="54.6" class="s" font-size="4.6">Also <tspan font-weight="bold">+1 Motivation</tspan>.</text>
+    <rect x="4" y="59.5" width="50" height="7" rx="1" fill="#B5C7CF"/>
+    <text x="5" y="64.6" class="s" font-size="4.6">Team: <tspan font-weight="bold">+1 Adaptability</tspan>.</text>
     </g>
   </g>
 

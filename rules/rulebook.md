@@ -1,13 +1,17 @@
-# Rulebook - High-Performance Team (v0.34 draft)
+# Rulebook - High-Performance Team (v0.35 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
-> ## BALANCE PASS (2026-10-11 to 2026-10-12, v0.34)
-> **Speak Up no longer reads Standing. Once a game its holder may give any teammate +1 Motivation** (the giver must be on 3 or more, from week 3, at any time up to the quit check at step 7; cap 5), §5.2. It used to pay +2 Motivation at Standing 3 or more and cost 1 at Standing 1 or less. **Authorized Voice now flips at Standing 4.** **The upper threshold is now 5 × characters + 75** (100 at five players), §16. **STATUS MEETING now costs only Autonomy characters 1 Motivation** (it used to cost everyone 1, Autonomy 2, Hierarchy none), §11.> **THE DATE MOVES UP now moves the deadline one week closer** (the week marker goes one box down on THE CLOCK, for good), and it does nothing in the last week. **Only someone saying no cancels it: a Speak Up Hero or Authorized Voice.** Adaptability tokens, Habits and Trust cannot buy it off, and it has no ADAPT cost any more (it used to cost 3 and make every Work card this week produce 1 less), §6.1, §11.> **THE AUDIT and EVERYONE IS EQUAL cost 1 less Adaptability while the plinth holds 1 feature or none** (so 1 instead of 2 in the opening weeks; it stacks with a Habit), §6.1, §11.> **Demo opens in week 2** (it was week 3). **Only Work meets the Quality Need** (a Demo does not, §5). **The Challenge instinct is now Speak Up and reads Standing**, not the Adaptability pool (§5.2). **The Take Charge instinct is now Own It** (it reads Trust).
+> ## BALANCE PASS (2026-10-11 to 2026-10-12, v0.35)
+> **Demo also gives the character who receives its +1 Capital +1 Motivation** (a public success lifts you), §7. **EQUIPMENT OUTAGE no longer costs everyone 1 Motivation**: it removes one Work card and only Hierarchy characters lose 1 Motivation, §11. **Psychological Safety meets the Community Need only in a week when no Management or People Event landed on the team**; otherwise it takes an Engagement or a Reflect, §5. **Demo also gives the team +1 Adaptability at the close**, §7.
+> **Own It now takes the blame for an uncancelled Event** (unlimited, but it needs an Event to land): the character loses 1 Motivation and the team gains +1 Trust at once; Trust 1 or less still costs them 1 Motivation, and the old +1 at Trust 3 or more is gone. It shares Trust's one step a week, §5.2. Grounded in Edmondson 1996, Nembhard & Edmondson 2006, Kim et al. 2004 and Mayer et al. 1995.
+> **Take One For The Team is played by a Dependable character only** (it was open to anyone for 1 Motivation): 2 Motivation for +1 Trust and +1 Capital, at once, once a week, §7, §5.2. **THE DATE MOVES UP is not in play in week 2** (put it back and redraw), §11.
+> **Combos open from week 1** (they opened in week 5), §3.0, §18.1.
+> **Speak Up no longer reads Standing. Once a game its holder may give any teammate +1 Motivation** (the gift needs Trust over 2, and can be given at any time up to the quit check at step 7; cap 5), §5.2. It used to pay +2 Motivation at Standing 3 or more and cost 1 at Standing 1 or less. **Authorized Voice now flips at Standing 4.** **The upper threshold is now 5 × characters + 75** (100 at five players), §16. **STATUS MEETING now costs only Autonomy characters 1 Motivation** (it used to cost everyone 1, Autonomy 2, Hierarchy none), §11.> **THE DATE MOVES UP now moves the deadline one week closer** (the week marker goes one box down on THE CLOCK, for good), and it does nothing in the last week. **Only someone saying no cancels it: a Speak Up Hero or Authorized Voice.** Adaptability tokens, Habits and Trust cannot buy it off, and it has no ADAPT cost any more (it used to cost 3 and make every Work card this week produce 1 less), §6.1, §11.> **THE AUDIT and EVERYONE IS EQUAL cost 1 less Adaptability while the plinth holds 1 feature or none** (so 1 instead of 2 in the opening weeks; it stacks with a Habit), §6.1, §11.> **Demo opens in week 2** (it was week 3). **Only Work meets the Quality Need** (a Demo does not, §5). **The Challenge instinct is now Speak Up and reads Standing**, not the Adaptability pool (§5.2). **The Take Charge instinct is now Own It** (it reads Trust).
 > **New action card: Onboarding.** After a quit, the replacement only joins when the team lays Onboarding, which costs a day (§7, §13). All the quitting rules are printed on that card.
-> **A quit costs 40 Team Score** (it was 20), §16. **Everyone starts on Motivation 5** (it was 4 for one pass; the Onboarding card says so too). **A Demo no longer protects a feature from NEGATIVE FEEDBACK.** **Coordinate is renamed Engagement** (Wenger's mutual engagement; card text now cites Wenger and Edmondson). **Rushed Onboarding is removed**: a replacement joins at once with no penalty (§12). **Plan does nothing at Shared Practice 1 or less, so nothing in week 1, and nothing on a Low complexity feature** (it was 0 or less), §4. **Only Work meets the Quality Need**, so a team can't live on Demos, §5. **Authorized Voice cancels only Management or Customer Events** (it cancelled any Event), §18. **The upper threshold is now 5 × characters + 115 and the lower 5 × characters + 75** (140 and 100 at five players; they were +45 and −15), §16. **If a feature is missing the Team Score is 0, and it is never below 0**, §16. **Recognition's +1 Motivation to a teammate fires once a week for the whole team** (it fired on every Capital gain), §5.1. **Workshop no longer meets the Community Need** (only an Engagement or a Reflect does; it still meets Hierarchy), §5, §7. **Engage now loses 1 Motivation only in weeks 5 and 6** (it was every week from week 4; week 4 and weeks 7-8 are now free), §5.2. **REORGANISED now costs only Autonomy characters 1 Motivation and EVERYTHING AT ONCE only Hierarchy characters 1** (both used to cost everyone 1), §11. **Authorized Voice now flips at Standing 4** (it was 5), §18.
+> **A quit costs 40 Team Score** (it was 20), §16. **Everyone starts on Motivation 5** (it was 4 for one pass; the Onboarding card says so too). **A Demo no longer protects a feature from NEGATIVE FEEDBACK.** **Coordinate is renamed Engagement** (Wenger's mutual engagement; card text now cites Wenger and Edmondson). **Rushed Onboarding is removed**: a replacement joins at once with no penalty (§12). **Plan does nothing at Shared Practice 1 or less, so nothing in week 1, and nothing on a Low complexity feature** (it was 0 or less), §4. **Only Work meets the Quality Need**, so a team can't live on Demos, §5. **Authorized Voice cancels only Management or Customer Events** (it cancelled any Event), §18. **The upper threshold is now 5 × characters + 125 and the lower 5 × characters + 75** (150 and 100 at five players; they were +45 and −15), §16. **If a feature is missing the Team Score is 0, and it is never below 0**, §16. **Recognition's +1 Motivation to a teammate fires once a week for the whole team** (it fired on every Capital gain), §5.1. **Workshop no longer meets the Community Need** (only an Engagement or a Reflect does; it still meets Hierarchy), §5, §7. **Engage now loses 1 Motivation only in weeks 5 and 6** (it was every week from week 4; week 4 and weeks 7-8 are now free), §5.2. **REORGANISED now costs only Autonomy characters 1 Motivation and EVERYTHING AT ONCE only Hierarchy characters 1** (both used to cost everyone 1), §11. **Authorized Voice now flips at Standing 4** (it was 5), §18.
 > **When a character quits, everyone still in the team loses 1 Motivation** (§6.1, §16).
 > **Teach may also step diagonally** (Learn stays left or right in your own row), but **only onto a square someone already covers**: it only flips a tile to stacked, never puts one down, §7, §8.
 > **Plan does nothing on Low complexity features** (A and E) and gives +1 per Work card on Medium and High ones (B, C, D, F), §7. B and C are Medium in the sim, as printed.
@@ -15,7 +19,7 @@ whenever a playtest changes a rule, and log the change in
 > **Starting Motivation is 5** (was 3, then 4), and **Take One For The Team moves Trust at once, from week 1** (§7), so a Dependable character can pay for it early (§5.2). **Team Score: each feature and each Habit held is now worth 12** (was 10), §16.
 > **Motivation economy:** Bookish gets **+2** for Learn and Hands-On **+2** for Teach (their dislike stays −1), and a Legs
 > strength now pays at track **3 or more** instead of 4, §5. **Team Score** now counts **12 per Habit held**, and has **two thresholds**: 5 × characters + 75 (Sustainable
-> Performance) and 5 × characters + 115 (Sustainable High Performance), §16. **Celebrate** gives +1 only to
+> Performance) and 5 × characters + 125 (Sustainable High Performance), §16. **Celebrate** gives +1 only to
 > characters on 3 or less and only if there is something to celebrate (a feature banked, or every Event
 > cancelled), §7. **Reflect** with evidence also gives +1 Motivation to characters on 3 or less, fills the
 > matching Team Reflexivity well **and** still gives the pool token; a spent token counts as process
@@ -442,20 +446,20 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 
 | From | What opens | Cards in play |
 |---|---|---|
-| **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation. | Work · Engagement · Celebrate · Workshop · Plan |
+| **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation. **Combos** (§18.1) are open from the start: two named triggers landing in the same week pay a small bonus on top of what they did alone (in week 1 only Engagement + Workshop is possible; the rest appear as their cards and rules open). | Work · Engagement · Celebrate · Workshop · Plan |
 | **Week 2** | **The team, and reality.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital, the shared Adaptability pool, **each character's Need** (the tile already on your board) and Shit Happens and Adapt, together. The pool holds **3 tokens** from the first day it exists. **The Demo card opens too, with Learn, Teach and Reflect.** | + Demo · Learn · Teach · Reflect |
 | **Week 3** | **THE DEVELOPMENT (board 4b).** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - the Flex and Overtime part of the Specimen card, and the **Hero** panel (§5.1). | + nothing new |
 | **Week 4** | **Nothing opens.** A deliberate breath - the first week the table just plays everything it has met. | + nothing new |
-| **Week 5** | **Combos** (§18.1). Two named triggers landing in the same week now pay a small bonus on top of what they already did alone. | + nothing new |
+| **Week 5** | **Nothing opens.** The table plays everything it has met. | + nothing new |
 
-Weeks 6-7 are the whole game with nothing new opening, and by then the table has met
+Weeks 5-7 are the whole game with nothing new opening, and by then the table has met
 every rule *at the moment it mattered* rather than in a twenty-minute briefing.
 
 **One idea per week, and each one is a sentence.** Week 1: a week is five days and you choose
 them. Week 2: it was never only the project - it was landing on the team, on who the team
 listens to, on what you each need, and your plan was made in ignorance, all at once. Week 3:
-and on how far each of you can reach, as the Zone starts paying off. Week 5: the things you
-already do start paying twice when you do them together.
+and on how far each of you can reach, as the Zone starts paying off. From the start: the things you
+already do pay twice when you do them together.
 
 **Name the new points when you flip the panel.** The playtest showed that points for building
 the team mean nothing in week 1 - only feature progress is scoreable until The Team is
@@ -749,15 +753,15 @@ not about how the four categories land, so it has no Habit to be vindicated by: 
 only ever won, week by week (**+1 Motivation**, as on its tile), and its own distinctive
 payoff is the +1 Motivation it hands the teammate who witnessed its Capital gain (§5.1).
 
-**The −1 is not conditional on the card costing Motivation.** Nine Events in the deck take
+**The −1 is not conditional on the card costing Motivation.** Six Events in the deck take
 Motivation from everybody; the rest cost Work, or days, or Trust, or a track (§11). But an Autonomy
 character loses a point of Motivation *every time a Management Event lands*, whatever else the
 card does - because that category of thing wears them down personally. That is the whole claim:
 the same week is more tiring for some people than others, and not because the week was worse.
 
 The **immunity** column does something on every card that takes Motivation from everybody, and
-the Event cards print it there: BUDGET CUT, A FLAT WEEK, EQUIPMENT
-OUTAGE, THE TEAM SPLITS, THE AUDIT and EVERYONE IS EQUAL each show the Torso
+the Event cards print it there: BUDGET CUT, A FLAT WEEK,
+THE TEAM SPLITS, THE AUDIT and EVERYONE IS EQUAL each show the Torso
 that loses one extra and the Torso that is immune. LEADS FROM BEHIND and THE WOLF (no Torso reaction at all) are the exceptions. On every other card the immunity line would be an
 exemption from a penalty that was never coming, so **the Event cards only print the immunity
 line where it does something.** If a card shows one Torso line, that category costs somebody a
@@ -796,7 +800,7 @@ your board from the start - the game just waits until week 2 to turn it over.
 |---|---|
 | Autonomy | **At most 1 Event landed on the team** this week - the other was cancelled in Adapt, or none was drawn - **or the team has Shared Repertoire** (§18). |
 | Hierarchy | **The team played a Teach, Learn or Workshop card**, **or the team has Who Knows What** (§18). |
-| Community | The team spent an Engagement or a Reflect, **or the team has Psychological Safety** (§18). |
+| Community | The team spent an Engagement or a Reflect, **or the team has Psychological Safety and no Management or People Event landed on the team this week** (§18). |
 | Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter): **+1**. **No Work: lose 3 Motivation instead.** |
 | Recognition | **A feature was banked** this week, **you spent your Hero**, or **the team held a Demo**. |
 
@@ -807,7 +811,7 @@ characters at a natural stopping point - and it makes the Need question the righ
 **Habits meet Needs.** Autonomy, Hierarchy and Community each have one Habit that vindicates them (the
 "Vindicated by" column above). **While the team has that Habit, your Need counts as met every
 week** - the thing you needed has become how the team works, so it no longer has to be won week
-by week. Quality and Recognition have no Habit; those Needs are only ever won, never inherited.
+by week. **Community is the exception: Psychological Safety only covers a week in which no Management or People Event landed on the team** (the Habit makes those Events cheap to cancel, it does not make them harmless). Quality and Recognition have no Habit; those Needs are only ever won, never inherited.
 
 > **Autonomy is the one the team can take away.** Nobody has to override you for you to lose
 > it: any week both Events land, the plan the team laid on Monday did not survive contact with
@@ -845,7 +849,7 @@ into once the team recognises them.
 | You taught on a **Teach** card this week. | Knowledge → standing. You give the know-how away and get standing back. |
 | You led a **Demo**. | A public success → standing. |
 | A **habitus strength** of yours visibly worked in front of the team - an Own It call that landed, calling out Knowledge Hoarding. | Disposition → standing. |
-| You paid the Motivation for **Take One For The Team** (§6.1) this week. | Personal sacrifice → standing. You spent your own Motivation so the team's Trust could rise; the team saw it cost you something. |
+| You played **Take One For The Team** (§7), which only a Dependable character can. | Personal sacrifice → standing. You spent 2 of your own Motivation so the team's Trust could rise; the team saw it cost you something. |
 
 All four require the team to **witness** it - no exceptions. Private competence earns nothing -
 recognition is what makes standing exist at all. **Recognition (the Torso) leans into this
@@ -995,7 +999,7 @@ character's own Motivation for them.
 | **Bookish** | **+2 Motivation** when you play Learn | **−1 Motivation** when you play Teach |
 | **Hands-On** | **+2 Motivation** when you play Teach | **−1 Motivation** when you play Learn |
 | **Sheltered** | The weekly grind (§5) doesn't affect your Motivation | **You never rise above 3 Motivation** - insulated from the highs as much as the lows |
-| **Dependable** | **TAKE ONE FOR THE TEAM**, printed on the card: spend **3 Motivation** and the team gets **+1 Trust** and you gain **+1 Capital** (Trust still rises at most once a week, §7) | **The price is yours alone:** 3 Motivation, against 1 for the same action when nobody holds this card |
+| **Dependable** | **TAKE ONE FOR THE TEAM**, printed on the card: spend **2 Motivation** and the team gets **+1 Trust** and you gain **+1 Capital** (Trust still rises at most once a week, §7) | **The price is yours alone:** 2 Motivation. Nobody else can play this action |
 | **Competitive** | **Your Hero is reusable** - every time an Event names your Pressure Response, you may play it again (still needs 3 Motivation, every time) | **ANOTHER PLAYS HERO:** whenever a *different* character plays their Hero, you lose **1 Motivation** - you needed that win |
 
 Each **Legs/Pressure Response** pairs the same way, keyed to whichever Team State track (§4)
@@ -1004,16 +1008,29 @@ reads as overreach for **−1 Motivation**:
 
 | Legs | Track | Strength (track 3 or more) | Tendency (track 1 or less) |
 |---|---|---|---|
-| **Own It** | Trust | +1 Motivation - you owned it and the team backed you | −1 Motivation - nobody trusts you with it, so it reads as overreach |
+| **Own It** | Trust | **TAKE THE BLAME** for an uncancelled Event, at the cost of 1 Motivation: the team gains +1 Trust at once. It needs an Event to land, so it is not played every week; it counts as the week's one Trust step | **−1 Motivation at Trust 1 or less** - nobody trusts you with it, so it reads as overreach |
 | **Analyze** | Capability | +1 Motivation - the question was worth asking | −1 Motivation - analysis paralysis |
 | **Support** | Shared Practice | +1 Motivation - people leave the room feeling better | −1 Motivation - it reads as hollow |
-| **Speak Up** | none - Speak Up does not read a track | **THE GIFT, once a game:** you give any teammate +1 Motivation - you said the thing everyone was quietly worried about, and it lifted them. You must be on 3 or more, it opens in week 3, and the receiver caps at 5 | none |
+| **Speak Up** | Trust, as a requirement only | **THE GIFT, once a game:** you give any teammate +1 Motivation - you said the thing everyone was quietly worried about, and it lifted them. It needs Trust over 2 (speaking up needs a team that is safe to speak in), it can be given whenever, and the receiver caps at 5 | none |
 | **Engage** | The week, not a track | **+1 Motivation in weeks 1-3** - you throw yourself in while the project is new | **Nothing in week 4, then −1 Motivation in weeks 5 and 6** - the field has moved on and the same instinct reads as overreach; from week 7 it stops mattering |
 
-**Speak Up** is the exception to the track rule: it has no track and no tendency. Instead it is
-**the gift** - once a game its holder gives any teammate **+1 Motivation**, free, if the giver is on 3 or more
-Motivation (the same threshold as the Hero). It can be played from week 3, at any time up to the quit check at step 7 -
+**Speak Up** is the exception to the track rule: it has no track and no tendency. It is
+**the gift** - once a game its holder gives any teammate **+1 Motivation**, free, as long as the team's **Trust is over 2**
+(Edmondson 1999, 2003: people only speak up where it is safe to). It can be given at any time, up to the quit check at step 7 -
 so it can pull a teammate back from 0 before they leave, or lift someone to 3 so they can play their Hero.
+**Own It** keeps only the low half of the track rule (−1 Motivation at Trust 1 or less); its strength is **taking the blame**:
+when an Event is not cancelled and lands, a character with Own It may take the blame for it at the cost of **1 Motivation**,
+and the team gains **+1 Trust** at once. There is no limit on how often, but it needs an Event to land, so it is rarely
+played. It shares Trust's one step a week with Engagement, Take One For The Team (§7) and itself.
+
+> **Why Own It works this way.** Edmondson (1996) found that the teams that *reported* the most errors were the
+> ones where it was safe to, not the ones that made the most; psychological safety (Edmondson 1999) is built when
+> someone goes first and admits a mistake, and Nembhard & Edmondson (2006) show that a leader's visible fallibility
+> invites the others to speak. Taking responsibility is also what repairs trust after a failure (Kim, Ferrin,
+> Cooper & Dirks 2004), because it signals integrity and benevolence (Mayer, Davis & Schoorman 1995). The cost is the
+> point: the admission is a real loss of face, which is why the character pays Motivation. It needs an Event to have
+> landed, so it is not played often, and the weekly Trust ceiling keeps it from becoming a Trust machine.
+
 Standing (the highest Capital in the team, §5.1) still drives Authorized Voice (§18). **Engage** reads the week number instead of a track: it pays early
 and then costs for two weeks, then stops (Bourdieu's hysteresis - a disposition that outlives the field that rewarded it).
 
@@ -1024,7 +1041,8 @@ need a Focus, a target feature, or any restriction on who works what: there's no
 route around.
 
 Legs reads a Team State track as its *trigger*, but the payoff is still only ever your own
-Motivation - no Base or Legs option ever changes Work, a feature, or a track's value.
+Motivation - no Base or Legs option ever changes Work, a feature, or a track's value, except
+Dependable (Base) and Own It (Legs), which each move Trust one step.
 
 They all matter for the same downstream reason: Motivation is what decides whether you can
 still play your **Hero** (§5.1) and whether you **quit** (§13). A Bookish character endlessly
@@ -1168,7 +1186,7 @@ days of a team's time. They are not a sequencing puzzle.
 1. **Bank** any feature whose Work counter reached its Work Cost (§10) - lift the lock tile off
    anything it unlocks.
 2. **Walk the Ledger** coins, at most one step each, and flip any that reached its ring (§18).
-   **Add this week's adapt tokens** to the pool (Workshop, and Reflect if Trust is
+   **Add this week's adapt tokens** to the pool (Workshop, Demo, and Reflect if Trust is
    3 or more - cap 6; a Reflect also fills a Team Reflexivity well, §18).
 
 **Last, count Motivation (step 7, the grind).** It is its own step, after the Ledger, and it is
@@ -1220,7 +1238,7 @@ character to receive it.
 | **Engagement** | **+1 Trust.** The team card: everyone takes part and nobody is singled out. Wenger's *mutual engagement*, Edmondson's safe-to-ask, safe-to-admit-a-mistake. **At most one a week - there is only one Engagement card.** |
 | **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
 | **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover **that someone already covers**, any row, immediately **up, down, left, right or diagonally** of one *the teacher* covers - **then flip that tile to its stacked face on the Zone** (Teach never puts a new tile down). **Both teachers +1 Capital.** **Does nothing while Trust is 1 or less.** |
-| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital**. |
+| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital and +1 Motivation**, and **the team gains +1 Adaptability** (a token added at the close, like Workshop's). |
 | **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability.** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **Every character pays 1 Motivation.** **+3 Adaptability.** The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. **Open from week 1. There is one Workshop card, so at most one a week.** It counts for the Hierarchy Need (§5). It merges the old Align and Workshop (§9, v0.28). |
 | **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 5** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
@@ -1237,7 +1255,7 @@ Every card has a moment when its result lands, and the cards now say so:
 - **Engagement, Learn, Teach and Reflect** move the **Ledger**. The Zone fills in at once, but a
   Ledger track only steps when the week **closes**, one step a week, so the new level works **from
   next week**.
-- **Workshop** and **Reflect** (when its token goes to the pool) add **adapt tokens at the
+- **Workshop**, **Demo** and **Reflect** (when its token goes to the pool) add **adapt tokens at the
   close**. A token is first **spendable in next week's Adapt step**: it cannot help against this
   week's Events.
 - **Celebrate**'s Motivation lands at **step 7, together with the grind**.
@@ -1294,18 +1312,18 @@ at the exact moment real teams make it.
 > **The week runs 4 to 6 days, and both ends cost you.** Under-fill and the project slips.
 > Over-fill and you're borrowing from a week that hasn't happened yet.
 
-### Take one for the team
-> **Any character may pay 1 Motivation for the team's +1 Trust** - a standing action,
-> not a card, usable even in a week with no free slot for Engagement. **It has effect at once**:
-> move the Trust coin up the moment the Motivation is paid, from week 1 on, not at the close of the week.
-> Once per week: if Trust already rose this week (Engagement, or this action, by anyone),
-> nobody may do it again - see the shared ceiling below.
+### Take one for the team (Dependable only)
+> **A Dependable character may pay 2 Motivation for the team's +1 Trust and their own +1 Capital** - a
+> standing action printed on their card, not an Activity card, usable even in a week with no free slot for
+> Engagement. **It has effect at once**: move the Trust coin up the moment the Motivation is paid, from
+> week 1 on, not at the close of the week.
+> Once per week: if Trust already rose this week (Engagement, Own It, or this action, by anyone),
+> nobody may do it again - see the shared ceiling below. **No other character can play it.**
 
 It's the personal-cost mirror of Overtime: Overtime borrows against the *project's* clock
 (a day now, a Flex marker owed later); this borrows against a *character's* Motivation instead,
-for a track the team couldn't otherwise afford to move that week. Same shape as every other
-habitus/Base pairing - one resource, spent - just not printed on a card, because it belongs to
-any character, not one build option.
+for a track the team couldn't otherwise afford to move that week. It belongs to the Dependable
+upbringing (§5.2) alone, so a team without one has Engagement as its only way to raise Trust.
 
 **Two limits that apply to everything above:**
 - Work output is never below **0**.
@@ -1556,7 +1574,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | NEGATIVE FEEDBACK | Customer | 3 | Analyze | One banked feature loses 2 Work and comes off the tower. | Quality −1 |
 | SCOPE CREEP | Customer | 3 | Analyze | The unbanked feature closest to done gains +2 Work Cost. | Quality −1 |
 | PRIORITY CHANGES | Customer | 2 | Analyze | Remove one card this week. | Quality −1 |
-| THE DATE MOVES UP | Customer | none - say no | Speak Up | The deadline moves one week closer: move the week marker one box down, for good. Nothing happens in the last week. Only a Speak Up Hero or Authorized Voice cancels it; tokens and Habits cannot. | Quality −1 |
+| THE DATE MOVES UP | Customer | none - say no | Speak Up | The deadline moves one week closer: move the week marker one box down, for good. Nothing happens in the last week. **It is not in play in week 2: if you draw it, put it back, shuffle, and draw again** (nobody can say no before the Hero opens in week 3). Only a Speak Up Hero or Authorized Voice cancels it; tokens and Habits cannot. | Quality −1 |
 | THE DASHBOARD | Customer | 3 | Analyze | Work only counts this week on a Low feature; Medium and High Work changes nothing. | Quality −1 |
 | ALWAYS REACTING | Customer | 1 | Speak Up | The Adaptability pool loses 1 token. | Quality −1 |
 | KNOWLEDGE HOARDING | People | 2 | Support | Remove all Teach cards this week. | Community −1 |
@@ -1564,7 +1582,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | MORE HANDS | People | 2 | Engage | The feature with the most Work this week has that Work halved (round down). | none |
 | THE TEAM SPLITS | People | 2 | Speak Up | Two characters may not take the same feature; the team loses 1 Trust; everyone −1 Motivation. | Community extra, Quality immune |
 | A FLAT WEEK | People | 1 | Speak Up | Everyone −1 Motivation; a feature banked this week is no reason to Celebrate. | Community extra, Quality immune |
-| EQUIPMENT OUTAGE | Environment | 3 | Support | Remove one Work card. Everyone −1 Motivation. | Hierarchy extra, Autonomy immune |
+| EQUIPMENT OUTAGE | Environment | 3 | Support | Remove one Work card. Only Hierarchy characters lose 1 Motivation. | Hierarchy −1 |
 | OLD FOUNDATIONS | Environment | 2 | Engage | The feature with the most Work already banked gains +2 Work Cost. | Hierarchy −1 |
 | FALSE START | Environment | 2 | none | The first Work card this week produces nothing. | Hierarchy −1 |
 | EVERYTHING AT ONCE | Environment | 3 | Speak Up | No feature may take more than 1 Work this week. Only Hierarchy characters lose 1 Motivation. | Hierarchy −1 |
@@ -1779,7 +1797,9 @@ team falls apart when its key person or process gets disrupted.
 
 ## 16. End of Project & Victory Conditions
 At the end of Week 7 / Day 35, first check whether the project was delivered, then work out
-a **Team Score** to see *how* the team got there:
+a **Team Score** to see *how* the team got there. **Count the Tower, then turn THE PROJECT over: its
+reverse is the final tally** (the same face you set up with), with every term below and the four
+results printed on it:
 
 **Team Score** = (features placed on the Tower × 12) + (sum of the three Ledger tracks plus the
 adapt tokens still in the Adaptability pool,
@@ -1790,8 +1810,8 @@ or were fired) − (2 × **unrepaid Flex markers**, §7) − (5 × **Ledger trac
 
 > **Note for player counts other than 5:** the Motivation term scales with the number of
 > characters, so the two thresholds below have to as well. Use **(5 × number of starting
-> characters) + 75** and **(5 × number of starting characters) + 115** - which is 95 and 135 at four
-> players, 100 and 140 at five. Everything else in the game is player-count
+> characters) + 75** and **(5 × number of starting characters) + 125** - which is 95 and 145 at four
+> players, 100 and 150 at five. Everything else in the game is player-count
 > independent (§6.0); this is the one place it isn't, and it needs a playtest before it's
 > trusted.
 
@@ -1802,9 +1822,9 @@ or were fired) − (2 × **unrepaid Flex markers**, §7) − (5 × **Ledger trac
 - **Sustainable Performance** - all required features delivered and Team Score **from the lower
   threshold up to just under the upper one**.
 - **Sustainable High Performance** *(the ideal outcome)* - all required features delivered
-  **and** Team Score **at or above the upper threshold** (5 × characters + 115).
+  **and** Team Score **at or above the upper threshold** (5 × characters + 125).
 
-Both thresholds are set by hand from the latest balance runs. The lower line (100 at five players) is a score a team that holds together reaches most of the time, so Heroic Success means a team that shipped but did not look after itself; the upper line (140 at five players) is a little under what the best-play (simulator-searched) games that finish reach. Balanced and invested play finish about half of the time. Habits are worth
+Both thresholds are set by hand from the latest balance runs. The lower line (100 at five players) is a score a team that holds together reaches most of the time, so Heroic Success means a team that shipped but did not look after itself; the upper line (150 at five players) is a little under what the best-play (simulator-searched) games that finish reach. Balanced and invested play finish about half of the time. Habits are worth
 10 each, so a team that holds all five scores 50 more than one that holds none. Playtest and
 adjust once real scores come in - in particular, check that −2 per unrepaid Flex marker is *just*
 worse than the day it bought. If teams routinely crunch week 7 and never look back, raise it.
@@ -1865,10 +1885,10 @@ person making it, not its content - which is why the Demo gate is relative to th
 v0.1 ships 5. Add more once these are playtested and clearly working - record which ones got
 acquired, and when, in the session's [playtest log entry](../playtests/README.md).
 
-## 18.1 Combos (from week 5)
-By week 5 the team has met every subsystem - Habits, Hero, Need, Standing - and the rest of the
-game is playing what it has learned. **Combos** are the last thing that opens: pairs that were
-always available individually, now worth more together.
+## 18.1 Combos (from week 1)
+Combos are open from the first week: pairs that were always available individually, now worth more
+together. A pair only becomes possible once both halves are open (Demo and Reflect from week 2, the Hero
+from week 3, and so on), so in week 1 the only Combo available is Engagement + Workshop.
 
 **A Combo is two named triggers landing in the same week.** Check for Combos at close-the-week,
 alongside Motivation (§6.1 step 7). **Maximum one Combo per team per week** - if more than one

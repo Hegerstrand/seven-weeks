@@ -95,14 +95,20 @@ entry is the design response.
       Deck is 25 cards. **To check:** does the team step up every time (the cost is only 1 each),
       or does it let the leader fall; does the top-Capital character ever want to be the one who
       is not saved; is a 48% chance of meeting the Wolf in a game (12 of 25 cards drawn) too high.
-  15. **Balance pass from the simulator** (rulebook v0.34, 2026-10-12, never played at a table).
-      Speak Up becomes a once-a-game gift of +1 Motivation to any teammate (the giver needs 3 Motivation,
-      from week 3) and no longer reads Standing; Engage pays +1 in weeks 1-3, nothing in week 4,
-      -1 in weeks 5-6; Authorized Voice flips at Standing 4; Workshop no longer meets the Community Need;
-      REORGANISED costs only Autonomy 1 Motivation and EVERYTHING AT ONCE only Hierarchy 1; Team Score
-      thresholds are 5 x characters + 75 and + 115 (100 and 140 at five players). **To check:** does the
-      Speak Up holder spend the gift early or hold it for a quit; is 100 reachable by a team that
-      holds together and 140 only by a team that plays well.
+  15. **Balance pass from the simulator** (rulebook v0.35, 2026-10-12, never played at a table).
+      **Speak Up** is a once-a-game gift of +1 Motivation to any teammate, whenever, if Trust is over 2; it no
+      longer reads Standing. **Own It** takes the blame for an uncancelled Event (lose 1 Motivation, team +1
+      Trust, unlimited but one Trust step a week) and keeps only the low-Trust -1. **Take One For The Team is
+      Dependable-only**, 2 Motivation for +1 Trust and +1 Capital. **Combos open from week 1.** **THE DATE
+      MOVES UP is not in play in week 2.** Engage pays +1 in weeks 1-3, nothing in week 4, -1 in weeks 5-6;
+      Authorized Voice flips at Standing 4; Workshop no longer meets the Community Need, and Psychological
+      Safety meets it only when no Management or People Event landed. REORGANISED costs only Autonomy 1
+      Motivation, EVERYTHING AT ONCE and EQUIPMENT OUTAGE only Hierarchy 1. Demo also gives its receiver +1
+      Motivation and the team +1 Adaptability. Team Score thresholds are 5 x characters + 75 and + 125 (100
+      and 150 at five players). The Zone back is the introduction, the Project back the final tally and the
+      four results. **To check:** does a Speak Up holder spend the gift early or hold it for a quit; does Own
+      It ever get played; is Trust too slow for a team with no Dependable character; is 100 reachable by a
+      team that holds together and 150 only by a team that plays well.
 - **Summary of the rule changes (v0.31, as of 2026-10-08).** Everything above in one place:
   - **Adaptability** is a shared pile of adapt tokens (cap 6, starts at 2, no refresh); Align,
     Workshop and Reflect (Trust 3+) each add 1 at close of week. "Replace a card" is gone.

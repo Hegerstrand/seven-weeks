@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>THE ZONE BACK (A4 landscape)</title>
-<desc>Glues to the reverse of the-zone-FRONT, same size, same orientation: flip about the long
-edge. Unlike THE PROJECT, SHIT HAPPENS and THE TEAM, the Zone never turns over during play - it is shared and visible from
-week 1, so this face is never meant to be read at the table. It exists only so the board can be
-glued to cardboard like the others, and so it can carry the same table-placement guide as every
-other board's reverse.</desc>
+<title>THE ZONE BACK - the introduction, where the game starts (A4 landscape)</title>
+<desc>Glues to the reverse of the-zone-FRONT, same size, same orientation: flip about the long edge.
+Every board starts the game showing its back, and this is the one the table reads first: what the
+game is, how it ends, and the five steps of set-up. When set-up is done, THE ZONE and THE PROJECT
+turn over and week 1 begins; THE TEAM and SHIT HAPPENS turn over in week 2. Character parts are
+named by what they are (upbringing, instinct, values, education, skill), never by body part.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -15,23 +15,64 @@ other board's reverse.</desc>
 
 <rect width="297" height="210" fill="#FFFFFF"/>
 
-<text x="18" y="24" class="m q" font-size="5.4" letter-spacing="2">THIS SIDE NEVER SHOWS DURING PLAY</text>
-<line x1="18" y1="30" x2="279" y2="30" class="h"/>
+<text x="12" y="16" class="m" font-size="7" letter-spacing="2.5">HIGH-PERFORMANCE TEAM</text>
+<text x="285" y="16" class="m q" font-size="3.8" text-anchor="end">THE ZONE · START HERE</text>
+<line x1="12" y1="20" x2="285" y2="20" class="h" stroke-width=".5"/>
 
-<text x="18" y="66" class="m" font-size="20" letter-spacing="4">THE ZONE</text>
-<text x="18" y="90" class="s" font-size="10" font-style="italic">Shared, and visible from week 1. It never turns over.</text>
+<!-- left: what the game is -->
+<text x="12" y="34" class="m q" font-size="4.4" letter-spacing="2">THE ONE IDEA</text>
+<text x="12" y="48" class="s" font-size="11">A week is five days,</text>
+<text x="12" y="59" class="s" font-size="11">and you choose them.</text>
+<line x1="12" y1="68" x2="140" y2="68" class="h" stroke-width=".4"/>
 
-<line x1="18" y1="106" x2="279" y2="106" class="h" stroke-width=".5"/>
+<text x="12" y="79" class="m q" font-size="4.4" letter-spacing="2">THE GAME</text>
+<text x="12" y="88" class="s" font-size="5">Seven weeks. Six features, A to F, to deliver</text>
+<text x="12" y="94" class="s" font-size="5">before week 7 closes. You lay the team's five</text>
+<text x="12" y="100" class="s" font-size="5">days before you know what is coming, then the</text>
+<text x="12" y="106" class="s" font-size="5">Events land on the plan you already made.</text>
+<text x="12" y="112" class="s" font-size="5">Everyone plays together. Nobody plays alone.</text>
 
-<text x="18" y="124" class="m q" font-size="5" letter-spacing="1.6">WHY THIS FACE EXISTS</text>
-<text x="18" y="140" class="s" font-size="7">THE PROJECT, SHIT HAPPENS and THE TEAM flip weekly to reveal a rule.</text>
-<text x="18" y="150" class="s" font-size="7">THE ZONE has nothing to reveal -</text>
-<text x="18" y="160" class="s" font-size="7">it is live from turn one, so there is no week this side would ever show.</text>
-<text x="18" y="170" class="s" font-size="7">It is printed only so this board glues to cardboard the same way the</text>
-<text x="18" y="180" class="s" font-size="7">others do, and so the table-placement guide can sit on every board's</text>
-<text x="18" y="190" class="s" font-size="7">reverse, front and back alike.</text>
+<text x="12" y="126" class="m q" font-size="4.4" letter-spacing="2">HOW IT ENDS</text>
+<text x="12" y="135" class="s" font-size="5">Deliver everything, then add up the Team Score.</text>
+<text x="12" y="141" class="s" font-size="5">It is printed on the back of THE PROJECT, with</text>
+<text x="12" y="147" class="s" font-size="5">the four results. It says whether you finished,</text>
+<text x="12" y="153" class="s" font-size="5">and whether you built a team that could do it</text>
+<text x="12" y="159" class="s" font-size="5">again.</text>
 
-<text x="18" y="198" class="s q" font-size="6" font-style="italic">If you are reading this at the table, the Zone is face down.</text>
+<line x1="146" y1="26" x2="146" y2="164" class="h" stroke-width=".4"/>
+
+<!-- right: set up -->
+<text x="154" y="34" class="m q" font-size="4.4" letter-spacing="2">SET UP, IN FIVE STEPS</text>
+
+<text x="154" y="46" class="m" font-size="6">1</text>
+<text x="164" y="46" class="s" font-size="5"><tspan font-weight="bold">Deal and build.</tspan> Each of you is dealt five parts</text>
+<text x="164" y="51.6" class="s" font-size="5">at random: upbringing, instinct, values,</text>
+<text x="164" y="57.2" class="s" font-size="5">education and a skill. Nobody chooses.</text>
+
+<text x="154" y="68" class="m" font-size="6">2</text>
+<text x="164" y="68" class="s" font-size="5"><tspan font-weight="bold">Take your tiles.</tspan> Your NEED and your HERO.</text>
+<text x="164" y="73.6" class="s" font-size="5">On your SKILLS grid, mark the square where your</text>
+<text x="164" y="79.2" class="s" font-size="5">education meets your skill. That is where you start.</text>
+
+<text x="154" y="90" class="m" font-size="6">3</text>
+<text x="164" y="90" class="s" font-size="5"><tspan font-weight="bold">Pick a Project card.</tspan> It names the six features.</text>
+<text x="164" y="95.6" class="s" font-size="5">Motivation 5, Capital 0, week marker on 1.</text>
+<text x="164" y="101.2" class="s" font-size="5">Shuffle the Events. Do not draw yet.</text>
+
+<text x="154" y="112" class="m" font-size="6">4</text>
+<text x="164" y="112" class="s" font-size="5"><tspan font-weight="bold">Turn THE ZONE and THE PROJECT over.</tspan></text>
+<text x="164" y="117.6" class="s" font-size="5">Put a tile on your start square of THE ZONE.</text>
+
+<text x="154" y="128" class="m" font-size="6">5</text>
+<text x="164" y="128" class="s" font-size="5"><tspan font-weight="bold">Play week 1.</tspan> Lay five cards from Work,</text>
+<text x="164" y="133.6" class="s" font-size="5">Engagement, Celebrate, Workshop and Plan, resolve</text>
+<text x="164" y="139.2" class="s" font-size="5">them, bank what is finished, take the grind.</text>
+
+<!-- every board starts on its back -->
+<rect x="12" y="170" width="273" height="26" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>
+<text x="17" y="178.5" class="m" font-size="4.2" letter-spacing="1.2">EVERY BOARD STARTS ON ITS BACK</text>
+<text x="17" y="185.5" class="s" font-size="4.6">Each back says when to turn it over. THE ZONE and THE PROJECT turn over now, at the start of week 1.</text>
+<text x="17" y="191.5" class="s" font-size="4.6">THE TEAM and SHIT HAPPENS turn over in week 2, THE DEVELOPMENT in week 3.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="291" y1="6" x2="291" y2="204" stroke="#6E7A54" stroke-width="1"/>

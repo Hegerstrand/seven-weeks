@@ -259,12 +259,11 @@ only a Speak Up Hero or Authorized Voice cancels it.</desc>
     <text x="5" y="28" class="s" font-size="4.4">The <tspan font-weight="bold">deadline moves one</tspan></text>
     <text x="5" y="33" class="s" font-size="4.4"><tspan font-weight="bold">week closer</tspan>: move the</text>
     <text x="5" y="38" class="s" font-size="4.4">week marker down a box.</text>
-    <text x="5" y="43" class="s" font-size="4.4">Not in the last week.</text>
+    <text x="5" y="43" class="s" font-size="3.7">Not in week 2 or the last week.</text>
     <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
-    <text x="8" y="62.5" class="m" font-size="4">SAY NO</text><text x="27" y="62.5" class="m q" font-size="2" letter-spacing=".2">NO TOKENS</text>
-    <text x="8" y="64.75" class="s q" font-size="2.6" font-style="italic">tokens cannot buy this off</text>
+    <text x="8" y="62.5" class="m" font-size="4">SAY NO</text><text x="27" y="62.5" class="m q" font-size="2" letter-spacing=".2">NO TOKENS OR HABITS</text>
     <rect x="5.4" y="68.6" width="52.2" height="7.2" class="cat-cust"/>
     <text x="8" y="67" class="lb">HERO</text><g transform="translate(18.5,65.9)"><use href="#i-head"/><use href="#q5"/></g><text x="23" y="67" class="vl">SPEAK UP</text>
     <text x="8" y="71.5" class="lb">OR</text><text x="20" y="71.5" class="vl">AUTHORIZED VOICE</text>

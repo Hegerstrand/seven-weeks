@@ -8,7 +8,7 @@ Seven weeks. Thirty-five days. One project standing between your team and the de
 team commits five days at a time, resolves them all at once, then closes the week and moves on.
 From week 2, Events crash into the week you already committed to - spend Adaptability to
 re-plan around them or cancel them outright. Deliver every Feature before Week 7 closes to win
-the project - but hit a Team Score above the upper line (5 for every character you started with, plus 115) and you didn't just finish it, you built a team that
+the project - but hit a Team Score above the upper line (5 for every character you started with, plus 125) and you didn't just finish it, you built a team that
 could survive doing it again: Sustainable High Performance.
 
 ---
@@ -34,8 +34,9 @@ could survive doing it again: Sustainable High Performance.
 
 **Finish the room**
 
-- Only **THE PROJECT** and **THE ZONE** start face up. **SHIT HAPPENS** and **THE TEAM** stay
-  text side up; **THE DEVELOPMENT** stays boxed.
+- Every board starts on its **back**. Read the back of **THE ZONE** first: it is the introduction. When
+  set-up is done, turn **THE ZONE** and **THE PROJECT** over. **SHIT HAPPENS** and **THE TEAM** stay
+  on their backs; **THE DEVELOPMENT** stays boxed.
 - **Motivation 5** for every character. Week marker on Week 1. Shuffle the Events but don't draw
   yet.
 - *Everything on the covered boards already sits at 1. It just isn't your problem for a few more
@@ -107,7 +108,7 @@ who was hit and who was immune), +1 if the Need was met.
 Happens/Adapt, together. The Demo card opens, with Learn, Teach and Reflect.
 **Week 3:** the Development + the Flex and Overtime part of the Specimen panel. No new cards.
 **Week 4:** nothing new.
-**Week 5:** Combos - two named triggers in the same week now pay a small bonus on top of what
+**Week 5:** nothing new. Combos have been open since week 1: two named triggers in the same week pay a small bonus on top of what
 they already did alone (rulebook §18.1).
 
 ### How it ends
@@ -119,7 +120,7 @@ unrepaid Flex) − (5 × tracks that finish at 0 or 1)
 
 **If any feature is missing, the Team Score is 0. It never goes below 0.**
 
-Two lines: **5 for every character you started with, plus 75** (lower) and **5 for every character, plus 115** (upper).
+Two lines: **5 for every character you started with, plus 75** (lower) and **5 for every character, plus 125** (upper).
 
 | Outcome | Condition | |
 |---|---|---|

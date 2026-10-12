@@ -341,10 +341,12 @@ document order. Treat these as the logical groups for editing purposes.
 |---|---|---|
 | page background | full-page rect | `#FFFFFF` |
 | header | "Turn me over after setup" | - |
-| week title | "WEEK 1" + "THE PROJECT" + heavy rule | - |
-| the one idea | section label + big one-line pitch | - |
-| on the table | section label, two lines of body text, one highlighted term | `#D3B1B1` chip behind "Motivation" |
-| cards in play | section label + card list | - |
+| title | "THE FINAL TALLY" + italic "count the Tower, then add it up" | - |
+| first check | full-width band: any missing feature means a Team Score of 0 | `#D3B1B1` |
+| ADD | 4 rows (features x 12, Ledger coins + Adaptability tokens, Motivation of everyone left, Habits x 12), each with a white answer box | rows `#F2EDE0` |
+| TAKE OFF | 3 rows (quit or fired x 40, unrepaid Flex x 2, low-band Ledger tracks x 5), each with an answer box, then the TEAM SCORE total box | rows `#D3B1B1`, total `#FFFFFF` |
+| THE RESULT | 2 x 2 boxes bottom left: PROJECT FAILURE (score 0), HEROIC SUCCESS (under 100), SUSTAINABLE PERFORMANCE (100 to 149), SUSTAINABLE HIGH PERFORMANCE (150 or more) | bands `#D3B1B1`, `#F7D7A1`, `#C7CFB5`, `#B5C7CF` |
+| footnote | two italic lines: five players 100 and 150; other counts 5 x starting characters + 75 and + 125 | - |
 | card stacks | "SET OUT THESE STACKS" label + 2 dashed placeholders (PROJECT CARDS 90x90mm, ACTION CARDS 65x90mm) with italic captions | dashed `.h` outline only |
 | table-placement guide | 3 coloured edge lines (teal, ochre, brown) | - |
 
@@ -353,28 +355,23 @@ document order. Treat these as the logical groups for editing purposes.
 | Text | Class / font | Size | Colour | Background chip (hex) |
 |---|---|---|---|---|
 | "TURN ME OVER AFTER SETUP" | `.m.q` mono | 6 | `#000000` | - |
-| "WEEK 1" | `.m` mono | 26 | `#000000` | - |
-| "THE PROJECT" | `.s` serif | 42 | `#000000` | - |
-| "THE ONE IDEA" | `.m.q` mono | 6 | `#000000` | - |
-| "A week is five days, and you choose them." | `.s` serif | 20 | `#000000` | - |
-| "ON THE TABLE" | `.m.q` mono | 6 | `#000000` | - |
-| "The week strip and the six features." | `.s` serif | 8 | `#000000` | - |
-| "Your figure, your Knowledge, your Motivation." | `.s` serif | 8 | `#000000` | `#D3B1B1` behind "Motivation" |
-| "Nothing else yet." | `.s` serif | 8 | `#000000` | - |
-| "CARDS IN PLAY" | `.m.q` mono | 6 | `#000000` | - |
-| "WORK · ENGAGEMENT · CELEBRATE · WORKSHOP · PLAN" | `.m` mono | 6 | `#000000` | - |
+| "THE FINAL TALLY" | `.m` mono | 16 | `#000000` | - |
+| row labels (e.g. "Features on the Tower") | `.s` serif | 5.6 | `#000000` | row tint |
+| row notes (e.g. "Six features, 12 each. Up to 72.") | `.s` italic serif | 4 | `#000000` | row tint |
+| "THE RESULT" | `.m` mono | 6 | `#000000` | - |
+| tier names, ranges ("UNDER 100", "100 TO 149", "150 OR MORE") | `.m` mono | 5 / 7.4 | `#000000` | tier band |
+| tier taglines ("The team held together.") | `.s` serif | 4.8 | `#000000` | - |
 | "SET OUT THESE STACKS" | `.m.q` mono | 6 | `#000000` | - |
 | "PROJECT CARDS" / "pick one at setup, the rest wait here" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
 | "ACTION CARDS" / "this week's five cards, the rest wait for later" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
 
 ### Illustration
 
-Two rule lines split the page: a heavy one under the WEEK 1/THE PROJECT title block (`stroke-width
-1.2`), a light one under THE ONE IDEA (`stroke-width .5`, compressed to y=172 so the lower row has
-room for true-size card boxes), both class `.h` (`#2A2620`). A vertical light divider
-(`stroke-width .4`) at x=212, y=180-290, splits ON THE TABLE/CARDS IN PLAY (left) from the
-card-stack column (right). One highlighted term ("Motivation") gets a small rounded-rect chip
-(`rx 1.4`, fill `#D3B1B1`) drawn **before** its text so the text sits on top. **Card stacks:**
+Flat tinted rows with white answer boxes, no icons. The tally spans x 24-396 and ends at y 154;
+a light rule at y=164 separates it from THE RESULT (2 x 2 boxes, x 24-200, y 180-288) on the left and
+the card stacks on the right. A vertical light divider (`stroke-width .4`) at x=212, y=180-290, splits the
+two. The set-up text that used to sit here (ON THE TABLE, CARDS IN PLAY, WEEK 1 / THE PROJECT, THE ONE
+IDEA) moved to the back of THE ZONE, which is now the introduction. **Card stacks:**
 two dashed placeholders (`class="h"`, `stroke-width .5`, `stroke-dasharray "3 2"`) sized to the
 same true drop-in tolerance used elsewhere in this game (card size + 2mm each dimension) -
 PROJECT CARDS at x=228 y=200 width=90 height=90 (holds the 88x88mm Project card), ACTION CARDS
@@ -393,9 +390,9 @@ whichever board sits next to this one on the table; do not recolour one side wit
 ```mermaid
 graph TD
   A["page background #FFFFFF"] --> B["header banner + rule"]
-  B --> C["WEEK 1 / THE PROJECT title + heavy rule"]
-  C --> D["THE ONE IDEA + light rule"]
-  D --> E["ON THE TABLE + CARDS IN PLAY (left), split by vertical divider"]
+  B --> C["THE FINAL TALLY title + first-check band"]
+  C --> D["ADD (left) and TAKE OFF + TEAM SCORE (right)"]
+  D --> E["light rule, THE RESULT 2x2 (left) | card stacks (right), split by vertical divider"]
   E --> F["card stacks (right): PROJECT CARDS + ACTION CARDS dashed placeholders"]
   F --> G["table-placement guide (3 coloured edge lines)"]
 ```
@@ -668,42 +665,40 @@ graph TD
 | Logical group | Contents | Background (hex) |
 |---|---|---|
 | page background | full-page rect | `#FFFFFF` |
-| header | "THIS SIDE NEVER SHOWS DURING PLAY" + rule | - |
-| title block | "THE ZONE" + italic subtitle | - |
-| why this face exists | label + 6-line explanatory paragraph | - |
-| closing aside | italic single line ("If you are reading this...") | - |
+| header | "HIGH-PERFORMANCE TEAM" + "THE ZONE - START HERE" + rule | - |
+| left column | THE ONE IDEA ("A week is five days, and you choose them."), THE GAME, HOW IT ENDS; two light rules | - |
+| right column | SET UP, IN FIVE STEPS: deal and build (upbringing, instinct, values, education, skill), take your tiles and mark the start square, pick a Project card, turn THE ZONE and THE PROJECT over, play week 1; a light vertical divider at x 146 | - |
+| every board starts on its back | full-width band: each back says when to turn it over; THE ZONE and THE PROJECT now, THE TEAM and SHIT HAPPENS in week 2, THE DEVELOPMENT in week 3 | `#F2EDE0` |
 | table-placement guide | 2 coloured edge lines (`#6E7A54`, `#3F5B66`) | - |
 
 ### Text
 
 | Text | Class / font | Size | Colour | Background chip (hex) |
 |---|---|---|---|---|
-| "THIS SIDE NEVER SHOWS DURING PLAY" | `.m.q` mono | 5.4 | `#000000` | - |
-| "THE ZONE" | `.m` mono | 20 | `#000000` | - |
-| "Shared, and visible from week 1. It never turns over." | `.s` italic serif | 10 | `#000000` | - |
-| "WHY THIS FACE EXISTS" | `.m.q` mono | 5 | `#000000` | - |
-| 6-line explanatory paragraph | `.s` serif | 7 | `#000000` | - |
-| "If you are reading this at the table, the Zone is face down." | `.s.q` italic serif | 6 | `#000000` | - |
+| "HIGH-PERFORMANCE TEAM" | `.m` mono | 7 | `#000000` | - |
+| "THE ONE IDEA", "THE GAME", "HOW IT ENDS", "SET UP, IN FIVE STEPS" | `.m.q` mono | 4.4 | `#000000` | - |
+| "A week is five days, and you choose them." | `.s` serif | 11 | `#000000` | - |
+| body lines and steps | `.s` serif | 5 | `#000000` | - |
+| step numbers 1-5 | `.m` mono | 6 | `#000000` | - |
+| "EVERY BOARD STARTS ON ITS BACK" | `.m` mono | 4.2 | `#000000` | `#F2EDE0` band |
 
 ### Illustration
 
-Minimal: two `.h` rule lines (one under the banner, `stroke-width` default `.8`), no fills, no
-circles, no icons - deliberately the plainest sheet in the set, since it is never meant to be
-seen. The table-placement guide sits on two edges only (right edge + bottom edge), matching
-whichever boards sit to the right and below it in the shared 630x507mm table layout. The
-paragraph's first sentence used to run as one 103-character line at font 7 - it overflowed
-well past the right edge (measured ~317mm of text against ~275mm of usable width) - so it's
-now split into two lines ("...reveal a rule." / "THE ZONE has nothing to reveal -"), pushing
-the remaining lines down 10mm each; the closing italic aside still clears the paragraph by 8mm.
+Text only, no icons. Every board starts the game on its back, and this is the one the table reads
+first; it is turned over with THE PROJECT once set-up is done. Character parts are named by what
+they are (upbringing, instinct, values, education, skill), not by body part. Content spans x 12-285
+and ends at y 196, inside the print margin. The table-placement guide sits on two edges only
+(right edge + bottom edge).
 
 ### Layout diagram
 
 ```mermaid
 graph TD
   A["page background #FFFFFF"] --> B["banner + rule"]
-  B --> C["THE ZONE title + subtitle"]
-  C --> D["WHY THIS FACE EXISTS paragraph"]
-  D --> E["closing italic aside"]
+  B --> C["left: THE ONE IDEA, THE GAME, HOW IT ENDS"]
+  B --> D["right: SET UP, IN FIVE STEPS"]
+  C --> E["EVERY BOARD STARTS ON ITS BACK band"]
+  D --> E
   E --> F["table-placement guide (2 coloured lines)"]
 ```
 
@@ -734,7 +729,7 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | page background | full-page rect | `#FFFFFF` |
 | header | "SHIT HAPPENS" title + "SHIT HAPPENS · FROM WEEK 2" + rule | - |
 | SHIT HAPPENS box | red-bordered panel, instruction line, 2 landing-zone slots, resolved-vs-stacks note | box border `#905151`; slot fill `#905151` (card silhouette, white label text) |
-| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 5 caption lines at 3.2 under the panel (x 12, y 212.6-230.2: Start with 3. Up to 6. / Earned: Workshop, Reflect. / Spent: pay an Event's number. / Tokens stay until spent. / New tokens count from next week.). Panel x 11-65, 52 mm tall, wells 12 mm | `#B5C7CF` |
+| `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 5 caption lines at 3.2 under the panel (x 12, y 212.6-230.2: Start with 3. Up to 6. / Earned: Workshop, Reflect, Demo. / Spent: pay an Event's number. / Tokens stay until spent. / New tokens count from next week.). Panel x 11-65, 52 mm tall, wells 12 mm | `#B5C7CF` |
 | `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r8 with a red ring r10.5, and **three token wells** (r5.2, the 10.4 mm adapt token) carrying a symbol each, not a word: a target (objectives), a route (strategy) and a cycle arrow (process). Two or three caption lines run under all three lanes: "REFLECT: put its token in a well instead of the pool, if the week gave evidence. One token per well.", then the three symbols with "a feature was banked", "you adapted to 2 Events", "an Event hit a track, or a Hero played", and "Three wells filled: the coin turns over for good. Name one change for next week." | `#B5C7CF` |
 | `lane-1` | HERO lane (x 68-118): label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
 | CLOSE THE WEEK box | compact (y 247-291): title 5.4, "TOP TO BOTTOM" note, rule, 4 one-line numbered steps at 4.2 and "FULL DETAIL ON THE SPECIMEN BOARD". The full explanation lives on the SPECIMEN board | - |

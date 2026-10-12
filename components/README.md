@@ -64,10 +64,10 @@ the same way the others do, and so it can carry the table-placement guide too.
 
 | Board | Paper | Front | Back |
 |---|---|---|---|
-| **1** | **A3 landscape** | `board-1-FRONT-week-and-project-A3-landscape.svg` | `board-1-BACK-week-1-the-week-A3-landscape.svg` |
+| **1** | **A3 landscape** | `board-1-FRONT-week-and-project-A3-landscape.svg` | `board-1-BACK-week-1-the-week-A3-landscape.svg` - the final tally and the four results, with the card-stack slots |
 | **2** | A4 portrait | `board-2-FRONT-reality-A4-portrait.svg` | `board-2-BACK-week-2-reality-A4-portrait.svg` |
 | **3** | A4 landscape | `board-3-FRONT-the-team-A4-landscape.svg` | `board-3-BACK-week-3-the-team-A4-landscape.svg` |
-| **4** | A4 landscape | `board-4-FRONT-the-zone-A4-landscape.svg` | `board-4-BACK-the-zone-A4-landscape.svg` - never flips during play |
+| **4** | A4 landscape | `board-4-FRONT-the-zone-A4-landscape.svg` | `board-4-BACK-the-zone-A4-landscape.svg` - the introduction: every board starts on its back, this one is read first and turns over with the Project |
 | **4b** | A4 landscape, both faces on one page | `board-4b-the-zone-payoff-127x104mm-A4-landscape.svg` (Face A) | same file (Face B) - waits face down until week 3 |
 | **Zone tiles** | A4 landscape, both faces on one page | `zone-tiles-A4-landscape.svg` (left block: 25 one-person faces) | same file (right block: 25 stacked faces) - cut the sheet in half, glue one block to each side of one 2 mm greyboard, then cut along the tick marks |
 | **Markers** | A4 landscape | `markers-coins-clock-capital-zone-A4-landscape.svg` - 5 Ledger coins (track face), 5 Capital markers, the week marker, and the 25 Zone tiles (front) | same file - the 5 Habit faces of the Ledger coins, and the stacked Zone faces. Coins are two discs glued back to back; the Zone block is the same as `zone-tiles-A4-landscape.svg` |

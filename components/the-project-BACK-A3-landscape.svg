@@ -1,8 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 420 297">
-<title>THE PROJECT BACK - Week 1, The Week (true A3 landscape)</title>
+<title>THE PROJECT BACK - the final tally and the four results (true A3 landscape)</title>
 <desc>Glues to the reverse of the-project-FRONT. Same paper size, same orientation: flip about the
 long edge and both sides read the right way up. This face is what the table sees before the
-game starts.</desc>
+game starts (so the goal is in view from the first minute) and again when week 7 closes: count
+the Tower, turn the board over, and add up the Team Score. Left: what is added and taken off, then
+the four results. Right: the card-stack slots used while setting up.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -16,23 +18,103 @@ game starts.</desc>
 <text x="24" y="26" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AFTER SETUP</text>
 <line x1="24" y1="32" x2="396" y2="32" class="h"/>
 
-<text x="24" y="66" class="m" font-size="26" letter-spacing="6">WEEK 1</text>
-<text x="24" y="112" class="s" font-size="42">THE PROJECT</text>
-<line x1="24" y1="126" x2="396" y2="126" class="h" stroke-width="1.2"/>
+<text x="24" y="50" class="m" font-size="16" letter-spacing="4">THE FINAL TALLY</text>
+<text x="240" y="50" class="s" font-size="7" font-style="italic">count the Tower, then add it up</text>
 
-<text x="24" y="140" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
-<text x="24" y="160" class="s" font-size="20">A week is five days, and you choose them.</text>
+<rect x="24" y="58" width="372" height="10" rx="2" fill="#D3B1B1"/>
+<text x="30" y="64.8" class="s" font-size="5.2">First look at the Tower: <tspan font-weight="bold">if any of the six features is missing, the Team Score is 0.</tspan> It is never below 0.</text>
 
-<line x1="24" y1="172" x2="396" y2="172" class="h" stroke-width=".5"/>
+<text x="24" y="77" class="m q" font-size="3.8" letter-spacing="1.4">ADD</text>
+<g id="add">
+  <rect x="24" y="80" width="180" height="17" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>
+  <text x="29" y="87.2" class="s" font-size="5.6">Features on the Tower</text>
+  <text x="29" y="93" class="s" font-size="4" font-style="italic">Six features, 12 each. Up to 72.</text>
+  <text x="164" y="90.6" class="m" font-size="4.4" text-anchor="end">x 12</text>
+  <rect x="168" y="83" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
 
-<text x="24" y="190" class="m q" font-size="6" letter-spacing="2.5">ON THE TABLE</text>
-<text x="24" y="204" class="s" font-size="8">The week strip and the six features.</text>
-<rect x="132" y="207.8" width="37" height="9.2" rx="1.4" fill="#D3B1B1"/>
-<text x="24" y="215" class="s" font-size="8"><tspan textLength="108" lengthAdjust="spacingAndGlyphs">Your figure, your Knowledge, your </tspan><tspan textLength="37" lengthAdjust="spacingAndGlyphs">Motivation</tspan>.</text>
-<text x="24" y="226" class="s" font-size="8">Nothing else yet.</text>
+  <rect x="24" y="99" width="180" height="17" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>
+  <text x="29" y="106.2" class="s" font-size="5.6">Three Ledger coins + Adaptability tokens</text>
+  <text x="29" y="112" class="s" font-size="4" font-style="italic">Their three numbers plus the pool's tokens. Up to 21.</text>
+  <rect x="168" y="102" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
 
-<text x="24" y="246" class="m q" font-size="6" letter-spacing="2.5">CARDS IN PLAY</text>
-<text x="24" y="260" class="m" font-size="6">WORK · ENGAGEMENT · CELEBRATE · WORKSHOP · PLAN</text>
+  <rect x="24" y="118" width="180" height="17" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>
+  <text x="29" y="125.2" class="s" font-size="5.6">Motivation of everyone still on the team</text>
+  <text x="29" y="131" class="s" font-size="4" font-style="italic">Count the tokens on every person board.</text>
+  <rect x="168" y="121" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+
+  <rect x="24" y="137" width="180" height="17" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>
+  <text x="29" y="144.2" class="s" font-size="5.6">Habits the team holds</text>
+  <text x="29" y="150" class="s" font-size="4" font-style="italic">Coins that have turned over, 12 each. Up to 5.</text>
+  <text x="164" y="147.6" class="m" font-size="4.4" text-anchor="end">x 12</text>
+  <rect x="168" y="140" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+</g>
+
+<text x="216" y="77" class="m q" font-size="3.8" letter-spacing="1.4">TAKE OFF</text>
+<g id="take-off">
+  <rect x="216" y="80" width="180" height="17" rx="2" fill="#D3B1B1" stroke="#2A2620" stroke-width=".5"/>
+  <text x="221" y="87.2" class="s" font-size="5.6">Characters who quit or were fired</text>
+  <text x="221" y="93" class="s" font-size="4" font-style="italic">Each one costs the team 40.</text>
+  <text x="356" y="90.6" class="m" font-size="4.4" text-anchor="end">x 40</text>
+  <rect x="360" y="83" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+
+  <rect x="216" y="99" width="180" height="17" rx="2" fill="#D3B1B1" stroke="#2A2620" stroke-width=".5"/>
+  <text x="221" y="106.2" class="s" font-size="5.6">Unrepaid Flex markers</text>
+  <text x="221" y="112" class="s" font-size="4" font-style="italic">Each one costs the team 2.</text>
+  <text x="356" y="109.6" class="m" font-size="4.4" text-anchor="end">x 2</text>
+  <rect x="360" y="102" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+
+  <rect x="216" y="118" width="180" height="17" rx="2" fill="#D3B1B1" stroke="#2A2620" stroke-width=".5"/>
+  <text x="221" y="125.2" class="s" font-size="5.6">Ledger tracks left in the low band</text>
+  <text x="221" y="131" class="s" font-size="4" font-style="italic">A switched-off Activity nobody fixed. 5 each.</text>
+  <text x="356" y="128.6" class="m" font-size="4.4" text-anchor="end">x 5</text>
+  <rect x="360" y="121" width="30" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+
+  <rect x="216" y="137" width="180" height="17" rx="2" fill="#FFFFFF" stroke="#2A2620" stroke-width="1"/>
+  <text x="221" y="145" class="m" font-size="6.4" letter-spacing="1.4">TEAM SCORE</text>
+  <text x="221" y="150.6" class="s" font-size="4" font-style="italic">What you add, less what you take off.</text>
+  <rect x="346" y="140" width="44" height="11" rx="1.2" fill="#FFFFFF" stroke="#2A2620" stroke-width="1"/>
+</g>
+
+<line x1="24" y1="164" x2="396" y2="164" class="h" stroke-width=".5"/>
+
+<text x="24" y="174" class="m" font-size="6" letter-spacing="1.6">THE RESULT</text>
+<g id="tiers">
+  <rect x="24" y="180" width="86" height="52" rx="2.4" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+  <rect x="24.6" y="180.6" width="84.8" height="22" rx="1.8" fill="#D3B1B1"/>
+  <text x="29" y="190" class="m" font-size="5" letter-spacing=".6">PROJECT</text>
+  <text x="29" y="196.5" class="m" font-size="5" letter-spacing=".6">FAILURE</text>
+  <text x="29" y="212" class="m" font-size="7.4" letter-spacing=".8">SCORE 0</text>
+  <text x="29" y="218.5" class="s" font-size="4.2" font-style="italic">A feature is missing.</text>
+  <text x="29" y="224.5" class="s" font-size="4.8">The project missed.</text>
+  <text x="29" y="229.5" class="s" font-size="4.8">Nothing else counts.</text>
+
+  <rect x="114" y="180" width="86" height="52" rx="2.4" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+  <rect x="114.6" y="180.6" width="84.8" height="22" rx="1.8" fill="#F7D7A1"/>
+  <text x="119" y="190" class="m" font-size="5" letter-spacing=".6">HEROIC</text>
+  <text x="119" y="196.5" class="m" font-size="5" letter-spacing=".6">SUCCESS</text>
+  <text x="119" y="212" class="m" font-size="7.4" letter-spacing=".8">UNDER 100</text>
+  <text x="119" y="218.5" class="s" font-size="4.2" font-style="italic">All six features delivered.</text>
+  <text x="119" y="224.5" class="s" font-size="4.8">The project made it.</text>
+  <text x="119" y="229.5" class="s" font-size="4.8">The team did not.</text>
+
+  <rect x="24" y="236" width="86" height="52" rx="2.4" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+  <rect x="24.6" y="236.6" width="84.8" height="22" rx="1.8" fill="#C7CFB5"/>
+  <text x="29" y="246" class="m" font-size="5" letter-spacing=".6">SUSTAINABLE</text>
+  <text x="29" y="252.5" class="m" font-size="5" letter-spacing=".6">PERFORMANCE</text>
+  <text x="29" y="268" class="m" font-size="7.4" letter-spacing=".8">100 TO 149</text>
+  <text x="29" y="274.5" class="s" font-size="4.2" font-style="italic">All six features delivered.</text>
+  <text x="29" y="280.5" class="s" font-size="4.8">The team held together.</text>
+
+  <rect x="114" y="236" width="86" height="52" rx="2.4" fill="#FFFFFF" stroke="#2A2620" stroke-width=".5"/>
+  <rect x="114.6" y="236.6" width="84.8" height="22" rx="1.8" fill="#B5C7CF"/>
+  <text x="119" y="246" class="m" font-size="5" letter-spacing=".6">SUSTAINABLE</text>
+  <text x="119" y="252.5" class="m" font-size="5" letter-spacing=".6">HIGH PERFORMANCE</text>
+  <text x="119" y="268" class="m" font-size="7.4" letter-spacing=".8">150 OR MORE</text>
+  <text x="119" y="274.5" class="s" font-size="4.2" font-style="italic">All six features delivered.</text>
+  <text x="119" y="280.5" class="s" font-size="4.8">You built a team as well.</text>
+</g>
+<text x="228" y="174" class="s q" font-size="4" font-style="italic">Five players: the lines are 100 and 150.</text>
+<text x="228" y="179" class="s q" font-size="4" font-style="italic">Other counts: 5 x starting characters + 75 and + 125.</text>
 
 <line x1="212" y1="180" x2="212" y2="290" class="h" stroke-width=".4"/>
 

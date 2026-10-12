@@ -74,9 +74,12 @@ class Rules:
     speakup_strength: int = 2                   # ... except Speak Up, which pays this much
     engage_low_weeks: tuple = (5, 6)            # Engage loses 1 Motivation in these weeks (+1 in weeks 2 to 3, nothing otherwise)
     speakup_gift: bool = True                   # Speak Up no longer reads Standing; once a game its holder gives any teammate +1 Motivation
-    gift_giver_min: int = 3                     # the giver must be on at least this much Motivation at step 7
+    ownit_trust: bool = True                    # Own It: pays no strength; takes the blame for a landed Event (-own_cost Motivation, team +1 Trust); keeps -1 Motivation at Trust 1 or less
+    own_min_mot: int = 3                        # sim policy only: the character taking the blame has at least this much Motivation
+    own_cost: int = 1
+    gift_trust_min: int = 3                     # the gift needs Trust at least this high (Trust over 2); speaking up needs safety
     gift_receiver_max: int = 2                  # policy: give to the lowest teammate once someone is on this much or less (or about to quit, or in the last week)
-    gift_from_week: int = 3
+    gift_from_week: int = 1
     base_like: int = 2                          # Bookish learning / Hands-On teaching: +this Motivation (was 1)
     base_dislike: int = 1                       # Bookish teaching / Hands-On learning: -this Motivation
     habit_discount: int = 1
@@ -108,9 +111,11 @@ class Rules:
     hero_capital: int = 2
     events_per_week: int = 2
     events_from_week: int = 2
-    combos_from_week: int = 5
+    date_moves_from_week: int = 3               # THE DATE MOVES UP is put back and redrawn before this week (nobody can say no yet)
+    dependable_cost: int = 2                    # Take One For The Team (Dependable only): Motivation paid for +1 Trust and +1 Capital
+    combos_from_week: int = 1
     threshold_base: int = 75                    # lower line: 75 + 5 x 5 players = 100 (set by hand; random play is no longer a reference)
-    threshold_high_base: int = 115              # upper line: 115 + 5 x 5 players = 140
+    threshold_high_base: int = 125              # upper line: 125 + 5 x 5 players = 150
     threshold_per_player: int = 5
     habit_score: int = 12                       # Team Score per Habit held at the end (5 Habits = up to 60)
     feature_value: int = 12
@@ -144,7 +149,8 @@ NEED_SOFT_LO, NEED_SOFT_HI = 75.0, 95.0   # soft goal: each Need is met in this 
 NEED_HABIT = {"Autonomy", "Hierarchy", "Community"}   # a Habit meets these Needs outright, so they may reach 100%
 ONBOARDING_MAX = 0.15                      # goal in optimal play: Onboarding plays a game (about three quits in four are replaced)
 UPPER_GOAL = 80.0                          # goal: this share of optimal games reach the upper threshold
-HAND_ZERO_MIN = 1.0                        # goal: balanced and invested end on 0 points in more than this share of games (they can fail); optimal never does
+HAND_ZERO_MIN = 1.0                        # goal: balanced and invested end on 0 points in more than this share of games (they can fail)
+OPT_ZERO_MAX = 2.0                         # goal: optimal ends on 0 points in at most this share of games
 QUIT_WEIGHT = 1000.0                       # optimiser priority 1: no quits. A quit outweighs finishing, which outweighs points
 FINISH_WEIGHT = 9.0                        # optimiser priority 2: objective points per percent of games that deliver every feature (max 900, below one quit)
 QUIT_RATE_HARD = 5.0                       # hard goal in optimal play: at most this many quits per 100 character-weeks
@@ -208,7 +214,7 @@ EVENTS = [
     Ev("MORE HANDS", "P", 2, "Engage", torso=False, sev=1.5),
     Ev("THE TEAM SPLITS", "P", 2, "SpeakUp", everyone=1, sev=1.2),
     Ev("A FLAT WEEK", "P", 1, "SpeakUp", everyone=1, sev=0.6),
-    Ev("EQUIPMENT OUTAGE", "E", 3, "Support", everyone=1, sev=1.8),
+    Ev("EQUIPMENT OUTAGE", "E", 3, "Support", sev=1.5),
     Ev("OLD FOUNDATIONS", "E", 2, "Engage", sev=2.0),
     Ev("FALSE START", "E", 2, None, sev=1.0),
     Ev("EVERYTHING AT ONCE", "E", 3, "SpeakUp", sev=2.5),
@@ -305,6 +311,7 @@ class Week:
     def __init__(self):
         self.coord = False
         self.trust_up = False
+        self.trust_boost = False
         self.cap_up = False
         self.sp_up = False
         self.adds = 0
@@ -807,7 +814,15 @@ class Game:
         if w < self.R.events_from_week:
             return []
         n = min(self.R.events_per_week, len(self.deck))
-        evs = [self.deck.pop() for _ in range(n)]
+        evs, held = [], []
+        while len(evs) < n and self.deck:
+            e = self.deck.pop()
+            if e.name == "THE DATE MOVES UP" and w < self.R.date_moves_from_week:
+                held.append(e)
+                continue
+            evs.append(e)
+        for e in held:
+            self.deck.insert(self.rng.randrange(len(self.deck) + 1), e)
         for e in evs:
             self.m["ev_drawn_w%d|%s" % (w, e.name)] += 1
         self.m["events_drawn"] += len(evs)
@@ -938,6 +953,17 @@ class Game:
 
     def resolve_events(self, w: int, plan: list):
         W = self.w
+        R, st = self.R, self.st
+        # Own the mistake: the Trust step is shared with Engagement and Take One For The Team (one a week)
+        if (R.ownit_trust and W.survivors and "Engagement" not in plan and not W.trust_boost
+                and self.trust < st.trust_goal and self.trust < R.ledger_max):
+            owners = [c for c in self.chars if c.legs == "OwnIt" and c.mot >= R.own_min_mot]
+            if owners:
+                c = max(owners, key=lambda x: x.mot)
+                self.add_mot(c, -R.own_cost, "own_it")
+                self.trust = min(R.ledger_max, self.trust + 1)
+                W.trust_boost = True
+                self.m["own_it"] += 1
         for e in W.survivors:
             n = e.name
             self.m["ev_landed|" + n] += 1
@@ -1159,23 +1185,24 @@ class Game:
         if "Demo" in plan:
             elig = [c for c in self.chars if c.capital >= self.team_avg_capital()]
             if elig:
-                self.gain_capital(min(elig, key=lambda c: c.capital), 1)
+                tgt = min(elig, key=lambda c: c.capital)
+                self.gain_capital(tgt, 1)
+                W.mot_adj[tgt.id] += 1
+                W.adds += 1
+                self.m["tokens_demo"] += 1
         for _ in range(min(1, plan.count("Reflect"))):
             self.do_reflect(newly)
-        if st.take_one and not W.coord and self.t0 < st.trust_goal:
+        if st.take_one and not W.coord and not W.trust_boost and self.t0 < st.trust_goal:
             def floor(c):
                 # week 1 has no Need to cancel the grind, so the payer must still be above 0 after it
-                dep = c.base == "Dependable"
-                return (3 if dep else 1) + 2 if w == 1 else (4 if dep else 3)
-            who = [c for c in self.chars if c.mot >= floor(c)]
+                return R.dependable_cost + 2 if w == 1 else R.dependable_cost + 1
+            who = [c for c in self.chars if c.base == "Dependable" and c.mot >= floor(c)]
             if who:
                 c = max(who, key=lambda x: x.mot)
-                cost = 3 if c.base == "Dependable" else 1
+                cost = R.dependable_cost
                 self.add_mot(c, -cost, "take_one")
-                if c.base == "Dependable":
-                    W.take_dep += 1
-                else:
-                    W.take_other += 1
+                W.take_dep += 1
+                W.trust_boost = True
                 self.trust = min(R.ledger_max, self.trust + 1)
                 self.gain_capital(c, 1)
 
@@ -1275,7 +1302,7 @@ class Game:
         W, plan = self.w, self.plan_now
         t = c.torso
         hab = {"Autonomy": "SR", "Hierarchy": "WKW", "Community": "PS"}.get(t)
-        if hab and hab in self.habits:
+        if hab and hab in self.habits and not (t == "Community" and any(e.cat in ("P", "M") for e in W.survivors)):
             return True
         if t == "Autonomy":
             if self.R.autonomy_rule == "management":
@@ -1298,6 +1325,8 @@ class Game:
         v = {"OwnIt": self.trust, "Analyze": self.cap, "Support": self.sp, "SpeakUp": self.standing}[c.legs]
         if c.legs == "SpeakUp" and R.speakup_gift:
             return 0
+        if c.legs == "OwnIt" and R.ownit_trust:
+            return -1 if self.trust <= R.low_band else 0
         if v >= R.legs_strength_at:
             return R.speakup_strength if c.legs == "SpeakUp" else 1
         if v <= R.low_band:
@@ -1369,9 +1398,9 @@ class Game:
             if c.mot <= 0:
                 quitters.append(c)
                 causes[c.id] = max(neg, key=neg.get) if neg else "spent it on Workshop, Overtime or Take One"
-        if R.speakup_gift and w >= R.gift_from_week:
+        if R.speakup_gift and w >= R.gift_from_week and self.trust >= R.gift_trust_min:
             for g in sorted(self.chars, key=lambda x: x.id):
-                if g.legs != "SpeakUp" or g.gift_used or g in quitters or g.mot < R.gift_giver_min:
+                if g.legs != "SpeakUp" or g.gift_used or g in quitters:
                     continue
                 mates = [c for c in self.chars if c is not g]
                 if not mates:
@@ -1554,7 +1583,7 @@ class Game:
             "event_cost_faced": self.m["event_cost_faced"], "cancel_by": dict(self.cancel_by),
             "habits": dict(self.habits), "hero_plays": self.m["hero_plays"],
             "wolf_up": self.m["wolf_stepped_up"], "wolf_erased": self.m["wolf_capital_erased"],
-            "combos": self.m["combos"], "quits": self.quits, "gifts": self.m["gifts"], "gift_rescues": self.m["gift_rescues"],
+            "combos": self.m["combos"], "quits": self.quits, "gifts": self.m["gifts"], "gift_rescues": self.m["gift_rescues"], "own_it": self.m["own_it"],
             "quality_quits": self.m["quality_quits"], "quality_quit_nowork": self.m["quality_quit_nowork"],
             "quality_quit_multiweek": self.m["quality_quit_multiweek"], "no_work_weeks": self.m["no_work_weeks"],
             "max_no_work_streak": self.m["max_no_work_streak"],
@@ -1776,6 +1805,7 @@ def report(name: str, res: list, rules: Rules):
     print("   lowest Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_min"][i] for r in res)) for i in range(rules.weeks)))
     print("   quits per game %.2f   games with a quit %.0f%%   Celebrates %.1f" % (
         mean(r["quits"] for r in res), share(res, lambda r: r["quits"] > 0), mean(r["celebrates"] for r in res)))
+    print("   OWN IT (took the blame, team +1 Trust): %.2f a game" % mean(r["own_it"] for r in res))
     print("   SPEAK UP GIFT: %.2f a game, %.2f of them stopping a quit that week (quits without the rescues: at least %.2f a game)" % (
         mean(r["gifts"] for r in res), mean(r["gift_rescues"] for r in res), mean(r["quits"] + r["gift_rescues"] for r in res)))
     print("   median Motivation by week: " + "  ".join("w%d %.2f" % (i + 1, mean(r["mot_med"][i] for r in res)) for i in range(rules.weeks)))
@@ -1814,6 +1844,12 @@ def report(name: str, res: list, rules: Rules):
     print("   DEADLINE CHECK: THE DATE MOVES UP cost the team a week in %.0f%% of games; of those, the project still finished in %.0f%%" % (
         share(res, lambda r: r["deadline_moved"] > 0),
         100.0 * sum(1 for r in res if r["deadline_moved"] > 0 and r["banked"] == 6) / max(1, sum(1 for r in res if r["deadline_moved"] > 0))))
+    agg_dm = Counter()
+    for r in res:
+        agg_dm.update(r.get("event_stats", {}))
+    print("   THE DATE MOVES UP by week (drawn / landed a game): " + "  ".join(
+        "w%d %.2f/%.2f" % (i, agg_dm["ev_drawn_w%d|THE DATE MOVES UP" % i] / len(res), agg_dm["ev_landed_w%d|THE DATE MOVES UP" % i] / len(res))
+        for i in range(rules.events_from_week, rules.weeks + 1)))
     flow = Counter()
     for r in res:
         flow.update(r["mot_flow"])
@@ -1838,8 +1874,9 @@ def report(name: str, res: list, rules: Rules):
         "w%d %.2f" % (i + 1, mean(sum(r["cancel_week"][i].values()) for r in res)) for i in range(W)))
     for how in names_in(res, "cancel_week", CANCEL_ORDER):
         print("     by %-12s" % how + "  ".join("w%d %.2f" % (i + 1, mean(r["cancel_week"][i].get(how, 0) for r in res)) for i in range(W)))
-    for card in shown_cards(res):
-        print("   %-17s" % (card + " days") + "  ".join("w%d %.2f" % (i + 1, mean(r["cards_week"][i].get(card, 0) for r in res)) for i in range(W)))
+    for card in shown_days(res):
+        label = "Flex marker days" if card == "Flex" else card + " days"
+        print("   %-17s" % label + "  ".join("w%d %.2f" % (i + 1, mean(r["cards_week"][i].get(card, 0) for r in res)) for i in range(W)))
     print("   CARD USE CHECK a (goal: every game plays all but %d action cards): %.0f%% of games" % (CARD_MISSING_MAX, all_but_one(res)))
     print("   CARD USE CHECK b (goal: every action card is played in more than %.0f%% of games): " % CARD_SHARE_MIN + "  ".join(
         "%s %.0f%%%s" % (c, v, "" if v > CARD_SHARE_MIN else " LOW") for c, v in card_shares(res).items()))
@@ -1994,8 +2031,17 @@ def cards_played(r: dict) -> set:
 
 
 def shown_cards(res: list) -> list:
-    """Every action card, played or not, then any other card (Flex) that appeared."""
-    return ACTION_CARDS + [c for c in names_in(res, "cards_week", CARD_ORDER) if c not in ACTION_CARDS]
+    """Every action card, played or not, then Onboarding if it was laid. Flex is a marker, not a card."""
+    return ACTION_CARDS + [c for c in names_in(res, "cards_week", CARD_ORDER) if c not in ACTION_CARDS and c != "Flex"]
+
+
+def shown_days(res: list) -> list:
+    """What fills the five days: the cards, then the Flex marker if one was laid."""
+    return shown_cards(res) + [c for c in names_in(res, "cards_week", CARD_ORDER) if c == "Flex"]
+
+
+def day_label(name: str) -> str:
+    return "Flex marker (not a card)" if name == "Flex" else name
 
 
 def times_played(r: dict, card: str) -> int:
@@ -2294,8 +2340,8 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     _legend(out, p2, [(l[0], l[1], "bar") for l in layers])
 
     # 3. The five days
-    cards = shown_cards(res)
-    layers = [(c, CARD_COLOUR.get(c, "#999999"), week_mean_of(res, "cards_week", c, W)) for c in cards]
+    cards = shown_days(res)
+    layers = [(day_label(c), CARD_COLOUR.get(c, "#999999"), week_mean_of(res, "cards_week", c, W)) for c in cards]
     y3 = y2 + PH + GAP
     tot = [sum(l[2][i] for l in layers) for i in range(W)]
     p3 = _Panel(X0, y3, PW, PH, _nice_max(max(tot + [rules.days])), W)
@@ -2306,8 +2352,7 @@ def plot_strategy(path: str, title: str, res: list, rules: Rules):
     # 4. Habitus moves: Hero, Dependable (Take One), Recognition
     hab = [
         ("Hero played", "#E3A72F", week_mean_of(res, "habitus_week", "hero", W), False),
-        ("Dependable: Take One (3 Motivation)", "#2B8A3E", week_mean_of(res, "habitus_week", "dependable", W), False),
-        ("Take One by anyone else (1 Motivation)", "#8CCB9B", week_mean_of(res, "habitus_week", "take_one", W), True),
+        ("Dependable: Take One For The Team", "#2B8A3E", week_mean_of(res, "habitus_week", "dependable", W), False),
         ("Recognition: witness gets +1 Motivation", "#D6336C", week_mean_of(res, "habitus_week", "recognition_witness", W), False),
         ("Recognition: Need met (characters)", "#F783AC", week_mean_of(res, "habitus_week", "recognition_need_met", W), True),
     ]
@@ -2583,8 +2628,8 @@ def _target_rows(title: str, res: list) -> list:
         ("Most Flex markers held at once (goal: 1 or fewer)", "%d" % flex, ok_mark(flex <= 1)),
         ("Quality quits after a week without Work (goal in optimal: 0.05 or less)", "%.3f" % qnw, ok_mark(qnw <= 0.05) if k == "optimal" else ""),
         ("Onboarding plays a game (goal in optimal: %.2f or less, follows the quits; not an action card)" % ONBOARDING_MAX, "%.2f" % onb, ok_mark(onb <= ONBOARDING_MAX) if k == "optimal" else ""),
-        ("Games that end on 0 points (goal: optimal never, balanced and invested more than %.0f%%)" % HAND_ZERO_MIN, "%.1f%%" % scored0,
-         ok_mark(scored0 <= 0) if k == "optimal" else ok_mark(scored0 > HAND_ZERO_MIN) if k in ("balanced", "invested") else ""),
+        ("Games that end on 0 points (goal: optimal %.0f%% or less, balanced and invested more than %.0f%%)" % (OPT_ZERO_MAX, HAND_ZERO_MIN), "%.1f%%" % scored0,
+         ok_mark(scored0 <= OPT_ZERO_MAX) if k == "optimal" else ok_mark(scored0 > HAND_ZERO_MIN) if k in ("balanced", "invested") else ""),
     ] + [("%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, need_hi(t)), "%.0f%%" % v,
           ok_mark(NEED_SOFT_LO <= v <= need_hi(t)) if k == "optimal" else "") for t, v in need_rates(res).items()]
 

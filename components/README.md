@@ -23,7 +23,7 @@ for the full workflow and template.
 | Habitus cards/tiles (Base, Legs, Torso, Head, Item options) | 1 deck | Printed cards | To design |
 | Project cards | 6 | Printed cards - six themed projects over one identical slot structure, §20 | Written in rulebook §20 |
 | **Activity cards** | 16 per sheet (9 designs) | **The week's five slots are filled from these** - print sheet in `print-5-activities.svg` | Drawn |
-| **Flex markers** | 1 | Taken on Overtime; a day the project owes. The team holds at most one. Placed **into a weekday slot** to give the day back, or -2 Team Score if never repaid (§7) | **Off-the-shelf token, not printed** |
+| **Flex markers** | 5 | Two-sided disc, printed on the markers sheet. Taken on Overtime owed side up; a day the project owes. The team holds at most one. Placed **into a weekday slot and flipped** to give the day back, or -2 Team Score if never repaid (§7) | Printed on `markers-coins-clock-capital-zone-A4-landscape.svg` |
 | **Feature Tower blocks** | 6 | **3D print, wood-fill PLA - hex, height proportional to Work Cost. D and F have cone/wedge bottoms and can only stand on B and C** | Spec'd in `3d-models/` |
 | Feature Work cubes | 6 | One cube walking each feature's track on the Project Rack | **Off-the-shelf cube, not printed** |
 | **Quality chips** | 6 | **3D print - same blank body across all tiers, engraved reveal face** | Spec'd in `3d-models/` |
@@ -98,10 +98,11 @@ rule marks where it starts, so nobody is asked to care about it before the week 
 | `cards-activity-5b-63x88mm-A4-portrait` | A4 | Week 1/3 | The other eight - Work x2 (five total), Teach x2, Plan, Demo, Reflect (one card, so at most one Reflect a week), Learn. **Print once** |
 | `cards-event-01-09-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 1-9 |
 | `cards-event-10-18-63x88mm-A4-portrait` | A4 | Week 2 | Event cards 10-18 |
-| `cards-event-19-21-63x88mm-A4-portrait` | A4, one row used | Week 2 | Event cards 19-21 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD). Shuffle all three sheets into one 21-card deck |
+| `cards-event-19-21-63x88mm-A4-portrait` | A4, seven cards | Week 2 | Event cards 19-25 (THE BIKESHED, LEADS FROM BEHIND, THE DASHBOARD, SHAKY GROUND, ALWAYS REACTING, EVERYONE IS EQUAL, THE WOLF). Shuffle all three sheets into one 25-card deck |
 | `cards-project-63x88mm-A4-portrait` | A4 | Setup | Six projects. Choose one; it drops into the seat on board 1 |
 | `cards-habitus-parts-01-15-44x36mm-A4-landscape` + `cards-habitus-parts-16-25-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm), split across two sheets so the 5-per-row cards print at true 44 x 36 mm, matching the person board's seats exactly - the board is master | Setup | 25 part-cards (15 + 10), dealt at random |
 | `cards-need-hero-44x36mm-A4-landscape` | True A4 landscape (297 x 210 mm) - the board is master, same fix as the habitus part-cards | Setup | 10 tiles: 5 NEED (= Torso, one per value) + 5 HERO (= Legs, one per Pressure Response) - HERO tiles use the same shape/pip-count code as the HOW TO ADAPT box on Event cards |
+| `cards-habitus-backs-44x36mm-A3-landscape` | **A3 landscape** (420 x 297 mm) - seven rows of 36 mm do not fit an A4 page | Setup | The backs of all 35 habitus cards, 5 across x 7 down: one row each for upbringing, instinct, values, education and skill (the person-board shape, no pips), then NEED and HERO (red). Print behind the part-card and NEED/HERO sheets, or glue a back to each front |
 
 **Everything that goes in a weekday slot is 63 × 88 mm** - Activity and Event cards alike - so
 the two decks handle identically and either fits any 65 × 90 seat. **The Project card is the

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>MARKERS - Ledger coins, week marker, Capital markers, Zone tiles (A4 landscape)</title>
-<desc>One sheet for every small loose piece. Top left: the 5 Ledger coins, track face above, Habit face below (15 mm discs, text curved round the rim; the Ledger wells are 16 mm). Top right: 5 Capital markers, one per SPECIMEN (7.6 mm discs; the Capital wells are 8.4 mm) and the week marker (52 x 9 mm with rounded corners, the same size as the boxes on THE CLOCK). Bottom: the 25 two-sided Zone tiles, identical to zone-tiles-A4-landscape.svg. Pieces are glued to 2 mm greyboard; each coin is a front disc glued back-to-back with its Habit disc.</desc>
+<title>MARKERS - Ledger coins, Capital markers, week marker, Flex markers, Zone tiles (A4 landscape)</title>
+<desc>One sheet for every small loose piece. Top left: the 5 Ledger coins, track face above, Habit face below (17 mm discs, text curved round the rim; the Ledger wells are 18 mm). Top middle: 5 Capital markers, one per SPECIMEN (17 mm discs, the same size as the coins; the Capital wells are 18 mm) and, standing in the left strip beside the Zone tiles, the week marker (52 x 9 mm with rounded corners, the same size as the boxes on THE CLOCK). Bottom: the 25 two-sided Zone tiles, identical to zone-tiles-A4-landscape.svg. Five two-sided Flex markers (17 mm discs, the same size as the coins, top right; the Flex well on the person board is 18 mm): the owed face is glued back to back with the given-back face. Pieces are glued to 2 mm greyboard; each coin is a front disc glued back-to-back with its Habit disc.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -19,6 +19,26 @@
   <!-- Coin text runs on these two arcs (220 degrees each): the name over the top, the rest under the bottom. -->
   <path id="arcT" d="M-4.51,1.64 A4.8,4.8 0 1 1 4.51,1.64" fill="none"/>
   <path id="arcB" d="M-5.73,-2.09 A6.1,6.1 0 1 0 5.73,-2.09" fill="none"/>
+  <path id="arcFT" d="M-5.826,2.12 A6.2,6.2 0 1 1 5.826,2.12" fill="none"/>
+  <path id="arcFB" d="M-7.33,-2.668 A7.8,7.8 0 1 0 7.33,-2.668" fill="none"/>
+  <g id="cap-disc">
+    <circle r="9.5" fill="#D9D3C4" class="cut"/><circle r="8.9" fill="none" stroke="#6E6249" stroke-width=".3"/>
+    <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFT" startOffset="50%">CAPITAL</textPath></text>
+    <text y="1.5" class="m" font-size="5" font-weight="bold" text-anchor="middle">→</text>
+    <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFB" startOffset="50%">SLIDE IT</textPath></text>
+  </g>
+  <g id="flex-front">
+    <circle r="9.5" fill="#D3B1B1" class="cut"/><circle r="8.9" class="ring"/>
+    <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFT" startOffset="50%">A DAY OWED</textPath></text>
+    <text y="1.3" class="m" font-size="3.8" font-weight="bold" text-anchor="middle">FLEX</text>
+    <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFB" startOffset="50%">FLIP TO REPAY</textPath></text>
+  </g>
+  <g id="flex-back">
+    <circle r="9.5" fill="#EBD9D9" class="cut"/><circle r="8.9" class="ring2"/>
+    <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFT" startOffset="50%">REPAID</textPath></text>
+    <text y="1.3" class="m" font-size="3.8" font-weight="bold" text-anchor="middle">FLEX</text>
+    <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFB" startOffset="50%">NO OUTPUT</textPath></text>
+  </g>
   <g id="tile-one">
     <rect width="18.5" height="18.5" fill="#C7CFB5"/>
     <rect x="1" y="1" width="16.5" height="16.5" rx="1" fill="none" stroke="#2A2620" stroke-width=".4"/>
@@ -41,86 +61,66 @@
 <rect width="297" height="210" fill="#FFFFFF"/>
 
 <text x="12" y="13" class="m" font-size="5" letter-spacing="1.6">MARKERS</text>
-<text x="285" y="13" class="m q" font-size="3.2" text-anchor="end">COINS · CLOCK · CAPITAL · ZONE</text>
+<text x="285" y="13" class="m q" font-size="3.2" text-anchor="end">COINS · CAPITAL · FLEX · ZONE</text>
 <line x1="12" y1="16" x2="285" y2="16" class="h"/>
-<text x="12" y="22" class="s" font-size="3.4" font-style="italic">Cut each coin and marker out. A coin is two discs glued back to back around a 15 mm disc of 2 mm greyboard; a marker is one piece on greyboard.</text>
+<text x="12" y="22" class="s" font-size="3.4" font-style="italic">Cut each coin and marker out. A coin is two discs glued back to back around a 17 mm disc of 2 mm greyboard; a marker is one piece on greyboard, a Flex marker two discs back to back.</text>
 
 <!-- LEDGER COINS -->
 <text x="12" y="29" class="m" font-size="3.6" letter-spacing=".8">LEDGER COINS - 5</text>
 <text x="12" y="34" class="m q" font-size="2.4">FRONT - THE TRACK FACE</text>
 
-<g transform="translate(22,44)"><circle r="7.5" fill="#D3CEDF" class="cut"/><circle r="6.8" class="ring"/>
+<g transform="translate(20.5,45) scale(1.1333)"><circle r="7.5" fill="#D3CEDF" class="cut"/><circle r="6.8" class="ring"/>
   <text class="m c" font-size="2.4"><textPath href="#arcT" startOffset="50%">TRUST</textPath></text>
   <text y="1.8" class="m c" font-size="5">4</text>
   <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(48,44)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring"/>
+<g transform="translate(39.5,45) scale(1.1333)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring"/>
   <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">CAPABILITY</textPath></text>
   <text y="1.8" class="m c" font-size="5">4</text>
   <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(74,44)"><circle r="7.5" fill="#F7D7A1" class="cut"/><circle r="6.8" class="ring"/>
+<g transform="translate(58.5,45) scale(1.1333)"><circle r="7.5" fill="#F7D7A1" class="cut"/><circle r="6.8" class="ring"/>
   <text class="m c" font-size="1.8"><textPath href="#arcT" startOffset="50%">SHARED PRACTICE</textPath></text>
   <text y="1.8" class="m c" font-size="5">4</text>
   <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(100,44)"><circle r="7.5" fill="#D9D3C4" class="cut"/><circle r="6.8" class="ring"/>
+<g transform="translate(77.5,45) scale(1.1333)"><circle r="7.5" fill="#D9D3C4" class="cut"/><circle r="6.8" class="ring"/>
   <text class="m c" font-size="2.2"><textPath href="#arcT" startOffset="50%">STANDING</textPath></text>
   <text y="1.8" class="m c" font-size="5">5</text>
   <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(126,44)"><circle r="7.5" fill="#B5C7CF" class="cut"/><circle r="6.8" class="ring"/>
+<g transform="translate(96.5,45) scale(1.1333)"><circle r="7.5" fill="#B5C7CF" class="cut"/><circle r="6.8" class="ring"/>
   <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">REFLEXIVITY</textPath></text>
   <text y="1.8" class="m c" font-size="5">3</text>
   <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
 
-<text x="12" y="56" class="m q" font-size="2.4">BACK - THE HABIT FACE</text>
+<text x="12" y="58.2" class="m q" font-size="2.4">BACK - THE HABIT FACE</text>
 
-<g transform="translate(22,67)"><circle r="7.5" fill="#D3CEDF" class="cut"/><circle r="6.8" class="ring2"/>
+<g transform="translate(20.5,70) scale(1.1333)"><circle r="7.5" fill="#D3CEDF" class="cut"/><circle r="6.8" class="ring2"/>
   <text class="m c" font-size="1.7"><textPath href="#arcT" startOffset="50%">PSYCHOLOGICAL</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">SAFETY</textPath></text></g>
-<g transform="translate(48,67)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring2"/>
+<g transform="translate(39.5,70) scale(1.1333)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring2"/>
   <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">WHO KNOWS</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">WHAT</textPath></text></g>
-<g transform="translate(74,67)"><circle r="7.5" fill="#F7D7A1" class="cut"/><circle r="6.8" class="ring2"/>
+<g transform="translate(58.5,70) scale(1.1333)"><circle r="7.5" fill="#F7D7A1" class="cut"/><circle r="6.8" class="ring2"/>
   <text class="m c" font-size="2.2"><textPath href="#arcT" startOffset="50%">SHARED</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">REPERTOIRE</textPath></text></g>
-<g transform="translate(100,67)"><circle r="7.5" fill="#D9D3C4" class="cut"/><circle r="6.8" class="ring2"/>
+<g transform="translate(77.5,70) scale(1.1333)"><circle r="7.5" fill="#D9D3C4" class="cut"/><circle r="6.8" class="ring2"/>
   <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">AUTHORIZED</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">VOICE</textPath></text></g>
-<g transform="translate(126,67)"><circle r="7.5" fill="#B5C7CF" class="cut"/><circle r="6.8" class="ring2"/>
+<g transform="translate(96.5,70) scale(1.1333)"><circle r="7.5" fill="#B5C7CF" class="cut"/><circle r="6.8" class="ring2"/>
   <text class="m c" font-size="2.2"><textPath href="#arcT" startOffset="50%">TEAM</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="1.9"><textPath href="#arcB" startOffset="50%">REFLEXIVITY</textPath></text></g>
 
-<g class="m c" font-size="2.2">
-  <text x="22" y="79">TRUST</text><text x="48" y="79">CAPABILITY</text><text x="74" y="79">SHARED PRACTICE</text>
-  <text x="100" y="79">STANDING</text><text x="126" y="79">TEAM REFLEXIVITY</text>
-</g>
-
 <!-- CAPITAL MARKERS -->
-<text x="165" y="29" class="m" font-size="3.6" letter-spacing=".8">CAPITAL MARKERS - 5</text>
-<text x="165" y="34" class="m q" font-size="2.4">ONE PER SPECIMEN</text>
-<g transform="translate(172,44)">
-  <circle r="3.8" fill="#D9D3C4" class="cut"/><circle r="3.1" fill="none" stroke="#6E6249" stroke-width=".25"/>
-  <text y="0.8" class="m c" font-size="2.2" font-weight="bold">CAP</text></g>
-<g transform="translate(186,44)">
-  <circle r="3.8" fill="#D9D3C4" class="cut"/><circle r="3.1" fill="none" stroke="#6E6249" stroke-width=".25"/>
-  <text y="0.8" class="m c" font-size="2.2" font-weight="bold">CAP</text></g>
-<g transform="translate(200,44)">
-  <circle r="3.8" fill="#D9D3C4" class="cut"/><circle r="3.1" fill="none" stroke="#6E6249" stroke-width=".25"/>
-  <text y="0.8" class="m c" font-size="2.2" font-weight="bold">CAP</text></g>
-<g transform="translate(214,44)">
-  <circle r="3.8" fill="#D9D3C4" class="cut"/><circle r="3.1" fill="none" stroke="#6E6249" stroke-width=".25"/>
-  <text y="0.8" class="m c" font-size="2.2" font-weight="bold">CAP</text></g>
-<g transform="translate(228,44)">
-  <circle r="3.8" fill="#D9D3C4" class="cut"/><circle r="3.1" fill="none" stroke="#6E6249" stroke-width=".25"/>
-  <text y="0.8" class="m c" font-size="2.2" font-weight="bold">CAP</text></g>
-<text x="165" y="53" class="s" font-size="3.2" font-style="italic">One slides along the CAPITAL track on your SPECIMEN, 0 to 5. It starts on 0.</text>
+<text x="113" y="29" class="m" font-size="3.6" letter-spacing=".8">CAPITAL - 5</text>
+<use href="#cap-disc" transform="translate(121.5,45) scale(.8947)"/><use href="#cap-disc" transform="translate(140.5,45) scale(.8947)"/><use href="#cap-disc" transform="translate(159.5,45) scale(.8947)"/>
+<use href="#cap-disc" transform="translate(121.5,70) scale(.8947)"/><use href="#cap-disc" transform="translate(140.5,70) scale(.8947)"/>
 
-<!-- WEEK MARKER -->
-<text x="165" y="61" class="m" font-size="3.6" letter-spacing=".8">WEEK MARKER - 1</text>
-<g transform="translate(165,63.5)">
+<!-- WEEK MARKER: stands on its end in the left strip beside the Zone tiles -->
+<text x="12" y="100" class="m" font-size="2.4">WEEK MARKER - 1</text>
+<g transform="translate(29,104) rotate(90)">
   <rect width="52" height="9" rx="1.2" fill="#D3B1B1" class="cut"/><rect x=".6" y=".6" width="50.8" height="7.8" rx=".8" fill="none" stroke="#2A2620" stroke-width=".25"/>
   <g transform="translate(6.5,4.5)">
     <circle r="2.8" fill="none" stroke="#2A2620" stroke-width=".35"/>
@@ -129,8 +129,13 @@
   </g>
   <text x="30" y="5.7" class="m c" font-size="3.4" letter-spacing=".6">WE ARE HERE</text>
 </g>
-<text x="165" y="77" class="s" font-size="3.2" font-style="italic">Lay it over the box of THE CLOCK for the weeks left. It is the same size as the box.</text>
-<text x="165" y="81" class="s" font-size="3.2" font-style="italic">Slide it one box down when the week closes.</text>
+
+<!-- FLEX MARKERS -->
+<text x="172" y="29" class="m" font-size="3.6" letter-spacing=".8">FLEX MARKERS - 5 TWO-SIDED</text>
+<use href="#flex-front" transform="translate(180.5,45) scale(.8947)"/><use href="#flex-front" transform="translate(199.5,45) scale(.8947)"/><use href="#flex-front" transform="translate(218.5,45) scale(.8947)"/>
+<use href="#flex-front" transform="translate(237.5,45) scale(.8947)"/><use href="#flex-front" transform="translate(256.5,45) scale(.8947)"/>
+<use href="#flex-back" transform="translate(180.5,70) scale(.8947)"/><use href="#flex-back" transform="translate(199.5,70) scale(.8947)"/><use href="#flex-back" transform="translate(218.5,70) scale(.8947)"/>
+<use href="#flex-back" transform="translate(237.5,70) scale(.8947)"/><use href="#flex-back" transform="translate(256.5,70) scale(.8947)"/>
 
 <!-- ZONE TILES -->
 <line x1="12" y1="83" x2="285" y2="83" class="h"/>

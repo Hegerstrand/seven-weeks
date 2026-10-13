@@ -13,7 +13,7 @@ become a real high-performing team, or they don't.
 
 ## The core fantasy
 
-Every week you commit the team's five days - build, plan, coordinate, align, teach, demo,
+Every week you commit the team's five days - build, plan, engage, workshop, teach, demo,
 reflect, celebrate, or sit through a meeting - **before you find out what's coming.** Then
 reality lands on the plan you already made. Each character's habitus turns the same choice
 into different behaviour.

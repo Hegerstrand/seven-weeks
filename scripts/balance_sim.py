@@ -147,6 +147,7 @@ class Rules:
 TORSOS = ["Autonomy", "Hierarchy", "Community", "Quality", "Recognition"]
 NEED_SOFT_LO, NEED_SOFT_HI = 75.0, 95.0   # soft goal: each Need is met in this share of character-weeks
 NEED_HABIT = {"Autonomy", "Hierarchy", "Community"}   # a Habit meets these Needs outright, so they may reach 100%
+NEED_NO_GOAL = {"Quality"}                # Needs with no met-rate goal: still reported, never scored
 ONBOARDING_MAX = 0.15                      # goal in optimal play: Onboarding plays a game (about three quits in four are replaced)
 UPPER_GOAL = 80.0                          # goal: this share of optimal games reach the upper threshold
 HAND_ZERO_MIN = 1.0                        # goal: balanced and invested end on 0 points in more than this share of games (they can fail)
@@ -156,7 +157,8 @@ FINISH_WEIGHT = 9.0                        # optimiser priority 2: objective poi
 QUIT_RATE_HARD = 5.0                       # hard goal in optimal play: at most this many quits per 100 character-weeks
 QUIT_RATE_SOFT_MIN = 0.25                  # soft goal in optimal play: every habitus card sees at least this many quits per 100 character-weeks
 HUMAN_KIND = {"torso": "values", "legs": "instinct", "base": "upbringing"}
-CARD_MISSING_MAX = 1                       # goal a: in every game at most this many action cards go unplayed
+CARD_MISSING_MAX = 1                       # goal a: in a game at most this many action cards go unplayed
+CARD_MISSING_SHARE = 95.0                  # goal a: this share of games (percent) must meet CARD_MISSING_MAX
 CARD_SHARE_MIN = 50.0                      # goal b: every action card is played in more than this share of games
 PLAY_RANGES = {"Plan": (1.0, 2.5), "Workshop": (1.0, 2.5)}   # goal: plays a game for each of these cards
 LEGS = ["OwnIt", "Analyze", "Support", "Engage", "SpeakUp"]
@@ -1864,7 +1866,7 @@ def report(name: str, res: list, rules: Rules):
         need_s.update(r["need_seen"])
     print("   Need met rate: " + "  ".join("%s %.0f%%" % (t, 100 * need_m[t] / need_s[t]) for t in TORSOS if need_s[t]))
     print("   NEED CHECK (soft goal: each Need met %d%% to %d%%, %d%% for Needs a Habit meets): " % (NEED_SOFT_LO, NEED_SOFT_HI, 100) + "  ".join(
-        "%s %.0f%% %s" % (t, v, "ok" if NEED_SOFT_LO <= v <= need_hi(t) else ("TOO EASY" if v > need_hi(t) else "TOO HARD"))
+        "%s %.0f%% %s" % (t, v, "no goal" if t in NEED_NO_GOAL else "ok" if NEED_SOFT_LO <= v <= need_hi(t) else ("TOO EASY" if v > need_hi(t) else "TOO HARD"))
         for t, v in need_rates(res).items()))
 
     print("\n4. EVENTS AND DAYS (average count per week)")
@@ -1877,7 +1879,7 @@ def report(name: str, res: list, rules: Rules):
     for card in shown_days(res):
         label = "Flex marker days" if card == "Flex" else card + " days"
         print("   %-17s" % label + "  ".join("w%d %.2f" % (i + 1, mean(r["cards_week"][i].get(card, 0) for r in res)) for i in range(W)))
-    print("   CARD USE CHECK a (goal: every game plays all but %d action cards): %.0f%% of games" % (CARD_MISSING_MAX, all_but_one(res)))
+    print("   CARD USE CHECK a (goal: %.0f%% of games play all but %d action cards): %.0f%% of games" % (CARD_MISSING_SHARE, CARD_MISSING_MAX, all_but_one(res)))
     print("   CARD USE CHECK b (goal: every action card is played in more than %.0f%% of games): " % CARD_SHARE_MIN + "  ".join(
         "%s %.0f%%%s" % (c, v, "" if v > CARD_SHARE_MIN else " LOW") for c, v in card_shares(res).items()))
     print("   PLAN AND WORKSHOP CHECK (goal: Plan %.1f to %.1f, Workshop %.1f to %.1f times a game): " % (
@@ -2056,7 +2058,7 @@ def objective(res: list) -> float:
     # and 30 for each play of Plan or Workshop short of 1.3 or over 2.5.
     missing = mean(max(0, len(set(ACTION_CARDS) - cards_played(r)) - CARD_MISSING_MAX) for r in res)
     off = mean(max(0, PLAY_RANGES[c][0] - times_played(r, c)) + max(0, times_played(r, c) - PLAY_RANGES[c][1]) for r in res for c in PLAY_RANGES) * 2
-    need_off = sum(max(0.0, NEED_SOFT_LO - v) + max(0.0, v - need_hi(t)) for t, v in need_rates(res).items())
+    need_off = sum(max(0.0, NEED_SOFT_LO - v) + max(0.0, v - need_hi(t)) for t, v in need_rates(res).items() if t not in NEED_NO_GOAL)
     return (share(res, lambda r: r["outcome"] == "thriving") + 2.0 * mean(r["score"] for r in res)
             + FINISH_WEIGHT * share(res, lambda r: r["banked"] == 6) - 100 * mean(r["quality_quit_nowork"] for r in res) - 60 * missing - 30 * off
             - 4.0 * sum(max(0.0, CARD_SHARE_MIN - v) for v in card_shares(res).values())
@@ -2541,8 +2543,8 @@ def calibrate(dump: dict):
         sum(r["celebrates"] for r in opt) / len(opt), sum(r["celebrate_empty"] for r in opt) / len(opt),
         100 * sum(1 for r in opt if r["celebrates"] > 4) / len(opt)))
     shares = card_shares(opt)
-    lines.append("  Card use in optimal play: all but %d action cards in %.0f%% of games (goal 100%%); every card in more than %.0f%% of games (goal): %s" % (
-        CARD_MISSING_MAX, all_but_one(opt), CARD_SHARE_MIN, ", ".join("%s %.0f%%%s" % (c, v, "" if v > CARD_SHARE_MIN else " LOW") for c, v in shares.items())))
+    lines.append("  Card use in optimal play: all but %d action cards in %.0f%% of games (goal %.0f%%); every card in more than %.0f%% of games (goal): %s" % (
+        CARD_MISSING_MAX, all_but_one(opt), CARD_MISSING_SHARE, CARD_SHARE_MIN, ", ".join("%s %.0f%%%s" % (c, v, "" if v > CARD_SHARE_MIN else " LOW") for c, v in shares.items())))
     lines.append("  Plan and Workshop in optimal play (goal: Plan %.1f to %.1f, Workshop %.1f to %.1f times a game): " % (
         PLAY_RANGES["Plan"] + PLAY_RANGES["Workshop"]) + "; ".join(
         "%s %.1f a game, in range in %.0f%% of games" % (c, sum(times_played(r, c) for r in opt) / len(opt),
@@ -2611,7 +2613,7 @@ def _target_rows(title: str, res: list) -> list:
         ("Reach UPPER threshold (goal: optimal %.0f%% or more)" % UPPER_GOAL, "%.0f%%" % up, ok_mark(up >= UPPER_GOAL) if k == "optimal" else ""),
         ("Reach LOWER threshold (goal: balanced and invested 50% or more)", "%.0f%%" % lo,
          ok_mark(lo >= 50) if k in ("balanced", "invested") else ""),
-        ("All but %d action cards played in every game (goal: 100%% of games)" % CARD_MISSING_MAX, "%.0f%%" % every, ok_mark(every >= 100)),
+        ("All but %d action cards played in every game (goal: %.0f%% of games)" % (CARD_MISSING_MAX, CARD_MISSING_SHARE), "%.0f%%" % every, ok_mark(every >= CARD_MISSING_SHARE)),
         ("Every action card played in more than %.0f%% of games (goal in optimal)" % CARD_SHARE_MIN,
          "fewest: %s %.0f%%" % min(shares.items(), key=lambda kv: kv[1]),
          ok_mark(min(shares.values()) > CARD_SHARE_MIN) if k == "optimal" else ""),
@@ -2630,8 +2632,8 @@ def _target_rows(title: str, res: list) -> list:
         ("Onboarding plays a game (goal in optimal: %.2f or less, follows the quits; not an action card)" % ONBOARDING_MAX, "%.2f" % onb, ok_mark(onb <= ONBOARDING_MAX) if k == "optimal" else ""),
         ("Games that end on 0 points (goal: optimal %.0f%% or less, balanced and invested more than %.0f%%)" % (OPT_ZERO_MAX, HAND_ZERO_MIN), "%.1f%%" % scored0,
          ok_mark(scored0 <= OPT_ZERO_MAX) if k == "optimal" else ok_mark(scored0 > HAND_ZERO_MIN) if k in ("balanced", "invested") else ""),
-    ] + [("%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, need_hi(t)), "%.0f%%" % v,
-          ok_mark(NEED_SOFT_LO <= v <= need_hi(t)) if k == "optimal" else "") for t, v in need_rates(res).items()]
+    ] + [("%s Need met (no goal)" % t if t in NEED_NO_GOAL else "%s Need met (soft goal: %d%% to %d%%)" % (t, NEED_SOFT_LO, need_hi(t)), "%.0f%%" % v,
+          "" if t in NEED_NO_GOAL else ok_mark(NEED_SOFT_LO <= v <= need_hi(t)) if k == "optimal" else "") for t, v in need_rates(res).items()]
 
 
 def write_postsim(path: str, dump: dict):
@@ -2995,7 +2997,7 @@ def plot_summary(path: str, dump: dict):
         for t, col in (("Autonomy", "#F7D7A1"), ("Hierarchy", "#C7CFB5"), ("Community", "#D3CEDF"), ("Quality", "#B5C7CF"), ("Recognition", "#D9D3C4")):
             seen = sum(r["need_seen"].get(t, 0) for r in res)
             need_rows.append((t, 100 * sum(r["need_met"].get(t, 0) for r in res) / seen if seen else 0.0, col))
-        end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks (green band = soft goal)", need_rows, 100, "%.0f%%", {t: (NEED_SOFT_LO, need_hi(t)) for t, _, _ in need_rows})
+        end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks (green band = soft goal)", need_rows, 100, "%.0f%%", {t: (NEED_SOFT_LO, need_hi(t)) for t, _, _ in need_rows if t not in NEED_NO_GOAL})
         # quits by habitus part, human names
         human = {"torso": "values", "legs": "instinct", "base": "upbringing"}
         agg = Counter()

@@ -5,6 +5,7 @@ whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
 > ## BALANCE PASS (2026-10-11 to 2026-10-12, v0.35)
+> **The Flex marker is two-sided** (five are printed, the team still holds at most one): the owed face is up while the day is owed; to give the day back you place it in a weekday slot and **flip** it, and it goes back to the supply at the close. No scoring change, §7.
 > **Demo also gives the character who receives its +1 Capital +1 Motivation** (a public success lifts you), §7. **EQUIPMENT OUTAGE no longer costs everyone 1 Motivation**: it removes one Work card and only Hierarchy characters lose 1 Motivation, §11. **Psychological Safety meets the Community Need only in a week when no Management or People Event landed on the team**; otherwise it takes an Engagement or a Reflect, §5. **Demo also gives the team +1 Adaptability at the close**, §7.
 > **Own It now takes the blame for an uncancelled Event** (unlimited, but it needs an Event to land): the character loses 1 Motivation and the team gains +1 Trust at once; Trust 1 or less still costs them 1 Motivation, and the old +1 at Trust 3 or more is gone. It shares Trust's one step a week, §5.2. Grounded in Edmondson 1996, Nembhard & Edmondson 2006, Kim et al. 2004 and Mayer et al. 1995.
 > **Take One For The Team is played by a Dependable character only** (it was open to anyone for 1 Motivation): 2 Motivation for +1 Trust and +1 Capital, at once, once a week, §7, §5.2. **THE DATE MOVES UP is not in play in week 2** (put it back and redraw), §11.
@@ -720,8 +721,8 @@ spend is therefore the Hero-Team path (§14) being offered to one player, one to
 grind" and "-1 a week" are one and the same thing: it is the -1 printed on
 every person board. Seven
 weeks, seven grinds. The only thing that pushes back is **Celebrate** (§7) - a day spent
-marking what the team got done. Starting at 3, a team that never celebrates loses its first
-character early in week 3.
+marking what the team got done. Starting at 5, a team that never celebrates, and never has a Need met, loses its
+first character when week 5 closes.
 
 > **Resolve the week's Motivation as one number.** Total each character's change - **−1** for
 > the grind, **±1 per matching Event category this week, per their Torso** (§5, "Motivation
@@ -801,7 +802,7 @@ your board from the start - the game just waits until week 2 to turn it over.
 | Autonomy | **At most 1 Event landed on the team** this week - the other was cancelled in Adapt, or none was drawn - **or the team has Shared Repertoire** (§18). |
 | Hierarchy | **The team played a Teach, Learn or Workshop card**, **or the team has Who Knows What** (§18). |
 | Community | The team spent an Engagement or a Reflect, **or the team has Psychological Safety and no Management or People Event landed on the team this week** (§18). |
-| Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter): **+1**. **No Work: lose 3 Motivation instead.** |
+| Quality | **Work was added to a feature** this week (a Work card that really moved a feature's counter): **+1**. **No Work added to a feature: lose 3 Motivation instead.** |
 | Recognition | **A feature was banked** this week, **you spent your Hero**, or **the team held a Demo**. |
 
 Checking this once per week rather than once per day keeps it to one pass over four
@@ -1092,7 +1093,7 @@ printed on it (the card's HOW TO ADAPT box lists its three ways to cancel it).
 
 **1 - Plan the week.** Lay out **five Activity cards**, one on each weekday slot Monday to
 Friday. Nobody is assigned to a card, now or later - Activity cards are the team's, not a person's.
-A slot may instead take a **Flex marker**, giving back a day someone worked as Overtime (§7).
+A slot may instead take a **Flex marker**, flipped, giving back a day someone worked as Overtime (§7).
 Then stop. Nothing has resolved.
 
 **2 - Shit happens.** Draw **2 Events** and turn them face up beside the week. Read them
@@ -1294,8 +1295,8 @@ and the Events you cancel have to carry the rest.
 > Motivation** and takes a **Flex marker** - a day the project now owes them. **The team
 > holds at most one Flex marker at a time**, so Overtime is only open when none is owed.
 >
-> **Flexing back.** Place a **Flex marker into a weekday slot** instead of a card. That day
-> produces nothing at all - it's the day being given back - and the marker is discarded.
+> **Flexing back.** Place the **Flex marker into a weekday slot** instead of a card and **flip** it. That day
+> produces nothing at all - it's the day being given back - and the marker goes back to the supply at the close.
 >
 > **At the end of the project, every Flex marker still held costs 2 Team Score** (§16). Hours
 > nobody ever gave back.
@@ -1588,9 +1589,9 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | EVERYTHING AT ONCE | Environment | 3 | Speak Up | No feature may take more than 1 Work this week. Only Hierarchy characters lose 1 Motivation. | Hierarchy −1 |
 | SHAKY GROUND | Environment | 3 | Engage | The team loses 1 Capability (the Ledger coin moves down one, permanently). | Hierarchy −1 |
 
-**Counts:** 4 cost 1, 12 cost 2, 8 cost 3, and THE WOLF has no cost (average 2.2 over the 24 that
-can be bought out). 20 cards have a Hero route and 5 do not (FALSE START, THE AUDIT, THE DATE
-MOVES UP, EVERYONE IS EQUAL, THE WOLF). THE BIKESHED is a Management card that hits Quality, as
+**Counts:** 4 cost 1, 12 cost 2, 7 cost 3, and THE WOLF and THE DATE MOVES UP have no cost (average 2.1 over the 23 that
+can be bought out). 21 cards have a Hero route and 4 do not (FALSE START, THE AUDIT,
+EVERYONE IS EQUAL, THE WOLF). THE BIKESHED is a Management card that hits Quality, as
 printed.
 
 ### Draft Event text (superseded - not the printed deck)

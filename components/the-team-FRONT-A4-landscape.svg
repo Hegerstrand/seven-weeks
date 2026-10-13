@@ -26,95 +26,95 @@ the-team-BACK matches and goes on the reverse.</desc>
 <text x="12" y="26" class="s" font-size="3.8" font-style="italic">One coin per row. Walk it as the track moves. At the ring, turn it over - that is a <tspan font-weight="bold">HABIT</tspan>, and it is permanent.</text>
 <text x="12" y="30" class="s" font-size="3.8" font-style="italic">The coin can walk back down afterwards. It never turns back over. The left column is what the team <tspan font-style="normal">does</tspan>; the right is what it has <tspan font-style="normal">become</tspan>, and who named it.</text>
 
-<text x="103.7" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
-<text x="156.9" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
+<text x="107" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
+<text x="170" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
 <text x="220.7" y="36" class="m" font-size="3" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
 
 <!-- TRUST -->
-<g id="trust" transform="translate(0,-2)">
-  <rect x="8" y="45" width="281" height="28" rx="2" class="band" fill="#D3CEDF"/>
-  <text x="12" y="52" class="s" font-size="6">Trust</text>
-  <text x="12" y="59" class="s" font-size="3.4" font-style="italic">grown by Engagement</text>
+<g id="trust">
+  <rect x="8" y="40" width="281" height="34" rx="2" class="band" fill="#D3CEDF"/>
+  <text x="12" y="47" class="s" font-size="6">Trust</text>
+  <text x="12" y="54" class="s" font-size="3.4" font-style="italic">grown by Engagement</text>
   <g class="w">
-    <circle cx="86" cy="54" r="8"/><circle cx="103.7" cy="54" r="8"/><circle cx="121.5" cy="54" r="8"/>
-    <circle cx="139.2" cy="54" r="8"/><circle cx="156.9" cy="54" r="8"/><circle cx="174.7" cy="54" r="8"/>
+    <circle cx="86" cy="54" r="9"/><circle cx="107" cy="54" r="9"/><circle cx="128" cy="54" r="9"/>
+    <circle cx="149" cy="54" r="9"/><circle cx="170" cy="54" r="9"/><circle cx="191" cy="54" r="9"/>
   </g>
   <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="55.4">0</text><text x="103.7" y="55.4">1</text><text x="121.5" y="55.4">2</text>
-    <text x="139.2" y="55.4">3</text><text x="156.9" y="55.4">4</text><text x="174.7" y="55.4">5</text>
+    <text x="86" y="55.4">0</text><text x="107" y="55.4">1</text><text x="128" y="55.4">2</text>
+    <text x="149" y="55.4">3</text><text x="170" y="55.4">4</text><text x="191" y="55.4">5</text>
   </g>
-  <circle cx="156.9" cy="54" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M78.9,64 L78.9,67 L110.8,67 L110.8,64" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="71" class="m" font-size="2.8" text-anchor="middle">TEACH DOES NOTHING</text>
-  <text x="220.7" y="52" class="s" font-size="5">Psychological Safety</text>
-  <text x="220.7" y="58.5" class="m q" font-size="2.6">EDMONDSON 1999</text>
+  <circle cx="170" cy="54" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <path d="M76.5,65.5 L76.5,68.5 L116.5,68.5 L116.5,65.5" class="w" style="stroke:#905151;stroke-width:.5"/>
+  <text x="96.5" y="72" class="m" font-size="2.8" text-anchor="middle">TEACH DOES NOTHING</text>
+  <text x="220.7" y="47" class="s" font-size="5">Psychological Safety</text>
+  <text x="220.7" y="53.5" class="m q" font-size="2.6">EDMONDSON 1999</text>
 </g>
 
 <!-- CAPABILITY -->
-<g id="capability" transform="translate(0,6)">
-  <rect x="8" y="75" width="281" height="28" rx="2" class="band" fill="#C7CFB5"/>
-  <text x="12" y="82" class="s" font-size="6">Capability</text>
-  <text x="12" y="89" class="s" font-size="3.4" font-style="italic">grown by filling a whole</text>
-  <text x="12" y="93.5" class="s" font-size="3.4" font-style="italic">row or column on the Zone</text>
+<g id="capability">
+  <rect x="8" y="78" width="281" height="34" rx="2" class="band" fill="#C7CFB5"/>
+  <text x="12" y="85" class="s" font-size="6">Capability</text>
+  <text x="12" y="92" class="s" font-size="3.4" font-style="italic">grown by filling a whole</text>
+  <text x="12" y="96.5" class="s" font-size="3.4" font-style="italic">row or column on the Zone</text>
   <g class="w">
-    <circle cx="86" cy="84" r="8"/><circle cx="103.7" cy="84" r="8"/><circle cx="121.5" cy="84" r="8"/>
-    <circle cx="139.2" cy="84" r="8"/><circle cx="156.9" cy="84" r="8"/><circle cx="174.7" cy="84" r="8"/>
+    <circle cx="86" cy="92" r="9"/><circle cx="107" cy="92" r="9"/><circle cx="128" cy="92" r="9"/>
+    <circle cx="149" cy="92" r="9"/><circle cx="170" cy="92" r="9"/><circle cx="191" cy="92" r="9"/>
   </g>
   <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="85.4">0</text><text x="103.7" y="85.4">1</text><text x="121.5" y="85.4">2</text>
-    <text x="139.2" y="85.4">3</text><text x="156.9" y="85.4">4</text><text x="174.7" y="85.4">5</text>
+    <text x="86" y="93.4">0</text><text x="107" y="93.4">1</text><text x="128" y="93.4">2</text>
+    <text x="149" y="93.4">3</text><text x="170" y="93.4">4</text><text x="191" y="93.4">5</text>
   </g>
-  <circle cx="156.9" cy="84" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M78.9,94 L78.9,97 L110.8,97 L110.8,94" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="101" class="m" font-size="2.8" text-anchor="middle">FIRST WORK DOES NOTHING</text>
-  <text x="220.7" y="82" class="s" font-size="5">Who Knows What</text>
-  <text x="220.7" y="88.5" class="m q" font-size="2.6">WEGNER 1986 · TRANSACTIVE MEMORY</text>
+  <circle cx="170" cy="92" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <path d="M76.5,103.5 L76.5,106.5 L116.5,106.5 L116.5,103.5" class="w" style="stroke:#905151;stroke-width:.5"/>
+  <text x="96.5" y="110" class="m" font-size="2.8" text-anchor="middle">FIRST WORK DOES NOTHING</text>
+  <text x="220.7" y="85" class="s" font-size="5">Who Knows What</text>
+  <text x="220.7" y="91.5" class="m q" font-size="2.6">WEGNER 1986 · TRANSACTIVE MEMORY</text>
 </g>
 
 <!-- SHARED PRACTICE -->
-<g id="shared-practice" transform="translate(0,14)">
-  <rect x="8" y="105" width="281" height="28" rx="2" class="band" fill="#F7D7A1"/>
-  <text x="12" y="112" class="s" font-size="6">Shared Practice</text>
-  <text x="12" y="119" class="s" font-size="3.4" font-style="italic">grown by Reflect, and by</text>
-  <text x="12" y="123.5" class="s" font-size="3.4" font-style="italic">stacking a square on the Zone</text>
+<g id="shared-practice">
+  <rect x="8" y="116" width="281" height="34" rx="2" class="band" fill="#F7D7A1"/>
+  <text x="12" y="123" class="s" font-size="6">Shared Practice</text>
+  <text x="12" y="130" class="s" font-size="3.4" font-style="italic">grown by Reflect, and by</text>
+  <text x="12" y="134.5" class="s" font-size="3.4" font-style="italic">stacking a square on the Zone</text>
   <g class="w">
-    <circle cx="86" cy="114" r="8"/><circle cx="103.7" cy="114" r="8"/><circle cx="121.5" cy="114" r="8"/>
-    <circle cx="139.2" cy="114" r="8"/><circle cx="156.9" cy="114" r="8"/><circle cx="174.7" cy="114" r="8"/>
+    <circle cx="86" cy="130" r="9"/><circle cx="107" cy="130" r="9"/><circle cx="128" cy="130" r="9"/>
+    <circle cx="149" cy="130" r="9"/><circle cx="170" cy="130" r="9"/><circle cx="191" cy="130" r="9"/>
   </g>
   <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="115.4">0</text><text x="103.7" y="115.4">1</text><text x="121.5" y="115.4">2</text>
-    <text x="139.2" y="115.4">3</text><text x="156.9" y="115.4">4</text><text x="174.7" y="115.4">5</text>
+    <text x="86" y="131.4">0</text><text x="107" y="131.4">1</text><text x="128" y="131.4">2</text>
+    <text x="149" y="131.4">3</text><text x="170" y="131.4">4</text><text x="191" y="131.4">5</text>
   </g>
-  <circle cx="156.9" cy="114" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M78.9,124 L78.9,127 L110.8,127 L110.8,124" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="94.9" y="131" class="m" font-size="2.8" text-anchor="middle">PLAN DOES NOTHING</text>
-  <text x="220.7" y="112" class="s" font-size="5">Shared Repertoire</text>
-  <text x="220.7" y="118.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
+  <circle cx="170" cy="130" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <path d="M76.5,141.5 L76.5,144.5 L116.5,144.5 L116.5,141.5" class="w" style="stroke:#905151;stroke-width:.5"/>
+  <text x="96.5" y="148" class="m" font-size="2.8" text-anchor="middle">PLAN DOES NOTHING</text>
+  <text x="220.7" y="123" class="s" font-size="5">Shared Repertoire</text>
+  <text x="220.7" y="129.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
 </g>
 
 <!-- STANDING - on the board from the start; the coin mirrors the highest Capital, it is never walked -->
 <g id="standing">
-  <rect x="8" y="157" width="281" height="28" rx="2" class="band" fill="#D9D3C4"/>
-  <text x="12" y="164" class="s" font-size="6">Standing</text>
-  <text x="12" y="171" class="s" font-size="3.4" font-style="italic">grown by nobody</text>
-  <text x="12" y="175.5" class="s" font-size="3.4" font-style="italic">starts on 0</text>
+  <rect x="8" y="154" width="281" height="34" rx="2" class="band" fill="#D9D3C4"/>
+  <text x="12" y="161" class="s" font-size="6">Standing</text>
+  <text x="12" y="168" class="s" font-size="3.4" font-style="italic">grown by nobody</text>
+  <text x="12" y="172.5" class="s" font-size="3.4" font-style="italic">starts on 0</text>
   <g class="w">
-    <circle cx="86" cy="166" r="8"/><circle cx="103.7" cy="166" r="8"/><circle cx="121.5" cy="166" r="8"/>
-    <circle cx="139.2" cy="166" r="8"/><circle cx="156.9" cy="166" r="8"/><circle cx="174.7" cy="166" r="8"/>
+    <circle cx="86" cy="168" r="9"/><circle cx="107" cy="168" r="9"/><circle cx="128" cy="168" r="9"/>
+    <circle cx="149" cy="168" r="9"/><circle cx="170" cy="168" r="9"/><circle cx="191" cy="168" r="9"/>
   </g>
   <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="167.4">0</text><text x="103.7" y="167.4">1</text><text x="121.5" y="167.4">2</text>
-    <text x="139.2" y="167.4">3</text><text x="156.9" y="167.4">4</text><text x="174.7" y="167.4">5</text>
+    <text x="86" y="169.4">0</text><text x="107" y="169.4">1</text><text x="128" y="169.4">2</text>
+    <text x="149" y="169.4">3</text><text x="170" y="169.4">4</text><text x="191" y="169.4">5</text>
   </g>
-  <circle cx="156.9" cy="166" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M78.9,176 L78.9,179 L181.7,179 L181.7,176" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="130.3" y="183" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE</text>
-  <text x="220.7" y="164" class="s" font-size="5">Authorized Voice</text>
-  <text x="220.7" y="170.5" class="s" font-size="3.4" font-style="italic">Once a week: cancel a Management</text>
-  <text x="220.7" y="174.5" class="s" font-size="3.4" font-style="italic">or Customer Event outright.</text>
-  <text x="220.7" y="180.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
+  <circle cx="170" cy="168" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <path d="M76.5,179.5 L76.5,182.5 L200.5,182.5 L200.5,179.5" class="w" style="stroke:#905151;stroke-width:.5"/>
+  <text x="138.5" y="186" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE</text>
+  <text x="220.7" y="161" class="s" font-size="5">Authorized Voice</text>
+  <text x="220.7" y="167.5" class="s" font-size="3.4" font-style="italic">Once a week: cancel a Management</text>
+  <text x="220.7" y="171.5" class="s" font-size="3.4" font-style="italic">or Customer Event outright.</text>
+  <text x="220.7" y="177.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
 </g>
-<text x="156.9" y="155" class="m" font-size="2.6" text-anchor="middle">FLIP AT 4</text>
+<text x="170" y="152.6" class="m" font-size="2.6" text-anchor="middle">FLIP AT 4</text>
 
 <text x="12" y="194" class="s" font-size="3.8" font-style="italic">Adaptability is not a track here: it is a pool of tokens, kept on SHIT HAPPENS, with the Team Reflexivity coin beside it.</text>
 

@@ -35,7 +35,7 @@ spend.
 - **Board:** on THE TEAM it had its own row (Adaptability, `#B5C7CF`) with **one** coin well and a
   ring, captioned "TURN IT OVER THE FIRST TIME THE POOL HOLDS 4 AT WEEK END", with the name
   "Team Reflexivity" and "WEST 1996" on the right. For a short time it lived as a HABIT lane
-  (36 x 49 mm, `#B5C7CF`, one coin well r8 with a ring r10.5) beside the pool and the HERO lane on
+  (36 x 49 mm, `#B5C7CF`, one coin well r10 with a ring r11.6) beside the pool and the HERO lane on
   SHIT HAPPENS.
 
 ## What still carries its trace (not yet reprinted)

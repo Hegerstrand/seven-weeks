@@ -34,7 +34,7 @@ transform="translate(6,14)">`; a 37x142mm THE WEEK checklist panel sits on its r
 (page x 254-291, inside the print margin).
 
 One per player, print once each. Habitus row (5 seats, true 44x36mm matching the printed
-part-cards), then Flex / Hero / Need / Zone Start / Skills (44x36mm each, under Base / Legs / Torso / Head / Item;
+part-cards), then Flex / Hero / Need / Zone Start / Skills (44x36mm each, under upbringing / instinct / values / education / skill;
 Hero sits under Legs because Legs is now the instinct (Pressure Response) part, Zone Start under Head
 because Head gives a starting skill, Flex swapped to Base 2026-10-08),
 then Capital/Motivation as a full-width row underneath.
@@ -52,10 +52,10 @@ read them as minimums.
 | `sh-base` / `sh-legs` / `sh-torso` / `sh-head` / `sh-item` | outline icon glyphs (square/triangle/pentagon/hexagon/diamond) | fill `#F2EDE0` (`.ic`) |
 | `sh-torso-red` / `sh-legs-red` | filled variants of the same shapes, used where the seat is "live"/highlighted (Hero = filled Legs triangle) | fill `#905151` |
 | board panel (ungrouped) | outer border rect, "SPECIMEN" title, italic aside, rule | - |
-| HABITUS row | 5 seats (Base/Legs/Torso/Head/Item), each with dashed tinted seat, icon+pips, label, italic "upbringing/instinct/values/education/skill" caption, "→ outcome" caption (Legs reads "Pressure Response", Head reads "→ Zone row", Item reads "→ Zone column") | seats `.hab` fill `#F0E3D1`, dashed border |
-| Row A (Flex / Hero / Need / Zone Start / Skills) | 5 boxes, one per habitus column, each 44x36 | Flex, Zone Start & Skills: no fill (`.w` outline); Flex also has a dashed ring glyph; Hero & Need: `.seat` dashed, fill `#F0E3D1` |
+| HABITUS row | 5 seats (upbringing, instinct, values, education, skill), each with dashed tinted seat, icon (no pips), mono caps label (UPBRINGING / INSTINCT / VALUES / EDUCATION / SKILL) and a "→ outcome" caption (instinct reads "→ Pressure Response", education "→ Zone row", skill "→ Zone column"); the body-part words are no longer printed | seats `.hab` fill `#F0E3D1`, dashed border |
+| Row A (Flex / Hero / Need / Zone Start / Skills) | 5 boxes, one per habitus column, each 44x36 | Flex, Zone Start & Skills: no fill (`.w` outline); Flex also has a dashed r10 well (20 mm) with the marker's owed face printed in it; Hero & Need: `.seat` dashed, fill `#F0E3D1` |
 | Row B (Motivation / Capital) | 2 wide (114mm) boxes, Motivation left, Capital right (swapped 2026-10-08), each with a 5-square (Motivation) or 6-circle (Capital) scale + caption; the row sits 2mm lower (y 112-140) to clear the SKILLS column icons | Motivation `#D3B1B1`; Capital `#D9D3C4` |
-| THE WEEK panel (page space, outside the board group) | outer border rect, mono title, rule, seven numbered steps (PLAN / SHIT HAPPENS / ADAPT / EVENTS HAPPEN / THE WEEK RUNS / CLOSE / MOTIVATION), each a bold step name over 2-4 lines of rule text, italic "tick it off aloud" footer. Text is rulebook 6.1 "The week at a glance" - change one, change both | - |
+| THE WEEK panel (page space, outside the board group) | outer border rect, mono title, rule, seven numbered steps (PLAN / SHIT HAPPENS / ADAPT / EVENTS HAPPEN / THE WEEK RUNS / CLOSE / MOTIVATION), each a bold step name over 2-5 lines of rule text, no footer. Box is as tall as the SPECIMEN (142 mm). Text is rulebook 6.1 "The week at a glance" - change one, change both | - |
 
 ## Text
 
@@ -64,14 +64,14 @@ read them as minimums.
 | "SPECIMEN" | `.m` mono | 5.4 | `#000000` | - |
 | "the figure is the record - nothing here is written" | `.s` italic serif | 3.2 | `#000000` | - |
 | "HABITUS" | `.m.q` mono | 3 | `#000000` | - |
-| Habitus labels (BASE/LEGS/TORSO/HEAD/ITEM) | `.m` mono | 3.2 | `#000000` | - |
+| Habitus labels (UPBRINGING/INSTINCT/VALUES/EDUCATION/SKILL) | `.m` mono | 3.2 | `#000000` | - |
 | Habitus italic captions (upbringing/instinct/values/education/skill) | `.s.q` italic serif | 2.8 | `#000000` | - |
 | Habitus outcome captions (→ Motivation, → Zone row, → Events, → pressure, → Zone column) | `.s.q` serif | 3.2 | `#000000` | - |
 | "the shape on each seat tells you which part-card belongs there" | `.s.q` italic serif | 2.8 | `#000000` | - |
-| "ZONE START" + 4-line italic note ("Mark where your education [hexagon] row meets your Item [diamond] column, at setup."), left-aligned at x 151, inline glyphs `sh-head` (scale .8) and `sh-item` (scale .55) placed right after the words they stand for; each text segment has a fixed `textLength` so the glyphs stay next to their word whatever font renders | `.m.q` mono / `.s.q` italic serif | 3.2 / 3.2 | `#000000` | - |
-| "FLEX" + "WEEK 3" + cost note | `.m` mono / `.m.q` mono / `.s` serif | 2.6 / 1.9 / 2.1 | `#000000` | `#D3B1B1` chip behind "1 Motivation" |
+| "ZONE START" + 4-line italic note ("Mark where your education [hexagon] row meets your skill [diamond] column, at setup."), left-aligned at x 151, inline glyphs `sh-head` (scale .8) and `sh-item` (scale .55) placed right after the words they stand for; each text segment has a fixed `textLength` so the glyphs stay next to their word whatever font renders | `.m.q` mono / `.s.q` italic serif | 3.2 / 3.2 | `#000000` | - |
+| "FLEX" marker well text (on arcs, scaled 1.05) | `.m` mono | 2.2 arcs / 3.8 centre | `#000000` | `#D3B1B1` chip behind "FLEX"; top arc "A DAY OWED", bottom arc "FLIP TO REPAY"; dashed well r10 for the 19 mm marker |
 | "NEED" + week-3 rule text | `.m` mono / `.s` serif | 2.6 / 1.9 | `#000000` | - |
-| "HERO" + "WEEK 3" + rule text | `.m` mono / `.m.q` mono / `.s` serif | 2.6 / 1.9 / 1.9 | `#000000` | - |
+| "HERO" + rule text | `.m` mono / `.s` serif | 3.2 / 3 | `#000000` | - |
 | "SKILLS" (above the box) + 5x5 grid filling the box; 5 Item diamonds below it, 5 Head hexagons right of it | `.m.q` mono | 3.0 | `#000000` | - |
 | "CAPITAL" + "WEEK 2" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
 | "one marker - slide it. Starts 0, only grows if witnessed." | `.s.q` italic serif | 2.1 | `#000000` | - |
@@ -422,7 +422,7 @@ board. Adaptability is not a row: it is a pool of tokens on SHIT HAPPENS. BACK i
 | header (ungrouped) | "THE TEAM" title, italic tagline, "THE TEAM · FROM END OF WEEK 1", rule, legend box + 2-line legend, "START" (over circle 1) / "FLIP → HABIT" (over circle 4) / "HABIT and who named it" | legend box: `.r` outline only |
 | `trust` | title, subtitle, 6-circle coin track numbered 0-5, red flip-ring at circle 4, 'TEACH DOES NOTHING' footnote under circles 0-1, "Psychological Safety" + citation | `#D3CEDF` |
 | `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#C7CFB5` |
-| `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circle 0 only, "Shared Repertoire" + citation | `#F7D7A1` |
+| `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circles 0-1, "Shared Repertoire" + citation | `#F7D7A1` |
 | `standing` | title, subtitle ("grown by nobody" / "starts on 0"), 6-circle track numbered 0-5 at the same centres as the other rows, red flip-ring at circle 4, bracket + "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE", "FLIP AT 4" label above the ring, "Authorized Voice" + description + citation. Absolute at y 157-185, no `translate`. A footer line says Adaptability is a pool on SHIT HAPPENS | `#D9D3C4` (Capital Bone) |
 
 Row tint follows the same People/Environment/Management categories the Event-card tints derive
@@ -456,19 +456,18 @@ Capital Bone `#D9D3C4`. Adaptability has no row (it is a pool, and has no Habit)
 
 ### Illustration
 
-Each Ledger row is a `<g id="...">` with a vertical `translate` offset that spreads the three
-track rows evenly (Trust -2, Capability +6, Shared Practice +14, i.e. a 38 mm pitch);
+Each Ledger row is a `<g id="...">` (no transform now): the four bands are 34 mm tall at y 40, 78, 116 and 154 (a 38 mm pitch, 4 mm gaps).
 Paint order **inside each row**: tinted band rect, title, subtitle, then the 6 outline circles
-(`.w`, r=8, centres at x = 86, 103.7, 121.5, 139.2, 156.9, 174.7), then a 0-5 track number
-centred inside each circle (`.m q` mono, 4.2), then a red-outlined **flip ring** (r=10.5,
+(`.w`, r=10, a 20 mm well for the 19 mm coin, centres at x = 86, 107, 128, 149, 170, 191, at band top + 14), then a 0-5 track number
+centred inside each circle (`.m q` mono, 4.2), then a red-outlined **flip ring** (r=11,
 `stroke:#905151;stroke-width:.8`) drawn on top of circle 4 to mark where a coin turns over,
-then **one** footnote bracket under circles 0-1 with a centred mono caption, then the Habit
+then **one** footnote bracket under circles 0-1 (x 76.5-116.5) with a centred mono caption, then the Habit
 name + citation on the right side of the row. Trust, Capability and Shared Practice each used
 to carry a **second** footnote bracket under circles 4-5 (the 'after the ring' state) -
 removed, since a single footnote per row reads cleaner and Adaptability never had one to match.
 
 **Row order top to bottom:** Trust (`#D3CEDF`) → Capability (`#C7CFB5`) → Shared Practice
-(`#F7D7A1`) → Standing (`#D9D3C4`, absolute at y 157, solid, printed on the board). This top-to-bottom order **is** the colour canon other components derive from -
+(`#F7D7A1`) → Standing (`#D9D3C4`, absolute at y 154, solid, printed on the board). This top-to-bottom order **is** the colour canon other components derive from -
 do not reorder rows without updating every card/board that reads it.
 
 ### Layout diagram
@@ -730,7 +729,7 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | header | "SHIT HAPPENS" title + "SHIT HAPPENS · FROM WEEK 2" + rule | - |
 | SHIT HAPPENS box | red-bordered panel, instruction line, 2 landing-zone slots, resolved-vs-stacks note | box border `#905151`; slot fill `#905151` (card silhouette, white label text) |
 | `pool` | ADAPTABILITY label + 6-well token panel (3 + 3 squares) + 5 caption lines at 3.2 under the panel (x 12, y 212.6-230.2: Start with 3. Up to 6. / Earned: Workshop, Reflect, Demo. / Spent: pay an Event's number. / Tokens stay until spent. / New tokens count from next week.). Panel x 11-65, 52 mm tall, wells 12 mm | `#B5C7CF` |
-| `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r8 with a red ring r10.5, and **three token wells** (r5.2, the 10.4 mm adapt token) carrying a symbol each, not a word: a target (objectives), a route (strategy) and a cycle arrow (process). Two or three caption lines run under all three lanes: "REFLECT: put its token in a well instead of the pool, if the week gave evidence. One token per well.", then the three symbols with "a feature was banked", "you adapted to 2 Events", "an Event hit a track, or a Hero played", and "Three wells filled: the coin turns over for good. Name one change for next week." | `#B5C7CF` |
+| `habit-lane` | HABIT lane (x 121-163, 45 mm tall): label, "TEAM REFLEXIVITY" + "WEST 1996", one coin well r10 with a red ring r11.6, and **three token wells** (r5.2, the 10.4 mm adapt token) carrying a symbol each, not a word: a target (objectives), a route (strategy) and a cycle arrow (process). Two or three caption lines run under all three lanes: "REFLECT: put its token in a well instead of the pool, if the week gave evidence. One token per well.", then the three symbols with "a feature was banked", "you adapted to 2 Events", "an Event hit a track, or a Hero played", and "Three wells filled: the coin turns over for good. Name one change for next week." | `#B5C7CF` |
 | `lane-1` | HERO lane (x 68-118): label, cost chip, dashed 44x36mm HERO-tile slot + shape glyph | `#F0E3D1` |
 | CLOSE THE WEEK box | compact (y 247-291): title 5.4, "TOP TO BOTTOM" note, rule, 4 one-line numbered steps at 4.2 and "FULL DETAIL ON THE SPECIMEN BOARD". The full explanation lives on the SPECIMEN board | - |
 | Team Reflexivity block | full-width panel under the three lanes (y 208-243, `#DCE5E8`): "TEAM REFLEXIVITY: HOW IT WORKS", one sentence on Reflect, then three rows at 3.6 with the well symbols (target = Objectives: a feature was banked last week; route = Strategy: you adapted to 2 Events last week; cycle = Process: an Event cost the team Trust, Capability or Shared Practice, or a Hero played) and an italic footer (one token per well, three filled turns the coin over, name one change) | `#DCE5E8` |

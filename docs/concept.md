@@ -11,8 +11,8 @@ Status: **v0.1 - locked for prototyping.**
   team-days each** (**35 days** total budget, regardless of player count)
 - **Core theme:** A team delivers a project against a hard deadline. Along the way, they
   either become a real high-performing team, or they don't.
-- **Core fantasy:** Every week you commit the team's five days - build, plan, coordinate,
-  align, teach, demo, reflect, rest, or sit through a meeting - **before you find out what's
+- **Core fantasy:** Every week you commit the team's five days - build, plan, engage,
+  workshop, teach, demo, reflect, rest, or sit through a meeting - **before you find out what's
   coming.** Then reality lands on the plan you already made. Each character's habitus turns
   the same choice into different behaviour.
 - **Core mechanic(s):** The game opens with every player physically building their

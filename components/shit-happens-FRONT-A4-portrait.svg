@@ -77,8 +77,8 @@ on the reverse.</desc>
   <rect x="121" y="153" width="42" height="52" rx="1.5" class="w"/>
   <text x="142" y="157.8" class="m" font-size="2.8" text-anchor="middle">TEAM REFLEXIVITY</text>
   <text x="142" y="161.4" class="m q" font-size="2.4" text-anchor="middle">WEST 1996</text>
-  <circle cx="142" cy="173" r="8" class="w"/>
-  <circle cx="142" cy="173" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <circle cx="142" cy="175" r="9" class="w"/>
+  <circle cx="142" cy="175" r="10.6" class="w" style="stroke:#905151;stroke-width:.8"/>
   <rect x="124" y="191.1" width="11" height="11" rx="1.2" class="w"/><rect x="136.5" y="191.1" width="11" height="11" rx="1.2" class="w"/><rect x="149" y="191.1" width="11" height="11" rx="1.2" class="w"/>
   <use href="#sym-obj" transform="translate(129.5,196.6)"/><use href="#sym-strat" transform="translate(142,196.6)"/><use href="#sym-proc" transform="translate(154.5,196.6)"/>
 </g>

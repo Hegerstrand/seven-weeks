@@ -29,17 +29,17 @@ side of one sheet.</desc>
   <text x="12" y="99" class="s" font-size="6">Standing</text>
   <text x="12" y="106" class="s" font-size="3.4" font-style="italic">grown by nobody</text>
   <g class="m" font-size="3.8" text-anchor="middle">
-    <text x="96" y="86">0</text><text x="116" y="86">1</text><text x="136" y="86">2</text>
-    <text x="156" y="86">3</text><text x="176" y="86">4</text><text x="196" y="86">5</text>
+    <text x="96" y="86">0</text><text x="117" y="86">1</text><text x="138" y="86">2</text>
+    <text x="159" y="86">3</text><text x="180" y="86">4</text><text x="201" y="86">5</text>
   </g>
   <g class="w">
-    <circle cx="96" cy="100" r="8"/><circle cx="116" cy="100" r="8"/><circle cx="136" cy="100" r="8"/>
-    <circle cx="156" cy="100" r="8"/><circle cx="176" cy="100" r="8"/><circle cx="196" cy="100" r="8"/>
+    <circle cx="96" cy="102" r="9"/><circle cx="117" cy="102" r="9"/><circle cx="138" cy="102" r="9"/>
+    <circle cx="159" cy="102" r="9"/><circle cx="180" cy="102" r="9"/><circle cx="201" cy="102" r="9"/>
   </g>
-  <circle cx="176" cy="100" r="10.5" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M88,110 L88,113 L204,113 L204,110" class="w" stroke-width=".5"/>
-  <rect x="158.20" y="114.82" width="12.56" height="2.94" rx=".4" fill="#D9D3C4"/>
-  <text x="146" y="117" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST <tspan>CAPITAL</tspan> AT THE TABLE</text>
+  <circle cx="180" cy="102" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <path d="M86.5,114 L86.5,117 L210.5,117 L210.5,114" class="w" stroke-width=".5"/>
+  <rect x="160.8" y="118.3" width="12.56" height="2.94" rx=".4" fill="#D9D3C4"/>
+  <text x="148.5" y="120.5" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST <tspan>CAPITAL</tspan> AT THE TABLE</text>
   <text x="248" y="99" class="s" font-size="5">Authorized Voice</text>
   <text x="248" y="104" class="s" font-size="3.4" font-style="italic">Once a week: cancel a Management</text>
   <text x="248" y="108" class="s" font-size="3.4" font-style="italic">or Customer Event outright.</text>

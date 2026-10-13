@@ -87,7 +87,7 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <rect x="174.5" y="57.6" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="186" y="60.7" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
   <rect x="167" y="63.2" width="38" height="3.4" rx=".4" fill="#EFE4D3"/>
-  <text x="186" y="65.9" class="serif" font-size="3.2" text-anchor="middle">No Work:</text>
+  <text x="186" y="65.9" class="serif" font-size="3.2" text-anchor="middle">No Work added to Feature:</text>
   <rect x="174.5" y="67.1" width="23" height="4" rx=".4" fill="#D3B1B1"/>
   <text x="186" y="70.2" class="serif" font-size="3.2" text-anchor="middle">-3 Motivation.</text>
 

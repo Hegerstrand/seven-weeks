@@ -105,7 +105,7 @@ graph TD
 |---|---|---|---|---|
 | `work` | WORK | "+1 to one feature" | "Adjust total Work for Capability and Shared Practice." | "The only card that moves the project. Hence the trap." |
 | `teach` | TEACH | "Up to 2 characters may each teach 1 partner" | "Partner marks a covered square next to yours, diagonals too."; "DEAD IF TRUST 1 OR LESS"; "EACH TEACHER GAINS +1 CAPITAL"; icon row "ZONE: [one-person tile] FLIPS TO [stacked tile]" (Teach never puts a tile down) | "Scaffolding: give it away and it becomes standing." |
-| `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "PAYS AS THE WORK RESOLVES" | "Planning pays on hard problems. Only on those." |
+| `plan` | PLAN | "+1 EXTRA WORK" (every Work card on that feature this week) | "HIGH COMPLEXITY: ALSO NEXT WEEK"; "DEAD AT SHARED PRACTICE 1 OR LESS, AND ON LOW."; "PAYS AS THE WORK RESOLVES" | "Planning pays on hard problems. Only on those." |
 | `demo` | DEMO | "+1 Capital to one named team member" and "Also +1 Motivation." (chip `#D3B1B1`) and "Team: +1 Adaptability." (chip `#B5C7CF`) | "CAPITAL AT OR ABOVE AVERAGE" (the "FEATURE IGNORES NEXT NEGATIVE FEEDBACK" lines and the rule were deleted) | "The field decides who speaks." |
 | `reflect` | REFLECT | "Trust 3 or more"; "+1 Adaptability"; "LAST WEEK GAVE EVIDENCE?" with the three well symbols (target: a feature was banked; route: you adapted to 2 Events; cycle: a Hero or a token was played, or an Event cost a Ledger track); "Yes: +1 Shared Practice" (`#F7D7A1`) and "and +1 Motivation to anyone on 3 or less"; "ALSO FILLS A WELL. TOKEN AT CLOSE." | "Ask what's not working - you can only reflect on it." |
 | `learn` | LEARN | "Everyone marks a free square each" | "Left or right of one they cover, in their own row."; "No teacher needed."; "COSTS THE DAY, NOTHING ELSE"; "NO CAPITAL FOR THIS ONE"; icon row "ZONE: [one-person tile] PUT DOWN [stacked tile] OR FLIP" | "Nobody taught you. It shows, and it holds." |
@@ -214,7 +214,7 @@ board 2, so tokens are placed on the card as they are paid; `#cost1` / `#cost2` 
 defs), "or", tint strip (`5.4,68.6,52.2,7.2`,
 same category colour) with HERO icon/text on top of it, HABIT label/name below, cost line.
 **Cost follows size (2026-10-07):** cost 1 = a nuisance, 2 = a real hit, 3 = lasting or
-whole-week damage (8 / 12 / 4 cards, average 1.8). Habit takes 1 off, minimum 0, so a cost-1
+whole-week damage (7 / 12 / 4 cards, average 2.1). Habit takes 1 off, minimum 0, so a cost-1
 card's cost line reads "SO IT IS FREE" in place of "SO IT COSTS n INSTEAD" (rulebook §6.1).
 **Flavour text leads the card (2026-10-07):** the old italic footer at y=84 is gone on every
 63x88 card, and the flavour now comes first. On Event cards it is plain serif 4.2 (lines 4.8 mm
@@ -683,7 +683,7 @@ Who Knows What", Community "Team spent Engagement or Reflect, or has Psychologic
 **The condition text sits on a tint (2026-10-07)**, a rounded rect behind the condition lines
 (38 mm wide, `rx` .4) in the colour of the Event category that gets to that Torso (rulebook §5):
 Autonomy `#F7D7A1` (Management), Hierarchy `#C7CFB5` (Environment), Community `#D3CEDF` (People),
-Quality has no tint on its "Work added:" line (the "No Work:" line sits on the Work colour `#EFE4D3`), Recognition `#D9D3C4` (no category; the
+Quality has no tint on its "Work added:" line (the "No Work added to Feature:" line sits on the Work colour `#EFE4D3`), Recognition `#D9D3C4` (no category; the
 Capital chip tint). The "+1 Motivation" chip stays `#D3B1B1`.
 **Tile headlines (2026-10-07):** all ten tiles now carry the headline `NEED` or `HERO` (`.mono` 3.4,
 letter-spacing 1, x+3, y 47 / 97). The value name (Autonomy... / Own It...) stays as a small

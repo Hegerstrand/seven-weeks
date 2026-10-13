@@ -76,7 +76,8 @@ outer line. Print at 100%.</desc>
     <text x="5" y="46" class="m" font-size="5">+1 EXTRA WORK</text>
     <text x="5" y="50.5" class="m q" font-size="2.6">HIGH COMPLEXITY: ALSO NEXT WEEK</text>
     <line x1="5" y1="52" x2="58" y2="52" class="h"/>
-    <text x="5" y="60" class="s" font-size="4.4">Makes work more efficient</text>
+    <text x="5" y="58.5" class="m q" font-size="2.9">DEAD AT SHARED PRACTICE</text>
+    <text x="5" y="62.7" class="m q" font-size="2.9">1 OR LESS, AND ON LOW.</text>
     <text x="5" y="68" class="m" font-size="3.1">PAYS AS THE WORK RESOLVES</text>
     </g>
   </g>

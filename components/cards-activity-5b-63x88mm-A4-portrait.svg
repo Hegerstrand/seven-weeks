@@ -11,6 +11,7 @@ outer line. Print at 100%.</desc>
   .c { fill:none; stroke:#2A2620; stroke-width:.5; }
   .h { stroke:#2A2620; stroke-width:.4; fill:none; }
   .q { fill:#000000; }
+  .wk { fill:#6E6249; }
   .trust { fill:#000000; }
   .adapt { fill:#000000; }
   .sy { fill:none; stroke:#2A2620; stroke-width:.45; stroke-linecap:round; stroke-linejoin:round; }
@@ -21,12 +22,13 @@ outer line. Print at 100%.</desc>
 
   <g id="work" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORK</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">The only card that moves</text>
     <text x="5" y="28.3" class="s" font-size="4.2">the project. Hence the trap.</text>
     <g transform="translate(0,11)">
-    <rect x="4" y="22" width="50" height="10" rx="1.2" fill="#EFE4D3"/>
+    <rect x="4" y="22" width="55" height="10" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="30" class="s" font-size="7">+1 to one feature</text>
     </g>
   </g>
@@ -42,11 +44,12 @@ outer line. Print at 100%.</desc>
 
   <g id="teach" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">TEACH</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4">Scaffolding: give it away</text>
     <text x="5" y="28.3" class="s" font-size="4">and it becomes standing.</text>
-    <g transform="translate(0,8)">
+    <g transform="translate(0,10)">
     <text x="5" y="27" class="s" font-size="5.4">Up to 2 characters may</text>
     <text x="5" y="33" class="s" font-size="5.4">each teach 1 partner</text>
     <line x1="5" y1="38" x2="58" y2="38" class="h"/>
@@ -54,7 +57,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="50" class="s" font-size="4.2">square next to yours,</text>
     <text x="5" y="55" class="s" font-size="4.2">diagonals too.</text>
     <text x="5" y="60" class="m trust" font-size="3.2">DEAD IF TRUST 1 OR LESS</text>
-    <rect x="27.7" y="63.24" width="26.3" height="3.04" rx=".4" fill="#D9D3C4"/>
+    <rect x="42.9" y="63.24" width="12.98" height="3.04" rx=".4" fill="#D9D3C4"/>
     <text x="5" y="65.5" class="m q" font-size="2.9">EACH TEACHER GAINS +1 <tspan>CAPITAL</tspan></text>
     <text x="5" y="72" class="m q" font-size="2.9">ZONE:</text>
     <use href="#ztile-one" x="17" y="71"/>
@@ -65,6 +68,7 @@ outer line. Print at 100%.</desc>
 
   <g id="plan" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">PLAN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Planning pays on hard</text>
@@ -72,48 +76,50 @@ outer line. Print at 100%.</desc>
     <g transform="translate(0,10)">
     <text x="5" y="27" class="s" font-size="5.4"><tspan font-style="italic">Every</tspan> Work card on</text>
     <text x="5" y="34" class="s" font-size="5.4">that feature this week</text>
-    <rect x="4" y="40" width="50" height="8" rx="1.2" fill="#EFE4D3"/>
+    <rect x="4" y="40" width="55" height="8" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="46" class="m" font-size="5">+1 EXTRA WORK</text>
-    <text x="5" y="50.5" class="m q" font-size="2.6">HIGH COMPLEXITY: ALSO NEXT WEEK</text>
-    <line x1="5" y1="52" x2="58" y2="52" class="h"/>
-    <text x="5" y="58.5" class="m q" font-size="2.9">DEAD AT SHARED PRACTICE</text>
-    <text x="5" y="62.7" class="m q" font-size="2.9">1 OR LESS, AND ON LOW.</text>
-    <text x="5" y="68" class="m" font-size="3.1">PAYS AS THE WORK RESOLVES</text>
+    <text x="5" y="51" class="m q" font-size="2.6">HIGH COMPLEXITY: ALSO NEXT WEEK</text>
+    <line x1="5" y1="54" x2="58" y2="54" class="h"/>
+    <text x="5" y="60" class="m q" font-size="2.9">DEAD AT SHARED PRACTICE</text>
+    <text x="5" y="64.2" class="m q" font-size="2.9">1 OR LESS, AND ON LOW.</text>
+    <text x="5" y="69.5" class="m" font-size="3.1">PAYS AS THE WORK RESOLVES</text>
     </g>
   </g>
 
   <g id="demo" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">DEMO</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4">The field decides who speaks.</text>
     <g transform="translate(0,6)">
     <text x="5" y="24" class="m" font-size="3.1">CAPITAL AT OR ABOVE AVERAGE</text>
-    <rect x="4" y="29" width="50" height="9" rx="1.2" fill="#D9D3C4"/>
+    <rect x="4" y="29" width="55" height="9" rx="1.2" fill="#D9D3C4"/>
     <text x="5" y="36" class="s" font-size="6.4">+1 Capital</text>
     <text x="5" y="46" class="s" font-size="4.4">to one named team member.</text>
-    <rect x="4" y="49.5" width="50" height="7" rx="1" fill="#D3B1B1"/>
+    <rect x="4" y="49.5" width="55" height="7" rx="1" fill="#D3B1B1"/>
     <text x="5" y="54.6" class="s" font-size="4.6">Also <tspan font-weight="bold">+1 Motivation</tspan>.</text>
-    <rect x="4" y="59.5" width="50" height="7" rx="1" fill="#B5C7CF"/>
+    <rect x="4" y="59.5" width="55" height="7" rx="1" fill="#B5C7CF"/>
     <text x="5" y="64.6" class="s" font-size="4.6">Team: <tspan font-weight="bold">+1 Adaptability</tspan>.</text>
     </g>
   </g>
 
   <g id="reflect" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">REFLECT</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Ask what's not working -</text>
     <text x="5" y="28.3" class="s" font-size="4.2">you can only reflect on it.</text>
     <text x="5" y="33" class="m" font-size="3">TRUST 3 OR MORE</text>
-    <rect x="4" y="35" width="50" height="8.5" rx="1.2" fill="#B5C7CF"/>
+    <rect x="4" y="35" width="55" height="8.5" rx="1.2" fill="#B5C7CF"/>
     <text x="5" y="41.3" class="s adapt" font-size="7.4">+1 Adaptability</text>
     <text x="5" y="47.6" class="m q" font-size="2.8">LAST WEEK GAVE EVIDENCE?</text>
     <use href="#sym-obj" transform="translate(8,52.4) scale(.8)"/><text x="13" y="53.6" class="s" font-size="3.6">a feature was banked</text>
     <use href="#sym-strat" transform="translate(8,57.8) scale(.8)"/><text x="13" y="59" class="s" font-size="3.6">you adapted to 2 Events</text>
     <use href="#sym-proc" transform="translate(8,63.2) scale(.8)"/><text x="13" y="64.4" class="s" font-size="3.3">a Hero or a token was played, or</text>
     <text x="13" y="68" class="s" font-size="3.3">an Event cost a Ledger track</text>
-    <rect x="4" y="69.4" width="50" height="10.6" rx="1" fill="#F7D7A1"/>
+    <rect x="4" y="69.4" width="55" height="10.6" rx="1" fill="#F7D7A1"/>
     <text x="5" y="73.6" class="s" font-size="4"><tspan font-weight="bold">Yes: +1 Shared Practice</tspan></text>
     <text x="5" y="78.2" class="s" font-size="3.2">and +1 Motivation to anyone on 3 or less</text>
     <text x="5" y="83.4" class="m q" font-size="2.6">ALSO FILLS A WELL. TOKEN AT CLOSE.</text>
@@ -121,11 +127,12 @@ outer line. Print at 100%.</desc>
 
   <g id="learn" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">LEARN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4">Nobody taught you.</text>
     <text x="5" y="28.3" class="s" font-size="4">It shows, and it holds.</text>
-    <g transform="translate(0,8)">
+    <g transform="translate(0,10)">
     <text x="5" y="27" class="s" font-size="5.4">Everyone marks</text>
     <text x="5" y="33" class="s" font-size="5.4">a free square each</text>
     <line x1="5" y1="38" x2="58" y2="38" class="h"/>

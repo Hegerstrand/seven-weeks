@@ -22,19 +22,19 @@ same compensating scale as before, just repacked into a narrower horizontal span
 <text x="24" y="112" class="s" font-size="42">The team</text>
 <line x1="24" y1="126" x2="401.16" y2="126" class="h" stroke-width="1.2"/>
 
-<text x="24" y="146" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
-<text x="24" y="172" class="s" font-size="20">It was never only the project.</text>
+<text x="24" y="142" class="m q" font-size="6" letter-spacing="2.5">THE ONE IDEA</text>
+<text x="24" y="164" class="s" font-size="20">It was never only the project.</text>
 <text x="24" y="182" class="m q" font-size="6" letter-spacing="2.5">CARDS ADDED</text>
-<text x="109.6" y="182" class="m" font-size="9">NONE - THE LEDGER AND EVENTS ARRIVE</text>
+<text x="109.6" y="182" class="m" font-size="9">DEMO · LEARN · TEACH · REFLECT</text>
 
 <line x1="24" y1="188" x2="401.16" y2="188" class="h" stroke-width=".5"/>
 
 <text x="24" y="206" class="m q" font-size="6" letter-spacing="2.5">WHAT OPENS</text>
-<text x="24" y="221" class="s" font-size="8"><tspan font-weight="bold">The Ledger:</tspan> Trust, Capability, Shared Practice,</text>
-<text x="24" y="232" class="s" font-size="8">Standing. One coin walks each row; at the</text>
-<text x="24" y="243" class="s" font-size="8">ring it turns over and becomes a <tspan font-weight="bold">HABIT</tspan>, for good.</text>
-<text x="24" y="260" class="s" font-size="8">Adaptability is a pool of tokens on SHIT HAPPENS.</text>
-<text x="24" y="273" class="s" font-size="8"><tspan font-weight="bold">New cards:</tspan> Demo, Learn, Teach, Reflect.</text>
+<text x="24" y="218" class="s" font-size="8"><tspan font-weight="bold">The Ledger:</tspan> Trust, Capability, Shared Practice,</text>
+<text x="24" y="228" class="s" font-size="8">Standing. One coin walks each row; at the</text>
+<text x="24" y="238" class="s" font-size="8">ring it turns over and becomes a <tspan font-weight="bold">HABIT</tspan>, for good.</text>
+<text x="24" y="252" class="s" font-size="8">Adaptability is a pool of tokens on SHIT HAPPENS.</text>
+<text x="24" y="263" class="s" font-size="8"><tspan font-weight="bold">Also read now:</tspan> each character's Capital.</text>
 
 <line x1="237.1" y1="196" x2="237.1" y2="268" class="h" stroke-width=".4"/>
 

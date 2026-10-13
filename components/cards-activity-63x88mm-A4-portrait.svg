@@ -10,6 +10,7 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
   .c { fill:none; stroke:#2A2620; stroke-width:.5; }
   .h { stroke:#2A2620; stroke-width:.4; fill:none; }
   .q { fill:#000000; }
+  .wk { fill:#6E6249; }
   .trust { fill:#000000; }
   .capab { fill:#000000; }
   .shpra { fill:#000000; }
@@ -21,45 +22,48 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
 
   <g id="work" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORK</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">The only card that moves</text>
     <text x="5" y="28.3" class="s" font-size="4.2">the project. Hence the trap.</text>
     <g transform="translate(0,11)">
-    <rect x="4" y="22" width="50" height="10" rx="1.2" fill="#EFE4D3"/>
+    <rect x="4" y="22" width="55" height="10" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="30" class="s" font-size="7">+1 to one feature</text>
-    <text x="5" y="57" class="m q" font-size="2.9">BANKS WHEN THE WEEK CLOSES.</text>
+    <text x="5" y="69" class="m q" font-size="2.9">BANKS WHEN THE WEEK CLOSES.</text>
     </g>
   </g>
 
   <g id="engagement" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">ENGAGEMENT</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Check in. Ask for help.</text>
     <text x="5" y="28.3" class="s" font-size="4.2">Admit the small mistakes.</text>
     <g transform="translate(0,11)">
-    <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#D3CEDF"/>
+    <rect x="4" y="24" width="55" height="11" rx="1.2" fill="#D3CEDF"/>
     <text x="5" y="32" class="s trust" font-size="9">+1 Trust</text>
     <line x1="5" y1="40" x2="58" y2="40" class="h"/>
     <text x="5" y="47.6" class="s" font-size="4.4"><tspan class="trust">Trust 1 or less</tspan>:</text>
     <text x="5" y="53" class="s" font-size="4.4">Teach is dead.</text>
-    <text x="5" y="58" class="m q" font-size="2.9">MUTUAL ENGAGEMENT (WENGER).</text>
-    <text x="5" y="63" class="m q" font-size="2.9">SAFE TO ASK, SAFE TO ADMIT</text>
-    <text x="5" y="68" class="m q" font-size="2.9">A MISTAKE (EDMONDSON 1999).</text>
+    <text x="5" y="60" class="m q" font-size="2.9">MUTUAL ENGAGEMENT (WENGER).</text>
+    <text x="5" y="65" class="m q" font-size="2.9">SAFE TO ASK, SAFE TO ADMIT</text>
+    <text x="5" y="70" class="m q" font-size="2.9">A MISTAKE (EDMONDSON 1999).</text>
     </g>
   </g>
 
   <g id="workshop" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORKSHOP</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">A meeting nobody wants.</text>
     <text x="5" y="28.3" class="s" font-size="4.2">Everybody sits through it.</text>
     <g transform="translate(0,10)">
-    <rect x="4" y="24" width="50" height="11" rx="1.2" fill="#B5C7CF"/>
+    <rect x="4" y="24" width="55" height="11" rx="1.2" fill="#B5C7CF"/>
     <text x="5" y="31.6" class="s adapt" font-size="7.4">+3 Adaptability</text>
-    <rect x="4" y="38" width="50" height="12" rx="1.2" fill="#D3B1B1"/>
+    <rect x="4" y="38" width="55" height="12" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="43.2" class="s" font-size="4.4">Every character pays</text>
     <text x="5" y="48.2" class="s" font-size="4.4" font-weight="bold">1 Motivation</text>
     <text x="5" y="57" class="m q" font-size="2.9">NOTHING IF ANYONE IS ON 1.</text>
@@ -71,11 +75,12 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
 
   <g id="celebrate" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="6.6" letter-spacing="1.2">CELEBRATE</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Ship something and say so.</text>
     <g transform="translate(0,8)">
-    <rect x="4" y="23.39" width="50" height="8" rx="1.2" fill="#D3B1B1"/>
+    <rect x="4" y="23.39" width="55" height="8" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="29" class="s" font-size="6.6">+1 Motivation</text>
     <text x="5" y="36" class="s" font-size="5">to anyone on 3 or less</text>
     <line x1="5" y1="42" x2="58" y2="42" class="h"/>
@@ -90,15 +95,16 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
 
   <g id="onboarding" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">AS NEEDED</text>
     <text x="5" y="13" class="m" font-size="5.6" letter-spacing=".8">ONBOARDING</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2" font-style="italic">A new face. A day gone</text>
     <text x="5" y="28.3" class="s" font-size="4.2" font-style="italic">before any work gets done.</text>
-    <rect x="4" y="33" width="50" height="8" rx="1.2" fill="#D9D3C4"/>
+    <rect x="4" y="33" width="55" height="8" rx="1.2" fill="#D9D3C4"/>
     <text x="5" y="39" class="s" font-size="5">Bring in a replacement</text>
     <text x="5" y="45.5" class="s" font-size="4">Motivation 5. Capital 0.</text>
     <line x1="5" y1="50" x2="58" y2="50" class="h"/>
-    <rect x="4" y="52" width="50" height="4" rx=".8" fill="#D3B1B1"/>
+    <rect x="4" y="52" width="55" height="4" rx=".8" fill="#D3B1B1"/>
     <text x="5" y="55" class="m q" font-size="3.1">WHEN SOMEONE QUITS</text>
     <text x="5" y="61" class="m q" font-size="2.8">AT 0 MOTIVATION, WEEK CLOSE</text>
     <text x="5" y="66" class="m q" font-size="2.8">TEAM SCORE -40</text>

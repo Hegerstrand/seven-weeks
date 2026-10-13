@@ -131,12 +131,12 @@ team days - nothing on this board is tied to an individual player.</desc>
   <rect x="342" y="190" width="65" height="90" rx="2" stroke="#905151"/>
 </g>
 <text x="210" y="289" class="m q" font-size="5.5" text-anchor="middle" letter-spacing="1.5">ORDER DOES NOT MATTER</text>
-<text x="374" y="200" class="s q" font-size="2.8" text-anchor="middle" font-style="italic">Get the project done faster -</text>
-<text x="374" y="205" class="s q" font-size="2.8" text-anchor="middle" font-style="italic">we're sure it's not going to</text>
-<text x="374" y="210" class="s q" font-size="2.8" text-anchor="middle" font-style="italic">bite you in the ass later!</text>
-<rect x="367.93" y="262.48" width="20.83" height="3.22" rx=".45" fill="#D3B1B1"/>
-<text x="374" y="265" class="m" font-size="2.8" text-anchor="middle">COSTS 1 MOTIVATION</text>
-<text x="374" y="270" class="m" font-size="2.8" text-anchor="middle">+ A FLEX MARKER</text>
+<text x="374" y="201" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">Get the project done faster -</text>
+<text x="374" y="206.5" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">we're sure it's not going to</text>
+<text x="374" y="212" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">bite you in the ass later!</text>
+<rect x="367.4" y="261.3" width="25.6" height="4.4" rx=".5" fill="#D3B1B1"/>
+<text x="374" y="264.5" class="m" font-size="3.4" text-anchor="middle">COSTS 1 MOTIVATION</text>
+<text x="374" y="270" class="m" font-size="3.4" text-anchor="middle">+ A FLEX MARKER</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="6" y1="6" x2="291" y2="6" stroke="#3F5B66" stroke-width="1"/>

@@ -79,7 +79,7 @@ are, not by body part; the shape on each seat is the cue.</desc>
 <rect x="53" y="70" width="44" height="36" rx="1.5" class="seat" style="fill:#F0E3D1"/>
 <use href="#sh-torso-red" x="75" y="79"/>
 <text x="75" y="88" class="m" font-size="3.2" text-anchor="middle">NEED</text>
-<text x="75" y="92.6" class="s" font-size="3" text-anchor="middle">From week 2: if your</text>
+<text x="75" y="92.6" class="s" font-size="3" text-anchor="middle">Every week: if your</text>
 <text x="75" y="96.4" class="s" font-size="3" text-anchor="middle">values' condition is</text>
 <text x="75" y="100.2" class="s" font-size="3" text-anchor="middle">met this week,</text>
 <text x="75" y="104" class="s" font-size="3" text-anchor="middle"><tspan font-weight="bold">+1 Motivation</tspan> (cap 5).</text>

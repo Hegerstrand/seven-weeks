@@ -70,7 +70,7 @@ read them as minimums.
 | "the shape on each seat tells you which part-card belongs there" | `.s.q` italic serif | 2.8 | `#000000` | - |
 | "ZONE START" + 4-line italic note ("Mark where your education [hexagon] row meets your skill [diamond] column, at setup."), left-aligned at x 151, inline glyphs `sh-head` (scale .8) and `sh-item` (scale .55) placed right after the words they stand for; each text segment has a fixed `textLength` so the glyphs stay next to their word whatever font renders | `.m.q` mono / `.s.q` italic serif | 3.2 / 3.2 | `#000000` | - |
 | "FLEX" marker well text (on arcs, scaled 1.05) | `.m` mono | 2.2 arcs / 3.8 centre | `#000000` | `#D3B1B1` chip behind "FLEX"; top arc "A DAY OWED", bottom arc "FLIP TO REPAY"; dashed well r10 for the 19 mm marker |
-| "NEED" + week-3 rule text | `.m` mono / `.s` serif | 2.6 / 1.9 | `#000000` | - |
+| "NEED" + rule text ("Every week: if your values' condition is met, +1 Motivation") | `.m` mono / `.s` serif | 2.6 / 1.9 | `#000000` | - |
 | "HERO" + rule text | `.m` mono / `.s` serif | 3.2 / 3 | `#000000` | - |
 | "SKILLS" (above the box) + 5x5 grid filling the box; 5 Item diamonds below it, 5 Head hexagons right of it | `.m.q` mono | 3.0 | `#000000` | - |
 | "CAPITAL" + "WEEK 2" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
@@ -510,10 +510,11 @@ landscape.
 | "THE ONE IDEA" | `.m.q` mono | 6 | `#000000` | - |
 | "It was never only the project." | `.s` serif | 20 | `#000000` | - |
 | "CARDS ADDED" | `.m.q` mono | 6 | `#000000` | - |
-| "NONE - THE LEDGER AND EVENTS ARRIVE" | `.m` mono | 9 | `#000000` | - |
+| "DEMO · LEARN · TEACH · REFLECT" | `.m` mono | 9 | `#000000` | - |
 | "WHAT OPENS" | `.m.q` mono | 6 | `#000000` | - |
 | "The Ledger: Trust, Capability, Shared Practice, Standing..." (3 lines) | `.s` serif | 8 | `#000000` | - |
 | "Adaptability is a pool of tokens on SHIT HAPPENS." | `.s` serif | 8 | `#000000` | - |
+| "Also read now: each character's Capital." | `.s` serif | 8 | `#000000` | - |
 | "CATCH UP BEFORE YOU PLAY" | `.m` mono | 6 | `#000000` | - |
 | "Move Trust up 1 if the team played an Engagement in week 1" (2 lines) | `.s` serif | 8 | `#000000` | - |
 | "Everything else starts where it always was, at 1..." (2 lines) | `.s` serif | 8 | `#000000` | - |
@@ -666,7 +667,7 @@ graph TD
 | page background | full-page rect | `#FFFFFF` |
 | header | "HIGH-PERFORMANCE TEAM" + "THE ZONE - START HERE" + rule | - |
 | left column | THE ONE IDEA ("A week is five days, and you choose them."), THE GAME, HOW IT ENDS; two light rules | - |
-| right column | SET UP, IN FIVE STEPS: deal and build (upbringing, instinct, values, education, skill), take your tiles and mark the start square, pick a Project card, turn THE ZONE and THE PROJECT over, play week 1; a light vertical divider at x 146 | - |
+| right column | SET UP, IN FIVE STEPS: deal and build (upbringing, instinct, values, education, skill), take your tiles and mark the start square, pick a Project card, turn THE ZONE and THE PROJECT over, play week 1 (lay five cards, resolve them, bank, check your NEED, take the grind); a light vertical divider at x 146 | - |
 | every board starts on its back | full-width band: each back says when to turn it over; THE ZONE and THE PROJECT now, THE TEAM and SHIT HAPPENS in week 2, THE DEVELOPMENT in week 3 | `#F2EDE0` |
 | table-placement guide | 2 coloured edge lines (`#6E7A54`, `#3F5B66`) | - |
 
@@ -754,7 +755,7 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | "CLOSE THE WEEK" | `.m` mono | 7 | `#000000` | - |
 | "TOP TO BOTTOM" | `.m.q` mono | 3.6 | `#000000` | - |
 | Step 1-4 headline + detail lines | `.s` serif (bold lead-in) | 5.4 / 4.4 | `#000000` | step 3 headline sits on `#D3B1B1` chip |
-| "FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET" | `.m.q` mono | 3.4 | `#000000` | - |
+| "+1 BACK IF THEIR NEED WAS MET" | `.m.q` mono | 3.4 | `#000000` | - |
 
 ### Illustration
 

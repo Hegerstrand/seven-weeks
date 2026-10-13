@@ -35,12 +35,12 @@ on the reverse.</desc>
 <rect x="8" y="26" width="158" height="102" rx="2" class="r" style="stroke:#905151;stroke-width:.9"/>
 <text x="14" y="33" class="s" font-size="5">Draw <tspan font-weight="bold">two</tspan> Event cards, face up.</text>
 
-<rect x="24" y="39" width="58" height="80" rx="2" class="slot" style="stroke:#905151;fill:#905151"/>
-<text x="53" y="81" class="m" font-size="5" text-anchor="middle" fill="#FFFFFF">EVENT 1</text>
-<rect x="92" y="39" width="58" height="80" rx="2" class="slot" style="stroke:#905151;fill:#905151"/>
-<text x="121" y="81" class="m" font-size="5" text-anchor="middle" fill="#FFFFFF">EVENT 2</text>
-<text x="14" y="123" class="s" font-size="4">Cancel an Event in Adapt and it is discarded.</text>
-<text x="14" y="127" class="s" font-size="4">Any Event you don't cancel happens before the week runs.</text>
+<rect x="24" y="37" width="58" height="80" rx="2" class="slot" style="stroke:#905151;fill:#905151"/>
+<text x="53" y="79" class="m" font-size="5" text-anchor="middle" fill="#FFFFFF">EVENT 1</text>
+<rect x="92" y="37" width="58" height="80" rx="2" class="slot" style="stroke:#905151;fill:#905151"/>
+<text x="121" y="79" class="m" font-size="5" text-anchor="middle" fill="#FFFFFF">EVENT 2</text>
+<text x="14" y="121.5" class="s" font-size="4">Cancel an Event in Adapt and it is discarded.</text>
+<text x="14" y="125.5" class="s" font-size="4">Any Event you don't cancel happens before the week runs.</text>
 
 <!-- ═══ ADAPT ═══ -->
 <rect x="8" y="129" width="158" height="119" rx="2" class="r"/>
@@ -103,10 +103,10 @@ on the reverse.</desc>
 <text x="19" y="263.6" class="s" font-size="4.2"><tspan font-weight="bold">Anything finished?</tspan> Put its block on the tower.</text>
 <text x="13" y="269.2" class="m" font-size="3.6">2</text>
 <text x="19" y="269.2" class="s" font-size="4.2"><tspan font-weight="bold">Move the coins</tspan>, one step each. Add Adaptability tokens.</text>
-<rect x="18" y="270.9" width="101" height="4.8" rx=".8" fill="#D3B1B1"/>
+<rect x="18" y="270.9" width="106" height="4.8" rx=".8" fill="#D3B1B1"/>
 <text x="13" y="274.8" class="m" font-size="3.6">3</text>
 <text x="19" y="274.8" class="s" font-size="4.2"><tspan font-weight="bold">The grind: everyone loses 1 Motivation.</tspan> Empty means they leave.</text>
-<text x="19" y="278.8" class="m q" font-size="2.8">FROM WEEK 2: +1 BACK IF THEIR NEED WAS MET</text>
+<text x="19" y="278.8" class="m q" font-size="2.8">+1 BACK IF THEIR NEED WAS MET</text>
 <text x="13" y="284" class="m" font-size="3.6">4</text>
 <text x="19" y="284" class="s" font-size="4.2"><tspan font-weight="bold">Move the week marker</tspan> one box down.</text>
 <text x="164.3" y="289" class="m q" font-size="2.6" text-anchor="end">FULL DETAIL ON THE SPECIMEN BOARD</text>

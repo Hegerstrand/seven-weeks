@@ -66,7 +66,8 @@ named by what they are (upbringing, instinct, values, education, skill), never b
 <text x="154" y="128" class="m" font-size="6">5</text>
 <text x="164" y="128" class="s" font-size="5"><tspan font-weight="bold">Play week 1.</tspan> Lay five cards from Work,</text>
 <text x="164" y="133.6" class="s" font-size="5">Engagement, Celebrate, Workshop and Plan, resolve</text>
-<text x="164" y="139.2" class="s" font-size="5">them, bank what is finished, take the grind.</text>
+<text x="164" y="139.2" class="s" font-size="5">them, bank what is finished, check your NEED,</text>
+<text x="164" y="144.8" class="s" font-size="5">and take the grind.</text>
 
 <!-- every board starts on its back -->
 <rect x="12" y="170" width="273" height="26" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>

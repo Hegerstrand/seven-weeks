@@ -111,7 +111,7 @@ place all game - it never needs to shuffle with the other two decks. **Never sca
 sheet**: the boards' slots are cut to these exact millimetres.
 
 **The Specimen panel** lives on the bottom of the merged person board now: Capital, Need and
-Flex. Capital and Need are live from week 2 and Flex from week 3 (§3.0) - the weeks the game
+Flex. Capital is live from week 2, Need from week 1 and Flex from week 3 (§3.0) - the weeks the game
 admits the project has been landing on people, not just on the team.
 
 **The Hero box** sits *above the week-4 panel* on the player board, because Hero is live from
@@ -229,7 +229,7 @@ without a single pencil mark.
 | Character name | Nothing - **the assembled figure is the character**. Player boards are printed with a specimen numeral. |
 | Base / Legs / Torso / Head / Item | Five **part-card seats** under the figure socket |
 | What a character knows | **Squares marked on the SKILLS grid of their own person board**, and covered by a tile on the shared Zone board (board 4) - no private card |
-| Need | **The Torso card itself**, read a second way from week 2 - no separate card |
+| Need | **The Torso card itself**, read a second way from week 1 - no separate card |
 | Feature names | The **Project card** on its plinth names all six (§20) |
 | Work progress | A **cube walks the track** in each feature's track to a green target disc |
 | Quality | A **face-down chip**, turned over by a Demo |

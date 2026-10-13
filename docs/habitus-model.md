@@ -40,7 +40,7 @@ micromanaging boss in the room.
   practical, creative, commercial, social, analytical, organisational.
 - **Torso - Værdier (values, pick one):** Autonomy, Hierarchy, Community, Quality, Recognition -
   exactly five, because Torso is also **Need** (see below): whichever value you're dealt
-  is both how Events land on you and what you need from the team from week 2 on.
+  is both how Events land on you and what you need from the team from week 1 on.
 - **Legs - Instinct, Pressure Response (pick one):** Own It / Analyze / Support / Speak Up /
   Engage - sculpted as its own stance or pose. Also what Event cards name for the
   **Hero** move (rulebook §5.1) - exactly one of these five, once per game, cancels an Event.
@@ -49,7 +49,7 @@ micromanaging boss in the room.
   phone, clipboard, coffee cup, wrench, etc.).
 
 ## Other character traits (not physical parts, tracked on the character card)
-- **Need** is not a separate deal - **it is your Torso**, read a second way from week 2 on
+- **Need** is not a separate deal - **it is your Torso**, read a second way from week 1 on
   (see [../rules/rulebook.md](../rules/rulebook.md) §5.1). Nothing extra to print, deal or write
   down: the five Torso values (Autonomy, Hierarchy, Community, Quality, Recognition) double as
   the five Need conditions. It was never a *team* need - it's personal, same as Motivation.

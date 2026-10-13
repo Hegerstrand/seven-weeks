@@ -152,7 +152,7 @@ card carries the habitus tint #F0E3D1 (lightened from #E8D4B8), which marks habi
 
 <!-- ═══ TORSO ═══ -->
 <text x="12" y="136" class="mono rl">TORSO · VALUES → HOW EVENTS LAND</text>
-<text x="258" y="136" class="serif" font-size="2.8" text-anchor="end" font-style="italic">your Torso is also your Need, from week 2</text>
+<text x="258" y="136" class="serif" font-size="2.8" text-anchor="end" font-style="italic">your Torso is also your Need, from week 1</text>
 <g>
   <rect x="14" y="140" width="44" height="36" rx="1.5" class="cut"/>
   <text x="17" y="147" class="serif" font-size="4.8">Autonomy</text>

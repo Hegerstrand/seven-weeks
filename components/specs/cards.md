@@ -68,6 +68,8 @@ Work "BANKS WHEN THE WEEK CLOSES."; Engagement carries theory flavour instead of
 CLOSE, SPEND THEM FROM NEXT WEEK."; Reflect "TOKEN ARRIVES AT WEEK CLOSE, SPENDABLE FROM
 NEXT WEEK."
 
+**Week indicator (2026-10-13).** Every Activity card carries a small `WEEK n` tag, top right (mono 2.4, `#6E6249`, class `.wk`, baseline y=6), showing when the card is introduced (rulebook §3.0): week 1 Work, Engagement, Celebrate, Workshop, Plan; week 2 Demo, Learn, Teach, Reflect; Onboarding reads `AS NEEDED` (laid only when a seat is empty).
+
 ### Illustration
 
 Paint order per card: border, title, rule, effect chip (if any) then effect text, second rule,
@@ -282,7 +284,7 @@ cost: only a Speak Up Hero or Authorized Voice cancels it.
 | `crunch` (EVERYTHING AT ONCE) | no feature may take more than 1 Work this week; only Hierarchy characters lose 1 Motivation | "HIERARCHY LOSES 1 MOTIVATION" (no all-character loss, no immune line) | 3 | Speak Up (5 pips) | Who Knows What, costs 2 instead | "All of it is the top priority." |
 | `morale` (A FLAT WEEK) | everyone loses 1 Motivation; a feature banked this week is no reason to Celebrate | Community: lose 1 / Quality: no loss | 1 | Speak Up (5 pips) | Psychological Safety, free | "Nothing happened. That is it." |
 | `audit` (THE AUDIT) | one card this week must be Workshop or lose a card + 1 Trust + 1 Motivation | Autonomy: lose 1 Motivation | 2 | none; HABIT Shared Repertoire, OR plinth ≤ 1 feature | 1 off each, they stack | "No one person can be the answer." |
-| `deadline` (THE DATE MOVES UP) | the deadline moves one week closer: move the week marker down a box; nothing in week 2 (put it back and redraw) or the last week | Quality: lose 1 Motiv. | none - "SAY NO" + "NO TOKENS OR HABITS" on one line | Speak Up (5 pips), OR Authorized Voice once a week | none (no Habit line, no cost squares) | "The customer wants it a week early." |
+| `deadline` (THE DATE MOVES UP) | the deadline moves one week closer: move the week marker down a box; drawn in week 2 or the last week, it is discarded and a new Event drawn (card text: "Drawn in week 2 or the last week: discard it, draw a new Event.", two lines at y 43 and 47, Torso row shifted down 4) | Quality: lose 1 Motiv. | none - "SAY NO" + "NO TOKENS OR HABITS" on one line | Speak Up (5 pips), OR Authorized Voice once a week | none (no Habit line, no cost squares) | "The customer wants it a week early." |
 
 Sheet placement: `reinforcements`(10,12) `legacy`(76,12) `build`(142,12) / `split`(10,104)
 `reorg`(76,104) `crunch`(142,104) / `morale`(10,196) `audit`(76,196) `deadline`(142,196).
@@ -479,7 +481,7 @@ push it).
 No mechanic lines or chips on this row - pure flavour. The row is your row on your SKILLS grid
 (rulebook §8).
 
-## TORSO row - "VALUES → HOW EVENTS LAND" · aside: "your Torso is also your Need, from week 2"
+## TORSO row - "VALUES → HOW EVENTS LAND" · aside: "your Torso is also your Need, from week 1"
 
 | Card | Name | Mono line 1 (chip, category tint) | Mono line 2 (chip, category tint) |
 |---|---|---|---|
@@ -656,16 +658,16 @@ and pip glyphs are shared defs). Each tile: `44x36`, `rx 1.5`, class `.cut` (`#F
 | Tile name (e.g. "Autonomy", "Own It") | `.serif` | 3.5 | `#000000` | - |
 | NEED condition (2-3 lines, centred) | `.serif` | 2.6 | `#000000` | - |
 | NEED reward ("+1 Motivation.", own line, centred) | `.serif` | 2.6 | `#000000` | `#D3B1B1` |
-| NEED row footnote ("FROM WEEK 2") | `.serif` italic | 2.8 | `#000000` | - |
+| NEED row footnote ("FROM WEEK 1") | `.serif` italic | 2.8 | `#000000` | - |
 | HERO threshold line ("NEEDS 3 MOTIVATION OR HIGHER") | `.mono` | 2.6 | `#000000` | - |
 | HERO effect (2 lines, centred) | `.serif` | 2.6 | `#000000` | - |
 | HERO payout (2 lines) | `.mono` | 2.6 | `#000000` | - |
 
 Each NEED tile used to carry two visually different runs - a `.serif` condition (2 lines) and
-a separate `.mono` "FROM WEEK 2: +1 MOTIVATION" reward line - with the week-2 timing repeated
+a separate `.mono` "FROM WEEK 1: +1 MOTIVATION" reward line - with the week-1 timing repeated
 five times. That's now one unified `.serif` 2.6 style throughout: the condition (2-3 lines)
 followed by "+1 Motivation." on its own line with a `#D3B1B1` background chip (the standard
-Motivation-reward tint used elsewhere on this sheet), and "FROM WEEK 2" moves out to a single
+Motivation-reward tint used elsewhere on this sheet), and "FROM WEEK 1" moves out to a single
 row-level footnote under the NEED row instead of repeating on every tile.
 
 **Autonomy's Need was rebuilt after the 2026-09-25 playtest, and again when Activity cards became

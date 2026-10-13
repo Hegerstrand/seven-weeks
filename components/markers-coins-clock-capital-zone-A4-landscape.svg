@@ -166,5 +166,5 @@
 
 <line x1="148.5" y1="94" x2="148.5" y2="200" stroke="#2A2620" stroke-width=".3" stroke-dasharray="3 2"/>
 
-<text x="12" y="206" class="s" font-size="3.2" font-style="italic">Print at 100%, no scaling. Green tiles pay +1 Capability for a whole row or column; amber pays +1 Shared Practice on the flip to stacked.</text>
+<text x="12" y="203.5" class="s" font-size="3.2" font-style="italic">Print at 100%, no scaling. Green tiles pay +1 Capability for a whole row or column; amber pays +1 Shared Practice on the flip to stacked.</text>
 </svg>

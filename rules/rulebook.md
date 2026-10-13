@@ -1,8 +1,10 @@
-# Rulebook - High-Performance Team (v0.35 draft)
+# Rulebook - High-Performance Team (v0.36 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
+
+> **v0.36 (2026-10-13): Need starts in week 1.** Every character's Need is read when week 1 closes, not week 2 (§3.0, §5), and the Need tile is in play from setup. Week 2 no longer opens it. The Quality Need's -3 now applies in week 1 too (a Quality character with no Work added in week 1 loses 3), and the Autonomy Need is met in week 1 because no Event is drawn yet. In week 1 only Work, Engagement, Celebrate, Workshop and Plan exist, so Hierarchy is met only by a Workshop, Community only by an Engagement, and Recognition only by a banked feature. The simulator reads it from week 1 (`Rules.need_from_week`); **the balance figures have not been re-run.** **THE DATE MOVES UP drawn in week 2 or the last week is discarded and a new Event drawn** (it used to be put back in week 2, and do nothing in the last week), §6.1, §11.
 
 > ## BALANCE PASS (2026-10-11 to 2026-10-12, v0.35)
 > **The Flex marker is two-sided** (five are printed, the team still holds at most one): the owed face is up while the day is owed; to give the day back you place it in a weekday slot and **flip** it, and it goes back to the supply at the close. No scoring change, §7.
@@ -447,8 +449,8 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 
 | From | What opens | Cards in play |
 |---|---|---|
-| **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation. **Combos** (§18.1) are open from the start: two named triggers landing in the same week pay a small bonus on top of what they did alone (in week 1 only Engagement + Workshop is possible; the rest appear as their cards and rules open). | Work · Engagement · Celebrate · Workshop · Plan |
-| **Week 2** | **The team, and reality.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital, the shared Adaptability pool, **each character's Need** (the tile already on your board) and Shit Happens and Adapt, together. The pool holds **3 tokens** from the first day it exists. **The Demo card opens too, with Learn, Teach and Reflect.** | + Demo · Learn · Teach · Reflect |
+| **Week 1** | **The week.** The week strip and the six features. Your figure, your Knowledge, your Motivation, and **your Need** (the tile already on your board, read when the week closes). **Combos** (§18.1) are open from the start: two named triggers landing in the same week pay a small bonus on top of what they did alone (in week 1 only Engagement + Workshop, and Need met + Celebrate, are possible; the rest appear as their cards and rules open). | Work · Engagement · Celebrate · Workshop · Plan |
+| **Week 2** | **The team, and reality.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital, the shared Adaptability pool and Shit Happens and Adapt, together. The pool holds **3 tokens** from the first day it exists. **The Demo card opens too, with Learn, Teach and Reflect.** | + Demo · Learn · Teach · Reflect |
 | **Week 3** | **THE DEVELOPMENT (board 4b).** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - the Flex and Overtime part of the Specimen card, and the **Hero** panel (§5.1). | + nothing new |
 | **Week 4** | **Nothing opens.** A deliberate breath - the first week the table just plays everything it has met. | + nothing new |
 | **Week 5** | **Nothing opens.** The table plays everything it has met. | + nothing new |
@@ -457,8 +459,8 @@ Weeks 5-7 are the whole game with nothing new opening, and by then the table has
 every rule *at the moment it mattered* rather than in a twenty-minute briefing.
 
 **One idea per week, and each one is a sentence.** Week 1: a week is five days and you choose
-them. Week 2: it was never only the project - it was landing on the team, on who the team
-listens to, on what you each need, and your plan was made in ignorance, all at once. Week 3:
+them, and each of you needs something from it. Week 2: it was never only the project - it was landing on the team, on who the team
+listens to, and your plan was made in ignorance, all at once. Week 3:
 and on how far each of you can reach, as the Zone starts paying off. From the start: the things you
 already do pay twice when you do them together.
 
@@ -486,8 +488,8 @@ when you uncover each panel, run its catch-up:
 > the team has played. Capital is not handed out here: **everyone's Capital starts at 0 and is
 > earned only through play** (§5.1). Then nobody is Standing yet (the Standing coin sits on 0, all tied), and
 > whoever first holds the most Capital becomes Standing (§5.1). The three tracks start where they always were, at
-> **1**, and the Adaptability pool starts with 3 tokens. From this week's close, every character's
-> Need is read (§5).
+> **1**, and the Adaptability pool starts with 3 tokens. Every character's Need has already
+> been read since the close of week 1 (§5).
 >
 > **Week 3 - how far you reach.** No catch-up to run - the Zone lift and the Flex/Overtime
 > panel simply turn over.
@@ -529,9 +531,9 @@ about ninety seconds.
 Slot the five part-cards into your player board as you go. Nothing is written down. Then take
 the matching [NEED and HERO tiles](../components/cards-need-hero-44x36mm-A4-landscape.svg) -
 the one that names your Torso value, and the one that names your Legs - and slot those too.
-(Your **Need** is your **Torso**, read a second way - it just isn't *asked about* until week 2,
-when the week closes - §3.0. Week 1 is about who you are and what you know; what you
-*need* from the team is the week-2 idea, and the tile that answers it has been on your board
+(Your **Need** is your **Torso**, read a second way - it is *asked about* from the close of
+week 1 (§3.0). Week 1 is about who you are and what you know, and the one thing you
+*need* from the team; the tile that answers it has been on your board
 the whole time.)
 
 The build order - upbringing → education → values → instinct → skill - is on purpose: it mirrors
@@ -727,7 +729,7 @@ first character when week 5 closes.
 > **Resolve the week's Motivation as one number.** Total each character's change - **−1** for
 > the grind, **±1 per matching Event category this week, per their Torso** (§5, "Motivation
 > depends on habitus" - check who was hit and who was immune before you total anything),
-> **+1** if their Need was met (**from week 2**, §5.1) - apply it, and *then*
+> **+1** if their Need was met (**from week 1**, §5.1) - apply it, and *then*
 > check for zero. Don't run the grind as a separate step first: a character on 1 Motivation
 > whose Need was satisfied has had a week that balanced out, and shouldn't quit on a
 > sequencing technicality.
@@ -780,7 +782,7 @@ That's Bourdieu's whole argument about legitimacy in one token.
 
 ### Need gives bonus Motivation
 Your **Need is your Torso** - the same card you were dealt at setup, read a second way.
-From week 2, when the week closes (§6.1), check whether the week satisfied it. If so, you
+From week 1, when the week closes (§6.1), check whether the week satisfied it. If so, you
 **gain 1 Motivation** (cap 5) - which, conveniently, is exactly enough to cancel the weekly
 grind.
 
@@ -788,14 +790,15 @@ grind.
 where **no Work was added to any feature**, a Quality character loses **3 Motivation** (on top of the
 grind) instead of gaining 1. That hurts, and it is meant to: the team has to put Work into a feature
 every week, or it risks losing its Quality character. A Demo does not stand in for it. It was added after the first full playtest, where a table spent
-weeks 1-3 on everything but Work and nobody paid for it. Like every Need it is only read from
-week 2, so a table that skips Work in week 1 alone is still free of it. A Work card does not count
+weeks 1-3 on everything but Work and nobody paid for it. Like every Need it is read from
+week 1, so a table that skips Work in week 1 already pays for it. A Work card does not count
 if it produced 0 - aimed at a blocked feature, or cancelled to nothing by a −1 Capability or
 Tooling Outage - because the point is Work *delivered*, not a card laid down.
 
-Week 1 doesn't ask the question, so Motivation only ever falls and **Celebrate is the sole
-relief**. That's the point: the grind is taught first, and the thing that answers it was on
-your board from the start - the game just waits until week 2 to turn it over.
+Week 1 already asks the question, with only five cards on the table. Autonomy is met (no Event is
+drawn yet) and Quality by any Work that delivers; Hierarchy needs a Workshop, Community an Engagement and
+Recognition a banked feature. That's the point: the grind and the Need are taught together, and the
+thing that answers them was on your board from the start.
 
 | Torso (= Need) | Satisfied when, during that week... |
 |---|---|
@@ -1575,7 +1578,7 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | NEGATIVE FEEDBACK | Customer | 3 | Analyze | One banked feature loses 2 Work and comes off the tower. | Quality −1 |
 | SCOPE CREEP | Customer | 3 | Analyze | The unbanked feature closest to done gains +2 Work Cost. | Quality −1 |
 | PRIORITY CHANGES | Customer | 2 | Analyze | Remove one card this week. | Quality −1 |
-| THE DATE MOVES UP | Customer | none - say no | Speak Up | The deadline moves one week closer: move the week marker one box down, for good. Nothing happens in the last week. **It is not in play in week 2: if you draw it, put it back, shuffle, and draw again** (nobody can say no before the Hero opens in week 3). Only a Speak Up Hero or Authorized Voice cancels it; tokens and Habits cannot. | Quality −1 |
+| THE DATE MOVES UP | Customer | none - say no | Speak Up | The deadline moves one week closer: move the week marker one box down, for good. **It is not in play in week 2 or the last week: if you draw it then, discard it and draw a new Event** (nobody can say no before the Hero opens in week 3, and in the last week there is no deadline left to move). Only a Speak Up Hero or Authorized Voice cancels it; tokens and Habits cannot. | Quality −1 |
 | THE DASHBOARD | Customer | 3 | Analyze | Work only counts this week on a Low feature; Medium and High Work changes nothing. | Quality −1 |
 | ALWAYS REACTING | Customer | 1 | Speak Up | The Adaptability pool loses 1 token. | Quality −1 |
 | KNOWLEDGE HOARDING | People | 2 | Support | Remove all Teach cards this week. | Community −1 |
@@ -1889,7 +1892,7 @@ acquired, and when, in the session's [playtest log entry](../playtests/README.md
 ## 18.1 Combos (from week 1)
 Combos are open from the first week: pairs that were always available individually, now worth more
 together. A pair only becomes possible once both halves are open (Demo and Reflect from week 2, the Hero
-from week 3, and so on), so in week 1 the only Combo available is Engagement + Workshop.
+from week 3, and so on), so in week 1 the Combos available are Engagement + Workshop and Need met + Celebrate.
 
 **A Combo is two named triggers landing in the same week.** Check for Combos at close-the-week,
 alongside Motivation (§6.1 step 7). **Maximum one Combo per team per week** - if more than one
@@ -1901,7 +1904,7 @@ pair is satisfied, the team names which one counts. No stacking, no hidden bookk
 | **Engagement + Workshop** | Both played | +1 Capital to one named character |
 | **Hero + Celebrate** | A character spends their Hero to cancel an Event, and the team plays Celebrate | +1 Motivation to everyone |
 | **Cancel an Event with Adaptability + Workshop** | Both happen | +1 Adaptability |
-| **Need met + Celebrate** | A character's Need is satisfied (§5, from week 2) and the team plays Celebrate | +1 Motivation to that character, on top of the normal Need bonus |
+| **Need met + Celebrate** | A character's Need is satisfied (§5, from week 1) and the team plays Celebrate | +1 Motivation to that character, on top of the normal Need bonus |
 
 **Why not a Habit-flip combo too.** The moment a Habit is acquired already pays +1 Capital via
 Vindication (§ "Motivation depends on habitus") - a Combo reward on the same trigger would pay

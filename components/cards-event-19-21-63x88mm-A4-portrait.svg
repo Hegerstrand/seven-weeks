@@ -45,18 +45,22 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
   <g id="q5"><circle cx="-.85" cy="-.85" r=".4" class="pip"/><circle cx=".85" cy="-.85" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.85" cy=".85" r=".4" class="pip"/><circle cx=".85" cy=".85" r=".4" class="pip"/></g>
 
   <g id="bikeshed" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE BIKESHED</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">THE BIKESHED</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <text x="5" y="28" class="s" font-size="4.2">Somebody had a strong</text>
     <text x="5" y="32.8" class="s" font-size="4.2">opinion about the paint:</text>
     <text x="5" y="37.6" class="s" font-size="4.2">the easiest feature left</text>
     <text x="5" y="42.4" class="s" font-size="4.2">gets <tspan font-weight="bold">+1 Work</tspan>. The hardest</text>
     <text x="5" y="47.2" class="s" font-size="4.2">gets nothing this week.</text>
     <g transform="translate(0,9.5)">
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="33.28" y="40.57" width="20.24" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -70,21 +74,24 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
   </g>
 
   <g id="leadsbehind" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">LEADS FROM</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">BEHIND</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">LEADS FROM BEHIND</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <text x="5" y="28" class="s" font-size="4.2">Everyone felt it.</text>
     <text x="5" y="32.8" class="s" font-size="4.2">Almost everyone.</text>
-    <g transform="translate(0,9.5)">
-    <rect x="4" y="23" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <g transform="translate(0,12)">
+    <rect x="4" y="23" width="55" height="6" rx="1" fill="#D3B1B1"/>
     <text x="5" y="28" class="s" font-size="4.4">Everyone <tspan font-weight="bold">loses 1</tspan></text>
     <text x="5" y="33" class="s" font-size="4.4"><tspan font-weight="bold">Motivation</tspan>, except whoever</text>
     <text x="5" y="38" class="s" font-size="4.4">has the highest Capital.</text>
-    <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3B1B1"/>
+    <rect x="4" y="38" width="55" height="6" rx="1" fill="#D3B1B1"/>
     <text x="5" y="43" class="s" font-size="4.4">They wrote it. Exempt.</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -98,11 +105,12 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
   </g>
 
   <g id="dashboard" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-cust"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE DASHBOARD</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">THE DASHBOARD</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <text x="5" y="28" class="s" font-size="4.2">The number went up.</text>
     <text x="5" y="32.8" class="s" font-size="4.2">Nothing else did.</text>
     <g transform="translate(0,9.5)">
@@ -110,7 +118,10 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="5" y="33" class="s" font-size="4.4">if it's on a Low feature.</text>
     <text x="5" y="38" class="s" font-size="4.4">Medium/High Work happens</text>
     <text x="5" y="43" class="s" font-size="4.4">but changes nothing.</text>
-    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="33.28" y="45.57" width="20.24" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -124,18 +135,22 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
   </g>
 
   <g id="confidence" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-env"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-env"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">SHAKY GROUND</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">ENVIRONMENT</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">SHAKY GROUND</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <text x="5" y="28" class="s" font-size="4.2">Confidence is earned in</text>
     <text x="5" y="32.8" class="s" font-size="4.2">public - and lost there too.</text>
     <g transform="translate(0,9.5)">
     <text x="5" y="28" class="s" font-size="4.4">A demo crashed in front</text>
     <text x="5" y="33" class="s" font-size="4.4">of the customer. The team</text>
     <text x="5" y="38" class="s" font-size="4.4"><tspan font-weight="bold">loses 1 Capability</tspan>.</text>
-    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="43.64" y="40.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,41.9)"><use href="#i-torso"/><use href="#q2"/></g><rect x="36.52" y="40.57" width="20.24" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="43" class="m" font-size="2.7">HIERARCHY: LOSE 1 MOTIVATION</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">3</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -149,11 +164,12 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
   </g>
 
   <g id="reacting" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-cust"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-cust"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">ALWAYS REACTING</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">CUSTOMER</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">ALWAYS REACTING</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <text x="5" y="28" class="s" font-size="4.2">There was a plan.</text>
     <text x="5" y="32.8" class="s" font-size="4.2">Nobody remembers it now.</text>
     <g transform="translate(0,9.5)">
@@ -161,7 +177,10 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="5" y="33" class="s" font-size="4.4">ahead and only reacts.</text>
     <text x="5" y="38" class="s" font-size="4.4">Deadlines slip sideways.</text>
     <text x="5" y="43" class="s" font-size="4.4"><tspan font-weight="bold">Adaptability pool loses 1</tspan>.</text>
-    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="34.44" y="45.57" width="20.09" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q4"/></g><rect x="33.28" y="45.57" width="20.24" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">QUALITY: LOSE 1 MOTIVATION</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">1</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -174,22 +193,25 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     </g>
   </g>
   <g id="equal" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="13.5" class="m" font-size="4.6" letter-spacing=".6">EVERYONE IS</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">EQUAL</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">EVERYONE IS EQUAL</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <text x="5" y="28" class="s" font-size="4.2">No titles. No one to ask,</text>
     <text x="5" y="32.8" class="s" font-size="4.2">so nobody does.</text>
     <g transform="translate(0,9.5)">
     <text x="5" y="28" class="s" font-size="4.4">No Hero and no Authorized</text>
     <text x="5" y="33" class="s" font-size="4.4">Voice this week, and nobody</text>
     <text x="5" y="38" class="s" font-size="4.4">gains <tspan font-weight="bold">Capital</tspan>.</text>
-    <rect x="4" y="38" width="50" height="6" rx="1" fill="#D3B1B1"/>
-    <text x="5" y="43" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
-    <g transform="translate(7,46.9)"><use href="#i-torso"/><use href="#q1"/></g><rect x="36.11" y="45.57" width="11.72" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="48" class="m" font-size="2.7">AUTONOMY: LOSE 1 EXTRA</text>
-    <g transform="translate(7,51.4)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="52.5" class="m q" font-size="2.7">HIERARCHY: IMMUNE</text>
+    <rect x="4" y="39.5" width="55" height="6" rx="1" fill="#D3B1B1"/>
+    <text x="5" y="44.5" class="s" font-size="4.2">Everyone <tspan font-weight="bold">loses 1 Motivation</tspan>.</text>
+    <g transform="translate(7,48.4)"><use href="#i-torso"/><use href="#q1"/></g><rect x="34.9" y="47.07" width="12.14" height="3.11" rx=".5" fill="#D3B1B1"/><text x="11" y="49.5" class="m" font-size="2.7">AUTONOMY: LOSE 1 EXTRA</text>
+    <g transform="translate(7,52.9)"><use href="#i-torso"/><use href="#q2"/></g><text x="11" y="54" class="m q" font-size="2.7">HIERARCHY: IMMUNE</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO ADAPT</text>
     <text x="8" y="62.5" class="m" font-size="4">2</text><text x="14" y="62.5" class="m q" font-size="2" letter-spacing=".2">ADAPTABILITY</text>
@@ -201,13 +223,14 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
   </g>
 
   <g id="wolf" transform="scale(.95238095,1)">
-    <rect x=".6" y=".6" width="61.8" height="22.4" rx="1.4" class="cat-mgmt"/>
+    <rect x=".6" y=".6" width="61.8" height="17.4" rx="1.4" class="cat-mgmt"/>
     <rect width="63" height="88" rx="2" class="c" stroke-width=".9"/>
-    <text x="5" y="7.5" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
-    <text x="5" y="19" class="m" font-size="4.6" letter-spacing=".6">THE WOLF</text>
-    <line x1="5" y1="23" x2="58" y2="23" class="h" stroke-width=".7"/>
+    <text x="5" y="7" class="m q" font-size="3.2" letter-spacing="1">MANAGEMENT</text>
+    <text x="5" y="14.5" class="m" font-size="4.2" letter-spacing=".2">THE WOLF</text>
+    <line x1="5" y1="18" x2="58" y2="18" class="h" stroke-width=".7"/>
+    <g transform="translate(0,-5)">
     <g transform="translate(0,9.5)">
-    <rect x="4" y="18.5" width="50" height="6" rx="1" fill="#D9D3C4"/>
+    <rect x="4" y="18.5" width="55" height="6" rx="1" fill="#D9D3C4"/>
     <text x="6" y="22.7" class="m" font-size="3.4" font-weight="bold">TARGET: THE SHEPHERD</text>
     <g transform="translate(50.2,21.5)" fill="none" stroke="#2A2620" stroke-width=".4"><circle r="2.4"/><circle r="1.4"/><circle r=".35" fill="#2A2620"/></g>
     <text x="5" y="28.6" class="s" font-size="4">The Wolf is <tspan font-weight="bold">the boss</tspan>, the</text>
@@ -216,6 +239,9 @@ deck shuffle as sheets 6 and 7; two rows are used, the rest of the page is inten
     <text x="5" y="41.8" class="s" font-size="4"><tspan font-weight="bold">stay on the team</tspan>; their</text>
     <text x="5" y="46.2" class="s" font-size="4">Capital is <tspan font-weight="bold">erased</tspan>. Tokens</text>
     <text x="5" y="50.6" class="s" font-size="4">and Hero can't stop it.</text>
+    </g>
+    </g>
+    <g transform="translate(0,9.5)">
     <rect x="5" y="54" width="53" height="22" rx="1" class="w"/>
     <text x="8" y="58" class="m q" font-size="2.8" letter-spacing="1">HOW TO RESIST</text>
     <text x="8" y="62.5" class="m" font-size="4">STEP UP</text><text x="27" y="62.5" class="m q" font-size="2" letter-spacing=".2">+1 CAPITAL</text>

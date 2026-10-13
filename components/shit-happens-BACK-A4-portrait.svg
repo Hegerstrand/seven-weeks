@@ -15,7 +15,7 @@ narrower horizontal span.</desc>
 <g transform="scale(0.70707070707)">
 <rect width="297" height="420" fill="#FFFFFF"/>
 
-<text x="24" y="30" class="m q" font-size="6" letter-spacing="3">TURN ME OVER AT THE START OF WEEK 2</text>
+<text x="24" y="30" class="m q" font-size="6" letter-spacing="1.8">TURN ME OVER AT THE START OF WEEK 2</text>
 <line x1="24" y1="36" x2="230.36" y2="36" class="h"/>
 
 <text x="24" y="76" class="m" font-size="26" letter-spacing="6">WEEK 2</text>

@@ -92,6 +92,7 @@ class Rules:
     low_band: int = 1
     plan_dead_at: int = 1                       # Plan does nothing when Shared Practice is at or below this (the low band: nothing in week 1)
     demo_from_week: int = 2                     # first week the Demo card can be laid
+    need_from_week: int = 1                     # first week a character's Need is read at the close
     plan_from_week: int = 1                     # first week the Plan card can be laid
     cards_from_week: int = 2                    # first week Learn, Teach and Reflect can be laid
     quality_demo: bool = False                  # a Demo also meets the Quality Need (off: only Work meets it)
@@ -767,7 +768,7 @@ class Game:
             cards[cards.index("Work") if "Work" in cards else -1] = "Onboarding"
         if st.celebrate_needs_reason and "Celebrate" in cards and not self.celebrate_worth(w, cards):
             cards[cards.index("Celebrate")] = "Work"
-        if st.care and w >= 2:
+        if st.care:
             self.care_cards(w, cards)
         # Read the Ledger: with Capability in the low band the first Work card of the week delivers nothing
         spare = lambda: [i for i, x in enumerate(cards) if x not in ("Work", "Onboarding", "Celebrate")]
@@ -1196,8 +1197,8 @@ class Game:
             self.do_reflect(newly)
         if st.take_one and not W.coord and not W.trust_boost and self.t0 < st.trust_goal:
             def floor(c):
-                # week 1 has no Need to cancel the grind, so the payer must still be above 0 after it
-                return R.dependable_cost + 2 if w == 1 else R.dependable_cost + 1
+                # the Need can cancel the grind from week 1, but it is not guaranteed, so keep one spare point
+                return R.dependable_cost + 1
             who = [c for c in self.chars if c.base == "Dependable" and c.mot >= floor(c)]
             if who:
                 c = max(who, key=lambda x: x.mot)
@@ -1339,7 +1340,7 @@ class Game:
         R, W = self.R, self.w
         quitters = []
         causes: dict = {}
-        if w >= 2:
+        if w >= R.need_from_week:
             if W.work_added:
                 self.no_work_streak = 0
             else:
@@ -1361,7 +1362,7 @@ class Game:
                 d -= ev
                 neg["Events"] = ev
                 self.mot_flow["event"] -= ev
-            if w >= 2:
+            if w >= R.need_from_week:
                 self.need_seen[c.torso] += 1
                 if self.need_ok(c):
                     self.need_met[c.torso] += 1

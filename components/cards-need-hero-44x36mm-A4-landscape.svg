@@ -36,7 +36,7 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
 <rect width="297" height="210" fill="#FFFFFF"/>
 
 <text x="12" y="16" class="mono" font-size="6" letter-spacing="2">2 · NEED &amp; HERO</text>
-<text x="12" y="23" class="serif" font-size="3.6" font-style="italic">NEED is your Torso, read again from week 2. HERO is your Legs - once per game (a Competitive Base: every time), cancel the Event it names.</text>
+<text x="12" y="23" class="serif" font-size="3.6" font-style="italic">NEED is your Torso, read again every week from week 1. HERO is your Legs - once per game (a Competitive Base: every time), cancel the Event it names.</text>
 <text x="258" y="16" class="mono" font-size="3" text-anchor="end">CUT ALONG THE GAPS</text>
 <line x1="12" y1="27" x2="258" y2="27" stroke="#2A2620" stroke-width=".4"/>
 
@@ -103,7 +103,7 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <text x="236" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
   </g>
 
-<text x="14" y="80" class="serif" font-size="3.2" font-style="italic">FROM WEEK 2</text>
+<text x="14" y="80" class="serif" font-size="3.2" font-style="italic">FROM WEEK 1</text>
 <!-- ═══ HERO (= Legs/Pressure Response, matches the HOW TO ADAPT box on Event cards) ═══ -->
 <text x="12" y="86" class="mono rl">HERO · SAME 5 OPTIONS AS LEGS</text>
 <text x="258" y="86" class="serif" font-size="2.8" text-anchor="end" font-style="italic">pip count matches the Event card's HERO box</text>

@@ -61,8 +61,8 @@ team days - nothing on this board is tied to an individual player.</desc>
   <text x="180" y="47" class="m" font-size="9">A</text>
   <text x="213" y="42" class="m q" font-size="3.8">LOW</text>
   <text x="213" y="48" class="s" font-size="3.8" font-style="italic">Plan is wasted here</text>
-  <g><circle cx="278" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
-  <circle cx="312" cy="43.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="312" y="46" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">3</text>
+  <g><circle cx="278" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="306" cy="43.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
+  <circle cx="326" cy="43.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="326" y="46" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">4</text>
 </g>
 
 <g id="feature-B">
@@ -70,9 +70,9 @@ team days - nothing on this board is tied to an individual player.</desc>
   <text x="180" y="68" class="m" font-size="9">B</text>
   <text x="213" y="63" class="m q" font-size="3.8">MEDIUM</text>
   <text x="213" y="69" class="s" font-size="3.8" font-style="italic">Plan → Work here worth +1 more</text>
-  <g><circle cx="278" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="306" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
-  <circle cx="326" cy="64.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="326" y="67" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">4</text>
-  <text x="344" y="67" class="m" font-size="5">UNLOCKS D</text>
+  <g><circle cx="278" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="306" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="320" cy="64.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
+  <circle cx="340" cy="64.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="340" y="67" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">5</text>
+  <text x="358" y="67" class="m" font-size="5">UNLOCKS D</text>
 </g>
 
 <g id="feature-C">
@@ -80,9 +80,9 @@ team days - nothing on this board is tied to an individual player.</desc>
   <text x="180" y="89" class="m" font-size="9">C</text>
   <text x="213" y="84" class="m q" font-size="3.8">MEDIUM</text>
   <text x="213" y="90" class="s" font-size="3.8" font-style="italic">Plan → Work here worth +1 more</text>
-  <g><circle cx="278" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="306" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
-  <circle cx="326" cy="85.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="326" y="88" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">4</text>
-  <text x="344" y="88" class="m" font-size="5">UNLOCKS F</text>
+  <g><circle cx="278" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="306" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="320" cy="85.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
+  <circle cx="340" cy="85.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="340" y="88" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">5</text>
+  <text x="358" y="88" class="m" font-size="5">UNLOCKS F</text>
 </g>
 
 <g id="feature-D">
@@ -90,8 +90,8 @@ team days - nothing on this board is tied to an individual player.</desc>
   <text x="180" y="110" class="m" font-size="9">D</text>
   <text x="213" y="105" class="m" font-size="3.8">HIGH · BLOCKED UNTIL B</text>
   <text x="213" y="111" class="s" font-size="3.8" font-style="italic">Plan → Work worth +1 for 2 weeks</text>
-  <g><circle cx="278" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
-  <circle cx="312" cy="106.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="312" y="109" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">3</text>
+  <g><circle cx="278" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="306" cy="106.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
+  <circle cx="326" cy="106.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="326" y="109" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">4</text>
 </g>
 
 <g id="feature-E">
@@ -99,8 +99,8 @@ team days - nothing on this board is tied to an individual player.</desc>
   <text x="180" y="131" class="m" font-size="9">E</text>
   <text x="213" y="126" class="m q" font-size="3.8">LOW</text>
   <text x="213" y="132" class="s" font-size="3.8" font-style="italic">nobody wants to do it</text>
-  <g><circle cx="278" cy="127.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
-  <circle cx="298" cy="127.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="298" y="130" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">2</text>
+  <g><circle cx="278" cy="127.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="127.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
+  <circle cx="312" cy="127.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="312" y="130" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">3</text>
 </g>
 
 <g id="feature-F">
@@ -108,8 +108,8 @@ team days - nothing on this board is tied to an individual player.</desc>
   <text x="180" y="152" class="m" font-size="9">F</text>
   <text x="213" y="147" class="m" font-size="3.8">HIGH · BLOCKED UNTIL C</text>
   <text x="213" y="153" class="s" font-size="3.8" font-style="italic">Plan → Work worth +1 for 2 weeks</text>
-  <g><circle cx="278" cy="148.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
-  <circle cx="298" cy="148.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="298" y="151" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">2</text>
+  <g><circle cx="278" cy="148.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/><circle cx="292" cy="148.5" r="5.5" style="fill:#8B6F47;fill-opacity:.35;stroke:#2A2620;stroke-width:.5"/></g>
+  <circle cx="312" cy="148.5" r="7.5" style="fill:#5C4830;stroke:#2A2620;stroke-width:.8"/><text x="312" y="151" class="m" font-size="5.5" text-anchor="middle" style="fill:#F2EDE0">3</text>
 </g>
 
 <!-- ═══ THE WEEK ═══ -->

@@ -1,5 +1,7 @@
 # Extension: The Wolf Returns
 
+**Track:** B - additive.
+
 **Requires:** the base game (rulebook v0.33 or later), which already contains the Events
 **EVERYONE IS EQUAL** and **THE WOLF** (§11). **Changes:** THE WOLF is no longer a one-off. It
 comes back, and each time the team pays more to keep its shepherd.

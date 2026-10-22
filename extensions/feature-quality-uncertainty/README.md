@@ -1,5 +1,7 @@
 # Extension: Feature Quality & Uncertainty
 
+**Track:** A - extracted.
+
 **Requires:** the base game. **Adds back:** the Project feature system's hidden **Quality**
 (Low/Medium/High) attribute and the **Unclear** flag, both cut from the base game after the
 2026-09-09 playtest finding that the full feature system was too complicated (see

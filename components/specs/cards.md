@@ -410,6 +410,13 @@ Every card carries the habitus card tint `#F0E3D1` (lightened 2026-10-07 from `#
 removed for print readability; all body/mechanic text lives at `2.6px` or larger, one size up
 from the previous `2.0-2.1px` tier that was too small to read at true print scale.
 
+**Week tag (2026-10-21).** Shit Happens and Hero open in week 3, so the six cards whose printed text is about Events or
+the Hero carry a `WEEK 3` tag: Competitive (upbringing), Autonomy, Hierarchy, Community and Quality (values), and Own It
+(instinct). Bottom right, 3 mm from the right edge and 3 mm from the bottom (mono 2.4, `#6E6249`, class `mono wk`,
+`text-anchor end`, x = card left + 41, baseline = card top + 33); the same tint and size as the Activity cards' `WEEK n` tag.
+Not tagged, on purpose: Recognition (no Event or Hero text on the card) and the other instinct cards (their strengths read
+from week 2, Engage from week 1).
+
 Each card is a plain positioned group (no `<defs>`/`<use>` reuse for the card body - all 25 are
 drawn inline, each `44x36`, `rx 1.5`, class `.cut` = fill `#F0E3D1`, stroke `#2A2620`). Every row
 is laid out as one base card at a literal `x`, plus four more each wrapped in a cumulative

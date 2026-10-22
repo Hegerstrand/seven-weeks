@@ -101,7 +101,7 @@ the four results. Right: the card-stack slots used while setting up.</desc>
   <rect x="24.6" y="236.6" width="84.8" height="22" rx="1.8" fill="#C7CFB5"/>
   <text x="29" y="246" class="m" font-size="5" letter-spacing=".6">SUSTAINABLE</text>
   <text x="29" y="252.5" class="m" font-size="5" letter-spacing=".6">PERFORMANCE</text>
-  <text x="29" y="268" class="m" font-size="7.4" letter-spacing=".8">100 TO 149</text>
+  <text x="29" y="268" class="m" font-size="7.4" letter-spacing=".8">100 TO 159</text>
   <text x="29" y="274.5" class="s" font-size="4.2" font-style="italic">All six features delivered.</text>
   <text x="29" y="280.5" class="s" font-size="4.8">The team held together.</text>
 
@@ -109,12 +109,12 @@ the four results. Right: the card-stack slots used while setting up.</desc>
   <rect x="114.6" y="236.6" width="84.8" height="22" rx="1.8" fill="#B5C7CF"/>
   <text x="119" y="246" class="m" font-size="5" letter-spacing=".6">SUSTAINABLE</text>
   <text x="119" y="252.5" class="m" font-size="5" letter-spacing=".6">HIGH PERFORMANCE</text>
-  <text x="119" y="268" class="m" font-size="7.4" letter-spacing=".8">150 OR MORE</text>
+  <text x="119" y="268" class="m" font-size="7.4" letter-spacing=".8">160 OR MORE</text>
   <text x="119" y="274.5" class="s" font-size="4.2" font-style="italic">All six features delivered.</text>
   <text x="119" y="280.5" class="s" font-size="4.8">You built a team as well.</text>
 </g>
-<text x="92" y="172.2" class="s q" font-size="4" font-style="italic">Five players: the lines are 100 and 150.</text>
-<text x="92" y="177.2" class="s q" font-size="4" font-style="italic">Other counts: 5 x starting characters + 75 and + 125.</text>
+<text x="92" y="172.2" class="s q" font-size="4" font-style="italic">Five players: the lines are 100 and 160.</text>
+<text x="92" y="177.2" class="s q" font-size="4" font-style="italic">Other counts: 5 x starting characters + 75 and + 135.</text>
 
 <line x1="212" y1="180" x2="212" y2="290" class="h" stroke-width=".4"/>
 

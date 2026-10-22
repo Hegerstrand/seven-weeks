@@ -1,5 +1,7 @@
 # Extension: Team Reflexivity (history of the old pool-flip version)
 
+**Track:** A - extracted (history only).
+
 **Status (2026-10-10): the old version below was cut, and Team Reflexivity is back in the base
 game in a new form: earned by Reflect, not by the pool.** In the base game now: when a Reflect
 resolves, the team may bank its +1 Adaptability token in one of three HABIT wells beside the pool

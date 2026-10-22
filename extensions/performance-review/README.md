@@ -1,5 +1,7 @@
 # Extension: Performance Review
 
+**Track:** A - extracted.
+
 **Requires:** the base game. **Adds back:** the individualized **Performance Review** Capital
 penalty, and the **Collective Bargaining** alternate use of the Authorized Voice Habit that
 shields a teammate from it. Cut from the base game on 2026-09-09 as part of tuning down how

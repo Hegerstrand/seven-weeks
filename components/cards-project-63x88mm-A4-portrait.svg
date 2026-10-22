@@ -44,33 +44,33 @@ team just like it. Choose one at setup and put the other five back in the box.</
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Appointment reminders</text>
-  <text x="52" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Patient login</text>
-  <text x="52" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="45" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="45" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="53" class="m" font-size="4.2">C</text>
   <text x="11" y="53" class="s" font-size="3.6">Medical records API</text>
-  <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="53" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Referral network SSO</text>
-  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
-  <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
+  <text x="83" y="61" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
   <text x="11" y="69" class="s" font-size="3.6">Consent form capture</text>
-  <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="69" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="69" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Billing history</text>
-  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
 
 </g>
 
@@ -86,40 +86,40 @@ team just like it. Choose one at setup and put the other five back in the box.</
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Branch locator</text>
-  <text x="52" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Account ledger</text>
-  <text x="52" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="45" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="45" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="53" class="m" font-size="4.2">C</text>
   <text x="11" y="53" class="s" font-size="3.6">Application intake</text>
-  <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="53" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Real-time balance sync</text>
-  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
-  <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
+  <text x="83" y="61" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
   <text x="11" y="69" class="s" font-size="3.6">Statement PDFs</text>
-  <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="69" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="69" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Credit scoring</text>
-  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
 
 </g>
 
 <!-- ══ III · THE EXCEL WORKFLOW (software, tongue-in-cheek - the customer can't explain their own spreadsheet) ══ -->
 <g transform="translate(10,106)">
   <use href="#frame"/>
-  <text x="78" y="9.4" class="m" font-size="5" text-anchor="middle">III</text>
+  <text x="78" y="9" class="m" font-size="3.6" text-anchor="middle">III</text>
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">EXCEL</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">WORKFLOW</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · SOFTWARE</text>
@@ -128,33 +128,33 @@ team just like it. Choose one at setup and put the other five back in the box.</
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Screenshot → spec</text>
-  <text x="52" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Decode the macros</text>
-  <text x="52" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="45" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="45" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="53" class="m" font-size="4.2">C</text>
   <text x="11" y="53" class="s" font-size="3.6">Guess the data model</text>
-  <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="53" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">The "fixes it" button</text>
-  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
-  <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
+  <text x="83" y="61" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
   <text x="11" y="69" class="s" font-size="3.6">Rename all the tabs</text>
-  <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="69" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="69" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Reconcile the finals</text>
-  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
 
 </g>
 
@@ -165,39 +165,38 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">MOBILE</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">APP</text>
   <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · RETAIL</text>
-  <text x="46" y="14.5" class="s" font-size="3.4">No sync engine, nothing</text>
-  <text x="46" y="18.2" class="s" font-size="3.4">to send notifications</text>
-  <text x="46" y="21.9" class="s" font-size="3.4">about.</text>
+  <text x="40" y="15.5" class="s" font-size="3.4">No sync engine, nothing to</text>
+  <text x="40" y="19.5" class="s" font-size="3.4">send notifications about.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">App store listing</text>
-  <text x="52" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Offline sync engine</text>
-  <text x="52" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="45" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="45" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="53" class="m" font-size="4.2">C</text>
   <text x="11" y="53" class="s" font-size="3.6">Push notification service</text>
-  <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="53" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Sync conflict resolution</text>
-  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
-  <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
+  <text x="83" y="61" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
   <text x="11" y="69" class="s" font-size="3.6">Accessibility pass</text>
-  <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="69" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="69" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Rich notification actions</text>
-  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
 
 </g>
 
@@ -207,39 +206,39 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="78" y="9.4" class="m" font-size="5" text-anchor="middle">V</text>
   <text x="5" y="18" class="m" font-size="5.2" letter-spacing=".6">HOME</text>
   <text x="5" y="25" class="m" font-size="5.2" letter-spacing=".6">RENOVATION</text>
-  <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".8">SECTOR · CONSTRUCTION</text>
+  <text x="83" y="25" class="m q" font-size="2.4" text-anchor="end" letter-spacing=".3">SECTOR · CONSTRUCTION</text>
   <text x="46" y="15.5" class="s" font-size="3.4">No frame,</text>
   <text x="46" y="19.5" class="s" font-size="3.4">nothing to finish.</text>
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Permit application</text>
-  <text x="52" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Framing and foundation</text>
-  <text x="52" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="45" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="45" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="53" class="m" font-size="4.2">C</text>
-  <text x="11" y="53" class="s" font-size="3.6">Plumbing and electrical rough-in</text>
-  <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="11" y="53" class="s" font-size="3.3">Plumbing and electrical rough-in</text>
+  <text x="56.5" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="53" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Drywall and interior finishing</text>
-  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
-  <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
+  <text x="83" y="61" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
   <text x="11" y="69" class="s" font-size="3.6">Landscaping</text>
-  <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="69" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="69" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Fixture installation</text>
-  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
 
 </g>
 
@@ -255,33 +254,33 @@ team just like it. Choose one at setup and put the other five back in the box.</
 
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Guest list and invitations</text>
-  <text x="52" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Venue booking</text>
-  <text x="52" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="45" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="45" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="45" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="53" class="m" font-size="4.2">C</text>
   <text x="11" y="53" class="s" font-size="3.6">Catering contract</text>
-  <text x="52" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
-  <text x="83" y="53" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="56.5" y="53" class="m q" font-size="2.6">MEDIUM · BASE</text>
+  <text x="83" y="53" class="m" font-size="4" text-anchor="end">5</text>
 
   <text x="5" y="61" class="m" font-size="4.2">D</text>
   <text x="11" y="61" class="s" font-size="3.6">Seating chart and table layout</text>
-  <text x="52" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
-  <text x="83" y="61" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="56.5" y="61" class="m" font-size="2.6">HIGH · NEEDS B</text>
+  <text x="83" y="61" class="m" font-size="4" text-anchor="end">4</text>
 
   <text x="5" y="69" class="m" font-size="4.2">E</text>
   <text x="11" y="69" class="s" font-size="3.6">Music playlist</text>
-  <text x="52" y="69" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="69" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="56.5" y="69" class="m q" font-size="2.6">LOW</text>
+  <text x="83" y="69" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="77" class="m" font-size="4.2">F</text>
-  <text x="11" y="77" class="s" font-size="3.6">Final headcount and catering order</text>
-  <text x="52" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
+  <text x="11" y="77" class="s" font-size="3">Final headcount and catering order</text>
+  <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
 
 </g>
 </svg>

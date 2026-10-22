@@ -70,14 +70,14 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <use href="#sh-torso-red" x="153" y="46"/><use href="#p3" x="153" y="46"/>
   <text x="117" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="147" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Community</text>
   <line x1="117" y1="50" x2="155" y2="50" class="hair"/>
-  <rect x="117" y="51.5" width="38" height="19.5" rx=".4" fill="#D3CEDF"/>
-  <text x="136" y="54.6" class="serif" font-size="3" text-anchor="middle">Team spent Engagement</text>
-  <text x="136" y="58.4" class="serif" font-size="3" text-anchor="middle">or Reflect, or has</text>
-  <text x="136" y="62.2" class="serif" font-size="3" text-anchor="middle">Psychological Safety and</text>
-  <text x="136" y="66" class="serif" font-size="3" text-anchor="middle">no People or Management</text>
-  <text x="136" y="69.8" class="serif" font-size="3" text-anchor="middle">Event landed:</text>
-  <rect x="124.5" y="71.8" width="23" height="3.6" rx=".4" fill="#D3B1B1"/>
-  <text x="136" y="74.4" class="serif" font-size="3" text-anchor="middle">+1 Motivation.</text>
+  <rect x="117" y="51.5" width="38" height="18" rx=".4" fill="#D3CEDF"/>
+  <text x="136" y="54.4" class="serif" font-size="2.9" text-anchor="middle">Team spent Engagement</text>
+  <text x="136" y="57.9" class="serif" font-size="2.9" text-anchor="middle">or Reflect, or has</text>
+  <text x="136" y="61.4" class="serif" font-size="2.9" text-anchor="middle">Psychological Safety and</text>
+  <text x="136" y="64.9" class="serif" font-size="2.9" text-anchor="middle">no People or Management</text>
+  <text x="136" y="68.4" class="serif" font-size="2.9" text-anchor="middle">Event landed:</text>
+  <rect x="124.5" y="70.3" width="23" height="3.6" rx=".4" fill="#D3B1B1"/>
+  <text x="136" y="72.9" class="serif" font-size="2.9" text-anchor="middle">+1 Motivation.</text>
 
   <rect x="164" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-torso-red" x="203" y="46"/><use href="#p4" x="203" y="46"/>
@@ -112,56 +112,56 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <use href="#sh-legs-red" x="53" y="96"/><use href="#p1" x="53" y="96.5"/>
   <text x="17" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="47" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Own It</text>
   <line x1="17" y1="100" x2="55" y2="100" class="hair"/>
-  <text x="36" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
-  <text x="36" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
-  <text x="36" y="112.6" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
-  <text x="36" y="117.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
-  <text x="36" y="121.2" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
-  <text x="36" y="125" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
+  <text x="36" y="103.8" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
+  <text x="36" y="107.6" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
+  <text x="36" y="111.2" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
+  <text x="36" y="115.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
+  <text x="36" y="119" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
+  <text x="36" y="122.6" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
 
   <rect x="64" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="103" y="96"/><use href="#p2" x="103" y="96.5"/>
   <text x="67" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="97" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Analyze</text>
   <line x1="67" y1="100" x2="105" y2="100" class="hair"/>
-  <text x="86" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
-  <text x="86" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
-  <text x="86" y="112.6" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
-  <text x="86" y="117.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
-  <text x="86" y="121.2" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
-  <text x="86" y="125" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
+  <text x="86" y="103.8" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
+  <text x="86" y="107.6" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
+  <text x="86" y="111.2" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
+  <text x="86" y="115.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
+  <text x="86" y="119" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
+  <text x="86" y="122.6" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
 
   <rect x="114" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="153" y="96"/><use href="#p3" x="153" y="96.5"/>
   <text x="117" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="147" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Support</text>
   <line x1="117" y1="100" x2="155" y2="100" class="hair"/>
-  <text x="136" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
-  <text x="136" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
-  <text x="136" y="112.6" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
-  <text x="136" y="117.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
-  <text x="136" y="121.2" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
-  <text x="136" y="125" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
+  <text x="136" y="103.8" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
+  <text x="136" y="107.6" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
+  <text x="136" y="111.2" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
+  <text x="136" y="115.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
+  <text x="136" y="119" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
+  <text x="136" y="122.6" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
 
   <rect x="164" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="203" y="96"/><use href="#p4" x="203" y="96.5"/>
   <text x="167" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="197" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Engage</text>
   <line x1="167" y1="100" x2="205" y2="100" class="hair"/>
-  <text x="186" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
-  <text x="186" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
-  <text x="186" y="112.6" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
-  <text x="186" y="117.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
-  <text x="186" y="121.2" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
-  <text x="186" y="125" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
+  <text x="186" y="103.8" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
+  <text x="186" y="107.6" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
+  <text x="186" y="111.2" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
+  <text x="186" y="115.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
+  <text x="186" y="119" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
+  <text x="186" y="122.6" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
 
   <rect x="214" y="90" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-legs-red" x="253" y="96"/><use href="#p5" x="253" y="96.5"/>
   <text x="217" y="97" class="mono" font-size="3.4" letter-spacing="1">HERO</text><text x="247" y="97" class="serif" font-size="3" font-style="italic" text-anchor="end">Speak Up</text>
   <line x1="217" y1="100" x2="255" y2="100" class="hair"/>
-  <text x="236" y="104.4" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
-  <text x="236" y="108.8" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
-  <text x="236" y="112.6" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
-  <text x="236" y="117.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
-  <text x="236" y="121.2" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
-  <text x="236" y="125" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
+  <text x="236" y="103.8" class="mono" font-size="3" text-anchor="middle">NEEDS 3+ MOTIVATION</text>
+  <text x="236" y="107.6" class="serif" font-size="3.2" text-anchor="middle">Once per game: cancel</text>
+  <text x="236" y="111.2" class="serif" font-size="3.2" text-anchor="middle">an Event card.</text>
+  <text x="236" y="115.4" class="mono" font-size="3" text-anchor="middle">+2 CAPITAL TO YOU,</text>
+  <text x="236" y="119" class="mono" font-size="3" text-anchor="middle">+1 MOTIVATION TO</text>
+  <text x="236" y="122.6" class="mono" font-size="3" text-anchor="middle">A TEAMMATE</text>
 </g>
 
 <line x1="12" y1="130" x2="258" y2="130" class="hair"/>

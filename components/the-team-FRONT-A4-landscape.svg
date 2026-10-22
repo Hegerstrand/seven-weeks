@@ -26,9 +26,9 @@ the-team-BACK matches and goes on the reverse.</desc>
 <text x="12" y="26" class="s" font-size="3.8" font-style="italic">One coin per row. Walk it as the track moves. At the ring, turn it over - that is a <tspan font-weight="bold">HABIT</tspan>, and it is permanent.</text>
 <text x="12" y="30" class="s" font-size="3.8" font-style="italic">The coin can walk back down afterwards. It never turns back over. The left column is what the team <tspan font-style="normal">does</tspan>; the right is what it has <tspan font-style="normal">become</tspan>, and who named it.</text>
 
-<text x="107" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
-<text x="170" y="36" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
-<text x="220.7" y="36" class="m" font-size="3" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
+<text x="107" y="37.5" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
+<text x="170" y="37.5" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
+<text x="220.7" y="37.5" class="m" font-size="2.6" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
 
 <!-- TRUST -->
 <g id="trust">

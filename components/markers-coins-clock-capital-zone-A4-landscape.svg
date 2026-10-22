@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
 <title>MARKERS - Ledger coins, Capital markers, week marker, Flex markers, Zone tiles (A4 landscape)</title>
-<desc>One sheet for every small loose piece. Top left: the 5 Ledger coins, track face above, Habit face below (17 mm discs, text curved round the rim; the Ledger wells are 18 mm). Top middle: 5 Capital markers, one per SPECIMEN (17 mm discs, the same size as the coins; the Capital wells are 18 mm) and, standing in the left strip beside the Zone tiles, the week marker (52 x 9 mm with rounded corners, the same size as the boxes on THE CLOCK). Bottom: the 25 two-sided Zone tiles, identical to zone-tiles-A4-landscape.svg. Five two-sided Flex markers (17 mm discs, the same size as the coins, top right; the Flex well on the person board is 18 mm): the owed face is glued back to back with the given-back face. Pieces are glued to 2 mm greyboard; each coin is a front disc glued back-to-back with its Habit disc.</desc>
+<desc>One sheet for every small loose piece. Top left: the 5 Ledger coins, track face above, Habit face below (17 mm discs, text curved round the rim; the Ledger wells are 18 mm). Top middle: 5 Capital markers, one per SPECIMEN (17 mm discs, the same size as the coins; the Capital wells are 18 mm) and, standing in the left strip beside the Zone tiles, the week marker (52 x 9 mm with rounded corners, the same size as the boxes on THE CLOCK). Bottom: the 25 two-sided Zone tiles. Five two-sided Flex markers (17 mm discs, the same size as the coins, top right; the Flex well on the person board is 18 mm): the owed face is glued back to back with the given-back face. Pieces are glued to 2 mm greyboard; each coin is a front disc glued back-to-back with its Habit disc.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -140,8 +140,8 @@
 <!-- ZONE TILES -->
 <line x1="12" y1="83" x2="285" y2="83" class="h"/>
 <text x="12" y="89" class="m" font-size="3.6" letter-spacing=".8">ZONE TILES - 25 TWO-SIDED</text>
-<text x="105" y="87.5" class="s" font-size="3.2" font-style="italic">Cut along the dashed line, glue one block to each side of one piece of 2 mm greyboard, grids exactly over each other, then cut on the ticks.</text>
-<text x="105" y="91.5" class="s" font-size="3.2" font-style="italic">Put down one-person face up. Flip when a second character covers the square. Never flip back.</text>
+<text x="105" y="86.5" class="s" font-size="3.2" font-style="italic">Cut along the dashed line, glue one block to each side of one piece of 2 mm greyboard, grids exactly over each other, then cut on the ticks.</text>
+<text x="105" y="90.2" class="s" font-size="3.2" font-style="italic">Put down one-person face up. Flip when a second character covers the square. Never flip back.</text>
 
 <text x="41" y="94.8" class="m" font-size="2.8" letter-spacing=".6">FRONT - ONE-PERSON FACE</text>
 <text x="163.5" y="94.8" class="m" font-size="2.8" letter-spacing=".6">BACK - STACKED FACE</text>

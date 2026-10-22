@@ -1,5 +1,7 @@
 # Extension: Saboteur
 
+**Track:** B - additive.
+
 **Requires:** the base game (rulebook v0.31 or later). **Changes:** what happens when a
 character's Motivation reaches 0. In the base game they **quit** (§13) and the seat sits empty
 for a week before a rushed newcomer arrives. With this pack they **do not quit**: they turn

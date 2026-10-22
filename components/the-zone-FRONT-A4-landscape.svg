@@ -40,7 +40,7 @@ DEVELOPMENT instead, added to the table at week 3.</desc>
 <line x1="12" y1="20" x2="285" y2="20" class="r"/>
 
 <g transform="translate(-16,0)">
-<g class="m q" font-size="2.1" text-anchor="middle">
+<g class="m q" font-size="2.6" text-anchor="middle">
   <text x="72" y="36.5">LAPTOP</text><text x="92" y="36.5">COFFEE CUP</text><text x="112" y="36.5">CLIPBOARD</text>
   <text x="132" y="36.5">WRENCH</text><text x="152" y="36.5">CALENDAR</text>
 </g>
@@ -88,9 +88,9 @@ DEVELOPMENT instead, added to the table at week 3.</desc>
 <line x1="12" y1="158" x2="285" y2="158" class="r"/>
 <text x="12" y="166" class="m" font-size="4.4" letter-spacing="1.2">WHAT YOU CAN DO</text>
 <text x="12" y="170.5" class="s" font-size="3.8" font-style="italic">Rows are what you were trained in, columns are what you work through - a square is what <tspan font-style="normal">that</tspan> training does with <tspan font-style="normal">that</tspan> instrument.</text>
-<text x="12" y="175" class="s" font-size="3.8" font-style="italic">Each of you has this same grid on your own person board (the SPECIMEN) and marks your own squares there; the team covers them here.</text>
+<text x="12" y="175.5" class="s" font-size="3.8" font-style="italic">Each of you has this same grid on your own person board (the SPECIMEN) and marks your own squares there; the team covers them here.</text>
 <text x="12" y="180.5" class="s" font-size="3.8">You start on one square: <tspan font-weight="bold">your Head's row where it meets your Item's column</tspan>. From week 2, whoever Learns or is Taught marks their sheet, <tspan font-weight="bold">then tiles the Zone</tspan>.</text>
-<text x="12" y="186" class="s" font-size="3.4" font-style="italic">Everyone can read everyone's sheet: it is how you know who to ask, and who to teach. What the tiles pay is on THE DEVELOPMENT.</text>
+<text x="12" y="185.5" class="s" font-size="3.4" font-style="italic">Everyone can read everyone's sheet: it is how you know who to ask, and who to teach. What the tiles pay is on THE DEVELOPMENT.</text>
 
 <text x="12" y="202" class="s" font-size="3" font-style="italic">Upbringing, values and instinct are not on this board. Bourdieu's embodied capital cannot be handed over - only a training and an instrument can, and those are the two axes here.</text>
 

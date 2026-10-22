@@ -69,8 +69,7 @@ the same way the others do, and so it can carry the table-placement guide too.
 | **3** | A4 landscape | `board-3-FRONT-the-team-A4-landscape.svg` | `board-3-BACK-week-3-the-team-A4-landscape.svg` |
 | **4** | A4 landscape | `board-4-FRONT-the-zone-A4-landscape.svg` | `board-4-BACK-the-zone-A4-landscape.svg` - the introduction: every board starts on its back, this one is read first and turns over with the Project |
 | **4b** | A4 landscape, both faces on one page | `board-4b-the-zone-payoff-127x104mm-A4-landscape.svg` (Face A) | same file (Face B) - waits face down until week 3 |
-| **Zone tiles** | A4 landscape, both faces on one page | `zone-tiles-A4-landscape.svg` (left block: 25 one-person faces) | same file (right block: 25 stacked faces) - cut the sheet in half, glue one block to each side of one 2 mm greyboard, then cut along the tick marks |
-| **Markers** | A4 landscape | `markers-coins-clock-capital-zone-A4-landscape.svg` - 5 Ledger coins (track face), 5 Capital markers, the week marker, and the 25 Zone tiles (front) | same file - the 5 Habit faces of the Ledger coins, and the stacked Zone faces. Coins are two discs glued back to back; the Zone block is the same as `zone-tiles-A4-landscape.svg` |
+| **Markers** | A4 landscape | `markers-coins-clock-capital-zone-A4-landscape.svg` - 5 Ledger coins (track face), 5 Capital markers, the week marker, and the 25 Zone tiles (front) | same file - the 5 Habit faces of the Ledger coins, and the stacked Zone faces. Coins are two discs glued back to back; the Zone block is left (25 one-person faces) and right (25 stacked faces): cut the sheet in half at the dashed line, glue one block to each side of one 2 mm greyboard, then cut along the tick marks |
 
 Only board 1 needs A3 - it carries five 65 × 90 card slots, six features and the tower
 plinth. Boards 2, 3 and 4 fit A4 comfortably and printing them larger would only cost paper.

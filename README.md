@@ -14,8 +14,13 @@
   game and where it shows at the table. Print at 100% on A5, one card per page. Companion reading, not rules.
 - `scripts/balance_sim.py` - Monte Carlo balance simulator (Work cost, Adaptability, Motivation). A model of
   rulebook v0.33 with explicit assumptions at the top of the file; run `python scripts/balance_sim.py --help`.
-- `extensions/` - optional add-on modules, one subfolder per pack, cut out of the core game
-  after a playtest finding of "too complicated" (see `board-game-extension-packs` skill).
+  Extension packs are off by default; `--ext` turns them on and `--compare all` sets them against the base game
+  (see [extensions/README.md](./extensions/README.md)). `--staging v37` models the rulebook v0.37 staging (Motivation
+  week 2, Shit Happens / Adapt / pool / Hero / Workshop week 3); repeat `--sweep` for a grid over starting values.
+- `extensions/` - optional add-on modules, one subfolder per pack, on two tracks: **A, extracted**
+  from the core game after a playtest finding of "too complicated", and **B, additive** new
+  content on top of it. Index in [extensions/README.md](./extensions/README.md); see the
+  `board-game-extension-packs` skill.
 - `playtests/` - dated playtest logs: what we tested, what worked, what changed.
 
 ## Working agent & skills

@@ -103,7 +103,7 @@ on the reverse.</desc>
 <text x="19" y="263.6" class="s" font-size="4.2"><tspan font-weight="bold">Anything finished?</tspan> Put its block on the tower.</text>
 <text x="13" y="269.2" class="m" font-size="3.6">2</text>
 <text x="19" y="269.2" class="s" font-size="4.2"><tspan font-weight="bold">Move the coins</tspan>, one step each. Add Adaptability tokens.</text>
-<rect x="18" y="270.9" width="106" height="4.8" rx=".8" fill="#D3B1B1"/>
+<rect x="18" y="270.9" width="114" height="4.8" rx=".8" fill="#D3B1B1"/>
 <text x="13" y="274.8" class="m" font-size="3.6">3</text>
 <text x="19" y="274.8" class="s" font-size="4.2"><tspan font-weight="bold">The grind: everyone loses 1 Motivation.</tspan> Empty means they leave.</text>
 <text x="19" y="278.8" class="m q" font-size="2.8">+1 BACK IF THEIR NEED WAS MET</text>

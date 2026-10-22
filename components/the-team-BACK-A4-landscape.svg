@@ -44,7 +44,7 @@ same compensating scale as before, just repacked into a narrower horizontal span
 <text x="251.4" y="250" class="s" font-size="8">Everything else starts where it always was,</text>
 <text x="251.4" y="261" class="s" font-size="8">at 1. Nothing has been lost by starting small.</text>
 
-<text x="270.1" y="286" class="s" font-size="9" font-style="italic">It was counting all along.</text>
+<text x="270.1" y="271" class="s" font-size="9" font-style="italic">It was counting all along.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="10.17" y1="8.49" x2="10.17" y2="276" stroke="#6E7A54" stroke-width="1.4"/>

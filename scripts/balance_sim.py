@@ -13,6 +13,10 @@ Standard library only. Run from anywhere:
     python balance_sim.py --sweep pool_start=2,3,4 --strategies balanced
     python balance_sim.py --strategies optimal   (searches for the best policy, then plots it)
     python balance_sim.py --set weeks=7          (the printed rulebook length; any number works)
+    python balance_sim.py --ext saboteur,wolf    (the base game with these extension packs on)
+    python balance_sim.py --compare all          (base, each pack alone, then all together, side by side)
+    python balance_sim.py --staging v37 --sweep mot_start=3,4,5 --sweep pool_start=1,2,3,4 --strategies balanced,invested
+                                                 (rulebook v0.37 staging; a grid over the two starting values)
     python balance_sim.py --json out.json
     python balance_sim.py --csv results.csv     (default: balance_sim_results.csv next to this file,
                                                  plus balance_sim_results_summary.csv)
@@ -30,6 +34,21 @@ ASSUMPTIONS (places where the rulebook is silent or ambiguous; each is a switch 
   - The adapt policy cancels an Event if severity / cost >= Strategy.adapt_threshold. Severity
     values in EVENTS are rough guesses in "days of damage"; tune them first.
   - Onboarding is modelled as one day, one a week; the replacement joins at once with no penalty.
+
+EXTENSION PACKS (game/extensions/). Each is one switch on Rules, OFF by default: with every switch off the
+model is the base game, game for game, for a given seed. Turn packs on with --ext, compare them with --compare.
+    wolf              the-wolf. THE WOLF goes back into the deck; each step-up costs wolf_escalate more Motivation.
+    saboteur          saboteur. A character on 0 Motivation turns Saboteur (stays out of the plan, one hostile act a week)
+                      instead of quitting. The Hero win-back route is not modelled (needs Support / Own It on the Saboteur).
+                      Standing ignores a Saboteur's Capital. saboteur_penalty is the draft addendum's 10; a quit costs 40.
+    sixth_seat        the-sixth-seat. An Estimator forecasts a banking week per feature before week 1 (a missed one costs
+                      Trust; the Estimator's own Capital reward is not modelled) and answers a quit: sixth_replace =
+                      onboarding | bench | alumnus | contractor | short, sixth_handover for the free Zone square.
+    feature_quality   feature-quality-uncertainty. Hidden feature Quality, the Unclear flag, UNCLEAR REQUIREMENT and
+                      SURPRISE AUDIT in the deck. How Quality falls to Low (a NEGATIVE FEEDBACK with no Demo that week),
+                      and both Events' costs, are guesses. The Quality Torso's block / Trust tendency is not modelled.
+    performance_review  NOT modelled: the pack has no card that takes Capital away yet, so there is nothing to simulate.
+Every number a pack leaves open is a Rules field (wolf_*, saboteur_*, sixth_*, fq_*). They are guesses; change them.
 """
 from __future__ import annotations
 
@@ -47,7 +66,7 @@ import sys
 import time
 from collections import Counter, defaultdict
 from dataclasses import asdict, dataclass, field, fields, replace
-from itertools import combinations
+from itertools import combinations, product
 
 # --------------------------------------------------------------------------------------
 # Rules (every constant the rulebook states; override with --set name=value)
@@ -116,7 +135,7 @@ class Rules:
     dependable_cost: int = 2                    # Take One For The Team (Dependable only): Motivation paid for +1 Trust and +1 Capital
     combos_from_week: int = 1
     threshold_base: int = 75                    # lower line: 75 + 5 x 5 players = 100 (set by hand; random play is no longer a reference)
-    threshold_high_base: int = 125              # upper line: 125 + 5 x 5 players = 150
+    threshold_high_base: int = 125              # upper line: 125 + 5 x 5 players = 150 (--staging v37 sets 135, so 160)
     threshold_per_player: int = 5
     habit_score: int = 12                       # Team Score per Habit held at the end (5 Habits = up to 60)
     feature_value: int = 12
@@ -139,6 +158,39 @@ class Rules:
     stand_cost: int = 2
     habit_cancel: bool = False                  # a held Habit cancels one Event of its category a week, free
     standing_live: bool = True
+
+    # Staging: the week each system opens. The defaults are the old staging; --staging v37 sets the rulebook v0.37 ones.
+    grind_from_week: int = 1                    # the weekly grind starts costing Motivation
+    celebrate_from_week: int = 1                # the Celebrate card opens
+    take_one_from_week: int = 1                 # Take One For The Team (Dependable) opens
+    tokens_from_week: int = 1                   # Workshop, Reflect and Demo tokens, and Reflect's Team Reflexivity wells, count from this week
+    pool_open_week: int = 1                     # the adapt pool exists from this week and holds pool_start tokens when it opens (0 before)
+    overtime_from_week: int = 1                 # Overtime and the Flex marker open
+    work_cost_mult: float = 1.0                 # every feature's Work Cost times this, rounded half up
+    feature_costs: str = ""                     # explicit Work Costs for A-F, dash separated, e.g. 3-4-4-3-2-2 (empty = the FEATURES table below)
+
+    # Extension packs (game/extensions/). All off = the base game. --ext turns them on, or --set ext_wolf=1.
+    ext_wolf: bool = False                      # the-wolf: THE WOLF is shuffled back after it resolves; each step-up costs more
+    ext_saboteur: bool = False                  # saboteur: 0 Motivation turns a character Saboteur instead of making them quit
+    ext_sixth_seat: bool = False                # the-sixth-seat: an Estimator forecasts before week 1 and answers a quit
+    ext_feature_quality: bool = False           # feature-quality-uncertainty: hidden feature Quality, Unclear, two more Events
+    ext_performance_review: bool = False        # performance-review: not modelled (no trigger card yet), refused at start-up
+    wolf_escalate: int = 1                      # the-wolf: Motivation each earlier step-up adds to the next one
+    saboteur_penalty: int = 10                  # saboteur: Team Score lost per character still turned at the end (draft addendum: 10)
+    saboteur_winback_trust: int = 3             # saboteur: Trust needed, with an Engagement and a Celebrate, to win a Saboteur back
+    saboteur_winback_mot: int = 2               # saboteur: Motivation a won-back character returns on
+    saboteur_keep_tokens: int = 2               # saboteur: the team pays 1 token to cancel an Obstruct only while the pool holds this many
+    sixth_replace: str = "bench"                # the-sixth-seat, the answer to a quit: onboarding | bench | alumnus | contractor | short
+    sixth_join_week: int = 0                    # the-sixth-seat: 0 = the Estimator stays on the bench; n = joins as a sixth character in week n
+    sixth_bench_mot: int = 3                    # the-sixth-seat: Motivation a character stepping in from the bench starts on (base: 5)
+    sixth_handover: bool = False                # the-sixth-seat: a leaver hands one Zone square to a teammate for free
+    sixth_forecast: bool = True                 # the-sixth-seat: the Estimator forecasts a banking week for every feature
+    sixth_forecast_rate: int = 3                # the-sixth-seat: Work a week the Estimator assumes the team makes
+    sixth_forecast_slack: int = 1               # the-sixth-seat: weeks the Estimator adds on top
+    sixth_forecast_penalty: int = 1             # the-sixth-seat: Trust lost for a feature not banked by its forecast week
+    sixth_contract_cost: int = 2                # the-sixth-seat: adapt tokens a Contractor costs
+    sixth_contract_weeks: int = 2               # the-sixth-seat: weeks a Contractor stays
+    fq_unclear_cost: int = 1                    # feature-quality: Work added to a feature when UNCLEAR REQUIREMENT flags it
 
 
 # --------------------------------------------------------------------------------------
@@ -224,6 +276,41 @@ EVENTS = [
     Ev("SHAKY GROUND", "E", 3, "Engage", sev=2.0),
 ]
 
+# Events the feature-quality pack adds to the deck. The addendum prints no cost or Torso line, so both are guesses.
+FQ_EVENTS = [
+    Ev("UNCLEAR REQUIREMENT", "C", 2, "Analyze", torso=False, sev=1.5),
+    Ev("SURPRISE AUDIT", "M", 2, None, torso=False, sev=1.0),
+]
+
+# Pack name (as typed after --ext / --compare) -> the Rules switch it turns on
+EXT_PACKS = {"wolf": "ext_wolf", "saboteur": "ext_saboteur", "sixth_seat": "ext_sixth_seat",
+             "feature_quality": "ext_feature_quality", "performance_review": "ext_performance_review"}
+EXT_MODELLED = ["wolf", "saboteur", "sixth_seat", "feature_quality"]
+EXT_ALIASES = {"the_wolf": "wolf", "the_sixth_seat": "sixth_seat", "feature_quality_uncertainty": "feature_quality"}
+SIXTH_REPLACE = ("onboarding", "bench", "alumnus", "contractor", "short")
+
+# --staging bundles. v37 = rulebook v0.37: week 1 is the project, week 2 the team and Motivation, week 3 Shit Happens,
+# Adapt, the pool, the Hero and the Workshop, week 4 Overtime. mot_start 5 and pool_start 3 held in the 2026-10-21 grid.
+# feature_costs is the 24-Work table now printed on the Project cards (A4 B5 C5 D4 E3 F3; the old cards were 3-4-4-3-2-2, the older
+# FEATURES table below 3-3-3-4-2-3). threshold_high_base 135 puts the upper line at 160, where 80% of optimal play reaches it.
+STAGINGS = {
+    "v37": {"grind_from_week": 2, "need_from_week": 2, "celebrate_from_week": 2, "take_one_from_week": 2, "combos_from_week": 2,
+            "events_from_week": 3, "workshop_from_week": 3, "tokens_from_week": 3, "pool_open_week": 3, "pool_start": 3,
+            "overtime_from_week": 4, "feature_costs": "4-5-5-4-3-3", "threshold_high_base": 135},
+}
+
+
+def feature_costs(rules: Rules) -> dict:
+    base = {k: v[0] for k, v in FEATURES.items()}
+    if rules.feature_costs:
+        base = dict(zip(FEATURES, (int(x) for x in rules.feature_costs.split("-"))))
+    return {k: max(1, int(c * rules.work_cost_mult + 0.5)) for k, c in base.items()}
+
+
+def active_packs(rules: Rules) -> list:
+    return [p for p, f in EXT_PACKS.items() if getattr(rules, f)]
+
+
 # Removal preference when an Event takes one of the week's cards away.
 REMOVE_ORDER = ["Workshop", "Learn", "Reflect", "Plan", "Demo", "Teach", "Celebrate", "Work"]
 
@@ -306,6 +393,9 @@ class Char:
         self.cross_trained = False
         self.cap_gain_week = 0
         self.q_streak = 0
+        self.temp_until = 0                  # the-sixth-seat Contractor: last week they work (0 = a permanent character)
+        self.sab = False                     # saboteur: turned
+        self.sab_since = 0
 
 
 class Week:
@@ -344,6 +434,7 @@ class Week:
         self.mot_adj: dict = defaultdict(int)
         self.survivors: list = []
         self.carry_next: str | None = None
+        self.cleared = False                 # feature-quality: an Unclear flag was cleared this week
 
 
 class Game:
@@ -355,8 +446,9 @@ class Game:
         for c in self.chars:
             c.mot = rules.mot_start
         self.next_id = rules.players
+        costs = feature_costs(rules)
         self.feat = {
-            k: {"cost": v[0], "cx": v[1], "dep": v[2], "work": 0, "banked": False}
+            k: {"cost": costs[k], "cx": v[1], "dep": v[2], "work": 0, "banked": False, "q": "M", "known": False, "unclear": False}
             for k, v in FEATURES.items()
         }
         self.tiles: dict = {}
@@ -365,10 +457,10 @@ class Game:
             self.tiles[sq] = self.tiles.get(sq, 0) + 1
         self.trust = self.cap = self.sp = rules.ledger_start
         self.standing = 0
-        self.pool = rules.pool_start
+        self.pool = rules.pool_start if rules.pool_open_week <= 1 else 0
         self.habits: dict = {}
         self.wells: set = set()
-        self.deck = EVENTS[:]
+        self.deck = EVENTS[:] + (FQ_EVENTS if rules.ext_feature_quality else [])
         rng.shuffle(self.deck)
         self.flex_owed = 0
         self.max_flex = 0
@@ -381,6 +473,19 @@ class Game:
         self.vacant = 0                      # seats left empty by quits, filled one per Onboarding card played
         self.carry: str | None = None
         self.quits = 0
+        # extension packs: all of this stays empty or zero with every pack off
+        self.turned: list = []               # saboteur: characters turned Saboteur (out of the plan, still in the game)
+        self.arrive: list = []               # replacements decided at step 7, seated after the week's knock-on Motivation loss
+        self.bench = 1 if (rules.ext_sixth_seat and rules.sixth_replace == "bench" and not rules.sixth_join_week) else 0
+        self.sixth_in = 0                    # 1 once the Estimator has joined the plan as a sixth character
+        self.closed = 0                      # seats closed for good (sixth_replace = short)
+        self.wolf_steps = 0                  # times the team has stepped up against THE WOLF
+        self.forecast: dict = {}             # the-sixth-seat: feature -> the week the Estimator said it would be banked
+        if rules.ext_sixth_seat and rules.sixth_forecast:
+            cum = 0
+            for k in ("B", "C", "A", "E", "D", "F"):
+                cum += self.feat[k]["cost"]
+                self.forecast[k] = min(rules.weeks, -(-cum // rules.sixth_forecast_rate) + rules.sixth_forecast_slack)
         self.m: dict = defaultdict(float)
         self.mot_week_mean: list = []
         self.mot_week_min: list = []
@@ -442,7 +547,7 @@ class Game:
         return out
 
     def plan_target(self):
-        cands = [k for k in self.candidates() if self.feat[k]["cx"] != "L"]
+        cands = [k for k in self.candidates() if self.feat[k]["cx"] != "L" and not self.feat[k]["unclear"]]
         if not cands:
             return None
         return min(cands, key=lambda k: (0 if k in ("B", "C") else 1, self.remaining(k)))
@@ -619,6 +724,8 @@ class Game:
         return cap
 
     def celebrate_worth(self, w: int, plan: list) -> bool:
+        if w < self.R.celebrate_from_week:
+            return False
         if self.celebrated_prev and self.R.celebrate_repeat >= self.R.celebrate_banked:
             return False
         if self.bank_expected(plan):
@@ -678,7 +785,7 @@ class Game:
         R, st = self.R, self.st
         self.m["empty_seat_weeks"] += self.vacant
         if st.random_play:
-            open_cards = ["Work", "Work", "Engagement", "Celebrate"]
+            open_cards = ["Work", "Work", "Engagement"] + (["Celebrate"] if w >= R.celebrate_from_week else [])
             if self.vacant:
                 open_cards.append("Onboarding")
             if R.workshop_from_week <= w:
@@ -702,11 +809,12 @@ class Game:
         wanted = []
         if (min(mots) <= st.celebrate_min or statistics.mean(mots) <= st.celebrate_mean or (
                 st.celebrate_every and w % st.celebrate_every == 0)) and not (
-                self.celebrated_prev and R.celebrate_repeat >= R.celebrate_banked):
+                self.celebrated_prev and R.celebrate_repeat >= R.celebrate_banked) and w >= R.celebrate_from_week:
             wanted.append("Celebrate")
         if self.trust < st.trust_goal:
             wanted.append("Engagement")
-        if R.workshop_from_week <= w < R.cards_from_week and self.pool < st.pool_goal and self.can_workshop():
+        # the first week the Workshop is open it goes in ahead of Learn, Teach, Reflect and Plan (week 1 before v0.37, week 3 after)
+        if R.workshop_from_week <= w < max(R.cards_from_week, R.workshop_from_week + 1) and self.pool < st.pool_goal and self.can_workshop():
             wanted.append("Workshop")
         if w >= R.cards_from_week:
             for k in range(st.learn):
@@ -720,7 +828,7 @@ class Game:
                 wanted.append("Reflect")
         if w >= R.plan_from_week and st.plan and self.sp > R.plan_dead_at and self.plan_target():
             wanted.append("Plan")
-        if w >= R.cards_from_week:
+        if w >= max(R.cards_from_week, R.workshop_from_week):
             if self.pool < st.pool_goal and self.can_workshop():
                 wanted.append("Workshop")
         if w >= R.demo_from_week and st.demo and self.chars:
@@ -799,7 +907,7 @@ class Game:
                 if c.flex:
                     c.flex = False
                     break
-        if w in st.overtime_weeks and self.flex_owed == 0:
+        if w in st.overtime_weeks and self.flex_owed == 0 and w >= R.overtime_from_week:
             who = [c for c in self.chars if not c.flex and c.mot >= 3]
             if who:
                 c = max(who, key=lambda x: x.mot)
@@ -813,10 +921,10 @@ class Game:
 
     # ------------------------------------------------------------------ events
 
-    def draw(self, w: int):
+    def draw(self, w: int, extra: int = 0):
         if w < self.R.events_from_week:
             return []
-        n = min(self.R.events_per_week, len(self.deck))
+        n = min(self.R.events_per_week + extra, len(self.deck))
         evs, held = [], []
         while len(evs) < n and self.deck:
             e = self.deck.pop()
@@ -847,11 +955,12 @@ class Game:
         R = self.R
         if not self.chars or any(c.mot - R.align_cost < 1 for c in self.chars):
             self.m["workshop_dead"] += 1
-            return
+            return False
         for c in self.chars:
             self.add_mot(c, -R.align_cost, "workshop")
         self.w.adds += R.align_tokens
         self.m["tokens_workshop"] += R.align_tokens
+        return True
 
     def pick_stand(self, ev: Ev):
         ok = [c for c in self.chars if not c.stand_used and TORSO_CAT.get(c.torso) == ev.cat
@@ -972,7 +1081,7 @@ class Game:
             self.m["ev_landed|" + n] += 1
             self.m["ev_landed_w%d|%s" % (w, n)] += 1
             if n == "THE WOLF":
-                self.resolve_wolf()
+                self.resolve_wolf(e)
                 continue
             if not (n == "THE AUDIT" and "Workshop" in plan):
                 self.apply_mot(e)
@@ -1010,6 +1119,8 @@ class Game:
                     self.m["rework_lost"] += 2
                     if f["work"] < f["cost"]:
                         f["banked"] = False
+                    if R.ext_feature_quality and "Demo" not in plan:
+                        f["q"] = "L"
             elif n == "SCOPE CREEP":
                 avail = [k for k, f in self.feat.items() if not f["banked"]]
                 if avail:
@@ -1053,25 +1164,42 @@ class Game:
                 W.one_per = True
             elif n == "SHAKY GROUND":
                 self.lower("cap")
+            elif n == "UNCLEAR REQUIREMENT":
+                avail = [k for k, f in self.feat.items() if not f["banked"] and not f["unclear"]]
+                if avail:
+                    k = max(avail, key=lambda x: self.remaining(x))
+                    self.feat[k]["unclear"] = True
+                    self.feat[k]["cost"] += R.fq_unclear_cost
+                    self.m["cost_added"] += R.fq_unclear_cost
+                    self.m["x_fq_unclear"] += 1
+            elif n == "SURPRISE AUDIT":
+                self.surprise_audit()
 
-    def resolve_wolf(self):
+    def resolve_wolf(self, e: Ev):
         if not self.chars:
             return
         top = max(c.capital for c in self.chars)
         if top <= 0:
-            return
+            return                                    # the-wolf: nobody left worth taking, so it is not shuffled back
         shepherd = self.rng.choice([c for c in self.chars if c.capital == top])
         mean_mot = statistics.mean(c.mot for c in self.chars)
-        step = self.st.wolf == "always" or (self.st.wolf == "if_mot" and mean_mot >= 3)
+        cost = 1 + self.R.wolf_escalate * self.wolf_steps if self.R.ext_wolf else 1
+        # the base game steps up at a mean of 3: 2 + cost, with the base cost of 1
+        step = self.st.wolf == "always" or (self.st.wolf == "if_mot" and mean_mot >= 2 + cost)
         if step:
             shepherd.capital = min(self.R.capital_cap, shepherd.capital + 1)
             for c in self.chars:
-                self.w.ev_loss[c.id] += 1
-                self.w.ev_by[c.id]["THE WOLF"] += 1
+                self.w.ev_loss[c.id] += cost
+                self.w.ev_by[c.id]["THE WOLF"] += cost
             self.m["wolf_stepped_up"] += 1
+            self.m["x_wolf_stepup_cost"] += cost
+            self.wolf_steps += 1
         else:
             shepherd.capital = 0
             self.m["wolf_capital_erased"] += 1
+        if self.R.ext_wolf:
+            self.deck.insert(self.rng.randrange(len(self.deck) + 1), e)
+            self.m["x_wolf_returns"] += 1
 
     # ------------------------------------------------------------------ the week runs
 
@@ -1084,6 +1212,7 @@ class Game:
         W = self.w
         return min(cands, key=lambda k: (
             0 if (W.dashboard and self.feat[k]["cx"] == "L") else 1,
+            self.forecast.get(k, 0),                  # the-sixth-seat: the feature due soonest goes first (0 = no forecast)
             0 if k in ("B", "C") else 1,
             self.remaining(k, pending)))
 
@@ -1095,6 +1224,7 @@ class Game:
             t = self.plan_target()
             if t:
                 plan_f = t
+                self.feat[t]["known"] = True               # feature-quality: Plan reveals the feature's Quality
                 if self.feat[t]["cx"] == "H":
                     W.carry_next = t
         pending: Counter = Counter()
@@ -1115,7 +1245,7 @@ class Game:
                     out += 1
                 if idx >= 2 and self.s0 >= R.sp_bonus_at:
                     out += 1
-                if self.feat[f]["cx"] != "L" and (f == plan_f or f == self.carry):
+                if self.feat[f]["cx"] != "L" and (f == plan_f or f == self.carry) and not self.feat[f]["unclear"]:
                     out += R.plan_bonus
                     self.m["plan_extra_work"] += R.plan_bonus
                 if W.dashboard and self.feat[f]["cx"] != "L":
@@ -1175,7 +1305,8 @@ class Game:
             self.m["celebrates"] += 1
         for card in plan:
             if card == "Workshop":
-                self.do_workshop()
+                if self.do_workshop() and R.ext_feature_quality:
+                    self.clear_unclear(1)
         for _ in range(plan.count("Learn")):
             self.do_learn()
         n_teach = plan.count("Teach")
@@ -1189,13 +1320,17 @@ class Game:
             elig = [c for c in self.chars if c.capital >= self.team_avg_capital()]
             if elig:
                 tgt = min(elig, key=lambda c: c.capital)
-                self.gain_capital(tgt, 1)
-                W.mot_adj[tgt.id] += 1
-                W.adds += 1
-                self.m["tokens_demo"] += 1
+                if R.ext_feature_quality and self.demo_reveal():
+                    tgt.capital = max(0, tgt.capital - 1)   # the pack: a Demo that shows Low Quality costs the presenter Capital instead
+                    self.m["x_fq_demo_low"] += 1
+                else:
+                    self.gain_capital(tgt, 1)
+                    W.mot_adj[tgt.id] += 1
+                    W.adds += 1
+                    self.m["tokens_demo"] += 1
         for _ in range(min(1, plan.count("Reflect"))):
-            self.do_reflect(newly)
-        if st.take_one and not W.coord and not W.trust_boost and self.t0 < st.trust_goal:
+            self.do_reflect(newly, w)
+        if st.take_one and not W.coord and not W.trust_boost and self.t0 < st.trust_goal and w >= R.take_one_from_week:
             def floor(c):
                 # the Need can cancel the grind from week 1, but it is not guaranteed, so keep one spare point
                 return R.dependable_cost + 1
@@ -1209,7 +1344,7 @@ class Game:
                 self.trust = min(R.ledger_max, self.trust + 1)
                 self.gain_capital(c, 1)
 
-    def do_reflect(self, newly: list):
+    def do_reflect(self, newly: list, w: int):
         R, W, st = self.R, self.w, self.st
         if self.t0 < R.reflect_trust:
             self.m["reflect_dead"] += 1
@@ -1231,7 +1366,7 @@ class Game:
             wells.append("STRAT")
         if p["process"] and "PROC" not in self.wells:
             wells.append("PROC")
-        if wells and "TR" not in self.habits:
+        if wells and "TR" not in self.habits and w >= R.tokens_from_week:
             self.wells.add(wells[0])
             self.m["tokens_banked_tr"] += 1
         W.adds += 1
@@ -1255,6 +1390,8 @@ class Game:
             self.feat[k]["banked"] = True
             W.banked.append(k)
             self.last_bank_week = w
+        if self.forecast:
+            self.check_forecast(w)
         if w >= 2:
             if W.trust_up:
                 self.trust = min(R.ledger_max, self.trust + 1)
@@ -1269,10 +1406,12 @@ class Game:
             self.standing = max(c.capital for c in self.chars)
         if self.standing >= R.habit_at:
             self.flip("AV", w)
+        adds = W.adds if w >= R.tokens_from_week else 0          # tokens earned before the pool opens were never counted
+        self.m["tokens_unseen"] += W.adds - adds
         room = R.pool_cap - self.pool
-        self.m["tokens_wasted_cap"] += max(0, W.adds - room)
-        self.pool = min(R.pool_cap, self.pool + W.adds)
-        self.m["tokens_earned"] += W.adds
+        self.m["tokens_wasted_cap"] += max(0, adds - room)
+        self.pool = min(R.pool_cap, self.pool + adds)
+        self.m["tokens_earned"] += adds
         if len(self.wells) >= R.tr_wells:
             self.flip("TR", w)
         if w >= R.combos_from_week:
@@ -1316,7 +1455,7 @@ class Game:
         if t == "Community":
             return any(x in plan for x in ("Engagement", "Reflect"))
         if t == "Quality":
-            return W.work_added or (self.demo_meets_quality() and "Demo" in plan)
+            return W.work_added or (self.demo_meets_quality() and "Demo" in plan) or W.cleared
         return bool(W.banked) or c.id in W.hero_by or "Demo" in plan
 
     def legs_delta(self, c: Char, w: int) -> int:
@@ -1350,7 +1489,7 @@ class Game:
         for c in list(self.chars):
             d = 0
             neg: dict = {}
-            if c.base != "Sheltered":
+            if c.base != "Sheltered" and w >= R.grind_from_week:
                 d -= R.grind
                 neg["the weekly grind"] = R.grind
                 self.mot_flow["grind"] -= R.grind
@@ -1442,7 +1581,6 @@ class Game:
         for c in quitters:
             if c in self.chars:
                 self.chars.remove(c)
-                self.quits += 1
                 self.m["quit_cause_" + causes.get(c.id, "the burnout Event")] += 1
                 look = Counter()
                 for src in (W.ev_by, self.prev_ev_by):
@@ -1468,11 +1606,185 @@ class Game:
                     if c.q_streak >= 2:
                         self.m["quality_quit_multiweek"] += 1
                 self.m["quit_week_%d" % w] += 1
-                self.vacant += 1
+                self.answer_leaver(c, w)
         if R.quit_mot_cost and quitters:
-            gone = sum(1 for c in quitters if c not in self.chars)
+            gone = sum(1 for c in quitters if c not in self.chars and not c.sab)
             for c in self.chars:
                 self.add_mot(c, -R.quit_mot_cost * gone, "quit_knock_on")
+        for mot, until in self.arrive:
+            self.add_char(mot).temp_until = until
+        self.arrive = []
+        if R.ext_saboteur and self.turned:
+            self.win_back(w)
+
+    # ------------------------------------------------------------------ extension packs
+
+    def add_char(self, mot: int) -> Char:
+        c = Char(self.rng, self.next_id)
+        self.next_id += 1
+        c.mot = mot
+        self.chars.append(c)
+        sq = next(iter(c.squares))
+        self.tiles[sq] = self.tiles.get(sq, 0) + 1
+        return c
+
+    def answer_leaver(self, c: Char, w: int):
+        """Someone's Motivation hit 0. The base game: they quit, and the seat stays empty until the Onboarding card is laid."""
+        R = self.R
+        if R.ext_saboteur:
+            c.sab, c.sab_since, c.mot = True, w, 0
+            self.turned.append(c)
+            self.m["x_sab_turned"] += 1
+            return
+        self.quits += 1
+        if not R.ext_sixth_seat:
+            self.vacant += 1
+            return
+        if R.sixth_handover:
+            self.handover(c)
+        mode, stepped = R.sixth_replace, False
+        if mode in ("bench", "alumnus") and self.bench > 0:
+            self.bench -= 1
+            self.arrive.append((R.sixth_bench_mot, 0))
+            self.m["x_bench_stepin"] += 1
+            stepped = True
+        if mode == "alumnus":
+            self.bench += 1                           # the one who left keeps their chair as the Estimator
+        if stepped:
+            return
+        if mode == "contractor" and self.pool >= R.sixth_contract_cost:
+            self.pool -= R.sixth_contract_cost
+            self.arrive.append((R.mot_start, w + R.sixth_contract_weeks))
+            self.m["x_contractors"] += 1
+            return
+        if mode == "short":
+            self.closed += 1
+            self.m["x_seats_closed"] += 1
+            return
+        self.vacant += 1
+
+    def handover(self, leaver: Char):
+        """the-sixth-seat: before they go, the leaver hands one Zone square to the teammate with the fewest, with no Teach card."""
+        heirs = [c for c in self.chars if c is not leaver]
+        if not heirs:
+            return
+        heir = min(heirs, key=lambda c: len(c.squares))
+        opts = leaver.squares - heir.squares
+        if not opts:
+            return
+        self.zone_add(heir, max(opts, key=lambda s: self.score_square(s, heir)))
+        self.m["x_handover"] += 1
+
+    def sixth_seat_week(self, w: int):
+        """the-sixth-seat, start of a week: a Contractor whose term is over leaves; a sixth character may join the plan."""
+        R = self.R
+        for c in [x for x in self.chars if x.temp_until and w > x.temp_until]:
+            self.chars.remove(c)
+            self.m["x_contractors_left"] += 1
+        if R.sixth_join_week and w == R.sixth_join_week and not self.sixth_in:
+            self.add_char(R.mot_start)
+            self.sixth_in = 1
+            self.m["x_sixth_joined"] += 1
+
+    def check_forecast(self, w: int):
+        """the-sixth-seat: a feature due this week that is not banked costs the team Trust (the forecast is never changed)."""
+        for k, due in self.forecast.items():
+            if due != w:
+                continue
+            if self.feat[k]["banked"]:
+                self.m["x_forecast_hit"] += 1
+            else:
+                self.m["x_forecast_miss"] += 1
+                self.trust = max(0, self.trust - self.R.sixth_forecast_penalty)
+
+    def saboteur_actions(self, w: int, plan: list) -> int:
+        """saboteur: each Saboteur does one thing after Plan the week and before Shit Happens, never the same one twice.
+        Returns the extra Events to draw. Order of preference is a guess: Obstruct, Pile on, Spread doubt."""
+        R, taken, extra = self.R, set(), 0
+        for s in self.turned:
+            options = []
+            if "Work" in plan:
+                options.append("obstruct")
+            if w >= R.events_from_week:
+                options.append("pile")
+            options.append("doubt")
+            pick = next((o for o in options if o not in taken), None)
+            if pick is None:
+                continue
+            taken.add(pick)
+            if pick == "obstruct":
+                if self.pool >= R.saboteur_keep_tokens:
+                    self.pool -= 1
+                    self.m["x_sab_obstruct_paid"] += 1
+                else:
+                    plan.remove("Work")
+                    self.m["x_sab_obstruct"] += 1
+            elif pick == "pile":
+                extra += 1
+                self.m["x_sab_pile"] += 1
+            else:
+                self.trust = max(0, self.trust - 1)
+                self.m["x_sab_doubt"] += 1
+        return extra
+
+    def win_back(self, w: int):
+        """saboteur: an Engagement and a Celebrate in the same week, with Trust high enough, win every earlier Saboteur back."""
+        R = self.R
+        if not ("Engagement" in self.plan_now and "Celebrate" in self.plan_now and self.trust >= R.saboteur_winback_trust):
+            return
+        for s in [x for x in self.turned if x.sab_since < w]:
+            self.turned.remove(s)
+            s.sab = False
+            s.mot = R.saboteur_winback_mot
+            self.chars.append(s)
+            self.m["x_sab_won_back"] += 1
+
+    def clear_unclear(self, n: int):
+        """feature-quality: clear up to n Unclear flags."""
+        for f in self.feat.values():
+            if n and f["unclear"]:
+                f["unclear"] = False
+                n -= 1
+                self.w.cleared = True
+                self.m["x_fq_cleared"] += 1
+
+    def demo_reveal(self) -> bool:
+        """feature-quality: a Demo reveals one feature's Quality and clears its Unclear flag. True if it showed Low:
+        the feature loses 1 Work and is reworked back to Medium. Target: an Unclear feature, else the one with most Work."""
+        live = [k for k, f in self.feat.items() if not f["banked"]]
+        if not live:
+            return False
+        unclear = [k for k in live if self.feat[k]["unclear"]]
+        f = self.feat[unclear[0] if unclear else max(live, key=lambda x: self.feat[x]["work"])]
+        f["known"] = True
+        if f["unclear"]:
+            f["unclear"] = False
+            self.w.cleared = True
+            self.m["x_fq_cleared"] += 1
+        if f["q"] == "L":
+            f["work"] = max(0, f["work"] - 1)
+            f["q"] = "M"
+            return True
+        return False
+
+    def surprise_audit(self):
+        """feature-quality: reveal every feature, clear every Unclear flag; a feature first shown Low loses 1 Work, adjusted
+        by Complexity (Low -1, High +1). A team holding Shared Repertoire ignores the card."""
+        if "SR" in self.habits:
+            return
+        for f in self.feat.values():
+            if f["unclear"]:
+                f["unclear"] = False
+                self.w.cleared = True
+                self.m["x_fq_cleared"] += 1
+            if not f["known"] and f["q"] == "L":
+                loss = max(0, 1 + {"L": -1, "M": 0, "H": 1}[f["cx"]])
+                f["work"] = max(0, f["work"] - loss)
+                self.m["rework_lost"] += loss
+                self.m["x_fq_audit_low"] += 1
+                if f["banked"] and f["work"] < f["cost"]:
+                    f["banked"] = False
+            f["known"] = True
 
     # ------------------------------------------------------------------ driver
 
@@ -1487,6 +1799,10 @@ class Game:
         self.w = Week()
         self.t0, self.c0, self.s0 = self.trust, self.cap, self.sp
         self.cancelled_any = False
+        if self.R.pool_open_week > 1 and w == self.R.pool_open_week:
+            self.pool = self.R.pool_start
+        if self.R.ext_sixth_seat:
+            self.sixth_seat_week(w)
 
     def run(self) -> dict:
         R = self.R
@@ -1498,7 +1814,8 @@ class Game:
             self.evidence_week.append({k: int(bool(v)) for k, v in self.prev.items()})
             plan = self.plan_week(w)
             self.plan_now = plan
-            evs = self.draw(w)
+            extra = self.saboteur_actions(w, plan) if R.ext_saboteur else 0
+            evs = self.draw(w, extra)
             before = Counter(self.cancel_by)
             self.adapt(w, evs)
             self.cancel_week.append(dict(self.cancel_by - before))
@@ -1558,12 +1875,14 @@ class Game:
         low_tracks = sum(1 for v in (self.trust, self.cap, self.sp) if v <= R.low_band)
         score = (banked * R.feature_value + self.trust + self.cap + self.sp + self.pool
                  + sum(c.mot for c in self.chars) - R.quit_penalty * self.quits - R.flex_penalty * flex
+                 - R.saboteur_penalty * len(self.turned)
                  - R.low_track_penalty * low_tracks + R.habit_score * len(self.habits))
         if banked < len(self.feat):
             score = 0                                   # an unfinished project scores nothing
         score = max(0, score)
-        threshold = R.threshold_base + R.threshold_per_player * R.players
-        threshold_high = R.threshold_high_base + R.threshold_per_player * R.players
+        seats = R.players + self.sixth_in - self.closed       # characters the table started with, less seats it closed for good
+        threshold = R.threshold_base + R.threshold_per_player * seats
+        threshold_high = R.threshold_high_base + R.threshold_per_player * seats
         if banked < len(self.feat):
             outcome = "failure"
         elif score >= threshold_high:
@@ -1573,7 +1892,7 @@ class Game:
         else:
             outcome = "heroic"
         needed = sum(f["cost"] for f in self.feat.values())
-        return {
+        res = {
             "banked": banked, "score": score, "threshold": threshold, "threshold_high": threshold_high, "outcome": outcome,
             "work_out": self.m["work_out"], "work_cards": self.m["work_cards"], "work_needed": needed,
             "work_wasted": self.m["work_cards_wasted"], "rework_lost": self.m["rework_lost"], "plan_extra_work": self.m["plan_extra_work"], "plan_skipped": self.m["plan_skipped"],
@@ -1620,6 +1939,11 @@ class Game:
             "lines_filled": self.m["lines_filled"], "stack_flips": self.m["stack_flips"],
             "zone_tiles": len(self.tiles), "squares_learned": self.m["squares_learned"],
         }
+        if active_packs(R):
+            res["turned_events"] = self.m["x_sab_turned"]
+            res["turned_end"] = len(self.turned)
+            res["ext"] = {k[2:]: v for k, v in self.m.items() if k.startswith("x_")}
+        return res
 
 
 # --------------------------------------------------------------------------------------
@@ -1676,7 +2000,7 @@ def need_rates(res: list) -> dict:
 def quit_rate(res: list) -> float:
     """Quits per 100 character-weeks."""
     weeks = sum(v for r in res for k, v in r["parts"].items() if k.startswith("torso|") and k.endswith("|weeks"))
-    return 100.0 * sum(r["quits"] for r in res) / weeks if weeks else 0.0
+    return 100.0 * sum(r["quits"] + r.get("turned_events", 0) for r in res) / weeks if weeks else 0.0
 
 
 def card_shares(res: list) -> dict:
@@ -1902,7 +2226,27 @@ def report(name: str, res: list, rules: Rules):
             print("   %-7s %-12s %9.2f %8.2f %8.2f %8.2f %8.2f%s" % (
                 "", x["value"], x["quits_per_100_char_weeks"], x["vs_average"], x["mean_motivation"],
                 x["mean_capital"], x["hero_per_100_char_weeks"], flag))
+    ext_report(res, rules)
     print()
+
+
+def ext_report(res: list, rules: Rules):
+    """One section for the extension packs that are on: every counter they keep, averaged over the games."""
+    packs = active_packs(rules)
+    if not packs:
+        return
+    n = len(res)
+    print("\n6. EXTENSION PACKS ON: %s" % ", ".join(packs))
+    agg = Counter()
+    for r in res:
+        agg.update(r.get("ext", {}))
+    for k, v in sorted(agg.items()):
+        print("   %-24s %.2f a game" % (k, v / n))
+    print("   %-24s %.2f a game   still turned at the end %.2f a game" % (
+        "turned (saboteur)", mean(r.get("turned_events", 0) for r in res), mean(r.get("turned_end", 0) for r in res)))
+    hit, miss = agg["forecast_hit"], agg["forecast_miss"]
+    if hit + miss:
+        print("   forecast hit rate %.0f%% (%d of %d features due inside the game)" % (100.0 * hit / (hit + miss), hit, hit + miss))
 
 
 def habitus_table(res: list) -> list:
@@ -1990,14 +2334,15 @@ def write_csv(path: str, dump: dict):
     for title, (rules, res) in dump.items():
         for i, r in enumerate(res):
             rows.append({"run": title, "game": i + 1, "players": rules.players, **flatten(r)})
-    cols = []
+    seen: dict = {}
     for row in rows:
         for k in row:
-            if k not in cols:
-                cols.append(k)
+            seen.setdefault(k, None)
+    cols = list(seen)
+    counter_prefixes = tuple(f + "_" for f in COUNTER_FIELDS)
 
     def blank(col):
-        return 0 if col.startswith(tuple(f + "_" for f in COUNTER_FIELDS)) else ""
+        return 0 if col.startswith(counter_prefixes) else ""
 
     with open(path, "w", newline="", encoding="utf-8") as fh:
         wr = csv.writer(fh)
@@ -2064,7 +2409,7 @@ def objective(res: list) -> float:
             + FINISH_WEIGHT * share(res, lambda r: r["banked"] == 6) - 100 * mean(r["quality_quit_nowork"] for r in res) - 60 * missing - 30 * off
             - 4.0 * sum(max(0.0, CARD_SHARE_MIN - v) for v in card_shares(res).values())
             - 6.0 * share(res, lambda r: r["score"] == 0)
-            - QUIT_WEIGHT * mean(r["quits"] for r in res) - 500 * max(0.0, quit_rate(res) - QUIT_RATE_HARD) - 0.2 * need_off
+            - QUIT_WEIGHT * mean(r["quits"] + r.get("turned_events", 0) for r in res) - 500 * max(0.0, quit_rate(res) - QUIT_RATE_HARD) - 0.2 * need_off
             - 3 * max(0.0, 50 - share(res, lambda r: "PS" in r["habits"]))
             - 0.5 * sum(max(0.0, QUIT_RATE_SOFT_MIN - v) for v in part_quit_rates(res).values()))
 
@@ -2072,9 +2417,9 @@ def objective(res: list) -> float:
 OPT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "balance_sim_optimal.json")
 
 
-def load_optimal(weeks: int) -> Strategy | None:
+def load_optimal(weeks: int, path: str = OPT_FILE) -> Strategy | None:
     try:
-        with open(OPT_FILE, encoding="utf-8") as fh:
+        with open(path, encoding="utf-8") as fh:
             d = json.load(fh)
         d["work_days"] = (tuple(d["work_days"]) + (d["work_days"][-1],) * weeks)[:weeks]
         d["overtime_weeks"] = tuple(d.get("overtime_weeks", ()))
@@ -2087,12 +2432,12 @@ def load_optimal(weeks: int) -> Strategy | None:
 
 
 def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", log: list | None = None,
-             reuse: bool = False) -> Strategy:
+             reuse: bool = False, save: bool = True, opt_file: str = OPT_FILE) -> Strategy:
     W = rules.weeks
-    saved = load_optimal(W)
+    saved = load_optimal(W, opt_file)
     if reuse and saved is not None:
         if log is not None:
-            log.append("OPTIMAL SEARCH skipped (--reuse-optimal), strategy from %s\n  %s\n" % (os.path.basename(OPT_FILE), saved))
+            log.append("OPTIMAL SEARCH skipped (--reuse-optimal), strategy from %s\n  %s\n" % (os.path.basename(opt_file), saved))
         return saved
 
     def fit(t):
@@ -2155,8 +2500,9 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
             break
     status("%s search done, obj %.1f" % (label, best_v), final=True)
     try:
-        with open(OPT_FILE, "w", encoding="utf-8") as fh:
-            json.dump(asdict(best), fh)
+        if save:
+            with open(opt_file, "w", encoding="utf-8") as fh:
+                json.dump(asdict(best), fh)
     except OSError:
         pass
     if log is not None:
@@ -3037,13 +3383,67 @@ def plot_summary(path: str, dump: dict):
         fh.write(head + "".join(out) + "</svg>\n")
 
 
+def parse_packs(text: str) -> list:
+    """'saboteur,the-wolf' -> ['saboteur', 'wolf'].  'all' = every pack that is modelled."""
+    out = []
+    for raw in (t for t in text.split(",") if t.strip()):
+        key = raw.strip().lower().replace("-", "_")
+        key = EXT_ALIASES.get(key, key)
+        for p in (EXT_MODELLED if key == "all" else [key]):
+            if p not in EXT_PACKS:
+                sys.exit("unknown extension pack %r; choose from: %s, all" % (raw.strip(), ", ".join(EXT_PACKS)))
+            if p not in out:
+                out.append(p)
+    return out
+
+
+def with_packs(rules: Rules, packs: list) -> Rules:
+    return replace(rules, **{EXT_PACKS[p]: True for p in packs})
+
+
+def check_extensions(rules: Rules):
+    if rules.ext_performance_review:
+        sys.exit("performance-review is not modelled: the pack has no card that takes Capital away yet, so there is nothing to "
+                 "simulate. Design the trigger first (game/extensions/performance-review/README.md, 'Components affected').")
+    if rules.sixth_replace not in SIXTH_REPLACE:
+        sys.exit("sixth_replace must be one of: %s" % ", ".join(SIXTH_REPLACE))
+    if rules.feature_costs and len(rules.feature_costs.split("-")) != len(FEATURES):
+        sys.exit("feature_costs needs %d dash-separated numbers for A to F, e.g. 3-4-4-3-2-2" % len(FEATURES))
+
+
+def compare_table(dump: dict, labels: list, names: list) -> str:
+    """Side by side: for each strategy, the base game then every pack variant. Same seed, so game n starts from the same
+    characters in every row (the deck differs only where a pack adds cards). 'd score' is against the first row."""
+    L = ["=" * 78, "VARIANT COMPARISON  (same seed; the first row is the reference, 'd' is against it)", "=" * 78]
+    for name in names:
+        L += ["", name, "  %-34s %6s %7s %6s %6s %7s %7s %6s %7s %7s %5s %7s" % (
+            "variant", "fail%", "heroic%", "sust%", "high%", "score", "d score", "quits", "turned", "d fail", "need", "bank wk")]
+        ref_score = ref_fail = None
+        for lab in labels:
+            title = "%s [%s]" % (name, lab)
+            if title not in dump:
+                continue
+            res = dump[title][1]
+            n = len(res)
+            out = Counter(r["outcome"] for r in res)
+            score, fail = mean(r["score"] for r in res), 100.0 * out["failure"] / n
+            if ref_score is None:
+                ref_score, ref_fail = score, fail
+            L.append("  %-34s %6.1f %7.1f %6.1f %6.1f %7.1f %+7.1f %6.2f %7.2f %+7.1f %5.1f %7.2f" % (
+                lab, fail, 100.0 * out["heroic"] / n, 100.0 * out["sustainable"] / n, 100.0 * out["thriving"] / n,
+                score, score - ref_score, mean(r["quits"] for r in res), mean(r.get("turned_events", 0) for r in res), fail - ref_fail,
+                mean(r["work_needed"] for r in res), mean(r["last_bank_week"] for r in res)))
+    L.append("")
+    return "\n".join(L)
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     ap.add_argument("--runs", type=int, default=2000)
     ap.add_argument("--players", type=int, default=5)
     ap.add_argument("--seed", type=int, default=1)
-    ap.add_argument("--strategies", default="hero,balanced,invested,random,optimal",
-                    help="comma list from: %s, optimal (optimal = searched best policy)" % ", ".join(STRATEGIES))
+    ap.add_argument("--strategies", default=None,
+                    help="comma list from: %s, optimal (optimal = searched best policy). Default: all five; with --compare, balanced,invested" % ", ".join(STRATEGIES))
     ap.add_argument("--opt-runs", type=int, default=150, help="games per candidate while searching for optimal play")
     ap.add_argument("--opt-passes", type=int, default=3, help="max search passes for optimal play")
     ap.add_argument("--reuse-optimal", action="store_true",
@@ -3055,24 +3455,61 @@ def main():
     ap.add_argument("--report", metavar="FILE", default=None,
                     help="full text report (default: the --csv name with _report.txt)")
     ap.add_argument("--set", action="append", default=[], metavar="RULE=VALUE")
-    ap.add_argument("--sweep", metavar="RULE=V1,V2,...", help="rerun every strategy for each value of one rule")
+    ap.add_argument("--sweep", metavar="RULE=V1,V2,...", action="append", default=[],
+                    help="rerun every strategy for each value of one rule; repeat the flag for a grid (every combination)")
+    ap.add_argument("--staging", choices=sorted(STAGINGS), default=None,
+                    help="the week each system opens: v37 = rulebook v0.37 (Motivation week 2, Shit Happens / Adapt / pool / Hero / Workshop week 3). "
+                         "--set still overrides it")
+    ap.add_argument("--ext", default="", metavar="PACKS",
+                    help="turn extension packs on for the whole run: %s, all (not performance-review: not modelled)" % ", ".join(EXT_MODELLED))
+    ap.add_argument("--compare", default="", metavar="PACKS",
+                    help="run the base game (all packs off), then each listed pack alone, then all of them together, and print a table. "
+                         "Use with --reuse-optimal to hold the policy fixed; without it every pack gets its own optimal search")
     ap.add_argument("--json", metavar="FILE", help="write raw per-game results")
     ap.add_argument("--csv", metavar="FILE", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "balance_sim_results.csv"),
                     help="per-game results, one row per game (default: balance_sim_results.csv beside this script)")
     a = ap.parse_args()
+    here = os.path.dirname(os.path.abspath(__file__))
+    ext_on, cmp_packs = parse_packs(a.ext), parse_packs(a.compare)
+    if a.staging or ext_on or cmp_packs:          # a run with another staging or packs on never overwrites the base-game files
+        stem = "_".join(x for x in (a.staging, "ext" if (ext_on or cmp_packs) else "") if x)
+        if a.csv == os.path.join(here, "balance_sim_results.csv"):
+            a.csv = os.path.join(here, "balance_sim_%s_results.csv" % stem)
+        if a.plots == os.path.join(here, "plots"):
+            a.plots = os.path.join(here, "plots_%s" % stem)
     if not a.report:
         a.report = os.path.splitext(a.csv)[0] + "_report.txt"
 
-    base = apply_overrides(Rules(players=a.players), a.set)
-    names = a.strategies.split(",")
+    rules0 = Rules(players=a.players)
+    if a.staging:
+        rules0 = replace(rules0, **STAGINGS[a.staging])
+    base = with_packs(apply_overrides(rules0, a.set), ext_on)
+    opt_file = OPT_FILE if not a.staging else OPT_FILE.replace(".json", "_%s.json" % a.staging)
+    names = (a.strategies or ("balanced,invested" if cmp_packs else "hero,balanced,invested,random,optimal")).split(",")
     for s in names:
         if s != "optimal" and s not in STRATEGIES:
             sys.exit("unknown strategy %r; choose from: %s, optimal" % (s, ", ".join(STRATEGIES)))
 
     variants = [("", base)]
-    if a.sweep:
-        k, _, vs = a.sweep.partition("=")
-        variants = [("%s=%s" % (k, v), apply_overrides(base, ["%s=%s" % (k, v)])) for v in vs.split(",")]
+    if cmp_packs:
+        if a.sweep:
+            sys.exit("use --compare or --sweep, not both")
+        off = replace(base, **{f: False for f in EXT_PACKS.values()})
+        variants = [("base", off)] + [("+" + p, with_packs(off, [p])) for p in cmp_packs]
+        if len(cmp_packs) > 1:
+            variants.append(("+" + "+".join(cmp_packs), with_packs(off, cmp_packs)))
+    elif a.sweep:
+        tagged = ("+" + "+".join(ext_on) + " ") if ext_on else ""
+        axes = []
+        for s in a.sweep:
+            k, _, vs = s.partition("=")
+            axes.append([(k, v) for v in vs.split(",")])
+        variants = [(tagged + " ".join("%s=%s" % kv for kv in combo), apply_overrides(base, ["%s=%s" % kv for kv in combo]))
+                    for combo in product(*axes)]
+    elif ext_on:
+        variants = [("+" + "+".join(ext_on), base)]
+    for _, rules in variants:
+        check_extensions(rules)
 
     dump = {}
     log, reports = [], []
@@ -3081,7 +3518,8 @@ def main():
         for name in names:
             step += 1
             tag = "[%d/%d] %s" % (step, steps, name + ((" " + label) if label else ""))
-            st = optimise(rules, a.opt_runs, a.opt_passes, a.seed + 777, tag, log, a.reuse_optimal) if name == "optimal" else STRATEGIES[name]
+            st = (optimise(rules, a.opt_runs, a.opt_passes, a.seed + 777, tag, log, a.reuse_optimal, save=not active_packs(rules), opt_file=opt_file)
+                  if name == "optimal" else STRATEGIES[name])
             res = simulate(rules, st, a.runs, a.seed, tag)
             title = name + ((" [" + label + "]") if label else "")
             buf = io.StringIO()
@@ -3092,7 +3530,7 @@ def main():
                 print(buf.getvalue())
             dump[title] = (rules, res)
     status("writing files...")
-    cal_text, cal_rows, cal_short = calibrate(dump) if not a.sweep else ("", [], "")
+    cal_text, cal_rows, cal_short = calibrate(dump) if len(variants) == 1 else ("", [], "")
     if cal_text:
         reports.append(cal_text)
     with open(a.report, "w", encoding="utf-8") as fh:
@@ -3116,6 +3554,11 @@ def main():
         plot_quit_triggers(os.path.join(a.plots, "quit_triggers.svg"), dump)
         plot_event_habitus(os.path.join(a.plots, "quit_event_habitus.svg"), dump)
     status("done in %.0fs" % (time.time() - t0), final=True)
+    if len(variants) > 1:
+        table = compare_table(dump, [lab for lab, _ in variants], names)
+        print(table)
+        with open(a.report, "a", encoding="utf-8") as fh:
+            fh.write("\n" + table)
     print("  report  %s" % a.report)
     if cal_short:
         print("  calibration: %s" % cal_short)

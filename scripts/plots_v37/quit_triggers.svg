@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="370" viewBox="0 0 1180 370" font-family="Arial, sans-serif">
+<rect width="1180" height="370" fill="#ffffff"/>
+<text x="20" y="30" font-size="15" font-weight="bold">optimal: what triggers quitting (quits a game, 3000 games)</text>
+<text x="20" y="52" font-size="12" fill="#555">Biggest Motivation loss behind the quit (dark: a Quality character)</text>
+<text x="294" y="74" font-size="11" text-anchor="end">a week without Work (Quality Need)</text>
+<rect x="300.0" y="62" width="200.0" height="13" fill="#08519C"/>
+<text x="504.0" y="74" font-size="10" fill="#444">0.14</text>
+<text x="294" y="91" font-size="11" text-anchor="end">the weekly grind</text>
+<rect x="300.0" y="79" width="17.9" height="13" fill="#74A9CF"/>
+<rect x="317.9" y="79" width="3.9" height="13" fill="#08519C"/>
+<text x="325.8" y="91" font-size="10" fill="#444">0.01</text>
+<text x="294" y="108" font-size="11" text-anchor="end">Events</text>
+<rect x="300.0" y="96" width="2.9" height="13" fill="#74A9CF"/>
+<rect x="302.9" y="96" width="1.0" height="13" fill="#08519C"/>
+<text x="307.9" y="108" font-size="10" fill="#444">0.00</text>
+<text x="294" y="125" font-size="11" text-anchor="end">another character's Hero</text>
+<rect x="300.0" y="113" width="2.4" height="13" fill="#74A9CF"/>
+<rect x="302.4" y="113" width="0.5" height="13" fill="#08519C"/>
+<text x="306.9" y="125" font-size="10" fill="#444">0.00</text>
+<text x="640" y="52" font-size="12" fill="#555">Event cards behind the Event quits (dark: a Quality character)</text>
+<text x="894" y="74" font-size="11" text-anchor="end">EVERYONE IS EQUAL</text>
+<rect x="900.0" y="62" width="220.0" height="13" fill="#F4A582"/>
+<text x="1124.0" y="74" font-size="10" fill="#444">0.00</text>
+<text x="894" y="91" font-size="11" text-anchor="end">BUDGET CUT</text>
+<rect x="900.0" y="79" width="220.0" height="13" fill="#F4A582"/>
+<text x="1124.0" y="91" font-size="10" fill="#444">0.00</text>
+<text x="894" y="108" font-size="11" text-anchor="end">THE DASHBOARD</text>
+<rect x="900.0" y="96" width="110.0" height="13" fill="#B2182B"/>
+<text x="1014.0" y="108" font-size="10" fill="#444">0.00</text>
+<text x="894" y="125" font-size="11" text-anchor="end">PRIORITY CHANGES</text>
+<rect x="900.0" y="113" width="110.0" height="13" fill="#B2182B"/>
+<text x="1014.0" y="125" font-size="10" fill="#444">0.00</text>
+<text x="894" y="142" font-size="11" text-anchor="end">THE AUDIT</text>
+<rect x="900.0" y="130" width="110.0" height="13" fill="#F4A582"/>
+<text x="1014.0" y="142" font-size="10" fill="#444">0.00</text>
+<text x="894" y="159" font-size="11" text-anchor="end">SHAKY GROUND</text>
+<rect x="900.0" y="147" width="110.0" height="13" fill="#F4A582"/>
+<text x="1014.0" y="159" font-size="10" fill="#444">0.00</text>
+</svg>

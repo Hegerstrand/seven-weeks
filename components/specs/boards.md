@@ -297,8 +297,8 @@ Overtime). Card slots are 65x90mm to hold a 63x88mm card. White ground, line art
 ### Illustration
 
 **Feature rows (A-F):** each is a `<g id="feature-X">` painted in this order - row border
-rect, letter, complexity diamond (dashed outline polygon), complexity label + aside, 1-3
-translucent "capacity" circles (`fill:#8B6F47;fill-opacity:.35`), the Work-cost circle (solid
+rect, letter, complexity diamond (dashed outline polygon), complexity label + aside, 1-4 (Work Cost minus one: A4 B5 C5 D4 E3 F3, since 2026-10-22)
+translucent "capacity" circles (`fill:#8B6F47;fill-opacity:.35`, 14 mm pitch from x 278), the Work-cost circle (solid
 `#5C4830`) with its number on top, and an optional "UNLOCKS" label. Rows D and F use a
 heavier red-tinted border (`#905151`, stroke-width .8) to mark them as gated/blocked; their
 complexity label drops the `.q` fill so it reads plain black instead of grey.
@@ -345,8 +345,8 @@ document order. Treat these as the logical groups for editing purposes.
 | first check | full-width band: any missing feature means a Team Score of 0 | `#D3B1B1` |
 | ADD | 4 rows (features x 12, Ledger coins + Adaptability tokens, Motivation of everyone left, Habits x 12), each with a white answer box | rows `#F2EDE0` |
 | TAKE OFF | 3 rows (quit or fired x 40, unrepaid Flex x 2, low-band Ledger tracks x 5), each with an answer box, then the TEAM SCORE total box | rows `#D3B1B1`, total `#FFFFFF` |
-| THE RESULT | 2 x 2 boxes bottom left: PROJECT FAILURE (score 0), HEROIC SUCCESS (under 100), SUSTAINABLE PERFORMANCE (100 to 149), SUSTAINABLE HIGH PERFORMANCE (150 or more) | bands `#D3B1B1`, `#F7D7A1`, `#C7CFB5`, `#B5C7CF` |
-| footnote | two italic lines: five players 100 and 150; other counts 5 x starting characters + 75 and + 125 | - |
+| THE RESULT | 2 x 2 boxes bottom left: PROJECT FAILURE (score 0), HEROIC SUCCESS (under 100), SUSTAINABLE PERFORMANCE (100 to 159), SUSTAINABLE HIGH PERFORMANCE (160 or more) | bands `#D3B1B1`, `#F7D7A1`, `#C7CFB5`, `#B5C7CF` |
+| footnote | two italic lines: five players 100 and 160; other counts 5 x starting characters + 75 and + 135 | - |
 | card stacks | "SET OUT THESE STACKS" label + 2 dashed placeholders (PROJECT CARDS 90x90mm, ACTION CARDS 65x90mm) with italic captions | dashed `.h` outline only |
 | table-placement guide | 3 coloured edge lines (teal, ochre, brown) | - |
 
@@ -359,7 +359,7 @@ document order. Treat these as the logical groups for editing purposes.
 | row labels (e.g. "Features on the Tower") | `.s` serif | 5.6 | `#000000` | row tint |
 | row notes (e.g. "Six features, 12 each. Up to 72.") | `.s` italic serif | 4 | `#000000` | row tint |
 | "THE RESULT" | `.m` mono | 6 | `#000000` | - |
-| tier names, ranges ("UNDER 100", "100 TO 149", "150 OR MORE") | `.m` mono | 5 / 7.4 | `#000000` | tier band |
+| tier names, ranges ("UNDER 100", "100 TO 159", "160 OR MORE") | `.m` mono | 5 / 7.4 | `#000000` | tier band |
 | tier taglines ("The team held together.") | `.s` serif | 4.8 | `#000000` | - |
 | "SET OUT THESE STACKS" | `.m.q` mono | 6 | `#000000` | - |
 | "PROJECT CARDS" / "pick one at setup, the rest wait here" | `.m q` / `.s q` italic | 5 / 3.6 | `#000000` | - |
@@ -632,9 +632,9 @@ thick, printed **flat on the bed, no supports**, faces as embossed 0.6mm dots or
 swap; 0.3mm tolerance on the edge so a tile can be lifted out. If cut from board: glue one
 of each face to opposite sides of 2mm greyboard.
 
-**Print sheet:** `../zone-tiles-A4-landscape.svg`, one A4 landscape page with both faces. Left
+**Print sheet:** `../markers-coins-clock-capital-zone-A4-landscape.svg`, the Zone block at the bottom of the page, with both faces. Left
 block = one-person face, right block = stacked face; each is a 5x5 block of identical 18.5mm
-squares with **no gaps**, 92.5mm square (left at x 41, right at x 163.5, both at y 58.75). Cut
+squares with **no gaps**, 92.5mm square (left at x 41, right at x 163.5, both at y 102). Cut
 the sheet in half at the dashed line (x 148.5), glue one block to each side of one greyboard
 sheet so the two blocks sit exactly over each other, then cut along the tick marks outside each
 block: one cut per shared border. Each tile has a 1mm-inset outline so a slightly off cut does

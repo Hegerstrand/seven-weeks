@@ -29,7 +29,7 @@ ASSUMPTIONS (places where the rulebook is silent or ambiguous; each is a switch 
   - Capital for a banked feature goes to one nominated character (the lowest-Capital one).
   - Standing is live (it tracks the highest Capital). Rules.standing_live = False freezes it.
   - A Capability +1 is paid only when a Zone tile is first put down, not when it flips.
-  - Legs strengths and tendencies are read once a week at step 7, from week 2.
+  - Legs strengths and tendencies are read once a week at step 7, from week 2 (instinct opens in week 2; the Hero and the Need in week 3).
   - Bookish / Hands-On Base effects apply to the character who learns / teaches.
   - The adapt policy cancels an Event if severity / cost >= Strategy.adapt_threshold. Severity
     values in EVENTS are rough guesses in "days of damage"; tune them first.
@@ -55,6 +55,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import csv
+import glob
 import io
 import json
 import math
@@ -111,9 +112,13 @@ class Rules:
     low_band: int = 1
     plan_dead_at: int = 1                       # Plan does nothing when Shared Practice is at or below this (the low band: nothing in week 1)
     demo_from_week: int = 2                     # first week the Demo card can be laid
+    demo_tokens: int = 1                        # adapt tokens a Demo adds at the close
     need_from_week: int = 1                     # first week a character's Need is read at the close
     plan_from_week: int = 1                     # first week the Plan card can be laid
     cards_from_week: int = 2                    # first week Learn, Teach and Reflect can be laid
+    learn_from_week: int = 0                    # 0 = use cards_from_week
+    teach_from_week: int = 0                    # 0 = use cards_from_week
+    reflect_from_week: int = 0                  # 0 = use cards_from_week
     quality_demo: bool = False                  # a Demo also meets the Quality Need (off: only Work meets it)
     cap_first_len: int = 5                      # tiles in a row or column that pay the FIRST Capability gain (later lines need 5)
     cap_per_tiles: int = 0                      # 0 = off; else every Nth tile on the Zone pays Capability +1
@@ -163,11 +168,13 @@ class Rules:
     grind_from_week: int = 1                    # the weekly grind starts costing Motivation
     celebrate_from_week: int = 1                # the Celebrate card opens
     take_one_from_week: int = 1                 # Take One For The Team (Dependable) opens
+    take_one_any_week: bool = False             # Take One can be played in a week with an Engagement (then it gives the Capital only)
     tokens_from_week: int = 1                   # Workshop, Reflect and Demo tokens, and Reflect's Team Reflexivity wells, count from this week
     pool_open_week: int = 1                     # the adapt pool exists from this week and holds pool_start tokens when it opens (0 before)
     overtime_from_week: int = 1                 # Overtime and the Flex marker open
     work_cost_mult: float = 1.0                 # every feature's Work Cost times this, rounded half up
     feature_costs: str = ""                     # explicit Work Costs for A-F, dash separated, e.g. 3-4-4-3-2-2 (empty = the FEATURES table below)
+    plan_carry: bool = True                     # a Plan on a High feature also pays in the next week (--staging v37 turns it off)
 
     # Extension packs (game/extensions/). All off = the base game. --ext turns them on, or --set ext_wolf=1.
     ext_wolf: bool = False                      # the-wolf: THE WOLF is shuffled back after it resolves; each step-up costs more
@@ -273,6 +280,7 @@ EVENTS = [
     Ev("OLD FOUNDATIONS", "E", 2, "Engage", sev=2.0),
     Ev("FALSE START", "E", 2, None, sev=1.0),
     Ev("EVERYTHING AT ONCE", "E", 3, "SpeakUp", sev=2.5),
+    Ev("THE FIXED PART", "E", 2, "Analyze", sev=1.5),
     Ev("SHAKY GROUND", "E", 3, "Engage", sev=2.0),
 ]
 
@@ -289,15 +297,32 @@ EXT_MODELLED = ["wolf", "saboteur", "sixth_seat", "feature_quality"]
 EXT_ALIASES = {"the_wolf": "wolf", "the_sixth_seat": "sixth_seat", "feature_quality_uncertainty": "feature_quality"}
 SIXTH_REPLACE = ("onboarding", "bench", "alumnus", "contractor", "short")
 
-# --staging bundles. v37 = rulebook v0.37: week 1 is the project, week 2 the team and Motivation, week 3 Shit Happens,
+# --staging bundles. v38 = the 2026-10-26 card staging: week 1 Work, Engagement, Learn, Celebrate; week 2 Teach and Plan;
+# week 3 Workshop, Demo and Reflect. Everything else (Motivation, Need, Events, pool, Hero) stays as v37, except
+# the Work Costs, which are A3 B5 C5 D4 E3 F2 (22 Work). v39 = v38 plus the three buffs of 2026-10-26: Demo adds 2 adapt
+# tokens (was 1), the Workshop 4 (was 3), and Take One For The Team can be played in a week with an Engagement.
+# v37 = rulebook v0.37: week 1 is the project, week 2 the team and Motivation, week 3 Shit Happens,
 # Adapt, the pool, the Hero and the Workshop, week 4 Overtime. mot_start 5 and pool_start 3 held in the 2026-10-21 grid.
 # feature_costs is the 24-Work table now printed on the Project cards (A4 B5 C5 D4 E3 F3; the old cards were 3-4-4-3-2-2, the older
 # FEATURES table below 3-3-3-4-2-3). threshold_high_base 135 puts the upper line at 160, where 80% of optimal play reaches it.
 STAGINGS = {
     "v37": {"grind_from_week": 2, "need_from_week": 2, "celebrate_from_week": 2, "take_one_from_week": 2, "combos_from_week": 2,
             "events_from_week": 3, "workshop_from_week": 3, "tokens_from_week": 3, "pool_open_week": 3, "pool_start": 3,
-            "overtime_from_week": 4, "feature_costs": "4-5-5-4-3-3", "threshold_high_base": 135},
+            "overtime_from_week": 4, "feature_costs": "4-5-5-4-3-3", "threshold_high_base": 135, "plan_carry": False},
+    "v38": {"grind_from_week": 2, "need_from_week": 3, "celebrate_from_week": 1, "take_one_from_week": 2, "combos_from_week": 3,
+            "events_from_week": 3, "workshop_from_week": 3, "tokens_from_week": 3, "pool_open_week": 3, "pool_start": 3,
+            "overtime_from_week": 4, "feature_costs": "3-5-5-4-3-2", "threshold_high_base": 135, "plan_carry": False,
+            "cards_from_week": 1, "learn_from_week": 1, "teach_from_week": 2, "plan_from_week": 2, "reflect_from_week": 3, "demo_from_week": 3},
+    "v39": {"grind_from_week": 2, "need_from_week": 3, "celebrate_from_week": 1, "take_one_from_week": 2, "combos_from_week": 3,
+            "events_from_week": 3, "workshop_from_week": 3, "tokens_from_week": 3, "pool_open_week": 3, "pool_start": 3,
+            "overtime_from_week": 4, "feature_costs": "3-5-5-4-3-2", "threshold_high_base": 135, "plan_carry": False,
+            "cards_from_week": 1, "learn_from_week": 1, "teach_from_week": 2, "plan_from_week": 2, "reflect_from_week": 3, "demo_from_week": 3,
+            "demo_tokens": 2, "align_tokens": 4, "take_one_any_week": True},
 }
+
+
+def card_week(R: Rules, card: str) -> int:
+    return getattr(R, card + "_from_week") or R.cards_from_week
 
 
 def feature_costs(rules: Rules) -> dict:
@@ -422,6 +447,7 @@ class Week:
         self.false_start = False
         self.dashboard = False
         self.one_per = False
+        self.slow_lane = False
         self.halve = False
         self.flat = False
         self.track_lowered = False
@@ -770,9 +796,9 @@ class Game:
             p = self.prev
             if self.celebrate_worth(w, cards):
                 put("Celebrate")
-            elif w >= self.R.cards_from_week and self.trust >= self.R.reflect_trust and (p["banked"] or p["adapted2"] or p["process"]):
+            elif w >= card_week(self.R, "reflect") and self.trust >= self.R.reflect_trust and (p["banked"] or p["adapted2"] or p["process"]):
                 put("Reflect")
-            need_card = {"Community": "Engagement", "Hierarchy": "Learn" if w >= self.R.cards_from_week else None,
+            need_card = {"Community": "Engagement", "Hierarchy": "Learn" if w >= card_week(self.R, "learn") else None,
                          "Recognition": "Demo" if w >= self.R.demo_from_week else None}
             if need_card.get(risky[0].torso):
                 put(need_card[risky[0].torso])
@@ -792,8 +818,9 @@ class Game:
                 open_cards.append("Workshop")
             if w >= R.plan_from_week:
                 open_cards.append("Plan")
-            if w >= R.cards_from_week:
-                open_cards += ["Learn", "Teach", "Reflect"]
+            for card in ("Learn", "Teach", "Reflect"):
+                if w >= card_week(R, card.lower()):
+                    open_cards.append(card)
             if w >= R.demo_from_week:
                 open_cards.append("Demo")
             picks = [self.rng.choice(open_cards) for _ in range(R.days)]
@@ -816,16 +843,16 @@ class Game:
         # the first week the Workshop is open it goes in ahead of Learn, Teach, Reflect and Plan (week 1 before v0.37, week 3 after)
         if R.workshop_from_week <= w < max(R.cards_from_week, R.workshop_from_week + 1) and self.pool < st.pool_goal and self.can_workshop():
             wanted.append("Workshop")
-        if w >= R.cards_from_week:
+        if w >= min(card_week(R, "learn"), card_week(R, "teach")):
             for k in range(st.learn):
-                can_learn = any(self.learn_option(c) for c in self.chars)
-                can_teach = self.trust > R.low_band and self.zone_room_teach()
+                can_learn = w >= card_week(R, "learn") and any(self.learn_option(c) for c in self.chars)
+                can_teach = w >= card_week(R, "teach") and self.trust > R.low_band and self.zone_room_teach()
                 if can_teach and (not can_learn or (w + k) % 2 == 0):
                     wanted.append("Teach")
-                else:
+                elif w >= card_week(R, "learn"):
                     wanted.append("Learn")
-            if st.reflect and self.trust >= R.reflect_trust:
-                wanted.append("Reflect")
+        if w >= card_week(R, "reflect") and st.reflect and self.trust >= R.reflect_trust:
+            wanted.append("Reflect")
         if w >= R.plan_from_week and st.plan and self.sp > R.plan_dead_at and self.plan_target():
             wanted.append("Plan")
         if w >= max(R.cards_from_week, R.workshop_from_week):
@@ -853,7 +880,7 @@ class Game:
             wanted = [c for c in wanted if c != "Workshop"]
             wanted.insert(1 if "Celebrate" in wanted else 0, "Workshop")
             slots = max(slots, 1)
-        if w >= R.cards_from_week and st.reflect and self.trust >= R.reflect_trust:
+        if w >= card_week(R, "reflect") and st.reflect and self.trust >= R.reflect_trust:
             open_wells = self.reflect_wells_open()
             wanted = [c for c in wanted if c != "Reflect"]
             if open_wells:
@@ -872,6 +899,8 @@ class Game:
             cards[len(cards) - 1 - cards[::-1].index("Reflect")] = "Work"
         while cards.count("Engagement") > 1:
             cards[len(cards) - 1 - cards[::-1].index("Engagement")] = "Work"
+        while cards.count("Workshop") > 1:
+            cards[len(cards) - 1 - cards[::-1].index("Workshop")] = "Work"
         if self.vacant > 0 and "Onboarding" not in cards:
             cards[cards.index("Work") if "Work" in cards else -1] = "Onboarding"
         if st.celebrate_needs_reason and "Celebrate" in cards and not self.celebrate_worth(w, cards):
@@ -1162,6 +1191,8 @@ class Game:
                 W.false_start = True
             elif n == "EVERYTHING AT ONCE":
                 W.one_per = True
+            elif n == "THE FIXED PART":
+                W.slow_lane = True
             elif n == "SHAKY GROUND":
                 self.lower("cap")
             elif n == "UNCLEAR REQUIREMENT":
@@ -1225,7 +1256,7 @@ class Game:
             if t:
                 plan_f = t
                 self.feat[t]["known"] = True               # feature-quality: Plan reveals the feature's Quality
-                if self.feat[t]["cx"] == "H":
+                if self.feat[t]["cx"] == "H" and R.plan_carry:
                     W.carry_next = t
         pending: Counter = Counter()
         done_per: Counter = Counter()
@@ -1250,6 +1281,8 @@ class Game:
                     self.m["plan_extra_work"] += R.plan_bonus
                 if W.dashboard and self.feat[f]["cx"] != "L":
                     out = 0
+                if W.slow_lane:
+                    out = min(out, 2)
                 out = max(0, out)
             pending[f] += out
             done_per[f] += 1
@@ -1326,11 +1359,12 @@ class Game:
                 else:
                     self.gain_capital(tgt, 1)
                     W.mot_adj[tgt.id] += 1
-                    W.adds += 1
-                    self.m["tokens_demo"] += 1
+                    W.adds += R.demo_tokens
+                    self.m["tokens_demo"] += R.demo_tokens
         for _ in range(min(1, plan.count("Reflect"))):
             self.do_reflect(newly, w)
-        if st.take_one and not W.coord and not W.trust_boost and self.t0 < st.trust_goal and w >= R.take_one_from_week:
+        if (st.take_one and not W.take_dep and self.t0 < st.trust_goal and w >= R.take_one_from_week
+                and (R.take_one_any_week or not (W.coord or W.trust_boost))):
             def floor(c):
                 # the Need can cancel the grind from week 1, but it is not guaranteed, so keep one spare point
                 return R.dependable_cost + 1
@@ -1340,8 +1374,9 @@ class Game:
                 cost = R.dependable_cost
                 self.add_mot(c, -cost, "take_one")
                 W.take_dep += 1
-                W.trust_boost = True
-                self.trust = min(R.ledger_max, self.trust + 1)
+                if not (W.coord or W.trust_boost):          # Trust rises one step a week: after an Engagement only the Capital counts
+                    W.trust_boost = True
+                    self.trust = min(R.ledger_max, self.trust + 1)
                 self.gain_capital(c, 1)
 
     def do_reflect(self, newly: list, w: int):
@@ -2485,6 +2520,12 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
     if saved is not None:
         seeds.append(replace(saved, celebrate_needs_reason=True))
         seeds.append(replace(saved, celebrate_needs_reason=True, care=True, care_at=3, finish_first=True))
+    # a new staging starts from the best policy found for the others, so the hill climb does not stall in a worse corner
+    for other in sorted(glob.glob(os.path.join(os.path.dirname(opt_file), "balance_sim_optimal*.json"))):
+        if os.path.abspath(other) != os.path.abspath(opt_file):
+            alt = load_optimal(W, other)
+            if alt is not None:
+                seeds.append(replace(alt, celebrate_needs_reason=True))
     best_v, best = max(((value(s), s) for s in seeds), key=lambda t: t[0])
     for p in range(1, passes + 1):
         improved = False
@@ -3458,7 +3499,9 @@ def main():
     ap.add_argument("--sweep", metavar="RULE=V1,V2,...", action="append", default=[],
                     help="rerun every strategy for each value of one rule; repeat the flag for a grid (every combination)")
     ap.add_argument("--staging", choices=sorted(STAGINGS), default=None,
-                    help="the week each system opens: v37 = rulebook v0.37 (Motivation week 2, Shit Happens / Adapt / pool / Hero / Workshop week 3). "
+                    help="the week each system opens: v37 = rulebook v0.37 (Motivation week 2, Shit Happens / Adapt / pool / Hero / Workshop week 3, 24 Work). "
+                         "v38 = v37 plus the 2026-10-26 re-staging (cards: Learn and Celebrate week 1, Teach and Plan week 2, Workshop, Demo and Reflect week 3; "
+                         "habitus: the Need and Combos week 3) and 22 Work (A3 B5 C5 D4 E3 F2). v39 = v38 plus Demo +2 and Workshop +4 adapt tokens and Take One in an Engagement week. Each staging keeps its own optimal-policy file. "
                          "--set still overrides it")
     ap.add_argument("--ext", default="", metavar="PACKS",
                     help="turn extension packs on for the whole run: %s, all (not performance-review: not modelled)" % ", ".join(EXT_MODELLED))

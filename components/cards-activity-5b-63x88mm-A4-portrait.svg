@@ -68,7 +68,7 @@ outer line. Print at 100%.</desc>
 
   <g id="plan" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">PLAN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Planning pays on hard</text>
@@ -78,7 +78,7 @@ outer line. Print at 100%.</desc>
     <text x="5" y="34" class="s" font-size="5.4">that feature this week</text>
     <rect x="4" y="40" width="55" height="8" rx="1.2" fill="#EFE4D3"/>
     <text x="5" y="46" class="m" font-size="5">+1 EXTRA WORK</text>
-    <text x="5" y="51" class="m q" font-size="2.6">HIGH COMPLEXITY: ALSO NEXT WEEK</text>
+    <text x="5" y="51" class="m q" font-size="2.6">THIS WEEK ONLY</text>
     <line x1="5" y1="54" x2="58" y2="54" class="h"/>
     <text x="5" y="60" class="m q" font-size="2.9">DEAD AT SHARED PRACTICE</text>
     <text x="5" y="64.2" class="m q" font-size="2.9">1 OR LESS, AND ON LOW.</text>
@@ -88,7 +88,7 @@ outer line. Print at 100%.</desc>
 
   <g id="demo" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 3</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">DEMO</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4">The field decides who speaks.</text>
@@ -100,13 +100,13 @@ outer line. Print at 100%.</desc>
     <rect x="4" y="49.5" width="55" height="7" rx="1" fill="#D3B1B1"/>
     <text x="5" y="54.6" class="s" font-size="4.6">Also <tspan font-weight="bold">+1 Motivation</tspan>.</text>
     <rect x="4" y="59.5" width="55" height="7" rx="1" fill="#B5C7CF"/>
-    <text x="5" y="64.6" class="s" font-size="4.6">Team: <tspan font-weight="bold">+1 Adaptability</tspan>.</text>
+    <text x="5" y="64.6" class="s" font-size="4.6">Team: <tspan font-weight="bold">+2 Adaptability</tspan>.</text>
     </g>
   </g>
 
   <g id="reflect" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 3</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">REFLECT</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">Ask what's not working -</text>
@@ -127,7 +127,7 @@ outer line. Print at 100%.</desc>
 
   <g id="learn" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">LEARN</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4">Nobody taught you.</text>

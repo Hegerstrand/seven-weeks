@@ -45,7 +45,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Appointment reminders</text>
   <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Patient login</text>
@@ -70,7 +70,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Billing history</text>
   <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
 </g>
 
@@ -87,7 +87,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Branch locator</text>
   <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Account ledger</text>
@@ -112,7 +112,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Credit scoring</text>
   <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
 </g>
 
@@ -129,7 +129,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Screenshot → spec</text>
   <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Decode the macros</text>
@@ -154,7 +154,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Reconcile the finals</text>
   <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
 </g>
 
@@ -171,7 +171,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">App store listing</text>
   <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Offline sync engine</text>
@@ -196,7 +196,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Rich notification actions</text>
   <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
 </g>
 
@@ -213,7 +213,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Permit application</text>
   <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Framing and foundation</text>
@@ -238,7 +238,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3.6">Fixture installation</text>
   <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
 </g>
 
@@ -255,7 +255,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="37" class="m" font-size="4.2">A</text>
   <text x="11" y="37" class="s" font-size="3.6">Guest list and invitations</text>
   <text x="56.5" y="37" class="m q" font-size="2.6">LOW</text>
-  <text x="83" y="37" class="m" font-size="4" text-anchor="end">4</text>
+  <text x="83" y="37" class="m" font-size="4" text-anchor="end">3</text>
 
   <text x="5" y="45" class="m" font-size="4.2">B</text>
   <text x="11" y="45" class="s" font-size="3.6">Venue booking</text>
@@ -280,7 +280,7 @@ team just like it. Choose one at setup and put the other five back in the box.</
   <text x="5" y="77" class="m" font-size="4.2">F</text>
   <text x="11" y="77" class="s" font-size="3">Final headcount and catering order</text>
   <text x="56.5" y="77" class="m" font-size="2.6">HIGH · NEEDS C</text>
-  <text x="83" y="77" class="m" font-size="4" text-anchor="end">3</text>
+  <text x="83" y="77" class="m" font-size="4" text-anchor="end">2</text>
 
 </g>
 </svg>

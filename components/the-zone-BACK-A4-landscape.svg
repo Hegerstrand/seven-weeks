@@ -3,7 +3,7 @@
 <desc>Glues to the reverse of the-zone-FRONT, same size, same orientation: flip about the long edge.
 Every board starts the game showing its back, and this is the one the table reads first: what the
 game is, how it ends, and the five steps of set-up. When set-up is done, THE ZONE and THE PROJECT
-turn over and week 1 begins; THE TEAM and SHIT HAPPENS turn over in week 2. Character parts are
+turn over and week 1 begins; THE TEAM turns over in week 2 and SHIT HAPPENS in week 3. Character parts are
 named by what they are (upbringing, instinct, values, education, skill), never by body part.</desc>
 
 <style>
@@ -73,7 +73,7 @@ named by what they are (upbringing, instinct, values, education, skill), never b
 <rect x="12" y="170" width="273" height="26" rx="2" fill="#F2EDE0" stroke="#2A2620" stroke-width=".5"/>
 <text x="17" y="178.5" class="m" font-size="4.2" letter-spacing="1.2">EVERY BOARD STARTS ON ITS BACK</text>
 <text x="17" y="185.5" class="s" font-size="4.6">Each back says when to turn it over. THE ZONE and THE PROJECT turn over now, at the start of week 1.</text>
-<text x="17" y="191.5" class="s" font-size="4.6">THE TEAM and SHIT HAPPENS turn over in week 2, THE DEVELOPMENT in week 3.</text>
+<text x="17" y="191.5" class="s" font-size="4.6">THE TEAM turns over in week 2, SHIT HAPPENS and THE DEVELOPMENT in week 3.</text>
 
 <!-- table-placement guide - matches the same-coloured line on the neighbouring board's edge -->
 <line x1="291" y1="6" x2="291" y2="204" stroke="#6E7A54" stroke-width="1"/>

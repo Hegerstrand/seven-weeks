@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="297mm" height="210mm" viewBox="0 0 297 210">
-<title>MARKERS - Ledger coins, Capital markers, week marker, Flex markers, Zone tiles (A4 landscape)</title>
-<desc>One sheet for every small loose piece. Top left: the 5 Ledger coins, track face above, Habit face below (17 mm discs, text curved round the rim; the Ledger wells are 18 mm). Top middle: 5 Capital markers, one per SPECIMEN (17 mm discs, the same size as the coins; the Capital wells are 18 mm) and, standing in the left strip beside the Zone tiles, the week marker (52 x 9 mm with rounded corners, the same size as the boxes on THE CLOCK). Bottom: the 25 two-sided Zone tiles. Five two-sided Flex markers (17 mm discs, the same size as the coins, top right; the Flex well on the person board is 18 mm): the owed face is glued back to back with the given-back face. Pieces are glued to 2 mm greyboard; each coin is a front disc glued back-to-back with its Habit disc.</desc>
+<title>MARKERS - week marker, Zone tiles (A4 landscape)</title>
+<desc>The week marker and the Zone tiles. The Ledger coins, the Capital markers and the Flex markers are all 28 mm and are on their own sheet (ledger-coins-28mm-A4-landscape.svg). The week marker stands in the left strip beside the Zone tiles (52 x 9 mm with rounded corners, the same size as the boxes on THE CLOCK). Bottom: the 25 two-sided Zone tiles. Pieces are glued to 2 mm greyboard.</desc>
 
 <style>
   .s { font-family:"EB Garamond",Garamond,Georgia,serif; fill:#000000; }
@@ -61,62 +61,11 @@
 <rect width="297" height="210" fill="#FFFFFF"/>
 
 <text x="12" y="13" class="m" font-size="5" letter-spacing="1.6">MARKERS</text>
-<text x="285" y="13" class="m q" font-size="3.2" text-anchor="end">COINS · CAPITAL · FLEX · ZONE</text>
+<text x="285" y="13" class="m q" font-size="3.2" text-anchor="end">WEEK MARKER · ZONE TILES</text>
 <line x1="12" y1="16" x2="285" y2="16" class="h"/>
-<text x="12" y="22" class="s" font-size="3.4" font-style="italic">Cut each coin and marker out. A coin is two discs glued back to back around a 17 mm disc of 2 mm greyboard; a marker is one piece on greyboard, a Flex marker two discs back to back.</text>
+<text x="12" y="22" class="s" font-size="3.4" font-style="italic">The Ledger coins, the Capital markers and the Flex markers are all 28 mm and are on their own sheet: ledger-coins-28mm.</text>
 
-<!-- LEDGER COINS -->
-<text x="12" y="29" class="m" font-size="3.6" letter-spacing=".8">LEDGER COINS - 5</text>
-<text x="12" y="34" class="m q" font-size="2.4">FRONT - THE TRACK FACE</text>
-
-<g transform="translate(20.5,45) scale(1.1333)"><circle r="7.5" fill="#D3CEDF" class="cut"/><circle r="6.8" class="ring"/>
-  <text class="m c" font-size="2.4"><textPath href="#arcT" startOffset="50%">TRUST</textPath></text>
-  <text y="1.8" class="m c" font-size="5">4</text>
-  <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(39.5,45) scale(1.1333)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring"/>
-  <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">CAPABILITY</textPath></text>
-  <text y="1.8" class="m c" font-size="5">4</text>
-  <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(58.5,45) scale(1.1333)"><circle r="7.5" fill="#F7D7A1" class="cut"/><circle r="6.8" class="ring"/>
-  <text class="m c" font-size="1.8"><textPath href="#arcT" startOffset="50%">SHARED PRACTICE</textPath></text>
-  <text y="1.8" class="m c" font-size="5">4</text>
-  <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(77.5,45) scale(1.1333)"><circle r="7.5" fill="#D9D3C4" class="cut"/><circle r="6.8" class="ring"/>
-  <text class="m c" font-size="2.2"><textPath href="#arcT" startOffset="50%">STANDING</textPath></text>
-  <text y="1.8" class="m c" font-size="5">5</text>
-  <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-<g transform="translate(96.5,45) scale(1.1333)"><circle r="7.5" fill="#B5C7CF" class="cut"/><circle r="6.8" class="ring"/>
-  <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">REFLEXIVITY</textPath></text>
-  <text y="1.8" class="m c" font-size="5">3</text>
-  <text class="m c" font-size="1.8"><textPath href="#arcB" startOffset="50%">TO FLIP</textPath></text></g>
-
-<text x="12" y="58.2" class="m q" font-size="2.4">BACK - THE HABIT FACE</text>
-
-<g transform="translate(20.5,70) scale(1.1333)"><circle r="7.5" fill="#D3CEDF" class="cut"/><circle r="6.8" class="ring2"/>
-  <text class="m c" font-size="1.7"><textPath href="#arcT" startOffset="50%">PSYCHOLOGICAL</textPath></text>
-  <text y="0.7" class="m q c" font-size="2">HABIT</text>
-  <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">SAFETY</textPath></text></g>
-<g transform="translate(39.5,70) scale(1.1333)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring2"/>
-  <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">WHO KNOWS</textPath></text>
-  <text y="0.7" class="m q c" font-size="2">HABIT</text>
-  <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">WHAT</textPath></text></g>
-<g transform="translate(58.5,70) scale(1.1333)"><circle r="7.5" fill="#F7D7A1" class="cut"/><circle r="6.8" class="ring2"/>
-  <text class="m c" font-size="2.2"><textPath href="#arcT" startOffset="50%">SHARED</textPath></text>
-  <text y="0.7" class="m q c" font-size="2">HABIT</text>
-  <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">REPERTOIRE</textPath></text></g>
-<g transform="translate(77.5,70) scale(1.1333)"><circle r="7.5" fill="#D9D3C4" class="cut"/><circle r="6.8" class="ring2"/>
-  <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">AUTHORIZED</textPath></text>
-  <text y="0.7" class="m q c" font-size="2">HABIT</text>
-  <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">VOICE</textPath></text></g>
-<g transform="translate(96.5,70) scale(1.1333)"><circle r="7.5" fill="#B5C7CF" class="cut"/><circle r="6.8" class="ring2"/>
-  <text class="m c" font-size="2.2"><textPath href="#arcT" startOffset="50%">TEAM</textPath></text>
-  <text y="0.7" class="m q c" font-size="2">HABIT</text>
-  <text class="m c" font-size="1.9"><textPath href="#arcB" startOffset="50%">REFLEXIVITY</textPath></text></g>
-
-<!-- CAPITAL MARKERS -->
-<text x="113" y="29" class="m" font-size="3.6" letter-spacing=".8">CAPITAL - 5</text>
-<use href="#cap-disc" transform="translate(121.5,45) scale(.8947)"/><use href="#cap-disc" transform="translate(140.5,45) scale(.8947)"/><use href="#cap-disc" transform="translate(159.5,45) scale(.8947)"/>
-<use href="#cap-disc" transform="translate(121.5,70) scale(.8947)"/><use href="#cap-disc" transform="translate(140.5,70) scale(.8947)"/>
+<!-- CAPITAL AND FLEX MARKERS: moved to ledger-coins-28mm-A4-landscape.svg -->
 
 <!-- WEEK MARKER: stands on its end in the left strip beside the Zone tiles -->
 <text x="12" y="100" class="m" font-size="2.4">WEEK MARKER - 1</text>
@@ -129,13 +78,6 @@
   </g>
   <text x="30" y="5.7" class="m c" font-size="3.4" letter-spacing=".6">WE ARE HERE</text>
 </g>
-
-<!-- FLEX MARKERS -->
-<text x="172" y="29" class="m" font-size="3.6" letter-spacing=".8">FLEX MARKERS - 5 TWO-SIDED</text>
-<use href="#flex-front" transform="translate(180.5,45) scale(.8947)"/><use href="#flex-front" transform="translate(199.5,45) scale(.8947)"/><use href="#flex-front" transform="translate(218.5,45) scale(.8947)"/>
-<use href="#flex-front" transform="translate(237.5,45) scale(.8947)"/><use href="#flex-front" transform="translate(256.5,45) scale(.8947)"/>
-<use href="#flex-back" transform="translate(180.5,70) scale(.8947)"/><use href="#flex-back" transform="translate(199.5,70) scale(.8947)"/><use href="#flex-back" transform="translate(218.5,70) scale(.8947)"/>
-<use href="#flex-back" transform="translate(237.5,70) scale(.8947)"/><use href="#flex-back" transform="translate(256.5,70) scale(.8947)"/>
 
 <!-- ZONE TILES -->
 <line x1="12" y1="83" x2="285" y2="83" class="h"/>

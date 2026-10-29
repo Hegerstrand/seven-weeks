@@ -1,10 +1,14 @@
-# Rulebook - High-Performance Team (v0.37 draft)
+# Rulebook - High-Performance Team (v0.39 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
 
-> **v0.37 (2026-10-21): week 2 was too complicated (playtest 2026-10-20), so the staging is re-cut.** **Week 1** is the project only: Work, Engagement, Plan. **Week 2** is the team and its people: the Ledger, **Motivation** (the grind, **your Need**, Celebrate), Demo, Learn, Teach, Reflect, Combos. **Week 3** is reality: **Shit Happens and Adapt, the adapt pool, the Hero and the Workshop, all together** - so Events are drawn from week 3 (weeks 3-8, the deadline week included: **twelve**), and Reflect and Demo add adapt tokens from week 3. **Week 4** is THE DEVELOPMENT, Flex and Overtime (they were week 3). Weeks 5-8 open nothing. The Need and the grind start in week 2 (they were week 1); Celebrate and Workshop moved with the systems they serve (Celebrate with Motivation, Workshop with adapt tokens). **THE DATE MOVES UP is only held back in the last week**: the Hero it needs opens in the same week as Events. **Starting values checked by the simulator (2026-10-21, 5 players, 8 weeks): Motivation 5 and a pool of 3 hold.** Motivation 3 and a pool of 1 are clearly worse, and a pool of 4 is too safe. **Work Costs are now A4 B5 C5 D4 E3 F3 (24 Work, was 18), and the upper score line is 5 × characters + 135 (160 at five players, was 150)** after the 2026-10-22 runs (§3.2, §20, §16). The Event-day figures in §3.2 are not re-derived.
+> **v0.39 (2026-10-26): the least-played moves are buffed; the upper score line stays at 160.** The simulator found Demo (46% of optimal games), Workshop (77%) and Take One For The Team (never) the least played. **Demo now gives +2 Adaptability (was +1), Workshop +4 (was +3), and Take One For The Team can be played in a week that already has an Engagement** (Trust still rises one step a week, so then it gives the +1 Capital only), §7, §5.2. **Not yet simulated** (`--staging v39`; v38 is the same game without these three changes). **A new Event, THE FIXED PART (Amdahl's Law: no Work card makes more than 2 Work this week), makes the deck 26 cards.**
+
+> **v0.38 (2026-10-26): the cards are re-staged.** **Week 1: Work, Engagement, Learn, Celebrate. Week 2: Teach and Plan. Week 3: Workshop, Demo and Reflect.** Everything else stays as v0.37 (Motivation, the Need and the Ledger in week 2; Events, Adapt, the pool and the Hero in week 3). Demo and Reflect now open in week 3, the same week the adapt pool does, so their adapt token has no "from week 3" caveat any more. Plan moved from week 1 to week 2 (it does nothing at Shared Practice 1 or less anyway). Celebrate in week 1 has nothing to lift yet, since nobody is on 3 or less before the grind starts in week 2. **The habitus is staged too: week 1 education and skill, week 2 upbringing and instinct, week 3 values, the Hero and the Need.** The Need moves from week 2 to week 3, so Combos (which need the Need, Demo, Reflect, the Workshop or the Hero) are all week 3 now. **Simulated 2026-10-26 (`--staging v38`, 5 players, 8 weeks, 2000 games each): the starting values hold - Motivation 5, adapt pool 3, Ledger tracks 1, score lines 100 and 160.** Balanced play: 3% failures, last feature banked in week 7.1, 59% above 160. Invested play: 5.5% failures, week 7.2, 43% above 160. Optimal play (the policy the search settles on, the same after a deeper search): 7% failures, week 7.5, 51% above 160, and 80% of its games reach 148, but **the upper line stays at 160 (decided 2026-10-26)**. A Ledger that starts at 2 is too easy (the project is done in week 6 and about a fifth of games end below 100), Motivation 4 and a pool of 2 are each a little harsher, a pool of 4 a little safer.
+
+> **v0.37 (2026-10-21): week 2 was too complicated (playtest 2026-10-20), so the staging is re-cut.** **Week 1** is the project only: Work, Engagement, Plan. **Week 2** is the team and its people: the Ledger, **Motivation** (the grind, **your Need**, Celebrate), Demo, Learn, Teach, Reflect, Combos. **Week 3** is reality: **Shit Happens and Adapt, the adapt pool, the Hero and the Workshop, all together** - so Events are drawn from week 3 (weeks 3-8, the deadline week included: **twelve**), and Reflect and Demo add adapt tokens from week 3. **Week 4** is THE DEVELOPMENT, Flex and Overtime (they were week 3). Weeks 5-8 open nothing. The Need and the grind start in week 2 (they were week 1); Celebrate and Workshop moved with the systems they serve (Celebrate with Motivation, Workshop with adapt tokens). **THE DATE MOVES UP is only held back in the last week**: the Hero it needs opens in the same week as Events. **Starting values checked by the simulator (2026-10-21, 5 players, 8 weeks): Motivation 5 and a pool of 3 hold.** Motivation 3 and a pool of 1 are clearly worse, and a pool of 4 is too safe. **Work Costs are now A3 B5 C5 D4 E3 F2 (22 Work; v0.37 had A4 B5 C5 D4 E3 F3, 24 Work, and v0.36 18), and the upper score line is 5 × characters + 135 (160 at five players, was 150)** after the 2026-10-22 runs (§3.2, §20, §16). The Event-day figures in §3.2 are not re-derived. **Plan no longer carries into the next week on a High feature (§7).**
 
 > **v0.36 (2026-10-13): Need starts in week 1.** Every character's Need is read when week 1 closes, not week 2 (§3.0, §5), and the Need tile is in play from setup. Week 2 no longer opens it. The Quality Need's -3 now applies in week 1 too (a Quality character with no Work added in week 1 loses 3), and the Autonomy Need is met in week 1 because no Event is drawn yet. In week 1 only Work, Engagement, Celebrate, Workshop and Plan exist, so Hierarchy is met only by a Workshop, Community only by an Engagement, and Recognition only by a banked feature. The simulator reads it from week 1 (`Rules.need_from_week`); **the balance figures have not been re-run.** **THE DATE MOVES UP drawn in week 2 or the last week is discarded and a new Event drawn** (it used to be put back in week 2, and do nothing in the last week), §6.1, §11.
 
@@ -437,7 +441,7 @@ the habitus you built at the start.
 - Week board (5 weekday slots, Monday - Friday - where the week's five Activity cards are laid
   before Events are drawn, see §6.1)
 - Week counter (1-7 - one turn per week)
-- Event Deck (25 cards; 2 drawn per week from week 3)
+- Event Deck (26 cards; 2 drawn per week from week 3)
 - Motivation tokens (per character)
 - Knowledge/Skill markers (individual and shared)
 - Ledger tracks: Trust, Capability, Shared Practice (scale 0-5), plus the Standing row (§5.1), all on THE TEAM
@@ -451,9 +455,9 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 
 | From | What opens | Cards in play |
 |---|---|---|
-| **Week 1** | **The week.** The week strip and the six features, and nothing else: no Motivation to count, no Need, no Events. Your figure and your Knowledge are on the board. | Work · Engagement · Plan |
-| **Week 2** | **The team, and the people.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital. **Motivation opens with it:** the grind, **your Need** (the tile already on your board, read when the week closes) and Celebrate. Demo, Learn, Teach and Reflect open too. **Combos** (§18.1) open: two named triggers landing in the same week pay a small bonus on top of what they did alone. | + Celebrate · Demo · Learn · Teach · Reflect |
-| **Week 3** | **Reality.** Shit Happens and Adapt, together: the Event deck, the shared Adaptability pool (it holds **3 tokens** from the first day it exists), the **Hero** panel (§5.1) and the Workshop. Reflect and Demo now also add adapt tokens. | + Workshop |
+| **Week 1** | **The week.** The week strip and the six features, and nothing else: no Motivation to count, no Need, no Events. Your figure and your Knowledge are on the board, and two parts of it already count: **your education and your skill** (where you start on the Zone, and what you can do). | Work · Engagement · Learn · Celebrate |
+| **Week 2** | **The team, and the people.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital. **Motivation opens with it:** the grind, and with it **your upbringing and your instinct** (upbringing shapes your Motivation, instinct is your Pressure Response, read at step 7). | + Teach · Plan |
+| **Week 3** | **Reality.** Shit Happens and Adapt, together: the Event deck, the shared Adaptability pool (it holds **3 tokens** from the first day it exists), the **Hero** panel (§5.1) and the Workshop. **Your values start to count** (how Events land on you) and so does **your Need** (the tile already on your board, read when the week closes). Demo and Reflect open with it and add adapt tokens. **Combos** (§18.1) open: two named triggers landing in the same week pay a small bonus on top of what they did alone. | + Workshop · Demo · Reflect |
 | **Week 4** | **THE DEVELOPMENT (board 4b).** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - and the Flex and Overtime part of the Specimen card. | + nothing new |
 | **Week 5** | **Nothing opens.** The table plays everything it has met. | + nothing new |
 
@@ -461,9 +465,9 @@ Weeks 5-8 are the whole game with nothing new opening, and by then the table has
 every rule *at the moment it mattered* rather than in a twenty-minute briefing.
 
 **One idea per week, and each one is a sentence.** Week 1: a week is five days and you choose
-them. Week 2: it was never only the project - it is also the team, who it listens to, and what each of you needs from it.
-Week 3: your plan was made in ignorance, and reality lands on it. Week 4:
-and on how far each of you can reach, as the Zone starts paying off. From week 2: the things you
+them. Week 2: it was never only the project - it is also the team, who it listens to, and where each of you comes from.
+Week 3: your plan was made in ignorance, and reality lands on it, and so does what each of you needs from the team to cope. Week 4:
+and on how far each of you can reach, as the Zone starts paying off. From week 3: the things you
 already do pay twice when you do them together.
 
 **Name the new points when you flip the panel.** The playtest showed that points for building
@@ -473,9 +477,9 @@ Capability, Shared Practice) and a standing, and where each one is written on th
 starts, say that there is now a pool of Adaptability tokens, and where it is written.
 
 **Do not teach Teach or Reflect in week 1.** Neither does anything yet (Teach needs Trust,
-Reflect needs Trust 3). Week 1 offers Work, Engagement and Plan. The 2026-09-25
+Reflect needs Trust 3). Week 1 offers Work, Engagement, Learn and Celebrate. The 2026-09-25
 table opened with Learn, Celebrate and Work instead, found Learn confusing, and spent the
-first two weeks reading rather than deciding.
+first two weeks reading rather than deciding (v0.38 puts Learn and Celebrate back in week 1: watch for the same thing).
 
 **Week 1 is deliberately almost trivial:** lay five cards, resolve them, close the
 week. That's the entire lesson. A first-timer makes a real decision inside five minutes of
@@ -491,10 +495,10 @@ when you uncover each panel, run its catch-up:
 > the team has played. Capital is not handed out here: **everyone's Capital starts at 0 and is
 > earned only through play** (§5.1). Then nobody is Standing yet (the Standing coin sits on 0, all tied), and
 > whoever first holds the most Capital becomes Standing (§5.1). The three tracks start where they always were, at
-> **1**. Motivation starts counting: every character is on **5**, the grind takes 1 at the close of this week, and
-> **your Need is read for the first time** (§5).
+> **1**. Motivation starts counting: every character is on **5** and the grind takes 1 at the close of this week.
 >
-> **Week 3 - reality.** The pool starts with 3 tokens, Events are drawn for the first time, and the Hero opens.
+> **Week 3 - reality.** The pool starts with 3 tokens, Events are drawn for the first time, the Hero opens, and
+> **your Need is read for the first time** (§5).
 > Nothing to catch up on: tokens earned before this week were never counted.
 >
 > **Week 4 - how far you reach.** No catch-up to run - the Zone lift and the Flex/Overtime
@@ -565,17 +569,17 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
 
    | Feature | Work Cost | Complexity | Depends on |
    |---|---|---|---|
-   | A | 4 | Low | - |
+   | A | 3 | Low | - |
    | B | 5 | Medium | - |
    | C | 5 | Medium | - |
    | D | 4 | High | B |
    | E | 3 | Low | - |
-   | F | 3 | High | C |
+   | F | 2 | High | C |
 
-   Total required work: **24**, against a budget of **35 days** (§6.0). Not every day produces
+   Total required work: **22**, against a budget of **35 days** (§6.0). Not every day produces
    direct work - that gap is the central strategic tension. **v0.37: the total went from 18 to 24** (simulator, 2026-10-22):
    at 18, balanced and invested play banked the last feature around week 6 and had two idle weeks; at 24 they finish in
-   week 7 and optimal play in week 8.
+   week 7 and optimal play in week 8. **v0.38 (2026-10-26): A3 and F2, so 22 Work.** Simulated at 22: failures fell from 4.7% to 2.8% (balanced) and from 9.8% to 5.5% (invested) and the last feature still lands in week 7; the upper score line (135 + 5 per character) kept.
 
    These numbers were derived for the old 18-Work table (balance check, 2026-10-07), when Shit Happens opened in week 2 and the team drew
    **12 Events**. **From v0.37 it opens in week 3 (§3.0): Events are drawn in weeks 3-8, the deadline week included, so twelve, and the Event
@@ -589,7 +593,7 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
    Capability reaches 2 the first Work card each week does nothing, which costs about one Work
    card a week.
 
-   Only **7 of the 24 Work (29%)** sits behind a dependency gate. Gated features unlock once
+   Only **6 of the 22 Work (27%)** sits behind a dependency gate. Gated features unlock once
    their prerequisite (B or C) is banked (§3.2), so front-loading the Work is what keeps the
    endgame winnable - see B5 in the
    [playability assessment](../docs/playability-assessment.md).
@@ -733,9 +737,9 @@ marking what the team got done. Starting at 5, a team that never celebrates, and
 first character when week 6 closes.
 
 > **Resolve the week's Motivation as one number.** Total each character's change - **−1** for
-> the grind, **±1 per matching Event category this week, per their Torso** (§5, "Motivation
+> the grind, **±1 per matching Event category this week, per their values** (§5, "Motivation
 > depends on habitus" - check who was hit and who was immune before you total anything),
-> **+1** if their Need was met (**from week 2**, §5.1) - apply it, and *then*
+> **+1** if their Need was met (**from week 3**, §5.1) - apply it, and *then*
 > check for zero. Don't run the grind as a separate step first: a character on 1 Motivation
 > whose Need was satisfied has had a week that balanced out, and shouldn't quit on a
 > sequencing technicality.
@@ -788,7 +792,7 @@ That's Bourdieu's whole argument about legitimacy in one token.
 
 ### Need gives bonus Motivation
 Your **Need is your Torso** - the same card you were dealt at setup, read a second way.
-From week 2, when the week closes (§6.1), check whether the week satisfied it. If so, you
+From week 3, when the week closes (§6.1), check whether the week satisfied it. If so, you
 **gain 1 Motivation** (cap 5) - which, conveniently, is exactly enough to cancel the weekly
 grind.
 
@@ -797,13 +801,12 @@ where **no Work was added to any feature**, a Quality character loses **3 Motiva
 grind) instead of gaining 1. That hurts, and it is meant to: the team has to put Work into a feature
 every week, or it risks losing its Quality character. A Demo does not stand in for it. It was added after the first full playtest, where a table spent
 weeks 1-3 on everything but Work and nobody paid for it. Like every Need it is read from
-week 2, so a table that skips Work in week 2 already pays for it. A Work card does not count
+week 3, so a table that skips Work in week 3 already pays for it. A Work card does not count
 if it produced 0 - aimed at a blocked feature, or cancelled to nothing by a −1 Capability or
 Tooling Outage - because the point is Work *delivered*, not a card laid down.
 
-Week 2 already asks the question, with only the Ledger cards on the table. Autonomy is met (no Event is
-drawn yet) and Quality by any Work that delivers; Hierarchy needs a Teach or a Learn, Community an Engagement and
-Recognition a banked feature. That's the point: the grind and the Need are taught together, and the
+Week 3 asks the question, the week Events are first drawn. Autonomy is met unless both Events land, and Quality by any Work that delivers; Hierarchy needs a Teach, Learn or Workshop, Community an Engagement or Reflect and
+Recognition a banked feature, a Hero or a Demo. That's the point: Events and the Need arrive together, and the
 thing that answers them was on your board from the start.
 
 | Torso (= Need) | Satisfied when, during that week... |
@@ -1167,7 +1170,7 @@ about one lost day, or a Motivation hit (BUDGET CUT, REQUIREMENTS CHANGE, PRIORI
 START, A FLAT WEEK, THE BIKESHED, LEADS FROM BEHIND, ALWAYS REACTING). **2** - a real hit: a lost
 card plus something else, or rework (STATUS MEETING, NEGATIVE FEEDBACK, SCOPE CREEP, KNOWLEDGE
 HOARDING, BURNOUT WARNING, EQUIPMENT OUTAGE, MORE HANDS, OLD FOUNDATIONS, THE TEAM SPLITS,
-REORGANISED, THE AUDIT, EVERYONE IS EQUAL). **3** - lasting or whole-week damage (EVERYTHING AT ONCE, THE DATE MOVES
+REORGANISED, THE AUDIT, EVERYONE IS EQUAL, THE FIXED PART). **3** - lasting or whole-week damage (EVERYTHING AT ONCE, THE DATE MOVES
 UP, THE DASHBOARD, SHAKY GROUND). **THE WOLF** has no cost: it cannot be bought out. A token is a day of Workshop, so a cost-1 Event is
 worth cancelling, a cost-3 one is worth planning for.
 
@@ -1228,7 +1231,7 @@ nobody has to ask. Tick it off aloud.
 5. **THE WEEK RUNS** - resolve the five cards in any order. They are the team's cards: no
    card belongs to one person.
 6. **CLOSE** - bank features → walk the Ledger and add adapt tokens.
-7. **MOTIVATION** (from week 2) - count it as one net number (the grind -1, Torso, Need) → anyone at 0
+7. **MOTIVATION** (from week 2) - count it as one net number (the grind -1, values, Need from week 3) → anyone at 0
    quits → next week.
 
 ## 7. Activities - one card, one of the week's five days
@@ -1243,15 +1246,15 @@ character to receive it.
 | Activity | Exact effect |
 |---|---|
 | **Work** | **+1** to one feature's Work counter (§10). Modified by Capability (§4). **Minimum 0.** Can't target a feature whose Dependency is unbanked. |
-| **Plan** | Choose a feature: **every Work card played on it this week produces +1 extra** - a plain Work card then delivers **2**, so Plan + 2 Work (4) beats 3 Work (3) (Low: no bonus). **If High complexity, the bonus also applies next week.** |
+| **Plan** | Choose a feature: **every Work card played on it this week produces +1 extra** - a plain Work card then delivers **2**, so Plan + 2 Work (4) beats 3 Work (3) (Low: no bonus). **The bonus lasts the week it was Planned; it no longer carries into the next week on a High feature (v0.37).** |
 | **Engagement** | **+1 Trust.** The team card: everyone takes part and nobody is singled out. Wenger's *mutual engagement*, Edmondson's safe-to-ask, safe-to-admit-a-mistake. **At most one a week - there is only one Engagement card.** |
 | **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
 | **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover **that someone already covers**, any row, immediately **up, down, left, right or diagonally** of one *the teacher* covers - **then flip that tile to its stacked face on the Zone** (Teach never puts a new tile down). **Both teachers +1 Capital.** **Does nothing while Trust is 1 or less.** |
-| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital and +1 Motivation**, and **the team gains +1 Adaptability** (from week 3; a token added at the close, like Workshop's). |
+| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital and +1 Motivation**, and **the team gains +2 Adaptability** (a token added at the close, like Workshop's; it was +1 before v0.38). |
 | **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability (from week 3).** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
-| **Workshop** | **Every character pays 1 Motivation.** **+3 Adaptability.** The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. **Open from week 3. There is one Workshop card, so at most one a week.** It counts for the Hierarchy Need (§5). It merges the old Align and Workshop (§9, v0.28). |
+| **Workshop** | **Every character pays 1 Motivation.** **+4 Adaptability** (it was +3 before v0.38). The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. **Open from week 3. There is one Workshop card, so at most one a week.** It counts for the Hierarchy Need (§5). It merges the old Align and Workshop (§9, v0.28). |
 | **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 5** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
-| **Celebrate** | **Open from week 2.** **At most one a week - there is only one Celebrate card.** **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. **A Celebrate also does nothing if the team celebrated last week.** |
+| **Celebrate** | **Open from week 1** (it has nothing to lift until the grind starts in week 2). **At most one a week - there is only one Celebrate card.** **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. **A Celebrate also does nothing if the team celebrated last week.** |
 
 There are **ten** Activities, and none of them is "rest" - resting isn't something a team does
 at work. **Celebrate** is what is: you mark what you got done, in work time, together. It is
@@ -1272,7 +1275,7 @@ Every card has a moment when its result lands, and the cards now say so:
 ### Why Workshop costs Motivation
 **Workshop** is the meeting nobody wants and everybody sits through: the team agrees what it is
 actually doing, and it is worn out by the end. Every character pays **1 Motivation** and the team
-gets **+3 Adaptability**. It is the one place the two currencies meet, **and only in one
+gets **+4 Adaptability**. It is the one place the two currencies meet, **and only in one
 direction**: Motivation can buy Adaptability, never the other way round. A team that celebrates
 well can afford a meeting; a team that is already on 1 Motivation cannot, which is why the card
 does nothing while anyone is that low.
@@ -1326,8 +1329,9 @@ at the exact moment real teams make it.
 > standing action printed on their card, not an Activity card, usable even in a week with no free slot for
 > Engagement. **It has effect at once**: move the Trust coin up the moment the Motivation is paid, from
 > week 2 on (when Motivation opens), not at the close of the week.
-> Once per week: if Trust already rose this week (Engagement, Own It, or this action, by anyone),
-> nobody may do it again - see the shared ceiling below. **No other character can play it.**
+> Once per week. **Trust still rises at most once a week** (the shared ceiling below): if it already rose this
+> week (Engagement, Own It, by anyone), the action still costs 2 Motivation and still gives the +1 Capital, but moves
+> no Trust. **No other character can play it.**
 
 It's the personal-cost mirror of Overtime: Overtime borrows against the *project's* clock
 (a day now, a Flex marker owed later); this borrows against a *character's* Motivation instead,
@@ -1361,11 +1365,10 @@ against this version yet.
 ### Why Plan scales with Complexity, without letting one card finish the job
 Every Work card gets the same **+1 extra** when Planned - the bonus itself never changes size,
 so Planning can never let a single card outrun a feature's real Work Cost. What Complexity
-changes is **how long the bonus lasts**: Low gets nothing, Medium gets it for the week it was
-Planned, and **High keeps it into the following week too**. That rewards Complexity exactly
-where it already costs something - High features already take a bigger rework hit from Events
-(§10) - so Planning a hard feature pays off for as long as it's likely to still be open,
-rather than in one lump sum that could finish it outright.
+changes is **whether it pays at all**: Low gets nothing, Medium and High get it for the week they were
+Planned. **Until v0.37 High kept the bonus into the following week too; that carry-over was removed**, so a Plan
+is always a one-week decision. High features still take a bigger rework hit from Events
+(§10), so Planning a hard feature stays worth the day, but it is not a lump sum that could finish it outright.
 
 Note that Plan buys nothing unless Work follows it *in the same week*: a Plan card played on a
 feature nobody then works on is a wasted day. That's the real decision, and it doesn't need a
@@ -1435,7 +1438,7 @@ that is its whole cost for Learn - no Motivation, no Capital, nothing owed after
 teacher on a Teach card is barred from
 nothing; they simply spent a day on this instead of on the tower.
 
-That day *is* the scaffolding cost. Five days a week for the whole team, against 24 Work and a
+That day *is* the scaffolding cost. Five days a week for the whole team, against 22 Work and a
 35-day budget (§3.2), means every day spent teaching is a day the tower does not rise.
 Vygotsky's **more knowledgeable other** is priced here as **opportunity, not penalty**: nobody
 is punished for teaching, they just cannot also have built something with that day.
@@ -1564,7 +1567,7 @@ Categories:
 > Events.** That's the one place the world is allowed to talk like that *at* the team; nowhere
 > else earns it.
 
-### The Event deck - the 25 printed cards
+### The Event deck - the 26 printed cards
 The printed cards are the authority. "Extra" means the Torso loses 1 more on top of the
 Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed Adaptability cost
 (a Habit takes 1 off, minimum 0, so a cost-1 Event is free, §6.1); Hero is the Pressure Response that cancels it.
@@ -1595,10 +1598,11 @@ Everyone-loses-1; "immune" means that Torso loses nothing. Adapt is the printed 
 | OLD FOUNDATIONS | Environment | 2 | Engage | The feature with the most Work already banked gains +2 Work Cost. | Hierarchy −1 |
 | FALSE START | Environment | 2 | none | The first Work card this week produces nothing. | Hierarchy −1 |
 | EVERYTHING AT ONCE | Environment | 3 | Speak Up | No feature may take more than 1 Work this week. Only Hierarchy characters lose 1 Motivation. | Hierarchy −1 |
+| THE FIXED PART | Environment | 2 | Analyze | No Work card makes more than 2 Work this week, however good Capability and Shared Practice are, and counting Plan's bonus. | Hierarchy −1 |
 | SHAKY GROUND | Environment | 3 | Engage | The team loses 1 Capability (the Ledger coin moves down one, permanently). | Hierarchy −1 |
 
-**Counts:** 4 cost 1, 12 cost 2, 7 cost 3, and THE WOLF and THE DATE MOVES UP have no cost (average 2.1 over the 23 that
-can be bought out). 21 cards have a Hero route and 4 do not (FALSE START, THE AUDIT,
+**Counts:** 4 cost 1, 13 cost 2, 7 cost 3, and THE WOLF and THE DATE MOVES UP have no cost (average 2.1 over the 24 that
+can be bought out). 22 cards have a Hero route and 4 do not (FALSE START, THE AUDIT,
 EVERYONE IS EQUAL, THE WOLF). THE BIKESHED is a Management card that hits Quality, as
 printed.
 
@@ -1753,7 +1757,7 @@ printed.
 > (move the Ledger coin down one, permanent, not a one-week penalty). Hierarchy: also lose 1
 > Motivation. *(Closes the gap where Capability had no way down at all.)*
 
-The printed deck is 25 cards. New cards come from playtesting; prioritize People and Customer
+The printed deck is 26 cards. New cards come from playtesting; prioritize People and Customer
 cards, since those interact most directly with Habitus and Capital (§5.1).
 
 ## 12. Onboarding
@@ -1894,10 +1898,9 @@ person making it, not its content - which is why the Demo gate is relative to th
 v0.1 ships 5. Add more once these are playtested and clearly working - record which ones got
 acquired, and when, in the session's [playtest log entry](../playtests/README.md).
 
-## 18.1 Combos (from week 2)
-Combos open in week 2: pairs that were always available individually, now worth more
-together. A pair only becomes possible once both halves are open (Celebrate, Demo and Reflect from week 2; the Workshop
-and the Hero from week 3), so in week 2 the Combos available are Demo + Celebrate and Need met + Celebrate.
+## 18.1 Combos (from week 3)
+Combos open in week 3: pairs that were always available individually, now worth more
+together. A pair only becomes possible once both halves are open (Celebrate and Engagement from week 1; the Need, Demo, Reflect, the Workshop and the Hero from week 3), so every pair below is a week 3 pair.
 
 **A Combo is two named triggers landing in the same week.** Check for Combos at close-the-week,
 alongside Motivation (§6.1 step 7). **Maximum one Combo per team per week** - if more than one
@@ -1909,7 +1912,7 @@ pair is satisfied, the team names which one counts. No stacking, no hidden bookk
 | **Engagement + Workshop** | Both played | +1 Capital to one named character |
 | **Hero + Celebrate** | A character spends their Hero to cancel an Event, and the team plays Celebrate | +1 Motivation to everyone |
 | **Cancel an Event with Adaptability + Workshop** | Both happen | +1 Adaptability |
-| **Need met + Celebrate** | A character's Need is satisfied (§5, from week 2) and the team plays Celebrate | +1 Motivation to that character, on top of the normal Need bonus |
+| **Need met + Celebrate** | A character's Need is satisfied (§5, from week 3) and the team plays Celebrate | +1 Motivation to that character, on top of the normal Need bonus |
 
 **Why not a Habit-flip combo too.** The moment a Habit is acquired already pays +1 Capital via
 Vindication (§ "Motivation depends on habitus") - a Combo reward on the same trigger would pay
@@ -1920,7 +1923,7 @@ Nothing here needs a new component - check the pairs at close-the-week the same 
 check Motivation and the Ledger.
 
 ## 19. Prototype scope (v0.1)
-3-6 players · 6 features · 24 total Work · 7 weeks × 5 team-days = **35 days** · 3 Ledger
+3-6 players · 6 features · 22 total Work · 7 weeks × 5 team-days = **35 days** · 3 Ledger
 tracks + an Adaptability pool · Motivation starts at 5 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
 simple individual/shared Knowledge system · 6 Project cards (§20). Keep components ugly at
 first (index cards, cubes, sticky notes) - see
@@ -1933,14 +1936,14 @@ the names change.
 
 | Slot | Work Cost | Complexity | Depends on | Narrative role |
 |---|---|---|---|---|
-| **A** | 4 | Low | - | Independent side piece |
+| **A** | 3 | Low | - | Independent side piece |
 | **B** | 5 | Medium | - | Foundation |
 | **C** | 5 | Medium | - | Foundation |
 | **D** | 4 | High | **B** | Built on top of B |
 | **E** | 3 | Low | - | The bit nobody wants to do |
-| **F** | 3 | High | **C** | Built on top of C |
+| **F** | 2 | High | **C** | Built on top of C |
 
-**24 Work in total**, of which 7 sits behind a gate (§3.2).
+**22 Work in total**, of which 6 sits behind a gate (§3.2).
 
 Six sectors are printed on sheet 9. The dependency in each is **causal, not arbitrary** - a
 team should be able to say *why* D can't start, without looking anything up. Healthcare,
@@ -1949,17 +1952,17 @@ tongue-in-cheek one** - the classic software engagement, where the customer hand
 spreadsheet and cannot explain what it does.
 
 ### I - Patient Portal (Healthcare)
-> A: Appointment reminders *(3, Low)* · **B: Patient login** *(4, Med)* · **C: Medical records
-> API** *(4, Med)* · D: Referral network SSO *(3, High, needs B)* · E: Consent form capture
-> *(2, Low)* · F: Billing history *(2, High, needs C)*
+> A: Appointment reminders *(3, Low)* · **B: Patient login** *(5, Med)* · **C: Medical records
+> API** *(5, Med)* · D: Referral network SSO *(4, High, needs B)* · E: Consent form capture
+> *(3, Low)* · F: Billing history *(2, High, needs C)*
 >
 > **Why the gates hold:** you cannot federate identity out to a referring practice before you
 > own identity yourself. And billing history is a *view over* the records API - without it
 > there is literally nothing to bill against.
 
 ### II - Loan Platform (Finance)
-> A: Branch locator *(3, Low)* · **B: Account ledger** *(4, Med)* · **C: Application intake**
-> *(4, Med)* · D: Real-time balance sync *(3, High, needs B)* · E: Statement PDFs *(2, Low)* ·
+> A: Branch locator *(3, Low)* · **B: Account ledger** *(5, Med)* · **C: Application intake**
+> *(5, Med)* · D: Real-time balance sync *(4, High, needs B)* · E: Statement PDFs *(3, Low)* ·
 > F: Credit scoring *(2, High, needs C)*
 >
 > **Why the gates hold:** sync compares live activity against the ledger - with no ledger there
@@ -1967,9 +1970,9 @@ spreadsheet and cannot explain what it does.
 > so until applications arrive there is nothing to score.
 
 ### III - The Excel Workflow (Software - played for the joke)
-> A: Turn the screenshot into a spec *(3, Low)* · **B: Reverse-engineer the macros** *(4, Med)*
-> · **C: Guess the data model** *(4, Med)* · D: Automate "the button that fixes it" *(3, High,
-> needs B)* · E: Rename all the tabs *(2, Low)* · F: Reconcile three "final" sheets *(2, High,
+> A: Turn the screenshot into a spec *(3, Low)* · **B: Reverse-engineer the macros** *(5, Med)*
+> · **C: Guess the data model** *(5, Med)* · D: Automate "the button that fixes it" *(4, High,
+> needs B)* · E: Rename all the tabs *(3, Low)* · F: Reconcile three "final" sheets *(2, High,
 > needs C)*
 >
 > **Why the gates hold:** you cannot automate a button whose behaviour nobody has reverse-
@@ -1980,27 +1983,27 @@ spreadsheet and cannot explain what it does.
 > asking for**, and the whole project is downstream of that.
 
 ### IV - The Mobile App (Retail)
-> A: App store listing *(3, Low)* · **B: Offline sync engine** *(4, Med)* · **C: Push
-> notification service** *(4, Med)* · D: Sync conflict resolution *(3, High, needs B)* ·
-> E: Accessibility pass *(2, Low)* · F: Rich notification actions *(2, High, needs C)*
+> A: App store listing *(3, Low)* · **B: Offline sync engine** *(5, Med)* · **C: Push
+> notification service** *(5, Med)* · D: Sync conflict resolution *(4, High, needs B)* ·
+> E: Accessibility pass *(3, Low)* · F: Rich notification actions *(2, High, needs C)*
 >
 > **Why the gates hold:** you can't resolve a conflict in data that doesn't sync offline yet -
 > conflict resolution needs the sync engine to exist first. And a rich notification is still
 > just a notification: there's no delivery service to decorate until it exists.
 
 ### V - Home Renovation (Construction)
-> A: Permit application *(3, Low)* · **B: Framing and foundation** *(4, Med)* · **C: Plumbing
-> and electrical rough-in** *(4, Med)* · D: Drywall and interior finishing *(3, High, needs B)*
-> · E: Landscaping *(2, Low)* · F: Fixture installation *(2, High, needs C)*
+> A: Permit application *(3, Low)* · **B: Framing and foundation** *(5, Med)* · **C: Plumbing
+> and electrical rough-in** *(5, Med)* · D: Drywall and interior finishing *(4, High, needs B)*
+> · E: Landscaping *(3, Low)* · F: Fixture installation *(2, High, needs C)*
 >
 > **Why the gates hold:** you can't hang drywall on a frame that doesn't exist yet - the finish
 > work needs the frame to attach to. And you can't install a sink or a light switch before the
 > pipe or wire behind that wall has actually been roughed in.
 
 ### VI - The Wedding (Events)
-> A: Guest list and invitations *(3, Low)* · **B: Venue booking** *(4, Med)* · **C: Catering
-> contract** *(4, Med)* · D: Seating chart and table layout *(3, High, needs B)* · E: Music
-> playlist *(2, Low)* · F: Final headcount and catering order *(2, High, needs C)*
+> A: Guest list and invitations *(3, Low)* · **B: Venue booking** *(5, Med)* · **C: Catering
+> contract** *(5, Med)* · D: Seating chart and table layout *(4, High, needs B)* · E: Music
+> playlist *(3, Low)* · F: Final headcount and catering order *(2, High, needs C)*
 >
 > **Why the gates hold:** you can't lay out tables for a floor plan you don't have yet - the
 > seating chart needs the venue. And the final catering order is a number derived from the

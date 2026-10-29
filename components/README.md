@@ -23,12 +23,13 @@ for the full workflow and template.
 | Habitus cards/tiles (Base, Legs, Torso, Head, Item options) | 1 deck | Printed cards | To design |
 | Project cards | 6 | Printed cards - six themed projects over one identical slot structure, §20 | Written in rulebook §20 |
 | **Activity cards** | 16 per sheet (9 designs) | **The week's five slots are filled from these** - print sheet in `print-5-activities.svg` | Drawn |
-| **Flex markers** | 5 | Two-sided disc, printed on the markers sheet. Taken on Overtime owed side up; a day the project owes. The team holds at most one. Placed **into a weekday slot and flipped** to give the day back, or -2 Team Score if never repaid (§7) | Printed on `markers-coins-clock-capital-zone-A4-landscape.svg` |
+| **Flex markers** | 5 | Two-sided 28 mm disc, printed on the coins sheet. Taken on Overtime owed side up; a day the project owes. The team holds at most one. Placed **into a weekday slot and flipped** to give the day back, or -2 Team Score if never repaid (§7) | Printed on `ledger-coins-28mm-A4-landscape.svg` |
+| **Capital markers** | 5 | 28 mm disc, one per SPECIMEN, slid along the six 30 mm Capital wells | Printed on `ledger-coins-28mm-A4-landscape.svg` |
 | **Feature Tower blocks** | 6 | **3D print, wood-fill PLA - hex, height proportional to Work Cost. D and F have cone/wedge bottoms and can only stand on B and C** | Spec'd in `3d-models/` |
 | Feature Work cubes | 6 | One cube walking each feature's track on the Project Rack | **Off-the-shelf cube, not printed** |
 | **Quality chips** | 6 | **3D print - same blank body across all tiers, engraved reveal face** | Spec'd in `3d-models/` |
 | Lock tiles | 2 | Physically cover features D and F until B / C bank | To design |
-| **Habit coins** | 5 | **3D print, resin - double-sided 14 mm coins, one per Ledger row. Track marker on one face, the acquired Habit on the other (§18)** | Spec'd in `3d-models/` |
+| **Habit coins** | 5 | **3D print, resin - double-sided 28 mm coins, one per Ledger row (and one for Team Reflexivity). Track marker on one face, the acquired Habit on the other (§18)** | Spec'd in `3d-models/`; printed version on `ledger-coins-28mm-A4-landscape.svg` |
 | Week board | 1 | 5 weekday slots + the 1-7 ladder to the deadline | On the main board |
 | Event Deck | 25 cards | Printed cards; 2 drawn per week from week 2 | Drafted in rulebook §11 |
 | **Motivation tokens** | 25 (5 per character × 5 characters) | Domed discs seating into player-board wells | **Off-the-shelf token, not printed** - fallback print spec in `3d-models/` |
@@ -69,7 +70,8 @@ the same way the others do, and so it can carry the table-placement guide too.
 | **3** | A4 landscape | `board-3-FRONT-the-team-A4-landscape.svg` | `board-3-BACK-week-3-the-team-A4-landscape.svg` |
 | **4** | A4 landscape | `board-4-FRONT-the-zone-A4-landscape.svg` | `board-4-BACK-the-zone-A4-landscape.svg` - the introduction: every board starts on its back, this one is read first and turns over with the Project |
 | **4b** | A4 landscape, both faces on one page | `board-4b-the-zone-payoff-127x104mm-A4-landscape.svg` (Face A) | same file (Face B) - waits face down until week 3 |
-| **Markers** | A4 landscape | `markers-coins-clock-capital-zone-A4-landscape.svg` - 5 Ledger coins (track face), 5 Capital markers, the week marker, and the 25 Zone tiles (front) | same file - the 5 Habit faces of the Ledger coins, and the stacked Zone faces. Coins are two discs glued back to back; the Zone block is left (25 one-person faces) and right (25 stacked faces): cut the sheet in half at the dashed line, glue one block to each side of one 2 mm greyboard, then cut along the tick marks |
+| **Ledger coins** | A4 landscape | `ledger-coins-28mm-A4-landscape.svg` - the 5 Ledger coins at 28 mm, track face above (white, text and ring in a deep shade of the track hue), plus the 5 Capital markers and the 5 two-sided Flex markers (25 discs in all) | same file - the 5 Habit faces below the track faces, the light tint of the track with black text. Two discs glued back to back around a 28 mm disc of 2 mm greyboard |
+| **Markers** | A4 landscape | `markers-coins-clock-capital-zone-A4-landscape.svg` - the week marker and the 25 Zone tiles (front); the Capital and Flex markers are on `ledger-coins-28mm-A4-landscape.svg` with the Ledger coins (5 coins, 5 Capital, 5 two-sided Flex, all 28 mm) | same file - the stacked Zone faces. The Zone block is left (25 one-person faces) and right (25 stacked faces): cut the sheet in half at the dashed line, glue one block to each side of one 2 mm greyboard, then cut along the tick marks |
 
 Only board 1 needs A3 - it carries five 65 × 90 card slots, six features and the tower
 plinth. Boards 2, 3 and 4 fit A4 comfortably and printing them larger would only cost paper.
@@ -83,7 +85,7 @@ both sides are down, not before: paper creeps a millimetre when it is wet with g
 
 | Print | Paper | What it is |
 |---|---|---|
-| `board-person-170x141mm-A4-portrait` | A4 **landscape** (filename now stale - was 170x114mm portrait, now 244x128mm landscape so the habitus seats could be true 44x36mm, matching the printed part-cards) | **The person board.** One per sheet, one per player - Capital+Motivation share a row, Flex+Hero+Need+Zone Start+Skills the row above |
+| `board-person-170x141mm-A4-portrait` | A4 **landscape** (filename now stale - was 170x114mm portrait, now 244x128mm landscape so the habitus seats could be true 44x36mm, matching the printed part-cards) | **The person board.** One per sheet, one per player - Motivation and Capital each on their own row (Capital has six 30 mm wells, the Flex well is 30 mm), Flex+Hero+Need+Zone Start+Skills the row above |
 
 **Week 3 has no shared board, and shouldn't.** Its reveal is the bottom panel of your own
 person board - always physically there, but only worth reading from week 3 on. A light dashed

@@ -26,9 +26,9 @@ the-team-BACK matches and goes on the reverse.</desc>
 <text x="12" y="26" class="s" font-size="3.8" font-style="italic">One coin per row. Walk it as the track moves. At the ring, turn it over - that is a <tspan font-weight="bold">HABIT</tspan>, and it is permanent.</text>
 <text x="12" y="30" class="s" font-size="3.8" font-style="italic">The coin can walk back down afterwards. It never turns back over. The left column is what the team <tspan font-style="normal">does</tspan>; the right is what it has <tspan font-style="normal">become</tspan>, and who named it.</text>
 
-<text x="107" y="37.5" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
-<text x="170" y="37.5" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
-<text x="220.7" y="37.5" class="m" font-size="2.6" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
+<text x="105" y="37.5" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">START</text>
+<text x="201" y="37.5" class="m" font-size="4.2" text-anchor="middle" letter-spacing=".6">FLIP → HABIT</text>
+<text x="285.4" y="37.5" class="m" font-size="2.6" text-anchor="end" letter-spacing=".3">HABIT - PRINTED ON THE EVENT CARDS</text>
 
 <!-- TRUST -->
 <g id="trust">
@@ -36,18 +36,19 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="12" y="47" class="s" font-size="6">Trust</text>
   <text x="12" y="54" class="s" font-size="3.4" font-style="italic">grown by Engagement</text>
   <g class="w">
-    <circle cx="86" cy="54" r="9"/><circle cx="107" cy="54" r="9"/><circle cx="128" cy="54" r="9"/>
-    <circle cx="149" cy="54" r="9"/><circle cx="170" cy="54" r="9"/><circle cx="191" cy="54" r="9"/>
+    <circle cx="73" cy="57" r="15"/><circle cx="105" cy="57" r="15"/><circle cx="137" cy="57" r="15"/>
+    <circle cx="169" cy="57" r="15"/><circle cx="201" cy="57" r="15"/><circle cx="233" cy="57" r="15"/>
   </g>
-  <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="55.4">0</text><text x="107" y="55.4">1</text><text x="128" y="55.4">2</text>
-    <text x="149" y="55.4">3</text><text x="170" y="55.4">4</text><text x="191" y="55.4">5</text>
+  <g class="m q" font-size="6" text-anchor="middle">
+    <text x="73" y="59.2">0</text><text x="105" y="59.2">1</text><text x="137" y="59.2">2</text>
+    <text x="169" y="59.2">3</text><text x="201" y="59.2">4</text><text x="233" y="59.2">5</text>
   </g>
-  <circle cx="170" cy="54" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M76.5,65.5 L76.5,68.5 L116.5,68.5 L116.5,65.5" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="96.5" y="72" class="m" font-size="2.8" text-anchor="middle">TEACH DOES NOTHING</text>
-  <text x="220.7" y="47" class="s" font-size="5">Psychological Safety</text>
-  <text x="220.7" y="53.5" class="m q" font-size="2.6">EDMONDSON 1999</text>
+  <circle cx="201" cy="57" r="16" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <text x="12" y="62" class="m" font-size="2.8">AT 0-1:</text>
+  <text x="12" y="65.5" class="m" font-size="2.8">TEACH DOES NOTHING</text>
+  <text x="252" y="47" class="s" font-size="5">Psychological</text>
+  <text x="252" y="52.5" class="s" font-size="5">Safety</text>
+  <text x="252" y="58" class="m q" font-size="2.6">EDMONDSON 1999</text>
 </g>
 
 <!-- CAPABILITY -->
@@ -57,18 +58,19 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="12" y="92" class="s" font-size="3.4" font-style="italic">grown by filling a whole</text>
   <text x="12" y="96.5" class="s" font-size="3.4" font-style="italic">row or column on the Zone</text>
   <g class="w">
-    <circle cx="86" cy="92" r="9"/><circle cx="107" cy="92" r="9"/><circle cx="128" cy="92" r="9"/>
-    <circle cx="149" cy="92" r="9"/><circle cx="170" cy="92" r="9"/><circle cx="191" cy="92" r="9"/>
+    <circle cx="73" cy="95" r="15"/><circle cx="105" cy="95" r="15"/><circle cx="137" cy="95" r="15"/>
+    <circle cx="169" cy="95" r="15"/><circle cx="201" cy="95" r="15"/><circle cx="233" cy="95" r="15"/>
   </g>
-  <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="93.4">0</text><text x="107" y="93.4">1</text><text x="128" y="93.4">2</text>
-    <text x="149" y="93.4">3</text><text x="170" y="93.4">4</text><text x="191" y="93.4">5</text>
+  <g class="m q" font-size="6" text-anchor="middle">
+    <text x="73" y="97.2">0</text><text x="105" y="97.2">1</text><text x="137" y="97.2">2</text>
+    <text x="169" y="97.2">3</text><text x="201" y="97.2">4</text><text x="233" y="97.2">5</text>
   </g>
-  <circle cx="170" cy="92" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M76.5,103.5 L76.5,106.5 L116.5,106.5 L116.5,103.5" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="96.5" y="110" class="m" font-size="2.8" text-anchor="middle">FIRST WORK DOES NOTHING</text>
-  <text x="220.7" y="85" class="s" font-size="5">Who Knows What</text>
-  <text x="220.7" y="91.5" class="m q" font-size="2.6">WEGNER 1986 · TRANSACTIVE MEMORY</text>
+  <circle cx="201" cy="95" r="16" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <text x="12" y="102" class="m" font-size="2.8">AT 0-1:</text>
+  <text x="12" y="105.5" class="m" font-size="2.8">FIRST WORK DOES NOTHING</text>
+  <text x="252" y="85" class="s" font-size="5">Who Knows What</text>
+  <text x="252" y="90.5" class="m q" font-size="2.6">WEGNER 1986 ·</text>
+  <text x="252" y="94" class="m q" font-size="2.6">TRANSACTIVE MEMORY</text>
 </g>
 
 <!-- SHARED PRACTICE -->
@@ -78,18 +80,19 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="12" y="130" class="s" font-size="3.4" font-style="italic">grown by Reflect, and by</text>
   <text x="12" y="134.5" class="s" font-size="3.4" font-style="italic">stacking a square on the Zone</text>
   <g class="w">
-    <circle cx="86" cy="130" r="9"/><circle cx="107" cy="130" r="9"/><circle cx="128" cy="130" r="9"/>
-    <circle cx="149" cy="130" r="9"/><circle cx="170" cy="130" r="9"/><circle cx="191" cy="130" r="9"/>
+    <circle cx="73" cy="133" r="15"/><circle cx="105" cy="133" r="15"/><circle cx="137" cy="133" r="15"/>
+    <circle cx="169" cy="133" r="15"/><circle cx="201" cy="133" r="15"/><circle cx="233" cy="133" r="15"/>
   </g>
-  <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="131.4">0</text><text x="107" y="131.4">1</text><text x="128" y="131.4">2</text>
-    <text x="149" y="131.4">3</text><text x="170" y="131.4">4</text><text x="191" y="131.4">5</text>
+  <g class="m q" font-size="6" text-anchor="middle">
+    <text x="73" y="135.2">0</text><text x="105" y="135.2">1</text><text x="137" y="135.2">2</text>
+    <text x="169" y="135.2">3</text><text x="201" y="135.2">4</text><text x="233" y="135.2">5</text>
   </g>
-  <circle cx="170" cy="130" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M76.5,141.5 L76.5,144.5 L116.5,144.5 L116.5,141.5" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="96.5" y="148" class="m" font-size="2.8" text-anchor="middle">PLAN DOES NOTHING</text>
-  <text x="220.7" y="123" class="s" font-size="5">Shared Repertoire</text>
-  <text x="220.7" y="129.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 · WENGER 1998</text>
+  <circle cx="201" cy="133" r="16" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <text x="12" y="140" class="m" font-size="2.8">AT 0-1:</text>
+  <text x="12" y="143.5" class="m" font-size="2.8">PLAN DOES NOTHING</text>
+  <text x="252" y="123" class="s" font-size="5">Shared Repertoire</text>
+  <text x="252" y="128.5" class="m q" font-size="2.6">LAVE &amp; WENGER 1991 ·</text>
+  <text x="252" y="132" class="m q" font-size="2.6">WENGER 1998</text>
 </g>
 
 <!-- STANDING - on the board from the start; the coin mirrors the highest Capital, it is never walked -->
@@ -99,22 +102,24 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="12" y="168" class="s" font-size="3.4" font-style="italic">grown by nobody</text>
   <text x="12" y="172.5" class="s" font-size="3.4" font-style="italic">starts on 0</text>
   <g class="w">
-    <circle cx="86" cy="168" r="9"/><circle cx="107" cy="168" r="9"/><circle cx="128" cy="168" r="9"/>
-    <circle cx="149" cy="168" r="9"/><circle cx="170" cy="168" r="9"/><circle cx="191" cy="168" r="9"/>
+    <circle cx="73" cy="171" r="15"/><circle cx="105" cy="171" r="15"/><circle cx="137" cy="171" r="15"/>
+    <circle cx="169" cy="171" r="15"/><circle cx="201" cy="171" r="15"/><circle cx="233" cy="171" r="15"/>
   </g>
-  <g class="m q" font-size="4.2" text-anchor="middle">
-    <text x="86" y="169.4">0</text><text x="107" y="169.4">1</text><text x="128" y="169.4">2</text>
-    <text x="149" y="169.4">3</text><text x="170" y="169.4">4</text><text x="191" y="169.4">5</text>
+  <g class="m q" font-size="6" text-anchor="middle">
+    <text x="73" y="173.2">0</text><text x="105" y="173.2">1</text><text x="137" y="173.2">2</text>
+    <text x="169" y="173.2">3</text><text x="201" y="173.2">4</text><text x="233" y="173.2">5</text>
   </g>
-  <circle cx="170" cy="168" r="10" class="w" style="stroke:#905151;stroke-width:.8"/>
-  <path d="M76.5,179.5 L76.5,182.5 L200.5,182.5 L200.5,179.5" class="w" style="stroke:#905151;stroke-width:.5"/>
-  <text x="138.5" y="186" class="m" font-size="2.8" text-anchor="middle">NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE</text>
-  <text x="220.7" y="161" class="s" font-size="5">Authorized Voice</text>
-  <text x="220.7" y="167.5" class="s" font-size="3.4" font-style="italic">Once a week: cancel a Management</text>
-  <text x="220.7" y="171.5" class="s" font-size="3.4" font-style="italic">or Customer Event outright.</text>
-  <text x="220.7" y="177.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
+  <circle cx="201" cy="171" r="16" class="w" style="stroke:#905151;stroke-width:.8"/>
+  <text x="12" y="178" class="m" font-size="2.8">NOT GROWN - IT MIRRORS</text>
+  <text x="12" y="181.5" class="m" font-size="2.8">THE HIGHEST CAPITAL</text>
+  <text x="12" y="185" class="m" font-size="2.8">AT THE TABLE</text>
+  <text x="252" y="161" class="s" font-size="5">Authorized Voice</text>
+  <text x="252" y="167.5" class="s" font-size="3.4" font-style="italic">Once a week: cancel a</text>
+  <text x="252" y="171.5" class="s" font-size="3.4" font-style="italic">Management or Customer</text>
+  <text x="252" y="175.5" class="s" font-size="3.4" font-style="italic">Event outright.</text>
+  <text x="252" y="181.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
 </g>
-<text x="170" y="152.6" class="m" font-size="2.6" text-anchor="middle">FLIP AT 4</text>
+<text x="201" y="152.6" class="m" font-size="2.6" text-anchor="middle">FLIP AT 4</text>
 
 <text x="12" y="194" class="s" font-size="3.8" font-style="italic">Adaptability is not a track here: it is a pool of tokens, kept on SHIT HAPPENS, with the Team Reflexivity coin beside it.</text>
 

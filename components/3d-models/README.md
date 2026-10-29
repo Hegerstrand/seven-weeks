@@ -156,12 +156,12 @@ The coin can walk back down afterwards; it never turns back over.
   faces are exactly what resin is for. For an FDM prototype, print each face separately
   (engraved face up, so it prints clean) and glue the two halves back-to-back, or use a
   mid-print filament change.
-- **Size:** **14 mm dia × 3 mm** - sized to the Ledger wells, not to a display shelf. Every
+- **Size:** **28 mm dia × 4 mm** (was 14 mm × 3 mm; the printed discs are 28 mm too) - sized to the Ledger wells, not to a display shelf. Every
   well on the board is the same diameter so the coin drops into any of them.
 - **Orientation:** FDM - flat, no supports, one face per print, engraved face up. Resin - tilt
   ~20° with supports on the rim only, never on an engraved face.
 - **Min wall:** 1.5 mm.
-- **Seat:** every Ledger well is **14.6 mm dia × 2 mm deep** - **0.3 mm clearance per side**, and
+- **Seat:** every Ledger well is **30 mm dia × 2 mm deep** - **1 mm clearance per side**, and
   shallow enough to flip a coin in place with a fingernail. That last point matters: the flip
   happens *on the track*, not in a separate shelf.
 

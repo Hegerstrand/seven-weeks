@@ -2,8 +2,9 @@
 <title>Habitus card backs - 35 backs, 5 across x 7 down, true 44 x 36 mm (A3 landscape)</title>
 <desc>The backs of every habitus card, 5 across and 7 down: 25 part-cards (five rows of five) and
 the 10 NEED and HERO tiles (two more rows). Seven rows of 36 mm do not fit an A4 page, so this
-sheet is A3 landscape, like board 1; it prints at 100%. Each row is one deck and carries that
-deck's shape from the person board, without the pips: upbringing (square), instinct (triangle),
+sheet is A3 landscape, like board 1; it prints at 100%. Each row is one deck and carries that deck's shape from the
+person board, without the pips, and (top right) the week it starts to count: education and skill week 1, upbringing and
+instinct week 2, values, NEED and HERO week 3. The shapes are upbringing (square), instinct (triangle),
 values (pentagon), education (hexagon), skill (diamond), then NEED (red pentagon, the values
 shape) and HERO (red triangle, the instinct shape). Cards sit on a 50 x 40 mm pitch, the same 50 mm
 column pitch as the part-card sheets, so a back can be glued behind its front. Parts are named by
@@ -15,31 +16,39 @@ what they are, never by body part.</desc>
   .sh  { fill:#F2EDE0; stroke:#2A2620; stroke-width:.6; stroke-linejoin:round; }
   .shr { fill:#905151; stroke:#2A2620; stroke-width:.6; stroke-linejoin:round; }
   .rule { stroke:#2A2620; stroke-width:.3; fill:none; }
+  .wk  { font-family:"IBM Plex Mono","Courier New",monospace; fill:#6E6249; }
 </style>
 
 <defs>
   <!-- one back = 44 x 36 card, symbol centred at (22,15.5), small caption at y=32.5 -->
   <g id="back-upbringing"><rect width="44" height="36" rx="1.5" class="cut"/>
     <rect x="13.6" y="7.1" width="16.8" height="16.8" rx="1.4" class="sh"/>
-    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">UPBRINGING</text></g>
+    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">UPBRINGING</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text></g>
   <g id="back-instinct"><rect width="44" height="36" rx="1.5" class="cut"/>
     <polygon points="22,5.3 31.1,21.45 12.9,21.45" class="sh"/>
-    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">INSTINCT</text></g>
+    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">INSTINCT</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 2</text></g>
   <g id="back-values"><rect width="44" height="36" rx="1.5" class="cut"/>
     <polygon points="22,6.4 30.65,12.7 27.35,22.85 16.65,22.85 13.35,12.7" class="sh"/>
-    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">VALUES</text></g>
+    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">VALUES</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 3</text></g>
   <g id="back-education"><rect width="44" height="36" rx="1.5" class="cut"/>
     <polygon points="31.1,15.5 26.55,23.4 17.45,23.4 12.9,15.5 17.45,7.6 26.55,7.6" class="sh"/>
-    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">EDUCATION</text></g>
+    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">EDUCATION</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text></g>
   <g id="back-skill"><rect width="44" height="36" rx="1.5" class="cut"/>
     <polygon points="22,3.5 34,15.5 22,27.5 10,15.5" class="sh"/>
-    <text x="22" y="33.2" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">SKILL</text></g>
+    <text x="22" y="33.2" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">SKILL</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text></g>
   <g id="back-need"><rect width="44" height="36" rx="1.5" class="cut"/>
     <polygon points="22,6.4 30.65,12.7 27.35,22.85 16.65,22.85 13.35,12.7" class="shr"/>
-    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">NEED</text></g>
+    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">NEED</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 3</text></g>
   <g id="back-hero"><rect width="44" height="36" rx="1.5" class="cut"/>
     <polygon points="22,5.3 31.1,21.45 12.9,21.45" class="shr"/>
-    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">HERO</text></g>
+    <text x="22" y="32.5" class="m" font-size="3" letter-spacing=".8" text-anchor="middle">HERO</text>
+    <text x="41" y="5" class="wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 3</text></g>
 </defs>
 
 <rect width="420" height="297" fill="#FFFFFF"/>

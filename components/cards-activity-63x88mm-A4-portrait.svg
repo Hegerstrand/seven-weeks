@@ -55,19 +55,19 @@ moved to sheet 5b, which had the room. They drop straight into the week slots on
 
   <g id="workshop" transform="scale(.95238095,1)">
     <rect width="63" height="88" rx="2" class="c"/>
-    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 1</text>
+    <text x="58" y="6" class="m wk" font-size="2.4" letter-spacing=".6" text-anchor="end">WEEK 3</text>
     <text x="5" y="13" class="m" font-size="7.5" letter-spacing="1.5">WORKSHOP</text>
     <line x1="5" y1="17" x2="58" y2="17" class="h" stroke-width=".7"/>
     <text x="5" y="23.5" class="s" font-size="4.2">A meeting nobody wants.</text>
     <text x="5" y="28.3" class="s" font-size="4.2">Everybody sits through it.</text>
     <g transform="translate(0,10)">
     <rect x="4" y="24" width="55" height="11" rx="1.2" fill="#B5C7CF"/>
-    <text x="5" y="31.6" class="s adapt" font-size="7.4">+3 Adaptability</text>
+    <text x="5" y="31.6" class="s adapt" font-size="7.4">+4 Adaptability</text>
     <rect x="4" y="38" width="55" height="12" rx="1.2" fill="#D3B1B1"/>
     <text x="5" y="43.2" class="s" font-size="4.4">Every character pays</text>
     <text x="5" y="48.2" class="s" font-size="4.4" font-weight="bold">1 Motivation</text>
     <text x="5" y="57" class="m q" font-size="2.9">NOTHING IF ANYONE IS ON 1.</text>
-    <text x="5" y="62" class="m q" font-size="2.9">OPEN FROM WEEK 1. ONE CARD.</text>
+    <text x="5" y="62" class="m q" font-size="2.9">OPEN FROM WEEK 3. ONE CARD.</text>
     <text x="5" y="67" class="m q" font-size="2.9">TOKENS ARRIVE AT WEEK CLOSE,</text>
     <text x="5" y="72" class="m q" font-size="2.9">SPEND THEM FROM NEXT WEEK.</text>
     </g>

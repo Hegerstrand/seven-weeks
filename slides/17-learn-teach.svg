@@ -14,7 +14,7 @@
 
 <rect x="64" y="236" width="900" height="200" rx="14" fill="#D3B1B1" class="k"/>
 <text class="m b" x="96" y="286" font-size="28" letter-spacing="2">LEARN · ALONE</text>
-<text class="s" x="96" y="342" font-size="34"><tspan x="96">Everyone marks one new square, left or</tspan><tspan x="96" dy="44">right of one they cover, in their own</tspan><tspan x="96" dy="44">row. No teacher needed.</tspan></text>
+<text class="s" x="96" y="342" font-size="34"><tspan x="96">Everyone marks a free square (no tile on</tspan><tspan x="96" dy="44">the Zone yet), left or right of one they</tspan><tspan x="96" dy="44">cover, in their own row. Learn never flips.</tspan></text>
 
 <rect x="64" y="456" width="900" height="340" rx="14" fill="#EFE4D3" class="k"/>
 <text class="m b" x="96" y="506" font-size="28" letter-spacing="2">TEACH · FROM WEEK 2</text>

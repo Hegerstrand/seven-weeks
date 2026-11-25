@@ -1,8 +1,12 @@
-# Rulebook - High-Performance Team (v0.40 draft)
+# Rulebook - High-Performance Team (v0.42 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
+
+> **v0.42 (2026-11-25): Demo gives +1 Adaptability again (it was +2 since v0.39), and the cards say what Plan does.** The Demo card is reworded so the presenter, the Capital gate and the three rewards read in order. **The Plan card says it covers ONE feature,** and the Work card now shows the +1 extra Work a Planned feature earns. No other rule changes except that **Reflect no longer gives +1 Motivation to characters on 3 or less** (the Reflect card also loses its "Look back at last week." line). **Not yet simulated:** `balance_sim.py` still has Demo at +2.
+
+> **v0.41 (2026-11-25): Learn never flips a tile.** Learn covers a **free square**, one with **no tile on the Zone yet**, and always puts a tile down. Only **Teach** flips a tile to its stacked face, so Shared Practice from the Zone now comes from Teach (and from two characters starting on the same square), never from Learn (§7, §8). If two characters want the same free square on one Learn card, only one may take it. The Learn card is reprinted to say so, and the Reflect card is reworded with no rule change. **Not yet simulated:** `balance_sim.py` still lets Learn flip.
 
 > **v0.40 (2026-11-14): lower starting values, after the latest playtest.** **Everyone starts on Motivation 3 (was 5) and the adapt pool opens with 2 tokens (was 3).** Simulated with the optimal strategy (`--staging v40`): failure 8%, quits 0.21 a game. **Management Events can only be cancelled by paying 1-2 Capital from the character with the most Capital (1 for a cost-1 Event, 2 for the rest) or with a Hero**; tokens and Authorized Voice no longer work on them (§6.1, §18). **A Competitive character's repeat Hero is no longer free: every Hero after the first costs 2 Motivation and gives no +2 Capital** (§5.1, §5.2). **Motivation timing is now one table** (§6.1, "The week at a glance"): payments move at once, everything else is counted once at step 7. The Onboarding replacement also starts on Motivation 3, §12.
 
@@ -601,7 +605,7 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
    [playability assessment](../docs/playability-assessment.md).
 
 ### 3.3 Starting values
-1. Set every character's starting **Motivation to 5** (scale 0-5). It starts counting in week 2 (§3.0).
+1. Set every character's starting **Motivation to 3** (scale 0-5). It starts counting in week 2 (§3.0).
 2. Set the three **Ledger** tracks (Trust, Capability, Shared Practice) to **1** (scale 0-5):
    the low band, where Teach and the first Work card of the week do nothing until the team
    earns its way out (§4). Plan also does nothing at 1 or less. In week 3, when the pool opens, put **2 tokens** in it.
@@ -735,8 +739,8 @@ spend is therefore the Hero-Team path (§14) being offered to one player, one to
 grind" and "-1 a week" are one and the same thing: it is the -1 printed on
 every person board. Six
 weeks of grind (week 2 to week 7). The only thing that pushes back is **Celebrate** (§7) - a day spent
-marking what the team got done. Starting at 5, a team that never celebrates, and never has a Need met, loses its
-first character when week 6 closes.
+marking what the team got done. Starting at 3, a team that never celebrates, and never has a Need met, loses its
+first character when week 4 closes.
 
 > **Resolve the week's Motivation as one number.** Total each character's change - **−1** for
 > the grind, **±1 per matching Event category this week, per their values** (§5, "Motivation
@@ -1247,7 +1251,7 @@ steps 1-6 you only *note* what is owed; you do not touch the tokens, except for 
 
 | Moves **at once**, when the card or power is played | Moves **at step 7**, in the one net number |
 |---|---|
-| Workshop (every character pays 1) · Take One For The Team (pays 2) · Own It (pays 1) · the gift of +1 Motivation | the grind (-1) · Event losses by values (the Event resolves at step 4, the tokens move at step 7) · your Need met (+1, from week 3) · Competitive when a Hero was played (-1) · Celebrate, Demo and Reflect (+1) |
+| Workshop (every character pays 1) · Take One For The Team (pays 2) · Own It (pays 1) · the gift of +1 Motivation | the grind (-1) · Event losses by values (the Event resolves at step 4, the tokens move at step 7) · your Need met (+1, from week 3) · Competitive when a Hero was played (-1) · Celebrate and Demo (+1) |
 
 Quits are checked **only after** the step 7 number is applied (§13). A character who paid at once during the
 week is already lower when step 7 starts.
@@ -1264,12 +1268,12 @@ character to receive it.
 | Activity | Exact effect |
 |---|---|
 | **Work** | **+1** to one feature's Work counter (§10). Modified by Capability (§4). **Minimum 0.** Can't target a feature whose Dependency is unbanked. |
-| **Plan** | Choose a feature: **every Work card played on it this week produces +1 extra** - a plain Work card then delivers **2**, so Plan + 2 Work (4) beats 3 Work (3) (Low: no bonus). **The bonus lasts the week it was Planned; it no longer carries into the next week on a High feature (v0.37).** |
+| **Plan** | Choose **one** feature: **every Work card played on it this week produces +1 extra** - a plain Work card then delivers **2**, so Plan + 2 Work (4) beats 3 Work (3) (Low: no bonus). **The bonus lasts the week it was Planned; it no longer carries into the next week on a High feature (v0.37).** |
 | **Engagement** | **+1 Trust.** The team card: everyone takes part and nobody is singled out. Wenger's *mutual engagement*, Edmondson's safe-to-ask, safe-to-admit-a-mistake. **At most one a week - there is only one Engagement card.** |
-| **Learn** | **The whole team learns: every character** marks one free square on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team covers each on the Zone** (put down or flip a tile). One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing. No teacher, no Capital - an instrument can be got hold of alone. |
+| **Learn** | **The whole team learns: every character** marks one **free square** (one with **no tile on the Zone yet**) on their own SPECIMEN (§8), **in their own row**, immediately **left or right** of one they already cover - **then the team puts a tile down on the Zone for each**. **Learn never flips a tile.** One card can add **up to five new squares**; a character with no free square beside one they cover marks nothing, and two characters cannot take the same square on one card. No teacher, no Capital - an instrument can be got hold of alone. |
 | **Teach** | Let **up to two different characters**, each already covering a square, each let another character mark a square they don't yet cover **that someone already covers**, any row, immediately **up, down, left, right or diagonally** of one *the teacher* covers - **then flip that tile to its stacked face on the Zone** (Teach never puts a new tile down). **Both teachers +1 Capital.** **Does nothing while Trust is 1 or less.** |
-| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital and +1 Motivation**, and **the team gains +2 Adaptability** (a token added at the close, like Workshop's; it was +1 before v0.38). |
-| **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability (from week 3).** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
+| **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital and +1 Motivation**, and **the team gains +1 Adaptability** (a token added at the close, like Workshop's; it was +2 from v0.39 to v0.41). |
+| **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability (from week 3).** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice** and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **Every character pays 1 Motivation.** **+4 Adaptability** (it was +3 before v0.38). The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. **Open from week 3. There is one Workshop card, so at most one a week.** It counts for the Hierarchy Need (§5). It merges the old Align and Workshop (§9, v0.28). |
 | **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 3** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
 | **Celebrate** | **Open from week 1** (it has nothing to lift until the grind starts in week 2). **At most one a week - there is only one Celebrate card.** **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. **A Celebrate also does nothing if the team celebrated last week.** |
@@ -1424,12 +1428,11 @@ face up** if two characters started on the same square.
 
 **Whenever someone covers a square (Learn or Teach), do two things, in this order:**
 1. **Mark it on the SPECIMEN** of the character who learned.
-2. **Cover it on the ZONE.** No tile there: put one down, one-person face up. A tile already
-   there: turn it to its **stacked** face (it stays stacked; a third character changes nothing).
+2. **Cover it on the ZONE.** **Learn** always puts a tile down, one-person face up (the square has no tile yet). **Teach** always turns a tile to its **stacked** face (the square already has a tile; it stays stacked, a third character changes nothing).
 
 There are two ways to cover a new square, and neither is a long leap - that's Vygotsky's
 **Zone of Proximal Development** made physical, one step from what you can already do. **Learn**
-(§7) covers a free square **left or right** of one you already cover, in your own row only,
+(§7) covers a free square - one with no tile on the Zone yet - **left or right** of one you already cover, in your own row only,
 alone, no teacher needed. **Every character learns on the same card**, so one Learn can put up to
 five new tiles on the Zone. **Teach** (§7) lets **up to two different
 characters**, each already covering a square, each let one other character mark a square on their
@@ -1876,7 +1879,7 @@ Each of the three Ledger tracks has **one coin**. Walk it along the six wells as
 it reaches the ringed well, **turn it over** - the reverse face is the Habit. **Team Reflexivity
 is the exception:** Adaptability is a pool of tokens, not a track, so it has no row on THE TEAM and
 its coin is not walked. It sits in the HABIT lane beside the pool on SHIT HAPPENS, with three token
-wells, and is earned by Reflect (the table below).
+wells (small boxes, one per symbol, each holding one token), and is earned by Reflect (the table below).
 
 The coin can walk back down afterwards. **It never turns back over.** That single physical act
 carries the whole rule: the track is what you have *now*, the face is what you have *become*,

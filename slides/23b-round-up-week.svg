@@ -37,8 +37,8 @@
 <g class="s" font-size="33">
   <text x="590" y="360">Features that reached their Work Cost go on the Tower. Lift the locks.</text>
   <text x="590" y="456">Each track moves at most one step. A coin at its ring turns over: a Habit.</text>
-  <text x="590" y="552">Workshop +4, Demo +2, Reflect +1 (Trust 3). The pool holds 6 at most.</text>
-  <text x="590" y="692">Each person: -1 grind, values, +1 Need met, +1 Celebrate, Demo or Reflect.</text>
+  <text x="590" y="552">Workshop +4, Demo +1, Reflect +1 (Trust 3). The pool holds 6 at most.</text>
+  <text x="590" y="692">Each person: -1 grind, values, +1 Need met, +1 Celebrate or Demo.</text>
   <text x="590" y="788">Anyone on 0 quits. Everyone left loses 1 for each quitter.</text>
   <text x="590" y="884">Move the week marker. The next slide takes you through the new week.</text>
 </g>

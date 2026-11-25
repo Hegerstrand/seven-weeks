@@ -53,7 +53,7 @@ test it last.
 ## Part 2 - Alternatives to the Onboarding card
 Base rule (§12, §13): when a character quits or is fired the team pays 40 Team Score and everyone
 loses 1 Motivation, the seat stays empty until the team lays the **Onboarding** card (costs a day),
-and the replacement arrives with a fresh habitus, Motivation 5, Capital 0.
+and the replacement arrives with a fresh habitus, Motivation 3, Capital 0.
 
 In every option below **the -40 and the -1 Motivation for everyone stay**. The quit still hurts;
 only the *replacement step* changes.
@@ -63,7 +63,7 @@ only the *replacement step* changes.
 | **R1** | **Bench step-in.** The Estimator joins the plan at once: no Onboarding card, no day. They draw a fresh figure and start on **Motivation 3** and Capital 0. | Onboarding card | One day saved, but 2 Motivation lower than a base replacement | Makes a quit cheaper. -40 should still dominate, but the sim has not seen it. |
 | **R2** | **The quitter becomes the Estimator.** The player who quit keeps their chair and takes the Estimator role (forecasts and watches; no figure, no Need). They can step in as R1 if a later character quits. The seat they left stays empty as in base, or is filled by another option. | Nobody leaves the table | None extra | The player who burned out first is still engaged, which is the point. Overlaps in spirit with **Saboteur** (`../saboteur/`); do not use both. Works at five players, where there is no sixth. |
 | **R3** | **Handover.** Before they go, the quitter hands over: **one free square** on their Zone row is copied to a teammate who has a free adjacent square (no Teach card, no day, Zone rules otherwise as §8). | Only adds to base, or to R1/R2/R4 | None | Softens the Knowledge loss of KEY SPECIALIST LEAVES. May make quitting too friendly. |
-| **R4** | **Contractor.** Instead of Onboarding, the team spends **2 adapt tokens**. A temporary character fills the seat for **2 weeks**: Motivation 5, no Capital, does not count toward Habits, and then leaves without a -40. | Onboarding card | 2 adapt tokens (the same currency as cancelling an Event) | A way to pay your way out of a quit. Adaptability is already contested (§4). Probably too cheap. |
+| **R4** | **Contractor.** Instead of Onboarding, the team spends **2 adapt tokens**. A temporary character fills the seat for **2 weeks**: Motivation 3, no Capital, does not count toward Habits, and then leaves without a -40. | Onboarding card | 2 adapt tokens (the same currency as cancelling an Event) | A way to pay your way out of a quit. Adaptability is already contested (§4). Probably too cheap. |
 | **R5** | **Run short.** Decline the replacement. The seat closes for good: no card, no day. The team loses a Motivation term and a Zone row, and the thresholds drop (§16). | Onboarding card | The seat itself | The honest answer to "do we need them back?" Already possible in base by never laying the card. This option only makes it a stated choice. |
 
 ## Where I would start

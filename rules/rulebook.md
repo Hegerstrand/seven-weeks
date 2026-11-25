@@ -1,8 +1,10 @@
-# Rulebook - High-Performance Team (v0.39 draft)
+# Rulebook - High-Performance Team (v0.40 draft)
 
 Status: prototype draft, first full playthrough done (2026-09-25). Bump this version header
 whenever a playtest changes a rule, and log the change in
 [../playtests/README.md](../playtests/README.md).
+
+> **v0.40 (2026-11-14): lower starting values, after the latest playtest.** **Everyone starts on Motivation 3 (was 5) and the adapt pool opens with 2 tokens (was 3).** Simulated with the optimal strategy (`--staging v40`): failure 8%, quits 0.21 a game. **Management Events can only be cancelled by paying 1-2 Capital from the character with the most Capital (1 for a cost-1 Event, 2 for the rest) or with a Hero**; tokens and Authorized Voice no longer work on them (§6.1, §18). **A Competitive character's repeat Hero is no longer free: every Hero after the first costs 2 Motivation and gives no +2 Capital** (§5.1, §5.2). **Motivation timing is now one table** (§6.1, "The week at a glance"): payments move at once, everything else is counted once at step 7. The Onboarding replacement also starts on Motivation 3, §12.
 
 > **v0.39 (2026-10-26): the least-played moves are buffed; the upper score line stays at 160.** The simulator found Demo (46% of optimal games), Workshop (77%) and Take One For The Team (never) the least played. **Demo now gives +2 Adaptability (was +1), Workshop +4 (was +3), and Take One For The Team can be played in a week that already has an Engagement** (Trust still rises one step a week, so then it gives the +1 Capital only), §7, §5.2. **Not yet simulated** (`--staging v39`; v38 is the same game without these three changes). **A new Event, THE FIXED PART (Amdahl's Law: no Work card makes more than 2 Work this week), makes the deck 26 cards.**
 
@@ -457,7 +459,7 @@ idea at a time. Nobody is taught a subsystem before the week they need it.
 |---|---|---|
 | **Week 1** | **The week.** The week strip and the six features, and nothing else: no Motivation to count, no Need, no Events. Your figure and your Knowledge are on the board, and two parts of it already count: **your education and your skill** (where you start on the Zone, and what you can do). | Work · Engagement · Learn · Celebrate |
 | **Week 2** | **The team, and the people.** The whole Ledger at once - Trust, Capability, Shared Practice, Standing and the Habits - with each character's Capital. **Motivation opens with it:** the grind, and with it **your upbringing and your instinct** (upbringing shapes your Motivation, instinct is your Pressure Response, read at step 7). | + Teach · Plan |
-| **Week 3** | **Reality.** Shit Happens and Adapt, together: the Event deck, the shared Adaptability pool (it holds **3 tokens** from the first day it exists), the **Hero** panel (§5.1) and the Workshop. **Your values start to count** (how Events land on you) and so does **your Need** (the tile already on your board, read when the week closes). Demo and Reflect open with it and add adapt tokens. **Combos** (§18.1) open: two named triggers landing in the same week pay a small bonus on top of what they did alone. | + Workshop · Demo · Reflect |
+| **Week 3** | **Reality.** Shit Happens and Adapt, together: the Event deck, the shared Adaptability pool (it holds **2 tokens** from the first day it exists), the **Hero** panel (§5.1) and the Workshop. **Your values start to count** (how Events land on you) and so does **your Need** (the tile already on your board, read when the week closes). Demo and Reflect open with it and add adapt tokens. **Combos** (§18.1) open: two named triggers landing in the same week pay a small bonus on top of what they did alone. | + Workshop · Demo · Reflect |
 | **Week 4** | **THE DEVELOPMENT (board 4b).** HOW YOU COVER / THE LEDGER READS THIS lift - the five skills were already on your sheet, this is just where Learn and Teach start to pay off - and the Flex and Overtime part of the Specimen card. | + nothing new |
 | **Week 5** | **Nothing opens.** The table plays everything it has met. | + nothing new |
 
@@ -495,9 +497,9 @@ when you uncover each panel, run its catch-up:
 > the team has played. Capital is not handed out here: **everyone's Capital starts at 0 and is
 > earned only through play** (§5.1). Then nobody is Standing yet (the Standing coin sits on 0, all tied), and
 > whoever first holds the most Capital becomes Standing (§5.1). The three tracks start where they always were, at
-> **1**. Motivation starts counting: every character is on **5** and the grind takes 1 at the close of this week.
+> **1**. Motivation starts counting: every character is on **3** and the grind takes 1 at the close of this week.
 >
-> **Week 3 - reality.** The pool starts with 3 tokens, Events are drawn for the first time, the Hero opens, and
+> **Week 3 - reality.** The pool starts with 2 tokens, Events are drawn for the first time, the Hero opens, and
 > **your Need is read for the first time** (§5).
 > Nothing to catch up on: tokens earned before this week were never counted.
 >
@@ -602,7 +604,7 @@ Dependency, meaning a feature that must be placed on the Tower first (§10).
 1. Set every character's starting **Motivation to 5** (scale 0-5). It starts counting in week 2 (§3.0).
 2. Set the three **Ledger** tracks (Trust, Capability, Shared Practice) to **1** (scale 0-5):
    the low band, where Teach and the first Work card of the week do nothing until the team
-   earns its way out (§4). Plan also does nothing at 1 or less. In week 3, when the pool opens, put **3 tokens** in it.
+   earns its way out (§4). Plan also does nothing at 1 or less. In week 3, when the pool opens, put **2 tokens** in it.
 
 ## 4. Team State
 Three **tracks**, each 0-5, and one shared **pool**, describing the team rather than any one
@@ -672,12 +674,12 @@ of the game still counts (§16).
 What the pile does at a glance: **0-1 tokens** - you play the week you laid, whatever lands on
 it. **4 or more tokens** - you can cancel most Events, even the worst in the deck.
 
-**Why it starts at 3 (checked by simulation).** The pool and the Hero open in the same week as the first Events, so the
+**Why it starts at 2 (checked by simulation).** The pool and the Hero open in the same week as the first Events, so the
 first Event week is answered with what the pool opens with: tokens earned earlier were never counted, and a Workshop
-cannot be laid before week 3. Four Events fall in weeks 3-4, about 7 tokens to cancel them all. 3 buys roughly one and a
-half of them: a real choice in week 3 (cancel, or keep the tokens), without covering the lot.
-A higher start would let a team ignore Workshop until late. At 3 the pool is a
-cushion, not a plan. **The simulator agrees: a pool of 1 loses games and a pool of 4 makes the Events nearly free.**
+cannot be laid before week 3. Four Events fall in weeks 3-4, about 7 tokens to cancel them all. 2 buys roughly one of
+them: a real choice in week 3 (cancel, or keep the tokens), without covering the lot.
+A higher start would let a team ignore Workshop until late. At 2 the pool is a
+cushion, not a plan. **The simulator agrees (Motivation 3): a pool of 2 gives fewer quits than 1, and a pool of 4 makes the Events nearly free.**
 
 #### How the pool fills
 Two Activities add to it. Unlike the Ledger tracks there is no one-step-a-week limit - it's a
@@ -709,7 +711,7 @@ action.
 The best teams keep a healthy balance across all of them - not "max everything."
 
 ## 5. Motivation
-Each character has their own pool of **Motivation tokens** (starts at 5, cap 5) instead of
+Each character has their own pool of **Motivation tokens** (starts at 3, cap 5) instead of
 just a number on a track. The physical count matters, because tokens move in three different
 ways:
 - **Gain** - Celebrate (§7), or a good Event/team condition, adds a token.
@@ -911,10 +913,11 @@ Support / Speak Up / Engage). A character whose **Legs** is that Pressure Respon
 **Hero** to **cancel that Event outright** - no Adaptability paid, nothing resolved. They gain
 **+2 Capital**, and **one other character of their choosing gains +1 Motivation**: somebody
 saw it, and it mattered to them. **The one exception is a Competitive Base** (§5.2), whose Hero
-is reusable: they may play it again every time an Event names their Pressure Response.
+is reusable: they may play it again every time an Event names their Pressure Response, but **every play after
+the first costs them 2 Motivation (paid at once) and gives no Capital**; the other character still gains +1 Motivation.
 
 > **You must have at least 3 Motivation to play your Hero - always, for everyone, including a
-> Competitive character's every reuse.** It costs you nothing - it is a threshold, not a price.
+> Competitive character's every reuse.** The first play costs you nothing - it is a threshold, not a price (a reuse costs 2 Motivation, above).
 > People who are running on empty do not step up; that is the whole observation. Check it at
 > the moment you play it.
 
@@ -1012,7 +1015,7 @@ character's own Motivation for them.
 | **Hands-On** | **+2 Motivation** when you play Teach | **−1 Motivation** when you play Learn |
 | **Sheltered** | The weekly grind (§5) doesn't affect your Motivation | **You never rise above 3 Motivation** - insulated from the highs as much as the lows |
 | **Dependable** | **TAKE ONE FOR THE TEAM**, printed on the card: spend **2 Motivation** and the team gets **+1 Trust** and you gain **+1 Capital** (Trust still rises at most once a week, §7) | **The price is yours alone:** 2 Motivation. Nobody else can play this action |
-| **Competitive** | **Your Hero is reusable** - every time an Event names your Pressure Response, you may play it again (still needs 3 Motivation, every time) | **ANOTHER PLAYS HERO:** whenever a *different* character plays their Hero, you lose **1 Motivation** - you needed that win |
+| **Competitive** | **Your Hero is reusable** - every time an Event names your Pressure Response, you may play it again (still needs 3 Motivation, every time; **every play after the first costs 2 Motivation and gives no Capital**) | **ANOTHER PLAYS HERO:** whenever a *different* character plays their Hero, you lose **1 Motivation** - you needed that win |
 
 Each **Legs/Pressure Response** pairs the same way, keyed to whichever Team State track (§4)
 it reads as most under pressure - high, it lands as **+1 Motivation**; low, the same instinct
@@ -1123,7 +1126,12 @@ of an Event, never a different plan.
 
 Two things cancel an Event **without costing Adaptability at all**:
 - a character's **Hero** (§5.1), if the Event names their Pressure Response - once per game, needing 3 Motivation (a Competitive character may do it every time);
-- **Authorized Voice** (§18), once a week, if the team has it, against a **Management or Customer** Event only.
+- **Authorized Voice** (§18), once a week, if the team has it, against a **Customer** Event only.
+
+**Management Events cost Capital, not tokens.** Adapt tokens cannot cancel a Management Event, and neither can Authorized
+Voice. One character pays from their **own Capital**, and it must be **the character with the most Capital** (any one of them if tied) - **1 Capital** if the card's Adaptability cost is 1, **2 Capital** if it is 2 or
+more (a Habit takes 1 off the printed cost first, as below) - and the card is discarded. If the top character cannot afford it, nobody can. A **Hero** still cancels it for free, as
+for any Event. Capital paid is gone; it is paid at once, at step 3. THE WOLF still cannot be cancelled, and THE DATE MOVES UP is unchanged.
 
 And a **Habit** (§18) takes 1 off the Adaptability cost of its Event category, so a cost-1 Event of that
 category is free. **THE DATE MOVES UP is the exception: it costs no tokens because tokens cannot buy it
@@ -1135,7 +1143,7 @@ none** - an audit needs something to audit - and this stacks with the Habit.
 line, and tokens, a Hero and Authorized Voice all do nothing against it. The team answers it
 at step 4 by deciding whether to step up.
 
-**Worked example.** The pool holds **3 tokens**. You draw EQUIPMENT OUTAGE (cost 2) and A FLAT
+**Worked example.** The pool holds **3 tokens** (a Demo or Workshop has filled it). You draw EQUIPMENT OUTAGE (cost 2) and A FLAT
 WEEK (cost 1). You already hold **Who Knows What**, which discounts Environment Events, so
 the Outage costs **1**, not 2. Now you choose:
 - cancel both (1 + 1), keeping your last token; or
@@ -1180,7 +1188,7 @@ worth cancelling, a cost-3 one is worth planning for.
 | **Environment** | Who Knows What | Capability |
 | **Management** | Shared Repertoire | Shared Practice |
 | **Customer** | Team Reflexivity | Reflect (banked tokens) |
-| **Management, Customer** | **Authorized Voice** - cancel one Management or Customer Event a week outright | Standing |
+| **Management, Customer** | **Authorized Voice** - cancel one Customer Event a week outright (Management Events cost Capital, §6.1) | Standing |
 
 This is the difference between a team that copes and a team that has changed. Adapt is
 scrambling: it costs you the same every single time. A Habit costs nothing forever, because it
@@ -1234,6 +1242,16 @@ nobody has to ask. Tick it off aloud.
 7. **MOTIVATION** (from week 2) - count it as one net number (the grind -1, values, Need from week 3) → anyone at 0
    quits → next week.
 
+**When Motivation moves - the one rule to remember.** Motivation is counted **once a week, at step 7**. During
+steps 1-6 you only *note* what is owed; you do not touch the tokens, except for the payments in the left column.
+
+| Moves **at once**, when the card or power is played | Moves **at step 7**, in the one net number |
+|---|---|
+| Workshop (every character pays 1) · Take One For The Team (pays 2) · Own It (pays 1) · the gift of +1 Motivation | the grind (-1) · Event losses by values (the Event resolves at step 4, the tokens move at step 7) · your Need met (+1, from week 3) · Competitive when a Hero was played (-1) · Celebrate, Demo and Reflect (+1) |
+
+Quits are checked **only after** the step 7 number is applied (§13). A character who paid at once during the
+week is already lower when step 7 starts.
+
 ## 7. Activities - one card, one of the week's five days
 
 Every Activity has an exact effect. Nothing here is "may" or "improves" - if a number isn't
@@ -1253,7 +1271,7 @@ character to receive it.
 | **Demo** | Needs **Capital at or above the team average** (§5.1). **The whole team takes part**; the team then names **one** character to receive **+1 Capital and +1 Motivation**, and **the team gains +2 Adaptability** (a token added at the close, like Workshop's; it was +1 before v0.38). |
 | **Reflect** | **At most one a week - there is only one Reflect card.** Needs **Trust 3 or more**. **+1 Adaptability (from week 3).** Look back at **last week**: if it gave evidence - **◎** a feature was banked, **↝** the team adapted to 2 Events, or **↻** a Hero or a token was played, or an Event cost the team Trust, Capability or Shared Practice - also **+1 Shared Practice**, **+1 Motivation to every character on 3 or less**, and the team **also** fills the matching Team Reflexivity well (§18); the token still goes to the pool. The token arrives at the close like any other. |
 | **Workshop** | **Every character pays 1 Motivation.** **+4 Adaptability** (it was +3 before v0.38). The meeting nobody wants and everybody sits through. One way only: Adaptability never turns back into Motivation. **Does nothing if any character is on 1 Motivation** - nobody can pay their way to a quit. **Open from week 3. There is one Workshop card, so at most one a week.** It counts for the Hierarchy Need (§5). It merges the old Align and Workshop (§9, v0.28). |
-| **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 5** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
+| **Onboarding** | **Only when a seat is empty** (someone quit or was fired, §13). **The team lays it to bring a replacement in, and it costs the day.** The new character joins at once with a fresh Habitus, Skills and Knowledge, **Motivation 3** and **Capital 0**. **There is one Onboarding card, so at most one replacement a week.** Every quitting rule is printed on the card. |
 | **Celebrate** | **Open from week 1** (it has nothing to lift until the grind starts in week 2). **At most one a week - there is only one Celebrate card.** **+1 Motivation to every character on 3 or less** (nobody above 3 gains). **Only if there is something to celebrate:** a feature was banked this week, or every Event drawn this week was cancelled. Otherwise the day is spent and nothing happens. **A Celebrate also does nothing if the team celebrated last week.** |
 
 There are **ten** Activities, and none of them is "rest" - resting isn't something a team does
@@ -1784,7 +1802,7 @@ No like-for-like swap. Whenever a character quits or is fired:
 - **The seat sits empty until the team lays the Onboarding card** (§7). Nobody plays an empty
   seat, so the plan runs one character short.
 - **Onboarding costs a day.** When the team lays it, a new character joins at once with a fresh
-  Habitus, Skills, Knowledge and **Motivation 5**. No shortcut, no buy-out. One card, so one replacement a week.
+  Habitus, Skills, Knowledge and **Motivation 3**. No shortcut, no buy-out. One card, so one replacement a week.
 - **All of this is printed on the Onboarding card**, so a table never has to look it up.
 
 This is now the **only** way Onboarding gets triggered - the old **NEW TEAM MEMBER** Event
@@ -1883,7 +1901,7 @@ board prints the source under the name, because the whole point is that these ar
 | **Who Knows What** | Wegner 1986; Lewis 2003 - *transactive memory* | Capability reaches 4 (through deliberate Learn spending). | Every **Environment**-category Event costs **1 less** Adaptability (minimum 0: a cost-1 Event is free). |
 | **Shared Repertoire** | Lave & Wenger 1991; Wenger 1998 | Shared Practice reaches 4 (through deliberate Reflect/Engagement spending). | Every **Management**-category Event costs **1 less** Adaptability (minimum 0: a cost-1 Event is free). |
 | **Team Reflexivity** | West 1996 | **Three wells filled, one per object of reflection.** When a Reflect resolves, **if last week gave it evidence for a well the team fills that HABIT well, and the token still goes to the pool**: **◎ OBJECTIVES** (the target on the well) - a feature was banked; **↝ STRATEGY** (the route) - the team adapted to 2 Events; **↻ PROCESS** (the cycle) - an Event cost the team Trust, Capability or Shared Practice, or a Hero or an Adaptability token was played. The team also **names one thing it will do differently next week** (a card it will lay, a rule it will follow). A well takes one token. When all three are filled the coin turns over, once, and the tokens go back to the supply. | Every **Customer**-category Event costs **1 less** Adaptability (minimum 0: a cost-1 Event is free). |
-| **Authorized Voice** | Bourdieu 1991, *Language and Symbolic Power* | Standing reaches 4 - any one character's Capital (§5.1). | Once per week, any character may **cancel one Management or Customer Event completely** (People and Environment Events are not covered). *(Extension: `game/extensions/performance-review/` restores a second use, Collective Bargaining, as an alternative.)* |
+| **Authorized Voice** | Bourdieu 1991, *Language and Symbolic Power* | Standing reaches 4 - any one character's Capital (§5.1). | Once per week, any one character may **cancel one Customer Event completely** (People, Environment and Management Events are not covered; Management costs Capital, §6.1). *(Extension: `game/extensions/performance-review/` restores a second use, Collective Bargaining, as an alternative.)* |
 
 **Why these names.** *Who Knows What* is Wegner's transactive memory: a group that knows who
 holds which expertise, which is exactly what a Knowledge reaching three holders produces. It
@@ -1924,7 +1942,7 @@ check Motivation and the Ledger.
 
 ## 19. Prototype scope (v0.1)
 3-6 players · 6 features · 22 total Work · 7 weeks × 5 team-days = **35 days** · 3 Ledger
-tracks + an Adaptability pool · Motivation starts at 5 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
+tracks + an Adaptability pool · Motivation starts at 3 · 5-part Habitus build · ~30 Event cards · ~8-10 skills · a
 simple individual/shared Knowledge system · 6 Project cards (§20). Keep components ugly at
 first (index cards, cubes, sticky notes) - see
 [../components/README.md](../components/README.md).

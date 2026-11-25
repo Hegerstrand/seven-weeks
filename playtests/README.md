@@ -2,6 +2,17 @@
 
 One entry per playtest session, newest first.
 
+## 2026-11-14 - design response to the latest playtest (rulebook v0.40)
+Not yet simulated or replayed; `--staging v40` in `scripts/balance_sim.py` models all four changes.
+
+- **What the playtest said:** the game was too easy at the start; nobody knew when to count Motivation; the reusable Hero (Competitive) was overpowered; Management Events were too easy to cancel.
+- **Rule changes made as a result:**
+  1. **Start lower:** Motivation 3 (was 5), adapt pool 2 tokens (was 3). The Onboarding replacement also starts on 3.
+  2. **Motivation timing:** one table in §6.1. Workshop, Take One For The Team, Own It and the gift move tokens at once; everything else is one net number at step 7. Printed on the person board (THE WEEK) and the how-to-play page.
+  3. **Repeat Hero:** every Hero after a Competitive character's first costs 2 Motivation and gives no +2 Capital (the other character still gets +1 Motivation).
+  4. **Management Events:** no tokens, Trust or Authorized Voice; only the character with the most Capital can cancel one, for 1 Capital (cost-1 Event) or 2 (the rest), or a Hero cancels it free. Authorized Voice is now Customer-only. The seven Management cards print `MOST CAPITAL PAYS`.
+- **To confirm next:** run `--staging v40` (does the Capital leader get drained, is a pool of 1 too thin, do quits rise at Motivation 3), then replay.
+
 ## 2026-09-25 - session 2, first full 7-week playthrough
 Raw notes: `playtests/2026-09-25.md` on the remote (`Hegerstrand/seven-weeks`) - pull it. This
 entry is the design response.

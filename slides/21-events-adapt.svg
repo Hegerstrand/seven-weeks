@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Events: three ways out</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 3 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">EVENTS: THREE WAYS OUT</text>
+<text class="s i" x="64" y="262" font-size="40">Nothing resolves until you have decided, together, in Adapt.</text>
+
+<g class="k">
+  <rect x="64" y="296" width="560" height="270" rx="14" fill="#B5C7CF"/>
+  <rect x="680" y="296" width="560" height="270" rx="14" fill="#C7CFB5"/>
+  <rect x="1296" y="296" width="560" height="270" rx="14" fill="#EFE4D3"/>
+</g>
+<g class="m b" font-size="32" letter-spacing="2"><text x="92" y="352">1 · PAY TOKENS</text><text x="708" y="352">2 · PLAY A HERO</text><text x="1324" y="352">3 · HOLD A HABIT</text></g>
+<g class="s" font-size="34">
+  <text x="92" y="412"><tspan x="92">Pay the Event's printed cost</tspan><tspan x="92" dy="46">in tokens from the shared</tspan><tspan x="92" dy="46">pool. All or nothing.</tspan></text>
+  <text x="708" y="412"><tspan x="708">Free. The Event must name</tspan><tspan x="708" dy="46">your instinct. Once per game.</tspan><tspan x="708" dy="46">You need 3 Motivation.</tspan></text>
+  <text x="1324" y="412"><tspan x="1324">A Habit takes 1 off the cost</tspan><tspan x="1324" dy="46">of its kind of Event. A</tspan><tspan x="1324" dy="46">cost-1 Event becomes free.</tspan></text>
+</g>
+
+<rect x="64" y="596" width="1792" height="150" rx="14" fill="#F3E3A3" class="k"/>
+<text class="m b" x="96" y="640" font-size="26" letter-spacing="2">MANAGEMENT EVENTS</text>
+<text class="s" x="96" y="692" font-size="34"><tspan x="96">Tokens cannot buy them off. The person with the most Capital pays 1 Capital</tspan><tspan x="96" dy="44">(a cost-1 Event) or 2, or a Hero cancels it for free.</tspan></text>
+
+<rect x="64" y="766" width="1792" height="138" rx="14" fill="#B5C7CF" class="k"/>
+<text class="m b" x="96" y="810" font-size="26" letter-spacing="2">HOW THE POOL FILLS</text>
+<text class="s" x="96" y="862" font-size="34">Workshop +4, Demo +2, Reflect +1 (needs Trust 3). They arrive when the week closes. The cap is 6.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Draw two Events and read them out. Then, together: pay, Hero, or take it?</tspan><tspan x="190" dy="48">Tokens added this week cannot help against this week's Events.</tspan></text>
+</svg>

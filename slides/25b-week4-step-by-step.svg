@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Week 4: step by step</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 4 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">WEEK 4 · STEP BY STEP</text>
+<text class="s i" x="64" y="250" font-size="40">The same seven steps every week. Tick each one aloud before you move on.</text>
+
+<g class="k">
+  <rect x="64" y="276" width="1792" height="82" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="368" width="1792" height="82" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="460" width="1792" height="82" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="552" width="1792" height="82" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="644" width="1792" height="82" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="736" width="1792" height="82" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="828" width="1792" height="82" rx="12" fill="#C7CFB5"/>
+</g>
+<g class="k" fill="#FBF8F0" stroke-width="2">
+  <rect x="84" y="295" width="44" height="44" rx="6"/><rect x="84" y="387" width="44" height="44" rx="6"/><rect x="84" y="479" width="44" height="44" rx="6"/><rect x="84" y="571" width="44" height="44" rx="6"/>
+  <rect x="84" y="663" width="44" height="44" rx="6"/><rect x="84" y="755" width="44" height="44" rx="6"/><rect x="84" y="847" width="44" height="44" rx="6"/>
+</g>
+<g class="m b" font-size="26" letter-spacing="1">
+  <text x="152" y="327">1 PLAN</text><text x="152" y="419">2 SHIT HAPPENS</text><text x="152" y="511">3 ADAPT</text><text x="152" y="603">4 SURVIVING EVENTS</text>
+  <text x="152" y="695">5 THE WEEK RUNS</text><text x="152" y="787">6 CLOSE</text><text x="152" y="879">7 MOTIVATION</text>
+</g>
+<g class="s" font-size="32">
+  <text x="560" y="326">Lay five cards. Which feature gets the Work this week?</text>
+  <text x="560" y="418">Draw 2 Events. Read them out. Nothing resolves yet.</text>
+  <text x="560" y="510">Count the pool. Pay tokens, play a Hero, or take it?</text>
+  <text x="560" y="602">Resolve every Event nobody cancelled.</text>
+  <text x="560" y="694">Resolve the five cards, in any order.</text>
+  <text x="560" y="786">Bank features, walk the Ledger, add tokens.</text>
+  <text x="560" y="878">One net number each. Anyone on 0 quits. Move the week marker.</text>
+</g>
+<g class="k" fill="#F7D7A1" stroke-width="2">
+  <rect x="1536" y="755" width="300" height="40" rx="8"/>
+</g>
+<g class="m b" font-size="22" letter-spacing="1" text-anchor="middle">
+  <text x="1686" y="783">NEW: THE DEVELOPMENT</text>
+</g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">KEEP</text>
+<text class="s" x="210" y="1002" font-size="38"><tspan x="210">Leave this up all week. Week 4 adds THE DEVELOPMENT (step 6).</tspan><tspan x="210" dy="48">For the next week, go back to the round-up slide, then start here again.</tspan></text>
+</svg>

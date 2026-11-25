@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: psychological safety</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#D3CEDF"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 03 · THE LEDGER: TRUST</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">PSYCHOLOGICAL SAFETY</text>
+<text class="s i" x="64" y="262" font-size="40">Safety is not declared. It is built, slowly.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="584" width="14" height="14"/><rect x="64" y="736" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Edmondson (1999): a shared belief that the</tspan><tspan x="100" dy="44">team is safe for taking risks with each</tspan><tspan x="100" dy="44">other: asking, admitting a mistake,</tspan><tspan x="100" dy="44">disagreeing.</tspan></text>
+<text x="100" y="606"><tspan x="100">In hospital units, the better teams</tspan><tspan x="100" dy="44">reported more errors, not fewer, because</tspan><tspan x="100" dy="44">it felt safe to say so (Edmondson, 1996).</tspan></text>
+<text x="100" y="758"><tspan x="100">Google's Project Aristotle ranked it</tspan><tspan x="100" dy="44">first of five team dynamics.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#D3CEDF" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="542" width="14" height="14"/><rect x="1030" y="694" width="14" height="14"/><rect x="1030" y="802" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">Trust is the game's psychological</tspan><tspan x="1066" dy="44">safety. Engagement raises it, one step</tspan><tspan x="1066" dy="44">a week.</tspan></text>
+<text x="1066" y="564"><tspan x="1066">At Trust 0 or 1, Teach does nothing:</tspan><tspan x="1066" dy="44">nobody hands over a skill where it is</tspan><tspan x="1066" dy="44">not safe to say "I don't know".</tspan></text>
+<text x="1066" y="716"><tspan x="1066">Own It: take the blame for an Event,</tspan><tspan x="1066" dy="44">lose 1 Motivation, and Trust rises.</tspan></text>
+<text x="1066" y="824"><tspan x="1066">At Trust 4, the Psychological Safety</tspan><tspan x="1066" dy="44">Habit makes People Events cost 1 less.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Edmondson, Administrative Science Quarterly 44(2) (1999) · J. Applied Behavioral Science 32 (1996) · The Fearless Organization (2018)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

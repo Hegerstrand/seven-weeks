@@ -53,7 +53,7 @@ the-team-BACK matches and goes on the reverse.</desc>
 
 <!-- CAPABILITY -->
 <g id="capability">
-  <rect x="8" y="78" width="281" height="34" rx="2" class="band" fill="#C7CFB5"/>
+  <rect x="8" y="78" width="281" height="34" rx="2" class="band" fill="#D3B1B1"/>
   <text x="12" y="85" class="s" font-size="6">Capability</text>
   <text x="12" y="92" class="s" font-size="3.4" font-style="italic">grown by filling a whole</text>
   <text x="12" y="96.5" class="s" font-size="3.4" font-style="italic">row or column on the Zone</text>
@@ -115,8 +115,8 @@ the-team-BACK matches and goes on the reverse.</desc>
   <text x="12" y="185" class="m" font-size="2.8">AT THE TABLE</text>
   <text x="252" y="161" class="s" font-size="5">Authorized Voice</text>
   <text x="252" y="167.5" class="s" font-size="3.4" font-style="italic">Once a week: cancel a</text>
-  <text x="252" y="171.5" class="s" font-size="3.4" font-style="italic">Management or Customer</text>
-  <text x="252" y="175.5" class="s" font-size="3.4" font-style="italic">Event outright.</text>
+  <text x="252" y="171.5" class="s" font-size="3.4" font-style="italic">Customer Event outright.</text>
+  <text x="252" y="175.5" class="s" font-size="3.4" font-style="italic"> </text>
   <text x="252" y="181.5" class="m q" font-size="2.6">BOURDIEU 1991</text>
 </g>
 <text x="201" y="152.6" class="m" font-size="2.6" text-anchor="middle">FLIP AT 4</text>

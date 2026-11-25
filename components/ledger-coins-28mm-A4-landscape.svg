@@ -32,13 +32,13 @@
     <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFB" startOffset="50%">SLIDE IT</textPath></text>
   </g>
   <g id="flex-front">
-    <circle r="9.5" fill="#D3B1B1" class="cut"/><circle r="8.9" class="ring"/>
+    <circle r="9.5" fill="#C7CFB5" class="cut"/><circle r="8.9" class="ring"/>
     <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFT" startOffset="50%">A DAY OWED</textPath></text>
     <text y="1.3" class="m" font-size="3.8" font-weight="bold" text-anchor="middle">FLEX</text>
     <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFB" startOffset="50%">FLIP TO REPAY</textPath></text>
   </g>
   <g id="flex-back">
-    <circle r="9.5" fill="#EBD9D9" class="cut"/><circle r="8.9" class="ring2"/>
+    <circle r="9.5" fill="#E1E6D5" class="cut"/><circle r="8.9" class="ring2"/>
     <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFT" startOffset="50%">REPAID</textPath></text>
     <text y="1.3" class="m" font-size="3.8" font-weight="bold" text-anchor="middle">FLEX</text>
     <text class="m" font-size="2.2" letter-spacing=".1" text-anchor="middle"><textPath href="#arcFB" startOffset="50%">NO OUTPUT</textPath></text>
@@ -81,7 +81,7 @@
   <text class="m c" font-size="1.7"><textPath href="#arcT" startOffset="50%">PSYCHOLOGICAL</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">SAFETY</textPath></text></g>
-<g transform="translate(94,84) scale(1.8667)"><circle r="7.5" fill="#C7CFB5" class="cut"/><circle r="6.8" class="ring2"/>
+<g transform="translate(94,84) scale(1.8667)"><circle r="7.5" fill="#D3B1B1" class="cut"/><circle r="6.8" class="ring2"/>
   <text class="m c" font-size="2"><textPath href="#arcT" startOffset="50%">WHO KNOWS</textPath></text>
   <text y="0.7" class="m q c" font-size="2">HABIT</text>
   <text class="m c" font-size="2"><textPath href="#arcB" startOffset="50%">WHAT</textPath></text></g>

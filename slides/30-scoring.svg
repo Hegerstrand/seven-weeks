@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>How it ends: the Team Score</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE END · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">HOW IT ENDS: THE TEAM SCORE</text>
+
+<rect x="64" y="236" width="920" height="684" rx="14" fill="#EFE4D3" class="k"/>
+<text class="m b" x="96" y="290" font-size="30" letter-spacing="2">TEAM SCORE =</text>
+<g class="s" font-size="36">
+  <text x="96" y="352">features banked × 12</text>
+  <text x="96" y="396">+ Trust + Capability + Shared Practice</text>
+  <text x="132" y="440">+ adapt tokens left (together, max 21)</text>
+  <text x="96" y="484">+ everyone's Motivation</text>
+  <text x="96" y="528">+ 12 × Habits held</text>
+  <text x="96" y="572">- 40 × people who quit</text>
+  <text x="96" y="616">- 5 × tracks left at 0 or 1</text>
+</g>
+<path d="M96 690H952" class="k" fill="none" stroke-width="2"/>
+<text class="s i" x="96" y="744" font-size="34"><tspan x="96">Count the Tower first. Then turn THE PROJECT</tspan><tspan x="96" dy="44">over: its back is the tally.</tspan></text>
+<text class="s" x="96" y="860" font-size="32"><tspan x="96">The lines: 5 per starting character, plus 75 (lower)</tspan><tspan x="96" dy="42">or plus 135 (upper). Five players: 100 and 160.</tspan></text>
+
+<g class="k">
+  <rect x="1016" y="236" width="840" height="150" rx="14" fill="#FBF8F0"/>
+  <rect x="1016" y="402" width="840" height="150" rx="14" fill="#F7D7A1"/>
+  <rect x="1016" y="568" width="840" height="150" rx="14" fill="#EFE4D3"/>
+  <rect x="1016" y="734" width="840" height="186" rx="14" fill="#B5C7CF"/>
+</g>
+<g class="m b" font-size="26" letter-spacing="2">
+  <text x="1048" y="282">FAILURE</text><text x="1048" y="448">HEROIC SUCCESS</text><text x="1048" y="614">SUSTAINABLE PERFORMANCE</text><text x="1048" y="780">SUSTAINABLE HIGH PERFORMANCE</text>
+</g>
+<g class="s" font-size="34">
+  <text x="1048" y="334">A feature is missing. The score is 0.</text>
+  <text x="1048" y="500"><tspan x="1048">All six, under the lower line. The project</tspan><tspan x="1048" dy="42">made it. The team did not.</tspan></text>
+  <text x="1048" y="666">All six, between the two lines.</text>
+  <text x="1048" y="832"><tspan x="1048">All six, at or above the upper line.</tspan><tspan x="1048" dy="42">You built a team as well.</tspan></text>
+</g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Count the Tower. Turn THE PROJECT over and add it up together.</tspan><tspan x="190" dy="48">Then, before anyone leaves: the next slide.</tspan></text>
+</svg>

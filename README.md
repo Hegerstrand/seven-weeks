@@ -12,6 +12,9 @@
 - `components/3d-models/` - 3D-printable files (STL/3MF/STEP) and print notes (material, supports, orientation).
 - `print/theory-cards-A5.html` - 17 optional A5 theory cards (plus a cover): the research behind the
   game and where it shows at the table. Print at 100% on A5, one card per page. Companion reading, not rules.
+- `slides/` - the facilitator slide show for the big screen: 33 plain 1920x1080 SVG slides, one per file, plus
+  `index.html` (the viewer: open it in a browser, arrow keys, `G` overview, `F` full screen) and `slides.js` (the order).
+  It follows the staged first game in rulebook §3.0 and pairs each new idea with a theory slide from the theory cards.
 - `scripts/balance_sim.py` - Monte Carlo balance simulator (Work cost, Adaptability, Motivation). A model of
   rulebook v0.33 with explicit assumptions at the top of the file; run `python scripts/balance_sim.py --help`.
   Extension packs are off by default; `--ext` turns them on and `--compare all` sets them against the base game

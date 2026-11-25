@@ -109,10 +109,11 @@ Everything the team owns and controls.
 | Field Paper | `#E8DCC4` | Primary card and board stock tone |
 | Ivory | `#F2EDE0` | Highlights, the habitus figures |
 | Oak Gall Ink | `#2A2620` | All body text - a brown-black, never pure black |
-| Herbarium Green | `#5A6650` | Capability, growth, learning |
+| Herbarium Green | `#5A6650` | Motivation (the dark pigment behind the sage-green tint below) |
 | Smoky Rose | `#905151` | Trust, binding/registration guide lines, **and** Redline (rework, defects, locked/red borders) - one color now covers both; see the note below. |
 | ~~Oxblood~~ | ~~`#7B3F35`~~ | Retired - merged into Smoky Rose above. |
-| Motivation | `#D3B1B1` | Dusty rose - the Motivation box, every "Lose 1 Motivation" highlight on cards. Supersedes "Ochre" below, which was never actually built - this is the color the whole project converged on instead. |
+| Motivation | `#C7CFB5` | Sage green - the Motivation box, every "Lose 1 Motivation" highlight on cards. Supersedes "Ochre" below, which was never actually built. Motivation and Capability swapped tints (green and dusty rose) on 2026-11-24. |
+| Capability | `#D3B1B1` | Dusty rose - the Capability band, the Learn card, the Zone one-person tile and the Environment Events (`cat-env`), which Capability's Habit discounts. |
 | ~~Ochre~~ | ~~`#C08A3E`~~ | Retired - documented for Motivation but never used anywhere; see Motivation above. |
 | Slate | `#4A5259` | Shared Practice, structure, rules furniture |
 | Timber | `#8B6F47` / `#5C4830` (finished) / `#EFE4D3` (card tint) | Work - the feature Work-counter pips (darker shade = reached Work Cost) and the highlight box on the Work Activity card |
@@ -162,7 +163,7 @@ No pure black (`#000`), no pure white (`#FFF`), no gradients, no drop shadows, n
 > **field behind text** will run dark and murky and take the Oak Gall contrast with it. Every
 > named colour above is for **outlines, icons, small fills, and text itself only.** Any
 > background sitting behind text must be a **pale tint of that hue at roughly 90%+ lightness**
-> - the existing card/board tints (`#D3CEDF` Lavender/Trust, `#C7CFB5` Capability, `#F7D7A1`
+> - the existing card/board tints (`#D3CEDF` Lavender/Trust, `#D3B1B1` Capability, `#C7CFB5` Motivation, `#F7D7A1`
 > Shared Practice, `#B5C7CF` Adaptability, `#EFE4D3` Timber, `#E8D4B8`
 > habitus) are the calibrated examples; derive new ones the same way rather than lightening
 > by eye.

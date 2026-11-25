@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: equality, shepherds and wolves</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#F7D7A1"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 17 · TWO MANAGEMENT EVENTS</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">EQUALITY, SHEPHERDS AND WOLVES</text>
+<text class="s i" x="64" y="262" font-size="40">Philosophy, not experiment. The game borrows a diagnosis, not a conclusion.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">THE IDEA</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="540" width="14" height="14"/><rect x="64" y="692" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Nietzsche (1887): a morality of equality can</tspan><tspan x="100" dy="44">grow out of resentment, and be used by</tspan><tspan x="100" dy="44">whoever stands outside the flock.</tspan></text>
+<text x="100" y="562"><tspan x="100">Foucault (1977-78): pastoral power, the</tspan><tspan x="100" dy="44">shepherd's care for each and for all, is one</tspan><tspan x="100" dy="44">root of modern management.</tspan></text>
+<text x="100" y="714"><tspan x="100">"We are all equal here" can be kind. It can</tspan><tspan x="100" dy="44">also leave nobody able to speak for</tspan><tspan x="100" dy="44">the team.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#F7D7A1" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="498" width="14" height="14"/><rect x="1030" y="650" width="14" height="14"/><rect x="1030" y="802" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">EVERYONE IS EQUAL: no Hero, no Authorized</tspan><tspan x="1066" dy="44">Voice, no Capital gained this week.</tspan></text>
+<text x="1066" y="520"><tspan x="1066">THE WOLF cannot be cancelled by tokens, a</tspan><tspan x="1066" dy="44">Hero or Authorized Voice. Management goes</tspan><tspan x="1066" dy="44">after whoever holds the most Capital.</tspan></text>
+<text x="1066" y="672"><tspan x="1066">The team can step up to shield them: +1</tspan><tspan x="1066" dy="44">Capital for them, -1 Motivation for all.</tspan><tspan x="1066" dy="44">If not, their Capital is erased.</tspan></text>
+<text class="i" x="1066" y="824"><tspan x="1066">The wolf-and-shepherd line is the</tspan><tspan x="1066" dy="44">designers' own, not Nietzsche's.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Nietzsche, On the Genealogy of Morality (1887), essay III · Foucault, Security, Territory, Population (lectures, 1977-78)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

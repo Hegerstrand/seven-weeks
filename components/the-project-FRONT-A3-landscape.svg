@@ -134,7 +134,7 @@ team days - nothing on this board is tied to an individual player.</desc>
 <text x="374" y="201" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">Get the project done faster -</text>
 <text x="374" y="206.5" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">we're sure it's not going to</text>
 <text x="374" y="212" class="s q" font-size="3.4" text-anchor="middle" font-style="italic">bite you in the ass later!</text>
-<rect x="367.4" y="261.3" width="25.6" height="4.4" rx=".5" fill="#D3B1B1"/>
+<rect x="367.4" y="261.3" width="25.6" height="4.4" rx=".5" fill="#C7CFB5"/>
 <text x="374" y="264.5" class="m" font-size="3.4" text-anchor="middle">COSTS 1 MOTIVATION</text>
 <text x="374" y="270" class="m" font-size="3.4" text-anchor="middle">+ A FLEX MARKER</text>
 

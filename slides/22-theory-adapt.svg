@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: adaptation and resilience</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#B5C7CF"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 12 · THE ADAPTABILITY POOL</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">ADAPTATION AND RESILIENCE</text>
+<text class="s i" x="64" y="262" font-size="40">Plans are made in ignorance, and reality lands on them.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="540" width="14" height="14"/><rect x="64" y="648" width="14" height="14"/><rect x="64" y="756" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Burke et al. (2006): team adaptation is a</tspan><tspan x="100" dy="44">cycle: assess the situation, plan, act, and</tspan><tspan x="100" dy="44">learn from the result.</tspan></text>
+<text x="100" y="562"><tspan x="100">It needs spare capacity. A team at its</tspan><tspan x="100" dy="44">limit has nothing left to respond with.</tspan></text>
+<text x="100" y="670"><tspan x="100">Capacity cannot be bought at the moment</tspan><tspan x="100" dy="44">of need. It has to be built beforehand.</tspan></text>
+<text x="100" y="778"><tspan x="100">Coping absorbs a hit at the same cost each</tspan><tspan x="100" dy="44">time. Changing makes the next hit cheaper.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#B5C7CF" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="498" width="14" height="14"/><rect x="1030" y="650" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">The pool of adapt tokens is the spare</tspan><tspan x="1066" dy="44">capacity. It starts at 2 and holds 6.</tspan></text>
+<text x="1066" y="520"><tspan x="1066">A token earned this week cannot help</tspan><tspan x="1066" dy="44">against this week's Events: start paying</tspan><tspan x="1066" dy="44">in week 3, not in week 6.</tspan></text>
+<text x="1066" y="672"><tspan x="1066">Paying tokens is coping. A Habit is</tspan><tspan x="1066" dy="44">changing: a whole kind of Event gets</tspan><tspan x="1066" dy="44">cheaper for good.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Burke, Stagl, Salas, Pierce &amp; Kendall, J. Applied Psychology 91 (2006) · Weick &amp; Sutcliffe, Managing the Unexpected (2001)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

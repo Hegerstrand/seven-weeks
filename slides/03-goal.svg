@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>The goal</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE GOAL · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">DELIVER THE PROJECT. KEEP THE TEAM.</text>
+
+<g class="k" fill="#EFE4D3">
+  <rect x="64" y="250" width="300" height="230" rx="12"/><rect x="384" y="250" width="300" height="230" rx="12"/><rect x="704" y="250" width="300" height="230" rx="12"/>
+</g>
+<g class="m b" font-size="120" text-anchor="middle"><text x="214" y="395">6</text><text x="534" y="395">7</text><text x="854" y="395">35</text></g>
+<g class="s" font-size="36" text-anchor="middle"><text x="214" y="450">features</text><text x="534" y="450">weeks</text><text x="854" y="450">working days</text></g>
+
+<text class="s" x="1070" y="320" font-size="36"><tspan x="1070">Miss a feature and the project fails.</tspan><tspan x="1070" dy="52">Ship them all, and the score tells you</tspan><tspan x="1070" dy="52">what kind of team you were.</tspan></text>
+
+<rect x="64" y="540" width="880" height="250" rx="14" fill="#F7D7A1" class="k"/>
+<text class="m b" x="100" y="600" font-size="32" letter-spacing="2">HEROIC SUCCESS</text>
+<text class="s" x="100" y="672" font-size="40"><tspan x="100">The project shipped.</tspan><tspan x="100" dy="54">The team paid for it.</tspan></text>
+
+<rect x="976" y="540" width="880" height="250" rx="14" fill="#B5C7CF" class="k"/>
+<text class="m b" x="1012" y="600" font-size="32" letter-spacing="2">SUSTAINABLE HIGH PERFORMANCE</text>
+<text class="s" x="1012" y="672" font-size="40"><tspan x="1012">The project shipped, and the team</tspan><tspan x="1012" dy="54">got better doing it.</tspan></text>
+
+<text class="s i" x="960" y="880" font-size="44" text-anchor="middle">If you only had thirty-five working days, how would you spend them?</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">ASK</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Think of a team you were happy in.</tspan><tspan x="190" dy="48">What did it do that other teams did not?</tspan></text>
+</svg>

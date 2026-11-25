@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>The Ledger</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 2 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">THE LEDGER: THREE TRACKS</text>
+<text class="s i" x="64" y="262" font-size="40">Every track starts at 1. Each moves at most one step a week.</text>
+
+<g class="m" font-size="24" letter-spacing="2"><text x="88" y="318">TRACK</text><text x="524" y="318">AT 0 OR 1</text><text x="1164" y="318">AT 4 OR 5</text></g>
+<g class="k">
+  <rect x="64" y="332" width="1792" height="170" rx="12" fill="#D3CEDF"/>
+  <rect x="64" y="518" width="1792" height="170" rx="12" fill="#D3B1B1"/>
+  <rect x="64" y="704" width="1792" height="170" rx="12" fill="#F7D7A1"/>
+</g>
+<path d="M490 332V502M490 518V688M490 704V874M1130 332V502M1130 518V688M1130 704V874" class="k" fill="none" stroke-width="2"/>
+
+<g class="m b" font-size="34"><text x="88" y="386">TRUST</text><text x="88" y="572">CAPABILITY</text><text x="88" y="758" font-size="30">SHARED PRACTICE</text></g>
+<g class="s i" font-size="30">
+  <text x="88" y="436"><tspan x="88">Climbs with</tspan><tspan x="88" dy="36">Engagement</tspan></text>
+  <text x="88" y="622"><tspan x="88">Climbs when a Zone</tspan><tspan x="88" dy="36">row or column fills</tspan></text>
+  <text x="88" y="808"><tspan x="88">Climbs with Reflect and</tspan><tspan x="88" dy="36">stacked Zone squares</tspan></text>
+</g>
+<g class="s" font-size="34">
+  <text x="524" y="386"><tspan x="524">Teach does nothing.</tspan><tspan x="524" dy="44">Nobody hands on a skill</tspan><tspan x="524" dy="44">where it is not safe.</tspan></text>
+  <text x="524" y="572"><tspan x="524">The first Work card each</tspan><tspan x="524" dy="44">week does nothing.</tspan></text>
+  <text x="524" y="758"><tspan x="524">Plan does nothing. No common</tspan><tspan x="524" dy="44">routines, so planning together</tspan><tspan x="524" dy="44">does not take.</tspan></text>
+  <text x="1164" y="386"><tspan x="1164">The Psychological Safety Habit</tspan><tspan x="1164" dy="44">turns over: People Events</tspan><tspan x="1164" dy="44">cost 1 less to cancel.</tspan></text>
+  <text x="1164" y="572"><tspan x="1164">Every Work card produces</tspan><tspan x="1164" dy="44">1 more.</tspan></text>
+  <text x="1164" y="758"><tspan x="1164">The second and every later Work</tspan><tspan x="1164" dy="44">card in a week makes +1 extra.</tspan></text>
+</g>
+<text class="s i" x="960" y="916" font-size="36" text-anchor="middle">A track at its ring becomes a Habit: one kind of Event gets cheaper, for good.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">ASK</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Which track would you climb first?</tspan><tspan x="190" dy="48">Which card does that, and what does it cost you this week?</tspan></text>
+</svg>

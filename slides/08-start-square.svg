@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Your start square</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">SETUP · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">YOUR START SQUARE</text>
+
+<g class="k" fill="#2A2620"><rect x="64" y="262" width="64" height="64" rx="10"/><rect x="64" y="352" width="64" height="64" rx="10"/><rect x="64" y="442" width="64" height="64" rx="10"/><rect x="64" y="568" width="64" height="64" rx="10"/></g>
+<g class="m b" font-size="40" text-anchor="middle" style="fill:#fff"><text x="96" y="308" style="fill:#fff">1</text><text x="96" y="398" style="fill:#fff">2</text><text x="96" y="488" style="fill:#fff">3</text><text x="96" y="614" style="fill:#fff">4</text></g>
+<g class="s" font-size="38">
+  <text x="156" y="306">Find your education. It is a row.</text>
+  <text x="156" y="396">Find your skill. It is a column.</text>
+  <text x="156" y="474"><tspan x="156">Mark the square where they meet,</tspan><tspan x="156" dy="46">on your own SKILLS grid.</tspan></text>
+  <text x="156" y="600"><tspan x="156">Put a tile on that square of THE ZONE.</tspan><tspan x="156" dy="46">If someone is already there, stack it.</tspan></text>
+</g>
+
+<rect x="64" y="730" width="940" height="150" rx="14" fill="#EFE4D3" class="k"/>
+<text class="m b" x="96" y="776" font-size="24" letter-spacing="2">ALSO AT SETUP</text>
+<text class="s" x="96" y="830" font-size="34"><tspan x="96">Motivation 3. Capital 0. Week marker on 1.</tspan><tspan x="96" dy="44">Shuffle the Events. Do not draw yet.</tspan></text>
+
+<text class="m b" x="1450" y="318" font-size="24" letter-spacing="2" text-anchor="middle">SKILL = COLUMN</text>
+<text class="m b" x="1130" y="620" font-size="24" letter-spacing="2" text-anchor="middle" transform="rotate(-90 1130 620)">EDUCATION = ROW</text>
+<g class="m" font-size="26" text-anchor="middle">
+  <text x="1250" y="356">1</text><text x="1350" y="356">2</text><text x="1450" y="356">3</text><text x="1550" y="356">4</text><text x="1650" y="356">5</text>
+  <text x="1176" y="430">1</text><text x="1176" y="530">2</text><text x="1176" y="630">3</text><text x="1176" y="730">4</text><text x="1176" y="830">5</text>
+</g>
+<rect x="1500" y="570" width="100" height="100" fill="#D3B1B1"/>
+<path d="M1200 370H1700M1200 470H1700M1200 570H1700M1200 670H1700M1200 770H1700M1200 870H1700M1200 370V870M1300 370V870M1400 370V870M1500 370V870M1600 370V870M1700 370V870" class="k" fill="none" stroke-width="2"/>
+<circle cx="1550" cy="620" r="24" fill="#2A2620"/>
+<text class="s i" x="1450" y="912" font-size="30" text-anchor="middle">an example: row 3, column 4</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Everyone marks their start square, then covers it on THE ZONE.</tspan><tspan x="190" dy="48">Then turn THE ZONE and THE PROJECT over. Week 1 begins.</tspan></text>
+</svg>

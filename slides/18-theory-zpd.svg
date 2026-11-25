@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: scaffolding and the zone of proximal development</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 07 · LEARN AND TEACH</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="50">SCAFFOLDING AND THE ZONE OF PROXIMAL DEVELOPMENT</text>
+<text class="s i" x="64" y="262" font-size="40">One step beyond what you can do alone.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="584" width="14" height="14"/><rect x="64" y="736" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Vygotsky (1978): learning happens first</tspan><tspan x="100" dy="44">between people, then inside a person. The</tspan><tspan x="100" dy="44">zone is the gap between what you can do</tspan><tspan x="100" dy="44">alone and what you can do with help.</tspan></text>
+<text x="100" y="606"><tspan x="100">Wood, Bruner &amp; Ross (1976): that help is</tspan><tspan x="100" dy="44">scaffolding. The helper takes over what the</tspan><tspan x="100" dy="44">learner cannot yet do, then withdraws.</tspan></text>
+<text x="100" y="758"><tspan x="100">Too easy teaches nothing. Too far gets</tspan><tspan x="100" dy="44">nowhere.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#EFE4D3" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="498" width="14" height="14"/><rect x="1030" y="606" width="14" height="14"/><rect x="1030" y="714" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">Learn is one short step, left or right</tspan><tspan x="1066" dy="44">of what you cover, taken alone.</tspan></text>
+<text x="1066" y="520"><tspan x="1066">Teach is one step from what the teacher</tspan><tspan x="1066" dy="44">covers. Never a long leap.</tspan></text>
+<text x="1066" y="628"><tspan x="1066">A square you got this week cannot be</tspan><tspan x="1066" dy="44">taught this week.</tspan></text>
+<text x="1066" y="736"><tspan x="1066">Teaching costs one of the week's five</tspan><tspan x="1066" dy="44">days: the helper pays in opportunity,</tspan><tspan x="1066" dy="44">not as a penalty.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Vygotsky, Mind in Society (1978) · Wood, Bruner &amp; Ross, J. Child Psychology and Psychiatry 17 (1976)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

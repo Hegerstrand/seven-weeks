@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Round up the week</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 3 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">ROUND UP THE WEEK</text>
+<text class="s i" x="64" y="250" font-size="40">Steps 6 and 7. In this order, aloud, together.</text>
+
+<text class="m b" x="64" y="296" font-size="24" letter-spacing="2">6 · CLOSE THE WEEK</text>
+<g class="k">
+  <rect x="64" y="308" width="1792" height="84" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="404" width="1792" height="84" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="500" width="1792" height="84" rx="12" fill="#EFE4D3"/>
+</g>
+<text class="m b" x="64" y="628" font-size="24" letter-spacing="2">7 · MOTIVATION</text>
+<g class="k">
+  <rect x="64" y="640" width="1792" height="84" rx="12" fill="#C7CFB5"/>
+  <rect x="64" y="736" width="1792" height="84" rx="12" fill="#C7CFB5"/>
+  <rect x="64" y="832" width="1792" height="84" rx="12" fill="#C7CFB5"/>
+</g>
+<g class="k" fill="#2A2620"><rect x="80" y="321" width="58" height="58" rx="8"/><rect x="80" y="417" width="58" height="58" rx="8"/><rect x="80" y="513" width="58" height="58" rx="8"/><rect x="80" y="653" width="58" height="58" rx="8"/><rect x="80" y="749" width="58" height="58" rx="8"/><rect x="80" y="845" width="58" height="58" rx="8"/></g>
+<g class="m b" font-size="40" text-anchor="middle">
+  <text x="109" y="363" style="fill:#fff">1</text><text x="109" y="459" style="fill:#fff">2</text><text x="109" y="555" style="fill:#fff">3</text>
+  <text x="109" y="695" style="fill:#fff">4</text><text x="109" y="791" style="fill:#fff">5</text><text x="109" y="887" style="fill:#fff">6</text>
+</g>
+<g class="m b" font-size="28" letter-spacing="1">
+  <text x="170" y="362">BANK</text><text x="170" y="458">WALK THE LEDGER</text><text x="170" y="554">ADD TOKENS</text>
+  <text x="170" y="694">ONE NUMBER</text><text x="170" y="790">QUITS</text><text x="170" y="886">NEXT WEEK</text>
+</g>
+<g class="s" font-size="33">
+  <text x="590" y="360">Features that reached their Work Cost go on the Tower. Lift the locks.</text>
+  <text x="590" y="456">Each track moves at most one step. A coin at its ring turns over: a Habit.</text>
+  <text x="590" y="552">Workshop +4, Demo +2, Reflect +1 (Trust 3). The pool holds 6 at most.</text>
+  <text x="590" y="692">Each person: -1 grind, values, +1 Need met, +1 Celebrate, Demo or Reflect.</text>
+  <text x="590" y="788">Anyone on 0 quits. Everyone left loses 1 for each quitter.</text>
+  <text x="590" y="884">Move the week marker. The next slide takes you through the new week.</text>
+</g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Go through it aloud, one line at a time. Everyone does their own Motivation sum.</tspan><tspan x="190" dy="48">Week 3 only: your Need is read for the first time now.</tspan></text>
+</svg>

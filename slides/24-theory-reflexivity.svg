@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: team reflexivity</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#B5C7CF"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 04 · HABIT: TEAM REFLEXIVITY</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">TEAM REFLEXIVITY</text>
+<text class="s i" x="64" y="262" font-size="40">Reflection without change is just discussion.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="584" width="14" height="14"/><rect x="64" y="692" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">West (1996): team members openly reflect on</tspan><tspan x="100" dy="44">the team's objectives, strategies and</tspan><tspan x="100" dy="44">processes, and adapt them. The adapting is</tspan><tspan x="100" dy="44">the point.</tspan></text>
+<text x="100" y="606"><tspan x="100">Three objects: what we are trying to do,</tspan><tspan x="100" dy="44">how we plan to do it, how we work together.</tspan></text>
+<text x="100" y="714"><tspan x="100">It works best with honest dialogue, real</tspan><tspan x="100" dy="44">evidence instead of anecdote, and the</tspan><tspan x="100" dy="44">authority to change how the team works.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#B5C7CF" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="498" width="14" height="14"/><rect x="1030" y="650" width="14" height="14"/><rect x="1030" y="758" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">Reflect needs Trust 3: reflection needs</tspan><tspan x="1066" dy="44">safety to say what did not work.</tspan></text>
+<text x="1066" y="520"><tspan x="1066">Last week must give real evidence, not</tspan><tspan x="1066" dy="44">anecdote: a feature banked, 2 Events</tspan><tspan x="1066" dy="44">adapted to, or a Hero or token played.</tspan></text>
+<text x="1066" y="672"><tspan x="1066">The team names one thing it will do</tspan><tspan x="1066" dy="44">differently next week.</tspan></text>
+<text x="1066" y="780"><tspan x="1066">Three wells filled turn over the Habit:</tspan><tspan x="1066" dy="44">Customer Events cost 1 less to cancel.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>West (1996) in Handbook of Work Group Psychology · Schippers, Edmondson &amp; West (2017) · Konradt et al., J. Psychology 150 (2016)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

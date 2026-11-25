@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: power, visibility and measures</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#D3CEDF"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 16 · THE LEDGER AND THE SCORE</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">POWER, VISIBILITY AND MEASURES</text>
+<text class="s i" x="64" y="262" font-size="40">Theory, not experiment. When a measure becomes a target, it stops being a good one.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE THEORY SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="584" width="14" height="14"/><rect x="64" y="736" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Foucault (1975): modern institutions</tspan><tspan x="100" dy="44">govern less by force than by visibility</tspan><tspan x="100" dy="44">and comparison: being watched, measured</tspan><tspan x="100" dy="44">against a norm.</tspan></text>
+<text x="100" y="606"><tspan x="100">Goodhart (1975), in Strathern's 1997 words:</tspan><tspan x="100" dy="44">when a measure becomes a target, people</tspan><tspan x="100" dy="44">optimise the number.</tspan></text>
+<text x="100" y="758"><tspan x="100">"Above average" is a norm: a position that</tspan><tspan x="100" dy="44">moves as everyone moves.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#D3CEDF" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="498" width="14" height="14"/><rect x="1030" y="606" width="14" height="14"/><rect x="1030" y="758" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">The Ledger and everyone's Capital sit face</tspan><tspan x="1066" dy="44">up all game. Standing is always visible.</tspan></text>
+<text x="1066" y="520"><tspan x="1066">Demo needs Capital at or above the team</tspan><tspan x="1066" dy="44">average: a gate that moves with the team.</tspan></text>
+<text x="1066" y="628"><tspan x="1066">Team Score is only a proxy. Heroic</tspan><tspan x="1066" dy="44">Success hits the number and misses the</tspan><tspan x="1066" dy="44">point.</tspan></text>
+<text x="1066" y="780"><tspan x="1066">THE DASHBOARD Event: the number went</tspan><tspan x="1066" dy="44">up and nothing else did.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Foucault, Discipline and Punish (1975) · Goodhart (1975) · Strathern, European Review 5 (1997)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

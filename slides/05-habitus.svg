@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>You are dealt a person</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">SETUP · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">YOU ARE DEALT A PERSON</text>
+<text class="s i" x="64" y="262" font-size="40">Nobody chooses their upbringing. You are handed a person, and you play them.</text>
+
+<g class="m" font-size="24" letter-spacing="2"><text x="96" y="332">PART</text><text x="480" y="332">WHAT IT IS</text><text x="1824" y="332" text-anchor="end">COUNTS FROM</text></g>
+<g class="k">
+  <rect x="64" y="350" width="1792" height="92" rx="10" fill="#F0E3D1"/>
+  <rect x="64" y="450" width="1792" height="92" rx="10" fill="#EFE4D3"/>
+  <rect x="64" y="550" width="1792" height="92" rx="10" fill="#F0E3D1"/>
+  <rect x="64" y="650" width="1792" height="92" rx="10" fill="#EFE4D3"/>
+  <rect x="64" y="750" width="1792" height="92" rx="10" fill="#F0E3D1"/>
+</g>
+<g class="m b" font-size="34"><text x="96" y="410">UPBRINGING</text><text x="96" y="510">INSTINCT</text><text x="96" y="610">VALUES</text><text x="96" y="710">EDUCATION</text><text x="96" y="810">SKILL</text></g>
+<g class="s" font-size="36">
+  <text x="480" y="410">The foundation. Shapes how your Motivation moves.</text>
+  <text x="480" y="510">What you do under pressure. Your Hero, from week 3.</text>
+  <text x="480" y="610">What wears you down, and what you need.</text>
+  <text x="480" y="710">Your row on the Zone.</text>
+  <text x="480" y="810">Your column on the Zone.</text>
+</g>
+<g class="m b" font-size="30" text-anchor="end"><text x="1824" y="410">WEEK 2</text><text x="1824" y="510">WEEK 2</text><text x="1824" y="610">WEEK 3</text><text x="1824" y="710">WEEK 1</text><text x="1824" y="810">WEEK 1</text></g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Take five part-cards, one of each kind. Stack them on your person board.</tspan><tspan x="190" dy="48">Then take the NEED tile (your values) and the HERO tile (your instinct).</tspan></text>
+</svg>

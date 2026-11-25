@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Two things happen at this table</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">BEFORE WE START · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">TWO THINGS HAPPEN AT THIS TABLE</text>
+
+<rect x="64" y="240" width="880" height="330" rx="14" fill="#EFE4D3" class="k"/>
+<text class="m b" x="100" y="300" font-size="30" letter-spacing="2">1 · UNDERSTAND THE GAME</text>
+<text class="s" x="100" y="370" font-size="36"><tspan x="100">Seven weeks, five days a week.</tspan><tspan x="100" dy="48">Each week uncovers one new idea,</tspan><tspan x="100" dy="48">so you never learn it all at once.</tspan><tspan x="100" dy="48">The bottom of the screen says what to do now.</tspan></text>
+
+<rect x="976" y="240" width="880" height="330" rx="14" fill="#B5C7CF" class="k"/>
+<text class="m b" x="1012" y="300" font-size="30" letter-spacing="2">2 · MEET THE RESEARCH</text>
+<text class="s" x="1012" y="370" font-size="36"><tspan x="1012">Every mechanic comes from something</tspan><tspan x="1012" dy="48">researchers found about real teams.</tspan><tspan x="1012" dy="48">A theory slide follows each idea you</tspan><tspan x="1012" dy="48">have just met at the table.</tspan></text>
+
+<text class="m b" x="64" y="636" font-size="26" letter-spacing="2">WHAT OPENS WHEN</text>
+<g class="k" stroke-width="3">
+  <rect x="64" y="656" width="287" height="190" rx="12" fill="#F0E3D1"/>
+  <rect x="365" y="656" width="287" height="190" rx="12" fill="#EFE4D3"/>
+  <rect x="666" y="656" width="287" height="190" rx="12" fill="#D3CEDF"/>
+  <rect x="967" y="656" width="287" height="190" rx="12" fill="#F3E3A3"/>
+  <rect x="1268" y="656" width="287" height="190" rx="12" fill="#D3B1B1"/>
+  <rect x="1569" y="656" width="287" height="190" rx="12" fill="#D9D3C4"/>
+</g>
+<g class="m b" font-size="28" text-anchor="middle">
+  <text x="207" y="708">SETUP</text><text x="508" y="708">WEEK 1</text><text x="809" y="708">WEEK 2</text>
+  <text x="1110" y="708">WEEK 3</text><text x="1411" y="708">WEEK 4</text><text x="1712" y="708">WEEKS 5-7</text>
+</g>
+<g class="s i" font-size="36" text-anchor="middle">
+  <text x="207" y="766">Who you are</text><text x="508" y="766">The week</text><text x="809" y="766">The team</text>
+  <text x="1110" y="766">Reality</text><text x="1411" y="766">How far you reach</text><text x="1712" y="766">Play it all</text>
+</g>
+<g class="s" font-size="30" text-anchor="middle">
+  <text x="207" y="816">five parts</text><text x="508" y="816">five cards</text><text x="809" y="816">the Ledger</text>
+  <text x="1110" y="816">Events</text><text x="1411" y="816">the Zone pays</text><text x="1712" y="816">nothing new</text>
+</g>
+<text class="s i" x="64" y="898" font-size="34">A warm band is the game. A coloured band marked THEORY is two minutes of research, then we play.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Nothing to read yet.</tspan><tspan x="190" dy="48">We begin by dealing each of you a person.</tspan></text>
+</svg>

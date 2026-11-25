@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>The week: seven steps</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">REFERENCE · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">THE WEEK · SEVEN STEPS, EVERY WEEK</text>
+
+<g class="k">
+  <rect x="64" y="226" width="1792" height="86" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="322" width="1792" height="86" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="418" width="1792" height="86" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="514" width="1792" height="86" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="610" width="1792" height="86" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="706" width="1792" height="86" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="802" width="1792" height="86" rx="12" fill="#C7CFB5"/>
+</g>
+<g class="k" fill="#2A2620"><rect x="80" y="240" width="58" height="58" rx="8"/><rect x="80" y="336" width="58" height="58" rx="8"/><rect x="80" y="432" width="58" height="58" rx="8"/><rect x="80" y="528" width="58" height="58" rx="8"/><rect x="80" y="624" width="58" height="58" rx="8"/><rect x="80" y="720" width="58" height="58" rx="8"/><rect x="80" y="816" width="58" height="58" rx="8"/></g>
+<g class="m b" font-size="40" text-anchor="middle" style="fill:#fff">
+  <text x="109" y="283" style="fill:#fff">1</text><text x="109" y="379" style="fill:#fff">2</text><text x="109" y="475" style="fill:#fff">3</text><text x="109" y="571" style="fill:#fff">4</text><text x="109" y="667" style="fill:#fff">5</text><text x="109" y="763" style="fill:#fff">6</text><text x="109" y="859" style="fill:#fff">7</text>
+</g>
+<g class="m b" font-size="32" letter-spacing="1">
+  <text x="170" y="282">PLAN</text><text x="170" y="378">SHIT HAPPENS</text><text x="170" y="474">ADAPT</text><text x="170" y="570">SURVIVING EVENTS</text><text x="170" y="666">THE WEEK RUNS</text><text x="170" y="762">CLOSE</text><text x="170" y="858">MOTIVATION</text>
+</g>
+<g class="s" font-size="34">
+  <text x="720" y="280">Lay five Activity cards. Nothing resolves.</text>
+  <text x="720" y="376">Draw 2 Events. Read them out. Nothing resolves.</text>
+  <text x="720" y="472">Cancel Events: pay tokens, or play a Hero.</text>
+  <text x="720" y="568">Resolve every Event nobody cancelled.</text>
+  <text x="720" y="664">Resolve the five cards, in any order.</text>
+  <text x="720" y="760">Bank features. Walk the Ledger. Add adapt tokens.</text>
+  <text x="720" y="856">One net number each. Anyone on 0 quits.</text>
+</g>
+<g class="m" font-size="24" letter-spacing="2" text-anchor="end">
+  <text x="1828" y="278">FROM WEEK 1</text><text x="1828" y="374">FROM WEEK 3</text><text x="1828" y="470">FROM WEEK 3</text><text x="1828" y="566">FROM WEEK 3</text><text x="1828" y="662">FROM WEEK 1</text><text x="1828" y="758">FROM WEEK 1</text><text x="1828" y="854">FROM WEEK 2</text>
+</g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">KEEP</text>
+<text class="s" x="210" y="1002" font-size="38"><tspan x="210">Leave this up whenever someone asks "what do we do now?"</tspan><tspan x="210" dy="48">Tick the steps off aloud. The same list is printed on every person board.</tspan></text>
+</svg>

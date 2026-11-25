@@ -53,18 +53,18 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <text x="36" y="55" class="serif" font-size="3.2" text-anchor="middle">At most 1 Event landed</text>
   <text x="36" y="59.2" class="serif" font-size="3.2" text-anchor="middle">on the team, or it has</text>
   <text x="36" y="63.4" class="serif" font-size="3.2" text-anchor="middle">Shared Repertoire:</text>
-  <rect x="24.5" y="66" width="23" height="4" rx=".4" fill="#D3B1B1"/>
+  <rect x="24.5" y="66" width="23" height="4" rx=".4" fill="#C7CFB5"/>
   <text x="36" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
 
   <rect x="64" y="40" width="44" height="36" rx="1.5" class="cut"/>
   <use href="#sh-torso-red" x="103" y="46"/><use href="#p2" x="103" y="46"/>
   <text x="67" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="97" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Hierarchy</text>
   <line x1="67" y1="50" x2="105" y2="50" class="hair"/>
-  <rect x="67" y="52" width="38" height="12.7" rx=".4" fill="#C7CFB5"/>
+  <rect x="67" y="52" width="38" height="12.7" rx=".4" fill="#D3B1B1"/>
   <text x="86" y="55" class="serif" font-size="3.2" text-anchor="middle">Team played a Teach,</text>
   <text x="86" y="59.2" class="serif" font-size="3.2" text-anchor="middle">Learn or Workshop, or</text>
   <text x="86" y="63.4" class="serif" font-size="3.2" text-anchor="middle">has Who Knows What:</text>
-  <rect x="74.5" y="66" width="23" height="4" rx=".4" fill="#D3B1B1"/>
+  <rect x="74.5" y="66" width="23" height="4" rx=".4" fill="#C7CFB5"/>
   <text x="86" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
 
   <rect x="114" y="40" width="44" height="36" rx="1.5" class="cut"/>
@@ -77,7 +77,7 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <text x="136" y="61.4" class="serif" font-size="2.9" text-anchor="middle">Psychological Safety and</text>
   <text x="136" y="64.9" class="serif" font-size="2.9" text-anchor="middle">no People or Management</text>
   <text x="136" y="68.4" class="serif" font-size="2.9" text-anchor="middle">Event landed:</text>
-  <rect x="124.5" y="70.3" width="23" height="3.6" rx=".4" fill="#D3B1B1"/>
+  <rect x="124.5" y="70.3" width="23" height="3.6" rx=".4" fill="#C7CFB5"/>
   <text x="136" y="72.9" class="serif" font-size="2.9" text-anchor="middle">+1 Motivation.</text>
 
   <rect x="164" y="40" width="44" height="36" rx="1.5" class="cut"/>
@@ -85,11 +85,11 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <text x="167" y="47" class="mono" font-size="3.4" letter-spacing="1">NEED</text><text x="197" y="47" class="serif" font-size="3" font-style="italic" text-anchor="end">Quality</text>
   <line x1="167" y1="50" x2="205" y2="50" class="hair"/>
   <text x="186" y="55.2" class="serif" font-size="3.2" text-anchor="middle">Work added:</text>
-  <rect x="174.5" y="57.6" width="23" height="4" rx=".4" fill="#D3B1B1"/>
+  <rect x="174.5" y="57.6" width="23" height="4" rx=".4" fill="#C7CFB5"/>
   <text x="186" y="60.7" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
   <rect x="167" y="63.2" width="38" height="3.4" rx=".4" fill="#EFE4D3"/>
   <text x="186" y="65.9" class="serif" font-size="3.2" text-anchor="middle">No Work added to Feature:</text>
-  <rect x="174.5" y="67.1" width="23" height="4" rx=".4" fill="#D3B1B1"/>
+  <rect x="174.5" y="67.1" width="23" height="4" rx=".4" fill="#C7CFB5"/>
   <text x="186" y="70.2" class="serif" font-size="3.2" text-anchor="middle">-3 Motivation.</text>
 
   <rect x="214" y="40" width="44" height="36" rx="1.5" class="cut"/>
@@ -100,7 +100,7 @@ Event card show the same code: 1 pip = Own It, 2 = Analyze, 3 = Support, 4 = Eng
   <text x="236" y="55" class="serif" font-size="3.2" text-anchor="middle">A feature was banked</text>
   <text x="236" y="59.2" class="serif" font-size="3.2" text-anchor="middle">this week, or you</text>
   <text x="236" y="63.4" class="serif" font-size="3" text-anchor="middle">spent Hero, or held a Demo:</text>
-  <rect x="224.5" y="66" width="23" height="4" rx=".4" fill="#D3B1B1"/>
+  <rect x="224.5" y="66" width="23" height="4" rx=".4" fill="#C7CFB5"/>
   <text x="236" y="69.1" class="serif" font-size="3.2" text-anchor="middle">+1 Motivation.</text>
   </g>
 

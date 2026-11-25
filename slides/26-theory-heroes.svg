@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: heroes, shared leadership and sustainable pace</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#C7CFB5"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 13 · HERO AND SUSTAINABLE PACE</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="48">HEROES, SHARED LEADERSHIP AND SUSTAINABLE PACE</text>
+<text class="s i" x="64" y="262" font-size="40">A team that leans on one person pays for it later.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="540" width="14" height="14"/><rect x="64" y="736" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Many teams lean on a hero: one person who</tspan><tspan x="100" dy="44">steps up and works the extra hours. It</tspan><tspan x="100" dy="44">works, for a while.</tspan></text>
+<text x="100" y="562"><tspan x="100">Pearce &amp; Conger (2003): leadership can be</tspan><tspan x="100" dy="44">shared across the team. A meta-analysis</tspan><tspan x="100" dy="44">(Wang, Waldman &amp; Zhang, 2014) found shared</tspan><tspan x="100" dy="44">leadership related to team effectiveness.</tspan></text>
+<text x="100" y="758"><tspan x="100">A team that depends on one hero is fragile.</tspan><tspan x="100" dy="44">Sustained overwork drives exhaustion.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#C7CFB5" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="542" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">Hero: once per game and free, but it</tspan><tspan x="1066" dy="44">needs 3 Motivation. People running on</tspan><tspan x="1066" dy="44">empty do not step up.</tspan></text>
+<text x="1066" y="564"><tspan x="1066">The two endings are the argument:</tspan><tspan x="1066" dy="44">Heroic Success against Sustainable High</tspan><tspan x="1066" dy="44">Performance.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Pearce &amp; Conger (eds), Shared Leadership (2003) · Wang, Waldman &amp; Zhang, J. Applied Psychology 99 (2014)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

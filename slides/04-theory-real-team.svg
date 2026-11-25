@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: what makes a team high-performing</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 01 · THE BIG PICTURE</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">WHAT MAKES A TEAM HIGH-PERFORMING</text>
+<text class="s i" x="64" y="262" font-size="40">A group of people is not a team.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="540" width="14" height="14"/><rect x="64" y="736" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Katzenbach &amp; Smith (1993): a real team has</tspan><tspan x="100" dy="44">a shared purpose, complementary skills and</tspan><tspan x="100" dy="44">mutual accountability.</tspan></text>
+<text x="100" y="562"><tspan x="100">Hackman (2002): results depend on the</tspan><tspan x="100" dy="44">conditions around a team: is it real, does</tspan><tspan x="100" dy="44">it have direction, structure, support and</tspan><tspan x="100" dy="44">coaching?</tspan></text>
+<text x="100" y="758"><tspan x="100">Google's Project Aristotle: how people</tspan><tspan x="100" dy="44">worked together mattered more than who</tspan><tspan x="100" dy="44">they were. Psychological safety came first.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#EFE4D3" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="542" width="14" height="14"/><rect x="1030" y="694" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">The week is five days for the whole</tspan><tspan x="1066" dy="44">team, whatever its size. Nobody plays</tspan><tspan x="1066" dy="44">a card alone.</tspan></text>
+<text x="1066" y="564"><tspan x="1066">The Ledger, the Zone and the pool of</tspan><tspan x="1066" dy="44">tokens belong to the team, not to a</tspan><tspan x="1066" dy="44">player.</tspan></text>
+<text x="1066" y="716"><tspan x="1066">Two endings: you shipped and grew, or</tspan><tspan x="1066" dy="44">you shipped and burned out.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Katzenbach &amp; Smith, The Wisdom of Teams (1993) · Hackman, Leading Teams (2002) · Google re:Work, Project Aristotle</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Week 3: reality</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 3 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">WEEK 3 · REALITY</text>
+<text class="s i" x="64" y="262" font-size="40">Your plan was made in ignorance, and reality lands on it.</text>
+
+<g class="k">
+  <rect x="64" y="300" width="1792" height="84" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="398" width="1792" height="84" rx="12" fill="#B5C7CF"/>
+  <rect x="64" y="496" width="1792" height="84" rx="12" fill="#C7CFB5"/>
+  <rect x="64" y="594" width="1792" height="84" rx="12" fill="#C7CFB5"/>
+  <rect x="64" y="692" width="1792" height="84" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="790" width="1792" height="84" rx="12" fill="#D9D3C4"/>
+</g>
+<g class="m b" font-size="30" letter-spacing="2">
+  <text x="96" y="354">SHIT HAPPENS</text><text x="96" y="452">ADAPT</text><text x="96" y="550">HERO</text><text x="96" y="648">NEED</text><text x="96" y="746">NEW CARDS</text><text x="96" y="844">COMBOS</text>
+</g>
+<g class="s" font-size="36">
+  <text x="480" y="352">Two Events a week, drawn after you have laid the week.</text>
+  <text x="480" y="450">A shared pool of adapt tokens. It starts with 2.</text>
+  <text x="480" y="548">Once a game, cancel an Event that names your instinct.</text>
+  <text x="480" y="646">Your values now count, and so does your Need.</text>
+  <text x="480" y="744">Workshop, Demo and Reflect join the cards.</text>
+  <text x="480" y="842">Two named triggers in one week pay a small bonus.</text>
+</g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Turn SHIT HAPPENS over. Put 2 tokens in the pool.</tspan><tspan x="190" dy="48">Lay the week first. Only then draw two Events.</tspan></text>
+</svg>

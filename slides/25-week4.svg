@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Week 4: how far you reach</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 4 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">WEEK 4 · HOW FAR YOU REACH</text>
+<text class="s i" x="64" y="262" font-size="40">No new cards. The Zone starts to pay.</text>
+
+<text class="s i" x="64" y="340" font-size="40">Your five skills were already on your sheet. Now the Ledger pays for them.</text>
+
+<rect x="64" y="376" width="1792" height="130" rx="14" fill="#D3B1B1" class="k"/>
+<text class="m b" x="96" y="426" font-size="28" letter-spacing="2">CAPABILITY +1</text>
+<text class="s" x="96" y="480" font-size="38">A whole row or column of the Zone is covered.</text>
+
+<rect x="64" y="526" width="1792" height="130" rx="14" fill="#F7D7A1" class="k"/>
+<text class="m b" x="96" y="576" font-size="28" letter-spacing="2">SHARED PRACTICE +1</text>
+<text class="s" x="96" y="630" font-size="38">A tile flips to its stacked face: two of you now cover the square.</text>
+
+<rect x="64" y="676" width="1792" height="130" rx="14" fill="#D9D3C4" class="k"/>
+<text class="m b" x="96" y="726" font-size="28" letter-spacing="2">CROSS-TRAINED: CAPABILITY +1</text>
+<text class="s" x="96" y="780" font-size="38">The first time your own grid has squares in a second row.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Uncover THE DEVELOPMENT. Nothing else is new.</tspan><tspan x="190" dy="48">Ask: which Zone squares are one tile away from a full row or column?</tspan></text>
+</svg>

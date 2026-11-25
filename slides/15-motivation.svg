@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Motivation: the grind</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 2 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">MOTIVATION: THE GRIND</text>
+<text class="s i" x="64" y="262" font-size="40">Your person board has five Motivation squares. You start on three.</text>
+
+<g class="k">
+  <rect x="64" y="304" width="64" height="64" rx="8" fill="#C7CFB5"/><rect x="144" y="304" width="64" height="64" rx="8" fill="#C7CFB5"/><rect x="224" y="304" width="64" height="64" rx="8" fill="#C7CFB5"/>
+  <rect x="304" y="304" width="64" height="64" rx="8" fill="#FBF8F0"/><rect x="384" y="304" width="64" height="64" rx="8" fill="#FBF8F0"/>
+</g>
+<g fill="#2A2620"><circle cx="96" cy="336" r="18"/><circle cx="176" cy="336" r="18"/><circle cx="256" cy="336" r="18"/></g>
+<g fill="#2A2620"><rect x="64" y="438" width="14" height="14"/><rect x="64" y="502" width="14" height="14"/><rect x="64" y="610" width="14" height="14"/><rect x="64" y="718" width="14" height="14"/></g>
+<g class="s" font-size="36">
+  <text x="100" y="460">Everyone starts on 3. The cap is 5.</text>
+  <text x="100" y="524"><tspan x="100">The grind takes 1 from everyone as</tspan><tspan x="100" dy="46">each week closes.</tspan></text>
+  <text x="100" y="632"><tspan x="100">Celebrate, and later your Need, give</tspan><tspan x="100" dy="46">it back.</tspan></text>
+  <text x="100" y="740"><tspan x="100">At 0 you quit. Everyone left loses 1,</tspan><tspan x="100" dy="46">the team scores -40, and the seat stays</tspan><tspan x="100" dy="46">empty until Onboarding (it costs a day).</tspan></text>
+</g>
+
+<rect x="1000" y="300" width="856" height="480" rx="14" fill="#EFE4D3" class="k"/>
+<text class="m b" x="1036" y="352" font-size="26" letter-spacing="2">ONE PERSON, ONE WEEK 2</text>
+<g class="m" font-size="34">
+  <text x="1036" y="430">Start of week</text><text x="1820" y="430" text-anchor="end">3</text>
+  <text x="1036" y="490">The grind</text><text x="1820" y="490" text-anchor="end">-1</text>
+  <text x="1036" y="550">Celebrate (a feature banked)</text><text x="1820" y="550" text-anchor="end">+1</text>
+</g>
+<path d="M1036 580H1820" class="k" fill="none" stroke-width="2"/>
+<g class="m b" font-size="34"><text x="1036" y="634">Applied once, at step 7</text><text x="1820" y="634" text-anchor="end">3</text></g>
+<text class="s i" x="1036" y="700" font-size="32"><tspan x="1036">One net number. From week 3 your values</tspan><tspan x="1036" dy="40">and your Need join the sum.</tspan></text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Put three Motivation tokens on your person board.</tspan><tspan x="190" dy="48">Find step 7 on THE WEEK checklist, down the side.</tspan></text>
+</svg>

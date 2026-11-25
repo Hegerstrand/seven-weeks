@@ -55,9 +55,9 @@ read them as minimums.
 | board panel (ungrouped) | outer border rect, "SPECIMEN" title, italic aside, rule | - |
 | HABITUS row | 5 seats (upbringing, instinct, values, education, skill), each with dashed tinted seat, icon (no pips), mono caps label (UPBRINGING / INSTINCT / VALUES / EDUCATION / SKILL) and a "→ outcome" caption (skill "→ Zone column", education "→ Zone row", upbringing "→ Motivation", instinct "→ Hero", values "→ Need"); the body-part words are no longer printed | seats `.hab` fill `#F0E3D1`, dashed border |
 | Row A (Flex / Hero / Need / Zone Start / Skills) | 5 boxes, one per habitus column, each 44x36 | Flex, Zone Start & Skills: no fill (`.w` outline); Flex also has a dashed r15 well (30 mm) with the marker's owed face printed in it; Hero & Need: `.seat` dashed, fill `#F0E3D1` |
-| Row B (Motivation) | one full-width box (232 x 24, y 112-136), 5-square scale left, caption right | Motivation `#D3B1B1` |
+| Row B (Motivation) | one full-width box (232 x 24, y 112-136), 5-square scale left, caption right | Motivation `#C7CFB5` |
 | Row C (Capital) | one full-width box (232 x 40, y 140-180), label and caption left, six r15 (30 mm) circle wells at x 65, 96, 127, 158, 189, 220, y 160, numbered 0-5 | Capital `#D9D3C4` |
-| THE WEEK panel (page space, outside the board group) | outer border rect, mono title, rule, seven numbered steps (PLAN / SHIT HAPPENS / ADAPT / EVENTS HAPPEN / THE WEEK RUNS / CLOSE / MOTIVATION), each a bold step name over 2-5 lines of rule text, no footer. Box is as tall as the SPECIMEN (186 mm). Text is rulebook 6.1 "The week at a glance" - change one, change both | - |
+| THE WEEK panel (page space, outside the board group) | outer border rect, mono title, rule, seven numbered steps (PLAN / SHIT HAPPENS / ADAPT / EVENTS HAPPEN / THE WEEK RUNS / CLOSE / MOTIVATION), each a bold step name over 2-5 lines of rule text, then a WHEN block and a PAID AT ONCE block (Workshop, Take One, Own It, the gift move Motivation now; everything else at step 7), no footer. Box is as tall as the SPECIMEN (186 mm). Text is rulebook 6.1 "The week at a glance" - change one, change both | - |
 
 ## Text
 
@@ -71,13 +71,13 @@ read them as minimums.
 | Habitus outcome captions (→ Motivation, → Zone row, → Events, → pressure, → Zone column) | `.s.q` serif | 3.2 | `#000000` | - |
 | "the shape on each seat tells you which part-card belongs there" | `.s.q` italic serif | 2.8 | `#000000` | - |
 | "ZONE START" + 4-line italic note ("Mark where your education [hexagon] row meets your skill [diamond] column, at setup."), left-aligned at x 151, inline glyphs `sh-head` (scale .8) and `sh-item` (scale .55) placed right after the words they stand for; each text segment has a fixed `textLength` so the glyphs stay next to their word whatever font renders | `.m.q` mono / `.s.q` italic serif | 3.2 / 3.2 | `#000000` | - |
-| "FLEX" marker well text (on arcs, scaled 1.05) | `.m` mono | 2.2 arcs / 3.8 centre | `#000000` | `#D3B1B1` chip behind "FLEX"; top arc "A DAY OWED", bottom arc "FLIP TO REPAY"; dashed well r15 (30 mm) for the 28 mm marker |
+| "FLEX" marker well text (on arcs, scaled 1.05) | `.m` mono | 2.2 arcs / 3.8 centre | `#000000` | `#C7CFB5` chip behind "FLEX"; top arc "A DAY OWED", bottom arc "FLIP TO REPAY"; dashed well r15 (30 mm) for the 28 mm marker |
 | "NEED" + rule text ("Every week: if your values' condition is met, +1 Motivation") | `.m` mono / `.s` serif | 2.6 / 1.9 | `#000000` | - |
 | "HERO" + rule text | `.m` mono / `.s` serif | 3.2 / 3 | `#000000` | - |
 | "SKILLS" (above the box) + 5x5 grid filling the box; 5 Item diamonds below it, 5 Head hexagons right of it | `.m.q` mono | 3.0 | `#000000` | - |
 | "CAPITAL" + "WEEK 2" + scale numbers 0-5 + caption | `.m` mono / `.m.q` mono | 2.8 / 2 / 2.7 | `#000000` | panel `#D9D3C4` |
 | "one marker - slide it. Starts 0, only grows if witnessed." | `.s.q` italic serif | 2.1 | `#000000` | - |
-| "MOTIVATION" + caption (the squares carry no numbers) | `.m` mono / `.s.q` serif | 2.8 / 2.9 | `#000000` | panel `#D3B1B1` |
+| "MOTIVATION" + caption (the squares carry no numbers) | `.m` mono / `.s.q` serif | 2.8 / 2.9 | `#000000` | panel `#C7CFB5` |
 | "tokens - one per circle. Starts 5, -1 per week; 0 means they quit." | `.s.q` italic serif | 2.1 | `#000000` | - |
 
 ## Illustration
@@ -111,7 +111,7 @@ graph TD
   A["page background #FFFFFF"] --> B["board panel: SPECIMEN header + rule"]
   B --> C["HABITUS row: 5 seats (Base, Legs, Torso, Head, Item)"]
   C --> D["Row A: Flex / Hero / Need / Zone Start / Skills"]
-  D --> E["Row B: Motivation #D3B1B1 | Capital #D9D3C4"]
+  D --> E["Row B: Motivation #C7CFB5 | Capital #D9D3C4"]
 ```
 
 ---
@@ -192,7 +192,7 @@ week the Specimen panel on each person board starts being read.
 | `<g id>` | Contents | Background (hex) |
 |---|---|---|
 | header (ungrouped) | sheet title banner + rule | - |
-| `board-4b-front` | "HOW YOU COVER" panel (LEARN/TEACH rules + ZPD note) + "THE LEDGER READS THIS" panel (Capability full-line rule, Shared Practice stack rule, Cross-Trained 2nd-row rule, one-line citation) | Capability strip `#C7CFB5`; Shared Practice strip `#F7D7A1`; Cross-Trained strip `#D9D3C4` |
+| `board-4b-front` | "HOW YOU COVER" panel (LEARN/TEACH rules + ZPD note) + "THE LEDGER READS THIS" panel (Capability full-line rule, Shared Practice stack rule, Cross-Trained 2nd-row rule, one-line citation) | Capability strip `#D3B1B1`; Shared Practice strip `#F7D7A1`; Cross-Trained strip `#D9D3C4` |
 | `board-4b-back` | "THE PAYOFF/ TURN ME OVER START OF WEEK 3" + 3-line teaser paragraph | none, plain `.r` outline |
 | cut instructions (ungrouped) | dashed cut line + 3 lines of glue/assembly instructions | - |
 
@@ -207,7 +207,7 @@ week the Specimen panel on each person board starts being read.
 | "TEACH" / rule text | `.m` mono / `.s` serif | 3.4 | `#000000` | - |
 | ZPD footnote (Vygotsky) | `.s.q` italic serif | 2.5 | `#000000` | - |
 | "THE LEDGER READS THIS" | `.m` mono | 4.6 | `#000000` | - |
-| "CAPABILITY · A FULL LINE" | `.m` mono | 3.4 | `#000000` | strip `#C7CFB5` |
+| "CAPABILITY · A FULL LINE" | `.m` mono | 3.4 | `#000000` | strip `#D3B1B1` |
 | "every square of a row or column of THE ZONE tiled → +1 Capability" | `.s` serif | 3.2 | `#000000` | - |
 | "SHARED PRACTICE · A STACK" / "a tile flips to stacked: two of you cover it → +1 Shared Practice" | `.m` mono / `.s` serif | 3.4 / 3.2 | `#000000` | strip `#F7D7A1` |
 | "CROSS-TRAINED · A 2ND ROW" | `.m` mono | 3.4 | `#000000` | strip `#D9D3C4` |
@@ -223,7 +223,7 @@ week the Specimen panel on each person board starts being read.
 
 Front and back panels are each `<g transform="translate(0,N)">` wrappers so both sit on one A4
 sheet with a shared cut line between them. The "THE LEDGER READS THIS" panel draws its two
-category strips as **filled rects first** (`#C7CFB5`, `#F7D7A1`, both `rx 1.5`), then the label
+category strips as **filled rects first** (`#D3B1B1`, `#F7D7A1`, both `rx 1.5`), then the label
 + body text on top - the same pattern as THE TEAM's row bands, deliberately, since this panel
 is restating what the Ledger will do with what's covered here. The cut line uses `.cut`
 (`#4A5259`, dashed `3 2`), distinct from every content-area dashed use.
@@ -234,7 +234,7 @@ is restating what the Ledger will do with what's covered here. The cut line uses
 graph TD
   A["page background #FFFFFF"] --> B["sheet header + rule"]
   B --> C["FRONT: HOW YOU COVER panel"]
-  C --> D["FRONT: THE LEDGER READS THIS panel (Capability #C7CFB5, Shared Practice #F7D7A1)"]
+  C --> D["FRONT: THE LEDGER READS THIS panel (Capability #D3B1B1, Shared Practice #F7D7A1)"]
   D --> E["BACK: turn-over teaser panel"]
   E --> F["dashed cut line"]
   F --> G["glue/assembly instructions"]
@@ -271,7 +271,7 @@ Overtime). Card slots are 65x90mm to hold a 63x88mm card. White ground, line art
 | `feature-A` .. `feature-F` | one row each: letter, complexity diamond, complexity text, Work-cost circles, cost badge, unlock/gate note | A/E: none; B/C: none; D/F rows use red-tinted border `#905151` |
 | THE WEEK | section rule + "THE WEEK" title | - |
 | week slots | 6 dashed card slots (Mon-Fri + Overtime), Overtime outlined in `#905151` | - |
-| Overtime sidebar | Get the project done faster - We're sure its not going to bite you in the ass later! | `#D3B1B1` chip behind "COSTS 1 MOTIVATION" |
+| Overtime sidebar | Get the project done faster - We're sure its not going to bite you in the ass later! | `#C7CFB5` chip behind "COSTS 1 MOTIVATION" |
 | table-placement guide | 3 coloured edge lines | - |
 
 ### Text
@@ -294,7 +294,7 @@ Overtime). Card slots are 65x90mm to hold a 63x88mm card. White ground, line art
 | "THE WEEK" | `.m` mono | 7 | `#000000` | - |
 | Weekday labels (MONDAY...OVERTIME) | `.m` mono | 4.4 | `#000000` | - |
 | "ORDER DOES NOT MATTER" | `.m.q` mono | 5.5 | `#000000` | - |
-| Overtime sidebar notes (incl. italic joke aside, "we're sure it's not going to bite you in the ass later!") | `.m`/`.m.q`/`.s` mono/serif | 2.8-3 | `#000000` | `#D3B1B1` behind "COSTS 1 MOTIVATION" |
+| Overtime sidebar notes (incl. italic joke aside, "we're sure it's not going to bite you in the ass later!") | `.m`/`.m.q`/`.s` mono/serif | 2.8-3 | `#000000` | `#C7CFB5` behind "COSTS 1 MOTIVATION" |
 
 ### Illustration
 
@@ -344,10 +344,10 @@ document order. Treat these as the logical groups for editing purposes.
 | page background | full-page rect | `#FFFFFF` |
 | header | "Turn me over after setup" | - |
 | title | "THE FINAL TALLY" + italic "count the Tower, then add it up" | - |
-| first check | full-width band: any missing feature means a Team Score of 0 | `#D3B1B1` |
+| first check | full-width band: any missing feature means a Team Score of 0 | `#D9D3C4` |
 | ADD | 4 rows (features x 12, Ledger coins + Adaptability tokens, Motivation of everyone left, Habits x 12), each with a white answer box | rows `#F2EDE0` |
-| TAKE OFF | 3 rows (quit or fired x 40, unrepaid Flex x 2, low-band Ledger tracks x 5), each with an answer box, then the TEAM SCORE total box | rows `#D3B1B1`, total `#FFFFFF` |
-| THE RESULT | 2 x 2 boxes bottom left: PROJECT FAILURE (score 0), HEROIC SUCCESS (under 100), SUSTAINABLE PERFORMANCE (100 to 159), SUSTAINABLE HIGH PERFORMANCE (160 or more) | bands `#D3B1B1`, `#F7D7A1`, `#C7CFB5`, `#B5C7CF` |
+| TAKE OFF | 3 rows (quit or fired x 40, unrepaid Flex x 2, low-band Ledger tracks x 5), each with an answer box, then the TEAM SCORE total box | rows `#D9D3C4`, total `#FFFFFF` |
+| THE RESULT | 2 x 2 boxes bottom left: PROJECT FAILURE (score 0), HEROIC SUCCESS (under 100), SUSTAINABLE PERFORMANCE (100 to 159), SUSTAINABLE HIGH PERFORMANCE (160 or more) | bands `#D9D3C4`, `#F7D7A1`, `#EFE4D3`, `#B5C7CF` |
 | footnote | two italic lines: five players 100 and 160; other counts 5 x starting characters + 75 and + 135 | - |
 | card stacks | "SET OUT THESE STACKS" label + 2 dashed placeholders (PROJECT CARDS 90x90mm, ACTION CARDS 65x90mm) with italic captions | dashed `.h` outline only |
 | table-placement guide | 3 coloured edge lines (teal, ochre, brown) | - |
@@ -423,7 +423,7 @@ board. Adaptability is not a row: it is a pool of tokens on SHIT HAPPENS. BACK i
 |---|---|---|
 | header (ungrouped) | "THE TEAM" title, italic tagline, "THE TEAM · FROM END OF WEEK 1", rule, legend box + 2-line legend, "START" (over circle 1) / "FLIP → HABIT" (over circle 4) / "HABIT and who named it" | legend box: `.r` outline only |
 | `trust` | title, subtitle, 6-circle coin track numbered 0-5, red flip-ring at circle 4, 'TEACH DOES NOTHING' footnote under circles 0-1, "Psychological Safety" + citation | `#D3CEDF` |
-| `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#C7CFB5` |
+| `capability` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'FIRST WORK DOES NOTHING' footnote under circles 0-1, "Who Knows What" + citation | `#D3B1B1` |
 | `shared-practice` | title, subtitle, 6-circle track numbered 0-5, flip-ring, 'PLAN DOES NOTHING' footnote under circles 0-1, "Shared Repertoire" + citation | `#F7D7A1` |
 | `standing` | title, subtitle ("grown by nobody" / "starts on 0"), 6-circle track numbered 0-5 at the same centres as the other rows, red flip-ring at circle 4, bracket + "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE", "FLIP AT 4" label above the ring, "Authorized Voice" + description + citation. Absolute at y 157-185, no `translate`. A footer line says Adaptability is a pool on SHIT HAPPENS | `#D9D3C4` (Capital Bone) |
 
@@ -453,7 +453,7 @@ Capital Bone `#D9D3C4`. Adaptability has no row (it is a pool, and has no Habit)
 | "grown by nobody" / "starts on 0" | `.s` italic serif | 3.4 | `#000000` | - |
 | "NOT GROWN - IT MIRRORS THE HIGHEST CAPITAL AT THE TABLE" | `.m` mono | 2.8 | `#000000` | - |
 | "FLIP AT 4" | `.m` mono | 2.6 | `#000000` | - |
-| "Authorized Voice" / "Once a week: cancel a Management or Customer Event outright." / "BOURDIEU 1991" | `.s` 5 / `.s` italic 3.4 / `.m.q` 2.6 | - | `#000000` | - |
+| "Authorized Voice" / "Once a week: cancel a Customer Event outright." / "BOURDIEU 1991" | `.s` 5 / `.s` italic 3.4 / `.m.q` 2.6 | - | `#000000` | - |
 | "Adaptability is not a track here..." footer | `.s` italic serif | 3.8 | `#000000` | - |
 
 ### Illustration
@@ -468,7 +468,7 @@ then the Habit name + citation at x 252 on the right side of the row (long names
 to carry a **second** footnote bracket under circles 4-5 (the 'after the ring' state) -
 removed, since a single footnote per row reads cleaner and Adaptability never had one to match.
 
-**Row order top to bottom:** Trust (`#D3CEDF`) → Capability (`#C7CFB5`) → Shared Practice
+**Row order top to bottom:** Trust (`#D3CEDF`) → Capability (`#D3B1B1`) → Shared Practice
 (`#F7D7A1`) → Standing (`#D9D3C4`, absolute at y 154, solid, printed on the board). This top-to-bottom order **is** the colour canon other components derive from -
 do not reorder rows without updating every card/board that reads it.
 
@@ -478,7 +478,7 @@ do not reorder rows without updating every card/board that reads it.
 graph TD
   A["page background #FFFFFF"] --> B["header + legend + FLIP-HABIT key"]
   B --> C["trust band #D3CEDF"]
-  C --> D["capability band #C7CFB5"]
+  C --> D["capability band #D3B1B1"]
   D --> E["shared-practice band #F7D7A1"]
   E --> F["standing band #D9D3C4"]
   F --> H["table-placement guide"]
@@ -561,8 +561,9 @@ graph TD
 One shared board for the whole table: a 5x5 grid, rows = education (Head), columns = skill (Item),
 20mm squares. It is the team's picture of the same squares each character marks on their own
 SKILLS grid (the SPECIMEN, person board): whenever someone Learns or is Taught they mark their
-sheet, **then put down or flip a Zone tile** (rulebook §8). The printed board is empty; the 25
-**Zone tiles** are the pieces (spec below). FRONT is week-1 content only - Learn/Teach payoff
+sheet, **then put down or flip a Zone tile** (rulebook §8). The only printing in the squares is a
+small one-word **competence** (what that education does with that skill, as something you can learn
+to do); the 25 **Zone tiles** are the pieces (spec below). FRONT is week-1 content only - Learn/Teach payoff
 lives on THE DEVELOPMENT from week 3.
 Unlike THE PROJECT, SHIT HAPPENS and THE TEAM, THE ZONE never flips during play - BACK exists
 only so the board glues to cardboard like the others and can carry the table-placement guide;
@@ -580,8 +581,9 @@ it is never meant to be read at the table.
 | header (ungrouped) | "THE ZONE" title, italic subtitle, "THE ZONE · FROM WEEK 1" note, rule | - |
 | column headers | skill names (LAPTOP...CALENDAR) + "SKILL" label + 5 Item-diamond icons with pip counts | - |
 | row headers | "EDUCATION" (rotated -90°), 5 Head-hexagon icons with pip counts, row names | - |
-| the 5x5 grid | 25 cells (`.cell` class), thick outer border, no text in the cells; whole block inside `<g transform="translate(-16,0)">` | cells: no fill, outline only |
-| grid legend | two 6mm sample tiles (`tile-one`: one dot, fill `#C7CFB5`; `tile-stack`: two overlapping dots, fill `#F7D7A1`) at x 15, y 145 / 152, each with an italic caption ("One of you covers this square." / "Flipped: two or more of you do (stacked).") | - |
+| the 5x5 grid | 25 cells (`.cell` class), thick outer border; whole block inside `<g transform="translate(-16,0)">` | cells: no fill, outline only |
+| competence names | 25 one-word labels (`.s.q` italic), one per cell, centred, baseline 3 mm above the cell's bottom edge (see Text table); inside the same translate group, after the border | - |
+| grid legend | two 6mm sample tiles (`tile-one`: one dot, fill `#D3B1B1`; `tile-stack`: two overlapping dots, fill `#F7D7A1`) at x 15, y 145 / 152, each with an italic caption ("One of you covers this square." / "Flipped: two or more of you do (stacked).") | - |
 | THE DEVELOPMENT placeholder | dashed 119x104 box + "THE DEVELOPMENT GOES HERE · FROM WEEK 3" + 2-line note | none, dashed `.r` border |
 | footer | rule + "WHAT YOU CAN DO" label + 4 explanatory lines + Bourdieu closing note | - |
 | table-placement guide | 2 coloured edge lines (`#6E7A54`, `#3F5B66`) | - |
@@ -597,6 +599,7 @@ it is never meant to be read at the table.
 | "SKILL" | `.m.q` mono | 2.8 | `#4A5259` | - |
 | "EDUCATION" (rotated) | `.m.q` mono | 2.8 | `#4A5259` | - |
 | Row names (Technical, Social, Commercial, Analytical, Organisational) | `.s` serif | 3.4 | `#000000` | - |
+| Competence names, one per cell (table below) | `.s.q` italic serif | 2.5 | `#4A5259` | - |
 | Grid legend captions (2 lines) | `.s.q` italic serif | 3.4 | `#4A5259` | - |
 | "THE DEVELOPMENT GOES HERE · FROM WEEK 3" | `.m.q` mono | 3.2 | `#4A5259` | - |
 | THE DEVELOPMENT placeholder 2-line note | `.s.q` italic serif | 3.4 | `#4A5259` | - |
@@ -613,7 +616,22 @@ counts must stay identical to the ones around the SKILLS grid on the person boar
 thick-stroke (`stroke-width .8`) 100x100 border rect drawn **on top** of the cell grid. The THE
 DEVELOPMENT placeholder is a **dashed** outline rect (`stroke-dasharray "3 2"`), distinguishing
 "content lives elsewhere, arriving later" from the solid-outline grid it sits beside. The practice
-names that used to sit in each cell were removed (2026-10-08): they were not used by any rule.
+names that used to sit in each cell were removed (2026-10-08) because no rule used them. They are
+back (2026-10-29) as one-word **competences**: each is something you can learn to do, so Learn and
+Teach can name the square ("I'll teach you Diagnosing"). They are deliberately discreet - small,
+grey, italic, at the bottom of the cell - and sit under the 18.5 mm tile, so a covered square
+shows the tile, not the word. Each word follows the skill's use (Laptop = desk work, Coffee cup =
+conversation, Clipboard = checking, Wrench = hands-on, Calendar = timing) and the education's field.
+
+| Education ↓ / Skill → | LAPTOP | COFFEE CUP | CLIPBOARD | WRENCH | CALENDAR |
+|---|---|---|---|---|---|
+| Technical | Modelling | Briefing | Inspecting | Repairing | Servicing |
+| Social | Corresponding | Listening | Facilitating | Mediating | Convening |
+| Commercial | Marketing | Negotiating | Contracting | Remedying | Campaigning |
+| Analytical | Calculating | Questioning | Auditing | Diagnosing | Forecasting |
+| Organisational | Budgeting | Aligning | Standardising | Unblocking | Scheduling |
+
+The labels are on THE ZONE only; the SKILLS grid on the person board stays unlabelled.
 
 ### Zone tiles (25 loose pieces)
 
@@ -622,7 +640,7 @@ One tile per square, 25 in all, so a square can never run out. Two faces, told a
 
 | Face | Meaning | Mark | Colour |
 |---|---|---|---|
-| One-person | exactly one character covers the square | one filled dot | `#C7CFB5` (Capability) |
+| One-person | exactly one character covers the square | one filled dot | `#D3B1B1` (Capability) |
 | Stacked | two or more characters cover it | two overlapping dots | `#F7D7A1` (Shared Practice) |
 
 Face colours are the Ledger colours (board 3) of the track each face feeds: tiles filling a row or
@@ -654,7 +672,8 @@ graph TD
   C --> E["5x5 grid: 25 outline cells"]
   D --> E
   E --> F["thick 100x100 outer border (drawn after cells)"]
-  F --> G["grid legend (two sample tiles)"]
+  F --> F2["25 competence names, one per cell"]
+  F2 --> G["grid legend (two sample tiles)"]
   G --> H["THE DEVELOPMENT dashed placeholder"]
   H --> I["WHAT YOU CAN DO footer lines"]
   I --> J["table-placement guide"]
@@ -753,10 +772,10 @@ narrower page. BACK is Week 2's reveal, glued to the reverse.
 | "ADAPTABILITY" | `.m.q` mono | 3.4 | `#000000` | panel `#B5C7CF` |
 | "The team's adapt tokens, up to 6." / "Cancel an Event: pay its number." / "Tokens stay until spent." (3 lines) | `.s` serif | 2.8 | `#000000` | - |
 | "HERO · CANCELS IT" | `.m.q` mono | 3.4 | `#000000` | panel `#F0E3D1` |
-| "Free, but require" / "motivation on 3 or higher" (inside the dashed box, centred, second line bold on a `#D3B1B1` chip) | `.s` serif | 3.6 | `#000000` | `#D3B1B1` |
+| "Free, but require" / "motivation on 3 or higher" (inside the dashed box, centred, second line bold on a `#C7CFB5` chip) | `.s` serif | 3.6 | `#000000` | `#C7CFB5` |
 | "CLOSE THE WEEK" | `.m` mono | 7 | `#000000` | - |
 | "TOP TO BOTTOM" | `.m.q` mono | 3.6 | `#000000` | - |
-| Step 1-4 headline + detail lines | `.s` serif (bold lead-in) | 5.4 / 4.4 | `#000000` | step 3 headline sits on `#D3B1B1` chip |
+| Step 1-4 headline + detail lines | `.s` serif (bold lead-in) | 5.4 / 4.4 | `#000000` | step 3 headline sits on `#C7CFB5` chip |
 | "+1 BACK IF THEIR NEED WAS MET" | `.m.q` mono | 3.4 | `#000000` | - |
 
 ### Illustration
@@ -792,7 +811,7 @@ reminds players to add Adaptability tokens.
 **`lane-1` group:** solid `#F0E3D1` panel + border, then a dashed ring (`stroke-dasharray "2
 1.5"`) with a small red diamond glyph centred inside it (`transform="translate(121,174)"`),
 then a cost-chip rect, then the gain lines each with their own small tinted background chip
-(`#D9D3C4` for Capital, `#D3B1B1` for Motivation) drawn before the text.
+(`#D9D3C4` for Capital, `#C7CFB5` for Motivation) drawn before the text.
 
 **CLOSE THE WEEK steps:** each step number sits in a small outline circle (`r=5`) to its left;
 step headlines that reference a resource get a coloured background chip drawn first. Step 3's

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>High-Performance Team</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<defs>
+  <g id="wk" fill="#2A2620">
+    <circle cx="20" cy="20" r="11"/><circle cx="56" cy="20" r="11"/><circle cx="92" cy="20" r="11"/><circle cx="128" cy="20" r="11"/><circle cx="164" cy="20" r="11"/>
+  </g>
+</defs>
+<rect width="1920" height="1080" fill="#E8DCC4"/>
+<rect x="40" y="40" width="1840" height="1000" fill="none" class="k"/>
+<text class="m" x="960" y="200" font-size="30" letter-spacing="8" text-anchor="middle">A FIELD STUDY OF ONE TEAM</text>
+<text class="m b" x="960" y="390" font-size="124" text-anchor="middle">HIGH-PERFORMANCE</text>
+<text class="m b" x="960" y="520" font-size="124" text-anchor="middle">TEAM</text>
+<text class="s i" x="960" y="620" font-size="54" text-anchor="middle">Thirty-five working days. Six features. One team.</text>
+<g>
+  <use xlink:href="#wk" x="256" y="720"/><use xlink:href="#wk" x="460" y="720"/><use xlink:href="#wk" x="664" y="720"/><use xlink:href="#wk" x="868" y="720"/>
+  <use xlink:href="#wk" x="1072" y="720"/><use xlink:href="#wk" x="1276" y="720"/><use xlink:href="#wk" x="1480" y="720"/>
+</g>
+<g class="m" font-size="24" text-anchor="middle">
+  <text x="348" y="800">WEEK 1</text><text x="552" y="800">WEEK 2</text><text x="756" y="800">WEEK 3</text><text x="960" y="800">WEEK 4</text>
+  <text x="1164" y="800">WEEK 5</text><text x="1368" y="800">WEEK 6</text><text x="1572" y="800">WEEK 7</text>
+</g>
+<text class="s i" x="960" y="940" font-size="42" text-anchor="middle">You are the team. This screen is the researcher.</text>
+</svg>

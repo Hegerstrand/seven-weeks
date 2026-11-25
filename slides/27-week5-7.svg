@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Weeks 5 to 7: play everything you have met</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEKS 5 TO 7 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="52">WEEKS 5 TO 7 · PLAY EVERYTHING YOU HAVE MET</text>
+<text class="s i" x="64" y="262" font-size="40">Nothing new opens. This is the game, now that you know it.</text>
+
+<g class="k">
+  <rect x="64" y="296" width="880" height="250" rx="14" fill="#EFE4D3"/>
+  <rect x="976" y="296" width="880" height="250" rx="14" fill="#D9D3C4"/>
+  <rect x="64" y="576" width="880" height="250" rx="14" fill="#C7CFB5"/>
+  <rect x="976" y="576" width="880" height="250" rx="14" fill="#F7D7A1"/>
+</g>
+<g class="m b" font-size="30" letter-spacing="2"><text x="96" y="350">HABITS</text><text x="1008" y="350">STANDING</text><text x="96" y="630">QUITS</text><text x="1008" y="630">COMBOS</text></g>
+<g class="s" font-size="34">
+  <text x="96" y="410"><tspan x="96">A track at its ring turns over a Habit.</tspan><tspan x="96" dy="46">One kind of Event gets cheaper, for good.</tspan><tspan x="96" dy="46">Each Habit held scores 12.</tspan></text>
+  <text x="1008" y="410"><tspan x="1008">Standing is whoever holds the most Capital.</tspan><tspan x="1008" dy="46">At 4, the team gets Authorized Voice: once</tspan><tspan x="1008" dy="46">a week, cancel a Customer Event.</tspan></text>
+  <text x="96" y="690"><tspan x="96">At 0 Motivation you quit.</tspan><tspan x="96" dy="46">Everyone left loses 1, the team scores -40,</tspan><tspan x="96" dy="46">and the seat stays empty until Onboarding.</tspan></text>
+  <text x="1008" y="690"><tspan x="1008">Two named triggers in the same week pay</tspan><tspan x="1008" dy="46">a small bonus. One combo a week.</tspan></text>
+</g>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">ASK</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">At the start of every week: who is lowest on Motivation?</tspan><tspan x="190" dy="48">How many tokens are in the pool? Which Event do we fear?</tspan></text>
+</svg>

@@ -40,7 +40,7 @@ one sheet.</desc>
 <!-- ═══ WHAT THE LEDGER READS HERE ═══ -->
 <rect x="10" y="73" width="127" height="47" rx="2" class="r"/>
 <text x="20" y="80.5" class="m" font-size="4.6" letter-spacing="1.2">THE LEDGER READS THIS</text>
-<rect x="20" y="83.5" width="112" height="8.5" rx="1.5" fill="#C7CFB5"/>
+<rect x="20" y="83.5" width="112" height="8.5" rx="1.5" fill="#D3B1B1"/>
 <text x="23" y="87.3" class="m" font-size="3.4" letter-spacing=".3">CAPABILITY · A FULL LINE</text>
 <text x="23" y="90.8" class="s" font-size="3.2">every square of a row or column of THE ZONE tiled → <tspan font-weight="bold">+1 Capability</tspan></text>
 <rect x="20" y="93.5" width="112" height="8.5" rx="1.5" fill="#F7D7A1"/>

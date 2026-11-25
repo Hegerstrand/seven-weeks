@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Debrief</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">AFTER THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">DEBRIEF</text>
+<text class="s i" x="64" y="262" font-size="40">Reflection without change is just discussion.</text>
+
+<g class="k">
+  <rect x="64" y="300" width="1792" height="110" rx="12" fill="#EFE4D3"/>
+  <rect x="64" y="426" width="1792" height="110" rx="12" fill="#D9D3C4"/>
+  <rect x="64" y="552" width="1792" height="110" rx="12" fill="#F3E3A3"/>
+  <rect x="64" y="678" width="1792" height="110" rx="12" fill="#F7D7A1"/>
+</g>
+<g class="k" fill="#2A2620"><rect x="88" y="322" width="66" height="66" rx="8"/><rect x="88" y="448" width="66" height="66" rx="8"/><rect x="88" y="574" width="66" height="66" rx="8"/><rect x="88" y="700" width="66" height="66" rx="8"/></g>
+<g class="m b" font-size="44" text-anchor="middle" style="fill:#fff"><text x="121" y="370" style="fill:#fff">1</text><text x="121" y="496" style="fill:#fff">2</text><text x="121" y="622" style="fill:#fff">3</text><text x="121" y="748" style="fill:#fff">4</text></g>
+<g class="s" font-size="40">
+  <text x="190" y="368">What did we do in weeks 1 and 2, and what would we do now?</text>
+  <text x="190" y="494">When did one person carry the team, and what did it cost?</text>
+  <text x="190" y="620">Which Event hurt most? Could we have prepared for it?</text>
+  <text x="190" y="746">Where were you lost: the rules, the cards, or this screen?</text>
+</g>
+
+<rect x="64" y="820" width="1792" height="100" rx="12" fill="#B5C7CF" class="k"/>
+<text class="m b" x="960" y="884" font-size="36" text-anchor="middle">NAME ONE THING YOU WILL DO DIFFERENTLY NEXT TIME.</text>
+</svg>

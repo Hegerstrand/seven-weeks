@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>The four cards of week 1</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 1 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">THE FOUR CARDS OF WEEK 1</text>
+
+<g class="k">
+  <rect x="64" y="240" width="400" height="570" rx="16" fill="#FBF8F0"/>
+  <rect x="512" y="240" width="400" height="570" rx="16" fill="#FBF8F0"/>
+  <rect x="960" y="240" width="400" height="570" rx="16" fill="#FBF8F0"/>
+  <rect x="1408" y="240" width="400" height="570" rx="16" fill="#FBF8F0"/>
+</g>
+<g class="k">
+  <rect x="64" y="240" width="400" height="86" rx="16" fill="#EFE4D3"/>
+  <rect x="512" y="240" width="400" height="86" rx="16" fill="#D3CEDF"/>
+  <rect x="960" y="240" width="400" height="86" rx="16" fill="#D3B1B1"/>
+  <rect x="1408" y="240" width="400" height="86" rx="16" fill="#C7CFB5"/>
+</g>
+<g class="m b" font-size="36" letter-spacing="2" text-anchor="middle">
+  <text x="264" y="296">WORK</text><text x="712" y="296">ENGAGEMENT</text><text x="1160" y="296">LEARN</text><text x="1608" y="296">CELEBRATE</text>
+</g>
+<g class="s" font-size="30">
+  <text x="90" y="386"><tspan x="90">+1 to one feature's</tspan><tspan x="90" dy="40">Work counter.</tspan><tspan x="90" dy="56">Not on a feature whose</tspan><tspan x="90" dy="40">lock is still on.</tspan><tspan x="90" dy="56">The only card that</tspan><tspan x="90" dy="40">builds the project.</tspan></text>
+  <text x="538" y="386"><tspan x="538">Counts toward Trust.</tspan><tspan x="538" dy="56">You will see it in</tspan><tspan x="538" dy="40">week 2, when THE TEAM</tspan><tspan x="538" dy="40">turns over.</tspan><tspan x="538" dy="56">One card, so one a week.</tspan></text>
+  <text x="986" y="386"><tspan x="986">Everyone marks one new</tspan><tspan x="986" dy="40">square next to one they</tspan><tspan x="986" dy="40">cover, in their own row:</tspan><tspan x="986" dy="40">left or right.</tspan><tspan x="986" dy="56">Then the team covers it</tspan><tspan x="986" dy="40">on THE ZONE.</tspan><tspan x="986" dy="56">No teacher needed.</tspan></text>
+  <text x="1434" y="386"><tspan x="1434">Marks something done.</tspan><tspan x="1434" dy="56">Needs a reason to</tspan><tspan x="1434" dy="40">celebrate, such as a</tspan><tspan x="1434" dy="40">feature banked.</tspan><tspan x="1434" dy="56">Motivation counts from</tspan><tspan x="1434" dy="40">week 2, so there is</tspan><tspan x="1434" dy="40">nothing to lift yet.</tspan></text>
+</g>
+
+<text class="s i" x="960" y="880" font-size="42" text-anchor="middle">Work is the only card that moves the project. That is the trap.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">ASK</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Which of these would you lay five times?</tspan><tspan x="190" dy="48">Say why before anyone lays a card.</tspan></text>
+</svg>

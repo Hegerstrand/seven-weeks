@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Hero and Need</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">WEEK 3 · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">HERO AND NEED</text>
+
+<rect x="64" y="236" width="800" height="672" rx="14" fill="#C7CFB5" class="k"/>
+<text class="m b" x="96" y="290" font-size="28" letter-spacing="2">YOUR HERO · YOUR INSTINCT</text>
+<g class="s" font-size="34">
+  <text x="96" y="352"><tspan x="96">Every Event names an instinct.</tspan><tspan x="96" dy="44">Once per game, a person with that</tspan><tspan x="96" dy="44">instinct may cancel it. Free.</tspan></text>
+  <text x="96" y="506"><tspan x="96">You need 3 Motivation to do it:</tspan><tspan x="96" dy="44">people running on empty do not</tspan><tspan x="96" dy="44">step up.</tspan></text>
+  <text x="96" y="660"><tspan x="96">You gain 2 Capital. One teammate of</tspan><tspan x="96" dy="44">your choice gains 1 Motivation.</tspan></text>
+  <text class="i" x="96" y="788"><tspan x="96">A Competitive upbringing may play its</tspan><tspan x="96" dy="44">Hero again: 2 Motivation, no Capital.</tspan></text>
+</g>
+
+<text class="m b" x="900" y="272" font-size="28" letter-spacing="2">YOUR NEED · YOUR VALUES</text>
+<g class="k">
+  <rect x="900" y="292" width="956" height="96" rx="10" fill="#D9D3C4"/>
+  <rect x="900" y="396" width="956" height="96" rx="10" fill="#EFE4D3"/>
+  <rect x="900" y="500" width="956" height="96" rx="10" fill="#D9D3C4"/>
+  <rect x="900" y="604" width="956" height="96" rx="10" fill="#EFE4D3"/>
+  <rect x="900" y="708" width="956" height="96" rx="10" fill="#D9D3C4"/>
+</g>
+<g class="m b" font-size="26"><text x="924" y="350">AUTONOMY</text><text x="924" y="454">HIERARCHY</text><text x="924" y="558">COMMUNITY</text><text x="924" y="662">QUALITY</text><text x="924" y="766">RECOGNITION</text></g>
+<g class="s" font-size="31">
+  <text x="1170" y="350">At most 1 Event landed on the team.</text>
+  <text x="1170" y="454">Teach, Learn or Workshop was played.</text>
+  <text x="1170" y="558">Engagement or Reflect was played.</text>
+  <text x="1170" y="662" class="b">Work added to a feature. If not: -3.</text>
+  <text x="1170" y="766">A feature banked, a Hero played, or a Demo.</text>
+</g>
+<text class="s i" x="900" y="866" font-size="36">Read when the week closes. Need met: +1 Motivation.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Find your NEED tile. Say aloud what the team must do this week</tspan><tspan x="190" dy="48">to meet it. Then look round: whose Need are we about to miss?</tspan></text>
+</svg>

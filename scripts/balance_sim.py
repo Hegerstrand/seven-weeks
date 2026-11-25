@@ -134,6 +134,9 @@ class Rules:
     hero_min_mot: int = 3
     hero_from_week: int = 3
     hero_capital: int = 2
+    hero_reuse_cost: int = 0                    # Motivation a Competitive character pays for every Hero after their first
+    hero_reuse_capital: int = 2                 # Capital that repeat Hero gives (the first always gives hero_capital)
+    mgmt_capital_cancel: bool = False           # Management Events are cancelled only by paying 1-2 Capital (or a Hero): no tokens, Habit discount, Trust or Authorized Voice
     events_per_week: int = 2
     events_from_week: int = 2
     date_moves_from_week: int = 3               # THE DATE MOVES UP is put back and redrawn before this week (nobody can say no yet)
@@ -318,6 +321,12 @@ STAGINGS = {
             "overtime_from_week": 4, "feature_costs": "3-5-5-4-3-2", "threshold_high_base": 135, "plan_carry": False,
             "cards_from_week": 1, "learn_from_week": 1, "teach_from_week": 2, "plan_from_week": 2, "reflect_from_week": 3, "demo_from_week": 3,
             "demo_tokens": 2, "align_tokens": 4, "take_one_any_week": True},
+    "v40": {"grind_from_week": 2, "need_from_week": 3, "celebrate_from_week": 1, "take_one_from_week": 2, "combos_from_week": 3,
+            "events_from_week": 3, "workshop_from_week": 3, "tokens_from_week": 3, "pool_open_week": 3, "pool_start": 2, "mot_start": 3,
+            "overtime_from_week": 4, "feature_costs": "3-5-5-4-3-2", "threshold_high_base": 135, "plan_carry": False,
+            "cards_from_week": 1, "learn_from_week": 1, "teach_from_week": 2, "plan_from_week": 2, "reflect_from_week": 3, "demo_from_week": 3,
+            "demo_tokens": 2, "align_tokens": 4, "take_one_any_week": True,
+            "hero_reuse_cost": 2, "hero_reuse_capital": 0, "mgmt_capital_cancel": True},
 }
 
 
@@ -410,6 +419,7 @@ class Char:
         self.mot = 3
         self.capital = 0
         self.hero_used = False
+        self.hero_plays = 0
         self.stand_used = False
         self.gift_used = False
         self.squares = {(self.head, self.item)}
@@ -1015,14 +1025,15 @@ class Game:
                 continue
             self.m["event_cost_faced"] += c
             how = None
+            mg = R.mgmt_capital_cancel and e.cat == "M"
             if c == 0:
                 how = "free"
-            elif R.habit_cancel and not e.say_no and CAT_HABIT[e.cat] in self.habits and e.cat not in used_habit:
+            elif R.habit_cancel and not mg and not e.say_no and CAT_HABIT[e.cat] in self.habits and e.cat not in used_habit:
                 used_habit.add(e.cat)
                 how = "habit"
-            elif R.trust_cancel and not e.say_no and not used_trust and self.trust >= R.trust_cancel_at:
+            elif R.trust_cancel and not mg and not e.say_no and not used_trust and self.trust >= R.trust_cancel_at:
                 used_trust, how = True, "trust"
-            elif not used_av and hero_ok and "AV" in self.habits and (not R.av_categories or e.cat in R.av_categories):
+            elif not mg and not used_av and hero_ok and "AV" in self.habits and (not R.av_categories or e.cat in R.av_categories):
                 used_av, how = True, "av"
             else:
                 h = self.pick_hero(e, w) if hero_ok else None
@@ -1030,7 +1041,11 @@ class Game:
                     how = "hero"
                     if h.base != "Competitive":
                         h.hero_used = True
-                    self.gain_capital(h, R.hero_capital, hero=True)
+                    repeat = h.hero_plays > 0
+                    h.hero_plays += 1
+                    if repeat and R.hero_reuse_cost:
+                        self.add_mot(h, -R.hero_reuse_cost, "hero_reuse")
+                    self.gain_capital(h, R.hero_reuse_capital if repeat else R.hero_capital, hero=True)
                     others = [x for x in self.chars if x is not h]
                     if others:
                         self.w.mot_adj[min(others, key=lambda x: x.mot).id] += 1
@@ -1045,6 +1060,14 @@ class Game:
                     self.add_mot(s, -R.stand_cost, "stand")
                     self.m["stand_plays"] += 1
                     how = "stand"
+                elif mg:
+                    k = max(1, min(c, 2))
+                    top = max((x.capital for x in self.chars), default=0)
+                    payer = next((x for x in self.chars if x.capital == top and top >= k), None)
+                    if payer is not None and e.sev / k >= thr:
+                        payer.capital -= k
+                        self.m["capital_spent"] += k
+                        how = "capital"
                 elif not e.say_no and self.pool >= c and e.sev / c >= thr:
                     self.pool -= c
                     self.m["tokens_spent"] += c
@@ -2556,7 +2579,7 @@ def optimise(rules: Rules, runs: int, passes: int, seed: int, label: str = "", l
 # --------------------------------------------------------------------------------------
 
 # The game's own colours (board-game-boards canon); pastel, so lines get a dark outline
-C_TRUST, C_CAP, C_SP, C_ADAPT, C_MOT, C_HABITUS = "#D3CEDF", "#C7CFB5", "#F7D7A1", "#B5C7CF", "#D3B1B1", "#E8D4B8"
+C_TRUST, C_CAP, C_SP, C_ADAPT, C_MOT, C_HABITUS = "#D3CEDF", "#D3B1B1", "#F7D7A1", "#B5C7CF", "#C7CFB5", "#E8D4B8"
 INK = "#2A2620"
 
 CARD_ORDER = ["Work", "Celebrate", "Engagement", "Workshop", "Learn", "Teach", "Reflect", "Plan", "Demo", "Onboarding", "Flex"]
@@ -3382,7 +3405,7 @@ def plot_summary(path: str, dump: dict):
         ys2 = ys + 220 + 90
         # needs met
         need_rows = []
-        for t, col in (("Autonomy", "#F7D7A1"), ("Hierarchy", "#C7CFB5"), ("Community", "#D3CEDF"), ("Quality", "#B5C7CF"), ("Recognition", "#D9D3C4")):
+        for t, col in (("Autonomy", "#F7D7A1"), ("Hierarchy", "#D3B1B1"), ("Community", "#D3CEDF"), ("Quality", "#B5C7CF"), ("Recognition", "#D9D3C4")):
             seen = sum(r["need_seen"].get(t, 0) for r in res)
             need_rows.append((t, 100 * sum(r["need_met"].get(t, 0) for r in res) / seen if seen else 0.0, col))
         end1 = _hbars(out, X0 + 34, ys2, 560, "Need met, share of character-weeks (green band = soft goal)", need_rows, 100, "%.0f%%", {t: (NEED_SOFT_LO, need_hi(t)) for t, _, _ in need_rows if t not in NEED_NO_GOAL})
@@ -3398,7 +3421,7 @@ def plot_summary(path: str, dump: dict):
                 kind, val = key.split("|")
                 parts.append((100 * agg.get(key + "|quits", 0) / wks, "%s %s" % (human.get(kind, kind), val)))
         parts.sort(reverse=True)
-        part_rows = [(n, q, "#D3B1B1") for q, n in parts[:8]]
+        part_rows = [(n, q, "#C7CFB5") for q, n in parts[:8]]
         _hbars(out, 880, ys2, 480, "Quits per 100 character-weeks, worst 8 habitus cards", part_rows, _nice_max(max([q for _, q, _ in part_rows] + [1])), "%.1f")
         # key numbers
         sc = sorted(r["score"] for r in res)

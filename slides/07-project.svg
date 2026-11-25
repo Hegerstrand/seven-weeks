@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>The project: six features</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#F2EDE0"/>
+<rect width="1920" height="92" fill="#EFE4D3"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">SETUP · THE GAME</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">HIGH-PERFORMANCE TEAM</text>
+
+<text class="m b" x="64" y="190" font-size="56">THE PROJECT: SIX FEATURES</text>
+<text class="s i" x="64" y="262" font-size="40">The names change with the Project card. The numbers do not.</text>
+
+<g class="k">
+  <rect x="64" y="300" width="270" height="420" rx="14" fill="#EFE4D3"/>
+  <rect x="368" y="300" width="270" height="420" rx="14" fill="#EFE4D3"/>
+  <rect x="672" y="300" width="270" height="420" rx="14" fill="#EFE4D3"/>
+  <rect x="976" y="300" width="270" height="420" rx="14" fill="#D9D3C4"/>
+  <rect x="1280" y="300" width="270" height="420" rx="14" fill="#EFE4D3"/>
+  <rect x="1584" y="300" width="270" height="420" rx="14" fill="#D9D3C4"/>
+</g>
+<g class="m b" font-size="110" text-anchor="middle">
+  <text x="199" y="420">A</text><text x="503" y="420">B</text><text x="807" y="420">C</text><text x="1111" y="420">D</text><text x="1415" y="420">E</text><text x="1719" y="420">F</text>
+</g>
+<g fill="#8B6F47" stroke="#2A2620" stroke-width="2">
+  <circle cx="159" cy="480" r="15"/><circle cx="199" cy="480" r="15"/><circle cx="239" cy="480" r="15"/>
+  <circle cx="423" cy="480" r="15"/><circle cx="463" cy="480" r="15"/><circle cx="503" cy="480" r="15"/><circle cx="543" cy="480" r="15"/><circle cx="583" cy="480" r="15"/>
+  <circle cx="727" cy="480" r="15"/><circle cx="767" cy="480" r="15"/><circle cx="807" cy="480" r="15"/><circle cx="847" cy="480" r="15"/><circle cx="887" cy="480" r="15"/>
+  <circle cx="1051" cy="480" r="15"/><circle cx="1091" cy="480" r="15"/><circle cx="1131" cy="480" r="15"/><circle cx="1171" cy="480" r="15"/>
+  <circle cx="1375" cy="480" r="15"/><circle cx="1415" cy="480" r="15"/><circle cx="1455" cy="480" r="15"/>
+  <circle cx="1699" cy="480" r="15"/><circle cx="1739" cy="480" r="15"/>
+</g>
+<g class="s" font-size="36" text-anchor="middle">
+  <text x="199" y="548">Work 3</text><text x="503" y="548">Work 5</text><text x="807" y="548">Work 5</text><text x="1111" y="548">Work 4</text><text x="1415" y="548">Work 3</text><text x="1719" y="548">Work 2</text>
+</g>
+<g class="s i" font-size="34" text-anchor="middle">
+  <text x="199" y="598">Low</text><text x="503" y="598">Medium</text><text x="807" y="598">Medium</text><text x="1111" y="598">High</text><text x="1415" y="598">Low</text><text x="1719" y="598">High</text>
+</g>
+<g class="s" font-size="30" text-anchor="middle">
+  <text x="199" y="652">Open from</text><text x="199" y="690">the start</text>
+  <text x="503" y="652">Open from</text><text x="503" y="690">the start</text>
+  <text x="807" y="652">Open from</text><text x="807" y="690">the start</text>
+  <text x="1111" y="652" class="b">Locked until</text><text x="1111" y="690" class="b">B is banked</text>
+  <text x="1415" y="652">Open from</text><text x="1415" y="690">the start</text>
+  <text x="1719" y="652" class="b">Locked until</text><text x="1719" y="690" class="b">C is banked</text>
+</g>
+
+<text class="m b" x="960" y="810" font-size="48" text-anchor="middle">22 WORK. 35 DAYS.</text>
+<text class="s i" x="960" y="872" font-size="42" text-anchor="middle">Not every day can be Work. That gap is the game.</text>
+
+<rect y="940" width="1920" height="140" fill="#EFE4D3"/><path d="M0 940H1920" class="k" fill="none"/>
+<text class="m b" x="64" y="1002" font-size="30" letter-spacing="3">NOW</text>
+<text class="s" x="190" y="1002" font-size="38"><tspan x="190">Pick a Project card and seat it. Read the six features aloud.</tspan><tspan x="190" dy="48">Which would you start with, and why?</tspan></text>
+</svg>

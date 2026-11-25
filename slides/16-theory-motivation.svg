@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<title>Theory: motivation and needs</title>
+<style>
+.s{font-family:"EB Garamond",Garamond,Georgia,serif;fill:#000}
+.m{font-family:"IBM Plex Mono",Consolas,"Courier New",monospace;fill:#000}
+.i{font-style:italic}.b{font-weight:700}.k{stroke:#2A2620;stroke-width:3}
+</style>
+<rect width="1920" height="1080" fill="#FBF8F0"/>
+<rect width="1920" height="92" fill="#C7CFB5"/><path d="M0 92H1920" class="k" fill="none"/>
+<text class="m" x="64" y="60" font-size="28" letter-spacing="3">THE THEORY · CARD 11 · MOTIVATION AND THE GRIND</text>
+<text class="m" x="1856" y="60" font-size="28" letter-spacing="3" text-anchor="end">OPTIONAL READING · NOT RULES</text>
+
+<text class="m b" x="64" y="200" font-size="52">MOTIVATION AND NEEDS</text>
+<text class="s i" x="64" y="262" font-size="40">What keeps people in the game, and what wears them out.</text>
+
+<text class="m b" x="64" y="338" font-size="26" letter-spacing="2">WHAT THE RESEARCH SAYS</text>
+<path d="M64 354H930" class="k" fill="none" stroke-width="2"/>
+<g fill="#2A2620"><rect x="64" y="388" width="14" height="14"/><rect x="64" y="584" width="14" height="14"/><rect x="64" y="736" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="100" y="410"><tspan x="100">Deci &amp; Ryan (2000), self-determination</tspan><tspan x="100" dy="44">theory: people do best when three needs</tspan><tspan x="100" dy="44">are met: autonomy, competence and</tspan><tspan x="100" dy="44">relatedness.</tspan></text>
+<text x="100" y="606"><tspan x="100">Demerouti et al. (2001): demands without</tspan><tspan x="100" dy="44">enough resources lead to exhaustion;</tspan><tspan x="100" dy="44">support and autonomy sustain engagement.</tspan></text>
+<text x="100" y="758"><tspan x="100">People are not all worn down by the same</tspan><tspan x="100" dy="44">things: the fit between person and work</tspan><tspan x="100" dy="44">matters.</tspan></text>
+</g>
+
+<rect x="990" y="290" width="866" height="640" rx="14" fill="#C7CFB5" class="k"/>
+<text class="m b" x="1030" y="348" font-size="26" letter-spacing="2">IN THE GAME</text>
+<g fill="#2A2620"><rect x="1030" y="390" width="14" height="14"/><rect x="1030" y="542" width="14" height="14"/><rect x="1030" y="694" width="14" height="14"/><rect x="1030" y="802" width="14" height="14"/></g>
+<g class="s" font-size="34">
+<text x="1066" y="412"><tspan x="1066">Motivation is personal and drains every</tspan><tspan x="1066" dy="44">week. Celebrate, a met Need and some</tspan><tspan x="1066" dy="44">cards give it back.</tspan></text>
+<text x="1066" y="564"><tspan x="1066">Your values are also your Need, read</tspan><tspan x="1066" dy="44">from week 3: Autonomy, Hierarchy,</tspan><tspan x="1066" dy="44">Community, Quality or Recognition.</tspan></text>
+<text x="1066" y="716"><tspan x="1066">The same Event drains one person and</tspan><tspan x="1066" dy="44">passes another by.</tspan></text>
+<text x="1066" y="824"><tspan x="1066">The five Needs are a design reading of</tspan><tspan x="1066" dy="44">the theory, not a validated scale.</tspan></text>
+</g>
+
+<path d="M64 962H1856" class="k" fill="none" stroke-width="2"/>
+<text class="s" x="64" y="1004" font-size="26"><tspan class="b">READ. </tspan>Deci &amp; Ryan, Psychological Inquiry 11 (2000) · Demerouti, Bakker, Nachreiner &amp; Schaufeli, J. Applied Psychology 86 (2001)</text>
+<text class="s i" x="64" y="1044" font-size="24">A designer's summary, not a quotation. Check the original before you cite it.</text>
+</svg>

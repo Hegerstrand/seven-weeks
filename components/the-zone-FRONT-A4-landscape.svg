@@ -28,7 +28,7 @@ DEVELOPMENT instead, added to the table at week 3.</desc>
   <g id="p3"><circle cx="0" cy="-1" r=".5" class="pip"/><circle cx="-1" cy=".85" r=".5" class="pip"/><circle cx="1" cy=".85" r=".5" class="pip"/></g>
   <g id="p4"><circle cx="-.8" cy="-.8" r=".45" class="pip"/><circle cx=".8" cy="-.8" r=".45" class="pip"/><circle cx="-.8" cy=".8" r=".45" class="pip"/><circle cx=".8" cy=".8" r=".45" class="pip"/></g>
   <g id="p5"><circle cx="-.8" cy="-.8" r=".4" class="pip"/><circle cx=".8" cy="-.8" r=".4" class="pip"/><circle cx="0" cy="0" r=".4" class="pip"/><circle cx="-.8" cy=".8" r=".4" class="pip"/><circle cx=".8" cy=".8" r=".4" class="pip"/></g>
-  <g id="tile-one"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#C7CFB5" stroke="#2A2620" stroke-width=".4"/><circle cx="0" cy="0" r="1.1" class="pip"/></g>
+  <g id="tile-one"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#D3B1B1" stroke="#2A2620" stroke-width=".4"/><circle cx="0" cy="0" r="1.1" class="pip"/></g>
   <g id="tile-stack"><rect x="-3" y="-3" width="6" height="6" rx=".6" fill="#F7D7A1" stroke="#2A2620" stroke-width=".4"/><circle cx="-.7" cy="-.7" r="1.1" fill="#F7D7A1" stroke="#2A2620" stroke-width=".35"/><circle cx=".7" cy=".7" r="1.1" class="pip"/></g>
 </defs>
 
@@ -73,6 +73,13 @@ DEVELOPMENT instead, added to the table at week 3.</desc>
   <rect x="62" y="120" width="20" height="20"/><rect x="82" y="120" width="20" height="20"/><rect x="102" y="120" width="20" height="20"/><rect x="122" y="120" width="20" height="20"/><rect x="142" y="120" width="20" height="20"/>
 </g>
 <rect x="62" y="40" width="100" height="100" class="r" stroke-width=".8"/>
+<g class="s q" font-size="2.5" font-style="italic" text-anchor="middle">
+  <text x="72" y="57">Modelling</text><text x="92" y="57">Briefing</text><text x="112" y="57">Inspecting</text><text x="132" y="57">Repairing</text><text x="152" y="57">Servicing</text>
+  <text x="72" y="77">Corresponding</text><text x="92" y="77">Listening</text><text x="112" y="77">Facilitating</text><text x="132" y="77">Mediating</text><text x="152" y="77">Convening</text>
+  <text x="72" y="97">Marketing</text><text x="92" y="97">Negotiating</text><text x="112" y="97">Contracting</text><text x="132" y="97">Remedying</text><text x="152" y="97">Campaigning</text>
+  <text x="72" y="117">Calculating</text><text x="92" y="117">Questioning</text><text x="112" y="117">Auditing</text><text x="132" y="117">Diagnosing</text><text x="152" y="117">Forecasting</text>
+  <text x="72" y="137">Budgeting</text><text x="92" y="137">Aligning</text><text x="112" y="137">Standardising</text><text x="132" y="137">Unblocking</text><text x="152" y="137">Scheduling</text>
+</g>
 </g>
 
 <use href="#tile-one" x="15" y="145"/>
